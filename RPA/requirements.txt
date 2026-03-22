@@ -1,8 +1,7 @@
 # RPA - Recursive Pattern Agent
 # Core dependencies
 
-# Data structures and utilities
-dataclasses>=0.10
+# Data structures (dataclasses is built-in for Python 3.11+)
 typing-extensions>=4.0.0
 
 # Testing
