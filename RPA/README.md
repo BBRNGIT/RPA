@@ -1,65 +1,60 @@
-# Recursive Pattern Agent (RPA)
+# RPA - Quick Start
 
-A token-free AI learning system that builds knowledge hierarchically from characters to complex patterns.
-
-## Architecture
-
-```
-rpa/
-├── core/           # Node, Edge, Pattern Graph
-├── memory/         # STM, LTM, Episodic Memory
-├── learning/       # Ingestion, Correction, Integration
-├── inquiry/        # Gap Detection, Question Generation
-├── assessment/     # Self-Assessment, Validation
-├── datasets/       # Gutenberg, Wikipedia Loaders
-├── advanced/       # Cross-Domain Links, Auto-Generation
-└── performance/    # Metrics Tracking
-```
-
-## Key Features
-
-- **Token-Free Learning**: No vocabulary, no tokenizer vulnerabilities
-- **Hierarchical Knowledge**: Characters → Words → Phrases → Sentences
-- **Memory Systems**: STM for new patterns, LTM for validated knowledge
-- **Gap Detection**: Proactively identifies knowledge gaps
-- **Cross-Domain Linking**: Connects concepts across domains
-
-## Development Phases
-
-| Phase | Description | Status |
-|-------|-------------|--------|
-| 1 | Core System (Memory, Graph, Validation) | Pending |
-| 2 | Proactive Inquiry System | Pending |
-| 3 | Enhanced Learning | Pending |
-| 4 | Dataset Integration | Pending |
-| 5 | Advanced Features | Pending |
-
-## Running Tests
+## One Command Setup
 
 ```bash
-pytest tests/ -v
+./start.sh
 ```
 
-## Project Structure
+That's it. The script handles:
+- ✅ Docker check
+- ✅ GitHub authentication
+- ✅ Image download
+- ✅ Service startup
+- ✅ Opens browser
 
+## Other Commands
+
+| Command | Description |
+|---------|-------------|
+| `./start.sh` | Start RPA |
+| `./stop.sh` | Stop RPA |
+| `./update.sh` | Update to latest version |
+| `docker compose logs -f` | View logs |
+| `docker compose ps` | Check status |
+
+## First Time Setup
+
+On first run, you'll need a GitHub token with `read:packages` scope.
+
+1. Go to: https://github.com/settings/tokens/new
+2. Name it "RPA Docker"
+3. Select scope: `read:packages`
+4. Click "Generate token"
+5. Copy the token
+6. Paste when prompted by `./start.sh`
+
+## Requirements
+
+- Docker Desktop installed and running
+- macOS / Linux / Windows WSL2
+
+## Troubleshooting
+
+**Docker not running:**
 ```
-RPA/
-├── .git/           # Version control
-├── .gitignore      # Ignore patterns
-├── README.md       # This file
-├── WORKLOG.md      # Detailed progress log
-├── rpa/            # Main package
-├── tests/          # Test suite
-└── backups/        # Phase backups
+Open Docker Desktop, wait for it to start, then run ./start.sh again
 ```
 
-## Safety Features
+**Login failed:**
+```
+Make sure your token has 'read:packages' scope
+Create new token: https://github.com/settings/tokens/new
+```
 
-- All patterns validated before LTM storage
-- Human review queue for flagged content
-- No external tokenization = no token-based attacks
-- Character-level validation with unicode normalization
-
----
-
-*Built with security-first, token-free architecture.*
+**Port 80 in use:**
+```
+sudo lsof -i :80  # Find what's using port 80
+docker compose down  # Stop any existing RPA
+./start.sh  # Start fresh
+```
