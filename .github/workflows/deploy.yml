@@ -1,9 +1,4 @@
 # RPA CI/CD Pipeline
-# 
-# Triggers on push to main branch:
-# 1. Runs tests (pytest)
-# 2. Builds Docker images
-# 3. Pushes to GitHub Container Registry (GHCR)
 
 name: RPA CI/CD Pipeline
 
@@ -16,7 +11,8 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_PREFIX: ${{ github.repository_owner }}/rpa
+  # Hardcoded lowercase to avoid uppercase issues with Docker tags
+  IMAGE_PREFIX: bbrngit/rpa
 
 jobs:
   test:
