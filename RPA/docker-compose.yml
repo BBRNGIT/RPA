@@ -6,10 +6,8 @@
 #   - rpa-sandbox: Isolated Python execution (no network)
 #
 # Usage:
-#   Production: docker-compose up -d
-#   Build:      docker-compose -f docker-compose.yml -f docker-compose.build.yml up --build
-
-version: "3.9"
+#   Production: docker compose up -d
+#   Build:      docker compose -f docker-compose.yml -f docker-compose.build.yml up --build
 
 services:
   # ==========================================================================
@@ -100,9 +98,6 @@ services:
     tmpfs:
       - /tmp:size=50M,mode=1777
     
-    volumes:
-      - sandbox-tmp:/tmp
-    
     security_opt:
       - no-new-privileges:true
     cap_drop:
@@ -125,6 +120,4 @@ volumes:
   rpa-memory:
     driver: local
   ssl-certs:
-    driver: local
-  sandbox-tmp:
     driver: local
