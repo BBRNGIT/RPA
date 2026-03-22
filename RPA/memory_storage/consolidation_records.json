@@ -1,0 +1,137 @@
+{
+  "cons_3ec6bf4f": {
+    "record_id": "cons_3ec6bf4f",
+    "node_id": "pattern:Write a function to find the longest chain which c",
+    "session_id": "session_b661aeb2",
+    "consolidated_at": "2026-03-21T21:58:37.833135",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  },
+  "cons_6e134205": {
+    "record_id": "cons_6e134205",
+    "node_id": "pattern:Write a python function to find the first repeated",
+    "session_id": "session_b661aeb2",
+    "consolidated_at": "2026-03-21T21:58:37.833168",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  },
+  "cons_4cc246f2": {
+    "record_id": "cons_4cc246f2",
+    "node_id": "pattern:Write a function to get a lucid number smaller tha",
+    "session_id": "session_b661aeb2",
+    "consolidated_at": "2026-03-21T21:58:37.833188",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  },
+  "cons_b3383764": {
+    "record_id": "cons_b3383764",
+    "node_id": "pattern:Write a function to reverse words in a given strin",
+    "session_id": "session_b661aeb2",
+    "consolidated_at": "2026-03-21T21:58:37.833202",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  },
+  "cons_db7a92b2": {
+    "record_id": "cons_db7a92b2",
+    "node_id": "pattern:Write a function to check if the given integer is ",
+    "session_id": "session_b661aeb2",
+    "consolidated_at": "2026-03-21T21:58:37.833225",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  },
+  "cons_c44aeeca": {
+    "record_id": "cons_c44aeeca",
+    "node_id": "pattern:Write a function to find the longest chain which c",
+    "session_id": "session_1af49a60",
+    "consolidated_at": "2026-03-21T21:58:51.230562",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  },
+  "cons_aa19fde5": {
+    "record_id": "cons_aa19fde5",
+    "node_id": "pattern:Write a python function to find the first repeated",
+    "session_id": "session_1af49a60",
+    "consolidated_at": "2026-03-21T21:58:51.230606",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  },
+  "cons_655d808d": {
+    "record_id": "cons_655d808d",
+    "node_id": "pattern:Write a function to get a lucid number smaller tha",
+    "session_id": "session_1af49a60",
+    "consolidated_at": "2026-03-21T21:58:51.230652",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  },
+  "cons_4a5ed35f": {
+    "record_id": "cons_4a5ed35f",
+    "node_id": "pattern:Write a function to reverse words in a given strin",
+    "session_id": "session_1af49a60",
+    "consolidated_at": "2026-03-21T21:58:51.230668",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  },
+  "cons_bcd6662a": {
+    "record_id": "cons_bcd6662a",
+    "node_id": "pattern:Write a function to check if the given integer is ",
+    "session_id": "session_1af49a60",
+    "consolidated_at": "2026-03-21T21:58:51.230683",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  },
+  "cons_9a8e3633": {
+    "record_id": "cons_9a8e3633",
+    "node_id": "pattern:Write a function to convert degrees to radians.",
+    "session_id": "session_1af49a60",
+    "consolidated_at": "2026-03-21T21:58:51.230698",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  },
+  "cons_f56af8f2": {
+    "record_id": "cons_f56af8f2",
+    "node_id": "pattern:Write a function to search a literals string in a ",
+    "session_id": "session_1af49a60",
+    "consolidated_at": "2026-03-21T21:58:51.230712",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  },
+  "cons_1a975a15": {
+    "record_id": "cons_1a975a15",
+    "node_id": "pattern:Write a python function to find nth bell number.",
+    "session_id": "session_1af49a60",
+    "consolidated_at": "2026-03-21T21:58:51.230726",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  },
+  "cons_41ab5b9b": {
+    "record_id": "cons_41ab5b9b",
+    "node_id": "pattern:Write a python function to find minimum possible v",
+    "session_id": "session_1af49a60",
+    "consolidated_at": "2026-03-21T21:58:51.230738",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  },
+  "cons_9238dc58": {
+    "record_id": "cons_9238dc58",
+    "node_id": "pattern:Write a python function to remove the k'th element",
+    "session_id": "session_1af49a60",
+    "consolidated_at": "2026-03-21T21:58:51.230748",
+    "validation_score": 1.0,
+    "source": "mbpp",
+    "notes": ""
+  }
+}

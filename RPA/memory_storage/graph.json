@@ -1,0 +1,286 @@
+{
+  "domain": "ltm",
+  "nodes": {
+    "pattern:Write a function to find the longest chain which c": {
+      "node_id": "pattern:Write a function to find the longest chain which c",
+      "label": "Write a function to find the longest chain which c",
+      "node_type": "pattern",
+      "content": "class Pair(object): \r\n\tdef __init__(self, a, b): \r\n\t\tself.a = a \r\n\t\tself.b = b \r\ndef max_chain_length(arr, n): \r\n\tmax = 0\r\n\tmcl = [1 for i in range(n)] \r\n\tfor i in range(1, n): \r\n\t\tfor j in range(0, i): \r\n\t\t\tif (arr[i].a > arr[j].b and\r\n\t\t\t\tmcl[i] < mcl[j] + 1): \r\n\t\t\t\tmcl[i] = mcl[j] + 1\r\n\tfor i in range(n): \r\n\t\tif (max < mcl[i]): \r\n\t\t\tmax = mcl[i] \r\n\treturn max",
+      "hierarchy_level": 2,
+      "domain": "python",
+      "created_at": "2026-03-21T21:58:51.230534",
+      "updated_at": "2026-03-21T21:58:51.230535",
+      "is_valid": true,
+      "is_uncertain": false,
+      "metadata": {
+        "source": "mbpp",
+        "curriculum_type": "coding_problems",
+        "description": "Write a function to find the longest chain which can be formed from the given set of pairs.",
+        "difficulty": 2,
+        "raw_fields": [
+          "task_id",
+          "text",
+          "code",
+          "test_list",
+          "test_setup_code"
+        ]
+      },
+      "source": null,
+      "access_count": 0,
+      "confidence": 1.0
+    },
+    "pattern:Write a python function to find the first repeated": {
+      "node_id": "pattern:Write a python function to find the first repeated",
+      "label": "Write a python function to find the first repeated",
+      "node_type": "pattern",
+      "content": "def first_repeated_char(str1):\r\n  for index,c in enumerate(str1):\r\n    if str1[:index+1].count(c) > 1:\r\n      return c \r\n  return \"None\"",
+      "hierarchy_level": 2,
+      "domain": "python",
+      "created_at": "2026-03-21T21:58:51.230573",
+      "updated_at": "2026-03-21T21:58:51.230573",
+      "is_valid": true,
+      "is_uncertain": false,
+      "metadata": {
+        "source": "mbpp",
+        "curriculum_type": "coding_problems",
+        "description": "Write a python function to find the first repeated character in a given string.",
+        "difficulty": 2,
+        "raw_fields": [
+          "task_id",
+          "text",
+          "code",
+          "test_list",
+          "test_setup_code"
+        ]
+      },
+      "source": null,
+      "access_count": 0,
+      "confidence": 1.0
+    },
+    "pattern:Write a function to get a lucid number smaller tha": {
+      "node_id": "pattern:Write a function to get a lucid number smaller tha",
+      "label": "Write a function to get a lucid number smaller tha",
+      "node_type": "pattern",
+      "content": "def get_ludic(n):\r\n\tludics = []\r\n\tfor i in range(1, n + 1):\r\n\t\tludics.append(i)\r\n\tindex = 1\r\n\twhile(index != len(ludics)):\r\n\t\tfirst_ludic = ludics[index]\r\n\t\tremove_index = index + first_ludic\r\n\t\twhile(remove_index < len(ludics)):\r\n\t\t\tludics.remove(ludics[remove_index])\r\n\t\t\tremove_index = remove_index + first_ludic - 1\r\n\t\tindex += 1\r\n\treturn ludics",
+      "hierarchy_level": 2,
+      "domain": "python",
+      "created_at": "2026-03-21T21:58:51.230615",
+      "updated_at": "2026-03-21T21:58:51.230615",
+      "is_valid": true,
+      "is_uncertain": false,
+      "metadata": {
+        "source": "mbpp",
+        "curriculum_type": "coding_problems",
+        "description": "Write a function to get a lucid number smaller than or equal to n.",
+        "difficulty": 2,
+        "raw_fields": [
+          "task_id",
+          "text",
+          "code",
+          "test_list",
+          "test_setup_code"
+        ]
+      },
+      "source": null,
+      "access_count": 0,
+      "confidence": 1.0
+    },
+    "pattern:Write a function to reverse words in a given strin": {
+      "node_id": "pattern:Write a function to reverse words in a given strin",
+      "label": "Write a function to reverse words in a given strin",
+      "node_type": "pattern",
+      "content": "def reverse_words(s):\r\n        return ' '.join(reversed(s.split()))",
+      "hierarchy_level": 2,
+      "domain": "python",
+      "created_at": "2026-03-21T21:58:51.230658",
+      "updated_at": "2026-03-21T21:58:51.230658",
+      "is_valid": true,
+      "is_uncertain": false,
+      "metadata": {
+        "source": "mbpp",
+        "curriculum_type": "coding_problems",
+        "description": "Write a function to reverse words in a given string.",
+        "difficulty": 2,
+        "raw_fields": [
+          "task_id",
+          "text",
+          "code",
+          "test_list",
+          "test_setup_code"
+        ]
+      },
+      "source": null,
+      "access_count": 0,
+      "confidence": 1.0
+    },
+    "pattern:Write a function to check if the given integer is ": {
+      "node_id": "pattern:Write a function to check if the given integer is ",
+      "label": "Write a function to check if the given integer is ",
+      "node_type": "pattern",
+      "content": "def prime_num(num):\r\n  if num >=1:\r\n   for i in range(2, num//2):\r\n     if (num % i) == 0:\r\n                return False\r\n     else:\r\n                return True\r\n  else:\r\n          return False",
+      "hierarchy_level": 2,
+      "domain": "python",
+      "created_at": "2026-03-21T21:58:51.230673",
+      "updated_at": "2026-03-21T21:58:51.230673",
+      "is_valid": true,
+      "is_uncertain": false,
+      "metadata": {
+        "source": "mbpp",
+        "curriculum_type": "coding_problems",
+        "description": "Write a function to check if the given integer is a prime number.",
+        "difficulty": 2,
+        "raw_fields": [
+          "task_id",
+          "text",
+          "code",
+          "test_list",
+          "test_setup_code"
+        ]
+      },
+      "source": null,
+      "access_count": 0,
+      "confidence": 1.0
+    },
+    "pattern:Write a function to convert degrees to radians.": {
+      "node_id": "pattern:Write a function to convert degrees to radians.",
+      "label": "Write a function to convert degrees to radians.",
+      "node_type": "pattern",
+      "content": "import math\r\ndef radian_degree(degree):\r\n radian = degree*(math.pi/180)\r\n return radian",
+      "hierarchy_level": 2,
+      "domain": "python",
+      "created_at": "2026-03-21T21:58:51.230688",
+      "updated_at": "2026-03-21T21:58:51.230688",
+      "is_valid": true,
+      "is_uncertain": false,
+      "metadata": {
+        "source": "mbpp",
+        "curriculum_type": "coding_problems",
+        "description": "Write a function to convert degrees to radians.",
+        "difficulty": 2,
+        "raw_fields": [
+          "task_id",
+          "text",
+          "code",
+          "test_list",
+          "test_setup_code"
+        ]
+      },
+      "source": null,
+      "access_count": 0,
+      "confidence": 1.0
+    },
+    "pattern:Write a function to search a literals string in a ": {
+      "node_id": "pattern:Write a function to search a literals string in a ",
+      "label": "Write a function to search a literals string in a ",
+      "node_type": "pattern",
+      "content": "import re\r\npattern = 'fox'\r\ntext = 'The quick brown fox jumps over the lazy dog.'\r\ndef find_literals(text, pattern):\r\n  match = re.search(pattern, text)\r\n  s = match.start()\r\n  e = match.end()\r\n  return (match.re.pattern, s, e)",
+      "hierarchy_level": 2,
+      "domain": "python",
+      "created_at": "2026-03-21T21:58:51.230703",
+      "updated_at": "2026-03-21T21:58:51.230703",
+      "is_valid": true,
+      "is_uncertain": false,
+      "metadata": {
+        "source": "mbpp",
+        "curriculum_type": "coding_problems",
+        "description": "Write a function to search a literals string in a string and also find the location within the original string where the pattern occurs by using regex.",
+        "difficulty": 2,
+        "raw_fields": [
+          "task_id",
+          "text",
+          "code",
+          "test_list",
+          "test_setup_code"
+        ]
+      },
+      "source": null,
+      "access_count": 0,
+      "confidence": 1.0
+    },
+    "pattern:Write a python function to find nth bell number.": {
+      "node_id": "pattern:Write a python function to find nth bell number.",
+      "label": "Write a python function to find nth bell number.",
+      "node_type": "pattern",
+      "content": "def bell_Number(n): \r\n    bell = [[0 for i in range(n+1)] for j in range(n+1)] \r\n    bell[0][0] = 1\r\n    for i in range(1, n+1):\r\n        bell[i][0] = bell[i-1][i-1]\r\n        for j in range(1, i+1): \r\n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1] \r\n    return bell[n][0] ",
+      "hierarchy_level": 2,
+      "domain": "python",
+      "created_at": "2026-03-21T21:58:51.230717",
+      "updated_at": "2026-03-21T21:58:51.230717",
+      "is_valid": true,
+      "is_uncertain": false,
+      "metadata": {
+        "source": "mbpp",
+        "curriculum_type": "coding_problems",
+        "description": "Write a python function to find nth bell number.",
+        "difficulty": 2,
+        "raw_fields": [
+          "task_id",
+          "text",
+          "code",
+          "test_list",
+          "test_setup_code"
+        ]
+      },
+      "source": null,
+      "access_count": 0,
+      "confidence": 1.0
+    },
+    "pattern:Write a python function to find minimum possible v": {
+      "node_id": "pattern:Write a python function to find minimum possible v",
+      "label": "Write a python function to find minimum possible v",
+      "node_type": "pattern",
+      "content": "def floor_Min(A,B,N):\r\n    x = max(B - 1,N)\r\n    return (A*x) // B",
+      "hierarchy_level": 2,
+      "domain": "python",
+      "created_at": "2026-03-21T21:58:51.230730",
+      "updated_at": "2026-03-21T21:58:51.230730",
+      "is_valid": true,
+      "is_uncertain": false,
+      "metadata": {
+        "source": "mbpp",
+        "curriculum_type": "coding_problems",
+        "description": "Write a python function to find minimum possible value for the given periodic function.",
+        "difficulty": 2,
+        "raw_fields": [
+          "task_id",
+          "text",
+          "code",
+          "test_list",
+          "test_setup_code"
+        ]
+      },
+      "source": null,
+      "access_count": 0,
+      "confidence": 1.0
+    },
+    "pattern:Write a python function to remove the k'th element": {
+      "node_id": "pattern:Write a python function to remove the k'th element",
+      "label": "Write a python function to remove the k'th element",
+      "node_type": "pattern",
+      "content": "def remove_kth_element(list1, L):\r\n    return  list1[:L-1] + list1[L:]",
+      "hierarchy_level": 2,
+      "domain": "python",
+      "created_at": "2026-03-21T21:58:51.230742",
+      "updated_at": "2026-03-21T21:58:51.230742",
+      "is_valid": true,
+      "is_uncertain": false,
+      "metadata": {
+        "source": "mbpp",
+        "curriculum_type": "coding_problems",
+        "description": "Write a python function to remove the k'th element from a given list.",
+        "difficulty": 2,
+        "raw_fields": [
+          "task_id",
+          "text",
+          "code",
+          "test_list",
+          "test_setup_code"
+        ]
+      },
+      "source": null,
+      "access_count": 0,
+      "confidence": 1.0
+    }
+  },
+  "edges": {}
+}
