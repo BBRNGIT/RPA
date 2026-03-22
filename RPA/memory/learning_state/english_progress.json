@@ -1,0 +1,3242 @@
+{
+  "vocabulary": {
+    "vocabulary": {
+      "vocab_5fa4cb83": {
+        "word_id": "vocab_5fa4cb83",
+        "word": "the",
+        "definition": "Used to refer to a specific person or thing",
+        "part_of_speech": "determiner",
+        "examples": [
+          "The cat sat.",
+          "The book is here."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 1,
+        "proficiency": "learning",
+        "ease_factor": 2.5,
+        "interval": 1,
+        "repetitions": 1,
+        "next_review": "2026-03-23T02:45:29.771250",
+        "last_review": "2026-03-22T02:45:29.771250",
+        "total_reviews": 1,
+        "correct_reviews": 1,
+        "incorrect_reviews": 0
+      },
+      "vocab_5ba5420b": {
+        "word_id": "vocab_5ba5420b",
+        "word": "be",
+        "definition": "Exist; occur; used as an auxiliary verb",
+        "part_of_speech": "verb",
+        "examples": [
+          "I am happy.",
+          "She is here."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 2,
+        "proficiency": "learning",
+        "ease_factor": 2.6,
+        "interval": 1,
+        "repetitions": 1,
+        "next_review": "2026-03-23T02:45:29.771293",
+        "last_review": "2026-03-22T02:45:29.771293",
+        "total_reviews": 1,
+        "correct_reviews": 1,
+        "incorrect_reviews": 0
+      },
+      "vocab_5e2c249b": {
+        "word_id": "vocab_5e2c249b",
+        "word": "to",
+        "definition": "Expressing direction or motion",
+        "part_of_speech": "preposition",
+        "examples": [
+          "Go to school.",
+          "Give it to me."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 3,
+        "proficiency": "learning",
+        "ease_factor": 2.6,
+        "interval": 1,
+        "repetitions": 1,
+        "next_review": "2026-03-23T02:45:29.771315",
+        "last_review": "2026-03-22T02:45:29.771315",
+        "total_reviews": 1,
+        "correct_reviews": 1,
+        "incorrect_reviews": 0
+      },
+      "vocab_6f919922": {
+        "word_id": "vocab_6f919922",
+        "word": "of",
+        "definition": "Expressing relationship or origin",
+        "part_of_speech": "preposition",
+        "examples": [
+          "A cup of tea.",
+          "King of France."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 4,
+        "proficiency": "learning",
+        "ease_factor": 2.6,
+        "interval": 1,
+        "repetitions": 1,
+        "next_review": "2026-03-23T02:45:29.771330",
+        "last_review": "2026-03-22T02:45:29.771330",
+        "total_reviews": 1,
+        "correct_reviews": 1,
+        "incorrect_reviews": 0
+      },
+      "vocab_7c6c5b3d": {
+        "word_id": "vocab_7c6c5b3d",
+        "word": "and",
+        "definition": "Used to connect words",
+        "part_of_speech": "conjunction",
+        "examples": [
+          "You and I.",
+          "Apples and oranges."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 5,
+        "proficiency": "learning",
+        "ease_factor": 2.6,
+        "interval": 1,
+        "repetitions": 1,
+        "next_review": "2026-03-23T02:45:29.771340",
+        "last_review": "2026-03-22T02:45:29.771340",
+        "total_reviews": 1,
+        "correct_reviews": 1,
+        "incorrect_reviews": 0
+      },
+      "vocab_d727c15e": {
+        "word_id": "vocab_d727c15e",
+        "word": "accomplish",
+        "definition": "To achieve or complete successfully",
+        "part_of_speech": "verb",
+        "examples": [
+          "She accomplished her goals.",
+          "Mission accomplished!"
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 2,
+        "frequency_rank": 1000,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_2c27fd84": {
+        "word_id": "vocab_2c27fd84",
+        "word": "adequate",
+        "definition": "Sufficient or acceptable",
+        "part_of_speech": "adjective",
+        "examples": [
+          "The resources were adequate.",
+          "An adequate solution."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 2,
+        "frequency_rank": 2000,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_f8bb1fef": {
+        "word_id": "vocab_f8bb1fef",
+        "word": "benefit",
+        "definition": "An advantage or profit",
+        "part_of_speech": "noun",
+        "examples": [
+          "Health benefits.",
+          "For your benefit."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 2,
+        "frequency_rank": 1500,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_52c80c5a": {
+        "word_id": "vocab_52c80c5a",
+        "word": "capacity",
+        "definition": "The maximum amount something can hold",
+        "part_of_speech": "noun",
+        "examples": [
+          "Full capacity.",
+          "Mental capacity."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 2,
+        "frequency_rank": 1800,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_4980fa28": {
+        "word_id": "vocab_4980fa28",
+        "word": "demonstrate",
+        "definition": "To show clearly",
+        "part_of_speech": "verb",
+        "examples": [
+          "Demonstrate the process.",
+          "He demonstrated courage."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 3,
+        "frequency_rank": 2500,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_d8f19d0a": {
+        "word_id": "vocab_d8f19d0a",
+        "word": "ambiguous",
+        "definition": "Open to more than one interpretation",
+        "part_of_speech": "adjective",
+        "examples": [
+          "An ambiguous statement.",
+          "The meaning was ambiguous."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 3,
+        "frequency_rank": 4000,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_72918930": {
+        "word_id": "vocab_72918930",
+        "word": "comprehensive",
+        "definition": "Complete and including everything",
+        "part_of_speech": "adjective",
+        "examples": [
+          "A comprehensive study.",
+          "Comprehensive coverage."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 3,
+        "frequency_rank": 3500,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_c7cd800c": {
+        "word_id": "vocab_c7cd800c",
+        "word": "elaborate",
+        "definition": "Involving many details",
+        "part_of_speech": "adjective",
+        "examples": [
+          "Elaborate design.",
+          "An elaborate plan."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 3,
+        "frequency_rank": 4500,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_9f6b3ae9": {
+        "word_id": "vocab_9f6b3ae9",
+        "word": "fundamental",
+        "definition": "Forming a necessary base",
+        "part_of_speech": "adjective",
+        "examples": [
+          "Fundamental rights.",
+          "The fundamental issue."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 3,
+        "frequency_rank": 3200,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_7fad8d24": {
+        "word_id": "vocab_7fad8d24",
+        "word": "hypothetical",
+        "definition": "Based on a suggested idea",
+        "part_of_speech": "adjective",
+        "examples": [
+          "A hypothetical scenario.",
+          "Hypothetical question."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 4,
+        "frequency_rank": 5500,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_4255831c": {
+        "word_id": "vocab_4255831c",
+        "word": "ubiquitous",
+        "definition": "Present everywhere",
+        "part_of_speech": "adjective",
+        "examples": [
+          "Smartphones are ubiquitous.",
+          "Ubiquitous technology."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 4,
+        "frequency_rank": 8000,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_2627f608": {
+        "word_id": "vocab_2627f608",
+        "word": "ephemeral",
+        "definition": "Lasting for a very short time",
+        "part_of_speech": "adjective",
+        "examples": [
+          "Ephemeral beauty.",
+          "Ephemeral moments."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 5,
+        "frequency_rank": 10000,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_0b264322": {
+        "word_id": "vocab_0b264322",
+        "word": "paradigm",
+        "definition": "A typical example or pattern",
+        "part_of_speech": "noun",
+        "examples": [
+          "A new paradigm.",
+          "Paradigm shift."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 4,
+        "frequency_rank": 7000,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_1c424e24": {
+        "word_id": "vocab_1c424e24",
+        "word": "pragmatic",
+        "definition": "Dealing with things sensibly",
+        "part_of_speech": "adjective",
+        "examples": [
+          "A pragmatic approach.",
+          "Pragmatic solution."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 4,
+        "frequency_rank": 6500,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_379208f1": {
+        "word_id": "vocab_379208f1",
+        "word": "esoteric",
+        "definition": "Intended for a small group",
+        "part_of_speech": "adjective",
+        "examples": [
+          "Esoteric knowledge.",
+          "Esoteric subject."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 5,
+        "frequency_rank": 12000,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_7e9105c2": {
+        "word_id": "vocab_7e9105c2",
+        "word": "in",
+        "definition": "Common English word: in",
+        "part_of_speech": "preposition",
+        "examples": [
+          [
+            "preposition"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_95c7e547": {
+        "word_id": "vocab_95c7e547",
+        "word": "that",
+        "definition": "Common English word: that",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun",
+            "conjunction"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_f0ff8d83": {
+        "word_id": "vocab_f0ff8d83",
+        "word": "have",
+        "definition": "Common English word: have",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb",
+            "auxiliary"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_d2da78c5": {
+        "word_id": "vocab_d2da78c5",
+        "word": "it",
+        "definition": "Common English word: it",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_0c187989": {
+        "word_id": "vocab_0c187989",
+        "word": "for",
+        "definition": "Common English word: for",
+        "part_of_speech": "preposition",
+        "examples": [
+          [
+            "preposition",
+            "conjunction"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_e858edcb": {
+        "word_id": "vocab_e858edcb",
+        "word": "not",
+        "definition": "Common English word: not",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_85a5649a": {
+        "word_id": "vocab_85a5649a",
+        "word": "on",
+        "definition": "Common English word: on",
+        "part_of_speech": "preposition",
+        "examples": [
+          [
+            "preposition"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_c3e7de7a": {
+        "word_id": "vocab_c3e7de7a",
+        "word": "with",
+        "definition": "Common English word: with",
+        "part_of_speech": "preposition",
+        "examples": [
+          [
+            "preposition"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_311363cf": {
+        "word_id": "vocab_311363cf",
+        "word": "he",
+        "definition": "Common English word: he",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_529b1615": {
+        "word_id": "vocab_529b1615",
+        "word": "as",
+        "definition": "Common English word: as",
+        "part_of_speech": "preposition",
+        "examples": [
+          [
+            "preposition",
+            "conjunction"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_090af89f": {
+        "word_id": "vocab_090af89f",
+        "word": "you",
+        "definition": "Common English word: you",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_9023e388": {
+        "word_id": "vocab_9023e388",
+        "word": "do",
+        "definition": "Common English word: do",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb",
+            "auxiliary"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_711436ba": {
+        "word_id": "vocab_711436ba",
+        "word": "at",
+        "definition": "Common English word: at",
+        "part_of_speech": "preposition",
+        "examples": [
+          [
+            "preposition"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_82aeed47": {
+        "word_id": "vocab_82aeed47",
+        "word": "this",
+        "definition": "Common English word: this",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun",
+            "determiner"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_71589719": {
+        "word_id": "vocab_71589719",
+        "word": "but",
+        "definition": "Common English word: but",
+        "part_of_speech": "conjunction",
+        "examples": [
+          [
+            "conjunction"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_51e5dd9f": {
+        "word_id": "vocab_51e5dd9f",
+        "word": "his",
+        "definition": "Common English word: his",
+        "part_of_speech": "determiner",
+        "examples": [
+          [
+            "determiner",
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_6a36217d": {
+        "word_id": "vocab_6a36217d",
+        "word": "by",
+        "definition": "Common English word: by",
+        "part_of_speech": "preposition",
+        "examples": [
+          [
+            "preposition"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_6fc225eb": {
+        "word_id": "vocab_6fc225eb",
+        "word": "from",
+        "definition": "Common English word: from",
+        "part_of_speech": "preposition",
+        "examples": [
+          [
+            "preposition"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_7fe4933f": {
+        "word_id": "vocab_7fe4933f",
+        "word": "they",
+        "definition": "Common English word: they",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_b45f1b37": {
+        "word_id": "vocab_b45f1b37",
+        "word": "we",
+        "definition": "Common English word: we",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_9344571f": {
+        "word_id": "vocab_9344571f",
+        "word": "say",
+        "definition": "Common English word: say",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_27f31611": {
+        "word_id": "vocab_27f31611",
+        "word": "her",
+        "definition": "Common English word: her",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun",
+            "determiner"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_2f427205": {
+        "word_id": "vocab_2f427205",
+        "word": "she",
+        "definition": "Common English word: she",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_d71f275e": {
+        "word_id": "vocab_d71f275e",
+        "word": "or",
+        "definition": "Common English word: or",
+        "part_of_speech": "conjunction",
+        "examples": [
+          [
+            "conjunction"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_b41f5b29": {
+        "word_id": "vocab_b41f5b29",
+        "word": "an",
+        "definition": "Common English word: an",
+        "part_of_speech": "article",
+        "examples": [
+          [
+            "article"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_00b35f44": {
+        "word_id": "vocab_00b35f44",
+        "word": "will",
+        "definition": "Common English word: will",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb",
+            "auxiliary"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_8585a14f": {
+        "word_id": "vocab_8585a14f",
+        "word": "my",
+        "definition": "Common English word: my",
+        "part_of_speech": "determiner",
+        "examples": [
+          [
+            "determiner"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_bea55c70": {
+        "word_id": "vocab_bea55c70",
+        "word": "one",
+        "definition": "Common English word: one",
+        "part_of_speech": "number",
+        "examples": [
+          [
+            "number",
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_89e72891": {
+        "word_id": "vocab_89e72891",
+        "word": "all",
+        "definition": "Common English word: all",
+        "part_of_speech": "determiner",
+        "examples": [
+          [
+            "determiner",
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_023e1aaf": {
+        "word_id": "vocab_023e1aaf",
+        "word": "would",
+        "definition": "Common English word: would",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb",
+            "auxiliary"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_8434b4e3": {
+        "word_id": "vocab_8434b4e3",
+        "word": "there",
+        "definition": "Common English word: there",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb",
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_7120ea92": {
+        "word_id": "vocab_7120ea92",
+        "word": "their",
+        "definition": "Common English word: their",
+        "part_of_speech": "determiner",
+        "examples": [
+          [
+            "determiner"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_c0c20b0d": {
+        "word_id": "vocab_c0c20b0d",
+        "word": "what",
+        "definition": "Common English word: what",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun",
+            "determiner"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_e3c48af3": {
+        "word_id": "vocab_e3c48af3",
+        "word": "so",
+        "definition": "Common English word: so",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb",
+            "conjunction"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_4f097db6": {
+        "word_id": "vocab_4f097db6",
+        "word": "up",
+        "definition": "Common English word: up",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb",
+            "preposition"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_c31f5749": {
+        "word_id": "vocab_c31f5749",
+        "word": "out",
+        "definition": "Common English word: out",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb",
+            "preposition"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_2b22af93": {
+        "word_id": "vocab_2b22af93",
+        "word": "if",
+        "definition": "Common English word: if",
+        "part_of_speech": "conjunction",
+        "examples": [
+          [
+            "conjunction"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_6c020d1c": {
+        "word_id": "vocab_6c020d1c",
+        "word": "about",
+        "definition": "Common English word: about",
+        "part_of_speech": "preposition",
+        "examples": [
+          [
+            "preposition",
+            "adverb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_f8f38557": {
+        "word_id": "vocab_f8f38557",
+        "word": "who",
+        "definition": "Common English word: who",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_f56b482d": {
+        "word_id": "vocab_f56b482d",
+        "word": "get",
+        "definition": "Common English word: get",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_59a536a2": {
+        "word_id": "vocab_59a536a2",
+        "word": "which",
+        "definition": "Common English word: which",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun",
+            "determiner"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_17ea4709": {
+        "word_id": "vocab_17ea4709",
+        "word": "go",
+        "definition": "Common English word: go",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_9f5e4ae6": {
+        "word_id": "vocab_9f5e4ae6",
+        "word": "me",
+        "definition": "Common English word: me",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_57afe20d": {
+        "word_id": "vocab_57afe20d",
+        "word": "when",
+        "definition": "Common English word: when",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb",
+            "conjunction"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_ec3fe0f2": {
+        "word_id": "vocab_ec3fe0f2",
+        "word": "make",
+        "definition": "Common English word: make",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_c3e1a6a2": {
+        "word_id": "vocab_c3e1a6a2",
+        "word": "can",
+        "definition": "Common English word: can",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb",
+            "auxiliary"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_53575bad": {
+        "word_id": "vocab_53575bad",
+        "word": "like",
+        "definition": "Common English word: like",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb",
+            "preposition"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_4aafa65a": {
+        "word_id": "vocab_4aafa65a",
+        "word": "time",
+        "definition": "Common English word: time",
+        "part_of_speech": "noun",
+        "examples": [
+          [
+            "noun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_036d99e9": {
+        "word_id": "vocab_036d99e9",
+        "word": "no",
+        "definition": "Common English word: no",
+        "part_of_speech": "determiner",
+        "examples": [
+          [
+            "determiner",
+            "adverb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_0f61887a": {
+        "word_id": "vocab_0f61887a",
+        "word": "just",
+        "definition": "Common English word: just",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb",
+            "adjective"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_59248ae1": {
+        "word_id": "vocab_59248ae1",
+        "word": "him",
+        "definition": "Common English word: him",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_3c281308": {
+        "word_id": "vocab_3c281308",
+        "word": "know",
+        "definition": "Common English word: know",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_3b51e2ca": {
+        "word_id": "vocab_3b51e2ca",
+        "word": "take",
+        "definition": "Common English word: take",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_f010a097": {
+        "word_id": "vocab_f010a097",
+        "word": "people",
+        "definition": "Common English word: people",
+        "part_of_speech": "noun",
+        "examples": [
+          [
+            "noun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_60080a65": {
+        "word_id": "vocab_60080a65",
+        "word": "into",
+        "definition": "Common English word: into",
+        "part_of_speech": "preposition",
+        "examples": [
+          [
+            "preposition"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_be60d6f0": {
+        "word_id": "vocab_be60d6f0",
+        "word": "year",
+        "definition": "Common English word: year",
+        "part_of_speech": "noun",
+        "examples": [
+          [
+            "noun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_94758916": {
+        "word_id": "vocab_94758916",
+        "word": "your",
+        "definition": "Common English word: your",
+        "part_of_speech": "determiner",
+        "examples": [
+          [
+            "determiner"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_41b5debc": {
+        "word_id": "vocab_41b5debc",
+        "word": "good",
+        "definition": "Common English word: good",
+        "part_of_speech": "adjective",
+        "examples": [
+          [
+            "adjective",
+            "noun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_6c5135d5": {
+        "word_id": "vocab_6c5135d5",
+        "word": "some",
+        "definition": "Common English word: some",
+        "part_of_speech": "determiner",
+        "examples": [
+          [
+            "determiner",
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_7c07e1f6": {
+        "word_id": "vocab_7c07e1f6",
+        "word": "could",
+        "definition": "Common English word: could",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb",
+            "auxiliary"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_e5132582": {
+        "word_id": "vocab_e5132582",
+        "word": "them",
+        "definition": "Common English word: them",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_673e77ac": {
+        "word_id": "vocab_673e77ac",
+        "word": "see",
+        "definition": "Common English word: see",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_3363373c": {
+        "word_id": "vocab_3363373c",
+        "word": "other",
+        "definition": "Common English word: other",
+        "part_of_speech": "adjective",
+        "examples": [
+          [
+            "adjective",
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_dfd6aa19": {
+        "word_id": "vocab_dfd6aa19",
+        "word": "than",
+        "definition": "Common English word: than",
+        "part_of_speech": "conjunction",
+        "examples": [
+          [
+            "conjunction",
+            "preposition"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_9168dc9f": {
+        "word_id": "vocab_9168dc9f",
+        "word": "then",
+        "definition": "Common English word: then",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb",
+            "adjective"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_77c0d1ea": {
+        "word_id": "vocab_77c0d1ea",
+        "word": "now",
+        "definition": "Common English word: now",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_6827802c": {
+        "word_id": "vocab_6827802c",
+        "word": "look",
+        "definition": "Common English word: look",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb",
+            "noun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_87cddf9e": {
+        "word_id": "vocab_87cddf9e",
+        "word": "only",
+        "definition": "Common English word: only",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb",
+            "adjective"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_272629c5": {
+        "word_id": "vocab_272629c5",
+        "word": "come",
+        "definition": "Common English word: come",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_d1756651": {
+        "word_id": "vocab_d1756651",
+        "word": "its",
+        "definition": "Common English word: its",
+        "part_of_speech": "determiner",
+        "examples": [
+          [
+            "determiner"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_3c6a676d": {
+        "word_id": "vocab_3c6a676d",
+        "word": "over",
+        "definition": "Common English word: over",
+        "part_of_speech": "preposition",
+        "examples": [
+          [
+            "preposition",
+            "adverb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_226746b6": {
+        "word_id": "vocab_226746b6",
+        "word": "think",
+        "definition": "Common English word: think",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_fe499f65": {
+        "word_id": "vocab_fe499f65",
+        "word": "also",
+        "definition": "Common English word: also",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_f5737407": {
+        "word_id": "vocab_f5737407",
+        "word": "back",
+        "definition": "Common English word: back",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb",
+            "noun",
+            "adjective"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_38c911b8": {
+        "word_id": "vocab_38c911b8",
+        "word": "after",
+        "definition": "Common English word: after",
+        "part_of_speech": "preposition",
+        "examples": [
+          [
+            "preposition",
+            "conjunction"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_3f1a8829": {
+        "word_id": "vocab_3f1a8829",
+        "word": "use",
+        "definition": "Common English word: use",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb",
+            "noun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_6a863092": {
+        "word_id": "vocab_6a863092",
+        "word": "two",
+        "definition": "Common English word: two",
+        "part_of_speech": "number",
+        "examples": [
+          [
+            "number"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_714c9901": {
+        "word_id": "vocab_714c9901",
+        "word": "how",
+        "definition": "Common English word: how",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_e47299e7": {
+        "word_id": "vocab_e47299e7",
+        "word": "our",
+        "definition": "Common English word: our",
+        "part_of_speech": "determiner",
+        "examples": [
+          [
+            "determiner"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_c8fca36c": {
+        "word_id": "vocab_c8fca36c",
+        "word": "work",
+        "definition": "Common English word: work",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb",
+            "noun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_824717fe": {
+        "word_id": "vocab_824717fe",
+        "word": "first",
+        "definition": "Common English word: first",
+        "part_of_speech": "adjective",
+        "examples": [
+          [
+            "adjective",
+            "adverb",
+            "noun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_12ec3068": {
+        "word_id": "vocab_12ec3068",
+        "word": "well",
+        "definition": "Common English word: well",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb",
+            "adjective",
+            "noun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_1b7e8cd5": {
+        "word_id": "vocab_1b7e8cd5",
+        "word": "way",
+        "definition": "Common English word: way",
+        "part_of_speech": "noun",
+        "examples": [
+          [
+            "noun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_9bdbeecf": {
+        "word_id": "vocab_9bdbeecf",
+        "word": "even",
+        "definition": "Common English word: even",
+        "part_of_speech": "adverb",
+        "examples": [
+          [
+            "adverb",
+            "adjective"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_2b605f51": {
+        "word_id": "vocab_2b605f51",
+        "word": "new",
+        "definition": "Common English word: new",
+        "part_of_speech": "adjective",
+        "examples": [
+          [
+            "adjective"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_bf2fa897": {
+        "word_id": "vocab_bf2fa897",
+        "word": "want",
+        "definition": "Common English word: want",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_bac7c76d": {
+        "word_id": "vocab_bac7c76d",
+        "word": "because",
+        "definition": "Common English word: because",
+        "part_of_speech": "conjunction",
+        "examples": [
+          [
+            "conjunction"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_7efcf76e": {
+        "word_id": "vocab_7efcf76e",
+        "word": "any",
+        "definition": "Common English word: any",
+        "part_of_speech": "determiner",
+        "examples": [
+          [
+            "determiner",
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_5722cb2a": {
+        "word_id": "vocab_5722cb2a",
+        "word": "these",
+        "definition": "Common English word: these",
+        "part_of_speech": "determiner",
+        "examples": [
+          [
+            "determiner",
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_03597d03": {
+        "word_id": "vocab_03597d03",
+        "word": "give",
+        "definition": "Common English word: give",
+        "part_of_speech": "verb",
+        "examples": [
+          [
+            "verb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_074c8772": {
+        "word_id": "vocab_074c8772",
+        "word": "day",
+        "definition": "Common English word: day",
+        "part_of_speech": "noun",
+        "examples": [
+          [
+            "noun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_1487138e": {
+        "word_id": "vocab_1487138e",
+        "word": "most",
+        "definition": "Common English word: most",
+        "part_of_speech": "determiner",
+        "examples": [
+          [
+            "determiner",
+            "adverb"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_2589140f": {
+        "word_id": "vocab_2589140f",
+        "word": "us",
+        "definition": "Common English word: us",
+        "part_of_speech": "pronoun",
+        "examples": [
+          [
+            "pronoun"
+          ]
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 0,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      }
+    },
+    "review_history": [
+      {
+        "word_id": "vocab_5fa4cb83",
+        "correct": true,
+        "quality": 4,
+        "time_spent_seconds": 0.0,
+        "response": "",
+        "expected": "Used to refer to a specific person or thing",
+        "feedback": "Excellent! You have a strong grasp of 'the'.",
+        "reviewed_at": "2026-03-22T02:45:29.771261"
+      },
+      {
+        "word_id": "vocab_5ba5420b",
+        "correct": true,
+        "quality": 5,
+        "time_spent_seconds": 0.0,
+        "response": "",
+        "expected": "Exist; occur; used as an auxiliary verb",
+        "feedback": "Excellent! You have a strong grasp of 'be'.",
+        "reviewed_at": "2026-03-22T02:45:29.771300"
+      },
+      {
+        "word_id": "vocab_5e2c249b",
+        "correct": true,
+        "quality": 5,
+        "time_spent_seconds": 0.0,
+        "response": "",
+        "expected": "Expressing direction or motion",
+        "feedback": "Excellent! You have a strong grasp of 'to'.",
+        "reviewed_at": "2026-03-22T02:45:29.771319"
+      },
+      {
+        "word_id": "vocab_6f919922",
+        "correct": true,
+        "quality": 5,
+        "time_spent_seconds": 0.0,
+        "response": "",
+        "expected": "Expressing relationship or origin",
+        "feedback": "Excellent! You have a strong grasp of 'of'.",
+        "reviewed_at": "2026-03-22T02:45:29.771332"
+      },
+      {
+        "word_id": "vocab_7c6c5b3d",
+        "correct": true,
+        "quality": 5,
+        "time_spent_seconds": 0.0,
+        "response": "",
+        "expected": "Used to connect words",
+        "feedback": "Excellent! You have a strong grasp of 'and'.",
+        "reviewed_at": "2026-03-22T02:45:29.771343"
+      }
+    ],
+    "statistics": {
+      "total_words": 113,
+      "by_proficiency": {
+        "new": 108,
+        "learning": 5,
+        "familiar": 0,
+        "proficient": 0,
+        "mastered": 0
+      },
+      "total_reviews": 5,
+      "correct_reviews": 5,
+      "accuracy": 1.0,
+      "average_time": 0.0
+    }
+  },
+  "grammar_rules": {
+    "grammar_sva_1": {
+      "rule_id": "grammar_sva_1",
+      "name": "Third Person Singular -s",
+      "category": "subject_verb_agreement",
+      "description": "Add -s to verbs in third person singular",
+      "pattern": "^(he|she|it|[\\w]+s?)\\s+(\\w+[^s])$",
+      "correct_examples": [
+        "She runs every day.",
+        "He plays soccer.",
+        "It works perfectly."
+      ],
+      "incorrect_examples": [
+        "She run every day.",
+        "He play soccer.",
+        "It work perfectly."
+      ],
+      "explanation": "In present tense, third person singular (he, she, it) requires the verb to end in -s or -es.",
+      "difficulty": 1,
+      "tags": [
+        "beginner",
+        "present_tense",
+        "verbs"
+      ]
+    },
+    "grammar_sva_2": {
+      "rule_id": "grammar_sva_2",
+      "name": "Plural Subjects",
+      "category": "subject_verb_agreement",
+      "description": "Plural subjects take base form verbs",
+      "pattern": "^(they|we|[\\w]+s)\\s+(\\w+s)$",
+      "correct_examples": [
+        "They run every day.",
+        "The dogs play outside.",
+        "We work together."
+      ],
+      "incorrect_examples": [
+        "They runs every day.",
+        "The dogs plays outside.",
+        "We works together."
+      ],
+      "explanation": "Plural subjects use the base form of the verb without -s.",
+      "difficulty": 1,
+      "tags": [
+        "beginner",
+        "present_tense",
+        "verbs"
+      ]
+    },
+    "grammar_art_1": {
+      "rule_id": "grammar_art_1",
+      "name": "Indefinite Article A/An",
+      "category": "article",
+      "description": "Use 'a' before consonant sounds, 'an' before vowel sounds",
+      "pattern": "\\b(a|an)\\s+([aeiou]|[aeiou]\\w+)",
+      "correct_examples": [
+        "a book",
+        "an apple",
+        "a university",
+        "an hour"
+      ],
+      "incorrect_examples": [
+        "an book",
+        "a apple",
+        "an university",
+        "a hour"
+      ],
+      "explanation": "The choice between 'a' and 'an' depends on the SOUND, not the spelling. Use 'an' before vowel sounds.",
+      "difficulty": 1,
+      "tags": [
+        "beginner",
+        "articles",
+        "nouns"
+      ]
+    },
+    "grammar_art_2": {
+      "rule_id": "grammar_art_2",
+      "name": "Definite Article The",
+      "category": "article",
+      "description": "Use 'the' for specific or previously mentioned nouns",
+      "pattern": "\\bthe\\s+\\w+",
+      "correct_examples": [
+        "The sun rises in the east.",
+        "I saw a dog. The dog was brown.",
+        "The United States"
+      ],
+      "incorrect_examples": [
+        "Sun rises in east.",
+        "I saw dog. Dog was brown."
+      ],
+      "explanation": "Use 'the' when referring to something specific, unique, or previously mentioned.",
+      "difficulty": 2,
+      "tags": [
+        "beginner",
+        "articles",
+        "nouns"
+      ]
+    },
+    "grammar_tense_1": {
+      "rule_id": "grammar_tense_1",
+      "name": "Present Continuous",
+      "category": "tense",
+      "description": "Use am/is/are + -ing for ongoing actions",
+      "pattern": "\\b(am|is|are)\\s+\\w+ing\\b",
+      "correct_examples": [
+        "I am studying now.",
+        "She is working today.",
+        "They are playing outside."
+      ],
+      "incorrect_examples": [
+        "I studying now.",
+        "She working today.",
+        "They is playing outside."
+      ],
+      "explanation": "Present continuous requires the auxiliary verb (am/is/are) + verb-ing.",
+      "difficulty": 2,
+      "tags": [
+        "beginner",
+        "present_tense",
+        "continuous"
+      ]
+    },
+    "grammar_tense_2": {
+      "rule_id": "grammar_tense_2",
+      "name": "Simple Past Regular Verbs",
+      "category": "tense",
+      "description": "Add -ed to regular verbs for past tense",
+      "pattern": "\\b\\w+ed\\b",
+      "correct_examples": [
+        "I walked to school.",
+        "She played piano.",
+        "They worked hard."
+      ],
+      "incorrect_examples": [
+        "I walk to school yesterday.",
+        "She play piano last week.",
+        "They work hard yesterday."
+      ],
+      "explanation": "Regular verbs form the past tense by adding -ed. Some verbs double the final consonant.",
+      "difficulty": 1,
+      "tags": [
+        "beginner",
+        "past_tense",
+        "regular_verbs"
+      ]
+    },
+    "grammar_tense_3": {
+      "rule_id": "grammar_tense_3",
+      "name": "Present Perfect",
+      "category": "tense",
+      "description": "Use have/has + past participle",
+      "pattern": "\\b(have|has)\\s+\\w+ed\\b",
+      "correct_examples": [
+        "I have finished my work.",
+        "She has visited Paris.",
+        "They have learned English."
+      ],
+      "incorrect_examples": [
+        "I finished my work already.",
+        "She has visit Paris.",
+        "They have learn English."
+      ],
+      "explanation": "Present perfect connects past to present. Use 'have' with I/you/we/they, 'has' with he/she/it.",
+      "difficulty": 3,
+      "tags": [
+        "intermediate",
+        "present_perfect",
+        "perfect_tense"
+      ]
+    },
+    "grammar_cond_1": {
+      "rule_id": "grammar_cond_1",
+      "name": "First Conditional",
+      "category": "conditional",
+      "description": "If + present, will + base verb",
+      "pattern": "\\bif\\s+\\w+\\s+\\w+s?\\s*,\\s*\\w+\\s+will\\s+\\w+",
+      "correct_examples": [
+        "If it rains, I will stay home.",
+        "If she comes, we will be happy.",
+        "If you study, you will pass."
+      ],
+      "incorrect_examples": [
+        "If it will rain, I stay home.",
+        "If she come, we will be happy.",
+        "If you will study, you pass."
+      ],
+      "explanation": "First conditional: If + present simple, will + infinitive. Used for real future possibilities.",
+      "difficulty": 3,
+      "tags": [
+        "intermediate",
+        "conditionals",
+        "future"
+      ]
+    },
+    "grammar_cond_2": {
+      "rule_id": "grammar_cond_2",
+      "name": "Second Conditional",
+      "category": "conditional",
+      "description": "If + past, would + base verb",
+      "pattern": "\\bif\\s+\\w+\\s+\\w+ed\\s*,\\s*\\w+\\s+would\\s+\\w+",
+      "correct_examples": [
+        "If I had money, I would buy a car.",
+        "If she were here, she would help.",
+        "If they knew, they would tell us."
+      ],
+      "incorrect_examples": [
+        "If I have money, I would buy a car.",
+        "If she was here, she would help.",
+        "If they know, they would tell us."
+      ],
+      "explanation": "Second conditional: If + past simple, would + infinitive. Used for hypothetical situations.",
+      "difficulty": 4,
+      "tags": [
+        "intermediate",
+        "conditionals",
+        "hypothetical"
+      ]
+    },
+    "grammar_err_1": {
+      "rule_id": "grammar_err_1",
+      "name": "Their/There/They're",
+      "category": "common_errors",
+      "description": "Distinguish between their, there, and they're",
+      "pattern": "\\b(their|there|they're)\\b",
+      "correct_examples": [
+        "Their house is big.",
+        "The book is over there.",
+        "They're going to school."
+      ],
+      "incorrect_examples": [
+        "There house is big.",
+        "Their going to school.",
+        "The book is over they're."
+      ],
+      "explanation": "'Their' = possessive, 'There' = location, 'They're' = they are",
+      "difficulty": 2,
+      "tags": [
+        "beginner",
+        "homophones",
+        "common_errors"
+      ]
+    },
+    "grammar_err_2": {
+      "rule_id": "grammar_err_2",
+      "name": "Your/You're",
+      "category": "common_errors",
+      "description": "Distinguish between your and you're",
+      "pattern": "\\b(your|you're)\\b",
+      "correct_examples": [
+        "Your book is here.",
+        "You're very kind.",
+        "Is this your phone?"
+      ],
+      "incorrect_examples": [
+        "You're book is here.",
+        "Your very kind.",
+        "Is this you're phone?"
+      ],
+      "explanation": "'Your' = possessive, 'You're' = you are",
+      "difficulty": 1,
+      "tags": [
+        "beginner",
+        "homophones",
+        "common_errors"
+      ]
+    },
+    "grammar_err_3": {
+      "rule_id": "grammar_err_3",
+      "name": "Its/It's",
+      "category": "common_errors",
+      "description": "Distinguish between its and it's",
+      "pattern": "\\b(its|it's)\\b",
+      "correct_examples": [
+        "The cat licked its paw.",
+        "It's a beautiful day.",
+        "The company changed its policy."
+      ],
+      "incorrect_examples": [
+        "The cat licked it's paw.",
+        "Its a beautiful day.",
+        "The company changed it's policy."
+      ],
+      "explanation": "'Its' = possessive form of it, 'It's' = it is or it has",
+      "difficulty": 2,
+      "tags": [
+        "beginner",
+        "homophones",
+        "common_errors",
+        "possessives"
+      ]
+    },
+    "grammar_pass_1": {
+      "rule_id": "grammar_pass_1",
+      "name": "Passive Voice Formation",
+      "category": "passive_voice",
+      "description": "be + past participle forms passive voice",
+      "pattern": "\\b(am|is|are|was|were|been)\\s+\\w+ed\\b",
+      "correct_examples": [
+        "The book was written by her.",
+        "The cake is being made.",
+        "The work has been completed."
+      ],
+      "incorrect_examples": [
+        "The book written by her.",
+        "The cake is made being.",
+        "The work has completed been."
+      ],
+      "explanation": "Passive voice: subject + be + past participle (+ by agent). Focus is on the action, not the doer.",
+      "difficulty": 4,
+      "tags": [
+        "intermediate",
+        "passive",
+        "voice"
+      ]
+    }
+  },
+  "reading_results": [],
+  "writing_assessments": [],
+  "sessions": []
+}
