@@ -33,8 +33,29 @@ Thumbs.db
 .git/
 .gitignore
 
-# Docker (from RPA folder)
-RPA/
+# RPA Python stuff (keep docker configs)
+RPA/.git/
+RPA/.venv/
+RPA/venv/
+RPA/__pycache__/
+RPA/**/__pycache__/
+RPA/*.pyc
+RPA/**/*.pyc
+RPA/tests/
+RPA/memory/
+RPA/memory_storage/
+RPA/docs/
+RPA/upload/
+RPA/skills/
+RPA/examples/
+RPA/mini-services/
+RPA/.zscripts/
+RPA/*.py
+RPA/rpa/
+RPA/bun.lock
+RPA/package.json
+RPA/tsconfig.json
+RPA/requirements.txt
 
 # Documentation
 *.md
@@ -51,3 +72,6 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Keep Docker configs (don't exclude RPA/docker/)
+!RPA/docker/
