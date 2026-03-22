@@ -239,3 +239,4 @@ Use 'kill 1976' to stop it.
  GET / 200 in 28ms (compile: 2ms, render: 26ms)
 ✓ Compiled in 171ms
  GET / 200 in 185ms (compile: 46ms, render: 139ms)
+ GET / 200 in 41ms (compile: 3ms, render: 38ms)
