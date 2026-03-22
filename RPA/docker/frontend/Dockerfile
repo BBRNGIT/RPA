@@ -1,54 +1,75 @@
-# RPA Frontend - React + Nginx
-# Multi-stage build: build React app, then serve with Nginx
+# RPA Frontend - Next.js + Nginx
+# Multi-stage build: build Next.js app, then serve with Nginx
+#
+# Build context: Parent directory (contains package.json, src/, etc.)
+# Dockerfile path: RPA/docker/frontend/Dockerfile
 
-# Stage 1: Build React App
-FROM node:18-alpine AS builder
+# =============================================================================
+# Stage 1: Build Next.js App
+# =============================================================================
+FROM node:20-alpine AS builder
+
+# Install dependencies for native modules
+RUN apk add --no-cache libc6-compat
 
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
+# Copy package files first (for better caching)
+COPY package.json bun.lock* package-lock.json* ./
 
-# Install dependencies
-RUN npm ci --silent
+# Install dependencies using npm (fallback if bun.lock exists)
+RUN npm ci --legacy-peer-deps || npm install --legacy-peer-deps
 
 # Copy source code
-COPY web/ ./web/
+COPY src/ ./src/
 COPY public/ ./public/
-
-# Build arguments for environment variables
-ARG REACT_APP_API_URL=/api
-ARG REACT_APP_WS_URL=/ws
+COPY next.config.ts tsconfig.json tailwind.config.ts postcss.config.mjs ./
+COPY components.json ./
 
 # Set environment variables for build
-ENV REACT_APP_API_URL=$REACT_APP_API_URL
-ENV REACT_APP_WS_URL=$REACT_APP_WS_URL
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_ENV=production
 
-# Build the app
+# Build arguments for runtime config
+ARG NEXT_PUBLIC_API_URL=/api
+ARG NEXT_PUBLIC_WS_URL=/ws
+
+# Build the Next.js app
 RUN npm run build
 
-# Stage 2: Serve with Nginx
+# =============================================================================
+# Stage 2: Production Image with Nginx
+# =============================================================================
 FROM nginx:alpine
 
 LABEL org.opencontainers.image.source="https://github.com/BBRNGIT/RPA"
-LABEL org.opencontainers.image.description="RPA Frontend - React + Nginx"
+LABEL org.opencontainers.image.description="RPA Frontend - Next.js + Nginx"
 LABEL org.opencontainers.image.licenses="MIT"
 
 # Install curl for health checks
 RUN apk add --no-cache curl
 
 # Remove default nginx config
-RUN rm /etc/nginx/conf.d/default.conf
+RUN rm -f /etc/nginx/conf.d/default.conf
 
 # Copy custom nginx config
-COPY docker/frontend/nginx.conf /etc/nginx/nginx.conf
-COPY docker/frontend/default.conf /etc/nginx/conf.d/default.conf
+COPY RPA/docker/frontend/nginx.conf /etc/nginx/nginx.conf
+COPY RPA/docker/frontend/default.conf /etc/nginx/conf.d/default.conf
 
-# Copy built app from builder
-COPY --from=builder /app/build /usr/share/nginx/html
+# Copy Next.js static files (public folder)
+COPY --from=builder /app/public /usr/share/nginx/html
 
-# Create directories for SSL
+# Copy Next.js build output
+COPY --from=builder /app/.next/static /usr/share/nginx/html/_next/static
+
+# Create SPA fallback for client-side routing
+RUN echo '<!DOCTYPE html><html><head><meta charset="utf-8"><title>RPA Intelligence Engine</title><script>window.location.href="/";</script></head><body></body></html>' > /usr/share/nginx/html/index.html
+
+# Create directories for SSL (optional)
 RUN mkdir -p /etc/nginx/ssl
+
+# Set proper permissions
+RUN chown -R nginx:nginx /usr/share/nginx/html
 
 # Expose ports
 EXPOSE 80 443

@@ -3,6 +3,9 @@
 #
 # Usage:
 #   docker-compose -f docker-compose.yml -f docker-compose.build.yml build
+#
+# Note: Frontend is a Next.js app in the parent directory (../)
+#       Backend and Sandbox are Python apps in this directory
 
 version: "3.9"
 
@@ -15,8 +18,8 @@ services:
 
   rpa-frontend:
     build:
-      context: .
-      dockerfile: docker/frontend/Dockerfile
+      context: ..
+      dockerfile: RPA/docker/frontend/Dockerfile
     image: ghcr.io/bbrngit/rpa-frontend:latest
 
   rpa-sandbox:

@@ -10,9 +10,9 @@ pytest>=7.0.0
 pytest-cov>=4.0.0
 pytest-asyncio>=0.21.0
 
-# Optional: Dataset loading (Phase 4)
-# datasets>=2.0.0
-# transformers>=4.0.0
+# Dataset loading (Hugging Face)
+datasets>=2.0.0
+huggingface-hub>=0.16.0
 
 # API layer (Phase 8 - Core API)
 fastapi>=0.100.0
@@ -20,12 +20,10 @@ uvicorn>=0.22.0
 pyjwt>=2.8.0
 httpx>=0.24.0
 pydantic>=2.0.0
+websockets>=11.0
 
 # Terminal UI (Phase 8.2 - CLI)
 rich>=13.0.0
-
-# Optional: WebSockets for real-time features
-# websockets>=11.0
 
 # Development
 black>=23.0.0

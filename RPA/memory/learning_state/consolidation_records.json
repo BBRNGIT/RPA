@@ -13345,5 +13345,3092 @@
     "validation_score": 0.75,
     "source": "news",
     "notes": ""
+  },
+  "cons_e663c9ef": {
+    "record_id": "cons_e663c9ef",
+    "node_id": "pattern: Senj\u014d no Valkyria 3 : Unrecor",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.659829",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_862120f0": {
+    "record_id": "cons_862120f0",
+    "node_id": "pattern: The game began development in",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.659874",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_fce8889f": {
+    "record_id": "cons_fce8889f",
+    "node_id": "pattern: It met with positive sales in",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.659905",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_b13f1d54": {
+    "record_id": "cons_b13f1d54",
+    "node_id": "pattern: As with previous Valkyira Chr",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.659927",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_bfca57a8": {
+    "record_id": "cons_bfca57a8",
+    "node_id": "pattern: The game 's battle system , t",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.659947",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_69351b18": {
+    "record_id": "cons_69351b18",
+    "node_id": "pattern: Troops are divided into five ",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.659966",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_ae0ef854": {
+    "record_id": "cons_ae0ef854",
+    "node_id": "pattern: The game takes place during t",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.659985",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_d229525a": {
+    "record_id": "cons_d229525a",
+    "node_id": "pattern: As the Nameless officially do",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660001",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c6ae1715": {
+    "record_id": "cons_c6ae1715",
+    "node_id": "pattern: Partly due to these events , ",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660028",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_fcafb46a": {
+    "record_id": "cons_fcafb46a",
+    "node_id": "pattern: Concept work for Valkyria Chr",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660046",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_87e5f4c9": {
+    "record_id": "cons_87e5f4c9",
+    "node_id": "pattern: The majority of material crea",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660062",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e9308f72": {
+    "record_id": "cons_e9308f72",
+    "node_id": "pattern: The music was composed by Hit",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660078",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_fd9ab001": {
+    "record_id": "cons_fd9ab001",
+    "node_id": "pattern: In September 2010 , a teaser ",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660096",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_70d27dd2": {
+    "record_id": "cons_70d27dd2",
+    "node_id": "pattern: Unlike its two predecessors ,",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660111",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c6b0bceb": {
+    "record_id": "cons_c6b0bceb",
+    "node_id": "pattern: On its day of release in Japa",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660129",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_2741c49c": {
+    "record_id": "cons_2741c49c",
+    "node_id": "pattern: Famitsu enjoyed the story , a",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660145",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_8aa1c782": {
+    "record_id": "cons_8aa1c782",
+    "node_id": "pattern: PlayStation Official Magazine",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660162",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_464bd6c8": {
+    "record_id": "cons_464bd6c8",
+    "node_id": "pattern: In a preview of the TGS demo ",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660181",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1938c6b2": {
+    "record_id": "cons_1938c6b2",
+    "node_id": "pattern: Kurt and Riela were featured ",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660200",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_d31fb4e6": {
+    "record_id": "cons_d31fb4e6",
+    "node_id": "pattern: Valkyria Chronicles 3 was ada",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660220",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_d60f7754": {
+    "record_id": "cons_d60f7754",
+    "node_id": "pattern: The anime 's title was inspir",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660235",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_97a7e59b": {
+    "record_id": "cons_97a7e59b",
+    "node_id": "pattern: Two manga adaptations were pr",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660251",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_fb8e2684": {
+    "record_id": "cons_fb8e2684",
+    "node_id": "pattern: = Tower Building of the Littl",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660269",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_5263c1eb": {
+    "record_id": "cons_5263c1eb",
+    "node_id": "pattern: The Tower Building of the Lit",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660284",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_0b3f5eda": {
+    "record_id": "cons_0b3f5eda",
+    "node_id": "pattern: The building receives its nam",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660302",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_351ca056": {
+    "record_id": "cons_351ca056",
+    "node_id": "pattern: The arsenal was constructed a",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660319",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_7696ed12": {
+    "record_id": "cons_7696ed12",
+    "node_id": "pattern: For several years the arsenal",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660333",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_279086ea": {
+    "record_id": "cons_279086ea",
+    "node_id": "pattern: The United States troops at t",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660349",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_263c9fba": {
+    "record_id": "cons_263c9fba",
+    "node_id": "pattern: -John M Harrel Telegram , Jan",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660365",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_bd317a49": {
+    "record_id": "cons_bd317a49",
+    "node_id": "pattern: The item was intended simply ",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660381",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_9672d3f1": {
+    "record_id": "cons_9672d3f1",
+    "node_id": "pattern: This movement is prompted by ",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660396",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_24cb2051": {
+    "record_id": "cons_24cb2051",
+    "node_id": "pattern: Perhaps because Abraham Linco",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660414",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_bd5051f0": {
+    "record_id": "cons_bd5051f0",
+    "node_id": "pattern: The governor would take posse",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660429",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_286d112c": {
+    "record_id": "cons_286d112c",
+    "node_id": "pattern: The soldiers would be allowed",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660445",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_3f0dd2e9": {
+    "record_id": "cons_3f0dd2e9",
+    "node_id": "pattern: The soldiers would be allowed",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660460",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_13714896": {
+    "record_id": "cons_13714896",
+    "node_id": "pattern: On the morning of February 8 ",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660475",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_2ea2f377": {
+    "record_id": "cons_2ea2f377",
+    "node_id": "pattern: The Little Rock Arsenal was c",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660491",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_ce14bae3": {
+    "record_id": "cons_ce14bae3",
+    "node_id": "pattern: Inside the Little Rock Arsena",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660508",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_7d58b7db": {
+    "record_id": "cons_7d58b7db",
+    "node_id": "pattern: M1822 .69 cal ( flintlock ) 5",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660523",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_be28a1cd": {
+    "record_id": "cons_be28a1cd",
+    "node_id": "pattern: M1822 .69 cal ( percussion @-",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660539",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_605fc8a6": {
+    "record_id": "cons_605fc8a6",
+    "node_id": "pattern: M1842 .69 cal smoothbore ( pe",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660559",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_94596c8d": {
+    "record_id": "cons_94596c8d",
+    "node_id": "pattern: M1855 .58 cal rifle @-@ muske",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660578",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6e293d60": {
+    "record_id": "cons_6e293d60",
+    "node_id": "pattern: M1841 rifle ( \" Mississippi R",
+    "session_id": "lesson_20260322_1506",
+    "consolidated_at": "2026-03-22T15:06:46.660618",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_cfad1099": {
+    "record_id": "cons_cfad1099",
+    "node_id": "pattern:Wall St. Bears Claw Back Into ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695221",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1c766786": {
+    "record_id": "cons_1c766786",
+    "node_id": "pattern:Carlyle Looks Toward Commercia",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695273",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_5b6fd979": {
+    "record_id": "cons_5b6fd979",
+    "node_id": "pattern:Oil and Economy Cloud Stocks' ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695305",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_7c3ab8e9": {
+    "record_id": "cons_7c3ab8e9",
+    "node_id": "pattern:Iraq Halts Oil Exports from Ma",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695330",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_8e78b4f6": {
+    "record_id": "cons_8e78b4f6",
+    "node_id": "pattern:Oil prices soar to all-time re",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695353",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_3c2e3f47": {
+    "record_id": "cons_3c2e3f47",
+    "node_id": "pattern:Stocks End Up, But Near Year L",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695378",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_8a758dbf": {
+    "record_id": "cons_8a758dbf",
+    "node_id": "pattern:Money Funds Fell in Latest Wee",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695399",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c211730c": {
+    "record_id": "cons_c211730c",
+    "node_id": "pattern:Fed minutes show dissent over ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695420",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_b0d82570": {
+    "record_id": "cons_b0d82570",
+    "node_id": "pattern:Safety Net (Forbes.com) Forbes",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695445",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_ba91895b": {
+    "record_id": "cons_ba91895b",
+    "node_id": "pattern:Wall St. Bears Claw Back Into ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695472",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_0229a2b7": {
+    "record_id": "cons_0229a2b7",
+    "node_id": "pattern:Oil and Economy Cloud Stocks' ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695495",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_d1364fe6": {
+    "record_id": "cons_d1364fe6",
+    "node_id": "pattern:No Need for OPEC to Pump More-",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695520",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e36050fb": {
+    "record_id": "cons_e36050fb",
+    "node_id": "pattern:Non-OPEC Nations Should Up Out",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695540",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_a537dfdb": {
+    "record_id": "cons_a537dfdb",
+    "node_id": "pattern:Google IPO Auction Off to Rock",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695556",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_3d808305": {
+    "record_id": "cons_3d808305",
+    "node_id": "pattern:Dollar Falls Broadly on Record",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695573",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_46eca5e1": {
+    "record_id": "cons_46eca5e1",
+    "node_id": "pattern:Rescuing an Old Saver If you t",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695593",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_97247368": {
+    "record_id": "cons_97247368",
+    "node_id": "pattern:Kids Rule for Back-to-School T",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695623",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c737b8cc": {
+    "record_id": "cons_c737b8cc",
+    "node_id": "pattern:In a Down Market, Head Toward ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695642",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_46397adf": {
+    "record_id": "cons_46397adf",
+    "node_id": "pattern:US trade deficit swells in Jun",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695659",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_ac265786": {
+    "record_id": "cons_ac265786",
+    "node_id": "pattern:Shell 'could be target for Tot",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695678",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_eba5005c": {
+    "record_id": "cons_eba5005c",
+    "node_id": "pattern:Google IPO faces Playboy slip-",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695694",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_9b780d8c": {
+    "record_id": "cons_9b780d8c",
+    "node_id": "pattern:Eurozone economy keeps growing",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695708",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c2e0554e": {
+    "record_id": "cons_c2e0554e",
+    "node_id": "pattern:Expansion slows in Japan Econo",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695723",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_b4c9493a": {
+    "record_id": "cons_b4c9493a",
+    "node_id": "pattern:Rand falls on shock SA rate cu",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695739",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_0d3a104c": {
+    "record_id": "cons_0d3a104c",
+    "node_id": "pattern:Car prices down across the boa",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695756",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_2a722d86": {
+    "record_id": "cons_2a722d86",
+    "node_id": "pattern:South Korea lowers interest ra",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695770",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6b85e251": {
+    "record_id": "cons_6b85e251",
+    "node_id": "pattern:Google auction begins on Frida",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695785",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_89c0c437": {
+    "record_id": "cons_89c0c437",
+    "node_id": "pattern:HP shares tumble on profit new",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695799",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6ac854f5": {
+    "record_id": "cons_6ac854f5",
+    "node_id": "pattern:Mauritian textile firm cuts jo",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695815",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_9c2fb106": {
+    "record_id": "cons_9c2fb106",
+    "node_id": "pattern:Chad seeks refugee aid from IM",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695834",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e6294531": {
+    "record_id": "cons_e6294531",
+    "node_id": "pattern:Japan nuclear firm shuts plant",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695852",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_66553630": {
+    "record_id": "cons_66553630",
+    "node_id": "pattern:Veteran inventor in market flo",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695869",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_9741e54a": {
+    "record_id": "cons_9741e54a",
+    "node_id": "pattern:Saudi Arabia to open up oil ta",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695883",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c3bb0df1": {
+    "record_id": "cons_c3bb0df1",
+    "node_id": "pattern:Saudi phone sector gets \\$1bn ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695899",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_acaa73e5": {
+    "record_id": "cons_acaa73e5",
+    "node_id": "pattern:Indians fill rail skills short",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695916",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_72a69d07": {
+    "record_id": "cons_72a69d07",
+    "node_id": "pattern:Steady as they go BEDFORD -- S",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695932",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_077d3de1": {
+    "record_id": "cons_077d3de1",
+    "node_id": "pattern:Google IPO: Type in 'confusing",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695949",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_eadc38b9": {
+    "record_id": "cons_eadc38b9",
+    "node_id": "pattern:A bargain hunter's paradise Ma",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695964",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f621019e": {
+    "record_id": "cons_f621019e",
+    "node_id": "pattern:Researchers seek to untangle t",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695982",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_35dbb4c5": {
+    "record_id": "cons_35dbb4c5",
+    "node_id": "pattern:Microsoft Corp. 2.0: a kinder ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.695998",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1bffde5c": {
+    "record_id": "cons_1bffde5c",
+    "node_id": "pattern:Letters Target the abusers of ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696025",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1fe382c6": {
+    "record_id": "cons_1fe382c6",
+    "node_id": "pattern:Somewhere between gleam and gl",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696045",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_64666f55": {
+    "record_id": "cons_64666f55",
+    "node_id": "pattern:Technology company sues five e",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696063",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_d59a4a42": {
+    "record_id": "cons_d59a4a42",
+    "node_id": "pattern:Grant to aid Lynn Central Squa",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696080",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f8f7bd4e": {
+    "record_id": "cons_f8f7bd4e",
+    "node_id": "pattern:State grant to aid Lynn; Bank ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696098",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1cbe5abb": {
+    "record_id": "cons_1cbe5abb",
+    "node_id": "pattern:A New Legal Chapter for a 90's",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696112",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_3cf2ced8": {
+    "record_id": "cons_3cf2ced8",
+    "node_id": "pattern:Will Russia, the Oil Superpowe",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696128",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1e08ac99": {
+    "record_id": "cons_1e08ac99",
+    "node_id": "pattern:Switching Titles, if Not Gears",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696143",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_ffa6df7d": {
+    "record_id": "cons_ffa6df7d",
+    "node_id": "pattern:For Sale: The Ultimate Status ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696158",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_ea987c11": {
+    "record_id": "cons_ea987c11",
+    "node_id": "pattern:Quality Gets Swept Away Qualit",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696176",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_5dfe9720": {
+    "record_id": "cons_5dfe9720",
+    "node_id": "pattern:Making Your Insurer Pay If Hur",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696195",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f86a3e1a": {
+    "record_id": "cons_f86a3e1a",
+    "node_id": "pattern:Delightful Dell The company's ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696210",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_a9413153": {
+    "record_id": "cons_a9413153",
+    "node_id": "pattern:Chrysler's Bling King After a ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696227",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_2a3b9550": {
+    "record_id": "cons_2a3b9550",
+    "node_id": "pattern:What's Cool In the Pool ... ..",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696242",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_a75de77e": {
+    "record_id": "cons_a75de77e",
+    "node_id": "pattern:The Age of Doom In 1993 six ge",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696255",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_53390345": {
+    "record_id": "cons_53390345",
+    "node_id": "pattern:Hip Hop's Online Shop Celebrit",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696271",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_40232480": {
+    "record_id": "cons_40232480",
+    "node_id": "pattern:Stoking the Steamroller No oth",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696288",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_b3bc00db": {
+    "record_id": "cons_b3bc00db",
+    "node_id": "pattern:Coming to The Rescue Got a uni",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696304",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f161faab": {
+    "record_id": "cons_f161faab",
+    "node_id": "pattern:The New Customers Are In Town ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696321",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_96b6eacb": {
+    "record_id": "cons_96b6eacb",
+    "node_id": "pattern:Barrel of Monkeys, 2004 Editio",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696338",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_8e2bd2fe": {
+    "record_id": "cons_8e2bd2fe",
+    "node_id": "pattern:Oldsmobile: The final parking ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696355",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_019d4841": {
+    "record_id": "cons_019d4841",
+    "node_id": "pattern:Not All Jobs Belong To The Whi",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696371",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1bf134aa": {
+    "record_id": "cons_1bf134aa",
+    "node_id": "pattern:Downhome Pinoy Blues, Intersec",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696386",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_99970b57": {
+    "record_id": "cons_99970b57",
+    "node_id": "pattern:The Real Time Modern Manila Bl",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696409",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_a9a24e04": {
+    "record_id": "cons_a9a24e04",
+    "node_id": "pattern:Best Asian Tourism Destination",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696426",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_ec2ead2b": {
+    "record_id": "cons_ec2ead2b",
+    "node_id": "pattern:What are the best cities for b",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696441",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f61e3582": {
+    "record_id": "cons_f61e3582",
+    "node_id": "pattern:IT alligator tales I grew up i",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696455",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c9f34983": {
+    "record_id": "cons_c9f34983",
+    "node_id": "pattern:IT Myth 5: Most IT projects fa",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696472",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_b7520e94": {
+    "record_id": "cons_b7520e94",
+    "node_id": "pattern:BEA grabs CA exec to head prod",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696489",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6e16974b": {
+    "record_id": "cons_6e16974b",
+    "node_id": "pattern:Autodesk tackles project colla",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696507",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c026ed6f": {
+    "record_id": "cons_c026ed6f",
+    "node_id": "pattern:U.K.'s NHS taps Gartner to hel",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696524",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_5408813e": {
+    "record_id": "cons_5408813e",
+    "node_id": "pattern:Play Boys: Google IPO a Go Any",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696539",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_5a4928fd": {
+    "record_id": "cons_5a4928fd",
+    "node_id": "pattern:More Big Boobs in Playboy An i",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696555",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_35985345": {
+    "record_id": "cons_35985345",
+    "node_id": "pattern:Dutch Firm Beats Apple to Punc",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696572",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_4f20d516": {
+    "record_id": "cons_4f20d516",
+    "node_id": "pattern:HP to Buy Synstar Hewlett-Pack",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696587",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_ae44fa6d": {
+    "record_id": "cons_ae44fa6d",
+    "node_id": "pattern:A Personal Operator From Veriz",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696610",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_8381a355": {
+    "record_id": "cons_8381a355",
+    "node_id": "pattern:Paid Search Growth May Slow A ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696627",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c4c6fe05": {
+    "record_id": "cons_c4c6fe05",
+    "node_id": "pattern:Fark Sells Out. France Surrend",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696644",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_933c76da": {
+    "record_id": "cons_933c76da",
+    "node_id": "pattern:'Madden,' 'ESPN' Football Scor",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696667",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_25d4b307": {
+    "record_id": "cons_25d4b307",
+    "node_id": "pattern:Group to Propose New High-Spee",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696682",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e474ad84": {
+    "record_id": "cons_e474ad84",
+    "node_id": "pattern:AOL to Sell Cheap PCs to Minor",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696699",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_ecefe4b2": {
+    "record_id": "cons_ecefe4b2",
+    "node_id": "pattern:Companies Approve New High-Cap",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696714",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_49d4b8b2": {
+    "record_id": "cons_49d4b8b2",
+    "node_id": "pattern:Missing June Deals Slow to Ret",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696729",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_7b38e3ca": {
+    "record_id": "cons_7b38e3ca",
+    "node_id": "pattern:Hacker Cracks Apple's Streamin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696748",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1bc1ab61": {
+    "record_id": "cons_1bc1ab61",
+    "node_id": "pattern:European Download Services Go ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696764",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_d7a80d59": {
+    "record_id": "cons_d7a80d59",
+    "node_id": "pattern:Open Source Apps Developer Sug",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696782",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_fe29b52e": {
+    "record_id": "cons_fe29b52e",
+    "node_id": "pattern:Oracle Sales Data Seen Being R",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696798",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_87640f3a": {
+    "record_id": "cons_87640f3a",
+    "node_id": "pattern:Sun's Looking Glass Provides 3",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696818",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_8634b5b1": {
+    "record_id": "cons_8634b5b1",
+    "node_id": "pattern:Apple to open second Japanese ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696838",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_3ba92dfc": {
+    "record_id": "cons_3ba92dfc",
+    "node_id": "pattern:Charley's Force Took Experts b",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696856",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_4730b22a": {
+    "record_id": "cons_4730b22a",
+    "node_id": "pattern:Science, Politics Collide in E",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696871",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_0a13f73e": {
+    "record_id": "cons_0a13f73e",
+    "node_id": "pattern:Building Dedicated to Columbia",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696887",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_cd8ff4d5": {
+    "record_id": "cons_cd8ff4d5",
+    "node_id": "pattern:Russian Cargo Craft Docks at S",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696902",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_0593fdd1": {
+    "record_id": "cons_0593fdd1",
+    "node_id": "pattern:Bangkok's Canals Losing to Urb",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696915",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_8a00968f": {
+    "record_id": "cons_8a00968f",
+    "node_id": "pattern:T. Rex Had Teen Growth Spurt, ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696927",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_3f6bf44f": {
+    "record_id": "cons_3f6bf44f",
+    "node_id": "pattern:Gene Blocker Turns Monkeys Int",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696946",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_82e3c992": {
+    "record_id": "cons_82e3c992",
+    "node_id": "pattern:Dolphins Too Have Born Sociali",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696960",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_97b74d3a": {
+    "record_id": "cons_97b74d3a",
+    "node_id": "pattern:What's in a Name? Well, Matt I",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.696986",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_05e86dbc": {
+    "record_id": "cons_05e86dbc",
+    "node_id": "pattern:UK Scientists Allowed to Clone",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.697003",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e7a2db46": {
+    "record_id": "cons_e7a2db46",
+    "node_id": "pattern:Russian Alien Spaceship Claims",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:13.697027",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_bbfa518f": {
+    "record_id": "cons_bbfa518f",
+    "node_id": "pattern:dr. goldberg offers everything",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.429865",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_765c95fd": {
+    "record_id": "cons_765c95fd",
+    "node_id": "pattern:Unfortunately, the frustration",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.429919",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_716c2ffb": {
+    "record_id": "cons_716c2ffb",
+    "node_id": "pattern:Been going to Dr. Goldberg for",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.429946",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_39a2e34d": {
+    "record_id": "cons_39a2e34d",
+    "node_id": "pattern:Got a letter in the mail last ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.429969",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_914750f9": {
+    "record_id": "cons_914750f9",
+    "node_id": "pattern:I don't know what Dr. Goldberg",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.429987",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e644a856": {
+    "record_id": "cons_e644a856",
+    "node_id": "pattern:Top notch doctor in a top notc",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430005",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6574fa5d": {
+    "record_id": "cons_6574fa5d",
+    "node_id": "pattern:Dr. Eric Goldberg is a fantast",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430033",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_d6417c41": {
+    "record_id": "cons_d6417c41",
+    "node_id": "pattern:I'm writing this review to giv",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430050",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c2505b4a": {
+    "record_id": "cons_c2505b4a",
+    "node_id": "pattern:Wing sauce is like water. Pret",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430066",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_93a87378": {
+    "record_id": "cons_93a87378",
+    "node_id": "pattern:Decent range somewhat close to",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430081",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f00c5eb9": {
+    "record_id": "cons_f00c5eb9",
+    "node_id": "pattern:Owning a driving range inside ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430097",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_d2dd5e2b": {
+    "record_id": "cons_d2dd5e2b",
+    "node_id": "pattern:This place is absolute garbage",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430111",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_05bb445c": {
+    "record_id": "cons_05bb445c",
+    "node_id": "pattern:I drove by yesterday to get a ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430128",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_72ccba65": {
+    "record_id": "cons_72ccba65",
+    "node_id": "pattern:After waiting for almost 30 mi",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430148",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_29bc94c2": {
+    "record_id": "cons_29bc94c2",
+    "node_id": "pattern:This place was DELICIOUS!!  My",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430168",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_7c34b21c": {
+    "record_id": "cons_7c34b21c",
+    "node_id": "pattern:Can't miss stop for the best F",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430188",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_2128fe93": {
+    "record_id": "cons_2128fe93",
+    "node_id": "pattern:This place should have a lot m",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430203",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_0f31c87d": {
+    "record_id": "cons_0f31c87d",
+    "node_id": "pattern:Old school.....traditional \\\"m",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430218",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f0615b69": {
+    "record_id": "cons_f0615b69",
+    "node_id": "pattern:After a morning of Thrift Stor",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430233",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_10cb63bc": {
+    "record_id": "cons_10cb63bc",
+    "node_id": "pattern:A great townie bar with tasty ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430249",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_98f799a0": {
+    "record_id": "cons_98f799a0",
+    "node_id": "pattern:Good beer selection. Understaf",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430265",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f583f6dc": {
+    "record_id": "cons_f583f6dc",
+    "node_id": "pattern:Very disappointed in the custo",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430281",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_59d5ca8d": {
+    "record_id": "cons_59d5ca8d",
+    "node_id": "pattern:Let there be no question: Alex",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430295",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_7817cc2f": {
+    "record_id": "cons_7817cc2f",
+    "node_id": "pattern:Used to go there for tires, br",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430309",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_8f450f74": {
+    "record_id": "cons_8f450f74",
+    "node_id": "pattern:Terrible. Preordered my tires ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430324",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_2cb16e4b": {
+    "record_id": "cons_2cb16e4b",
+    "node_id": "pattern:Last summer I had an appointme",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430340",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1dbe5ab7": {
+    "record_id": "cons_1dbe5ab7",
+    "node_id": "pattern:I will start by saying we have",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430356",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_eb665666": {
+    "record_id": "cons_eb665666",
+    "node_id": "pattern:I heart King's. I've always be",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430371",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6f0acf81": {
+    "record_id": "cons_6f0acf81",
+    "node_id": "pattern:Average run of the mill store.",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430385",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1f3b5e37": {
+    "record_id": "cons_1f3b5e37",
+    "node_id": "pattern:Two meals, on the recommendati",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430400",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_ae4ab933": {
+    "record_id": "cons_ae4ab933",
+    "node_id": "pattern:Rocky's has been in business s",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430414",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_2fc8ea76": {
+    "record_id": "cons_2fc8ea76",
+    "node_id": "pattern:If you want a true understandi",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430428",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_d2ee355f": {
+    "record_id": "cons_d2ee355f",
+    "node_id": "pattern:Cheap, unpretentious, and, for",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430443",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_54385c5b": {
+    "record_id": "cons_54385c5b",
+    "node_id": "pattern:I miss this place. When I retu",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430458",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f883f544": {
+    "record_id": "cons_f883f544",
+    "node_id": "pattern:Love this place.  Never had a ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430472",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_44df8bc2": {
+    "record_id": "cons_44df8bc2",
+    "node_id": "pattern:OK, what is with all of these ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430487",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_fe007a1c": {
+    "record_id": "cons_fe007a1c",
+    "node_id": "pattern:BEST DINER IN THE COUNRTY!!! W",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430502",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1a69714c": {
+    "record_id": "cons_1a69714c",
+    "node_id": "pattern:Great breakfast, good price. Y",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430516",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_894327a7": {
+    "record_id": "cons_894327a7",
+    "node_id": "pattern:I always love a good diner.  G",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430530",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_84e41a47": {
+    "record_id": "cons_84e41a47",
+    "node_id": "pattern:I have been coming to Gab n Ea",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430543",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_bd36f6a1": {
+    "record_id": "cons_bd36f6a1",
+    "node_id": "pattern:What a find! I stopped in here",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430557",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_4158755a": {
+    "record_id": "cons_4158755a",
+    "node_id": "pattern:Great little place. Treats you",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430570",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1ae86c4b": {
+    "record_id": "cons_1ae86c4b",
+    "node_id": "pattern:My first time going to Barb's ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430584",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_5345377b": {
+    "record_id": "cons_5345377b",
+    "node_id": "pattern:My husband and I tried this pl",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430609",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_b957f1c8": {
+    "record_id": "cons_b957f1c8",
+    "node_id": "pattern:Tonya is super sweet and the f",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430630",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_81d89811": {
+    "record_id": "cons_81d89811",
+    "node_id": "pattern:If I could give this place les",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430645",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_ff18aed9": {
+    "record_id": "cons_ff18aed9",
+    "node_id": "pattern:Best Irish food in the Burgh. ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430659",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_803d9a50": {
+    "record_id": "cons_803d9a50",
+    "node_id": "pattern:Okay, so hopefully you haven't",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430673",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_744b990a": {
+    "record_id": "cons_744b990a",
+    "node_id": "pattern:The delivery driver mistakenly",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430686",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_794fdc53": {
+    "record_id": "cons_794fdc53",
+    "node_id": "pattern:3/6/12  visit -  i am from san",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430700",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_7b35120c": {
+    "record_id": "cons_7b35120c",
+    "node_id": "pattern:Some of the worst pizza I've e",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430714",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_7ce0cd47": {
+    "record_id": "cons_7ce0cd47",
+    "node_id": "pattern:I needed alterations done to m",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430736",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f28b34e1": {
+    "record_id": "cons_f28b34e1",
+    "node_id": "pattern:Are you are really looking at ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430752",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_dc9f16f7": {
+    "record_id": "cons_dc9f16f7",
+    "node_id": "pattern:I agree with Paul on this one.",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430765",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_4f38bbbd": {
+    "record_id": "cons_4f38bbbd",
+    "node_id": "pattern:By far the worst most unprofes",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430779",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_55a2a691": {
+    "record_id": "cons_55a2a691",
+    "node_id": "pattern:When I moved to the area, Dr. ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430792",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e799d2f4": {
+    "record_id": "cons_e799d2f4",
+    "node_id": "pattern:In all fairness - I did not se",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430805",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6b796c0f": {
+    "record_id": "cons_6b796c0f",
+    "node_id": "pattern:I've been to this office a goo",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430819",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e58e8a7e": {
+    "record_id": "cons_e58e8a7e",
+    "node_id": "pattern:Don Don is a restaurant I find",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430832",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6320b707": {
+    "record_id": "cons_6320b707",
+    "node_id": "pattern:Take it from me; avoid this pl",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430847",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e9cc0d15": {
+    "record_id": "cons_e9cc0d15",
+    "node_id": "pattern:Far away from real Chinese foo",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430860",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_ac127c53": {
+    "record_id": "cons_ac127c53",
+    "node_id": "pattern:I used to order takeout here o",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430873",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_45d883f7": {
+    "record_id": "cons_45d883f7",
+    "node_id": "pattern:We went on a weeknight.  Place",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430887",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_da80011b": {
+    "record_id": "cons_da80011b",
+    "node_id": "pattern:This location never disappoint",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430901",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_d3bf6193": {
+    "record_id": "cons_d3bf6193",
+    "node_id": "pattern:I belong to this gym...  I liv",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430915",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_55208d18": {
+    "record_id": "cons_55208d18",
+    "node_id": "pattern:I bought a three month members",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430929",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_b93c4c1e": {
+    "record_id": "cons_b93c4c1e",
+    "node_id": "pattern:If you like being greeted in t",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430942",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e74f9f8a": {
+    "record_id": "cons_e74f9f8a",
+    "node_id": "pattern:I brought my husband and my pa",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430954",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_5dcc7cf4": {
+    "record_id": "cons_5dcc7cf4",
+    "node_id": "pattern:I've been to Papa J's twice an",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430968",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_2b023f9b": {
+    "record_id": "cons_2b023f9b",
+    "node_id": "pattern:What a wonderful surprise foun",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430981",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_b67c8923": {
+    "record_id": "cons_b67c8923",
+    "node_id": "pattern:Yay, I'm a fan but sometimes s",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.430997",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_b6042a05": {
+    "record_id": "cons_b6042a05",
+    "node_id": "pattern:Terrible service.  Food unrema",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431027",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f2f39d14": {
+    "record_id": "cons_f2f39d14",
+    "node_id": "pattern:Yay, I'm a fan of the white pi",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431056",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e1055b91": {
+    "record_id": "cons_e1055b91",
+    "node_id": "pattern:OK, its Friday night and have ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431078",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_193be82f": {
+    "record_id": "cons_193be82f",
+    "node_id": "pattern:Great little gem! The food was",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431094",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6e1d7cfa": {
+    "record_id": "cons_6e1d7cfa",
+    "node_id": "pattern:I have to say that I write thi",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431108",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_503b3598": {
+    "record_id": "cons_503b3598",
+    "node_id": "pattern:san francisco california visit",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431121",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_58196629": {
+    "record_id": "cons_58196629",
+    "node_id": "pattern:Coming here you get the feelin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431136",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_4b6e392e": {
+    "record_id": "cons_4b6e392e",
+    "node_id": "pattern:Had dinner at Papa J's with a ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431149",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c7a24227": {
+    "record_id": "cons_c7a24227",
+    "node_id": "pattern:Service in this place is poor ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431163",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_4d791db7": {
+    "record_id": "cons_4d791db7",
+    "node_id": "pattern:Terrible service...terrible fo",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431178",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_5fcf5c86": {
+    "record_id": "cons_5fcf5c86",
+    "node_id": "pattern:Although the first impression ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431198",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_5927deec": {
+    "record_id": "cons_5927deec",
+    "node_id": "pattern:Papa J's is expensive and inco",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431218",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_74e7befe": {
+    "record_id": "cons_74e7befe",
+    "node_id": "pattern:I was pleasantly surprised by ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431238",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_177c47ee": {
+    "record_id": "cons_177c47ee",
+    "node_id": "pattern:Absolutely Awful Service.  Wen",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431257",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_29397ba3": {
+    "record_id": "cons_29397ba3",
+    "node_id": "pattern:Service was great. Apps delish",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431274",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_af768c0e": {
+    "record_id": "cons_af768c0e",
+    "node_id": "pattern:I love this place! The food is",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431292",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_be34e9e5": {
+    "record_id": "cons_be34e9e5",
+    "node_id": "pattern:spinach/feta cheese salad:  B-",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431309",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_b35e7376": {
+    "record_id": "cons_b35e7376",
+    "node_id": "pattern:It was just what we were looki",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431326",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_64d78eb9": {
+    "record_id": "cons_64d78eb9",
+    "node_id": "pattern:We stopped at Papa J's last Fr",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431342",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_702307d9": {
+    "record_id": "cons_702307d9",
+    "node_id": "pattern:Some of the best chow around--",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431361",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_3c2828d7": {
+    "record_id": "cons_3c2828d7",
+    "node_id": "pattern:Finally, great Tuscan-style It",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431375",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_b6c235ed": {
+    "record_id": "cons_b6c235ed",
+    "node_id": "pattern:Man has this place gone down h",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431388",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c04c2981": {
+    "record_id": "cons_c04c2981",
+    "node_id": "pattern:Talk about overpriced. $18 for",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431403",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_707ff882": {
+    "record_id": "cons_707ff882",
+    "node_id": "pattern:I've decided where I stand wit",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431418",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_96acb2da": {
+    "record_id": "cons_96acb2da",
+    "node_id": "pattern:THE WORST DENTAL EXPERIENCE OF",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431432",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_cebc6d0e": {
+    "record_id": "cons_cebc6d0e",
+    "node_id": "pattern:The worst dental office I ever",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431446",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e84ab028": {
+    "record_id": "cons_e84ab028",
+    "node_id": "pattern:Eat at your own risk. The serv",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431460",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6c87065b": {
+    "record_id": "cons_6c87065b",
+    "node_id": "pattern:My expectations for McDonalds ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431475",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_2bd75bdc": {
+    "record_id": "cons_2bd75bdc",
+    "node_id": "pattern:I've tried to give this McDona",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:24.431488",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_30dbc8be": {
+    "record_id": "cons_30dbc8be",
+    "node_id": "pattern:Write a function to find the l",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.392836",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_88a835db": {
+    "record_id": "cons_88a835db",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.392875",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f747f43c": {
+    "record_id": "cons_f747f43c",
+    "node_id": "pattern:Write a function to get a luci",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.392895",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_2c42a8b5": {
+    "record_id": "cons_2c42a8b5",
+    "node_id": "pattern:Write a function to reverse wo",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.392912",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c57c2fcd": {
+    "record_id": "cons_c57c2fcd",
+    "node_id": "pattern:Write a function to check if t",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.392927",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_cbddf1d9": {
+    "record_id": "cons_cbddf1d9",
+    "node_id": "pattern:Write a function to convert de",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.392944",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_12cdd3d0": {
+    "record_id": "cons_12cdd3d0",
+    "node_id": "pattern:Write a function to search a l",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.392962",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_67f24ee3": {
+    "record_id": "cons_67f24ee3",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.392977",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_9333e20c": {
+    "record_id": "cons_9333e20c",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.392992",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_37f14b6e": {
+    "record_id": "cons_37f14b6e",
+    "node_id": "pattern:Write a python function to rem",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393011",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_3e9f18f3": {
+    "record_id": "cons_3e9f18f3",
+    "node_id": "pattern:Write a function to find the m",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393030",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_9d87e14a": {
+    "record_id": "cons_9d87e14a",
+    "node_id": "pattern:Write a python function to mer",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393045",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e540197f": {
+    "record_id": "cons_e540197f",
+    "node_id": "pattern:Write a function to find the m",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393059",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e38b91e2": {
+    "record_id": "cons_e38b91e2",
+    "node_id": "pattern:Write a function to find the c",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393077",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_af769fac": {
+    "record_id": "cons_af769fac",
+    "node_id": "pattern:Write a function to find avera",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393092",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_08df3bc5": {
+    "record_id": "cons_08df3bc5",
+    "node_id": "pattern:Write a function to perfom the",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393107",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_679c4b6b": {
+    "record_id": "cons_679c4b6b",
+    "node_id": "pattern:Write a function to check for ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393121",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_ade7bf81": {
+    "record_id": "cons_ade7bf81",
+    "node_id": "pattern:Write a function to divide two",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393136",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6ee3264d": {
+    "record_id": "cons_6ee3264d",
+    "node_id": "pattern:Write a function to move all t",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393151",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_fdf43257": {
+    "record_id": "cons_fdf43257",
+    "node_id": "pattern:Write a function to find the l",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393164",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_24f38202": {
+    "record_id": "cons_24f38202",
+    "node_id": "pattern:Write a function to increment ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393178",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c4286cdb": {
+    "record_id": "cons_c4286cdb",
+    "node_id": "pattern:Write a function to find the m",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393192",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_256a47f9": {
+    "record_id": "cons_256a47f9",
+    "node_id": "pattern:Write a function to find the n",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393206",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_9b15da56": {
+    "record_id": "cons_9b15da56",
+    "node_id": "pattern:Write a python function to con",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393222",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_8b45692b": {
+    "record_id": "cons_8b45692b",
+    "node_id": "pattern:Write a python function to int",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393238",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_a6f7150a": {
+    "record_id": "cons_a6f7150a",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393252",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f6a83499": {
+    "record_id": "cons_f6a83499",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393265",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_a64d156a": {
+    "record_id": "cons_a64d156a",
+    "node_id": "pattern:Write a function to replace al",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393278",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1a730828": {
+    "record_id": "cons_1a730828",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393292",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_641ded57": {
+    "record_id": "cons_641ded57",
+    "node_id": "pattern:Write a function to extract al",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393304",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_93424a21": {
+    "record_id": "cons_93424a21",
+    "node_id": "pattern:Write a function to replace wh",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393317",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_0b3f5b7d": {
+    "record_id": "cons_0b3f5b7d",
+    "node_id": "pattern:Write a python function to mov",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393333",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_a2675a3b": {
+    "record_id": "cons_a2675a3b",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393345",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_183e5fdf": {
+    "record_id": "cons_183e5fdf",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393357",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_44ae2b4f": {
+    "record_id": "cons_44ae2b4f",
+    "node_id": "pattern:Write a function to push all v",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393371",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_af5c7753": {
+    "record_id": "cons_af5c7753",
+    "node_id": "pattern:Write a python function to che",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393385",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_9a271c6c": {
+    "record_id": "cons_9a271c6c",
+    "node_id": "pattern:Write a function to check whet",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393399",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_8c3c904b": {
+    "record_id": "cons_8c3c904b",
+    "node_id": "pattern:Write a function to calculate ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393414",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_8fef4ad6": {
+    "record_id": "cons_8fef4ad6",
+    "node_id": "pattern:Write a function to sum the le",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393427",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_90dbcb0e": {
+    "record_id": "cons_90dbcb0e",
+    "node_id": "pattern:Write a function to remove the",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393440",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_9b2b69f0": {
+    "record_id": "cons_9b2b69f0",
+    "node_id": "pattern:Write a function to find the n",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393453",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_2bf29f0e": {
+    "record_id": "cons_2bf29f0e",
+    "node_id": "pattern:Write a function to remove sim",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393466",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1beb4f2d": {
+    "record_id": "cons_1beb4f2d",
+    "node_id": "pattern:Write a function that matches ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393480",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_2950f14b": {
+    "record_id": "cons_2950f14b",
+    "node_id": "pattern:Write a python function to rev",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393493",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_b73c40f7": {
+    "record_id": "cons_b73c40f7",
+    "node_id": "pattern:Write a function to find the p",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393507",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_4f1a2ef2": {
+    "record_id": "cons_4f1a2ef2",
+    "node_id": "pattern:Write a python function to cou",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393520",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_7b757902": {
+    "record_id": "cons_7b757902",
+    "node_id": "pattern:Write a function to split a st",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393534",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_858a944b": {
+    "record_id": "cons_858a944b",
+    "node_id": "pattern:Write a function to exchange t",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393549",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_8e82622c": {
+    "record_id": "cons_8e82622c",
+    "node_id": "pattern:Write a python function to cal",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393563",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_b28f808d": {
+    "record_id": "cons_b28f808d",
+    "node_id": "pattern:Write a python function to che",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393575",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_95fa4e18": {
+    "record_id": "cons_95fa4e18",
+    "node_id": "pattern:Write a function to check if o",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393589",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_2945fde9": {
+    "record_id": "cons_2945fde9",
+    "node_id": "pattern:Write a function to flatten th",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393627",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_a76674fb": {
+    "record_id": "cons_a76674fb",
+    "node_id": "pattern:Write a function to group a se",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393642",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_4326ad80": {
+    "record_id": "cons_4326ad80",
+    "node_id": "pattern:Write a function to find the p",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393655",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_8052f4cd": {
+    "record_id": "cons_8052f4cd",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393668",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_7e603fd8": {
+    "record_id": "cons_7e603fd8",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393680",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_2946a847": {
+    "record_id": "cons_2946a847",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393692",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f5ff20e7": {
+    "record_id": "cons_f5ff20e7",
+    "node_id": "pattern:Write a function to find the i",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393706",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_bf433b15": {
+    "record_id": "cons_bf433b15",
+    "node_id": "pattern:Write a python function to pri",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393721",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6627080c": {
+    "record_id": "cons_6627080c",
+    "node_id": "pattern:Write a python function to cho",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393736",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_fc671bf0": {
+    "record_id": "cons_fc671bf0",
+    "node_id": "pattern:Write a function to find the m",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393750",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_600825ab": {
+    "record_id": "cons_600825ab",
+    "node_id": "pattern:Write a function to sort a lis",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393763",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_fafeb212": {
+    "record_id": "cons_fafeb212",
+    "node_id": "pattern:Write a function to find the l",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393776",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_4f5a3be1": {
+    "record_id": "cons_4f5a3be1",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393788",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_0adaecd1": {
+    "record_id": "cons_0adaecd1",
+    "node_id": "pattern:Write a python function to shi",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393802",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_9fee4aea": {
+    "record_id": "cons_9fee4aea",
+    "node_id": "pattern:Write a function to count occu",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393816",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_4f19c372": {
+    "record_id": "cons_4f19c372",
+    "node_id": "pattern:Write a python function to cou",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393828",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6bdf7bae": {
+    "record_id": "cons_6bdf7bae",
+    "node_id": "pattern:Write a python function to rep",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393843",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_86d2da2e": {
+    "record_id": "cons_86d2da2e",
+    "node_id": "pattern:Write a function to check whet",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393856",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f695bd35": {
+    "record_id": "cons_f695bd35",
+    "node_id": "pattern:Write a python function to che",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393869",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_89a173bd": {
+    "record_id": "cons_89a173bd",
+    "node_id": "pattern:Write a python function to set",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393883",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_a90ad4f1": {
+    "record_id": "cons_a90ad4f1",
+    "node_id": "pattern:Write a function to find maxim",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393896",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_64666c2b": {
+    "record_id": "cons_64666c2b",
+    "node_id": "pattern:Write a python function to con",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393909",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_b45d9a1c": {
+    "record_id": "cons_b45d9a1c",
+    "node_id": "pattern:Write a function to remove dup",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393924",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_7594d8ee": {
+    "record_id": "cons_7594d8ee",
+    "node_id": "pattern:Write a function to add two in",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393938",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_3cb3a9b9": {
+    "record_id": "cons_3cb3a9b9",
+    "node_id": "pattern:Write a function to remove eve",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393952",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c867a1c4": {
+    "record_id": "cons_c867a1c4",
+    "node_id": "pattern:Write a function to check if t",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393965",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_fea5e78a": {
+    "record_id": "cons_fea5e78a",
+    "node_id": "pattern:Write a python function to rem",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393977",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_91bce265": {
+    "record_id": "cons_91bce265",
+    "node_id": "pattern:Write a function to access dic",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.393990",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1e329225": {
+    "record_id": "cons_1e329225",
+    "node_id": "pattern:Write a python function to che",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394003",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_5a2f80d3": {
+    "record_id": "cons_5a2f80d3",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394024",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_c2d4d1c2": {
+    "record_id": "cons_c2d4d1c2",
+    "node_id": "pattern:Write a function to multiply t",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394043",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_e12e7649": {
+    "record_id": "cons_e12e7649",
+    "node_id": "pattern:Write a python function to che",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394056",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_aa26fae9": {
+    "record_id": "cons_aa26fae9",
+    "node_id": "pattern:Write a python function to cou",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394071",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_f1e61938": {
+    "record_id": "cons_f1e61938",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394084",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_3939f42c": {
+    "record_id": "cons_3939f42c",
+    "node_id": "pattern:Write a function to find the f",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394097",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_8cbba947": {
+    "record_id": "cons_8cbba947",
+    "node_id": "pattern:Write a function to find the g",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394112",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_922aa670": {
+    "record_id": "cons_922aa670",
+    "node_id": "pattern:Write a function to get the le",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394125",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6612e7d6": {
+    "record_id": "cons_6612e7d6",
+    "node_id": "pattern:## write a function to find th",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394139",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_6c43d079": {
+    "record_id": "cons_6c43d079",
+    "node_id": "pattern:Write a function to multiply c",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394152",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_fe42e419": {
+    "record_id": "cons_fe42e419",
+    "node_id": "pattern:Write a function to group the ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394165",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_821a0555": {
+    "record_id": "cons_821a0555",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394178",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_503c5600": {
+    "record_id": "cons_503c5600",
+    "node_id": "pattern:Write a function to remove mul",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394198",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_668d67ab": {
+    "record_id": "cons_668d67ab",
+    "node_id": "pattern:Write a function to extract un",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394212",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_824b32c6": {
+    "record_id": "cons_824b32c6",
+    "node_id": "pattern:Write a function to check if e",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394225",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_a44775fd": {
+    "record_id": "cons_a44775fd",
+    "node_id": "pattern:Write a function to zip two gi",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394242",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_1e39a401": {
+    "record_id": "cons_1e39a401",
+    "node_id": "pattern:Write a function to find numbe",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394258",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_742957df": {
+    "record_id": "cons_742957df",
+    "node_id": "pattern:Write a function to sort dicti",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394273",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_35a23599": {
+    "record_id": "cons_35a23599",
+    "node_id": "pattern:Write a python function to fin",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394288",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
+  },
+  "cons_42db80ca": {
+    "record_id": "cons_42db80ca",
+    "node_id": "pattern:Write a function to count the ",
+    "session_id": "lesson_20260322_1507",
+    "consolidated_at": "2026-03-22T15:07:28.394302",
+    "validation_score": 0.8,
+    "source": "huggingface",
+    "notes": ""
   }
 }
