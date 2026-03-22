@@ -1,653 +1,729 @@
 """
-Self-Questioning Gate - Pre-output validation for RPA.
+Self-Questioning Gate - Pre-output confidence checks.
 
-Before the system outputs a response, it asks itself:
-- Have I seen this pattern fail before?
-- Is my knowledge complete for this task?
-- Are there known edge cases I should warn about?
-- What is my confidence level?
+Before the system outputs a response, this gate performs self-questioning
+to ensure confidence and completeness. If the system doesn't know → it
+exposes the gap rather than guessing.
 
-This module implements the self-questioning mechanism that ensures
-RPA doesn't confidently output incorrect or incomplete information.
+Key questions:
+1. Have I seen this pattern fail before?
+2. Is the pattern complete (all children resolved)?
+3. Do I have sufficient confidence?
+4. Are there known edge cases I should warn about?
+
+This implements the Epic requirement: "The system must be treated as a
+recursive intelligent organism. If the system doesn't know → it exposes the gap."
 """
 
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Set
 import uuid
 import logging
 
-from rpa.core.graph import Node, PatternGraph, NodeType
 from rpa.memory.ltm import LongTermMemory
-from rpa.validation.validator import Validator
+from rpa.closed_loop.outcome_evaluator import OutcomeEvaluator, OutcomeType
+from rpa.closed_loop.reinforcement_tracker import ReinforcementTracker, ReinforcementSignal
+from rpa.closed_loop.pattern_mutator import PatternMutator, MutationType
 from rpa.inquiry.gap_detector import GapDetector
 
 logger = logging.getLogger(__name__)
 
 
+class ConfidenceLevel(Enum):
+    """Confidence levels for self-questioning results."""
+    HIGH = "high"           # > 0.8 - Confident to proceed
+    MEDIUM = "medium"       # 0.5-0.8 - Proceed with caveats
+    LOW = "low"             # 0.3-0.5 - Needs review
+    INSUFFICIENT = "insufficient"  # < 0.3 - Cannot proceed, expose gap
+
+
 class QuestionType(Enum):
-    """Types of self-questions."""
-    FAILURE_HISTORY = "failure_history"      # Has this failed before?
-    COMPLETENESS = "completeness"            # Is knowledge complete?
-    EDGE_CASES = "edge_cases"                # Are there edge cases?
-    CONFIDENCE = "confidence"                # What's confidence level?
-    DOMAIN_MATCH = "domain_match"            # Is domain correct?
-    PREREQUISITES = "prerequisites"          # Are prerequisites met?
-    ALTERNATIVES = "alternatives"            # Are there better patterns?
+    """Types of self-questioning."""
+    FAILURE_HISTORY = "failure_history"         # Has this failed before?
+    COMPLETENESS = "completeness"               # Are all children resolved?
+    CONFIDENCE = "confidence"                   # Is confidence sufficient?
+    EDGE_CASES = "edge_cases"                   # Known edge cases?
+    DOMAIN_MATCH = "domain_match"               # Is domain appropriate?
+    RECENT_SUCCESS = "recent_success"           # Has it worked recently?
+    VERSION_CHECK = "version_check"             # Is this the latest version?
+    SIMILAR_FAILURES = "similar_failures"       # Have similar patterns failed?
 
 
 @dataclass
 class QuestionResult:
-    """Result of a self-question."""
+    """Result of a single self-question."""
     question_type: QuestionType
-    question: str
-    answer: str
     passed: bool
     confidence: float
-    details: Dict[str, Any] = field(default_factory=dict)
-
+    details: str = ""
+    warnings: List[str] = field(default_factory=list)
+    related_pattern_ids: List[str] = field(default_factory=list)
+    
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary."""
         return {
             "question_type": self.question_type.value,
-            "question": self.question,
-            "answer": self.answer,
             "passed": self.passed,
             "confidence": self.confidence,
             "details": self.details,
+            "warnings": self.warnings,
+            "related_pattern_ids": self.related_pattern_ids,
         }
 
 
 @dataclass
-class QuestioningResult:
+class SelfQuestioningResult:
     """
-    Result of the self-questioning gate.
-
-    Contains all questions asked, overall assessment, and
-    recommendations for proceeding.
+    Complete result of self-questioning gate.
+    
+    This is what determines if the system can output confidently or
+    must expose a gap.
     """
     result_id: str
     pattern_id: str
-    context: str
+    domain: str
+    
+    # Overall assessment
+    confidence_level: ConfidenceLevel
+    overall_confidence: float
+    can_proceed: bool
+    
+    # Individual questions
     questions: List[QuestionResult] = field(default_factory=list)
-    overall_passed: bool = True
-    overall_confidence: float = 1.0
+    
+    # Issues found
+    gaps_detected: List[str] = field(default_factory=list)
     warnings: List[str] = field(default_factory=list)
     recommendations: List[str] = field(default_factory=list)
-    should_proceed: bool = True
-    should_warn_user: bool = False
+    
+    # Context
+    context: Dict[str, Any] = field(default_factory=dict)
     timestamp: datetime = field(default_factory=datetime.now)
-
+    
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary."""
         return {
             "result_id": self.result_id,
             "pattern_id": self.pattern_id,
-            "context": self.context,
-            "questions": [q.to_dict() for q in self.questions],
-            "overall_passed": self.overall_passed,
+            "domain": self.domain,
+            "confidence_level": self.confidence_level.value,
             "overall_confidence": self.overall_confidence,
+            "can_proceed": self.can_proceed,
+            "questions": [q.to_dict() for q in self.questions],
+            "gaps_detected": self.gaps_detected,
             "warnings": self.warnings,
             "recommendations": self.recommendations,
-            "should_proceed": self.should_proceed,
-            "should_warn_user": self.should_warn_user,
+            "context": self.context,
             "timestamp": self.timestamp.isoformat(),
         }
 
 
 class SelfQuestioningGate:
     """
-    Pre-output self-questioning gate.
-
-    Before outputting a response, the system questions itself
-    about the quality and reliability of the knowledge being used.
-
-    Questions include:
-    - Failure history: Has this pattern failed before?
-    - Completeness: Is all required knowledge present?
-    - Edge cases: Are there known edge cases?
-    - Confidence: What is the confidence level?
-    - Domain match: Is this the right domain?
-    - Prerequisites: Are prerequisite patterns known?
+    Pre-output confidence gate for self-questioning.
+    
+    Before any pattern is used to generate output, this gate runs
+    a series of self-questions to determine:
+    1. Can the system proceed confidently?
+    2. Are there known issues to warn about?
+    3. Should the gap be exposed instead?
+    
+    The gate is deterministic - it checks actual history and state,
+    no heuristics pretending to be reasoning.
     """
-
+    
     # Confidence thresholds
-    MIN_CONFIDENCE_TO_PROCEED = 0.5
-    WARN_USER_THRESHOLD = 0.7
-    HIGH_CONFIDENCE_THRESHOLD = 0.9
-
+    HIGH_THRESHOLD = 0.8
+    MEDIUM_THRESHOLD = 0.5
+    LOW_THRESHOLD = 0.3
+    
+    # Failure tolerance
+    MAX_RECENT_FAILURES = 2
+    MIN_SUCCESS_RATE = 0.5
+    
     def __init__(
         self,
         ltm: Optional[LongTermMemory] = None,
-        validator: Optional[Validator] = None,
+        outcome_evaluator: Optional[OutcomeEvaluator] = None,
+        reinforcement_tracker: Optional[ReinforcementTracker] = None,
+        pattern_mutator: Optional[PatternMutator] = None,
         gap_detector: Optional[GapDetector] = None,
     ):
         """
-        Initialize the SelfQuestioningGate.
-
+        Initialize SelfQuestioningGate.
+        
         Args:
-            ltm: Optional LongTermMemory for history lookup
-            validator: Optional Validator for structure checks
-            gap_detector: Optional GapDetector for completeness checks
+            ltm: LongTermMemory instance
+            outcome_evaluator: OutcomeEvaluator instance
+            reinforcement_tracker: ReinforcementTracker instance
+            pattern_mutator: PatternMutator instance
+            gap_detector: GapDetector instance
         """
         self.ltm = ltm
-        self.validator = validator or Validator()
+        self.outcome_evaluator = outcome_evaluator or OutcomeEvaluator()
+        self.reinforcement_tracker = reinforcement_tracker or ReinforcementTracker()
+        self.pattern_mutator = pattern_mutator or PatternMutator()
         self.gap_detector = gap_detector or GapDetector()
-
-        # Question history for analysis
-        self._question_history: Dict[str, List[QuestioningResult]] = {}
-
+        
+        # Question history for learning
+        self._question_history: List[SelfQuestioningResult] = []
+        self._max_history = 1000
+        
         # Statistics
         self._stats = {
-            "total_questioning_sessions": 0,
-            "passed_sessions": 0,
-            "blocked_sessions": 0,
-            "warned_sessions": 0,
+            "total_questions": 0,
+            "passed": 0,
+            "blocked": 0,
+            "warnings_issued": 0,
+            "gaps_exposed": 0,
+            "by_confidence_level": {level.value: 0 for level in ConfidenceLevel},
         }
-
+    
     def question(
         self,
-        pattern: Node,
-        context: str,
-        graph: Optional[PatternGraph] = None,
-        additional_questions: Optional[List[QuestionType]] = None,
-    ) -> QuestioningResult:
+        pattern_id: str,
+        domain: str,
+        context: Optional[Dict[str, Any]] = None,
+        skip_questions: Optional[List[QuestionType]] = None,
+    ) -> SelfQuestioningResult:
         """
-        Run self-questioning on a pattern before output.
-
+        Run self-questioning gate on a pattern.
+        
+        This is the main entry point - before using a pattern,
+        question its readiness.
+        
         Args:
-            pattern: The pattern being considered for output
-            context: The context in which it will be used
-            graph: Optional pattern graph for validation
-            additional_questions: Additional question types to ask
-
+            pattern_id: Pattern to question
+            domain: Domain context
+            context: Additional context for questioning
+            skip_questions: Questions to skip (for performance)
+            
         Returns:
-            QuestioningResult with all questions and recommendations
+            SelfQuestioningResult with complete assessment
         """
-        self._stats["total_questioning_sessions"] += 1
-
-        result_id = f"qgate_{uuid.uuid4().hex[:8]}"
-        questions: List[QuestionResult] = []
-        warnings: List[str] = []
-        recommendations: List[str] = []
-
-        # Standard questions
-        standard_questions = [
-            QuestionType.FAILURE_HISTORY,
-            QuestionType.CONFIDENCE,
-            QuestionType.COMPLETENESS,
-            QuestionType.DOMAIN_MATCH,
-        ]
-
-        # Add additional questions
-        all_questions = standard_questions + (additional_questions or [])
-
-        # Ask each question
-        for qtype in all_questions:
-            q_result = self._ask_question(qtype, pattern, context, graph)
+        result_id = f"sq_{uuid.uuid4().hex[:8]}"
+        skip_questions = skip_questions or []
+        
+        questions = []
+        gaps = []
+        warnings = []
+        recommendations = []
+        
+        # Run all questions
+        for question_type in QuestionType:
+            if question_type in skip_questions:
+                continue
+            
+            if question_type == QuestionType.FAILURE_HISTORY:
+                q_result = self._question_failure_history(pattern_id, domain)
+            elif question_type == QuestionType.COMPLETENESS:
+                q_result = self._question_completeness(pattern_id, domain)
+            elif question_type == QuestionType.CONFIDENCE:
+                q_result = self._question_confidence(pattern_id, domain)
+            elif question_type == QuestionType.EDGE_CASES:
+                q_result = self._question_edge_cases(pattern_id, domain)
+            elif question_type == QuestionType.DOMAIN_MATCH:
+                q_result = self._question_domain_match(pattern_id, domain)
+            elif question_type == QuestionType.RECENT_SUCCESS:
+                q_result = self._question_recent_success(pattern_id, domain)
+            elif question_type == QuestionType.VERSION_CHECK:
+                q_result = self._question_version_check(pattern_id, domain)
+            elif question_type == QuestionType.SIMILAR_FAILURES:
+                q_result = self._question_similar_failures(pattern_id, domain)
+            else:
+                continue
+            
             questions.append(q_result)
-
+            
+            # Collect gaps and warnings
             if not q_result.passed:
-                warnings.append(f"{qtype.value}: {q_result.answer}")
-                recommendations.extend(self._get_recommendations(qtype, q_result))
-
+                if "gap" in q_result.details.lower() or "missing" in q_result.details.lower():
+                    gaps.append(q_result.details)
+                else:
+                    warnings.append(q_result.details)
+            
+            warnings.extend(q_result.warnings)
+        
         # Calculate overall confidence
-        confidences = [q.confidence for q in questions]
-        overall_confidence = sum(confidences) / len(confidences) if confidences else 1.0
-
-        # Determine if we should proceed
-        all_passed = all(q.passed for q in questions)
-        overall_passed = all_passed and overall_confidence >= self.MIN_CONFIDENCE_TO_PROCEED
-        should_proceed = overall_confidence >= self.MIN_CONFIDENCE_TO_PROCEED
-        should_warn_user = (
-            not all_passed or
-            overall_confidence < self.WARN_USER_THRESHOLD
-        )
-
+        confidence_scores = [q.confidence for q in questions]
+        overall_confidence = sum(confidence_scores) / len(confidence_scores) if confidence_scores else 0.5
+        
+        # Determine confidence level
+        if overall_confidence >= self.HIGH_THRESHOLD:
+            confidence_level = ConfidenceLevel.HIGH
+        elif overall_confidence >= self.MEDIUM_THRESHOLD:
+            confidence_level = ConfidenceLevel.MEDIUM
+        elif overall_confidence >= self.LOW_THRESHOLD:
+            confidence_level = ConfidenceLevel.LOW
+        else:
+            confidence_level = ConfidenceLevel.INSUFFICIENT
+        
+        # Determine if can proceed
+        critical_failures = sum(1 for q in questions if not q.passed and q.confidence < 0.3)
+        can_proceed = confidence_level != ConfidenceLevel.INSUFFICIENT and critical_failures == 0
+        
+        # Generate recommendations
+        if not can_proceed:
+            recommendations.append("Expose gap to user instead of proceeding")
+            recommendations.append("Consider alternative patterns")
+        elif confidence_level == ConfidenceLevel.LOW:
+            recommendations.append("Proceed with caution and user confirmation")
+        elif confidence_level == ConfidenceLevel.MEDIUM:
+            recommendations.append("Proceed but note caveats")
+        
+        if gaps:
+            recommendations.append("Address detected gaps before proceeding")
+        
         # Create result
-        result = QuestioningResult(
+        result = SelfQuestioningResult(
             result_id=result_id,
-            pattern_id=pattern.node_id,
-            context=context,
-            questions=questions,
-            overall_passed=overall_passed,
+            pattern_id=pattern_id,
+            domain=domain,
+            confidence_level=confidence_level,
             overall_confidence=overall_confidence,
+            can_proceed=can_proceed,
+            questions=questions,
+            gaps_detected=gaps,
             warnings=warnings,
             recommendations=recommendations,
-            should_proceed=should_proceed,
-            should_warn_user=should_warn_user,
+            context=context or {},
         )
-
-        # Store in history
-        if pattern.node_id not in self._question_history:
-            self._question_history[pattern.node_id] = []
-        self._question_history[pattern.node_id].append(result)
-
-        # Update stats
-        if overall_passed:
-            self._stats["passed_sessions"] += 1
-        elif should_proceed:
-            self._stats["warned_sessions"] += 1
-        else:
-            self._stats["blocked_sessions"] += 1
-
+        
+        # Record history
+        self._question_history.append(result)
+        if len(self._question_history) > self._max_history:
+            self._question_history.pop(0)
+        
+        # Update statistics
+        self._update_stats(result)
+        
         return result
-
-    def quick_check(
-        self,
-        pattern: Node,
-        context: str,
-    ) -> Tuple[bool, float, List[str]]:
-        """
-        Quick check without full questioning.
-
-        Args:
-            pattern: The pattern to check
-            context: The context
-
-        Returns:
-            Tuple of (should_proceed, confidence, warnings)
-        """
-        # Check confidence
-        confidence = pattern.confidence
-
-        # Check if deprecated
-        if pattern.metadata.get("deprecated", False):
-            return False, 0.0, ["Pattern is deprecated"]
-
-        # Check if uncertain
-        if pattern.is_uncertain:
-            return True, confidence * 0.8, ["Pattern marked as uncertain"]
-
-        # Quick validation
-        if not pattern.is_valid:
-            return True, confidence * 0.9, ["Pattern has validation issues"]
-
-        warnings = []
-        should_proceed = confidence >= self.MIN_CONFIDENCE_TO_PROCEED
-
-        if confidence < self.WARN_USER_THRESHOLD:
-            warnings.append(f"Low confidence: {confidence*100:.1f}%")
-
-        return should_proceed, confidence, warnings
-
-    def get_questioning_history(
+    
+    def _question_failure_history(
         self,
         pattern_id: str,
-        limit: int = 10,
-    ) -> List[QuestioningResult]:
-        """Get questioning history for a pattern."""
-        history = self._question_history.get(pattern_id, [])
-        return history[-limit:]
-
-    def get_statistics(self) -> Dict[str, Any]:
-        """Get questioning statistics."""
-        return {
-            **self._stats,
-            "patterns_questioned": len(self._question_history),
-        }
-
-    def _ask_question(
-        self,
-        qtype: QuestionType,
-        pattern: Node,
-        context: str,
-        graph: Optional[PatternGraph],
+        domain: str,
     ) -> QuestionResult:
-        """Ask a specific question about the pattern."""
-        if qtype == QuestionType.FAILURE_HISTORY:
-            return self._ask_failure_history(pattern, context)
-        elif qtype == QuestionType.COMPLETENESS:
-            return self._ask_completeness(pattern, context, graph)
-        elif qtype == QuestionType.CONFIDENCE:
-            return self._ask_confidence(pattern, context)
-        elif qtype == QuestionType.DOMAIN_MATCH:
-            return self._ask_domain_match(pattern, context)
-        elif qtype == QuestionType.EDGE_CASES:
-            return self._ask_edge_cases(pattern, context)
-        elif qtype == QuestionType.PREREQUISITES:
-            return self._ask_prerequisites(pattern, context, graph)
-        elif qtype == QuestionType.ALTERNATIVES:
-            return self._ask_alternatives(pattern, context)
-        else:
-            return QuestionResult(
-                question_type=qtype,
-                question=f"Unknown question type: {qtype.value}",
-                answer="Unable to answer",
-                passed=True,
-                confidence=0.5,
-            )
-
-    def _ask_failure_history(
-        self,
-        pattern: Node,
-        context: str,
-    ) -> QuestionResult:
-        """Ask: Has this pattern failed before?"""
-        # Check pattern metadata for failure history
-        failure_count = pattern.metadata.get("failure_count", 0)
-        success_count = pattern.metadata.get("success_count", 0)
-
-        question = "Has this pattern failed in similar contexts before?"
-
-        if failure_count == 0:
+        """Question: Has this pattern failed recently?"""
+        
+        # Get outcomes from evaluator
+        outcomes = self.outcome_evaluator.get_pattern_outcomes(pattern_id)
+        
+        if not outcomes:
             return QuestionResult(
                 question_type=QuestionType.FAILURE_HISTORY,
-                question=question,
-                answer="No failure history found",
                 passed=True,
-                confidence=1.0,
-                details={"failure_count": 0, "success_count": success_count},
+                confidence=0.7,  # Neutral - no history
+                details="No failure history available",
             )
-
-        # Calculate failure rate
-        total = failure_count + success_count
-        failure_rate = failure_count / total if total > 0 else 0
-
-        passed = failure_rate < 0.3
-        confidence = 1.0 - failure_rate
-
-        answer = f"Pattern has {failure_count} failures out of {total} uses"
-
-        return QuestionResult(
-            question_type=QuestionType.FAILURE_HISTORY,
-            question=question,
-            answer=answer,
-            passed=passed,
-            confidence=confidence,
-            details={
-                "failure_count": failure_count,
-                "success_count": success_count,
-                "failure_rate": failure_rate,
-            },
-        )
-
-    def _ask_completeness(
-        self,
-        pattern: Node,
-        context: str,
-        graph: Optional[PatternGraph],
-    ) -> QuestionResult:
-        """Ask: Is the pattern's knowledge complete?"""
-        question = "Is all required knowledge present for this task?"
-
-        # Check content length
-        content_length = len(pattern.content)
-        min_length = 5
-
-        if content_length < min_length:
+        
+        # Check recent failures
+        recent = outcomes[-10:]  # Last 10 outcomes
+        failures = [o for o in recent if o.outcome_type in (OutcomeType.FAILURE, OutcomeType.ERROR)]
+        
+        if len(failures) > self.MAX_RECENT_FAILURES:
             return QuestionResult(
-                question_type=QuestionType.COMPLETENESS,
-                question=question,
-                answer=f"Pattern content too short ({content_length} chars)",
+                question_type=QuestionType.FAILURE_HISTORY,
                 passed=False,
                 confidence=0.3,
-                details={"content_length": content_length},
+                details=f"Pattern has {len(failures)} recent failures",
+                warnings=[f"Recent failure rate: {len(failures)}/{len(recent)}"],
             )
-
-        # Check for gaps
-        gap_score = 0.0
-        gaps = []
-
-        if not pattern.content.strip():
-            gaps.append("Empty content")
-            gap_score += 0.3
-
-        if not pattern.label:
-            gaps.append("Missing label")
-            gap_score += 0.1
-
-        # Check composition
-        composition = pattern.metadata.get("composition", [])
-        if not composition and pattern.hierarchy_level > 0:
-            gaps.append("Missing composition")
-            gap_score += 0.2
-
-        confidence = 1.0 - gap_score
-        passed = confidence >= self.MIN_CONFIDENCE_TO_PROCEED
-
-        answer = "Pattern appears complete" if passed else f"Gaps found: {gaps}"
-
+        
+        # Check success rate
+        if len(recent) >= 3:
+            successes = sum(1 for o in recent if o.outcome_type == OutcomeType.SUCCESS)
+            success_rate = successes / len(recent)
+            
+            if success_rate < self.MIN_SUCCESS_RATE:
+                return QuestionResult(
+                    question_type=QuestionType.FAILURE_HISTORY,
+                    passed=False,
+                    confidence=success_rate,
+                    details=f"Success rate below threshold: {success_rate:.1%}",
+                    warnings=[f"Consider using alternative pattern"],
+                )
+            
+            return QuestionResult(
+                question_type=QuestionType.FAILURE_HISTORY,
+                passed=True,
+                confidence=success_rate,
+                details=f"Acceptable success rate: {success_rate:.1%}",
+            )
+        
+        return QuestionResult(
+            question_type=QuestionType.FAILURE_HISTORY,
+            passed=True,
+            confidence=0.8,
+            details="Insufficient history for failure analysis",
+        )
+    
+    def _question_completeness(
+        self,
+        pattern_id: str,
+        domain: str,
+    ) -> QuestionResult:
+        """Question: Is the pattern complete (all children resolved)?"""
+        
+        if not self.ltm:
+            return QuestionResult(
+                question_type=QuestionType.COMPLETENESS,
+                passed=True,
+                confidence=0.6,
+                details="No LTM available for completeness check",
+            )
+        
+        pattern = self.ltm.get_pattern(pattern_id)
+        if not pattern:
+            return QuestionResult(
+                question_type=QuestionType.COMPLETENESS,
+                passed=False,
+                confidence=0.2,
+                details="Pattern not found in LTM",
+                warnings=["Pattern may not be consolidated"],
+            )
+        
+        # Check if pattern has unresolved children
+        # Note: This would require graph traversal in full implementation
+        # For now, check if pattern is marked as valid
+        if not pattern.is_valid:
+            return QuestionResult(
+                question_type=QuestionType.COMPLETENESS,
+                passed=False,
+                confidence=0.3,
+                details="Pattern is not marked as valid",
+                warnings=[f"Validation issue: pattern marked invalid"],
+            )
+        
+        if pattern.is_uncertain:
+            return QuestionResult(
+                question_type=QuestionType.COMPLETENESS,
+                passed=False,
+                confidence=0.4,
+                details="Pattern is marked as uncertain",
+                warnings=["Requires review before use"],
+            )
+        
         return QuestionResult(
             question_type=QuestionType.COMPLETENESS,
-            question=question,
-            answer=answer,
-            passed=passed,
-            confidence=confidence,
-            details={"gaps": gaps, "gap_score": gap_score},
-        )
-
-    def _ask_confidence(
-        self,
-        pattern: Node,
-        context: str,
-    ) -> QuestionResult:
-        """Ask: What is the confidence level?"""
-        question = "What is the confidence level for this pattern?"
-
-        confidence = pattern.confidence
-
-        if confidence >= self.HIGH_CONFIDENCE_THRESHOLD:
-            answer = f"High confidence: {confidence*100:.1f}%"
-            passed = True
-        elif confidence >= self.WARN_USER_THRESHOLD:
-            answer = f"Good confidence: {confidence*100:.1f}%"
-            passed = True
-        elif confidence >= self.MIN_CONFIDENCE_TO_PROCEED:
-            answer = f"Acceptable confidence: {confidence*100:.1f}%"
-            passed = True
-        else:
-            answer = f"Low confidence: {confidence*100:.1f}%"
-            passed = False
-
-        return QuestionResult(
-            question_type=QuestionType.CONFIDENCE,
-            question=question,
-            answer=answer,
-            passed=passed,
-            confidence=confidence,
-            details={"pattern_confidence": confidence},
-        )
-
-    def _ask_domain_match(
-        self,
-        pattern: Node,
-        context: str,
-    ) -> QuestionResult:
-        """Ask: Is the domain appropriate?"""
-        question = "Is this pattern from the correct domain?"
-
-        # Detect domain from context
-        context_lower = context.lower()
-        detected_domains = []
-
-        if any(kw in context_lower for kw in ["def ", "import ", "python", "()"]):
-            detected_domains.append("python")
-        if any(kw in context_lower for kw in ["fn ", "let ", "rust", "impl"]):
-            detected_domains.append("rust")
-        if any(kw in context_lower for kw in ["func ", "go ", "package"]):
-            detected_domains.append("go")
-        if any(kw in context_lower for kw in ["the ", "is ", "are ", "english"]):
-            detected_domains.append("english")
-
-        pattern_domain = pattern.domain.lower()
-
-        # Check match
-        if pattern_domain in detected_domains or not detected_domains:
-            passed = True
-            confidence = 1.0
-            answer = f"Domain '{pattern_domain}' is appropriate"
-        else:
-            passed = True  # Don't block, just warn
-            confidence = 0.7
-            answer = f"Domain '{pattern_domain}' may not match context (detected: {detected_domains})"
-
-        return QuestionResult(
-            question_type=QuestionType.DOMAIN_MATCH,
-            question=question,
-            answer=answer,
-            passed=passed,
-            confidence=confidence,
-            details={
-                "pattern_domain": pattern_domain,
-                "detected_domains": detected_domains,
-            },
-        )
-
-    def _ask_edge_cases(
-        self,
-        pattern: Node,
-        context: str,
-    ) -> QuestionResult:
-        """Ask: Are there known edge cases?"""
-        question = "Are there known edge cases to consider?"
-
-        # Check metadata for edge cases
-        edge_cases = pattern.metadata.get("edge_cases", [])
-        known_issues = pattern.metadata.get("known_issues", [])
-
-        all_issues = edge_cases + known_issues
-
-        if not all_issues:
-            return QuestionResult(
-                question_type=QuestionType.EDGE_CASES,
-                question=question,
-                answer="No known edge cases",
-                passed=True,
-                confidence=1.0,
-                details={"edge_cases": []},
-            )
-
-        confidence = 1.0 - (0.1 * len(all_issues))
-        confidence = max(0.5, confidence)
-        passed = len(all_issues) < 3
-
-        answer = f"{len(all_issues)} known edge cases"
-
-        return QuestionResult(
-            question_type=QuestionType.EDGE_CASES,
-            question=question,
-            answer=answer,
-            passed=passed,
-            confidence=confidence,
-            details={"edge_cases": all_issues},
-        )
-
-    def _ask_prerequisites(
-        self,
-        pattern: Node,
-        context: str,
-        graph: Optional[PatternGraph],
-    ) -> QuestionResult:
-        """Ask: Are prerequisite patterns known?"""
-        question = "Are all prerequisite patterns known?"
-
-        if not graph:
-            return QuestionResult(
-                question_type=QuestionType.PREREQUISITES,
-                question=question,
-                answer="Cannot check prerequisites without graph",
-                passed=True,
-                confidence=0.8,
-            )
-
-        # Get children (prerequisites)
-        children = graph.get_children(pattern.node_id)
-        missing = []
-
-        for child in children:
-            if not child.content:
-                missing.append(child.node_id)
-
-        if not missing:
-            return QuestionResult(
-                question_type=QuestionType.PREREQUISITES,
-                question=question,
-                answer="All prerequisites present",
-                passed=True,
-                confidence=1.0,
-                details={"prerequisite_count": len(children)},
-            )
-
-        confidence = 1.0 - (0.2 * len(missing))
-        confidence = max(0.3, confidence)
-        passed = len(missing) < 2
-
-        answer = f"{len(missing)} missing prerequisites"
-
-        return QuestionResult(
-            question_type=QuestionType.PREREQUISITES,
-            question=question,
-            answer=answer,
-            passed=passed,
-            confidence=confidence,
-            details={"missing_prerequisites": missing},
-        )
-
-    def _ask_alternatives(
-        self,
-        pattern: Node,
-        context: str,
-    ) -> QuestionResult:
-        """Ask: Are there better alternative patterns?"""
-        question = "Are there better alternative patterns available?"
-
-        # Check metadata for alternatives
-        alternatives = pattern.metadata.get("alternatives", [])
-        better_versions = pattern.metadata.get("better_versions", [])
-
-        all_alternatives = alternatives + better_versions
-
-        if not all_alternatives:
-            return QuestionResult(
-                question_type=QuestionType.ALTERNATIVES,
-                question=question,
-                answer="No known alternatives",
-                passed=True,
-                confidence=1.0,
-                details={"alternatives": []},
-            )
-
-        # Having alternatives is not bad, just worth noting
-        answer = f"{len(all_alternatives)} alternative patterns available"
-
-        return QuestionResult(
-            question_type=QuestionType.ALTERNATIVES,
-            question=question,
-            answer=answer,
             passed=True,
             confidence=0.9,
-            details={"alternatives": all_alternatives},
+            details="Pattern is complete and valid",
         )
-
-    def _get_recommendations(
+    
+    def _question_confidence(
         self,
-        qtype: QuestionType,
-        result: QuestionResult,
-    ) -> List[str]:
-        """Get recommendations based on question result."""
-        recommendations = []
-
-        if qtype == QuestionType.FAILURE_HISTORY and not result.passed:
-            recommendations.append("Consider using an alternative pattern")
-            recommendations.append("Review failure reasons before proceeding")
-
-        elif qtype == QuestionType.COMPLETENESS and not result.passed:
-            recommendations.append("Complete missing pattern elements")
-            recommendations.append("Add composition information")
-
-        elif qtype == QuestionType.CONFIDENCE and not result.passed:
-            recommendations.append("Find a higher-confidence pattern")
-            recommendations.append("Flag pattern for review")
-
-        elif qtype == QuestionType.DOMAIN_MATCH:
-            recommendations.append("Verify domain appropriateness")
-
-        elif qtype == QuestionType.EDGE_CASES and not result.passed:
-            recommendations.append("Handle known edge cases explicitly")
-
-        elif qtype == QuestionType.PREREQUISITES and not result.passed:
-            recommendations.append("Learn missing prerequisite patterns")
-
-        return recommendations
+        pattern_id: str,
+        domain: str,
+    ) -> QuestionResult:
+        """Question: Is confidence sufficient?"""
+        
+        # Check reinforcement tracker
+        strength = self.reinforcement_tracker.get_strength(pattern_id)
+        
+        if strength is None:
+            return QuestionResult(
+                question_type=QuestionType.CONFIDENCE,
+                passed=True,
+                confidence=0.5,
+                details="Pattern not tracked in reinforcement system",
+            )
+        
+        confidence = strength.strength
+        
+        if confidence < self.LOW_THRESHOLD:
+            return QuestionResult(
+                question_type=QuestionType.CONFIDENCE,
+                passed=False,
+                confidence=confidence,
+                details=f"Pattern strength critically low: {confidence:.2f}",
+                warnings=["Pattern may be near deprecation"],
+            )
+        
+        if confidence < self.MEDIUM_THRESHOLD:
+            return QuestionResult(
+                question_type=QuestionType.CONFIDENCE,
+                passed=True,  # Still usable but warn
+                confidence=confidence,
+                details=f"Pattern strength below optimal: {confidence:.2f}",
+                warnings=["Consider reinforcing pattern"],
+            )
+        
+        return QuestionResult(
+            question_type=QuestionType.CONFIDENCE,
+            passed=True,
+            confidence=confidence,
+            details=f"Pattern strength sufficient: {confidence:.2f}",
+        )
+    
+    def _question_edge_cases(
+        self,
+        pattern_id: str,
+        domain: str,
+    ) -> QuestionResult:
+        """Question: Are there known edge cases?"""
+        
+        # Check pattern versions for known issues
+        versions = self.pattern_mutator.get_version_history(pattern_id)
+        
+        if not versions:
+            return QuestionResult(
+                question_type=QuestionType.EDGE_CASES,
+                passed=True,
+                confidence=0.7,
+                details="No version history available",
+            )
+        
+        # Check for deprecated versions
+        deprecated = [v for v in versions if v.is_deprecated]
+        
+        if deprecated:
+            warnings = []
+            for v in deprecated[:3]:
+                warnings.append(f"Previous version deprecated: {v.deprecation_reason[:50]}")
+            
+            return QuestionResult(
+                question_type=QuestionType.EDGE_CASES,
+                passed=True,  # Can still use current version
+                confidence=0.7,
+                details=f"Found {len(deprecated)} deprecated versions",
+                warnings=warnings,
+            )
+        
+        # Check for failure history in versions
+        active = self.pattern_mutator.get_active_version(pattern_id)
+        if active and active.failure_count > 0:
+            return QuestionResult(
+                question_type=QuestionType.EDGE_CASES,
+                passed=True,
+                confidence=0.6,
+                details=f"Version has {active.failure_count} previous failures",
+                warnings=["Pattern may have edge cases"],
+            )
+        
+        return QuestionResult(
+            question_type=QuestionType.EDGE_CASES,
+            passed=True,
+            confidence=0.9,
+            details="No known edge cases",
+        )
+    
+    def _question_domain_match(
+        self,
+        pattern_id: str,
+        domain: str,
+    ) -> QuestionResult:
+        """Question: Is domain appropriate?"""
+        
+        if not self.ltm:
+            return QuestionResult(
+                question_type=QuestionType.DOMAIN_MATCH,
+                passed=True,
+                confidence=0.6,
+                details="No LTM available for domain check",
+            )
+        
+        pattern = self.ltm.get_pattern(pattern_id)
+        if not pattern:
+            return QuestionResult(
+                question_type=QuestionType.DOMAIN_MATCH,
+                passed=True,
+                confidence=0.5,
+                details="Pattern not found, assuming domain match",
+            )
+        
+        if pattern.domain != domain:
+            return QuestionResult(
+                question_type=QuestionType.DOMAIN_MATCH,
+                passed=True,  # Warning only
+                confidence=0.5,
+                details=f"Domain mismatch: pattern is '{pattern.domain}', context is '{domain}'",
+                warnings=["Cross-domain pattern usage"],
+            )
+        
+        return QuestionResult(
+            question_type=QuestionType.DOMAIN_MATCH,
+            passed=True,
+            confidence=1.0,
+            details=f"Domain match: {domain}",
+        )
+    
+    def _question_recent_success(
+        self,
+        pattern_id: str,
+        domain: str,
+    ) -> QuestionResult:
+        """Question: Has it worked recently?"""
+        
+        strength = self.reinforcement_tracker.get_strength(pattern_id)
+        
+        if strength is None or strength.last_success is None:
+            return QuestionResult(
+                question_type=QuestionType.RECENT_SUCCESS,
+                passed=True,
+                confidence=0.5,
+                details="No recent success recorded",
+            )
+        
+        # Check recency
+        hours_since_success = (datetime.now() - strength.last_success).total_seconds() / 3600
+        
+        if hours_since_success < 1:
+            return QuestionResult(
+                question_type=QuestionType.RECENT_SUCCESS,
+                passed=True,
+                confidence=1.0,
+                details=f"Very recent success ({hours_since_success:.1f} hours ago)",
+            )
+        elif hours_since_success < 24:
+            return QuestionResult(
+                question_type=QuestionType.RECENT_SUCCESS,
+                passed=True,
+                confidence=0.9,
+                details=f"Recent success ({hours_since_success:.1f} hours ago)",
+            )
+        elif hours_since_success < 168:  # 1 week
+            return QuestionResult(
+                question_type=QuestionType.RECENT_SUCCESS,
+                passed=True,
+                confidence=0.7,
+                details=f"Success within last week ({hours_since_success/24:.1f} days ago)",
+            )
+        else:
+            return QuestionResult(
+                question_type=QuestionType.RECENT_SUCCESS,
+                passed=True,
+                confidence=0.5,
+                details=f"Stale success record ({hours_since_success/24:.1f} days ago)",
+                warnings=["Pattern hasn't succeeded in over a week"],
+            )
+    
+    def _question_version_check(
+        self,
+        pattern_id: str,
+        domain: str,
+    ) -> QuestionResult:
+        """Question: Is this the latest version?"""
+        
+        active = self.pattern_mutator.get_active_version(pattern_id)
+        
+        if active is None:
+            return QuestionResult(
+                question_type=QuestionType.VERSION_CHECK,
+                passed=True,
+                confidence=0.7,
+                details="No version tracking available",
+            )
+        
+        if active.is_deprecated:
+            return QuestionResult(
+                question_type=QuestionType.VERSION_CHECK,
+                passed=False,
+                confidence=0.2,
+                details="Active version is deprecated",
+                warnings=["Pattern needs restoration or replacement"],
+            )
+        
+        versions = self.pattern_mutator.get_version_history(pattern_id)
+        if len(versions) > 1 and active.version_number < max(v.version_number for v in versions):
+            return QuestionResult(
+                question_type=QuestionType.VERSION_CHECK,
+                passed=True,
+                confidence=0.6,
+                details="Newer version exists",
+                warnings=["Consider using latest version"],
+            )
+        
+        return QuestionResult(
+            question_type=QuestionType.VERSION_CHECK,
+            passed=True,
+            confidence=0.9,
+            details=f"Using latest version (v{active.version_number})",
+        )
+    
+    def _question_similar_failures(
+        self,
+        pattern_id: str,
+        domain: str,
+    ) -> QuestionResult:
+        """Question: Have similar patterns failed?"""
+        
+        if not self.ltm:
+            return QuestionResult(
+                question_type=QuestionType.SIMILAR_FAILURES,
+                passed=True,
+                confidence=0.6,
+                details="No LTM for similarity check",
+            )
+        
+        # Find patterns in same domain
+        domain_patterns = self.ltm.find_by_domain(domain)
+        
+        # Check their success rates
+        weak_patterns = []
+        for p in domain_patterns[:20]:  # Limit for performance
+            if p.node_id == pattern_id:
+                continue
+            
+            strength = self.reinforcement_tracker.get_strength(p.node_id)
+            if strength and strength.strength < 0.5:
+                weak_patterns.append(p.node_id)
+        
+        if len(weak_patterns) > 3:
+            return QuestionResult(
+                question_type=QuestionType.SIMILAR_FAILURES,
+                passed=True,
+                confidence=0.6,
+                details=f"Found {len(weak_patterns)} weak patterns in same domain",
+                warnings=[f"Domain may have systemic issues"],
+                related_pattern_ids=weak_patterns[:5],
+            )
+        
+        return QuestionResult(
+            question_type=QuestionType.SIMILAR_FAILURES,
+            passed=True,
+            confidence=0.9,
+            details="No concerning pattern failures in domain",
+        )
+    
+    def _update_stats(self, result: SelfQuestioningResult) -> None:
+        """Update statistics."""
+        self._stats["total_questions"] += 1
+        self._stats["by_confidence_level"][result.confidence_level.value] += 1
+        
+        if result.can_proceed:
+            self._stats["passed"] += 1
+        else:
+            self._stats["blocked"] += 1
+        
+        if result.warnings:
+            self._stats["warnings_issued"] += 1
+        
+        if result.gaps_detected:
+            self._stats["gaps_exposed"] += 1
+    
+    def get_stats(self) -> Dict[str, Any]:
+        """Get gate statistics."""
+        return {
+            **self._stats,
+            "history_size": len(self._question_history),
+            "block_rate": self._stats["blocked"] / max(1, self._stats["total_questions"]),
+        }
+    
+    def get_blocked_patterns(self, limit: int = 20) -> List[Dict[str, Any]]:
+        """Get recently blocked patterns."""
+        blocked = [
+            r.to_dict() for r in self._question_history
+            if not r.can_proceed
+        ]
+        return blocked[-limit:]
+    
+    def get_low_confidence_patterns(self, limit: int = 20) -> List[Dict[str, Any]]:
+        """Get patterns with low confidence."""
+        low_conf = [
+            r.to_dict() for r in self._question_history
+            if r.confidence_level in (ConfidenceLevel.LOW, ConfidenceLevel.INSUFFICIENT)
+        ]
+        return low_conf[-limit:]

@@ -229,9 +229,9 @@ class TestReinforcementTracker:
         record.strength = 1.5
 
         # Apply decay
-        changed = tracker.apply_decay()
+        result = tracker.apply_decay()
 
-        assert changed > 0
+        assert result["decayed_count"] > 0
         assert record.strength < 1.5
         assert record.decay_events > 0
 

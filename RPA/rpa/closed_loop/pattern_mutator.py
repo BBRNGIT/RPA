@@ -1,567 +1,789 @@
 """
-Pattern Mutator - Version, fix, and deprecate patterns on failure.
+Pattern Mutator - Version, fix, and deprecate patterns based on outcomes.
 
-Provides pattern evolution capabilities:
-- Create new versions of patterns on failure
-- Link mutations to original pattern
-- Track mutation reasons and history
-- Deprecate failing patterns
-- Restore deprecated patterns
+Handles pattern evolution:
+- Create new versions when patterns fail
+- Track mutation history and lineage
+- Apply suggested fixes
+- Deprecate patterns that consistently fail
+- Link mutations to their originating errors
 
-This module enables RPA to learn from mistakes by evolving
-patterns rather than simply accumulating them.
+This is the core of the self-improving system - patterns don't just
+stay static, they evolve based on real-world performance.
 """
 
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Set, Tuple
 import uuid
+import difflib
 import logging
-import hashlib
 
-from rpa.core.graph import Node, PatternGraph, NodeType, Edge, EdgeType
-from rpa.learning.error_classifier import ClassifiedError
+from rpa.core.node import Node, NodeType
 from rpa.memory.ltm import LongTermMemory
+from rpa.learning.error_corrector import ErrorCorrector
+from rpa.learning.correction_analyzer import CorrectionAnalyzer
+from rpa.closed_loop.outcome_evaluator import Outcome, OutcomeType
 
 logger = logging.getLogger(__name__)
 
 
 class MutationType(Enum):
     """Types of pattern mutations."""
-    FIX = "fix"                     # Fixed a bug/error
-    REFINEMENT = "refinement"       # Improved pattern
-    ALTERNATIVE = "alternative"     # Alternative approach
-    SIMPLIFICATION = "simplification"  # Simplified pattern
-    EXTENSION = "extension"         # Extended pattern
-    DEPRECATION = "deprecation"     # Pattern deprecated
-    RESTORATION = "restoration"     # Pattern restored
+    FIX = "fix"                     # Fix based on error
+    REFINE = "refine"               # Minor refinement
+    GENERALIZE = "generalize"       # Make pattern more general
+    SPECIALIZE = "specialize"       # Make pattern more specific
+    MERGE = "merge"                 # Merge with another pattern
+    SPLIT = "split"                 # Split into multiple patterns
+    DEPRECATE = "deprecate"         # Mark as deprecated
+    RESTORE = "restore"             # Restore from deprecated
+
+
+@dataclass
+class PatternVersion:
+    """Represents a version of a pattern."""
+    version_id: str
+    pattern_id: str
+    version_number: int
+    content: str
+    label: str
+    
+    # Lineage
+    parent_version_id: Optional[str] = None
+    mutation_type: Optional[MutationType] = None
+    mutation_reason: str = ""
+    source_outcome_id: Optional[str] = None
+    source_error_id: Optional[str] = None
+    
+    # Performance tracking
+    success_count: int = 0
+    failure_count: int = 0
+    last_outcome: Optional[datetime] = None
+    
+    # Metadata
+    created_at: datetime = field(default_factory=datetime.now)
+    is_active: bool = True
+    is_deprecated: bool = False
+    deprecation_reason: str = ""
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary."""
+        return {
+            "version_id": self.version_id,
+            "pattern_id": self.pattern_id,
+            "version_number": self.version_number,
+            "content": self.content,
+            "label": self.label,
+            "parent_version_id": self.parent_version_id,
+            "mutation_type": self.mutation_type.value if self.mutation_type else None,
+            "mutation_reason": self.mutation_reason,
+            "source_outcome_id": self.source_outcome_id,
+            "source_error_id": self.source_error_id,
+            "success_count": self.success_count,
+            "failure_count": self.failure_count,
+            "last_outcome": self.last_outcome.isoformat() if self.last_outcome else None,
+            "created_at": self.created_at.isoformat(),
+            "is_active": self.is_active,
+            "is_deprecated": self.is_deprecated,
+            "deprecation_reason": self.deprecation_reason,
+        }
 
 
 @dataclass
 class MutationRecord:
     """Record of a pattern mutation."""
     record_id: str
-    original_pattern_id: str
-    new_pattern_id: Optional[str]
+    pattern_id: str
     mutation_type: MutationType
+    previous_version_id: Optional[str]
+    new_version_id: Optional[str]
     reason: str
-    error_context: Optional[str] = None
-    fix_applied: Optional[str] = None
-    confidence_change: float = 0.0
+    changes: Dict[str, Any] = field(default_factory=dict)
+    outcome_id: Optional[str] = None
+    error_id: Optional[str] = None
     timestamp: datetime = field(default_factory=datetime.now)
-    metadata: Dict[str, Any] = field(default_factory=dict)
-
+    
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary."""
         return {
             "record_id": self.record_id,
-            "original_pattern_id": self.original_pattern_id,
-            "new_pattern_id": self.new_pattern_id,
-            "mutation_type": self.mutation_type.value,
-            "reason": self.reason,
-            "error_context": self.error_context,
-            "fix_applied": self.fix_applied,
-            "confidence_change": self.confidence_change,
-            "timestamp": self.timestamp.isoformat(),
-            "metadata": self.metadata,
-        }
-
-
-@dataclass
-class PatternVersion:
-    """Version information for a pattern."""
-    pattern_id: str
-    version_number: int
-    parent_id: Optional[str] = None
-    children_ids: List[str] = field(default_factory=list)
-    created_at: datetime = field(default_factory=datetime.now)
-    deprecated: bool = False
-    deprecated_at: Optional[datetime] = None
-    deprecation_reason: Optional[str] = None
-
-    def to_dict(self) -> Dict[str, Any]:
-        """Convert to dictionary."""
-        return {
             "pattern_id": self.pattern_id,
-            "version_number": self.version_number,
-            "parent_id": self.parent_id,
-            "children_ids": self.children_ids,
-            "created_at": self.created_at.isoformat(),
-            "deprecated": self.deprecated,
-            "deprecated_at": self.deprecated_at.isoformat() if self.deprecated_at else None,
-            "deprecation_reason": self.deprecation_reason,
+            "mutation_type": self.mutation_type.value,
+            "previous_version_id": self.previous_version_id,
+            "new_version_id": self.new_version_id,
+            "reason": self.reason,
+            "changes": self.changes,
+            "outcome_id": self.outcome_id,
+            "error_id": self.error_id,
+            "timestamp": self.timestamp.isoformat(),
         }
 
 
 class PatternMutator:
     """
-    Mutate patterns based on failure analysis.
-
-    Provides pattern evolution:
-    - Create fixed versions from failed patterns
-    - Track version history
+    Mutate patterns based on outcomes and errors.
+    
+    This system enables patterns to evolve:
+    - Create new versions when patterns fail
+    - Apply fixes from ErrorCorrector
+    - Track mutation lineage
     - Deprecate consistently failing patterns
-    - Restore patterns when needed
-    - Link mutations to failure analysis
-
-    Integration points:
-    - ErrorClassifier: Get fix suggestions
-    - RetryEngine: Apply fixes from retry attempts
-    - ReinforcementTracker: Check deprecation status
+    - Restore patterns if needed
+    
+    The mutation model is deterministic - mutations happen based on
+    actual failure data, not random exploration.
     """
-
+    
     # Mutation thresholds
-    DEPRECATION_FAILURE_COUNT = 5
-    MIN_CONFIDENCE_FOR_MUTATION = 0.3
-    MAX_VERSIONS = 10  # Max versions before forcing deprecation
-
-    def __init__(self, ltm: Optional[LongTermMemory] = None):
+    FAILURE_THRESHOLD_FOR_MUTATION = 2    # Failures before considering mutation
+    FAILURE_THRESHOLD_FOR_DEPRECATION = 5 # Failures before considering deprecation
+    MIN_SUCCESS_RATE_TO_KEEP = 0.3        # Minimum success rate to keep active
+    
+    def __init__(
+        self,
+        ltm: Optional[LongTermMemory] = None,
+        error_corrector: Optional[ErrorCorrector] = None,
+        correction_analyzer: Optional[CorrectionAnalyzer] = None,
+    ):
         """
-        Initialize the PatternMutator.
-
+        Initialize PatternMutator.
+        
         Args:
-            ltm: Optional LongTermMemory instance for persistence
+            ltm: LongTermMemory instance
+            error_corrector: ErrorCorrector for generating fixes
+            correction_analyzer: CorrectionAnalyzer for learning from fixes
         """
         self.ltm = ltm
-
+        self.error_corrector = error_corrector or ErrorCorrector()
+        self.correction_analyzer = correction_analyzer or CorrectionAnalyzer()
+        
         # Version tracking
-        self._versions: Dict[str, PatternVersion] = {}
-
+        self._versions: Dict[str, List[PatternVersion]] = {}  # pattern_id -> versions
+        self._active_versions: Dict[str, str] = {}            # pattern_id -> active version_id
+        self._version_by_id: Dict[str, PatternVersion] = {}   # version_id -> version
+        
         # Mutation history
-        self._mutation_history: Dict[str, List[MutationRecord]] = {}
-
+        self._mutations: List[MutationRecord] = []
+        self._max_history = 10000
+        
         # Statistics
         self._stats = {
             "total_mutations": 0,
             "by_type": {t.value: 0 for t in MutationType},
-            "total_deprecations": 0,
-            "total_restorations": 0,
+            "patterns_versioned": 0,
+            "patterns_deprecated": 0,
+            "patterns_restored": 0,
+            "successful_fixes": 0,
+            "failed_fixes": 0,
         }
-
-    def mutate_pattern(
-        self,
-        original: Node,
-        new_content: str,
-        mutation_type: MutationType,
-        reason: str,
-        error_context: Optional[str] = None,
-        graph: Optional[PatternGraph] = None,
-    ) -> Node:
+    
+    def process_outcome(self, outcome: Outcome) -> Optional[MutationRecord]:
         """
-        Create a mutated version of a pattern.
-
+        Process an outcome and determine if mutation is needed.
+        
+        This is the main entry point - outcomes trigger mutation decisions.
+        
         Args:
-            original: The original pattern node
-            new_content: The new content for the mutation
-            mutation_type: Type of mutation
-            reason: Reason for the mutation
-            error_context: Optional error context that triggered mutation
-            graph: Optional pattern graph for edge creation
-
+            outcome: The outcome to process
+            
         Returns:
-            The new mutated node
+            MutationRecord if mutation occurred, None otherwise
         """
+        pattern_id = outcome.pattern_id
+        
+        # Ensure pattern is tracked
+        self._ensure_pattern_tracked(pattern_id)
+        
+        # Update version stats
+        active_version_id = self._active_versions.get(pattern_id)
+        if active_version_id:
+            version = self._version_by_id.get(active_version_id)
+            if version:
+                if outcome.outcome_type == OutcomeType.SUCCESS:
+                    version.success_count += 1
+                elif outcome.outcome_type in (OutcomeType.FAILURE, OutcomeType.ERROR):
+                    version.failure_count += 1
+                version.last_outcome = datetime.now()
+        
+        # Check if mutation is needed
+        if not self._should_mutate(outcome, pattern_id):
+            return None
+        
+        # Determine mutation type
+        mutation_type, reason = self._determine_mutation(outcome, pattern_id)
+        
+        # Execute mutation
+        if mutation_type == MutationType.DEPRECATE:
+            return self._deprecate_pattern(pattern_id, outcome, reason)
+        elif mutation_type == MutationType.FIX:
+            return self._fix_pattern(pattern_id, outcome, reason)
+        else:
+            return self._apply_mutation(pattern_id, mutation_type, outcome, reason)
+    
+    def _should_mutate(self, outcome: Outcome, pattern_id: str) -> bool:
+        """Determine if a pattern should be mutated."""
+        
+        # Don't mutate successful patterns
+        if outcome.outcome_type == OutcomeType.SUCCESS:
+            return False
+        
+        # Always consider mutation on error
+        if outcome.outcome_type == OutcomeType.ERROR:
+            return True
+        
+        # Check failure history
+        versions = self._versions.get(pattern_id, [])
+        if not versions:
+            return False
+        
+        active = self._get_active_version(pattern_id)
+        if not active:
+            return False
+        
+        # Check if failure threshold reached
+        if active.failure_count >= self.FAILURE_THRESHOLD_FOR_MUTATION:
+            # Check success rate
+            total = active.success_count + active.failure_count
+            if total > 0:
+                success_rate = active.success_count / total
+                if success_rate < self.MIN_SUCCESS_RATE_TO_KEEP:
+                    return True
+        
+        # Check outcome's mutation signal
+        if outcome.should_mutate:
+            return True
+        
+        # Check for deprecation signal
+        if outcome.should_deprecate:
+            return True
+        
+        return False
+    
+    def _determine_mutation(self, outcome: Outcome, pattern_id: str) -> Tuple[MutationType, str]:
+        """Determine the type of mutation needed."""
+        
+        active = self._get_active_version(pattern_id)
+        
+        # Check for deprecation
+        if outcome.should_deprecate:
+            return MutationType.DEPRECATE, "Pattern flagged for deprecation"
+        
+        if active and active.failure_count >= self.FAILURE_THRESHOLD_FOR_DEPRECATION:
+            return MutationType.DEPRECATE, f"Failure threshold reached ({active.failure_count} failures)"
+        
+        # Check for fix opportunity
+        if outcome.error and outcome.suggested_fixes:
+            return MutationType.FIX, f"Fix for {outcome.error.category}"
+        
+        # Check for refinement based on partial success
+        if outcome.outcome_type == OutcomeType.PARTIAL:
+            return MutationType.REFINE, "Refinement for partial success pattern"
+        
+        # Default to fix attempt
+        return MutationType.FIX, "General improvement needed"
+    
+    def _fix_pattern(
+        self,
+        pattern_id: str,
+        outcome: Outcome,
+        reason: str,
+    ) -> Optional[MutationRecord]:
+        """Create a fixed version of the pattern."""
+        
+        active = self._get_active_version(pattern_id)
+        if not active:
+            return None
+        
+        # Generate fix
+        if outcome.error:
+            correction = self.error_corrector.suggest_correction(
+                error=outcome.error,
+                code_context=active.content,
+            )
+            
+            if correction and correction.corrected_code:
+                new_content = correction.corrected_code
+                changes = {
+                    "old_content": active.content,
+                    "new_content": new_content,
+                    "fix_type": correction.fix_type,
+                    "confidence": correction.confidence,
+                }
+                
+                # Create new version
+                new_version = self._create_version(
+                    pattern_id=pattern_id,
+                    content=new_content,
+                    label=active.label,
+                    mutation_type=MutationType.FIX,
+                    mutation_reason=reason,
+                    parent_version_id=active.version_id,
+                    source_outcome_id=outcome.outcome_id,
+                    source_error_id=outcome.error.error_id if outcome.error else None,
+                )
+                
+                # Record mutation
+                record = self._record_mutation(
+                    pattern_id=pattern_id,
+                    mutation_type=MutationType.FIX,
+                    previous_version_id=active.version_id,
+                    new_version_id=new_version.version_id,
+                    reason=reason,
+                    changes=changes,
+                    outcome_id=outcome.outcome_id,
+                    error_id=outcome.error.error_id if outcome.error else None,
+                )
+                
+                self._stats["successful_fixes"] += 1
+                
+                return record
+            
+            # If no automatic fix, return the correction suggestion for manual review
+            else:
+                changes = {
+                    "suggested_fix": correction.description if correction else "No fix suggestion",
+                    "confidence": correction.confidence if correction else 0.0,
+                    "requires_manual_fix": True,
+                }
+                
+                record = self._record_mutation(
+                    pattern_id=pattern_id,
+                    mutation_type=MutationType.FIX,
+                    previous_version_id=active.version_id,
+                    new_version_id=None,
+                    reason=reason,
+                    changes=changes,
+                    outcome_id=outcome.outcome_id,
+                    error_id=outcome.error.error_id if outcome.error else None,
+                )
+                
+                return record
+        
+        # If no automatic fix, try suggested fixes
+        elif outcome.suggested_fixes:
+            # Try to apply first suggested fix
+            changes = {
+                "suggested_fixes": outcome.suggested_fixes,
+                "applied": "manual_review_needed",
+            }
+            
+            record = self._record_mutation(
+                pattern_id=pattern_id,
+                mutation_type=MutationType.FIX,
+                previous_version_id=active.version_id,
+                new_version_id=None,  # Needs manual intervention
+                reason=reason,
+                changes=changes,
+                outcome_id=outcome.outcome_id,
+            )
+            
+            return record
+        
+        return None
+    
+    def _deprecate_pattern(
+        self,
+        pattern_id: str,
+        outcome: Outcome,
+        reason: str,
+    ) -> MutationRecord:
+        """Deprecate a pattern."""
+        
+        active = self._get_active_version(pattern_id)
+        previous_version_id = active.version_id if active else None
+        
+        # Mark version as deprecated
+        if active:
+            active.is_active = False
+            active.is_deprecated = True
+            active.deprecation_reason = reason
+        
+        # Update LTM if available
+        if self.ltm:
+            node = self.ltm.get_pattern(pattern_id)
+            if node:
+                self.ltm.deprecate_pattern(pattern_id, reason)
+        
+        # Record mutation
+        record = self._record_mutation(
+            pattern_id=pattern_id,
+            mutation_type=MutationType.DEPRECATE,
+            previous_version_id=previous_version_id,
+            new_version_id=None,
+            reason=reason,
+            changes={"deprecated": True},
+            outcome_id=outcome.outcome_id,
+        )
+        
+        self._stats["patterns_deprecated"] += 1
+        
+        return record
+    
+    def _apply_mutation(
+        self,
+        pattern_id: str,
+        mutation_type: MutationType,
+        outcome: Outcome,
+        reason: str,
+    ) -> Optional[MutationRecord]:
+        """Apply a general mutation to a pattern."""
+        
+        active = self._get_active_version(pattern_id)
+        if not active:
+            return None
+        
+        # For now, create a placeholder for manual review
+        # More sophisticated mutations would be implemented based on type
+        
+        changes = {
+            "mutation_type": mutation_type.value,
+            "status": "needs_implementation",
+        }
+        
+        record = self._record_mutation(
+            pattern_id=pattern_id,
+            mutation_type=mutation_type,
+            previous_version_id=active.version_id,
+            new_version_id=None,
+            reason=reason,
+            changes=changes,
+            outcome_id=outcome.outcome_id,
+        )
+        
+        return record
+    
+    def _create_version(
+        self,
+        pattern_id: str,
+        content: str,
+        label: str,
+        mutation_type: MutationType,
+        mutation_reason: str,
+        parent_version_id: Optional[str] = None,
+        source_outcome_id: Optional[str] = None,
+        source_error_id: Optional[str] = None,
+    ) -> PatternVersion:
+        """Create a new version of a pattern."""
+        
+        # Determine version number
+        versions = self._versions.get(pattern_id, [])
+        version_number = len(versions) + 1
+        
+        # Create version ID
+        version_id = f"v_{pattern_id}_{version_number}_{uuid.uuid4().hex[:6]}"
+        
+        version = PatternVersion(
+            version_id=version_id,
+            pattern_id=pattern_id,
+            version_number=version_number,
+            content=content,
+            label=label,
+            parent_version_id=parent_version_id,
+            mutation_type=mutation_type,
+            mutation_reason=mutation_reason,
+            source_outcome_id=source_outcome_id,
+            source_error_id=source_error_id,
+        )
+        
+        # Track version
+        if pattern_id not in self._versions:
+            self._versions[pattern_id] = []
+        self._versions[pattern_id].append(version)
+        self._version_by_id[version_id] = version
+        
+        # Set as active
+        self._active_versions[pattern_id] = version_id
+        
+        # Update LTM if available
+        if self.ltm:
+            node = self.ltm.get_pattern(pattern_id)
+            if node:
+                node.content = content
+                node.metadata["version_id"] = version_id
+                node.metadata["version_number"] = version_number
+                node.metadata["mutation_type"] = mutation_type.value
+                node.metadata["mutation_reason"] = mutation_reason
+        
+        self._stats["patterns_versioned"] += 1
+        
+        return version
+    
+    def _record_mutation(
+        self,
+        pattern_id: str,
+        mutation_type: MutationType,
+        previous_version_id: Optional[str],
+        new_version_id: Optional[str],
+        reason: str,
+        changes: Dict[str, Any],
+        outcome_id: Optional[str] = None,
+        error_id: Optional[str] = None,
+    ) -> MutationRecord:
+        """Record a mutation in history."""
+        
+        record = MutationRecord(
+            record_id=f"mut_{uuid.uuid4().hex[:8]}",
+            pattern_id=pattern_id,
+            mutation_type=mutation_type,
+            previous_version_id=previous_version_id,
+            new_version_id=new_version_id,
+            reason=reason,
+            changes=changes,
+            outcome_id=outcome_id,
+            error_id=error_id,
+        )
+        
+        self._mutations.append(record)
+        if len(self._mutations) > self._max_history:
+            self._mutations.pop(0)
+        
         self._stats["total_mutations"] += 1
         self._stats["by_type"][mutation_type.value] += 1
-
-        # Get version info
-        version_info = self._get_or_create_version(original.node_id)
-
-        # Check version limit
-        if version_info.version_number >= self.MAX_VERSIONS:
-            logger.warning(
-                f"Pattern {original.node_id} has reached max versions, "
-                "consider deprecation"
+        
+        return record
+    
+    def _ensure_pattern_tracked(self, pattern_id: str) -> None:
+        """Ensure a pattern is being tracked."""
+        if pattern_id not in self._versions:
+            # Get pattern content from LTM if available
+            content = ""
+            label = pattern_id
+            
+            if self.ltm:
+                node = self.ltm.get_pattern(pattern_id)
+                if node:
+                    content = node.content
+                    label = node.label
+            
+            # Create initial version
+            version = PatternVersion(
+                version_id=f"v_{pattern_id}_1_initial",
+                pattern_id=pattern_id,
+                version_number=1,
+                content=content,
+                label=label,
             )
-
-        # Create new version number
-        new_version = version_info.version_number + 1
-
-        # Create new pattern ID
-        new_id = self._generate_version_id(original.node_id, new_version)
-
-        # Create new node
-        new_node = Node(
-            node_id=new_id,
-            label=f"{original.label}_v{new_version}",
-            node_type=original.node_type,
-            content=new_content,
-            hierarchy_level=original.hierarchy_level,
-            domain=original.domain,
-            source=f"mutation:{original.node_id}",
-            confidence=original.confidence,
-            metadata={
-                **original.metadata,
-                "mutation_type": mutation_type.value,
-                "mutation_reason": reason,
-                "parent_pattern_id": original.node_id,
-                "version": new_version,
-                "mutated_at": datetime.now().isoformat(),
-            },
-        )
-
-        # Update version info
-        version_info.children_ids.append(new_id)
-
-        # Create new version info for the mutation
-        new_version_info = PatternVersion(
-            pattern_id=new_id,
-            version_number=new_version,
-            parent_id=original.node_id,
-        )
-        self._versions[new_id] = new_version_info
-
-        # Create mutation record
-        record = MutationRecord(
-            record_id=f"mut_{uuid.uuid4().hex[:8]}",
-            original_pattern_id=original.node_id,
-            new_pattern_id=new_id,
-            mutation_type=mutation_type,
-            reason=reason,
-            error_context=error_context,
-            confidence_change=new_node.confidence - original.confidence,
-        )
-
-        self._add_to_history(original.node_id, record)
-        self._add_to_history(new_id, record)
-
-        # Create edge in graph if provided
-        if graph:
-            edge = Edge(
-                edge_id=f"mut_{new_id}",
-                source_id=new_id,
-                target_id=original.node_id,
-                edge_type=EdgeType.RELATED_TO,
-                weight=0.8,
-                metadata={
-                    "relation": "mutation",
-                    "mutation_type": mutation_type.value,
-                },
-            )
-            graph.add_edge(edge)
-
-        # Store in LTM if provided
-        if self.ltm:
-            self.ltm.add_node(new_node)
-            if graph:
-                self.ltm.add_edge(edge)
-
-        logger.info(
-            f"Created mutation {new_id} from {original.node_id}: "
-            f"{mutation_type.value}"
-        )
-
-        return new_node
-
-    def deprecate_pattern(
-        self,
-        pattern_id: str,
-        reason: str,
-        replacement_id: Optional[str] = None,
-    ) -> bool:
-        """
-        Deprecate a pattern.
-
-        Args:
-            pattern_id: ID of pattern to deprecate
-            reason: Reason for deprecation
-            replacement_id: Optional ID of replacement pattern
-
-        Returns:
-            True if deprecation was successful
-        """
-        version_info = self._get_or_create_version(pattern_id)
-
-        if version_info.deprecated:
-            logger.warning(f"Pattern {pattern_id} is already deprecated")
-            return False
-
-        version_info.deprecated = True
-        version_info.deprecated_at = datetime.now()
-        version_info.deprecation_reason = reason
-
-        # Create mutation record
-        record = MutationRecord(
-            record_id=f"mut_{uuid.uuid4().hex[:8]}",
-            original_pattern_id=pattern_id,
-            new_pattern_id=replacement_id,
-            mutation_type=MutationType.DEPRECATION,
-            reason=reason,
-            metadata={"replacement_id": replacement_id},
-        )
-
-        self._add_to_history(pattern_id, record)
-
-        # Update node in LTM if available
-        if self.ltm:
-            node = self.ltm.get_pattern(pattern_id)
-            if node:
-                node.is_valid = False
-                node.metadata["deprecated"] = True
-                node.metadata["deprecation_reason"] = reason
-                node.metadata["deprecated_at"] = datetime.now().isoformat()
-                if replacement_id:
-                    node.metadata["replacement_id"] = replacement_id
-                self.ltm.update_pattern(node)
-
-        self._stats["total_deprecations"] += 1
-
-        logger.info(f"Deprecated pattern {pattern_id}: {reason}")
-
-        return True
-
-    def restore_pattern(
-        self,
-        pattern_id: str,
-        reason: str,
-    ) -> bool:
+            
+            self._versions[pattern_id] = [version]
+            self._version_by_id[version.version_id] = version
+            self._active_versions[pattern_id] = version.version_id
+    
+    def _get_active_version(self, pattern_id: str) -> Optional[PatternVersion]:
+        """Get the active version of a pattern."""
+        version_id = self._active_versions.get(pattern_id)
+        if version_id:
+            return self._version_by_id.get(version_id)
+        return None
+    
+    def restore_pattern(self, pattern_id: str, version_id: Optional[str] = None) -> Optional[MutationRecord]:
         """
         Restore a deprecated pattern.
-
+        
         Args:
-            pattern_id: ID of pattern to restore
-            reason: Reason for restoration
-
+            pattern_id: Pattern to restore
+            version_id: Optional specific version to restore, or latest if None
+            
         Returns:
-            True if restoration was successful
+            MutationRecord if successful
         """
-        version_info = self._versions.get(pattern_id)
-
-        if not version_info or not version_info.deprecated:
-            logger.warning(f"Pattern {pattern_id} is not deprecated")
-            return False
-
-        version_info.deprecated = False
-        version_info.deprecated_at = None
-        version_info.deprecation_reason = None
-
-        # Create mutation record
-        record = MutationRecord(
-            record_id=f"mut_{uuid.uuid4().hex[:8]}",
-            original_pattern_id=pattern_id,
-            new_pattern_id=pattern_id,
-            mutation_type=MutationType.RESTORATION,
-            reason=reason,
-        )
-
-        self._add_to_history(pattern_id, record)
-
-        # Update node in LTM if available
-        if self.ltm:
-            node = self.ltm.get_pattern(pattern_id)
-            if node:
-                node.is_valid = True
-                node.metadata["deprecated"] = False
-                node.metadata["restored_at"] = datetime.now().isoformat()
-                node.metadata["restoration_reason"] = reason
-                self.ltm.update_pattern(node)
-
-        self._stats["total_restorations"] += 1
-
-        logger.info(f"Restored pattern {pattern_id}: {reason}")
-
-        return True
-
-    def get_version_history(self, pattern_id: str) -> List[PatternVersion]:
-        """Get version history for a pattern."""
-        versions = []
-
-        # Get current version
-        current = self._versions.get(pattern_id)
-        if current:
-            versions.append(current)
-
-            # Get ancestors
-            parent_id = current.parent_id
-            while parent_id:
-                parent = self._versions.get(parent_id)
-                if parent:
-                    versions.append(parent)
-                    parent_id = parent.parent_id
-                else:
+        versions = self._versions.get(pattern_id, [])
+        if not versions:
+            return None
+        
+        # Find version to restore
+        if version_id:
+            target = self._version_by_id.get(version_id)
+        else:
+            # Get latest non-deprecated version, or latest if all deprecated
+            target = None
+            for v in reversed(versions):
+                if not v.is_deprecated:
+                    target = v
                     break
-
-        return versions
-
-    def get_mutation_history(
-        self,
-        pattern_id: str,
-        limit: int = 20,
-    ) -> List[MutationRecord]:
-        """Get mutation history for a pattern."""
-        history = self._mutation_history.get(pattern_id, [])
-        return history[-limit:]
-
-    def is_deprecated(self, pattern_id: str) -> bool:
-        """Check if a pattern is deprecated."""
-        version = self._versions.get(pattern_id)
-        return version.deprecated if version else False
-
-    def get_latest_version(self, pattern_id: str) -> Optional[str]:
-        """Get the latest version of a pattern."""
-        version = self._versions.get(pattern_id)
-        if not version:
-            return pattern_id
-
-        # Check children
-        if version.children_ids:
-            # Get the most recent child
-            latest = version.children_ids[-1]
-            return self.get_latest_version(latest)
-
-        return pattern_id
-
-    def get_pattern_family(self, pattern_id: str) -> Dict[str, Any]:
-        """Get the full family tree of a pattern."""
-        version = self._versions.get(pattern_id)
-        if not version:
-            return {"pattern_id": pattern_id, "versions": []}
-
-        # Get all versions
-        all_versions = self.get_version_history(pattern_id)
-
-        # Get descendants
-        descendants = self._get_all_descendants(pattern_id)
-
-        return {
-            "pattern_id": pattern_id,
-            "current_version": version.version_number,
-            "deprecated": version.deprecated,
-            "ancestors": [v.pattern_id for v in all_versions[1:]],
-            "descendants": descendants,
-            "total_versions": len(all_versions) + len(descendants),
-        }
-
-    def suggest_fix(
-        self,
-        pattern: Node,
-        error: ClassifiedError,
-    ) -> Optional[str]:
-        """
-        Suggest a fix for a pattern based on error classification.
-
-        Args:
-            pattern: The failed pattern
-            error: The classified error
-
-        Returns:
-            Suggested fix content or None
-        """
-        # Use error suggestions as guidance
-        suggestions = error.suggestions
-        if not suggestions:
+            if not target:
+                target = versions[-1]
+        
+        if not target:
             return None
-
-        # For now, return the first suggestion
-        # A more sophisticated implementation would try to apply
-        # the suggestion to the actual content
-        return suggestions[0]
-
-    def apply_fix(
-        self,
-        pattern: Node,
-        fix_description: str,
-        fixed_content: Optional[str] = None,
-        graph: Optional[PatternGraph] = None,
-    ) -> Optional[Node]:
-        """
-        Apply a fix to a pattern.
-
-        Args:
-            pattern: The pattern to fix
-            fix_description: Description of the fix
-            fixed_content: Optional fixed content (will be generated if not provided)
-            graph: Optional pattern graph
-
-        Returns:
-            The new fixed pattern node
-        """
-        if fixed_content is None:
-            # Can't apply fix without content
-            logger.warning(f"No fixed content provided for {pattern.node_id}")
-            return None
-
-        return self.mutate_pattern(
-            original=pattern,
-            new_content=fixed_content,
-            mutation_type=MutationType.FIX,
-            reason=fix_description,
-            error_context=pattern.content,
-            graph=graph,
+        
+        # Restore
+        target.is_deprecated = False
+        target.is_active = True
+        self._active_versions[pattern_id] = target.version_id
+        
+        # Update LTM
+        if self.ltm:
+            self.ltm.restore_pattern(pattern_id)
+        
+        # Record mutation
+        record = self._record_mutation(
+            pattern_id=pattern_id,
+            mutation_type=MutationType.RESTORE,
+            previous_version_id=None,
+            new_version_id=target.version_id,
+            reason="Manual restoration",
+            changes={"restored": True},
         )
-
-    def get_statistics(self) -> Dict[str, Any]:
+        
+        self._stats["patterns_restored"] += 1
+        
+        return record
+    
+    def get_version_history(self, pattern_id: str) -> List[PatternVersion]:
+        """Get all versions of a pattern."""
+        return self._versions.get(pattern_id, [])
+    
+    def get_active_version(self, pattern_id: str) -> Optional[PatternVersion]:
+        """Get the active version of a pattern."""
+        return self._get_active_version(pattern_id)
+    
+    def get_mutation_history(self, pattern_id: Optional[str] = None, limit: int = 100) -> List[MutationRecord]:
+        """Get mutation history, optionally filtered by pattern."""
+        if pattern_id:
+            records = [r for r in self._mutations if r.pattern_id == pattern_id]
+        else:
+            records = self._mutations
+        
+        return records[-limit:]
+    
+    def get_patterns_needing_fix(self) -> List[Dict[str, Any]]:
+        """Get patterns that need fixing."""
+        needs_fix = []
+        
+        for pattern_id, versions in self._versions.items():
+            active = self._get_active_version(pattern_id)
+            if not active:
+                continue
+            
+            if active.failure_count >= self.FAILURE_THRESHOLD_FOR_MUTATION:
+                needs_fix.append({
+                    "pattern_id": pattern_id,
+                    "version_id": active.version_id,
+                    "failure_count": active.failure_count,
+                    "success_count": active.success_count,
+                    "success_rate": active.success_count / max(1, active.success_count + active.failure_count),
+                    "last_failure": active.last_outcome.isoformat() if active.last_outcome else None,
+                })
+        
+        return sorted(needs_fix, key=lambda x: x["success_rate"])
+    
+    def get_deprecated_patterns(self) -> List[Dict[str, Any]]:
+        """Get all deprecated patterns."""
+        deprecated = []
+        
+        for pattern_id, versions in self._versions.items():
+            for version in versions:
+                if version.is_deprecated:
+                    deprecated.append({
+                        "pattern_id": pattern_id,
+                        "version_id": version.version_id,
+                        "deprecation_reason": version.deprecation_reason,
+                        "created_at": version.created_at.isoformat(),
+                    })
+                    break  # Only include once per pattern
+        
+        return deprecated
+    
+    def get_version_diff(self, version_id1: str, version_id2: str) -> Dict[str, Any]:
+        """Get diff between two versions."""
+        v1 = self._version_by_id.get(version_id1)
+        v2 = self._version_by_id.get(version_id2)
+        
+        if not v1 or not v2:
+            return {"error": "Version not found"}
+        
+        diff = list(difflib.unified_diff(
+            v1.content.splitlines(keepends=True),
+            v2.content.splitlines(keepends=True),
+            fromfile=f"v{v1.version_number}",
+            tofile=f"v{v2.version_number}",
+        ))
+        
+        return {
+            "version1": version_id1,
+            "version2": version_id2,
+            "diff": "".join(diff),
+            "lines_changed": len([l for l in diff if l.startswith("+") or l.startswith("-")]) - 2,
+        }
+    
+    def get_stats(self) -> Dict[str, Any]:
         """Get mutator statistics."""
         return {
             **self._stats,
-            "total_patterns_versioned": len(self._versions),
-            "deprecated_patterns": sum(
-                1 for v in self._versions.values() if v.deprecated
-            ),
+            "total_patterns_tracked": len(self._versions),
+            "total_versions": len(self._version_by_id),
+            "mutation_history_size": len(self._mutations),
         }
-
-    def _get_or_create_version(self, pattern_id: str) -> PatternVersion:
-        """Get or create version info for a pattern."""
-        if pattern_id not in self._versions:
-            self._versions[pattern_id] = PatternVersion(
-                pattern_id=pattern_id,
-                version_number=1,
-            )
-        return self._versions[pattern_id]
-
-    def _generate_version_id(self, original_id: str, version: int) -> str:
-        """Generate a new version ID."""
-        return f"{original_id}_v{version}"
-
-    def _add_to_history(self, pattern_id: str, record: MutationRecord) -> None:
-        """Add record to mutation history."""
-        if pattern_id not in self._mutation_history:
-            self._mutation_history[pattern_id] = []
-        self._mutation_history[pattern_id].append(record)
-
-    def _get_all_descendants(self, pattern_id: str) -> List[str]:
-        """Get all descendant pattern IDs."""
-        version = self._versions.get(pattern_id)
-        if not version or not version.children_ids:
-            return []
-
-        descendants = []
-        for child_id in version.children_ids:
-            descendants.append(child_id)
-            descendants.extend(self._get_all_descendants(child_id))
-
-        return descendants
-
+    
     def to_dict(self) -> Dict[str, Any]:
-        """Serialize mutator state to dictionary."""
+        """Serialize mutator state."""
         return {
             "versions": {
-                pid: v.to_dict() for pid, v in self._versions.items()
+                pid: [v.to_dict() for v in vers]
+                for pid, vers in self._versions.items()
             },
+            "active_versions": self._active_versions,
+            "mutations": [m.to_dict() for m in self._mutations],
             "stats": self._stats,
         }
-
+    
     @classmethod
-    def from_dict(cls, data: Dict[str, Any], ltm: Optional[LongTermMemory] = None) -> "PatternMutator":
-        """Deserialize mutator from dictionary."""
+    def from_dict(
+        cls,
+        data: Dict[str, Any],
+        ltm: Optional[LongTermMemory] = None,
+    ) -> "PatternMutator":
+        """Deserialize mutator state."""
         mutator = cls(ltm=ltm)
-
-        for pid, vdata in data.get("versions", {}).items():
-            version = PatternVersion(pattern_id=pid)
-            version.version_number = vdata.get("version_number", 1)
-            version.parent_id = vdata.get("parent_id")
-            version.children_ids = vdata.get("children_ids", [])
-            version.deprecated = vdata.get("deprecated", False)
-            version.deprecation_reason = vdata.get("deprecation_reason")
-
-            if vdata.get("created_at"):
-                version.created_at = datetime.fromisoformat(vdata["created_at"])
-            if vdata.get("deprecated_at"):
-                version.deprecated_at = datetime.fromisoformat(vdata["deprecated_at"])
-
-            mutator._versions[pid] = version
-
+        
+        for pid, versions_data in data.get("versions", {}).items():
+            versions = []
+            for vdata in versions_data:
+                version = PatternVersion(
+                    version_id=vdata["version_id"],
+                    pattern_id=vdata["pattern_id"],
+                    version_number=vdata["version_number"],
+                    content=vdata["content"],
+                    label=vdata["label"],
+                    parent_version_id=vdata.get("parent_version_id"),
+                    mutation_type=MutationType(vdata["mutation_type"]) if vdata.get("mutation_type") else None,
+                    mutation_reason=vdata.get("mutation_reason", ""),
+                    source_outcome_id=vdata.get("source_outcome_id"),
+                    source_error_id=vdata.get("source_error_id"),
+                    success_count=vdata.get("success_count", 0),
+                    failure_count=vdata.get("failure_count", 0),
+                    is_active=vdata.get("is_active", True),
+                    is_deprecated=vdata.get("is_deprecated", False),
+                    deprecation_reason=vdata.get("deprecation_reason", ""),
+                )
+                if vdata.get("created_at"):
+                    version.created_at = datetime.fromisoformat(vdata["created_at"])
+                if vdata.get("last_outcome"):
+                    version.last_outcome = datetime.fromisoformat(vdata["last_outcome"])
+                versions.append(version)
+                mutator._version_by_id[version.version_id] = version
+            mutator._versions[pid] = versions
+        
+        mutator._active_versions = data.get("active_versions", {})
+        
+        for mdata in data.get("mutations", []):
+            record = MutationRecord(
+                record_id=mdata["record_id"],
+                pattern_id=mdata["pattern_id"],
+                mutation_type=MutationType(mdata["mutation_type"]),
+                previous_version_id=mdata.get("previous_version_id"),
+                new_version_id=mdata.get("new_version_id"),
+                reason=mdata["reason"],
+                changes=mdata.get("changes", {}),
+                outcome_id=mdata.get("outcome_id"),
+                error_id=mdata.get("error_id"),
+            )
+            if mdata.get("timestamp"):
+                record.timestamp = datetime.fromisoformat(mdata["timestamp"])
+            mutator._mutations.append(record)
+        
         mutator._stats = data.get("stats", mutator._stats)
-
+        
         return mutator
