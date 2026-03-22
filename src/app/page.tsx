@@ -7,7 +7,7 @@
  * All views are rendered based on the 'view' query parameter.
  */
 
-import { useEffect, useMemo, useState, useCallback } from 'react';
+import { Suspense, useEffect, useMemo, useState, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useAuthStore, useAppStore } from '@/lib/stores';
 import { AppLayout } from '@/components/layout';
@@ -93,7 +93,8 @@ function AuthenticatedApp({ currentView }: { currentView: ViewType }) {
   );
 }
 
-export default function Home() {
+// Inner component that uses useSearchParams (wrapped in Suspense)
+function AppContent() {
   const searchParams = useSearchParams();
   const { isAuthenticated, checkAuth, user, isLoading } = useAuthStore();
   
@@ -126,4 +127,22 @@ export default function Home() {
   
   // Authenticated - show main app
   return <AuthenticatedApp currentView={currentView} />;
+}
+
+// Loading fallback for Suspense
+function LoadingFallback() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-background">
+      <div className="animate-pulse text-muted-foreground">Loading...</div>
+    </div>
+  );
+}
+
+// Main page component with Suspense boundary
+export default function Home() {
+  return (
+    <Suspense fallback={<LoadingFallback />}>
+      <AppContent />
+    </Suspense>
+  );
 }
