@@ -41,6 +41,15 @@ from rpa.memory import LongTermMemory, EpisodicMemory, ShortTermMemory
 from rpa.core.graph import Node, PatternGraph
 from rpa.learning.abstraction_engine import AbstractionEngine
 
+# Assessment system integration
+try:
+    from rpa.assessment.curriculum_registry import CurriculumRegistry, CurriculumTrack, CurriculumLevel
+    from rpa.assessment.exam_engine import ExamEngine, ExamSession, ExamQuestion, QuestionType
+    from rpa.assessment.badge_manager import BadgeManager, Badge
+    ASSESSMENT_AVAILABLE = True
+except ImportError:
+    ASSESSMENT_AVAILABLE = False
+
 # Try to import HF datasets
 try:
     from datasets import load_dataset
@@ -112,6 +121,28 @@ class InteractiveTrainer:
         self.graph = PatternGraph(domain="general")
         self.abstraction = AbstractionEngine()
         
+        # Initialize assessment system
+        self.registry = None
+        self.exam_engine = None
+        self.badge_manager = None
+        
+        if ASSESSMENT_AVAILABLE:
+            try:
+                self.registry = CurriculumRegistry(
+                    config_dir=str(Path(__file__).parent / "curriculum")
+                )
+                self.badge_manager = BadgeManager(
+                    registry=self.registry,
+                    storage_path=str(self.storage_path / "badges.json")
+                )
+                self.exam_engine = ExamEngine(
+                    registry=self.registry,
+                    episodic=EpisodicMemory(),
+                    manual_questions_dir=str(Path(__file__).parent / "curriculum" / "exams")
+                )
+            except Exception as e:
+                logger.warning(f"Assessment system not fully loaded: {e}")
+        
         # Session stats
         self.session_stats = {
             "started_at": None,
@@ -120,6 +151,8 @@ class InteractiveTrainer:
             "reviews_correct": 0,
             "reviews_total": 0,
             "patterns_stored": 0,
+            "exams_passed": 0,
+            "badges_earned": 0,
         }
         
         # Curriculum cache
@@ -560,6 +593,148 @@ class InteractiveTrainer:
         self.session_stats["patterns_stored"] += patterns_stored
     
     # ========================================================================
+    # EXAM & TRACK METHODS (Integration with Assessment System)
+    # ========================================================================
+    
+    def run_exam(self, track_id: str, level_id: str, num_questions: int = 15) -> Optional[Any]:
+        """
+        Run a certification exam for a curriculum level.
+        
+        Uses the ExamEngine from the assessment system.
+        """
+        if not self.exam_engine:
+            print("\n  ⚠️  Exam engine not available.")
+            return None
+        
+        self._print_header(f"📝 CERTIFICATION EXAM", f"{track_id.upper()} / {level_id}")
+        
+        try:
+            # Prepare exam
+            print(f"\n  📋 Preparing exam for {track_id}/{level_id}...")
+            session = self.exam_engine.prepare_exam(
+                track_id=track_id,
+                level_id=level_id,
+                num_questions=num_questions,
+                include_manual=True,
+            )
+            
+            print(f"  ✅ Loaded {len(session.questions)} questions\n")
+            
+            # Run exam with live Q&A display
+            correct = 0
+            for i, question in enumerate(session.questions):
+                print(f"\n  ┌{'─'*61}┐")
+                print(f"  │ Question {i+1}/{len(session.questions):<44} │")
+                print(f"  └{'─'*61}┘")
+                
+                print(f"\n  {question.question}\n")
+                
+                if question.question_type == QuestionType.MULTIPLE_CHOICE:
+                    for j, opt in enumerate(question.options):
+                        print(f"     {chr(65+j)}. {opt[:55]}")
+                    print()
+                
+                # Simulate AI answer
+                if random.random() < 0.75:  # 75% correct rate
+                    answer = question.expected_answer
+                else:
+                    if question.options:
+                        wrong = [o for o in question.options if o != question.expected_answer]
+                        answer = random.choice(wrong) if wrong else "wrong"
+                    else:
+                        answer = "incorrect"
+                
+                # Score
+                is_correct = self.exam_engine._score_answer(question, answer)
+                
+                if is_correct:
+                    correct += 1
+                    print(f"  ✅ Correct!")
+                else:
+                    print(f"  ❌ Incorrect. Expected: {question.expected_answer[:50]}")
+                
+                self.session_stats["reviews_total"] += 1
+                if is_correct:
+                    self.session_stats["reviews_correct"] += 1
+                
+                # Show progress
+                self._print_progress_bar(i + 1, len(session.questions), "Exam Progress")
+            
+            # Complete exam
+            session = self.exam_engine.run_exam(session)
+            
+            print(f"\n\n  {'='*60}")
+            print(f"  📊 EXAM RESULTS")
+            print(f"  {'='*60}")
+            print(f"     Score: {session.score*100:.0f}%")
+            print(f"     Correct: {session.correct_count}/{session.total_questions}")
+            print(f"     Status: {'✅ PASSED' if session.passed else '❌ FAILED'}")
+            
+            # Award badge if passed
+            if session.passed and self.badge_manager:
+                # Update LTM pattern count in badge manager
+                self.badge_manager.ltm_pattern_count = len(self.ltm)
+                badge = self.badge_manager.award_badge(
+                    track_id=track_id,
+                    level_id=level_id,
+                    exam_score=session.score,
+                    exam_session_id=session.session_id,
+                )
+                if badge:
+                    print(f"\n  🏆 BADGE AWARDED: {badge.label}")
+                    self.session_stats["badges_earned"] += 1
+            
+            self.session_stats["exams_passed"] += 1 if session.passed else 0
+            
+            return session
+            
+        except Exception as e:
+            print(f"\n  ❌ Exam error: {str(e)[:50]}")
+            return None
+    
+    def list_tracks(self) -> None:
+        """Show available curriculum tracks and levels."""
+        if not self.registry:
+            print("\n  ⚠️  Curriculum registry not available.")
+            return
+        
+        self._print_header("📚 CURRICULUM TRACKS")
+        
+        for track in self.registry.list_tracks():
+            icon = {"english": "📖", "python": "🐍"}.get(track.track_id, "🎓")
+            print(f"\n  {icon} {track.name}")
+            print(f"     {track.description}")
+            print()
+            
+            for level in self.registry.list_levels(track.track_id):
+                badge_status = "🔒" if level.prerequisites else "🔓"
+                print(f"     {badge_status} {level.label}: {level.description[:40]}...")
+        
+        print()
+    
+    def show_badges(self) -> None:
+        """Show earned badges."""
+        if not self.badge_manager:
+            print("\n  ⚠️  Badge manager not available.")
+            return
+        
+        self._print_header("🏆 EARNED BADGES")
+        
+        badges = self.badge_manager.list_badges()
+        
+        if not badges:
+            print("\n  No badges earned yet. Complete exams to earn badges!")
+            return
+        
+        for badge in badges:
+            print(f"\n  {badge.label}")
+            print(f"     Track: {badge.track_id}")
+            print(f"     Score: {badge.exam_score*100:.0f}%")
+            print(f"     Earned: {badge.earned_at.strftime('%Y-%m-%d %H:%M')}")
+            if badge.version_tag:
+                print(f"     Version: {badge.version_tag}")
+    
+    # ========================================================================
     # MAIN INTERFACE
     # ========================================================================
     
@@ -586,7 +761,11 @@ class InteractiveTrainer:
             print("  ║  [3] 📝 Review Due Vocabulary                              ║")
             print("  ║  [4] 📐 Grammar Practice                                   ║")
             print("  ║  [5] 🧠 Quick Pattern Learning                            ║")
-            print("  ╠═══════════════════════════════════════════════════════════╣")
+            print("  ╠───────────────────────────────────────────────────────────╣")
+            print("  ║  [6] 📋 View Tracks & Levels                               ║")
+            print("  ║  [7] 📝 Take Certification Exam                            ║")
+            print("  ║  [8] 🏆 View Earned Badges                                 ║")
+            print("  ╠───────────────────────────────────────────────────────────╣")
             print("  ║  [S] 📊 View Statistics                                    ║")
             print("  ║  [Q] 🚪 Quit                                              ║")
             print("  ╚═══════════════════════════════════════════════════════════╝")
@@ -608,6 +787,14 @@ class InteractiveTrainer:
                 input("\n  Press Enter to continue...")
             elif choice == "5":
                 self._menu_quick_learn()
+            elif choice == "6":
+                self.list_tracks()
+                input("\n  Press Enter to continue...")
+            elif choice == "7":
+                self._menu_exam()
+            elif choice == "8":
+                self.show_badges()
+                input("\n  Press Enter to continue...")
             elif choice == "S":
                 self.show_statistics()
                 input("\n  Press Enter to continue...")
@@ -617,6 +804,68 @@ class InteractiveTrainer:
             else:
                 print("  Invalid choice, try again.")
                 time.sleep(0.5)
+    
+    def _menu_exam(self):
+        """Show exam selection menu."""
+        self._clear_screen()
+        self._print_header("📝 CERTIFICATION EXAMS")
+        
+        if not self.registry:
+            print("  ⚠️  Curriculum registry not available.")
+            input("\n  Press Enter to go back...")
+            return
+        
+        # List available tracks
+        tracks = self.registry.list_tracks()
+        
+        print("  Available Tracks:\n")
+        for i, track in enumerate(tracks, 1):
+            icon = {"english": "📖", "python": "🐍"}.get(track.track_id, "🎓")
+            print(f"     [{i}] {icon} {track.name}")
+        
+        print()
+        track_choice = input("  Select track (number) or 'B' to go back: ").strip()
+        
+        if track_choice.upper() == "B":
+            return
+        
+        if not track_choice.isdigit() or int(track_choice) < 1 or int(track_choice) > len(tracks):
+            print("  Invalid selection.")
+            return
+        
+        track = tracks[int(track_choice) - 1]
+        
+        # List levels in track
+        self._clear_screen()
+        self._print_header(f"📝 {track.name.upper()} LEVELS")
+        
+        levels = self.registry.list_levels(track.track_id)
+        
+        print("  Available Levels:\n")
+        for i, level in enumerate(levels, 1):
+            prereq = "🔒" if level.prerequisites else "🔓"
+            print(f"     [{i}] {prereq} {level.label}")
+            print(f"         {level.description[:50]}...")
+            print(f"         Pass threshold: {level.pass_threshold*100:.0f}%")
+            print()
+        
+        level_choice = input("  Select level (number) or 'B' to go back: ").strip()
+        
+        if level_choice.upper() == "B":
+            return
+        
+        if not level_choice.isdigit() or int(level_choice) < 1 or int(level_choice) > len(levels):
+            print("  Invalid selection.")
+            return
+        
+        level = levels[int(level_choice) - 1]
+        
+        # Run exam
+        num_q = input("  Number of questions [15]: ").strip()
+        num_q = int(num_q) if num_q.isdigit() else 15
+        
+        self.run_exam(track.track_id, level.level_id, num_q)
+        input("\n  Press Enter to continue...")
     
     def _menu_curriculum(self):
         """Show curriculum lesson menu."""
@@ -798,6 +1047,16 @@ def main():
     parser.add_argument("--difficulty", type=int, default=1, choices=range(1, 6),
                        help="Difficulty level for grammar (1-5)")
     
+    # Exam/Track options
+    parser.add_argument("--exam", type=str, default=None,
+                       help="Run certification exam (format: track_id/level_id, e.g. english/english_kindergarten)")
+    parser.add_argument("--questions", type=int, default=15,
+                       help="Number of questions for exam")
+    parser.add_argument("--tracks", action="store_true",
+                       help="List available curriculum tracks")
+    parser.add_argument("--badges", action="store_true",
+                       help="Show earned badges")
+    
     args = parser.parse_args()
     
     trainer = InteractiveTrainer()
@@ -808,6 +1067,24 @@ def main():
     
     if args.review:
         trainer.run_review_session()
+        return 0
+    
+    if args.tracks:
+        trainer.list_tracks()
+        return 0
+    
+    if args.badges:
+        trainer.show_badges()
+        return 0
+    
+    if args.exam:
+        # Parse track/level
+        parts = args.exam.split("/")
+        if len(parts) == 2:
+            track_id, level_id = parts
+            trainer.run_exam(track_id, level_id, args.questions)
+        else:
+            print("  Invalid exam format. Use: --exam track_id/level_id")
         return 0
     
     if args.lesson:

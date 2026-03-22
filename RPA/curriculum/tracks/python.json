@@ -1,0 +1,48 @@
+{
+  "track_id": "python",
+  "track_type": "python",
+  "name": "Python Programming",
+  "description": "Python coding proficiency curriculum from basics to advanced patterns",
+  "levels": [
+    {
+      "level_id": "python_junior",
+      "label": "Junior Coder",
+      "description": "Basic syntax, variables, simple functions, loops, lists",
+      "exam_dataset": "manual",
+      "pass_threshold": 0.7,
+      "badge_id": "badge_python_jr",
+      "prerequisites": [],
+      "order": 1
+    },
+    {
+      "level_id": "python_mid",
+      "label": "Mid Coder",
+      "description": "OOP concepts, dictionaries, file handling, exception handling, list comprehensions",
+      "exam_dataset": "humaneval",
+      "pass_threshold": 0.6,
+      "badge_id": "badge_python_mid",
+      "prerequisites": ["python_junior"],
+      "order": 2
+    },
+    {
+      "level_id": "python_senior",
+      "label": "Senior Coder",
+      "description": "Advanced patterns, decorators, generators, context managers, async programming",
+      "exam_dataset": "humaneval",
+      "pass_threshold": 0.75,
+      "badge_id": "badge_python_sr",
+      "prerequisites": ["python_mid"],
+      "order": 3
+    },
+    {
+      "level_id": "python_expert",
+      "label": "Expert Coder",
+      "description": "Metaclasses, descriptors, advanced OOP, performance optimization, testing patterns",
+      "exam_dataset": "mbpp",
+      "pass_threshold": 0.85,
+      "badge_id": "badge_python_expert",
+      "prerequisites": ["python_senior"],
+      "order": 4
+    }
+  ]
+}

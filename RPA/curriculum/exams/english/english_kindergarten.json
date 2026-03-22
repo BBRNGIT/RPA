@@ -1,0 +1,111 @@
+{
+  "track_id": "english",
+  "level_id": "english_kindergarten",
+  "description": "Kindergarten level English exam - basic vocabulary and simple sentences",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the opposite of 'big'?",
+      "options": ["small", "large", "tall", "wide"],
+      "answer": "small",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which word is a color?",
+      "options": ["run", "blue", "jump", "eat"],
+      "answer": "blue",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Complete: I ___ a student.",
+      "options": ["am", "is", "are", "be"],
+      "answer": "am",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which is a fruit?",
+      "options": ["car", "apple", "book", "chair"],
+      "answer": "apple",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What color is the sky on a sunny day?",
+      "options": ["red", "green", "blue", "yellow"],
+      "answer": "blue",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How many legs does a dog have?",
+      "options": ["two", "three", "four", "five"],
+      "answer": "four",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which word means 'not happy'?",
+      "options": ["glad", "sad", "mad", "bad"],
+      "answer": "sad",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Complete: She ___ to school.",
+      "options": ["go", "goes", "going", "gone"],
+      "answer": "goes",
+      "difficulty": 2
+    },
+    {
+      "type": "fill_blank",
+      "question": "Complete the word: A___E (a fruit)",
+      "answer": "apple",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What do you use to write?",
+      "options": ["spoon", "pen", "fork", "plate"],
+      "answer": "pen",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which animal says 'meow'?",
+      "options": ["dog", "cat", "cow", "pig"],
+      "answer": "cat",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the first letter of the alphabet?",
+      "options": ["B", "A", "C", "D"],
+      "answer": "A",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which is correct?",
+      "options": ["A apple", "An apple", "The apple", "Apple"],
+      "answer": "An apple",
+      "difficulty": 2
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What day comes after Monday?",
+      "options": ["Sunday", "Tuesday", "Wednesday", "Friday"],
+      "answer": "Tuesday",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Complete: The cat ___ on the mat.",
+      "options": ["sit", "sits", "sitting", "sat"],
+      "answer": "sits",
+      "difficulty": 2
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# Docker Compose Build Configuration
+# Used by GitHub Actions to build images from source
+#
+# Usage:
+#   docker-compose -f docker-compose.yml -f docker-compose.build.yml build
+
+version: "3.9"
+
+services:
+  rpa-backend:
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+    image: ghcr.io/bbrngit/rpa-backend:latest
+
+  rpa-frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend/Dockerfile
+    image: ghcr.io/bbrngit/rpa-frontend:latest
+
+  rpa-sandbox:
+    build:
+      context: .
+      dockerfile: docker/sandbox/Dockerfile
+    image: ghcr.io/bbrngit/rpa-sandbox:latest

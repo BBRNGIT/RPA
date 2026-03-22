@@ -1,0 +1,71 @@
+{
+  "track_id": "english",
+  "track_type": "english",
+  "name": "English Language",
+  "description": "English language proficiency curriculum with progressive vocabulary, grammar, and reading comprehension levels",
+  "levels": [
+    {
+      "level_id": "english_kindergarten",
+      "label": "Kindergarten",
+      "description": "Basic vocabulary (100 words), simple sentences, letter recognition",
+      "exam_dataset": "manual",
+      "pass_threshold": 0.7,
+      "badge_id": "badge_english_kg",
+      "prerequisites": [],
+      "order": 1
+    },
+    {
+      "level_id": "english_grade1",
+      "label": "Grade 1",
+      "description": "Simple reading comprehension, basic grammar (subject-verb agreement)",
+      "exam_dataset": "squad",
+      "pass_threshold": 0.75,
+      "badge_id": "badge_english_g1",
+      "prerequisites": ["english_kindergarten"],
+      "order": 2
+    },
+    {
+      "level_id": "english_grade2",
+      "label": "Grade 2",
+      "description": "Intermediate reading, tenses (present, past, future), articles",
+      "exam_dataset": "squad",
+      "pass_threshold": 0.75,
+      "badge_id": "badge_english_g2",
+      "prerequisites": ["english_grade1"],
+      "order": 3
+    },
+    {
+      "level_id": "english_elementary",
+      "label": "Elementary",
+      "description": "Full elementary proficiency, conditionals, passive voice, complex sentences",
+      "exam_dataset": "mmlu",
+      "exam_subset": "global_facts",
+      "pass_threshold": 0.8,
+      "badge_id": "badge_english_elem",
+      "prerequisites": ["english_grade2"],
+      "order": 4
+    },
+    {
+      "level_id": "english_intermediate",
+      "label": "Intermediate",
+      "description": "Advanced grammar, essay writing, reading comprehension at grade 6-8 level",
+      "exam_dataset": "mmlu",
+      "exam_subset": "humanities",
+      "pass_threshold": 0.75,
+      "badge_id": "badge_english_inter",
+      "prerequisites": ["english_elementary"],
+      "order": 5
+    },
+    {
+      "level_id": "english_advanced",
+      "label": "Advanced",
+      "description": "Academic English, complex writing, literature analysis",
+      "exam_dataset": "mmlu",
+      "exam_subset": "philosophy",
+      "pass_threshold": 0.8,
+      "badge_id": "badge_english_adv",
+      "prerequisites": ["english_intermediate"],
+      "order": 6
+    }
+  ]
+}

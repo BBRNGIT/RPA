@@ -1,0 +1,820 @@
+{
+  "vocabulary": {
+    "vocabulary": {
+      "vocab_42eae773": {
+        "word_id": "vocab_42eae773",
+        "word": "the",
+        "definition": "Used to refer to a specific person or thing",
+        "part_of_speech": "determiner",
+        "examples": [
+          "The cat sat.",
+          "The book is here."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 1,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_ee54ba49": {
+        "word_id": "vocab_ee54ba49",
+        "word": "be",
+        "definition": "Exist; occur; used as an auxiliary verb",
+        "part_of_speech": "verb",
+        "examples": [
+          "I am happy.",
+          "She is here."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 2,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_1600d283": {
+        "word_id": "vocab_1600d283",
+        "word": "to",
+        "definition": "Expressing direction or motion",
+        "part_of_speech": "preposition",
+        "examples": [
+          "Go to school.",
+          "Give it to me."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 3,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_852ea5c1": {
+        "word_id": "vocab_852ea5c1",
+        "word": "of",
+        "definition": "Expressing relationship or origin",
+        "part_of_speech": "preposition",
+        "examples": [
+          "A cup of tea.",
+          "King of France."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 4,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_ba52aa58": {
+        "word_id": "vocab_ba52aa58",
+        "word": "and",
+        "definition": "Used to connect words",
+        "part_of_speech": "conjunction",
+        "examples": [
+          "You and I.",
+          "Apples and oranges."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 1,
+        "frequency_rank": 5,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_9b9b6489": {
+        "word_id": "vocab_9b9b6489",
+        "word": "accomplish",
+        "definition": "To achieve or complete successfully",
+        "part_of_speech": "verb",
+        "examples": [
+          "She accomplished her goals.",
+          "Mission accomplished!"
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 2,
+        "frequency_rank": 1000,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_434c3548": {
+        "word_id": "vocab_434c3548",
+        "word": "adequate",
+        "definition": "Sufficient or acceptable",
+        "part_of_speech": "adjective",
+        "examples": [
+          "The resources were adequate.",
+          "An adequate solution."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 2,
+        "frequency_rank": 2000,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_bade3f53": {
+        "word_id": "vocab_bade3f53",
+        "word": "benefit",
+        "definition": "An advantage or profit",
+        "part_of_speech": "noun",
+        "examples": [
+          "Health benefits.",
+          "For your benefit."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 2,
+        "frequency_rank": 1500,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_a82e1cd2": {
+        "word_id": "vocab_a82e1cd2",
+        "word": "capacity",
+        "definition": "The maximum amount something can hold",
+        "part_of_speech": "noun",
+        "examples": [
+          "Full capacity.",
+          "Mental capacity."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 2,
+        "frequency_rank": 1800,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_116a94b9": {
+        "word_id": "vocab_116a94b9",
+        "word": "demonstrate",
+        "definition": "To show clearly",
+        "part_of_speech": "verb",
+        "examples": [
+          "Demonstrate the process.",
+          "He demonstrated courage."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 3,
+        "frequency_rank": 2500,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_b55217cc": {
+        "word_id": "vocab_b55217cc",
+        "word": "ambiguous",
+        "definition": "Open to more than one interpretation",
+        "part_of_speech": "adjective",
+        "examples": [
+          "An ambiguous statement.",
+          "The meaning was ambiguous."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 3,
+        "frequency_rank": 4000,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_4f9c463c": {
+        "word_id": "vocab_4f9c463c",
+        "word": "comprehensive",
+        "definition": "Complete and including everything",
+        "part_of_speech": "adjective",
+        "examples": [
+          "A comprehensive study.",
+          "Comprehensive coverage."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 3,
+        "frequency_rank": 3500,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_b1e442b9": {
+        "word_id": "vocab_b1e442b9",
+        "word": "elaborate",
+        "definition": "Involving many details",
+        "part_of_speech": "adjective",
+        "examples": [
+          "Elaborate design.",
+          "An elaborate plan."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 3,
+        "frequency_rank": 4500,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_01c85367": {
+        "word_id": "vocab_01c85367",
+        "word": "fundamental",
+        "definition": "Forming a necessary base",
+        "part_of_speech": "adjective",
+        "examples": [
+          "Fundamental rights.",
+          "The fundamental issue."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 3,
+        "frequency_rank": 3200,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_bade35b1": {
+        "word_id": "vocab_bade35b1",
+        "word": "hypothetical",
+        "definition": "Based on a suggested idea",
+        "part_of_speech": "adjective",
+        "examples": [
+          "A hypothetical scenario.",
+          "Hypothetical question."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 4,
+        "frequency_rank": 5500,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_44ba78ee": {
+        "word_id": "vocab_44ba78ee",
+        "word": "ubiquitous",
+        "definition": "Present everywhere",
+        "part_of_speech": "adjective",
+        "examples": [
+          "Smartphones are ubiquitous.",
+          "Ubiquitous technology."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 4,
+        "frequency_rank": 8000,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_61ff9d70": {
+        "word_id": "vocab_61ff9d70",
+        "word": "ephemeral",
+        "definition": "Lasting for a very short time",
+        "part_of_speech": "adjective",
+        "examples": [
+          "Ephemeral beauty.",
+          "Ephemeral moments."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 5,
+        "frequency_rank": 10000,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_0f846578": {
+        "word_id": "vocab_0f846578",
+        "word": "paradigm",
+        "definition": "A typical example or pattern",
+        "part_of_speech": "noun",
+        "examples": [
+          "A new paradigm.",
+          "Paradigm shift."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 4,
+        "frequency_rank": 7000,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_60a799d5": {
+        "word_id": "vocab_60a799d5",
+        "word": "pragmatic",
+        "definition": "Dealing with things sensibly",
+        "part_of_speech": "adjective",
+        "examples": [
+          "A pragmatic approach.",
+          "Pragmatic solution."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 4,
+        "frequency_rank": 6500,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      },
+      "vocab_727f12e4": {
+        "word_id": "vocab_727f12e4",
+        "word": "esoteric",
+        "definition": "Intended for a small group",
+        "part_of_speech": "adjective",
+        "examples": [
+          "Esoteric knowledge.",
+          "Esoteric subject."
+        ],
+        "synonyms": [],
+        "antonyms": [],
+        "etymology": "",
+        "difficulty": 5,
+        "frequency_rank": 12000,
+        "proficiency": "new",
+        "ease_factor": 2.5,
+        "interval": 0,
+        "repetitions": 0,
+        "next_review": null,
+        "last_review": null,
+        "total_reviews": 0,
+        "correct_reviews": 0,
+        "incorrect_reviews": 0
+      }
+    },
+    "review_history": [],
+    "statistics": {
+      "total_words": 20,
+      "by_proficiency": {
+        "new": 20,
+        "learning": 0,
+        "familiar": 0,
+        "proficient": 0,
+        "mastered": 0
+      },
+      "total_reviews": 0,
+      "correct_reviews": 0,
+      "accuracy": 0.0,
+      "average_time": 0.0
+    }
+  },
+  "grammar_rules": {
+    "grammar_sva_1": {
+      "rule_id": "grammar_sva_1",
+      "name": "Third Person Singular -s",
+      "category": "subject_verb_agreement",
+      "description": "Add -s to verbs in third person singular",
+      "pattern": "^(he|she|it|[\\w]+s?)\\s+(\\w+[^s])$",
+      "correct_examples": [
+        "She runs every day.",
+        "He plays soccer.",
+        "It works perfectly."
+      ],
+      "incorrect_examples": [
+        "She run every day.",
+        "He play soccer.",
+        "It work perfectly."
+      ],
+      "explanation": "In present tense, third person singular (he, she, it) requires the verb to end in -s or -es.",
+      "difficulty": 1,
+      "tags": [
+        "beginner",
+        "present_tense",
+        "verbs"
+      ]
+    },
+    "grammar_sva_2": {
+      "rule_id": "grammar_sva_2",
+      "name": "Plural Subjects",
+      "category": "subject_verb_agreement",
+      "description": "Plural subjects take base form verbs",
+      "pattern": "^(they|we|[\\w]+s)\\s+(\\w+s)$",
+      "correct_examples": [
+        "They run every day.",
+        "The dogs play outside.",
+        "We work together."
+      ],
+      "incorrect_examples": [
+        "They runs every day.",
+        "The dogs plays outside.",
+        "We works together."
+      ],
+      "explanation": "Plural subjects use the base form of the verb without -s.",
+      "difficulty": 1,
+      "tags": [
+        "beginner",
+        "present_tense",
+        "verbs"
+      ]
+    },
+    "grammar_art_1": {
+      "rule_id": "grammar_art_1",
+      "name": "Indefinite Article A/An",
+      "category": "article",
+      "description": "Use 'a' before consonant sounds, 'an' before vowel sounds",
+      "pattern": "\\b(a|an)\\s+([aeiou]|[aeiou]\\w+)",
+      "correct_examples": [
+        "a book",
+        "an apple",
+        "a university",
+        "an hour"
+      ],
+      "incorrect_examples": [
+        "an book",
+        "a apple",
+        "an university",
+        "a hour"
+      ],
+      "explanation": "The choice between 'a' and 'an' depends on the SOUND, not the spelling. Use 'an' before vowel sounds.",
+      "difficulty": 1,
+      "tags": [
+        "beginner",
+        "articles",
+        "nouns"
+      ]
+    },
+    "grammar_art_2": {
+      "rule_id": "grammar_art_2",
+      "name": "Definite Article The",
+      "category": "article",
+      "description": "Use 'the' for specific or previously mentioned nouns",
+      "pattern": "\\bthe\\s+\\w+",
+      "correct_examples": [
+        "The sun rises in the east.",
+        "I saw a dog. The dog was brown.",
+        "The United States"
+      ],
+      "incorrect_examples": [
+        "Sun rises in east.",
+        "I saw dog. Dog was brown."
+      ],
+      "explanation": "Use 'the' when referring to something specific, unique, or previously mentioned.",
+      "difficulty": 2,
+      "tags": [
+        "beginner",
+        "articles",
+        "nouns"
+      ]
+    },
+    "grammar_tense_1": {
+      "rule_id": "grammar_tense_1",
+      "name": "Present Continuous",
+      "category": "tense",
+      "description": "Use am/is/are + -ing for ongoing actions",
+      "pattern": "\\b(am|is|are)\\s+\\w+ing\\b",
+      "correct_examples": [
+        "I am studying now.",
+        "She is working today.",
+        "They are playing outside."
+      ],
+      "incorrect_examples": [
+        "I studying now.",
+        "She working today.",
+        "They is playing outside."
+      ],
+      "explanation": "Present continuous requires the auxiliary verb (am/is/are) + verb-ing.",
+      "difficulty": 2,
+      "tags": [
+        "beginner",
+        "present_tense",
+        "continuous"
+      ]
+    },
+    "grammar_tense_2": {
+      "rule_id": "grammar_tense_2",
+      "name": "Simple Past Regular Verbs",
+      "category": "tense",
+      "description": "Add -ed to regular verbs for past tense",
+      "pattern": "\\b\\w+ed\\b",
+      "correct_examples": [
+        "I walked to school.",
+        "She played piano.",
+        "They worked hard."
+      ],
+      "incorrect_examples": [
+        "I walk to school yesterday.",
+        "She play piano last week.",
+        "They work hard yesterday."
+      ],
+      "explanation": "Regular verbs form the past tense by adding -ed. Some verbs double the final consonant.",
+      "difficulty": 1,
+      "tags": [
+        "beginner",
+        "past_tense",
+        "regular_verbs"
+      ]
+    },
+    "grammar_tense_3": {
+      "rule_id": "grammar_tense_3",
+      "name": "Present Perfect",
+      "category": "tense",
+      "description": "Use have/has + past participle",
+      "pattern": "\\b(have|has)\\s+\\w+ed\\b",
+      "correct_examples": [
+        "I have finished my work.",
+        "She has visited Paris.",
+        "They have learned English."
+      ],
+      "incorrect_examples": [
+        "I finished my work already.",
+        "She has visit Paris.",
+        "They have learn English."
+      ],
+      "explanation": "Present perfect connects past to present. Use 'have' with I/you/we/they, 'has' with he/she/it.",
+      "difficulty": 3,
+      "tags": [
+        "intermediate",
+        "present_perfect",
+        "perfect_tense"
+      ]
+    },
+    "grammar_cond_1": {
+      "rule_id": "grammar_cond_1",
+      "name": "First Conditional",
+      "category": "conditional",
+      "description": "If + present, will + base verb",
+      "pattern": "\\bif\\s+\\w+\\s+\\w+s?\\s*,\\s*\\w+\\s+will\\s+\\w+",
+      "correct_examples": [
+        "If it rains, I will stay home.",
+        "If she comes, we will be happy.",
+        "If you study, you will pass."
+      ],
+      "incorrect_examples": [
+        "If it will rain, I stay home.",
+        "If she come, we will be happy.",
+        "If you will study, you pass."
+      ],
+      "explanation": "First conditional: If + present simple, will + infinitive. Used for real future possibilities.",
+      "difficulty": 3,
+      "tags": [
+        "intermediate",
+        "conditionals",
+        "future"
+      ]
+    },
+    "grammar_cond_2": {
+      "rule_id": "grammar_cond_2",
+      "name": "Second Conditional",
+      "category": "conditional",
+      "description": "If + past, would + base verb",
+      "pattern": "\\bif\\s+\\w+\\s+\\w+ed\\s*,\\s*\\w+\\s+would\\s+\\w+",
+      "correct_examples": [
+        "If I had money, I would buy a car.",
+        "If she were here, she would help.",
+        "If they knew, they would tell us."
+      ],
+      "incorrect_examples": [
+        "If I have money, I would buy a car.",
+        "If she was here, she would help.",
+        "If they know, they would tell us."
+      ],
+      "explanation": "Second conditional: If + past simple, would + infinitive. Used for hypothetical situations.",
+      "difficulty": 4,
+      "tags": [
+        "intermediate",
+        "conditionals",
+        "hypothetical"
+      ]
+    },
+    "grammar_err_1": {
+      "rule_id": "grammar_err_1",
+      "name": "Their/There/They're",
+      "category": "common_errors",
+      "description": "Distinguish between their, there, and they're",
+      "pattern": "\\b(their|there|they're)\\b",
+      "correct_examples": [
+        "Their house is big.",
+        "The book is over there.",
+        "They're going to school."
+      ],
+      "incorrect_examples": [
+        "There house is big.",
+        "Their going to school.",
+        "The book is over they're."
+      ],
+      "explanation": "'Their' = possessive, 'There' = location, 'They're' = they are",
+      "difficulty": 2,
+      "tags": [
+        "beginner",
+        "homophones",
+        "common_errors"
+      ]
+    },
+    "grammar_err_2": {
+      "rule_id": "grammar_err_2",
+      "name": "Your/You're",
+      "category": "common_errors",
+      "description": "Distinguish between your and you're",
+      "pattern": "\\b(your|you're)\\b",
+      "correct_examples": [
+        "Your book is here.",
+        "You're very kind.",
+        "Is this your phone?"
+      ],
+      "incorrect_examples": [
+        "You're book is here.",
+        "Your very kind.",
+        "Is this you're phone?"
+      ],
+      "explanation": "'Your' = possessive, 'You're' = you are",
+      "difficulty": 1,
+      "tags": [
+        "beginner",
+        "homophones",
+        "common_errors"
+      ]
+    },
+    "grammar_err_3": {
+      "rule_id": "grammar_err_3",
+      "name": "Its/It's",
+      "category": "common_errors",
+      "description": "Distinguish between its and it's",
+      "pattern": "\\b(its|it's)\\b",
+      "correct_examples": [
+        "The cat licked its paw.",
+        "It's a beautiful day.",
+        "The company changed its policy."
+      ],
+      "incorrect_examples": [
+        "The cat licked it's paw.",
+        "Its a beautiful day.",
+        "The company changed it's policy."
+      ],
+      "explanation": "'Its' = possessive form of it, 'It's' = it is or it has",
+      "difficulty": 2,
+      "tags": [
+        "beginner",
+        "homophones",
+        "common_errors",
+        "possessives"
+      ]
+    },
+    "grammar_pass_1": {
+      "rule_id": "grammar_pass_1",
+      "name": "Passive Voice Formation",
+      "category": "passive_voice",
+      "description": "be + past participle forms passive voice",
+      "pattern": "\\b(am|is|are|was|were|been)\\s+\\w+ed\\b",
+      "correct_examples": [
+        "The book was written by her.",
+        "The cake is being made.",
+        "The work has been completed."
+      ],
+      "incorrect_examples": [
+        "The book written by her.",
+        "The cake is made being.",
+        "The work has completed been."
+      ],
+      "explanation": "Passive voice: subject + be + past participle (+ by agent). Focus is on the action, not the doer.",
+      "difficulty": 4,
+      "tags": [
+        "intermediate",
+        "passive",
+        "voice"
+      ]
+    }
+  },
+  "reading_results": [],
+  "writing_assessments": [],
+  "sessions": []
+}

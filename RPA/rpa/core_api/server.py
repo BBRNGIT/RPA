@@ -185,6 +185,8 @@ def create_app(title: str = "RPA Core API", version: str = "1.0.0") -> FastAPI:
     _register_progress_routes(app)
     _register_admin_routes(app)
     _register_system_routes(app)
+    _register_workflow_routes(app)
+    _register_webhook_routes(app)
 
     return app
 
@@ -866,6 +868,244 @@ def _register_system_routes(app: FastAPI):
     ):
         """Get memory system snapshot (superadmin only)."""
         return MemorySnapshot().model_dump()
+
+
+# ============================================================================
+# WORKFLOW ROUTES
+# ============================================================================
+
+def _register_workflow_routes(app: FastAPI):
+    """Register workflow management routes."""
+    
+    # Import workflow manager
+    try:
+        from ..workflows import (
+            workflow_manager, WorkflowType, WorkflowStatus,
+            WorkflowSchedule, WorkflowConfig
+        )
+        workflows_enabled = True
+    except ImportError:
+        workflows_enabled = False
+    
+    if not workflows_enabled:
+        return
+    
+    @app.get("/workflows/status", tags=["Workflows"])
+    async def get_workflow_status(
+        user: Dict = Depends(require_permission_dependency(Permission.VIEW_REPORTS))
+    ):
+        """Get workflow system status."""
+        return workflow_manager.get_status()
+    
+    @app.get("/workflows/schedules", tags=["Workflows"])
+    async def list_workflow_schedules(
+        workflow_type: Optional[str] = Query(default=None),
+        enabled_only: bool = Query(default=False),
+        user: Dict = Depends(get_current_user)
+    ):
+        """List workflow schedules."""
+        wt = WorkflowType(workflow_type) if workflow_type else None
+        schedules = workflow_manager.list_schedules(workflow_type=wt, enabled_only=enabled_only)
+        return {
+            "schedules": [s.to_dict() for s in schedules],
+            "count": len(schedules)
+        }
+    
+    @app.get("/workflows/schedules/{schedule_id}", tags=["Workflows"])
+    async def get_workflow_schedule(
+        schedule_id: str,
+        user: Dict = Depends(get_current_user)
+    ):
+        """Get a specific workflow schedule."""
+        schedule = workflow_manager.get_schedule(schedule_id)
+        if not schedule:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Schedule not found"
+            )
+        return schedule.to_dict()
+    
+    @app.put("/workflows/schedules/{schedule_id}/toggle", tags=["Workflows"])
+    async def toggle_workflow_schedule(
+        schedule_id: str,
+        enabled: bool = Query(...),
+        user: Dict = Depends(require_permission_dependency(Permission.MANAGE_USERS))
+    ):
+        """Enable or disable a workflow schedule."""
+        schedule = workflow_manager.toggle_schedule(schedule_id, enabled)
+        if not schedule:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Schedule not found"
+            )
+        return {
+            "message": f"Schedule {'enabled' if enabled else 'disabled'}",
+            "schedule": schedule.to_dict()
+        }
+    
+    @app.get("/workflows/runs", tags=["Workflows"])
+    async def list_workflow_runs(
+        workflow_type: Optional[str] = Query(default=None),
+        status: Optional[str] = Query(default=None),
+        limit: int = Query(default=100, ge=1, le=500),
+        user: Dict = Depends(get_current_user)
+    ):
+        """List workflow runs."""
+        wt = WorkflowType(workflow_type) if workflow_type else None
+        ws = WorkflowStatus(status) if status else None
+        runs = workflow_manager.list_runs(workflow_type=wt, status=ws, limit=limit)
+        return {
+            "runs": [r.to_dict() for r in runs],
+            "count": len(runs)
+        }
+    
+    @app.get("/workflows/runs/{run_id}", tags=["Workflows"])
+    async def get_workflow_run(
+        run_id: str,
+        user: Dict = Depends(get_current_user)
+    ):
+        """Get a specific workflow run."""
+        run = workflow_manager.get_run(run_id)
+        if not run:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Run not found"
+            )
+        return run.to_dict()
+    
+    @app.post("/workflows/trigger", tags=["Workflows"])
+    async def trigger_workflow(
+        workflow_type: str = Query(...),
+        user: Dict = Depends(require_permission_dependency(Permission.MANAGE_USERS))
+    ):
+        """Manually trigger a workflow."""
+        wt = WorkflowType(workflow_type)
+        run = workflow_manager.create_run(workflow_type=wt, github_actor=user.get("email"))
+        workflow_manager.start_run(run.run_id)
+        
+        return {
+            "message": "Workflow triggered",
+            "run_id": run.run_id,
+            "workflow_type": workflow_type
+        }
+    
+    @app.get("/workflows/stats/{workflow_type}", tags=["Workflows"])
+    async def get_workflow_stats(
+        workflow_type: str,
+        user: Dict = Depends(get_current_user)
+    ):
+        """Get statistics for a workflow type."""
+        wt = WorkflowType(workflow_type)
+        return workflow_manager.get_workflow_stats(wt)
+    
+    @app.get("/workflows/configs", tags=["Workflows"])
+    async def list_workflow_configs(
+        user: Dict = Depends(require_permission_dependency(Permission.VIEW_REPORTS))
+    ):
+        """List workflow configurations."""
+        configs = workflow_manager.list_configs()
+        return {
+            "configs": [c.to_dict() for c in configs],
+            "count": len(configs)
+        }
+    
+    @app.get("/workflows/configs/{config_id}", tags=["Workflows"])
+    async def get_workflow_config(
+        config_id: str,
+        user: Dict = Depends(get_current_user)
+    ):
+        """Get a workflow configuration."""
+        config = workflow_manager.get_config(config_id)
+        if not config:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Config not found"
+            )
+        return config.to_dict()
+    
+    @app.get("/workflows/export", tags=["Workflows"])
+    async def export_workflow_config(
+        user: Dict = Depends(require_permission_dependency(Permission.ACCESS_RAW_DATA))
+    ):
+        """Export workflow configuration as JSON."""
+        return JSONResponse(
+            content=json.loads(workflow_manager.export_config()),
+            media_type="application/json"
+        )
+
+
+# ============================================================================
+# WEBHOOK ROUTES
+# ============================================================================
+
+def _register_webhook_routes(app: FastAPI):
+    """Register GitHub webhook routes."""
+    
+    try:
+        from ..workflows.webhook_handler import webhook_handler
+        webhooks_enabled = True
+    except ImportError:
+        webhooks_enabled = False
+    
+    if not webhooks_enabled:
+        return
+    
+    @app.post("/webhooks/github", tags=["Webhooks"])
+    async def handle_github_webhook(
+        request: Request,
+        x_github_event: str = Header(..., alias="X-GitHub-Event"),
+        x_hub_signature_256: Optional[str] = Header(None, alias="X-Hub-Signature-256"),
+    ):
+        """
+        Handle GitHub webhook events.
+        
+        Supports: workflow_run, workflow_dispatch, push, pull_request
+        """
+        # Get raw body
+        body = await request.body()
+        
+        # Verify signature if secret is configured
+        if x_hub_signature_256 and not webhook_handler.verify_signature(body, x_hub_signature_256):
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid signature"
+            )
+        
+        # Parse payload
+        try:
+            payload = await request.json()
+        except Exception:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Invalid JSON payload"
+            )
+        
+        # Parse and handle event
+        event = webhook_handler.parse_event(x_github_event, payload)
+        if not event:
+            return {"status": "ignored", "event_type": x_github_event}
+        
+        result = webhook_handler.handle_event(event)
+        
+        return {
+            "status": "processed",
+            "event_type": x_github_event,
+            "result": result
+        }
+    
+    @app.get("/webhooks/events", tags=["Webhooks"])
+    async def list_supported_webhook_events():
+        """List supported webhook event types."""
+        return {
+            "supported_events": list(webhook_handler.HANDLED_EVENTS),
+            "description": {
+                "workflow_run": "Triggered when a workflow run is created or completed",
+                "workflow_dispatch": "Triggered when a workflow is manually dispatched",
+                "push": "Triggered on push to repository",
+                "pull_request": "Triggered on pull request events",
+                "schedule": "Triggered on scheduled workflows",
+            }
+        }
 
 
 # ============================================================================
