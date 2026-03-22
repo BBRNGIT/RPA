@@ -1,0 +1,167 @@
+{
+  "title": "Essential Vocabulary - Part 1",
+  "description": "Common English words for everyday use",
+  "difficulty": 1,
+  "lessons": [
+    {
+      "content": "abandon",
+      "hierarchy_level": 1,
+      "definition": "To leave behind or give up completely",
+      "part_of_speech": "verb",
+      "examples": ["He had to abandon his car in the snow.", "Never abandon your dreams."],
+      "difficulty": 2
+    },
+    {
+      "content": "ability",
+      "hierarchy_level": 1,
+      "definition": "The capacity to do something; skill or talent",
+      "part_of_speech": "noun",
+      "examples": ["She has the ability to solve complex problems.", "His athletic ability impressed everyone."],
+      "difficulty": 1
+    },
+    {
+      "content": "accomplish",
+      "hierarchy_level": 1,
+      "definition": "To achieve or complete successfully",
+      "part_of_speech": "verb",
+      "examples": ["They accomplished their goal ahead of schedule.", "What do you want to accomplish this year?"],
+      "difficulty": 2
+    },
+    {
+      "content": "accurate",
+      "hierarchy_level": 1,
+      "definition": "Correct in all details; exact and precise",
+      "part_of_speech": "adjective",
+      "examples": ["The report must be accurate.", "Her prediction was remarkably accurate."],
+      "difficulty": 2
+    },
+    {
+      "content": "achieve",
+      "hierarchy_level": 1,
+      "definition": "To successfully bring about or reach a goal",
+      "part_of_speech": "verb",
+      "examples": ["Hard work helped her achieve success.", "We achieved our sales target."],
+      "difficulty": 1
+    },
+    {
+      "content": "adapt",
+      "hierarchy_level": 1,
+      "definition": "To adjust to new conditions or modify for a new purpose",
+      "part_of_speech": "verb",
+      "examples": ["Animals adapt to their environment.", "She quickly adapted to the new job."],
+      "difficulty": 2
+    },
+    {
+      "content": "adequate",
+      "hierarchy_level": 1,
+      "definition": "Satisfactory or acceptable in quality or quantity",
+      "part_of_speech": "adjective",
+      "examples": ["Is there adequate parking?", "The solution was adequate but not perfect."],
+      "difficulty": 3
+    },
+    {
+      "content": "adjust",
+      "hierarchy_level": 1,
+      "definition": "To alter slightly to achieve desired fit or result",
+      "part_of_speech": "verb",
+      "examples": ["Please adjust your chair height.", "We need to adjust our plans."],
+      "difficulty": 2
+    },
+    {
+      "content": "admire",
+      "hierarchy_level": 1,
+      "definition": "To regard with respect and warm approval",
+      "part_of_speech": "verb",
+      "examples": ["I admire her dedication.", "We all admire his courage."],
+      "difficulty": 2
+    },
+    {
+      "content": "advantage",
+      "hierarchy_level": 1,
+      "definition": "A condition or circumstance that gives a superior position",
+      "part_of_speech": "noun",
+      "examples": ["Being bilingual is an advantage.", "They had the home advantage."],
+      "difficulty": 2
+    },
+    {
+      "content": "adventure",
+      "hierarchy_level": 1,
+      "definition": "An exciting or unusual experience with uncertain outcome",
+      "part_of_speech": "noun",
+      "examples": ["Life is an adventure.", "They went on an adventure in the mountains."],
+      "difficulty": 2
+    },
+    {
+      "content": "analyze",
+      "hierarchy_level": 1,
+      "definition": "To examine methodically and in detail",
+      "part_of_speech": "verb",
+      "examples": ["Scientists analyze the data carefully.", "Let's analyze the problem."],
+      "difficulty": 3
+    },
+    {
+      "content": "apparent",
+      "hierarchy_level": 1,
+      "definition": "Clearly visible or understood; obvious",
+      "part_of_speech": "adjective",
+      "examples": ["It was apparent that she was tired.", "The apparent cause was human error."],
+      "difficulty": 3
+    },
+    {
+      "content": "approach",
+      "hierarchy_level": 1,
+      "definition": "To come near or deal with a situation in a certain way",
+      "part_of_speech": "verb",
+      "examples": ["We need a different approach.", "Winter is approaching fast."],
+      "difficulty": 2
+    },
+    {
+      "content": "appropriate",
+      "hierarchy_level": 1,
+      "definition": "Suitable or proper in the circumstances",
+      "part_of_speech": "adjective",
+      "examples": ["Wear appropriate clothing for the interview.", "This is not appropriate behavior."],
+      "difficulty": 3
+    },
+    {
+      "content": "articulate",
+      "hierarchy_level": 1,
+      "definition": "Expressing oneself clearly and effectively",
+      "part_of_speech": "adjective",
+      "examples": ["She is an articulate speaker.", "He articulated his ideas clearly."],
+      "difficulty": 4
+    },
+    {
+      "content": "assess",
+      "hierarchy_level": 1,
+      "definition": "To evaluate or estimate the nature, ability, or quality of",
+      "part_of_speech": "verb",
+      "examples": ["We need to assess the situation.", "Doctors assess patients carefully."],
+      "difficulty": 3
+    },
+    {
+      "content": "assume",
+      "hierarchy_level": 1,
+      "definition": "To suppose to be the case without proof",
+      "part_of_speech": "verb",
+      "examples": ["I assume you're coming to the party.", "Never assume anything."],
+      "difficulty": 2
+    },
+    {
+      "content": "attempt",
+      "hierarchy_level": 1,
+      "definition": "To make an effort to achieve or complete something",
+      "part_of_speech": "verb",
+      "examples": ["He made an attempt to apologize.", "Don't attempt this at home."],
+      "difficulty": 2
+    },
+    {
+      "content": "attract",
+      "hierarchy_level": 1,
+      "definition": "To cause to come to a place or participate in something",
+      "part_of_speech": "verb",
+      "examples": ["The festival attracts thousands of visitors.", "Magnets attract iron."],
+      "difficulty": 2
+    }
+  ]
+}
