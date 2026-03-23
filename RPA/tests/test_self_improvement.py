@@ -44,6 +44,13 @@ from rpa.training.gap_closure import (
     GapClosureResult
 )
 
+from rpa.training.mutation_pipeline import (
+    MutationPipeline,
+    MutationStrategy,
+    MutationLineage,
+    MutationResult
+)
+
 
 class TestSelfImprovementConfig:
     """Tests for configuration."""
@@ -1009,3 +1016,220 @@ class TestOrchestratorGapClosure:
         # Should have gaps_detected (may be 0)
         assert hasattr(cycle, 'gaps_detected')
         assert hasattr(cycle, 'gaps_closed')
+
+
+class TestMutationPipeline:
+    """Tests for SI-005: Pattern Mutation Pipeline."""
+    
+    @pytest.fixture
+    def temp_storage(self):
+        """Create temporary storage directory."""
+        temp_dir = tempfile.mkdtemp()
+        yield Path(temp_dir)
+        shutil.rmtree(temp_dir, ignore_errors=True)
+    
+    @pytest.fixture
+    def mock_ltm(self, temp_storage):
+        """Create a mock LTM for testing."""
+        from rpa.memory.ltm import LongTermMemory
+        ltm = LongTermMemory(temp_storage / "ltm")
+        ltm.load()
+        return ltm
+    
+    @pytest.fixture
+    def mock_mutator(self):
+        """Create a mock PatternMutator."""
+        from rpa.closed_loop.pattern_mutator import PatternMutator
+        return PatternMutator()
+    
+    def test_mutation_pipeline_creation(self, mock_mutator, mock_ltm, temp_storage):
+        """Test creating a MutationPipeline."""
+        pipeline = MutationPipeline(
+            mutator=mock_mutator,
+            ltm=mock_ltm,
+            storage_path=temp_storage / "mutations"
+        )
+        
+        assert pipeline.mutator == mock_mutator
+        assert pipeline.ltm == mock_ltm
+    
+    def test_mutation_strategy_enum(self):
+        """Test MutationStrategy enum values."""
+        assert MutationStrategy.PARAMETER_TWEAK.value == "parameter_tweak"
+        assert MutationStrategy.STRUCTURE_REARRANGE.value == "structure_rearrange"
+        assert MutationStrategy.CROSS_PATTERN_MERGE.value == "cross_pattern_merge"
+        assert MutationStrategy.SIMPLIFICATION.value == "simplification"
+    
+    def test_mutation_lineage_creation(self):
+        """Test creating a MutationLineage."""
+        lineage = MutationLineage(
+            lineage_id="lineage_001",
+            root_pattern_id="pattern_root",
+            current_pattern_id="pattern_current",
+            depth=3,
+            path=["p1", "p2", "p3"],
+            mutation_types=["fix", "refine", "optimize"],
+            success_rates=[0.7, 0.8, 0.9]
+        )
+        
+        assert lineage.lineage_id == "lineage_001"
+        assert lineage.depth == 3
+        assert len(lineage.path) == 3
+    
+    def test_mutation_lineage_to_dict(self):
+        """Test MutationLineage serialization."""
+        lineage = MutationLineage(
+            lineage_id="lineage_002",
+            root_pattern_id="root",
+            current_pattern_id="current",
+            depth=1,
+            path=["root"],
+            mutation_types=["tweak"],
+            success_rates=[0.5]
+        )
+        
+        data = lineage.to_dict()
+        
+        assert data["lineage_id"] == "lineage_002"
+        assert data["depth"] == 1
+        assert "created_at" in data
+    
+    def test_mutation_result_creation(self):
+        """Test creating a MutationResult."""
+        result = MutationResult(
+            success=True,
+            strategy=MutationStrategy.PARAMETER_TWEAK,
+            original_content="x = 10",
+            mutated_content="x = 12",
+            changes={"parameters_tweaked": 1},
+            confidence=0.8,
+            message="Tweaked 1 parameters"
+        )
+        
+        assert result.success is True
+        assert result.strategy == MutationStrategy.PARAMETER_TWEAK
+        assert result.mutated_content == "x = 12"
+    
+    def test_mutation_result_to_dict(self):
+        """Test MutationResult serialization."""
+        result = MutationResult(
+            success=False,
+            strategy=MutationStrategy.STRUCTURE_REARRANGE,
+            original_content="test",
+            mutated_content="test",
+            changes={},
+            confidence=0.0,
+            message="No changes"
+        )
+        
+        data = result.to_dict()
+        
+        assert data["success"] is False
+        assert data["strategy"] == "structure_rearrange"
+    
+    def test_apply_parameter_tweak(self, mock_mutator, mock_ltm, temp_storage):
+        """Test applying parameter tweak strategy."""
+        pipeline = MutationPipeline(
+            mutator=mock_mutator,
+            ltm=mock_ltm,
+            storage_path=temp_storage / "mutations"
+        )
+        
+        result = pipeline.apply_strategy(
+            "test_pattern",
+            MutationStrategy.PARAMETER_TWEAK,
+            {"content": "value = 100 + 50"}
+        )
+        
+        assert result.strategy == MutationStrategy.PARAMETER_TWEAK
+        # May or may not succeed depending on content
+    
+    def test_apply_structure_rearrange(self, mock_mutator, mock_ltm, temp_storage):
+        """Test applying structure rearrange strategy."""
+        pipeline = MutationPipeline(
+            mutator=mock_mutator,
+            ltm=mock_ltm,
+            storage_path=temp_storage / "mutations"
+        )
+        
+        result = pipeline.apply_strategy(
+            "test_pattern",
+            MutationStrategy.STRUCTURE_REARRANGE,
+            {"content": "line1\nline2\nline3"}
+        )
+        
+        assert result.strategy == MutationStrategy.STRUCTURE_REARRANGE
+    
+    def test_apply_simplification(self, mock_mutator, mock_ltm, temp_storage):
+        """Test applying simplification strategy."""
+        pipeline = MutationPipeline(
+            mutator=mock_mutator,
+            ltm=mock_ltm,
+            storage_path=temp_storage / "mutations"
+        )
+        
+        result = pipeline.apply_strategy(
+            "test_pattern",
+            MutationStrategy.SIMPLIFICATION,
+            {"content": "x = 10  +   20   "}
+        )
+        
+        assert result.strategy == MutationStrategy.SIMPLIFICATION
+        # Simplification removes extra spaces
+        assert "  " not in result.mutated_content or not result.success
+    
+    def test_get_stats(self, mock_mutator, mock_ltm, temp_storage):
+        """Test getting pipeline statistics."""
+        pipeline = MutationPipeline(
+            mutator=mock_mutator,
+            ltm=mock_ltm,
+            storage_path=temp_storage / "mutations"
+        )
+        
+        stats = pipeline.get_stats()
+        
+        assert "total_mutations" in stats
+        assert "successful_mutations" in stats
+        assert "by_strategy" in stats
+        assert "total_lineages" in stats
+    
+    def test_get_lineage(self, mock_mutator, mock_ltm, temp_storage):
+        """Test getting lineage for a pattern."""
+        pipeline = MutationPipeline(
+            mutator=mock_mutator,
+            ltm=mock_ltm,
+            storage_path=temp_storage / "mutations"
+        )
+        
+        lineage = pipeline.get_lineage("nonexistent_pattern")
+        
+        # Should return None for unknown pattern
+        assert lineage is None
+    
+    def test_calculate_complexity(self, mock_mutator, mock_ltm, temp_storage):
+        """Test complexity calculation."""
+        pipeline = MutationPipeline(
+            mutator=mock_mutator,
+            ltm=mock_ltm,
+            storage_path=temp_storage / "mutations"
+        )
+        
+        simple = pipeline._calculate_complexity("x = 1")
+        complex_code = pipeline._calculate_complexity("if x > 0 and y < 10: return [i for i in range(100)]")
+        
+        assert complex_code > simple
+    
+    def test_score_strategies(self, mock_mutator, mock_ltm, temp_storage):
+        """Test strategy scoring."""
+        pipeline = MutationPipeline(
+            mutator=mock_mutator,
+            ltm=mock_ltm,
+            storage_path=temp_storage / "mutations"
+        )
+        
+        scores = pipeline._score_strategies("test_pattern", None)
+        
+        # All strategies should have scores
+        assert MutationStrategy.PARAMETER_TWEAK in scores
+        assert MutationStrategy.SIMPLIFICATION in scores
+        assert all(0 <= s <= 1 for s in scores.values())

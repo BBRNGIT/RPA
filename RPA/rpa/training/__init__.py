@@ -36,6 +36,13 @@ from rpa.training.gap_closure import (
     GapClosureResult
 )
 
+from rpa.training.mutation_pipeline import (
+    MutationPipeline,
+    MutationStrategy,
+    MutationLineage,
+    MutationResult
+)
+
 __all__ = [
     # Self-improvement orchestrator
     'SelfImprovementOrchestrator',
@@ -64,5 +71,11 @@ __all__ = [
     'LearningGoal',
     'LearningGoalStatus',
     'GapClosureStrategy',
-    'GapClosureResult'
+    'GapClosureResult',
+    
+    # Mutation Pipeline (SI-005)
+    'MutationPipeline',
+    'MutationStrategy',
+    'MutationLineage',
+    'MutationResult'
 ]
