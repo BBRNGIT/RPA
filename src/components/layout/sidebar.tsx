@@ -23,6 +23,7 @@ import {
   ChevronRight,
   GraduationCap,
   Brain,
+  Sparkles,
 } from 'lucide-react';
 
 interface NavItem {
@@ -39,6 +40,12 @@ const navItems: NavItem[] = [
     label: 'Dashboard',
     icon: LayoutDashboard,
     href: '/?view=dashboard',
+  },
+  {
+    id: 'si-dashboard',
+    label: 'Self-Improvement',
+    icon: Sparkles,
+    href: '/?view=si-dashboard',
   },
   {
     id: 'vocabulary',

@@ -44,6 +44,14 @@ def create_flask_app(interface: AgentInterface) -> "Flask":
         raise ImportError("Flask is not installed. Install with: pip install flask")
 
     app = Flask("rpa_api")
+    
+    # Initialize SI Metrics API (SI-006)
+    from pathlib import Path
+    from rpa.api.si_metrics import SIMetricsAPI, create_si_metrics_endpoints
+    si_metrics = SIMetricsAPI(
+        storage_path=Path.home() / ".rpa" / "memory"
+    )
+    create_si_metrics_endpoints(app, si_metrics)
 
     @app.route("/health", methods=["GET"])
     def health():
@@ -332,8 +340,18 @@ def run_server(
         logger.info(f"Starting Flask server on {host}:{port}")
         app.run(host=host, port=port)
     else:
-        # Use basic HTTP server
+        # Use basic HTTP server with SI metrics endpoints
+        from pathlib import Path
+        from rpa.api.si_metrics import SIMetricsAPI, add_si_endpoints_to_simple_handler
+        
         SimpleHTTPRequestHandler.interface = interface
+        
+        # Add SI metrics endpoints to handler
+        si_metrics = SIMetricsAPI(
+            storage_path=Path.home() / ".rpa" / "memory"
+        )
+        add_si_endpoints_to_simple_handler(SimpleHTTPRequestHandler, si_metrics)
+        
         server = HTTPServer((host, port), SimpleHTTPRequestHandler)
         logger.info(f"Starting HTTP server on {host}:{port}")
         try:

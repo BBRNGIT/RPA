@@ -1233,3 +1233,219 @@ class TestMutationPipeline:
         assert MutationStrategy.PARAMETER_TWEAK in scores
         assert MutationStrategy.SIMPLIFICATION in scores
         assert all(0 <= s <= 1 for s in scores.values())
+
+
+class TestSIMetricsAPI:
+    """Tests for SI-006: Self-Improvement Metrics API."""
+    
+    @pytest.fixture
+    def temp_storage(self):
+        """Create temporary storage directory."""
+        temp_dir = tempfile.mkdtemp()
+        yield Path(temp_dir)
+        shutil.rmtree(temp_dir, ignore_errors=True)
+    
+    @pytest.fixture
+    def mock_orchestrator(self, temp_storage):
+        """Create a mock orchestrator for testing."""
+        from rpa.training.self_improvement import SelfImprovementOrchestrator, SelfImprovementConfig
+        config = SelfImprovementConfig(patterns_per_cycle=5)
+        return SelfImprovementOrchestrator(
+            storage_path=temp_storage,
+            config=config
+        )
+    
+    def test_si_metrics_api_creation(self, temp_storage):
+        """Test creating SIMetricsAPI."""
+        from rpa.api.si_metrics import SIMetricsAPI
+        
+        api = SIMetricsAPI(storage_path=temp_storage)
+        
+        assert api.storage_path == temp_storage
+        assert api._orchestrator is None
+    
+    def test_si_metrics_api_with_orchestrator(self, temp_storage, mock_orchestrator):
+        """Test SIMetricsAPI with orchestrator."""
+        from rpa.api.si_metrics import SIMetricsAPI
+        
+        api = SIMetricsAPI(
+            storage_path=temp_storage,
+            orchestrator=mock_orchestrator
+        )
+        
+        assert api.orchestrator == mock_orchestrator
+    
+    def test_get_system_health(self, temp_storage, mock_orchestrator):
+        """Test getting system health metrics."""
+        from rpa.api.si_metrics import SIMetricsAPI
+        
+        api = SIMetricsAPI(
+            storage_path=temp_storage,
+            orchestrator=mock_orchestrator
+        )
+        
+        health = api.get_system_health()
+        
+        assert "status" in health
+        assert "total_patterns" in health
+        assert "avg_confidence" in health
+        assert "recent_success_rate" in health
+    
+    def test_get_cycle_stats(self, temp_storage, mock_orchestrator):
+        """Test getting cycle statistics."""
+        from rpa.api.si_metrics import SIMetricsAPI
+        
+        api = SIMetricsAPI(
+            storage_path=temp_storage,
+            orchestrator=mock_orchestrator
+        )
+        
+        stats = api.get_cycle_stats()
+        
+        assert "total_cycles" in stats
+        assert "total_patterns_evaluated" in stats
+        assert "avg_cycle_duration" in stats
+    
+    def test_get_mutation_stats(self, temp_storage, mock_orchestrator):
+        """Test getting mutation statistics."""
+        from rpa.api.si_metrics import SIMetricsAPI
+        
+        api = SIMetricsAPI(
+            storage_path=temp_storage,
+            orchestrator=mock_orchestrator
+        )
+        
+        stats = api.get_mutation_stats()
+        
+        assert "total_mutations" in stats
+        assert "by_type" in stats
+        assert "recent_mutations" in stats
+    
+    def test_get_gap_stats(self, temp_storage, mock_orchestrator):
+        """Test getting gap statistics."""
+        from rpa.api.si_metrics import SIMetricsAPI
+        
+        api = SIMetricsAPI(
+            storage_path=temp_storage,
+            orchestrator=mock_orchestrator
+        )
+        
+        stats = api.get_gap_stats()
+        
+        assert "total_gaps_detected" in stats
+        assert "pending_goals" in stats
+        assert "success_rate" in stats
+    
+    def test_get_confidence_trends(self, temp_storage, mock_orchestrator):
+        """Test getting confidence trends."""
+        from rpa.api.si_metrics import SIMetricsAPI
+        
+        api = SIMetricsAPI(
+            storage_path=temp_storage,
+            orchestrator=mock_orchestrator
+        )
+        
+        trends = api.get_confidence_trends()
+        
+        assert "period_days" in trends
+        assert "data_points" in trends
+        assert "trend_direction" in trends
+    
+    def test_get_learning_velocity(self, temp_storage, mock_orchestrator):
+        """Test getting learning velocity."""
+        from rpa.api.si_metrics import SIMetricsAPI
+        
+        api = SIMetricsAPI(
+            storage_path=temp_storage,
+            orchestrator=mock_orchestrator
+        )
+        
+        velocity = api.get_learning_velocity()
+        
+        assert "patterns_per_hour" in velocity
+        assert "mutations_per_hour" in velocity
+    
+    def test_get_dashboard_summary(self, temp_storage, mock_orchestrator):
+        """Test getting dashboard summary."""
+        from rpa.api.si_metrics import SIMetricsAPI
+        
+        api = SIMetricsAPI(
+            storage_path=temp_storage,
+            orchestrator=mock_orchestrator
+        )
+        
+        summary = api.get_dashboard_summary()
+        
+        assert "timestamp" in summary
+        assert "health" in summary
+        assert "cycle_stats" in summary
+        assert "mutation_stats" in summary
+        assert "gap_stats" in summary
+        assert "trends" in summary
+        assert "learning_velocity" in summary
+    
+    def test_get_priorities(self, temp_storage, mock_orchestrator):
+        """Test getting learning priorities."""
+        from rpa.api.si_metrics import SIMetricsAPI
+        
+        api = SIMetricsAPI(
+            storage_path=temp_storage,
+            orchestrator=mock_orchestrator
+        )
+        
+        priorities = api.get_priorities()
+        
+        assert "weak_patterns" in priorities
+        assert "needs_fix" in priorities
+        assert "gaps" in priorities
+    
+    def test_trigger_improvement_cycle(self, temp_storage, mock_orchestrator):
+        """Test triggering improvement cycle."""
+        from rpa.api.si_metrics import SIMetricsAPI
+        
+        api = SIMetricsAPI(
+            storage_path=temp_storage,
+            orchestrator=mock_orchestrator
+        )
+        
+        result = api.trigger_improvement_cycle()
+        
+        assert "success" in result
+        assert result["success"] is True
+        assert "cycle_id" in result
+    
+    def test_cache_invalidation(self, temp_storage, mock_orchestrator):
+        """Test that cache is invalidated after trigger."""
+        from rpa.api.si_metrics import SIMetricsAPI
+        
+        api = SIMetricsAPI(
+            storage_path=temp_storage,
+            orchestrator=mock_orchestrator
+        )
+        
+        # Get health to populate cache
+        health1 = api.get_system_health()
+        assert api._is_cache_valid()
+        
+        # Trigger should invalidate cache
+        api.trigger_improvement_cycle()
+        
+        # Cache should be invalidated
+        assert not api._is_cache_valid() or not api._metrics_cache
+    
+    def test_to_json(self, temp_storage, mock_orchestrator):
+        """Test JSON serialization."""
+        from rpa.api.si_metrics import SIMetricsAPI
+        import json
+        
+        api = SIMetricsAPI(
+            storage_path=temp_storage,
+            orchestrator=mock_orchestrator
+        )
+        
+        json_str = api.to_json()
+        
+        # Should be valid JSON
+        data = json.loads(json_str)
+        assert "timestamp" in data
+        assert "health" in data

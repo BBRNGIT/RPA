@@ -16,8 +16,9 @@ import { Dashboard } from '@/components/dashboard';
 import { VocabularyDashboard } from '@/components/vocabulary';
 import { GrammarDashboard } from '@/components/grammar';
 import { AdminPanel, Settings } from '@/components/admin';
+import { SIDashboard } from '@/components/si-dashboard';
 
-type ViewType = 'dashboard' | 'vocabulary' | 'grammar' | 'reading' | 'writing' | 'admin' | 'settings';
+type ViewType = 'dashboard' | 'si-dashboard' | 'vocabulary' | 'grammar' | 'reading' | 'writing' | 'admin' | 'settings';
 
 // Placeholder for coming soon views
 function ComingSoonView({ title, description }: { title: string; description: string }) {
@@ -68,6 +69,8 @@ function AuthenticatedApp({ currentView }: { currentView: ViewType }) {
   
   const renderView = useMemo(() => {
     switch (currentView) {
+      case 'si-dashboard':
+        return <SIDashboard />;
       case 'vocabulary':
         return <VocabularyDashboard />;
       case 'grammar':
