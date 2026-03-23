@@ -2,12 +2,10 @@
 # Used by GitHub Actions to build images from source
 #
 # Usage:
-#   docker-compose -f docker-compose.yml -f docker-compose.build.yml build
+#   docker compose -f docker-compose.yml -f docker-compose.build.yml build
 #
 # Note: Frontend is a Next.js app in the parent directory (../)
 #       Backend and Sandbox are Python apps in this directory
-
-version: "3.9"
 
 services:
   rpa-backend:
