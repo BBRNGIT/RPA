@@ -1,5 +1,5 @@
 """
-Tests for Self-Improvement Orchestrator (SI-001, SI-002, SI-003)
+Tests for Self-Improvement Orchestrator (SI-001, SI-002, SI-003, SI-004)
 
 Tests the unified entry point for closed-loop self-improvement.
 """
@@ -34,6 +34,14 @@ from rpa.training.si_config import (
     SafetyConfig,
     get_si_config,
     create_self_improvement_config_from_yaml,
+)
+
+from rpa.training.gap_closure import (
+    GapClosureLoop,
+    LearningGoal,
+    LearningGoalStatus,
+    GapClosureStrategy,
+    GapClosureResult
 )
 
 
@@ -778,3 +786,226 @@ class TestConfigDataclasses:
         assert config.max_daily_mutations == 50
         assert config.validate_mutations is False
         assert 'critical' in config.protected_tags
+
+
+class TestGapClosureLoop:
+    """Tests for SI-004: Gap Closure Loop."""
+    
+    @pytest.fixture
+    def temp_storage(self):
+        """Create temporary storage directory."""
+        temp_dir = tempfile.mkdtemp()
+        yield Path(temp_dir)
+        shutil.rmtree(temp_dir, ignore_errors=True)
+    
+    @pytest.fixture
+    def mock_ltm(self, temp_storage):
+        """Create a mock LTM for testing."""
+        from rpa.memory.ltm import LongTermMemory
+        ltm = LongTermMemory(temp_storage / "ltm")
+        ltm.load()
+        return ltm
+    
+    def test_gap_closure_loop_creation(self, mock_ltm, temp_storage):
+        """Test creating a GapClosureLoop."""
+        loop = GapClosureLoop(
+            ltm=mock_ltm,
+            storage_path=temp_storage / "gap_closure"
+        )
+        
+        assert loop.ltm == mock_ltm
+        assert loop.max_goals_per_cycle == 10
+        assert loop.auto_execute is True
+    
+    def test_learning_goal_creation(self):
+        """Test creating a LearningGoal."""
+        goal = LearningGoal(
+            goal_id="goal_001",
+            source_gap_id="gap_001",
+            description="Test goal",
+            target_patterns=["pattern_1"],
+            strategy=GapClosureStrategy.COMPOSE_EXISTING,
+            priority=8
+        )
+        
+        assert goal.goal_id == "goal_001"
+        assert goal.status == LearningGoalStatus.PENDING
+        assert goal.strategy == GapClosureStrategy.COMPOSE_EXISTING
+        assert goal.priority == 8
+    
+    def test_learning_goal_to_dict(self):
+        """Test LearningGoal serialization."""
+        goal = LearningGoal(
+            goal_id="goal_002",
+            source_gap_id="gap_002",
+            description="Serialize test",
+            target_patterns=[],
+            strategy=GapClosureStrategy.LEARN_FROM_SOURCE,
+            priority=5
+        )
+        
+        data = goal.to_dict()
+        
+        assert data["goal_id"] == "goal_002"
+        assert data["strategy"] == "learn_from_source"
+        assert data["status"] == "pending"
+    
+    def test_gap_closure_result_creation(self):
+        """Test creating a GapClosureResult."""
+        result = GapClosureResult(
+            goal_id="goal_001",
+            gap_id="gap_001",
+            success=True,
+            patterns_created=2,
+            patterns_linked=1,
+            message="Success",
+            duration_seconds=0.5
+        )
+        
+        assert result.success is True
+        assert result.patterns_created == 2
+        assert result.duration_seconds == 0.5
+    
+    def test_detect_and_plan(self, mock_ltm, temp_storage):
+        """Test gap detection and planning."""
+        loop = GapClosureLoop(
+            ltm=mock_ltm,
+            storage_path=temp_storage / "gap_closure",
+            auto_execute=False
+        )
+        
+        goals = loop.detect_and_plan()
+        
+        # Should return a list (may be empty if no gaps)
+        assert isinstance(goals, list)
+    
+    def test_get_status(self, mock_ltm, temp_storage):
+        """Test getting gap closure status."""
+        loop = GapClosureLoop(
+            ltm=mock_ltm,
+            storage_path=temp_storage / "gap_closure"
+        )
+        
+        status = loop.get_status()
+        
+        assert "total_gaps_detected" in status
+        assert "total_goals_created" in status
+        assert "total_goals_completed" in status
+        assert "pending_goals" in status
+    
+    def test_get_pending_goals(self, mock_ltm, temp_storage):
+        """Test getting pending goals."""
+        loop = GapClosureLoop(
+            ltm=mock_ltm,
+            storage_path=temp_storage / "gap_closure"
+        )
+        
+        pending = loop.get_pending_goals()
+        
+        assert isinstance(pending, list)
+    
+    def test_run_full_cycle(self, mock_ltm, temp_storage):
+        """Test running a full gap closure cycle."""
+        loop = GapClosureLoop(
+            ltm=mock_ltm,
+            storage_path=temp_storage / "gap_closure",
+            auto_execute=False  # Don't auto-execute in tests
+        )
+        
+        result = loop.run_full_cycle()
+        
+        assert "new_goals_created" in result
+        assert "closure_attempts" in result
+        assert "status" in result
+    
+    def test_strategy_selection(self, mock_ltm, temp_storage):
+        """Test strategy selection for different gap types."""
+        from rpa.inquiry.gap_detector import GapType, Gap
+        
+        loop = GapClosureLoop(
+            ltm=mock_ltm,
+            storage_path=temp_storage / "gap_closure"
+        )
+        
+        # Test each gap type
+        gap = Gap(
+            gap_id="test_gap",
+            gap_type=GapType.INCOMPLETE_COMPOSITION,
+            severity="high",
+            description="Test",
+            affected_nodes=[]
+        )
+        
+        strategy = loop._select_strategy(gap)
+        assert strategy == GapClosureStrategy.COMPOSE_EXISTING
+    
+    def test_priority_calculation(self, mock_ltm, temp_storage):
+        """Test priority calculation for gaps."""
+        from rpa.inquiry.gap_detector import GapType, Gap
+        
+        loop = GapClosureLoop(
+            ltm=mock_ltm,
+            storage_path=temp_storage / "gap_closure"
+        )
+        
+        # High severity gap
+        high_gap = Gap(
+            gap_id="high_gap",
+            gap_type=GapType.UNRESOLVED_REFERENCE,
+            severity="high",
+            description="High priority",
+            affected_nodes=[]
+        )
+        
+        # Low severity gap
+        low_gap = Gap(
+            gap_id="low_gap",
+            gap_type=GapType.CROSS_DOMAIN,
+            severity="low",
+            description="Low priority",
+            affected_nodes=[]
+        )
+        
+        high_priority = loop._calculate_priority(high_gap)
+        low_priority = loop._calculate_priority(low_gap)
+        
+        assert high_priority > low_priority
+
+
+class TestOrchestratorGapClosure:
+    """Tests for orchestrator integration with gap closure."""
+    
+    @pytest.fixture
+    def temp_storage(self):
+        """Create temporary storage directory."""
+        temp_dir = tempfile.mkdtemp()
+        yield Path(temp_dir)
+        shutil.rmtree(temp_dir, ignore_errors=True)
+    
+    def test_orchestrator_has_gap_closure_loop(self, temp_storage):
+        """Test that orchestrator has gap closure loop."""
+        config = SelfImprovementConfig(patterns_per_cycle=5)
+        orchestrator = SelfImprovementOrchestrator(
+            storage_path=temp_storage,
+            config=config
+        )
+        
+        # Should have gap_closure_loop attribute
+        assert hasattr(orchestrator, 'gap_closure_loop')
+    
+    def test_cycle_with_gap_closure(self, temp_storage):
+        """Test improvement cycle with gap closure."""
+        config = SelfImprovementConfig(
+            patterns_per_cycle=5,
+            enable_auto_mutation=False
+        )
+        orchestrator = SelfImprovementOrchestrator(
+            storage_path=temp_storage,
+            config=config
+        )
+        
+        cycle = orchestrator.run_improvement_cycle()
+        
+        # Should have gaps_detected (may be 0)
+        assert hasattr(cycle, 'gaps_detected')
+        assert hasattr(cycle, 'gaps_closed')

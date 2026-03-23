@@ -28,6 +28,14 @@ from rpa.training.si_config import (
     create_self_improvement_config_from_yaml
 )
 
+from rpa.training.gap_closure import (
+    GapClosureLoop,
+    LearningGoal,
+    LearningGoalStatus,
+    GapClosureStrategy,
+    GapClosureResult
+)
+
 __all__ = [
     # Self-improvement orchestrator
     'SelfImprovementOrchestrator',
@@ -49,5 +57,12 @@ __all__ = [
     'MonitoringConfig',
     'SafetyConfig',
     'get_si_config',
-    'create_self_improvement_config_from_yaml'
+    'create_self_improvement_config_from_yaml',
+    
+    # Gap Closure (SI-004)
+    'GapClosureLoop',
+    'LearningGoal',
+    'LearningGoalStatus',
+    'GapClosureStrategy',
+    'GapClosureResult'
 ]

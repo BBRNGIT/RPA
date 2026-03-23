@@ -221,6 +221,9 @@ class SelfImprovementOrchestrator:
         # Initialize closed-loop components
         self._init_closed_loop_components()
         
+        # Initialize gap closure loop (SI-004)
+        self._init_gap_closure_loop()
+        
         # Cycle tracking
         self.cycle_count = 0
         self.cycle_history: List[ImprovementCycle] = []
@@ -279,6 +282,23 @@ class SelfImprovementOrchestrator:
             ltm=self.ltm,
             config=retry_config
         )
+    
+    def _init_gap_closure_loop(self):
+        """Initialize the gap closure loop for autonomous learning."""
+        try:
+            from rpa.training.gap_closure import GapClosureLoop
+            
+            self.gap_closure_loop = GapClosureLoop(
+                ltm=self.ltm,
+                gap_detector=self.gap_detector,
+                storage_path=self.storage_path / "gap_closure",
+                max_goals_per_cycle=10,
+                auto_execute=True
+            )
+            logger.info("Gap closure loop initialized")
+        except Exception as e:
+            logger.warning(f"Could not initialize gap closure loop: {e}")
+            self.gap_closure_loop = None
     
     def _load_state(self):
         """Load persisted state from file."""
@@ -557,21 +577,28 @@ class SelfImprovementOrchestrator:
         """Phase 4: Detect knowledge gaps and prioritize learning."""
         
         try:
-            # Detect gaps using the LTM's internal graph
-            gaps = self.gap_detector.detect_all_gaps(self.ltm._graph)
-            cycle.gaps_detected = len(gaps)
-            
-            # For each gap, try to close it through existing knowledge
-            for gap in gaps[:10]:  # Limit gap processing
-                # Check if we have related patterns that could help
-                # This is a simplified gap closure - real implementation
-                # would involve more sophisticated reasoning
-                if gap.affected_nodes:
-                    # Check if any affected nodes exist in LTM
-                    for node_id in gap.affected_nodes[:3]:
-                        if self.ltm.has_pattern(node_id):
-                            cycle.gaps_closed += 1
-                            break
+            # Use gap closure loop if available (SI-004)
+            if self.gap_closure_loop is not None:
+                # Run full gap detection and closure cycle
+                result = self.gap_closure_loop.run_full_cycle(
+                    min_severity="medium"
+                )
+                cycle.gaps_detected = result.get('status', {}).get('total_gaps_detected', 0)
+                cycle.gaps_closed = result.get('successful_closures', 0)
+                logger.info(f"Gap closure loop: {result}")
+            else:
+                # Fallback to basic gap detection
+                gaps = self.gap_detector.detect_all_gaps(self.ltm._graph)
+                cycle.gaps_detected = len(gaps)
+                
+                # For each gap, try to close it through existing knowledge
+                for gap in gaps[:10]:  # Limit gap processing
+                    if gap.affected_nodes:
+                        # Check if any affected nodes exist in LTM
+                        for node_id in gap.affected_nodes[:3]:
+                            if self.ltm.has_pattern(node_id):
+                                cycle.gaps_closed += 1
+                                break
                     
         except Exception as e:
             logger.warning(f"Error detecting gaps: {e}")
