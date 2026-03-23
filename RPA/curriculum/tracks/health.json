@@ -1,0 +1,38 @@
+{
+  "track_id": "health",
+  "track_type": "health",
+  "name": "Health and Wellness",
+  "description": "Health and wellness curriculum covering nutrition, exercise, and mental health",
+  "levels": [
+    {
+      "level_id": "health_nutrition",
+      "label": "Nutrition Basics",
+      "description": "Essential nutrition knowledge for healthy living",
+      "curriculum": "health_nutrition_basics",
+      "pass_threshold": 0.7,
+      "badge_id": "badge_health_nutrition",
+      "prerequisites": [],
+      "order": 1
+    },
+    {
+      "level_id": "health_exercise",
+      "label": "Exercise Fundamentals",
+      "description": "Basic exercise knowledge and guidelines",
+      "curriculum": "health_exercise_basics",
+      "pass_threshold": 0.75,
+      "badge_id": "badge_health_exercise",
+      "prerequisites": ["health_nutrition"],
+      "order": 2
+    },
+    {
+      "level_id": "health_mental",
+      "label": "Mental Wellness",
+      "description": "Mental health basics and stress management",
+      "curriculum": "health_mental_wellness",
+      "pass_threshold": 0.75,
+      "badge_id": "badge_health_mental",
+      "prerequisites": ["health_exercise"],
+      "order": 3
+    }
+  ]
+}

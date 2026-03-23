@@ -1,0 +1,58 @@
+{
+  "curriculum_id": "health_mental_wellness",
+  "name": "Mental Health and Wellness",
+  "description": "Mental health basics including stress management and mindfulness",
+  "level": 2,
+  "domain": "health",
+  "lessons": [
+    {
+      "lesson_id": "health_mh_001",
+      "title": "Stress Management",
+      "type": "mental_health",
+      "items": [
+        {
+          "technique": "Deep Breathing",
+          "topic": "stress",
+          "description": "Controlled breathing to activate relaxation response",
+          "methods": ["4-7-8 breathing", "Box breathing", "Diaphragmatic breathing"],
+          "benefits": ["Reduces stress", "Lowers blood pressure"],
+          "difficulty": 1
+        },
+        {
+          "technique": "Progressive Muscle Relaxation",
+          "topic": "stress",
+          "description": "Systematically tensing and relaxing muscle groups",
+          "methods": ["Start from feet", "Tense 5 seconds", "Release"],
+          "benefits": ["Physical relaxation", "Body awareness"],
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "lesson_id": "health_mh_002",
+      "title": "Mindfulness",
+      "type": "mental_health",
+      "items": [
+        {
+          "technique": "Mindfulness Meditation",
+          "topic": "mindfulness",
+          "description": "Present moment awareness without judgment",
+          "methods": ["Focus on breath", "Observe thoughts", "Body scan"],
+          "benefits": ["Reduced stress", "Better focus"],
+          "difficulty": 2
+        },
+        {
+          "technique": "Gratitude Practice",
+          "topic": "depression",
+          "description": "Acknowledging positive aspects of life",
+          "methods": ["Gratitude journal", "Three good things"],
+          "benefits": ["Improves mood", "Increases positivity"],
+          "difficulty": 1
+        }
+      ]
+    }
+  ],
+  "total_items": 4,
+  "estimated_time_minutes": 25,
+  "prerequisites": ["health_exercise_basics"]
+}

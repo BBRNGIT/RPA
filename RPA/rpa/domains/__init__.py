@@ -5,6 +5,7 @@ This package contains specialized learning modules for different domains:
 - english: English language learning (vocabulary, grammar, reading, writing)
 - coding: Programming language learning (Python, JavaScript, etc.)
 - medicine: Medical knowledge (terminology, anatomy, conditions, pharmacology)
+- health: Health and wellness (nutrition, exercise, mental health, preventive care)
 """
 
 from rpa.domains.english import (
@@ -27,6 +28,19 @@ from rpa.domains.medicine import (
     MedicalProficiency,
 )
 
+from rpa.domains.health import (
+    HealthDomain,
+    Nutrient,
+    Food,
+    Exercise,
+    MentalHealthConcept,
+    HealthCategory,
+    NutrientType,
+    ExerciseType,
+    MentalHealthTopic,
+    HealthProficiency,
+)
+
 __all__ = [
     # English Domain
     "EnglishDomain",
@@ -44,4 +58,15 @@ __all__ = [
     "MedicalCategory",
     "DrugClass",
     "MedicalProficiency",
+    # Health Domain
+    "HealthDomain",
+    "Nutrient",
+    "Food",
+    "Exercise",
+    "MentalHealthConcept",
+    "HealthCategory",
+    "NutrientType",
+    "ExerciseType",
+    "MentalHealthTopic",
+    "HealthProficiency",
 ]
