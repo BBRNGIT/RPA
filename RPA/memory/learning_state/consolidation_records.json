@@ -16432,5 +16432,4514 @@
     "validation_score": 0.8,
     "source": "huggingface",
     "notes": ""
+  },
+  "cons_d5106a71": {
+    "record_id": "cons_d5106a71",
+    "node_id": "pattern:test_pattern",
+    "session_id": "test_session",
+    "consolidated_at": "2026-03-23T15:24:23.634057",
+    "validation_score": 0.8,
+    "source": "manual_test",
+    "notes": ""
+  },
+  "cons_7937900e": {
+    "record_id": "cons_7937900e",
+    "node_id": "pattern:Although it is very much a min",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603129",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_bf241209": {
+    "record_id": "cons_bf241209",
+    "node_id": "pattern:Weaver Adams , then one of the",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603146",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8cbf1def": {
+    "record_id": "cons_8cbf1def",
+    "node_id": "pattern:e4 was White 's strongest move",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603157",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5de6a37a": {
+    "record_id": "cons_5de6a37a",
+    "node_id": "pattern:\" Adams ' claim was widely rid",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603165",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_cf7ae16f": {
+    "record_id": "cons_cf7ae16f",
+    "node_id": "pattern:The year after his book was pu",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603173",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_80331b55": {
+    "record_id": "cons_80331b55",
+    "node_id": "pattern:Open tournament , he scored on",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603180",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_6f1279f3": {
+    "record_id": "cons_6f1279f3",
+    "node_id": "pattern:Horowitz , who took the black ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603188",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_cd7eab78": {
+    "record_id": "cons_cd7eab78",
+    "node_id": "pattern:At various points during \" Unt",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603194",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c34be3e7": {
+    "record_id": "cons_c34be3e7",
+    "node_id": "pattern:The band continued with their ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603201",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_408bca4f": {
+    "record_id": "cons_408bca4f",
+    "node_id": "pattern:U2 considered playing \" Desire",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603209",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_55ad7b09": {
+    "record_id": "cons_55ad7b09",
+    "node_id": "pattern:The Edge then performed a solo",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603228",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_07298fd3": {
+    "record_id": "cons_07298fd3",
+    "node_id": "pattern:The rendition was slower and q",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603252",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c1973c58": {
+    "record_id": "cons_c1973c58",
+    "node_id": "pattern:During the song , Bono went ba",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603259",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_7e300bfc": {
+    "record_id": "cons_7e300bfc",
+    "node_id": "pattern:Brian Eno was prepared to go o",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603265",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_6f57c950": {
+    "record_id": "cons_6f57c950",
+    "node_id": "pattern:Bono ultimately returned to th",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603273",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_df753418": {
+    "record_id": "cons_df753418",
+    "node_id": "pattern:The music in Journey was compo",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603279",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e3dce75d": {
+    "record_id": "cons_e3dce75d",
+    "node_id": "pattern:Wintory worked closely on the ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603286",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_77fbf9eb": {
+    "record_id": "cons_77fbf9eb",
+    "node_id": "pattern:Johnson felt having short piec",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603303",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9b84390a": {
+    "record_id": "cons_9b84390a",
+    "node_id": "pattern:Jenova Chen met with Wintory a",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603316",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_fddaaa48": {
+    "record_id": "cons_fddaaa48",
+    "node_id": "pattern:He continued to work on the so",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603323",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5e7d885a": {
+    "record_id": "cons_5e7d885a",
+    "node_id": "pattern:The game 's orchestrations wer",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603339",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_3da36c0b": {
+    "record_id": "cons_3da36c0b",
+    "node_id": "pattern:British passports are also iss",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603346",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_484424c0": {
+    "record_id": "cons_484424c0",
+    "node_id": "pattern:Under the common law , citizen",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603353",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_62dcee71": {
+    "record_id": "cons_62dcee71",
+    "node_id": "pattern:In R v Foreign Secretary ex pa",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603361",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_97e21aa7": {
+    "record_id": "cons_97e21aa7",
+    "node_id": "pattern:The writ of ne exeat regno is ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603367",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_11f5aeb6": {
+    "record_id": "cons_11f5aeb6",
+    "node_id": "pattern:The right to make treaties is ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603373",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d05ad89f": {
+    "record_id": "cons_d05ad89f",
+    "node_id": "pattern:Singers who have been associat",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603379",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f1186ad4": {
+    "record_id": "cons_f1186ad4",
+    "node_id": "pattern:Guest artists from other count",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603386",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a60b56c6": {
+    "record_id": "cons_a60b56c6",
+    "node_id": "pattern:Among the conductors have been",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603392",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_76eb3272": {
+    "record_id": "cons_76eb3272",
+    "node_id": "pattern:The company has been led since",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603408",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_07f3c43a": {
+    "record_id": "cons_07f3c43a",
+    "node_id": "pattern:In turn , both Gwendolen and C",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603416",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_513621e9": {
+    "record_id": "cons_513621e9",
+    "node_id": "pattern:Gwendolen , quite unlike her m",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603423",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9eb61032": {
+    "record_id": "cons_9eb61032",
+    "node_id": "pattern:This is an opinion shared by C",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603430",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_01d5cf84": {
+    "record_id": "cons_01d5cf84",
+    "node_id": "pattern:There are different types of s",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603437",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_128042cc": {
+    "record_id": "cons_128042cc",
+    "node_id": "pattern:Middle- and long @-@ distance ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603444",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_898db8af": {
+    "record_id": "cons_898db8af",
+    "node_id": "pattern:This is when all athletes begi",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603451",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a3e64378": {
+    "record_id": "cons_a3e64378",
+    "node_id": "pattern:Competitors are allowed to mov",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603457",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_6ba8cf56": {
+    "record_id": "cons_6ba8cf56",
+    "node_id": "pattern:For some middle @-@ distance r",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603463",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d684d67d": {
+    "record_id": "cons_d684d67d",
+    "node_id": "pattern:Once the gun fires , they must",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603488",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_633965ef": {
+    "record_id": "cons_633965ef",
+    "node_id": "pattern:For sprint races , athletes be",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603501",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_3b410832": {
+    "record_id": "cons_3b410832",
+    "node_id": "pattern:At the podium interviews , con",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603508",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_da098e16": {
+    "record_id": "cons_da098e16",
+    "node_id": "pattern:Kimi R\u00e4ikk\u00f6nen said that while",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603524",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_81bdde51": {
+    "record_id": "cons_81bdde51",
+    "node_id": "pattern:He blamed the lack of downforc",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603532",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_3612a34e": {
+    "record_id": "cons_3612a34e",
+    "node_id": "pattern:Vettel congratulated the winne",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603539",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_4e697c27": {
+    "record_id": "cons_4e697c27",
+    "node_id": "pattern:During the post @-@ race press",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603555",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2ba0e5c0": {
+    "record_id": "cons_2ba0e5c0",
+    "node_id": "pattern:Fourth placed Ricciardo expres",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603561",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e609016d": {
+    "record_id": "cons_e609016d",
+    "node_id": "pattern:A big part of me is happy the ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603567",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_745c0a34": {
+    "record_id": "cons_745c0a34",
+    "node_id": "pattern:His team later explained their",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603583",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_fc2dea69": {
+    "record_id": "cons_fc2dea69",
+    "node_id": "pattern:Both articles address the issu",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603590",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f6970695": {
+    "record_id": "cons_f6970695",
+    "node_id": "pattern:Both of the articles mention t",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603607",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_62f4f62b": {
+    "record_id": "cons_62f4f62b",
+    "node_id": "pattern:One of the 4 proposed schemes ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603612",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_36ffa47d": {
+    "record_id": "cons_36ffa47d",
+    "node_id": "pattern:The estimated cost of this sch",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603618",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9f9bf47b": {
+    "record_id": "cons_9f9bf47b",
+    "node_id": "pattern:The current mayor , Mike Bradl",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603624",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_87bf1125": {
+    "record_id": "cons_87bf1125",
+    "node_id": "pattern:Past mayors of the city have i",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603631",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_7a7221f7": {
+    "record_id": "cons_7a7221f7",
+    "node_id": "pattern:The anti @-@ rape condom is an",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603637",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_3d9f964c": {
+    "record_id": "cons_3d9f964c",
+    "node_id": "pattern:It is designed to cause pain t",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603643",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5248508c": {
+    "record_id": "cons_5248508c",
+    "node_id": "pattern:On 5 April 2016 , Torres score",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603660",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_80e8f100": {
+    "record_id": "cons_80e8f100",
+    "node_id": "pattern:Nobody is quite sure why clare",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603667",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8d6f30c6": {
+    "record_id": "cons_8d6f30c6",
+    "node_id": "pattern:Several other English football",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603674",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_37a8485a": {
+    "record_id": "cons_37a8485a",
+    "node_id": "pattern:For the Coronation season of 1",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603679",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_4c5f5243": {
+    "record_id": "cons_4c5f5243",
+    "node_id": "pattern:It ran for eight months but wa",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603699",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_78a71ae1": {
+    "record_id": "cons_78a71ae1",
+    "node_id": "pattern:Lambton College , which offers",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603706",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_469571a9": {
+    "record_id": "cons_469571a9",
+    "node_id": "pattern:It has a full @-@ time enrolme",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603711",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_52cc860e": {
+    "record_id": "cons_52cc860e",
+    "node_id": "pattern:The graphics of the game were ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603717",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0b91b94f": {
+    "record_id": "cons_0b91b94f",
+    "node_id": "pattern:The Thomas brothers decided to",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603723",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ba9d8ac0": {
+    "record_id": "cons_ba9d8ac0",
+    "node_id": "pattern:Impressed by the game , the St",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603781",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1c6b87db": {
+    "record_id": "cons_1c6b87db",
+    "node_id": "pattern:Dave Thomas recalled that ever",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603787",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_55fe1bd7": {
+    "record_id": "cons_55fe1bd7",
+    "node_id": "pattern:1998 : A Nation on Trial : The",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603794",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_93417afa": {
+    "record_id": "cons_93417afa",
+    "node_id": "pattern:In 2007 , Harmonix and MTV Gam",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603800",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_21fd0bda": {
+    "record_id": "cons_21fd0bda",
+    "node_id": "pattern:It expanded upon the gameplay ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603810",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_758cc002": {
+    "record_id": "cons_758cc002",
+    "node_id": "pattern:Activision followed suit with ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603817",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_fe77332d": {
+    "record_id": "cons_fe77332d",
+    "node_id": "pattern:In 2009 , Activision tripled i",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603822",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_7dc7a543": {
+    "record_id": "cons_7dc7a543",
+    "node_id": "pattern:With the release of Guitar Her",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603829",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0dc0bcde": {
+    "record_id": "cons_0dc0bcde",
+    "node_id": "pattern:Guitar Hero 5 is the first gam",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603844",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_7da73bc7": {
+    "record_id": "cons_7da73bc7",
+    "node_id": "pattern:Activision used the services o",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603871",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c97b6436": {
+    "record_id": "cons_c97b6436",
+    "node_id": "pattern:Pentagram developed a new font",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603878",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a9d1c618": {
+    "record_id": "cons_a9d1c618",
+    "node_id": "pattern:During the SETI program , Eart",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603895",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5f82d130": {
+    "record_id": "cons_5f82d130",
+    "node_id": "pattern:They then receive transmission",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603908",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5ba6cdbb": {
+    "record_id": "cons_5ba6cdbb",
+    "node_id": "pattern:Therefore , the scientists ass",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603915",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_177bf150": {
+    "record_id": "cons_177bf150",
+    "node_id": "pattern:From a second alien transmissi",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603921",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8dbde269": {
+    "record_id": "cons_8dbde269",
+    "node_id": "pattern:A government team led by Xavie",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603927",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d9db62c3": {
+    "record_id": "cons_d9db62c3",
+    "node_id": "pattern:One of the hundred experimenta",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603933",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ea0b273b": {
+    "record_id": "cons_ea0b273b",
+    "node_id": "pattern:Architectural historian Sandra",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603939",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_23aebe09": {
+    "record_id": "cons_23aebe09",
+    "node_id": "pattern:She adds that Old Pine Church ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603955",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0e1a5882": {
+    "record_id": "cons_0e1a5882",
+    "node_id": "pattern:Fairies became a popular theme",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603962",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a71edd61": {
+    "record_id": "cons_a71edd61",
+    "node_id": "pattern:Barrie , and the fairy @-@ the",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603967",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_12f6703b": {
+    "record_id": "cons_12f6703b",
+    "node_id": "pattern:Queen Mary made such themes ev",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.603985",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_aa9f2648": {
+    "record_id": "cons_aa9f2648",
+    "node_id": "pattern:In 1918 , Barker produced a po",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604009",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d5972bac": {
+    "record_id": "cons_d5972bac",
+    "node_id": "pattern:EST on January 2 , 1981 , at F",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604016",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_106bf1e3": {
+    "record_id": "cons_106bf1e3",
+    "node_id": "pattern:More than 14 @,@ 000 of those ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604022",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9133fd52": {
+    "record_id": "cons_9133fd52",
+    "node_id": "pattern:Weather at kickoff was sunny ,",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604028",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d6d2305e": {
+    "record_id": "cons_d6d2305e",
+    "node_id": "pattern:The game was televised nationa",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604034",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5289bc9a": {
+    "record_id": "cons_5289bc9a",
+    "node_id": "pattern:William Parkinson was the refe",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604059",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d46b59c1": {
+    "record_id": "cons_d46b59c1",
+    "node_id": "pattern:Miami won the traditional preg",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604081",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_476f395d": {
+    "record_id": "cons_476f395d",
+    "node_id": "pattern:The earliest known Irish graph",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604089",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d4222728": {
+    "record_id": "cons_d4222728",
+    "node_id": "pattern:During the course of the 19th ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604094",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d9511d10": {
+    "record_id": "cons_d9511d10",
+    "node_id": "pattern:Contemporary Irish visual arti",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604100",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c00850e6": {
+    "record_id": "cons_c00850e6",
+    "node_id": "pattern:In Finkelstein 's doctoral the",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604106",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8ad6928d": {
+    "record_id": "cons_8ad6928d",
+    "node_id": "pattern:Peters 's \" history and defens",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604112",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_3109c1b8": {
+    "record_id": "cons_3109c1b8",
+    "node_id": "pattern:Demographic studies had tended",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604117",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c84f69f2": {
+    "record_id": "cons_c84f69f2",
+    "node_id": "pattern:Peters radically challenged th",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604133",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9293a819": {
+    "record_id": "cons_9293a819",
+    "node_id": "pattern:It followed , for Peters and m",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604151",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2ca5e38f": {
+    "record_id": "cons_2ca5e38f",
+    "node_id": "pattern:Throughout Mexico , Ingrid kil",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604157",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2e705207": {
+    "record_id": "cons_2e705207",
+    "node_id": "pattern:The two storms collectively ki",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604163",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b97f262a": {
+    "record_id": "cons_b97f262a",
+    "node_id": "pattern:Manuel was responsible for maj",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604169",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_53b4ffc8": {
+    "record_id": "cons_53b4ffc8",
+    "node_id": "pattern:@ 5 billion USD ) in estimated",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604183",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a7a20b8e": {
+    "record_id": "cons_a7a20b8e",
+    "node_id": "pattern:A total of six fatalities occu",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604190",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b8e51053": {
+    "record_id": "cons_b8e51053",
+    "node_id": "pattern:Three of which were caused aft",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604207",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_3c084229": {
+    "record_id": "cons_3c084229",
+    "node_id": "pattern:Twelve people died after a lan",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604222",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ca9d637b": {
+    "record_id": "cons_ca9d637b",
+    "node_id": "pattern:After World War I , Transylvan",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604235",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f3010a10": {
+    "record_id": "cons_f3010a10",
+    "node_id": "pattern:As a result , in April 1919 , ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604251",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d929de4e": {
+    "record_id": "cons_d929de4e",
+    "node_id": "pattern:The Romanian Army defeated the",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604257",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_db1c85f8": {
+    "record_id": "cons_db1c85f8",
+    "node_id": "pattern:According to literary scholar ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604263",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_990fd671": {
+    "record_id": "cons_990fd671",
+    "node_id": "pattern:Aggressive behaviour is exhibi",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604269",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e6e404f5": {
+    "record_id": "cons_e6e404f5",
+    "node_id": "pattern:These two components shape the",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604275",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_af2323db": {
+    "record_id": "cons_af2323db",
+    "node_id": "pattern:As Lorenzo observes , Vargas L",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604280",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_526c6649": {
+    "record_id": "cons_526c6649",
+    "node_id": "pattern:The 502nd Engineer Company bec",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604285",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_28ed1e05": {
+    "record_id": "cons_28ed1e05",
+    "node_id": "pattern:In December 2004 , the 130th E",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604291",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_36610c0e": {
+    "record_id": "cons_36610c0e",
+    "node_id": "pattern:The brigade mobilized and bega",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604297",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_496b07f8": {
+    "record_id": "cons_496b07f8",
+    "node_id": "pattern:The brigade eventually replace",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604318",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1a1429dd": {
+    "record_id": "cons_1a1429dd",
+    "node_id": "pattern:By December 2006 , the brigade",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604325",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a240c7c3": {
+    "record_id": "cons_a240c7c3",
+    "node_id": "pattern:During the tour they were supp",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604331",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_755caf5c": {
+    "record_id": "cons_755caf5c",
+    "node_id": "pattern:Mar\u00eda Eva Duarte de Per\u00f3n ( 7 ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604338",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_95f7ec0b": {
+    "record_id": "cons_95f7ec0b",
+    "node_id": "pattern:She is usually referred to as ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604344",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0fc62e35": {
+    "record_id": "cons_0fc62e35",
+    "node_id": "pattern:At the northwest and southwest",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604362",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_3a80bd62": {
+    "record_id": "cons_3a80bd62",
+    "node_id": "pattern:The original image on the Mari",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604374",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b5205c9f": {
+    "record_id": "cons_b5205c9f",
+    "node_id": "pattern:To perform in vitro analysis ,",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604389",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_874a0a27": {
+    "record_id": "cons_874a0a27",
+    "node_id": "pattern:This process usually begins wi",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604397",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_15bd7c7f": {
+    "record_id": "cons_15bd7c7f",
+    "node_id": "pattern:The resulting mixture can be p",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604412",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_3e8caee8": {
+    "record_id": "cons_3e8caee8",
+    "node_id": "pattern:Precipitation by a method know",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604429",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2f836af8": {
+    "record_id": "cons_2f836af8",
+    "node_id": "pattern:Various types of chromatograph",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604435",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0094e872": {
+    "record_id": "cons_0094e872",
+    "node_id": "pattern:The level of purification can ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604442",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_42813def": {
+    "record_id": "cons_42813def",
+    "node_id": "pattern:Additionally , proteins can be",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604447",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8149f708": {
+    "record_id": "cons_8149f708",
+    "node_id": "pattern:\" There 's Got to Be a Way \" (",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604453",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2406c10b": {
+    "record_id": "cons_2406c10b",
+    "node_id": "pattern:Prior to the June 2014 sale of",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604459",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_35b3ecfe": {
+    "record_id": "cons_35b3ecfe",
+    "node_id": "pattern:By defying convention with six",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604465",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_871a60d1": {
+    "record_id": "cons_871a60d1",
+    "node_id": "pattern:On July 1 , Nixon received the",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604470",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1e39d7ed": {
+    "record_id": "cons_1e39d7ed",
+    "node_id": "pattern:Tower of Texas , handing him a",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604494",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_05d431db": {
+    "record_id": "cons_05d431db",
+    "node_id": "pattern:With his nomination all but as",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604502",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_787b41d0": {
+    "record_id": "cons_787b41d0",
+    "node_id": "pattern:A series of advertisements fea",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604508",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_3885a0e1": {
+    "record_id": "cons_3885a0e1",
+    "node_id": "pattern:The tapes were sent to the swi",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604524",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5e4b0dbe": {
+    "record_id": "cons_5e4b0dbe",
+    "node_id": "pattern:At this time , Nixon decided w",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604536",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e708ba41": {
+    "record_id": "cons_e708ba41",
+    "node_id": "pattern:This continued to be a major t",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604542",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b7f4b4b5": {
+    "record_id": "cons_b7f4b4b5",
+    "node_id": "pattern:Nixon publicly announced his o",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604547",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ff17de9a": {
+    "record_id": "cons_ff17de9a",
+    "node_id": "pattern:President Eisenhower endorsed ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604553",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_550222b0": {
+    "record_id": "cons_550222b0",
+    "node_id": "pattern:By July 's end , reports circu",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604558",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b46493f9": {
+    "record_id": "cons_b46493f9",
+    "node_id": "pattern:Sources within Washington repo",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604574",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_84698a1f": {
+    "record_id": "cons_84698a1f",
+    "node_id": "pattern:A possible scenario surfaced w",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604581",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_dbbee28e": {
+    "record_id": "cons_dbbee28e",
+    "node_id": "pattern:Nonetheless , Nixon staffers b",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604586",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9c6d5635": {
+    "record_id": "cons_9c6d5635",
+    "node_id": "pattern:On the first night of the voya",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604592",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_7da93ecc": {
+    "record_id": "cons_7da93ecc",
+    "node_id": "pattern:Here , as throughout the journ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604608",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f6223db9": {
+    "record_id": "cons_f6223db9",
+    "node_id": "pattern:His unidentified illness has l",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604614",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_755a879c": {
+    "record_id": "cons_755a879c",
+    "node_id": "pattern:Gratitude , as expressed in a ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604631",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_71c1dba5": {
+    "record_id": "cons_71c1dba5",
+    "node_id": "pattern:During the Kerch @-@ Feodosiya",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604636",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f2c8323d": {
+    "record_id": "cons_f2c8323d",
+    "node_id": "pattern:She was hit seventeen times by",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604642",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1b396d03": {
+    "record_id": "cons_1b396d03",
+    "node_id": "pattern:On 1 and 3 January she ferried",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604658",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_68b5b987": {
+    "record_id": "cons_68b5b987",
+    "node_id": "pattern:On the return voyage she was s",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604675",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_13e4aebc": {
+    "record_id": "cons_13e4aebc",
+    "node_id": "pattern:Four near @-@ misses close to ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604687",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b5c6a505": {
+    "record_id": "cons_b5c6a505",
+    "node_id": "pattern:She made it to Novorossiysk , ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604694",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8f033d91": {
+    "record_id": "cons_8f033d91",
+    "node_id": "pattern:These took until October 1942 ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604700",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_27117e9b": {
+    "record_id": "cons_27117e9b",
+    "node_id": "pattern:A tropical wave came off the c",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604706",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_080bb577": {
+    "record_id": "cons_080bb577",
+    "node_id": "pattern:The system moved across the At",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604711",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_90f1568a": {
+    "record_id": "cons_90f1568a",
+    "node_id": "pattern:The wave became a significant ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604716",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_26a55238": {
+    "record_id": "cons_26a55238",
+    "node_id": "pattern:The center of circulation was ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604722",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_7eedde75": {
+    "record_id": "cons_7eedde75",
+    "node_id": "pattern:The system exhibited sufficien",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604738",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ca96abe2": {
+    "record_id": "cons_ca96abe2",
+    "node_id": "pattern:The depression quickly strengt",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604758",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d5202890": {
+    "record_id": "cons_d5202890",
+    "node_id": "pattern:The track of Elida was west @-",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604766",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_6379b08a": {
+    "record_id": "cons_6379b08a",
+    "node_id": "pattern:Some rainbands moved over the ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604771",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_497c96aa": {
+    "record_id": "cons_497c96aa",
+    "node_id": "pattern:Elida continued strengthening ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604786",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1de520ff": {
+    "record_id": "cons_1de520ff",
+    "node_id": "pattern:Some windows broke also as a r",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604794",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_7a0b8aaf": {
+    "record_id": "cons_7a0b8aaf",
+    "node_id": "pattern:According to Francis Edwards P",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604800",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_abed2317": {
+    "record_id": "cons_abed2317",
+    "node_id": "pattern:The Qur \u2019 an 's Allah is the s",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604820",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_dded3fd0": {
+    "record_id": "cons_dded3fd0",
+    "node_id": "pattern:Peters states that the Qur 'an",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604840",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_763e9061": {
+    "record_id": "cons_763e9061",
+    "node_id": "pattern:Although the Pagoda of Fogong ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604857",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5099acc8": {
+    "record_id": "cons_5099acc8",
+    "node_id": "pattern:Completed in 1055 , it is 84 m",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604916",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b48423ce": {
+    "record_id": "cons_b48423ce",
+    "node_id": "pattern:Although the Liaodi Pagoda ser",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604922",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a4536711": {
+    "record_id": "cons_a4536711",
+    "node_id": "pattern:Beside their utility in survei",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604927",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ba1fcda4": {
+    "record_id": "cons_ba1fcda4",
+    "node_id": "pattern:Born in North Carolina , the s",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604933",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_759ce562": {
+    "record_id": "cons_759ce562",
+    "node_id": "pattern:With the help of the few suppo",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604948",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_84e52246": {
+    "record_id": "cons_84e52246",
+    "node_id": "pattern:As in earlier centuries , Jain",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604956",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c5439c2c": {
+    "record_id": "cons_c5439c2c",
+    "node_id": "pattern:Jain versions of the Hindu epi",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604962",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_baf976fd": {
+    "record_id": "cons_baf976fd",
+    "node_id": "pattern:Narasimhacharya , a noted scho",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604967",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_44fcbdc1": {
+    "record_id": "cons_44fcbdc1",
+    "node_id": "pattern:The Veerashaiva writers , devo",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.604983",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_87f9d450": {
+    "record_id": "cons_87f9d450",
+    "node_id": "pattern:Vaishnava authors wrote treatm",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605004",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e8f2a77b": {
+    "record_id": "cons_e8f2a77b",
+    "node_id": "pattern:Breaking away from the old Jai",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605012",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_6baf9107": {
+    "record_id": "cons_6baf9107",
+    "node_id": "pattern:His nephew Raghavanka establis",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605017",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5b1fe763": {
+    "record_id": "cons_5b1fe763",
+    "node_id": "pattern:Sisumayana introduced the sang",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605023",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_7a713b79": {
+    "record_id": "cons_7a713b79",
+    "node_id": "pattern:However , some scholars contin",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605028",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9c87738f": {
+    "record_id": "cons_9c87738f",
+    "node_id": "pattern:The bay has been strategically",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605048",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ae9696ab": {
+    "record_id": "cons_ae9696ab",
+    "node_id": "pattern:General Zachary Taylor station",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605054",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_dfe918a9": {
+    "record_id": "cons_dfe918a9",
+    "node_id": "pattern:The Port of Corpus Christi was",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605060",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_fecbcbaf": {
+    "record_id": "cons_fecbcbaf",
+    "node_id": "pattern:In 1940 , the Naval Air Statio",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605085",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_596978c4": {
+    "record_id": "cons_596978c4",
+    "node_id": "pattern:Notably , during a March 1960 ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605102",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_51498a92": {
+    "record_id": "cons_51498a92",
+    "node_id": "pattern:He squeezed out of the cockpit",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605109",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0d28ca1b": {
+    "record_id": "cons_0d28ca1b",
+    "node_id": "pattern:Stockwell , along with teammat",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605115",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_bf7283d1": {
+    "record_id": "cons_bf7283d1",
+    "node_id": "pattern:@ 63 of a second behind the Am",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605121",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_7c912ab0": {
+    "record_id": "cons_7c912ab0",
+    "node_id": "pattern:He also teamed up with Mark Ke",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605126",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_45a25bf9": {
+    "record_id": "cons_45a25bf9",
+    "node_id": "pattern:He and his freestyle relay tea",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605132",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_06d0545e": {
+    "record_id": "cons_06d0545e",
+    "node_id": "pattern:Stockwell was the only Austral",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605138",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_3e6ad8eb": {
+    "record_id": "cons_3e6ad8eb",
+    "node_id": "pattern:Another Buddhist logician Dhar",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605153",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5bd8dde8": {
+    "record_id": "cons_5bd8dde8",
+    "node_id": "pattern:Then , if somebody is implored",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605171",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ee2a830d": {
+    "record_id": "cons_ee2a830d",
+    "node_id": "pattern:\" The insinuation is obvious ;",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605178",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_224fdf35": {
+    "record_id": "cons_224fdf35",
+    "node_id": "pattern:\u0100c\u0101rya Akalanka , while agreei",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605184",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_296d6d60": {
+    "record_id": "cons_296d6d60",
+    "node_id": "pattern:Her marriage into the aristocr",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605190",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_94d40d71": {
+    "record_id": "cons_94d40d71",
+    "node_id": "pattern:She subsequently became a poli",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605211",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_af195dcf": {
+    "record_id": "cons_af195dcf",
+    "node_id": "pattern:Her charitable work was princi",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605227",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_557cad11": {
+    "record_id": "cons_557cad11",
+    "node_id": "pattern:Following , in 1875 , was the ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605235",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8e8da66a": {
+    "record_id": "cons_8e8da66a",
+    "node_id": "pattern:Knopp ( Herr und Frau Knopp ) ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605241",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_eb299278": {
+    "record_id": "cons_eb299278",
+    "node_id": "pattern:The antagonists of the trilogy",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605247",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1f9f07d6": {
+    "record_id": "cons_1f9f07d6",
+    "node_id": "pattern:Without pathos , Busch makes K",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605263",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_bbcda713": {
+    "record_id": "cons_bbcda713",
+    "node_id": "pattern:The game also features a multi",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605269",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_79c324f4": {
+    "record_id": "cons_79c324f4",
+    "node_id": "pattern:Features such as the weapons a",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605275",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_068922c9": {
+    "record_id": "cons_068922c9",
+    "node_id": "pattern:Computer controlled bots , cal",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605281",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_90e47bd7": {
+    "record_id": "cons_90e47bd7",
+    "node_id": "pattern:Players can also issue orders ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605287",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_387ad1de": {
+    "record_id": "cons_387ad1de",
+    "node_id": "pattern:The player can explore the Car",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605303",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1877009d": {
+    "record_id": "cons_1877009d",
+    "node_id": "pattern:The most substantial of these ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605309",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_741bf8d0": {
+    "record_id": "cons_741bf8d0",
+    "node_id": "pattern:Perfect Dark is a first @-@ pe",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605314",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c1246c49": {
+    "record_id": "cons_c1246c49",
+    "node_id": "pattern:In the game 's campaign mode ,",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605320",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9d834811": {
+    "record_id": "cons_9d834811",
+    "node_id": "pattern:Each level requires the player",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605335",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_96722a34": {
+    "record_id": "cons_96722a34",
+    "node_id": "pattern:Players can carry an unlimited",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605342",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5faf9f94": {
+    "record_id": "cons_5faf9f94",
+    "node_id": "pattern:The levels in Perfect Dark hav",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605367",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9d21f93d": {
+    "record_id": "cons_9d21f93d",
+    "node_id": "pattern:Every level can be played on t",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605374",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_614893ff": {
+    "record_id": "cons_614893ff",
+    "node_id": "pattern:Two players can also play the ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605379",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_790b1e9f": {
+    "record_id": "cons_790b1e9f",
+    "node_id": "pattern:The arsenal was briefly seized",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605385",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0b61ff50": {
+    "record_id": "cons_0b61ff50",
+    "node_id": "pattern:Von Kressenstein succeeded in ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605391",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_bc015b1e": {
+    "record_id": "cons_bc015b1e",
+    "node_id": "pattern:The purpose of the raid was to",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605397",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_02348817": {
+    "record_id": "cons_02348817",
+    "node_id": "pattern:The initial Combined Operation",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605403",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_eda6f754": {
+    "record_id": "cons_eda6f754",
+    "node_id": "pattern:The first would be packed with",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605421",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b1d3c2d8": {
+    "record_id": "cons_b1d3c2d8",
+    "node_id": "pattern:The Grangetown Viaduct ( Welsh",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605427",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b02f00df": {
+    "record_id": "cons_b02f00df",
+    "node_id": "pattern:@ 62 mi ) in length and is sai",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605434",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_27083297": {
+    "record_id": "cons_27083297",
+    "node_id": "pattern:It has 13 spans of 71 meters (",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605457",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1c904d6c": {
+    "record_id": "cons_1c904d6c",
+    "node_id": "pattern:53 / DD @-@ 53 ) was laid down",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605465",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_00ec3f51": {
+    "record_id": "cons_00ec3f51",
+    "node_id": "pattern:Navy vessel named in honor of ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605471",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_58f2e701": {
+    "record_id": "cons_58f2e701",
+    "node_id": "pattern:Navy officer notable for sinki",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605477",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_4671fe97": {
+    "record_id": "cons_4671fe97",
+    "node_id": "pattern:Between 1877 and 1878 , Oscar ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605483",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_90717c5c": {
+    "record_id": "cons_90717c5c",
+    "node_id": "pattern:This was the first time it was",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605509",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5b2d8554": {
+    "record_id": "cons_5b2d8554",
+    "node_id": "pattern:This was in contradiction to E",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605530",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_af530a64": {
+    "record_id": "cons_af530a64",
+    "node_id": "pattern:Therefore , the necessity of t",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605536",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_45ea73e3": {
+    "record_id": "cons_45ea73e3",
+    "node_id": "pattern:However , Hertwig confirmed hi",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605541",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e7654249": {
+    "record_id": "cons_e7654249",
+    "node_id": "pattern:Eduard Strasburger produced th",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605547",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8766e777": {
+    "record_id": "cons_8766e777",
+    "node_id": "pattern:This paved the way to assign t",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605553",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_18bda779": {
+    "record_id": "cons_18bda779",
+    "node_id": "pattern:In 1873 , August Weismann post",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605558",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_4fad3bd2": {
+    "record_id": "cons_4fad3bd2",
+    "node_id": "pattern:The function of the nucleus as",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605564",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_95915374": {
+    "record_id": "cons_95915374",
+    "node_id": "pattern:As a self @-@ proclaimed \" fan",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605570",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_14efe2c7": {
+    "record_id": "cons_14efe2c7",
+    "node_id": "pattern:Townsend has drawn critical pr",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605575",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9bd9a2c3": {
+    "record_id": "cons_9bd9a2c3",
+    "node_id": "pattern:Townsend mainly uses Pro Tools",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605591",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f0d51ab9": {
+    "record_id": "cons_f0d51ab9",
+    "node_id": "pattern:Townsend 's musical ideas and ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605597",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_aa23d725": {
+    "record_id": "cons_aa23d725",
+    "node_id": "pattern:Townsend has carried out the m",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605603",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_523dbba8": {
+    "record_id": "cons_523dbba8",
+    "node_id": "pattern:He has also mixed and remixed ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605609",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b0311999": {
+    "record_id": "cons_b0311999",
+    "node_id": "pattern:Antimonic acid exists only as ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605614",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_25e5e982": {
+    "record_id": "cons_25e5e982",
+    "node_id": "pattern:On May 10 , a teenager who wen",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605620",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d5af5b75": {
+    "record_id": "cons_d5af5b75",
+    "node_id": "pattern:Posting anonymously on a forum",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605635",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9ff6b2d4": {
+    "record_id": "cons_9ff6b2d4",
+    "node_id": "pattern:I was told by a member of the ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605647",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9f880239": {
+    "record_id": "cons_9f880239",
+    "node_id": "pattern:He said that the police told h",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605654",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8eac3d56": {
+    "record_id": "cons_8eac3d56",
+    "node_id": "pattern:The teenager did not , citing ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605670",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8c38f55b": {
+    "record_id": "cons_8c38f55b",
+    "node_id": "pattern:Shami Chakrabarti , the direct",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605676",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2ceb98da": {
+    "record_id": "cons_2ceb98da",
+    "node_id": "pattern:On May 23 , 2008 , the legal a",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605700",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_6142cba2": {
+    "record_id": "cons_6142cba2",
+    "node_id": "pattern:A Crown Prosecution Service ( ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605706",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_4607200f": {
+    "record_id": "cons_4607200f",
+    "node_id": "pattern:Our advice is that it is not a",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605712",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_446a58a7": {
+    "record_id": "cons_446a58a7",
+    "node_id": "pattern:\" Anonymous also held a protes",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605718",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f20444d4": {
+    "record_id": "cons_f20444d4",
+    "node_id": "pattern:The NDH authorities only had w",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605723",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9b6e5055": {
+    "record_id": "cons_9b6e5055",
+    "node_id": "pattern:This was barely adequate to gu",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605729",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5b892c93": {
+    "record_id": "cons_5b892c93",
+    "node_id": "pattern:Deployed forces consisted of o",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605744",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e92390ae": {
+    "record_id": "cons_e92390ae",
+    "node_id": "pattern:The remainder of the 10th Batt",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605767",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a90651fd": {
+    "record_id": "cons_a90651fd",
+    "node_id": "pattern:started out as a collaboration",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605773",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0fa08227": {
+    "record_id": "cons_0fa08227",
+    "node_id": "pattern:, which is also the name of St",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605778",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2e8e70ab": {
+    "record_id": "cons_2e8e70ab",
+    "node_id": "pattern:Condoms made from sheep intest",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605784",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8ffec61e": {
+    "record_id": "cons_8ffec61e",
+    "node_id": "pattern:Although they are generally ef",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605800",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a2c2191b": {
+    "record_id": "cons_a2c2191b",
+    "node_id": "pattern:This is based on the idea that",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605822",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f1b1fa1a": {
+    "record_id": "cons_f1b1fa1a",
+    "node_id": "pattern:However , there are to date no",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605828",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f2936063": {
+    "record_id": "cons_f2936063",
+    "node_id": "pattern:Some believe that lambskin con",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605834",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2025a74e": {
+    "record_id": "cons_2025a74e",
+    "node_id": "pattern:Lambskin condoms are also sign",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605839",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_153f2f7e": {
+    "record_id": "cons_153f2f7e",
+    "node_id": "pattern:More generally , some scientif",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605857",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_edac24c8": {
+    "record_id": "cons_edac24c8",
+    "node_id": "pattern:Dry dusting powders are applie",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605864",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_257c160d": {
+    "record_id": "cons_257c160d",
+    "node_id": "pattern:Previously , talc was used by ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605870",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c4f8c0e5": {
+    "record_id": "cons_c4f8c0e5",
+    "node_id": "pattern:Talc is known to be toxic if i",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605875",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_cd50a42f": {
+    "record_id": "cons_cd50a42f",
+    "node_id": "pattern:Cornstarch is generally believ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605881",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_489d9275": {
+    "record_id": "cons_489d9275",
+    "node_id": "pattern:The IAAF keeps world records f",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605898",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_89ebc3ad": {
+    "record_id": "cons_89ebc3ad",
+    "node_id": "pattern:As with 4 \u00d7 100 m and 4 \u00d7 400 ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605904",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0208af19": {
+    "record_id": "cons_0208af19",
+    "node_id": "pattern:Other events include the dista",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605910",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_7bfa2e06": {
+    "record_id": "cons_7bfa2e06",
+    "node_id": "pattern:Relay events have significant ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605916",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_948c5e4f": {
+    "record_id": "cons_948c5e4f",
+    "node_id": "pattern:Cadmium is a common impurity i",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605934",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d644cf8c": {
+    "record_id": "cons_d644cf8c",
+    "node_id": "pattern:Some zinc ores concentrates fr",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605950",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e09153a3": {
+    "record_id": "cons_e09153a3",
+    "node_id": "pattern:Zinc sulfide ores are roasted ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605967",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_02766990": {
+    "record_id": "cons_02766990",
+    "node_id": "pattern:Zinc metal is produced either ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605979",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1ef6f364": {
+    "record_id": "cons_1ef6f364",
+    "node_id": "pattern:Cadmium is isolated from the z",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.605986",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_acea3a2e": {
+    "record_id": "cons_acea3a2e",
+    "node_id": "pattern:Although it is uncertain what ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606007",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_49350547": {
+    "record_id": "cons_49350547",
+    "node_id": "pattern:For example , the Commandments",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606013",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_bdaf3e01": {
+    "record_id": "cons_bdaf3e01",
+    "node_id": "pattern:Scholars contend that the Comm",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606018",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e75feb0e": {
+    "record_id": "cons_e75feb0e",
+    "node_id": "pattern:The Protestant scholar Klaus B",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606024",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_124f8539": {
+    "record_id": "cons_124f8539",
+    "node_id": "pattern:Other scholars contend that th",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606039",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1771f8e1": {
+    "record_id": "cons_1771f8e1",
+    "node_id": "pattern:While evidence exists that the",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606045",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1d577b14": {
+    "record_id": "cons_1d577b14",
+    "node_id": "pattern:The Fourth Lateran Council ( 1",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606051",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_cc7eacbf": {
+    "record_id": "cons_cc7eacbf",
+    "node_id": "pattern:Surviving evidence reveals tha",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606071",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_dd12c6ec": {
+    "record_id": "cons_dd12c6ec",
+    "node_id": "pattern:Centuries later , the lack of ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606079",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_99d18184": {
+    "record_id": "cons_99d18184",
+    "node_id": "pattern:The call is a low drumming , a",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606084",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ddc7f1f1": {
+    "record_id": "cons_ddc7f1f1",
+    "node_id": "pattern:The nature of the vocalisation",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606101",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_cf08572a": {
+    "record_id": "cons_cf08572a",
+    "node_id": "pattern:Gerd Heinrich noted the local ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606107",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_aebb0343": {
+    "record_id": "cons_aebb0343",
+    "node_id": "pattern:The bird also produced a dull ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606112",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d97f2703": {
+    "record_id": "cons_d97f2703",
+    "node_id": "pattern:Calling is most frequent in th",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606146",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d450531e": {
+    "record_id": "cons_d450531e",
+    "node_id": "pattern:A quieter version of the call ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606158",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_15c0f925": {
+    "record_id": "cons_15c0f925",
+    "node_id": "pattern:Other sounds attributed to thi",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606165",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9b302cbf": {
+    "record_id": "cons_9b302cbf",
+    "node_id": "pattern:The helmet appears to have bee",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606170",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f2228d9c": {
+    "record_id": "cons_f2228d9c",
+    "node_id": "pattern:It is thought to have been use",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606175",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f95fc443": {
+    "record_id": "cons_f95fc443",
+    "node_id": "pattern:It is of the same type as the ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606181",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_3c7c1d51": {
+    "record_id": "cons_3c7c1d51",
+    "node_id": "pattern:Its design may allude to the T",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606186",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f2d93533": {
+    "record_id": "cons_f2d93533",
+    "node_id": "pattern:He returned to Notts County to",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606204",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5fb099f9": {
+    "record_id": "cons_5fb099f9",
+    "node_id": "pattern:He was sacked after new manage",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606211",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_44779e92": {
+    "record_id": "cons_44779e92",
+    "node_id": "pattern:In May 1970 , he wrote to Chel",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606236",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d917b37a": {
+    "record_id": "cons_d917b37a",
+    "node_id": "pattern:He was interviewed by Eamonn A",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606244",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8fe2cdeb": {
+    "record_id": "cons_8fe2cdeb",
+    "node_id": "pattern:After his financial troubles b",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606249",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2c6c0333": {
+    "record_id": "cons_2c6c0333",
+    "node_id": "pattern:He continued to write cheques ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606265",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_17d59c25": {
+    "record_id": "cons_17d59c25",
+    "node_id": "pattern:He was sentenced to three year",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606271",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f99b4a22": {
+    "record_id": "cons_f99b4a22",
+    "node_id": "pattern:However , the peace and freedo",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606277",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_37e8f5b1": {
+    "record_id": "cons_37e8f5b1",
+    "node_id": "pattern:The Great Sioux War of 1876 \u2013 ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606283",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c512412d": {
+    "record_id": "cons_c512412d",
+    "node_id": "pattern:These lands were originally se",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606300",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d8d2e7d8": {
+    "record_id": "cons_d8d2e7d8",
+    "node_id": "pattern:When the settlers intruded ont",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606320",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1601b414": {
+    "record_id": "cons_1601b414",
+    "node_id": "pattern:troops were sent to the area t",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606336",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_04a98a1b": {
+    "record_id": "cons_04a98a1b",
+    "node_id": "pattern:During this bloody period , bo",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606343",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e11b37e2": {
+    "record_id": "cons_e11b37e2",
+    "node_id": "pattern:military won victories in majo",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606350",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_855ba00c": {
+    "record_id": "cons_855ba00c",
+    "node_id": "pattern:The war eventually ended in an",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606367",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_db8822cd": {
+    "record_id": "cons_db8822cd",
+    "node_id": "pattern:Native Americans of that regio",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606372",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e2bb11b2": {
+    "record_id": "cons_e2bb11b2",
+    "node_id": "pattern:There are 38 Grade I listed bu",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606393",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c74f3f2d": {
+    "record_id": "cons_c74f3f2d",
+    "node_id": "pattern:The oldest buildings are churc",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606399",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_7d3ce9d6": {
+    "record_id": "cons_7d3ce9d6",
+    "node_id": "pattern:The castle was created between",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606423",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2d24913f": {
+    "record_id": "cons_2d24913f",
+    "node_id": "pattern:It was his successor , Henry o",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606430",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b1cd233d": {
+    "record_id": "cons_b1cd233d",
+    "node_id": "pattern:Taunton is also the site of Gr",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606446",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5d3e0158": {
+    "record_id": "cons_5d3e0158",
+    "node_id": "pattern:Many of the more recent struct",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606463",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_cc3a41d6": {
+    "record_id": "cons_cc3a41d6",
+    "node_id": "pattern:Poundisford Park and Cothelsto",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606469",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ee611713": {
+    "record_id": "cons_ee611713",
+    "node_id": "pattern:NY 38 continues north as an un",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606475",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_85bc0a3a": {
+    "record_id": "cons_85bc0a3a",
+    "node_id": "pattern:It continues on into the town ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606481",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b960bb95": {
+    "record_id": "cons_b960bb95",
+    "node_id": "pattern:The route heads through mostly",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606497",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_70aef28e": {
+    "record_id": "cons_70aef28e",
+    "node_id": "pattern:The route proceeds through the",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606518",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_40daccb0": {
+    "record_id": "cons_40daccb0",
+    "node_id": "pattern:Past this point , the homes ce",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606524",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0bb10a55": {
+    "record_id": "cons_0bb10a55",
+    "node_id": "pattern:Although it is expensive , ane",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606539",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_fdee9006": {
+    "record_id": "cons_fdee9006",
+    "node_id": "pattern:On April 15 , 2010 , The Guard",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606556",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_3169dc6e": {
+    "record_id": "cons_3169dc6e",
+    "node_id": "pattern:The remixes included in the pa",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606563",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f5a8d99c": {
+    "record_id": "cons_f5a8d99c",
+    "node_id": "pattern:The album was originally relea",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606580",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_6e0c7abd": {
+    "record_id": "cons_6e0c7abd",
+    "node_id": "pattern:The revised version , consisti",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606588",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_058ea26c": {
+    "record_id": "cons_058ea26c",
+    "node_id": "pattern:Manson features on the Chew Fu",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606596",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f72bb223": {
+    "record_id": "cons_f72bb223",
+    "node_id": "pattern:Other artists who remixed Gaga",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606602",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f6d1d819": {
+    "record_id": "cons_f6d1d819",
+    "node_id": "pattern:The album was released in the ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606623",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8ed2be8c": {
+    "record_id": "cons_8ed2be8c",
+    "node_id": "pattern:The US release of the album wa",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606700",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c078f397": {
+    "record_id": "cons_c078f397",
+    "node_id": "pattern:In 2006 , the Kakapo Recovery ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606706",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_22a41901": {
+    "record_id": "cons_22a41901",
+    "node_id": "pattern:The key goals of this plan are",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606722",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d5661de3": {
+    "record_id": "cons_d5661de3",
+    "node_id": "pattern:Peter , in its present form , ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606729",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_dd47d7fd": {
+    "record_id": "cons_dd47d7fd",
+    "node_id": "pattern:It has been designated by Engl",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606734",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_240d441d": {
+    "record_id": "cons_240d441d",
+    "node_id": "pattern:It was linked with the church ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606757",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1d535c0b": {
+    "record_id": "cons_1d535c0b",
+    "node_id": "pattern:Survivor Series ( 1992 ) was t",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606769",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9a8b8bba": {
+    "record_id": "cons_9a8b8bba",
+    "node_id": "pattern:It took place on November 25 ,",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606775",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0a96b435": {
+    "record_id": "cons_0a96b435",
+    "node_id": "pattern:The buildup to the pay @-@ per",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606781",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9f01e2ce": {
+    "record_id": "cons_9f01e2ce",
+    "node_id": "pattern:Batou tries to disconnect the ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606786",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_79eac772": {
+    "record_id": "cons_79eac772",
+    "node_id": "pattern:Helicopters from Section 6 arr",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606802",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_4b9e78e2": {
+    "record_id": "cons_4b9e78e2",
+    "node_id": "pattern:The Puppet Master disrupts the",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606819",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d4dc0cae": {
+    "record_id": "cons_d4dc0cae",
+    "node_id": "pattern:As he starts merging with Kusa",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606825",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f493a940": {
+    "record_id": "cons_f493a940",
+    "node_id": "pattern:When the first set of posted r",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606831",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_efecb46c": {
+    "record_id": "cons_efecb46c",
+    "node_id": "pattern:By 1926 , the segment of curre",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606845",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b0d383ae": {
+    "record_id": "cons_b0d383ae",
+    "node_id": "pattern:In the 1930 renumbering of sta",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606853",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c1b426b0": {
+    "record_id": "cons_c1b426b0",
+    "node_id": "pattern:The section of the route adjac",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606859",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5b6af8af": {
+    "record_id": "cons_5b6af8af",
+    "node_id": "pattern:\" the fundamental point is tha",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606865",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_6b1ceb5c": {
+    "record_id": "cons_6b1ceb5c",
+    "node_id": "pattern:My position is that if the sea",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606882",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_19a6f474": {
+    "record_id": "cons_19a6f474",
+    "node_id": "pattern:The really dangerous things ar",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606887",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_fdd5efdc": {
+    "record_id": "cons_fdd5efdc",
+    "node_id": "pattern:\" Trees \" was first published ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606922",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_60420324": {
+    "record_id": "cons_60420324",
+    "node_id": "pattern:The magazine , which had begun",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606938",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_86ba75ab": {
+    "record_id": "cons_86ba75ab",
+    "node_id": "pattern:Poetry paid Kilmer six dollars",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606950",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_4c262965": {
+    "record_id": "cons_4c262965",
+    "node_id": "pattern:The following year , Kilmer in",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606956",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b62024ec": {
+    "record_id": "cons_b62024ec",
+    "node_id": "pattern:Pundits and coaches sometimes ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606962",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_025e9c09": {
+    "record_id": "cons_025e9c09",
+    "node_id": "pattern:Maryland head coach Ralph Frie",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606978",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9662ae4e": {
+    "record_id": "cons_9662ae4e",
+    "node_id": "pattern:And that 's his greatest stren",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.606984",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_67ee3a9c": {
+    "record_id": "cons_67ee3a9c",
+    "node_id": "pattern:\" The Baltimore Sun wrote that",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607006",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_681bfafe": {
+    "record_id": "cons_681bfafe",
+    "node_id": "pattern:\" Regarding the 2008 summer pr",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607012",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b62603b6": {
+    "record_id": "cons_b62603b6",
+    "node_id": "pattern:Turner conceded that Steffy wa",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607027",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_bbab7c62": {
+    "record_id": "cons_bbab7c62",
+    "node_id": "pattern:Head coach Ralph Friedgen who ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607044",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_6b79351f": {
+    "record_id": "cons_6b79351f",
+    "node_id": "pattern:Turner said , \" It lit a fire ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607050",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_cbaaf26c": {
+    "record_id": "cons_cbaaf26c",
+    "node_id": "pattern:Retaliation had 700 visual eff",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607055",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_4af8a29d": {
+    "record_id": "cons_4af8a29d",
+    "node_id": "pattern:Visual effects supervisor Zach",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607061",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_651638d8": {
+    "record_id": "cons_651638d8",
+    "node_id": "pattern:\" The major part of the effect",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607078",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2cfcfa64": {
+    "record_id": "cons_2cfcfa64",
+    "node_id": "pattern:Industrial Light & Magic made ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607084",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c0ff186c": {
+    "record_id": "cons_c0ff186c",
+    "node_id": "pattern:Method Studios was responsible",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607101",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5c4bae70": {
+    "record_id": "cons_5c4bae70",
+    "node_id": "pattern:Saints LA handled minor effect",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607117",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_4e55dd07": {
+    "record_id": "cons_4e55dd07",
+    "node_id": "pattern:Thunderbirds began its first r",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607138",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5b7fc465": {
+    "record_id": "cons_5b7fc465",
+    "node_id": "pattern:Periodically repeated , it was",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607155",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a69f99cb": {
+    "record_id": "cons_a69f99cb",
+    "node_id": "pattern:As well as inspiring various m",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607162",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ae655392": {
+    "record_id": "cons_ae655392",
+    "node_id": "pattern:The second of two TV remakes ,",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607178",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ed2480cb": {
+    "record_id": "cons_ed2480cb",
+    "node_id": "pattern:In 2009 , James told Inside So",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607195",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_22acb5bd": {
+    "record_id": "cons_22acb5bd",
+    "node_id": "pattern:She also described their compa",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607210",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_02cd2dcb": {
+    "record_id": "cons_02cd2dcb",
+    "node_id": "pattern:It 's a bit of a fiery relatio",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607218",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8088e6f8": {
+    "record_id": "cons_8088e6f8",
+    "node_id": "pattern:\" Whilst Lewis added : \" They ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607223",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_78fb0325": {
+    "record_id": "cons_78fb0325",
+    "node_id": "pattern:Geoff and Nicole are both stub",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607248",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1bad04cd": {
+    "record_id": "cons_1bad04cd",
+    "node_id": "pattern:In a weird way they show a sid",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607273",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0dcf0e4f": {
+    "record_id": "cons_0dcf0e4f",
+    "node_id": "pattern:\" James opined Nicole 's wild ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607280",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_6e772e75": {
+    "record_id": "cons_6e772e75",
+    "node_id": "pattern:In public , Lewis initially ha",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607285",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d10a1a34": {
+    "record_id": "cons_d10a1a34",
+    "node_id": "pattern:He revealed they felt like she",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607291",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5e052243": {
+    "record_id": "cons_5e052243",
+    "node_id": "pattern:However towards the end of the",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607308",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_824eb5b9": {
+    "record_id": "cons_824eb5b9",
+    "node_id": "pattern:At Springfield Elementary , Li",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607314",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ea29fdbe": {
+    "record_id": "cons_ea29fdbe",
+    "node_id": "pattern:Following this incident , Lisa",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607330",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_34b2ff46": {
+    "record_id": "cons_34b2ff46",
+    "node_id": "pattern:Later , Lisa tells Grampa abou",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607342",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e5976188": {
+    "record_id": "cons_e5976188",
+    "node_id": "pattern:He seems to recognize this , a",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607349",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_4d54ca92": {
+    "record_id": "cons_4d54ca92",
+    "node_id": "pattern:The field of the stadium combi",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607374",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_62bd36f8": {
+    "record_id": "cons_62bd36f8",
+    "node_id": "pattern:The long jump and triple jump ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607380",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8c166e12": {
+    "record_id": "cons_8c166e12",
+    "node_id": "pattern:Jumps are measured from a take",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607386",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2d4f196c": {
+    "record_id": "cons_2d4f196c",
+    "node_id": "pattern:The pole vault area is also a ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607391",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e2f7dab3": {
+    "record_id": "cons_e2f7dab3",
+    "node_id": "pattern:The high jump is a stripped do",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607396",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e49a97a7": {
+    "record_id": "cons_e49a97a7",
+    "node_id": "pattern:Vistara took delivery of its f",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607403",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_579785c7": {
+    "record_id": "cons_579785c7",
+    "node_id": "pattern:The airline plans to take deli",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607419",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c1af6385": {
+    "record_id": "cons_c1af6385",
+    "node_id": "pattern:In March 2015 , Phee Teik Yeoh",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607443",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_1a6e1dca": {
+    "record_id": "cons_1a6e1dca",
+    "node_id": "pattern:In 1991 , the United States in",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607448",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_3553880e": {
+    "record_id": "cons_3553880e",
+    "node_id": "pattern:Bush sent , 25 @,@ 000 US troo",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607464",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_36196a67": {
+    "record_id": "cons_36196a67",
+    "node_id": "pattern:Its main objectives were to pr",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607470",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_594f4f7e": {
+    "record_id": "cons_594f4f7e",
+    "node_id": "pattern:The tawny nurse shark is widel",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607495",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_857a4310": {
+    "record_id": "cons_857a4310",
+    "node_id": "pattern:In the Indian Ocean , it is fo",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607501",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_46d84c1e": {
+    "record_id": "cons_46d84c1e",
+    "node_id": "pattern:In the western Pacific , it oc",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607533",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c14ad3b1": {
+    "record_id": "cons_c14ad3b1",
+    "node_id": "pattern:In the central Pacific , it ha",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607545",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a8a4a74e": {
+    "record_id": "cons_a8a4a74e",
+    "node_id": "pattern:Fossil teeth belonging to this",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607552",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b9c177e7": {
+    "record_id": "cons_b9c177e7",
+    "node_id": "pattern:The presence of these fossils ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607569",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2d145b6e": {
+    "record_id": "cons_2d145b6e",
+    "node_id": "pattern:The term \" tramp dentist \" ref",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607575",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_4a26a28e": {
+    "record_id": "cons_4a26a28e",
+    "node_id": "pattern:The appearance of the word and",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607590",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f64b2250": {
+    "record_id": "cons_f64b2250",
+    "node_id": "pattern:The term was not exclusive to ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607597",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2be6ceb1": {
+    "record_id": "cons_2be6ceb1",
+    "node_id": "pattern:The single reel film was direc",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607602",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_cdf2ab87": {
+    "record_id": "cons_cdf2ab87",
+    "node_id": "pattern:The film was the second releas",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607627",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8b741a34": {
+    "record_id": "cons_8b741a34",
+    "node_id": "pattern:The film was not heralded with",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607634",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2d98baf1": {
+    "record_id": "cons_2d98baf1",
+    "node_id": "pattern:Geoff Thew at Hardcore Gamer s",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607640",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ee6f36fe": {
+    "record_id": "cons_ee6f36fe",
+    "node_id": "pattern:Bob Mackey at USgamer said tha",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607646",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_43d0e6b2": {
+    "record_id": "cons_43d0e6b2",
+    "node_id": "pattern:Thomas Whitehead at Nintendo L",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607652",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a3cb8663": {
+    "record_id": "cons_a3cb8663",
+    "node_id": "pattern:Several reviewers have appreci",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607657",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_da2993a2": {
+    "record_id": "cons_da2993a2",
+    "node_id": "pattern:Other critics claim Finkelstei",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607683",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_00d91ec3": {
+    "record_id": "cons_00d91ec3",
+    "node_id": "pattern:The historian David Cesarani w",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607701",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ce68016d": {
+    "record_id": "cons_ce68016d",
+    "node_id": "pattern:More revealing is a comment La",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607720",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d87f7417": {
+    "record_id": "cons_d87f7417",
+    "node_id": "pattern:However , the same comment als",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607726",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_127c294b": {
+    "record_id": "cons_127c294b",
+    "node_id": "pattern:Tristan ran nine times in the ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607732",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a18c834f": {
+    "record_id": "cons_a18c834f",
+    "node_id": "pattern:@  beginning his career with a",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607753",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c4572028": {
+    "record_id": "cons_c4572028",
+    "node_id": "pattern:At Epsom in April he won the W",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607759",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_90815e55": {
+    "record_id": "cons_90815e55",
+    "node_id": "pattern:On 11 May he won the Breeders ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607764",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b72b35c3": {
+    "record_id": "cons_b72b35c3",
+    "node_id": "pattern:At the end of the month Trista",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607770",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_57c5b21d": {
+    "record_id": "cons_57c5b21d",
+    "node_id": "pattern:At Royal Ascot he finished thi",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607785",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5a5607bb": {
+    "record_id": "cons_5a5607bb",
+    "node_id": "pattern:After running on unusually har",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607802",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ff1c9c47": {
+    "record_id": "cons_ff1c9c47",
+    "node_id": "pattern:The city has two private schoo",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607818",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0a955411": {
+    "record_id": "cons_0a955411",
+    "node_id": "pattern:In 2015 , the Catholic School ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607835",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a54462d3": {
+    "record_id": "cons_a54462d3",
+    "node_id": "pattern:Antimony is incompatible with ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607842",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_dee713be": {
+    "record_id": "cons_dee713be",
+    "node_id": "pattern:The first trading post on Corp",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607848",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_141c81c6": {
+    "record_id": "cons_141c81c6",
+    "node_id": "pattern:By the 1840s , the area develo",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607864",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_810b2fd7": {
+    "record_id": "cons_810b2fd7",
+    "node_id": "pattern:A bayfront that included a 32 ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607870",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_bf52bdea": {
+    "record_id": "cons_bf52bdea",
+    "node_id": "pattern:Later efforts to build a statu",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607875",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_076bae07": {
+    "record_id": "cons_076bae07",
+    "node_id": "pattern:The bayside port would later g",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607903",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_82cff98a": {
+    "record_id": "cons_82cff98a",
+    "node_id": "pattern:In addition to Corpus Christi ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607909",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9beced0a": {
+    "record_id": "cons_9beced0a",
+    "node_id": "pattern:The town was attacked by Mexic",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607915",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_7579f1a3": {
+    "record_id": "cons_7579f1a3",
+    "node_id": "pattern:It is now a ghost town located",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607931",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_573d4dd4": {
+    "record_id": "cons_573d4dd4",
+    "node_id": "pattern:The city of Ingleside was foun",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607948",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9199aa79": {
+    "record_id": "cons_9199aa79",
+    "node_id": "pattern:It had a population of 9 @,@ 3",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607954",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_49aa1628": {
+    "record_id": "cons_49aa1628",
+    "node_id": "pattern:Likewise , the city of Portlan",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607959",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2dca0b43": {
+    "record_id": "cons_2dca0b43",
+    "node_id": "pattern:During the 2000 census , it ha",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.607965",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5a9d6fc2": {
+    "record_id": "cons_5a9d6fc2",
+    "node_id": "pattern:The Voyager missions vastly im",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608002",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d58e29e1": {
+    "record_id": "cons_d58e29e1",
+    "node_id": "pattern:They also took the first close",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608019",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9458bc74": {
+    "record_id": "cons_9458bc74",
+    "node_id": "pattern:Other smaller storms and eddie",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608025",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_9f1f1f1f": {
+    "record_id": "cons_9f1f1f1f",
+    "node_id": "pattern:Two new , small satellites , A",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608032",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f7586acd": {
+    "record_id": "cons_f7586acd",
+    "node_id": "pattern:A third new satellite , Thebe ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608038",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c16e1bc0": {
+    "record_id": "cons_c16e1bc0",
+    "node_id": "pattern:Monument 101 has the last Long",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608057",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f8d968ce": {
+    "record_id": "cons_f8d968ce",
+    "node_id": "pattern:113th Heavy Anti @-@ Aircraft ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608074",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_98d0861f": {
+    "record_id": "cons_98d0861f",
+    "node_id": "pattern:With the war going against the",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608082",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_69973fa4": {
+    "record_id": "cons_69973fa4",
+    "node_id": "pattern:On 10 November 1918 \u2014 just one",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608103",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_211d8c1b": {
+    "record_id": "cons_211d8c1b",
+    "node_id": "pattern:Following the handover to the ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608179",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b8d7b3d0": {
+    "record_id": "cons_b8d7b3d0",
+    "node_id": "pattern:In the Treaty of Saint @-@ Ger",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608204",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e6494488": {
+    "record_id": "cons_e6494488",
+    "node_id": "pattern:Pensions were to be establishe",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608211",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0af9cd2d": {
+    "record_id": "cons_0af9cd2d",
+    "node_id": "pattern:There are no lock and dams on ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608227",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c7e19e27": {
+    "record_id": "cons_c7e19e27",
+    "node_id": "pattern:In contrast , the upper Missis",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608233",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_70fda222": {
+    "record_id": "cons_70fda222",
+    "node_id": "pattern:@ 3 million tons of cargo annu",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608239",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_22417491": {
+    "record_id": "cons_22417491",
+    "node_id": "pattern:In a 2009 interview with Bill ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608264",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5cb92b84": {
+    "record_id": "cons_5cb92b84",
+    "node_id": "pattern:Following a 1937 decision to e",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608271",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_cc199661": {
+    "record_id": "cons_cc199661",
+    "node_id": "pattern:The next month they flew an Av",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608278",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_190d2cb2": {
+    "record_id": "cons_190d2cb2",
+    "node_id": "pattern:12 ( General Purpose ) Squadro",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608295",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_dc6ac849": {
+    "record_id": "cons_dc6ac849",
+    "node_id": "pattern:Jones had by now moved on to a",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608310",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_74ec62c9": {
+    "record_id": "cons_74ec62c9",
+    "node_id": "pattern:Promoted to wing commander on ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608317",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_026178d7": {
+    "record_id": "cons_026178d7",
+    "node_id": "pattern:An advance party of thirty NCO",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608333",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_d1f391d1": {
+    "record_id": "cons_d1f391d1",
+    "node_id": "pattern:Staff were initially accommoda",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608340",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5f59f106": {
+    "record_id": "cons_5f59f106",
+    "node_id": "pattern:12 Squadron launched its first",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608346",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_348b12e9": {
+    "record_id": "cons_348b12e9",
+    "node_id": "pattern:These were augmented by a flig",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608365",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8f789240": {
+    "record_id": "cons_8f789240",
+    "node_id": "pattern:A fifth Wirraway in the flight",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608372",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_42087c66": {
+    "record_id": "cons_42087c66",
+    "node_id": "pattern:MD 194 parallels the Maryland ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608387",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_672fa8cd": {
+    "record_id": "cons_672fa8cd",
+    "node_id": "pattern:At the south end of the town ,",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608394",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_a264c4f2": {
+    "record_id": "cons_a264c4f2",
+    "node_id": "pattern:The state highway starts to ru",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608410",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_e78d2b8d": {
+    "record_id": "cons_e78d2b8d",
+    "node_id": "pattern:On the north side of town , MD",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608416",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_2da107d6": {
+    "record_id": "cons_2da107d6",
+    "node_id": "pattern:MD 194 veers northeast and has",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608422",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5d5b8f51": {
+    "record_id": "cons_5d5b8f51",
+    "node_id": "pattern:The state highway passes throu",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608448",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_4aec8ce0": {
+    "record_id": "cons_4aec8ce0",
+    "node_id": "pattern:General Fraser , alerted to th",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608456",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_c91a1f30": {
+    "record_id": "cons_c91a1f30",
+    "node_id": "pattern:That night Fraser camped a few",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608461",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_406e8ddd": {
+    "record_id": "cons_406e8ddd",
+    "node_id": "pattern:Rising early in the morning , ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608468",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_5b2ab614": {
+    "record_id": "cons_5b2ab614",
+    "node_id": "pattern:In spirited battle , the Ameri",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608477",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f0eb90b0": {
+    "record_id": "cons_f0eb90b0",
+    "node_id": "pattern:Eventually the men received pe",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608495",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_f6fcbabe": {
+    "record_id": "cons_f6fcbabe",
+    "node_id": "pattern:Individuals who found jobs at ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608520",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_46b41bc6": {
+    "record_id": "cons_46b41bc6",
+    "node_id": "pattern:The mental health field promis",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608527",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b1e2fa16": {
+    "record_id": "cons_b1e2fa16",
+    "node_id": "pattern:By the end of 1945 , more than",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608552",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_09a89179": {
+    "record_id": "cons_09a89179",
+    "node_id": "pattern:Lleyton Hewitt and Roger Feder",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608565",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_0d269430": {
+    "record_id": "cons_0d269430",
+    "node_id": "pattern:Early in their careers , Hewit",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608571",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_cbbaca17": {
+    "record_id": "cons_cbbaca17",
+    "node_id": "pattern:However , from 2004 onward , F",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608587",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_ced06842": {
+    "record_id": "cons_ced06842",
+    "node_id": "pattern:This is Hewitt 's longest riva",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608603",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_06204951": {
+    "record_id": "cons_06204951",
+    "node_id": "pattern:They met in one Grand Slam tou",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608610",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_8076d04a": {
+    "record_id": "cons_8076d04a",
+    "node_id": "pattern:Federer met Hewitt at six of t",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608616",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_dfcf8b68": {
+    "record_id": "cons_dfcf8b68",
+    "node_id": "pattern:Their last meeting was at the ",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608632",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_cd7a51c1": {
+    "record_id": "cons_cd7a51c1",
+    "node_id": "pattern:The Queen 's Gate Tunnel ( Wel",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608649",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
+  },
+  "cons_b681faec": {
+    "record_id": "cons_b681faec",
+    "node_id": "pattern:The 715 m ( 2 @,@ 346 ft ) twi",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-23T15:30:17.608655",
+    "validation_score": 0.8,
+    "source": "wikitext",
+    "notes": ""
   }
 }

@@ -574,7 +574,8 @@ class LearnStage(PipelineStage):
         # Store patterns in LTM
         patterns = curriculum.get("patterns", [])
         stored = 0
-        for item in patterns[:50]:  # Limit
+        logger.info(f"Storing {len(patterns)} patterns to LTM (limit: 500)")
+        for item in patterns[:500]:  # Increased limit
             if self.ltm and item.get("content"):
                 try:
                     node = Node.create_pattern(
@@ -591,7 +592,12 @@ class LearnStage(PipelineStage):
                     )
                     stored += 1
                 except Exception as e:
-                    logger.debug(f"Failed to store pattern: {e}")
+                    logger.warning(f"Failed to store pattern: {e}")
+            else:
+                if not self.ltm:
+                    logger.warning("LTM is None!")
+                elif not item.get("content"):
+                    logger.debug(f"Item has no content: {list(item.keys())}")
 
         results["patterns"]["stored"] = stored
 
@@ -604,22 +610,26 @@ class LearnStage(PipelineStage):
         # Store patterns in LTM
         patterns = curriculum["patterns"]
         stored = 0
-
-        for item in patterns[:100]:  # Limit
-            if self.ltm:
-                node = Node.create_pattern(
-                    label=item.get("content", "")[:30],
-                    content=item.get("content", ""),
-                    hierarchy_level=item.get("hierarchy_level", 1),
-                    domain="python",
-                )
-                self.ltm.consolidate(
-                    node=node,
-                    session_id="pipeline_python",
-                    validation_score=item.get("quality", 0.8),
-                    source=item.get("source", "huggingface"),
-                )
-                stored += 1
+        logger.info(f"Storing {len(patterns)} Python patterns to LTM (limit: 500)")
+        
+        for item in patterns[:500]:  # Increased limit
+            if self.ltm and item.get("content"):
+                try:
+                    node = Node.create_pattern(
+                        label=item.get("content", "")[:30],
+                        content=item.get("content", ""),
+                        hierarchy_level=item.get("hierarchy_level", 1),
+                        domain="python",
+                    )
+                    self.ltm.consolidate(
+                        node=node,
+                        session_id="pipeline_python",
+                        validation_score=item.get("quality", 0.8),
+                        source=item.get("source", "huggingface"),
+                    )
+                    stored += 1
+                except Exception as e:
+                    logger.warning(f"Failed to store Python pattern: {e}")
 
         results["patterns"]["stored"] = stored
         return results
@@ -675,9 +685,17 @@ class UnifiedLearningPipeline:
         self.interpreter = DatasetInterpreter()
         self.builder = DatasetCurriculumBuilder(self.loader, self.interpreter)
 
-        # Initialize memory
-        self.persistence_path = persistence_path or self.pipeline_config.get("persistence_path")
+        # Initialize memory with absolute path
+        if persistence_path:
+            self.persistence_path = persistence_path
+        else:
+            # Use absolute path relative to this file
+            self.persistence_path = str(Path(__file__).parent / "memory" / "learning_state")
+        
+        logger.info(f"Using persistence path: {self.persistence_path}")
         self.ltm = LongTermMemory(storage_path=self.persistence_path)
+        self.ltm.load()  # Load existing patterns
+        logger.info(f"LTM loaded with {len(self.ltm)} patterns")
         self.episodic = EpisodicMemory()
         self.stm = ShortTermMemory()
 

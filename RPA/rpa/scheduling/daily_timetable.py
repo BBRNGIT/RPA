@@ -358,6 +358,12 @@ class DailyJobExecutor:
     def trainer(self):
         """Lazy load InteractiveTrainer."""
         if self._trainer is None:
+            import sys
+            from pathlib import Path
+            # Add RPA root to path for imports
+            rpa_root = Path(__file__).parent.parent.parent
+            if str(rpa_root) not in sys.path:
+                sys.path.insert(0, str(rpa_root))
             from interactive_train import InteractiveTrainer
             self._trainer = InteractiveTrainer()
         return self._trainer
@@ -450,6 +456,11 @@ class DailyJobExecutor:
     
     def _execute_hf_training(self, config: Dict[str, Any]) -> Dict[str, Any]:
         """Execute HuggingFace pattern learning task."""
+        import sys
+        from pathlib import Path
+        rpa_root = Path(__file__).parent.parent.parent
+        if str(rpa_root) not in sys.path:
+            sys.path.insert(0, str(rpa_root))
         from interactive_train import LessonConfig
         
         patterns = config.get("patterns", 100)
@@ -481,6 +492,11 @@ class DailyJobExecutor:
     
     def _execute_lesson(self, config: Dict[str, Any]) -> Dict[str, Any]:
         """Execute curriculum lesson task."""
+        import sys
+        from pathlib import Path
+        rpa_root = Path(__file__).parent.parent.parent
+        if str(rpa_root) not in sys.path:
+            sys.path.insert(0, str(rpa_root))
         from interactive_train import LessonConfig
         
         track = config.get("track", "english")
