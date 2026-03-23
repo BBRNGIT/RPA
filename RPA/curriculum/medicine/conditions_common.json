@@ -1,0 +1,176 @@
+{
+  "curriculum_id": "medicine_conditions_common",
+  "name": "Common Medical Conditions",
+  "description": "Frequently encountered diseases and conditions across major body systems",
+  "level": 2,
+  "domain": "medicine",
+  "lessons": [
+    {
+      "lesson_id": "med_cond_001",
+      "title": "Cardiovascular Conditions",
+      "type": "conditions",
+      "body_system": "cardiovascular",
+      "items": [
+        {
+          "condition": "Hypertension",
+          "icd_code": "I10",
+          "description": "Persistent elevation of blood pressure above 130/80 mmHg",
+          "symptoms": ["Often asymptomatic", "Headache", "Dizziness", "Blurred vision"],
+          "causes": ["Primary: genetics, lifestyle", "Secondary: renal disease, endocrine disorders"],
+          "risk_factors": ["Obesity", "High salt intake", "Sedentary lifestyle", "Family history", "Age"],
+          "treatments": ["Lifestyle modifications", "ACE inhibitors", "ARBs", "Beta blockers", "Calcium channel blockers", "Diuretics"],
+          "complications": ["Heart disease", "Stroke", "Kidney damage", "Retinopathy"],
+          "difficulty": 1
+        },
+        {
+          "condition": "Myocardial Infarction",
+          "icd_code": "I21",
+          "description": "Heart attack - death of heart muscle due to blocked coronary artery",
+          "symptoms": ["Crushing chest pain", "Radiating pain to arm/jaw", "Shortness of breath", "Nausea", "Diaphoresis"],
+          "causes": ["Coronary artery disease", "Coronary thrombosis", "Coronary spasm"],
+          "risk_factors": ["Hypertension", "Diabetes", "Smoking", "Hyperlipidemia", "Family history"],
+          "treatments": ["Aspirin", "Thrombolytics", "PCI (angioplasty)", "CABG", "Beta blockers", "ACE inhibitors"],
+          "complications": ["Heart failure", "Arrhythmias", "Cardiogenic shock", "Death"],
+          "difficulty": 2
+        },
+        {
+          "condition": "Heart Failure",
+          "icd_code": "I50",
+          "description": "Heart cannot pump enough blood to meet body's needs",
+          "symptoms": ["Dyspnea on exertion", "Orthopnea", "Peripheral edema", "Fatigue", "Cough"],
+          "causes": ["Coronary artery disease", "Hypertension", "Cardiomyopathy", "Valvular disease"],
+          "risk_factors": ["Hypertension", "Coronary disease", "Diabetes", "Obesity", "Previous MI"],
+          "treatments": ["ACE inhibitors/ARBs", "Beta blockers", "Diuretics", "Digoxin", "Device therapy", "Transplant"],
+          "complications": ["Pulmonary edema", "Arrhythmias", "Thromboembolism", "Death"],
+          "difficulty": 2
+        },
+        {
+          "condition": "Atrial Fibrillation",
+          "icd_code": "I48",
+          "description": "Irregular, rapid heart rhythm originating in atria",
+          "symptoms": ["Palpitations", "Fatigue", "Shortness of breath", "Dizziness", "May be asymptomatic"],
+          "causes": ["Atrial dilation", "Hypertension", "Valvular disease", "Thyroid disease", "Alcohol"],
+          "risk_factors": ["Age", "Hypertension", "Heart disease", "Obesity", "Sleep apnea"],
+          "treatments": ["Rate control (beta blockers, CCB)", "Rhythm control (antiarrhythmics, cardioversion)", "Anticoagulation"],
+          "complications": ["Stroke", "Heart failure", "Tachycardia-mediated cardiomyopathy"],
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "lesson_id": "med_cond_002",
+      "title": "Respiratory Conditions",
+      "type": "conditions",
+      "body_system": "respiratory",
+      "items": [
+        {
+          "condition": "Pneumonia",
+          "icd_code": "J18",
+          "description": "Infection of lung parenchyma causing inflammation and consolidation",
+          "symptoms": ["Cough with sputum", "Fever", "Dyspnea", "Pleuritic chest pain", "Fatigue"],
+          "causes": ["Bacteria (Streptococcus pneumoniae most common)", "Viruses", "Fungi", "Atypical organisms"],
+          "risk_factors": ["Age >65", "Immunocompromise", "Chronic lung disease", "Aspiration risk", "Smoking"],
+          "treatments": ["Antibiotics (empiric, then targeted)", "Supportive care", "Oxygen if needed"],
+          "complications": ["Respiratory failure", "Sepsis", "Lung abscess", "Empyema"],
+          "difficulty": 1
+        },
+        {
+          "condition": "Asthma",
+          "icd_code": "J45",
+          "description": "Chronic inflammatory airway disease with reversible obstruction",
+          "symptoms": ["Wheezing", "Shortness of breath", "Chest tightness", "Cough (often nocturnal)"],
+          "causes": ["Genetic predisposition", "Environmental triggers", "Allergies", "Viral infections"],
+          "risk_factors": ["Family history", "Atopy", "Environmental exposures", "Obesity"],
+          "treatments": ["Inhaled corticosteroids", "Long-acting beta agonists", "Rescue inhalers (SABA)", "Leukotriene modifiers", "Biologics"],
+          "complications": ["Status asthmaticus", "Respiratory failure", "Airway remodeling"],
+          "difficulty": 1
+        },
+        {
+          "condition": "COPD",
+          "icd_code": "J44",
+          "description": "Progressive airflow limitation due to airway and/or alveolar abnormalities",
+          "symptoms": ["Progressive dyspnea", "Chronic cough", "Sputum production", "Wheezing"],
+          "causes": ["Cigarette smoking (primary)", "Environmental exposures", "Alpha-1 antitrypsin deficiency"],
+          "risk_factors": ["Smoking", "Occupational exposures", "Indoor air pollution", "Recurrent infections"],
+          "treatments": ["Smoking cessation", "Bronchodilators (LABA, LAMA)", "Inhaled corticosteroids", "Oxygen therapy", "Pulmonary rehab"],
+          "complications": ["Respiratory failure", "Cor pulmonale", "Pneumothorax", "Lung cancer"],
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "lesson_id": "med_cond_003",
+      "title": "Neurological Conditions",
+      "type": "conditions",
+      "body_system": "nervous",
+      "items": [
+        {
+          "condition": "Stroke (CVA)",
+          "icd_code": "I63",
+          "description": "Sudden neurological deficit due to interrupted blood supply to brain",
+          "symptoms": ["Sudden weakness/numbness", "Facial droop", "Speech difficulty", "Vision changes", "Severe headache (hemorrhagic)"],
+          "causes": ["Ischemia (thrombotic, embolic)", "Hemorrhage (intracerebral, subarachnoid)"],
+          "risk_factors": ["Hypertension", "Atrial fibrillation", "Diabetes", "Smoking", "Hyperlipidemia"],
+          "treatments": ["Ischemic: tPA, thrombectomy", "Hemorrhagic: BP control, surgery if needed", "Supportive care", "Rehabilitation"],
+          "complications": ["Permanent disability", "Aphasia", "Hemiplegia", "Death"],
+          "difficulty": 2
+        },
+        {
+          "condition": "Seizure Disorder (Epilepsy)",
+          "icd_code": "G40",
+          "description": "Recurrent unprovoked seizures due to abnormal neuronal discharge",
+          "symptoms": ["Variable based on seizure type", "Loss of consciousness", "Convulsions", "Aura", "Postictal confusion"],
+          "causes": ["Genetic", "Structural lesions", "Trauma", "Infection", "Metabolic disturbances"],
+          "risk_factors": ["Family history", "Head trauma", "Stroke", "Brain infection", "Developmental disorders"],
+          "treatments": ["Antiepileptic drugs", "Surgery (resective, VNS)", "Ketogenic diet", "Lifestyle modifications"],
+          "complications": ["Status epilepticus", "Injury during seizures", "Sudden unexpected death"],
+          "difficulty": 2
+        },
+        {
+          "condition": "Parkinson Disease",
+          "icd_code": "G20",
+          "description": "Progressive neurodegenerative disorder affecting movement",
+          "symptoms": ["Tremor", "Bradykinesia", "Rigidity", "Postural instability", "Masked facies"],
+          "causes": ["Degeneration of dopaminergic neurons in substantia nigra", "Environmental factors", "Genetics"],
+          "risk_factors": ["Age", "Family history", "Environmental toxins", "Rural living"],
+          "treatments": ["Levodopa/carbidopa", "Dopamine agonists", "MAO-B inhibitors", "Deep brain stimulation"],
+          "complications": ["Falls", "Dementia", "Depression", "Dysphagia"],
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "lesson_id": "med_cond_004",
+      "title": "Endocrine Conditions",
+      "type": "conditions",
+      "body_system": "endocrine",
+      "items": [
+        {
+          "condition": "Diabetes Mellitus Type 2",
+          "icd_code": "E11",
+          "description": "Metabolic disorder characterized by insulin resistance and hyperglycemia",
+          "symptoms": ["Polyuria", "Polydipsia", "Polyphagia", "Weight loss", "Fatigue", "Blurred vision"],
+          "causes": ["Insulin resistance", "Progressive beta-cell dysfunction"],
+          "risk_factors": ["Obesity", "Sedentary lifestyle", "Family history", "Age", "Ethnicity"],
+          "treatments": ["Lifestyle modification", "Metformin", "Sulfonylureas", "GLP-1 agonists", "SGLT2 inhibitors", "Insulin"],
+          "complications": ["Nephropathy", "Retinopathy", "Neuropathy", "Cardiovascular disease", "Foot ulcers"],
+          "difficulty": 1
+        },
+        {
+          "condition": "Hypothyroidism",
+          "icd_code": "E03",
+          "description": "Underactive thyroid gland producing insufficient thyroid hormone",
+          "symptoms": ["Fatigue", "Weight gain", "Cold intolerance", "Constipation", "Dry skin", "Depression", "Bradycardia"],
+          "causes": ["Hashimoto thyroiditis (autoimmune)", "Iodine deficiency", "Post-thyroidectomy", "Medications"],
+          "risk_factors": ["Autoimmune disease", "Female sex", "Age >60", "Previous thyroid treatment"],
+          "treatments": ["Levothyroxine replacement"],
+          "complications": ["Myxedema coma", "Cardiovascular disease", "Infertility"],
+          "difficulty": 1
+        }
+      ]
+    }
+  ],
+  "total_items": 15,
+  "estimated_time_minutes": 90,
+  "prerequisites": ["medicine_anatomy_basics"]
+}

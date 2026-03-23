@@ -1,0 +1,148 @@
+{
+  "exam_id": "medicine_novice",
+  "name": "Medical Knowledge - Novice Level",
+  "description": "Basic medical terminology and anatomy assessment",
+  "level": 1,
+  "domain": "medicine",
+  "time_limit_minutes": 30,
+  "passing_score": 0.7,
+  "questions": [
+    {
+      "question_id": "med_nov_q1",
+      "type": "multiple_choice",
+      "question": "What does the prefix 'cardio-' mean?",
+      "options": ["Lung", "Heart", "Brain", "Liver"],
+      "correct_answer": "Heart",
+      "explanation": "The prefix 'cardio-' refers to the heart, as in cardiology (study of the heart).",
+      "category": "terminology"
+    },
+    {
+      "question_id": "med_nov_q2",
+      "type": "multiple_choice",
+      "question": "What does the suffix '-itis' indicate?",
+      "options": ["Surgical removal", "Inflammation", "Disease", "Pain"],
+      "correct_answer": "Inflammation",
+      "explanation": "The suffix '-itis' means inflammation, as in appendicitis or arthritis.",
+      "category": "terminology"
+    },
+    {
+      "question_id": "med_nov_q3",
+      "type": "multiple_choice",
+      "question": "What is the primary function of the heart?",
+      "options": ["Filter blood", "Produce hormones", "Pump blood throughout the body", "Store blood"],
+      "correct_answer": "Pump blood throughout the body",
+      "explanation": "The heart is a muscular organ that pumps blood through the circulatory system.",
+      "category": "anatomy"
+    },
+    {
+      "question_id": "med_nov_q4",
+      "type": "multiple_choice",
+      "question": "Which body system includes the lungs?",
+      "options": ["Cardiovascular", "Digestive", "Respiratory", "Nervous"],
+      "correct_answer": "Respiratory",
+      "explanation": "The lungs are part of the respiratory system, responsible for gas exchange.",
+      "category": "anatomy"
+    },
+    {
+      "question_id": "med_nov_q5",
+      "type": "multiple_choice",
+      "question": "What does 'hypertension' mean?",
+      "options": ["Low blood pressure", "High blood pressure", "Normal blood pressure", "Irregular heartbeat"],
+      "correct_answer": "High blood pressure",
+      "explanation": "Hypertension is the medical term for high blood pressure.",
+      "category": "terminology"
+    },
+    {
+      "question_id": "med_nov_q6",
+      "type": "multiple_choice",
+      "question": "What does the prefix 'neuro-' refer to?",
+      "options": ["Kidney", "Nerve", "Muscle", "Bone"],
+      "correct_answer": "Nerve",
+      "explanation": "The prefix 'neuro-' refers to nerves or the nervous system.",
+      "category": "terminology"
+    },
+    {
+      "question_id": "med_nov_q7",
+      "type": "multiple_choice",
+      "question": "Which organ is responsible for filtering blood and producing urine?",
+      "options": ["Liver", "Stomach", "Kidney", "Heart"],
+      "correct_answer": "Kidney",
+      "explanation": "The kidneys filter waste from blood and produce urine.",
+      "category": "anatomy"
+    },
+    {
+      "question_id": "med_nov_q8",
+      "type": "multiple_choice",
+      "question": "What does the suffix '-ectomy' mean?",
+      "options": ["Inflammation of", "Surgical removal of", "Study of", "Disease of"],
+      "correct_answer": "Surgical removal of",
+      "explanation": "The suffix '-ectomy' means surgical removal, as in appendectomy.",
+      "category": "terminology"
+    },
+    {
+      "question_id": "med_nov_q9",
+      "type": "multiple_choice",
+      "question": "The brain is part of which body system?",
+      "options": ["Cardiovascular", "Nervous", "Endocrine", "Respiratory"],
+      "correct_answer": "Nervous",
+      "explanation": "The brain is the control center of the nervous system.",
+      "category": "anatomy"
+    },
+    {
+      "question_id": "med_nov_q10",
+      "type": "multiple_choice",
+      "question": "What does 'gastro-' refer to?",
+      "options": ["Heart", "Stomach", "Liver", "Kidney"],
+      "correct_answer": "Stomach",
+      "explanation": "The prefix 'gastro-' refers to the stomach, as in gastritis.",
+      "category": "terminology"
+    },
+    {
+      "question_id": "med_nov_q11",
+      "type": "multiple_choice",
+      "question": "What is the main function of the lungs?",
+      "options": ["Pump blood", "Filter toxins", "Gas exchange (oxygen and carbon dioxide)", "Digest food"],
+      "correct_answer": "Gas exchange (oxygen and carbon dioxide)",
+      "explanation": "The lungs facilitate gas exchange, taking in oxygen and releasing carbon dioxide.",
+      "category": "anatomy"
+    },
+    {
+      "question_id": "med_nov_q12",
+      "type": "multiple_choice",
+      "question": "What does 'brady-' indicate in medical terminology?",
+      "options": ["Fast", "Slow", "Painful", "Inflamed"],
+      "correct_answer": "Slow",
+      "explanation": "The prefix 'brady-' means slow, as in bradycardia (slow heart rate).",
+      "category": "terminology"
+    },
+    {
+      "question_id": "med_nov_q13",
+      "type": "multiple_choice",
+      "question": "Which organ produces insulin?",
+      "options": ["Liver", "Stomach", "Pancreas", "Kidney"],
+      "correct_answer": "Pancreas",
+      "explanation": "The pancreas produces insulin to regulate blood sugar levels.",
+      "category": "anatomy"
+    },
+    {
+      "question_id": "med_nov_q14",
+      "type": "multiple_choice",
+      "question": "What does 'hyper-' mean?",
+      "options": ["Below", "Above/excessive", "Normal", "Without"],
+      "correct_answer": "Above/excessive",
+      "explanation": "The prefix 'hyper-' means above or excessive, as in hypertension.",
+      "category": "terminology"
+    },
+    {
+      "question_id": "med_nov_q15",
+      "type": "multiple_choice",
+      "question": "What is the largest organ in the human body?",
+      "options": ["Liver", "Brain", "Skin", "Heart"],
+      "correct_answer": "Skin",
+      "explanation": "The skin is the largest organ, part of the integumentary system.",
+      "category": "anatomy"
+    }
+  ],
+  "total_questions": 15,
+  "badge_id": "badge_medicine_novice"
+}

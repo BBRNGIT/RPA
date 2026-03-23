@@ -1,0 +1,48 @@
+{
+  "track_id": "medicine",
+  "track_type": "medicine",
+  "name": "Medical Knowledge",
+  "description": "Medical knowledge curriculum covering terminology, anatomy, conditions, and pharmacology",
+  "levels": [
+    {
+      "level_id": "medicine_terminology",
+      "label": "Medical Terminology",
+      "description": "Medical prefixes, suffixes, roots, and directional terms",
+      "curriculum": "medicine_terminology_basics",
+      "pass_threshold": 0.7,
+      "badge_id": "badge_medicine_term",
+      "prerequisites": [],
+      "order": 1
+    },
+    {
+      "level_id": "medicine_anatomy",
+      "label": "Anatomy Basics",
+      "description": "Major body systems and anatomical structures",
+      "curriculum": "medicine_anatomy_basics",
+      "pass_threshold": 0.75,
+      "badge_id": "badge_medicine_anatomy",
+      "prerequisites": ["medicine_terminology"],
+      "order": 2
+    },
+    {
+      "level_id": "medicine_conditions",
+      "label": "Common Conditions",
+      "description": "Frequently encountered diseases and their management",
+      "curriculum": "medicine_conditions_common",
+      "pass_threshold": 0.75,
+      "badge_id": "badge_medicine_conditions",
+      "prerequisites": ["medicine_anatomy"],
+      "order": 3
+    },
+    {
+      "level_id": "medicine_pharmacology",
+      "label": "Pharmacology Basics",
+      "description": "Common drug classes, mechanisms, and clinical applications",
+      "curriculum": "medicine_pharmacology_basics",
+      "pass_threshold": 0.75,
+      "badge_id": "badge_medicine_pharm",
+      "prerequisites": ["medicine_conditions"],
+      "order": 4
+    }
+  ]
+}

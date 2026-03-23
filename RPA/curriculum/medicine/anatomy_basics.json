@@ -1,0 +1,241 @@
+{
+  "curriculum_id": "medicine_anatomy_basics",
+  "name": "Anatomy Basics",
+  "description": "Fundamental anatomy covering major body systems and structures",
+  "level": 1,
+  "domain": "medicine",
+  "lessons": [
+    {
+      "lesson_id": "med_anat_001",
+      "title": "Cardiovascular System",
+      "type": "anatomy",
+      "body_system": "cardiovascular",
+      "items": [
+        {
+          "structure": "Heart",
+          "location": "Mediastinum, between lungs, slightly left of center",
+          "function": "Pumps blood throughout the body; receives deoxygenated blood from body and pumps to lungs; receives oxygenated blood from lungs and pumps to body",
+          "clinical_significance": "Myocardial infarction, heart failure, arrhythmias",
+          "difficulty": 1
+        },
+        {
+          "structure": "Aorta",
+          "location": "Arises from left ventricle, descends through thorax and abdomen",
+          "function": "Main artery distributing oxygenated blood to all body tissues",
+          "clinical_significance": "Aortic aneurysm, aortic dissection, coarctation",
+          "difficulty": 1
+        },
+        {
+          "structure": "Superior Vena Cava",
+          "location": "Upper right mediastinum, drains into right atrium",
+          "function": "Returns deoxygenated blood from upper body to heart",
+          "clinical_significance": "SVC syndrome, thrombosis",
+          "difficulty": 2
+        },
+        {
+          "structure": "Inferior Vena Cava",
+          "location": "Lower right mediastinum, drains into right atrium",
+          "function": "Returns deoxygenated blood from lower body to heart",
+          "clinical_significance": "IVC filter placement, thrombosis",
+          "difficulty": 2
+        },
+        {
+          "structure": "Pulmonary Arteries",
+          "location": "Arise from right ventricle, branch to each lung",
+          "function": "Carry deoxygenated blood from heart to lungs for oxygenation",
+          "clinical_significance": "Pulmonary embolism, pulmonary hypertension",
+          "difficulty": 2
+        },
+        {
+          "structure": "Coronary Arteries",
+          "location": "On surface of heart muscle",
+          "function": "Supply oxygenated blood to heart muscle itself",
+          "clinical_significance": "Coronary artery disease, myocardial infarction",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "lesson_id": "med_anat_002",
+      "title": "Respiratory System",
+      "type": "anatomy",
+      "body_system": "respiratory",
+      "items": [
+        {
+          "structure": "Lungs",
+          "location": "Thoracic cavity, separated by mediastinum",
+          "function": "Gas exchange - oxygen in, carbon dioxide out; right lung has 3 lobes, left has 2",
+          "clinical_significance": "Pneumonia, COPD, lung cancer, pulmonary embolism",
+          "difficulty": 1
+        },
+        {
+          "structure": "Trachea",
+          "location": "Anterior neck, extends from larynx to carina",
+          "function": "Air passage to lungs; lined with cilia to trap and expel particles",
+          "clinical_significance": "Tracheitis, tracheal stenosis, tracheostomy",
+          "difficulty": 1
+        },
+        {
+          "structure": "Bronchi",
+          "location": "Branch from trachea at carina, subdivide into bronchioles",
+          "function": "Conduct air to and from alveoli for gas exchange",
+          "clinical_significance": "Bronchitis, bronchiectasis, asthma",
+          "difficulty": 1
+        },
+        {
+          "structure": "Alveoli",
+          "location": "Terminal ends of bronchioles in lungs",
+          "function": "Primary site of gas exchange between air and blood",
+          "clinical_significance": "Pneumonia, emphysema, ARDS",
+          "difficulty": 2
+        },
+        {
+          "structure": "Diaphragm",
+          "location": "Dome-shaped muscle between thoracic and abdominal cavities",
+          "function": "Main muscle of respiration; contracts during inspiration",
+          "clinical_significance": "Diaphragmatic hernia, phrenic nerve injury",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "lesson_id": "med_anat_003",
+      "title": "Nervous System",
+      "type": "anatomy",
+      "body_system": "nervous",
+      "items": [
+        {
+          "structure": "Brain",
+          "location": "Cranial cavity, protected by skull",
+          "function": "Control center for all body functions; thought, memory, emotion, movement",
+          "clinical_significance": "Stroke, traumatic brain injury, dementia, tumors",
+          "difficulty": 1
+        },
+        {
+          "structure": "Cerebrum",
+          "location": "Largest part of brain, divided into hemispheres",
+          "function": "Higher cognitive functions, voluntary movement, sensory processing",
+          "clinical_significance": "Stroke, tumor, degenerative diseases",
+          "difficulty": 2
+        },
+        {
+          "structure": "Cerebellum",
+          "location": "Posterior inferior brain",
+          "function": "Coordination, balance, fine motor control",
+          "clinical_significance": "Ataxia, cerebellar stroke",
+          "difficulty": 2
+        },
+        {
+          "structure": "Brainstem",
+          "location": "Between cerebrum and spinal cord",
+          "function": "Vital functions: breathing, heart rate, consciousness; cranial nerve nuclei",
+          "clinical_significance": "Brainstem stroke, herniation, coma",
+          "difficulty": 3
+        },
+        {
+          "structure": "Spinal Cord",
+          "location": "Vertebral canal, extends from brainstem to L1-L2",
+          "function": "Conduit for signals between brain and body; reflex arcs",
+          "clinical_significance": "Spinal cord injury, myelopathy, cord compression",
+          "difficulty": 2
+        },
+        {
+          "structure": "Meninges",
+          "location": "Cover brain and spinal cord (dura, arachnoid, pia mater)",
+          "function": "Protect and nourish central nervous system",
+          "clinical_significance": "Meningitis, subdural/epidural hematoma",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "lesson_id": "med_anat_004",
+      "title": "Digestive System",
+      "type": "anatomy",
+      "body_system": "digestive",
+      "items": [
+        {
+          "structure": "Stomach",
+          "location": "Left upper abdomen, below diaphragm",
+          "function": "Mechanical and chemical digestion; produces acid and enzymes; stores food",
+          "clinical_significance": "Gastritis, peptic ulcer disease, gastric cancer",
+          "difficulty": 1
+        },
+        {
+          "structure": "Small Intestine",
+          "location": "Central abdomen, extends from stomach to colon",
+          "function": "Primary site of nutrient absorption; duodenum, jejunum, ileum",
+          "clinical_significance": "Malabsorption, Crohn disease, obstruction",
+          "difficulty": 1
+        },
+        {
+          "structure": "Liver",
+          "location": "Right upper abdomen, below diaphragm",
+          "function": "Detoxification, protein synthesis, bile production, glucose storage",
+          "clinical_significance": "Hepatitis, cirrhosis, hepatic failure",
+          "difficulty": 1
+        },
+        {
+          "structure": "Gallbladder",
+          "location": "Inferior surface of liver",
+          "function": "Stores and concentrates bile for fat digestion",
+          "clinical_significance": "Cholelithiasis, cholecystitis",
+          "difficulty": 2
+        },
+        {
+          "structure": "Pancreas",
+          "location": "Retroperitoneal, behind stomach",
+          "function": "Exocrine: digestive enzymes; Endocrine: insulin and glucagon",
+          "clinical_significance": "Pancreatitis, pancreatic cancer, diabetes",
+          "difficulty": 2
+        },
+        {
+          "structure": "Colon (Large Intestine)",
+          "location": "Frames abdomen from cecum to rectum",
+          "function": "Water absorption, formation of feces, houses gut microbiome",
+          "clinical_significance": "Colorectal cancer, ulcerative colitis, diverticulitis",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "lesson_id": "med_anat_005",
+      "title": "Renal System",
+      "type": "anatomy",
+      "body_system": "urinary",
+      "items": [
+        {
+          "structure": "Kidneys",
+          "location": "Retroperitoneal, either side of spine at T12-L3",
+          "function": "Filter blood, produce urine, regulate electrolytes and blood pressure",
+          "clinical_significance": "Chronic kidney disease, acute kidney injury, nephrolithiasis",
+          "difficulty": 1
+        },
+        {
+          "structure": "Ureters",
+          "location": "Retroperitoneal, from kidneys to bladder",
+          "function": "Transport urine from kidneys to bladder via peristalsis",
+          "clinical_significance": "Ureterolithiasis, obstruction, reflux",
+          "difficulty": 2
+        },
+        {
+          "structure": "Bladder",
+          "location": "Pelvic cavity, behind pubic symphysis",
+          "function": "Store and expel urine; capacity ~400-600mL",
+          "clinical_significance": "Cystitis, urinary retention, bladder cancer",
+          "difficulty": 1
+        },
+        {
+          "structure": "Nephron",
+          "location": "Functional unit within kidney",
+          "function": "Filter blood, reabsorb nutrients, concentrate urine",
+          "clinical_significance": "Glomerulonephritis, tubular necrosis",
+          "difficulty": 3
+        }
+      ]
+    }
+  ],
+  "total_items": 35,
+  "estimated_time_minutes": 60,
+  "prerequisites": ["medicine_terminology_basics"]
+}
