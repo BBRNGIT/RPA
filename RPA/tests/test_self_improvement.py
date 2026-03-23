@@ -1,5 +1,5 @@
 """
-Tests for Self-Improvement Orchestrator (SI-001, SI-002)
+Tests for Self-Improvement Orchestrator (SI-001, SI-002, SI-003)
 
 Tests the unified entry point for closed-loop self-improvement.
 """
@@ -9,6 +9,8 @@ from datetime import datetime
 from pathlib import Path
 import tempfile
 import shutil
+import yaml
+import os
 
 from rpa.training.self_improvement import (
     SelfImprovementOrchestrator,
@@ -17,6 +19,21 @@ from rpa.training.self_improvement import (
     SystemHealth,
     create_self_improvement,
     run_improvement_cycle,
+)
+
+from rpa.training.si_config import (
+    SIConfiguration,
+    ConfidenceConfig,
+    MutationConfig,
+    ReinforcementConfig,
+    RetryConfigData,
+    CycleConfig,
+    PersistenceConfig,
+    GapDetectionConfig,
+    MonitoringConfig,
+    SafetyConfig,
+    get_si_config,
+    create_self_improvement_config_from_yaml,
 )
 
 
@@ -448,3 +465,316 @@ class TestDailyTimetableIntegration:
         si_tasks = [t for t in timetable.tasks if t.task_type == TaskType.SELF_IMPROVEMENT_CYCLE]
         
         assert len(si_tasks) == 2  # Custom: 2 cycles instead of 3
+
+
+class TestSIConfiguration:
+    """Tests for SI-003: YAML Configuration System."""
+    
+    @pytest.fixture
+    def temp_config_dir(self):
+        """Create temporary config directory."""
+        temp_dir = tempfile.mkdtemp()
+        yield Path(temp_dir)
+        shutil.rmtree(temp_dir, ignore_errors=True)
+    
+    def test_si_config_defaults(self):
+        """Test SIConfiguration default values."""
+        config = SIConfiguration()
+        
+        assert config.confidence.default_threshold == 0.7
+        assert config.confidence.low_confidence_threshold == 0.3
+        assert config.mutation.rate == 0.1
+        assert config.reinforcement.decay_rate == 0.05
+    
+    def test_si_config_load_from_yaml(self, temp_config_dir):
+        """Test loading configuration from YAML file."""
+        config_file = temp_config_dir / "test_config.yaml"
+        
+        yaml_content = """
+confidence:
+  default_threshold: 0.85
+  low_confidence_threshold: 0.4
+mutation:
+  rate: 0.2
+  max_per_cycle: 5
+"""
+        config_file.write_text(yaml_content)
+        
+        config = SIConfiguration(config_path=config_file)
+        config.load()
+        
+        assert config.confidence.default_threshold == 0.85
+        assert config.confidence.low_confidence_threshold == 0.4
+        assert config.mutation.rate == 0.2
+        assert config.mutation.max_per_cycle == 5
+    
+    def test_si_config_missing_file_uses_defaults(self, temp_config_dir):
+        """Test that missing config file uses defaults."""
+        config = SIConfiguration(config_path=temp_config_dir / "nonexistent.yaml")
+        result = config.load()
+        
+        assert result is True  # Still succeeds with defaults
+        assert config.confidence.default_threshold == 0.7
+    
+    def test_si_config_to_dict(self):
+        """Test converting config to dictionary."""
+        config = SIConfiguration()
+        config.load()
+        
+        data = config.to_dict()
+        
+        assert 'confidence' in data
+        assert 'mutation' in data
+        assert 'reinforcement' in data
+        assert 'retry' in data
+        assert 'cycle' in data
+    
+    def test_si_config_save(self, temp_config_dir):
+        """Test saving configuration to file."""
+        config = SIConfiguration()
+        config.load()
+        
+        # Modify a value
+        config.confidence.default_threshold = 0.9
+        
+        save_path = temp_config_dir / "saved_config.yaml"
+        result = config.save(save_path)
+        
+        assert result is True
+        assert save_path.exists()
+        
+        # Load and verify
+        loaded = SIConfiguration(config_path=save_path)
+        loaded.load()
+        assert loaded.confidence.default_threshold == 0.9
+    
+    def test_si_config_update(self):
+        """Test updating individual config values."""
+        config = SIConfiguration()
+        config.load()
+        
+        result = config.update('confidence', 'default_threshold', 0.95)
+        
+        assert result is True
+        assert config.confidence.default_threshold == 0.95
+    
+    def test_si_config_update_invalid_section(self):
+        """Test updating invalid section."""
+        config = SIConfiguration()
+        config.load()
+        
+        result = config.update('nonexistent', 'key', 'value')
+        
+        assert result is False
+    
+    def test_si_config_update_invalid_key(self):
+        """Test updating invalid key."""
+        config = SIConfiguration()
+        config.load()
+        
+        result = config.update('confidence', 'nonexistent', 'value')
+        
+        assert result is False
+    
+    def test_domain_specific_config(self, temp_config_dir):
+        """Test domain-specific configuration overrides."""
+        config_file = temp_config_dir / "domain_config.yaml"
+        
+        yaml_content = """
+confidence:
+  default_threshold: 0.7
+domains:
+  python:
+    confidence:
+      default_threshold: 0.6
+  medicine:
+    confidence:
+      default_threshold: 0.85
+"""
+        config_file.write_text(yaml_content)
+        
+        config = SIConfiguration(config_path=config_file)
+        config.load()
+        
+        # Base config
+        assert config.confidence.default_threshold == 0.7
+        
+        # Python domain override
+        python_config = config.get_domain_config('python')
+        assert python_config['confidence']['default_threshold'] == 0.6
+        
+        # Medicine domain override
+        medicine_config = config.get_domain_config('medicine')
+        assert medicine_config['confidence']['default_threshold'] == 0.85
+    
+    def test_get_si_config_singleton(self):
+        """Test get_si_config returns singleton."""
+        # Reset singleton
+        import rpa.training.si_config as si_config_module
+        si_config_module._config_instance = None
+        
+        config1 = get_si_config()
+        config2 = get_si_config()
+        
+        assert config1 is config2
+    
+    def test_create_self_improvement_config_from_yaml(self, temp_config_dir):
+        """Test creating SelfImprovementConfig from YAML."""
+        config_file = temp_config_dir / "test.yaml"
+        
+        yaml_content = """
+confidence:
+  default_threshold: 0.8
+mutation:
+  rate: 0.15
+  max_per_cycle: 20
+reinforcement:
+  decay_rate: 0.03
+cycle:
+  patterns_per_cycle: 100
+"""
+        config_file.write_text(yaml_content)
+        
+        si_config = create_self_improvement_config_from_yaml(config_file)
+        
+        assert si_config.confidence_threshold == 0.8
+        assert si_config.mutation_rate == 0.15
+        assert si_config.max_mutations_per_cycle == 20
+        assert si_config.reinforcement_decay == 0.03
+        assert si_config.patterns_per_cycle == 100
+
+
+class TestOrchestratorWithYAMLConfig:
+    """Tests for orchestrator using YAML configuration."""
+    
+    @pytest.fixture
+    def temp_storage(self):
+        """Create temporary storage directory."""
+        temp_dir = tempfile.mkdtemp()
+        yield Path(temp_dir)
+        shutil.rmtree(temp_dir, ignore_errors=True)
+    
+    @pytest.fixture
+    def temp_config(self):
+        """Create temporary config file."""
+        temp_dir = tempfile.mkdtemp()
+        config_file = Path(temp_dir) / "test_config.yaml"
+        
+        yaml_content = """
+confidence:
+  default_threshold: 0.75
+mutation:
+  rate: 0.12
+  max_per_cycle: 8
+cycle:
+  patterns_per_cycle: 25
+"""
+        config_file.write_text(yaml_content)
+        yield config_file
+        shutil.rmtree(temp_dir, ignore_errors=True)
+    
+    def test_orchestrator_uses_yaml_config(self, temp_storage, temp_config):
+        """Test that orchestrator loads YAML config by default."""
+        orchestrator = SelfImprovementOrchestrator(
+            storage_path=temp_storage,
+            config_path=temp_config
+        )
+        
+        assert orchestrator.config.confidence_threshold == 0.75
+        assert orchestrator.config.mutation_rate == 0.12
+        assert orchestrator.config.max_mutations_per_cycle == 8
+        assert orchestrator.config.patterns_per_cycle == 25
+    
+    def test_orchestrator_explicit_config_overrides_yaml(self, temp_storage, temp_config):
+        """Test that explicit config overrides YAML."""
+        explicit_config = SelfImprovementConfig(
+            confidence_threshold=0.99,
+            mutation_rate=0.5
+        )
+        
+        orchestrator = SelfImprovementOrchestrator(
+            storage_path=temp_storage,
+            config=explicit_config,
+            config_path=temp_config
+        )
+        
+        assert orchestrator.config.confidence_threshold == 0.99
+        assert orchestrator.config.mutation_rate == 0.5
+    
+    def test_orchestrator_disable_yaml_config(self, temp_storage, temp_config):
+        """Test disabling YAML config loading."""
+        orchestrator = SelfImprovementOrchestrator(
+            storage_path=temp_storage,
+            config_path=temp_config,
+            use_yaml_config=False
+        )
+        
+        # Should use defaults
+        assert orchestrator.config.confidence_threshold == 0.7
+        assert orchestrator.config.mutation_rate == 0.1
+
+
+class TestConfigDataclasses:
+    """Tests for individual config dataclasses."""
+    
+    def test_confidence_config(self):
+        """Test ConfidenceConfig dataclass."""
+        config = ConfidenceConfig(
+            default_threshold=0.9,
+            low_confidence_threshold=0.4,
+            failure_penalty=0.15
+        )
+        
+        assert config.default_threshold == 0.9
+        assert config.low_confidence_threshold == 0.4
+        assert config.failure_penalty == 0.15
+    
+    def test_mutation_config(self):
+        """Test MutationConfig dataclass."""
+        config = MutationConfig(
+            rate=0.25,
+            max_per_cycle=15,
+            auto_enabled=False
+        )
+        
+        assert config.rate == 0.25
+        assert config.max_per_cycle == 15
+        assert config.auto_enabled is False
+    
+    def test_reinforcement_config(self):
+        """Test ReinforcementConfig dataclass."""
+        config = ReinforcementConfig(
+            decay_rate=0.08,
+            min_strength_threshold=0.15,
+            strong_pattern_threshold=0.8
+        )
+        
+        assert config.decay_rate == 0.08
+        assert config.min_strength_threshold == 0.15
+        assert config.strong_pattern_threshold == 0.8
+    
+    def test_cycle_config(self):
+        """Test CycleConfig dataclass."""
+        config = CycleConfig(
+            patterns_per_cycle=100,
+            cycles_per_day=5,
+            schedule_morning=7,
+            schedule_evening=23
+        )
+        
+        assert config.patterns_per_cycle == 100
+        assert config.cycles_per_day == 5
+        assert config.schedule_morning == 7
+        assert config.schedule_evening == 23
+    
+    def test_safety_config(self):
+        """Test SafetyConfig dataclass."""
+        config = SafetyConfig(
+            max_daily_mutations=50,
+            validate_mutations=False,
+            protected_tags=['core', 'safety', 'system', 'critical']
+        )
+        
+        assert config.max_daily_mutations == 50
+        assert config.validate_mutations is False
+        assert 'critical' in config.protected_tags

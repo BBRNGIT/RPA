@@ -175,16 +175,32 @@ class SelfImprovementOrchestrator:
     def __init__(
         self,
         storage_path: Optional[Path] = None,
-        config: Optional[SelfImprovementConfig] = None
+        config: Optional[SelfImprovementConfig] = None,
+        config_path: Optional[Path] = None,
+        use_yaml_config: bool = True
     ):
         """
         Initialize the self-improvement orchestrator.
         
         Args:
             storage_path: Path for LTM storage
-            config: Configuration settings
+            config: Configuration settings (overrides YAML if provided)
+            config_path: Path to YAML config file
+            use_yaml_config: Whether to load config from YAML file
         """
-        self.config = config or SelfImprovementConfig()
+        # Load configuration
+        if config is not None:
+            self.config = config
+        elif use_yaml_config:
+            try:
+                from rpa.training.si_config import create_self_improvement_config_from_yaml
+                self.config = create_self_improvement_config_from_yaml(config_path)
+            except Exception as e:
+                logger.warning(f"Could not load YAML config: {e}, using defaults")
+                self.config = SelfImprovementConfig()
+        else:
+            self.config = SelfImprovementConfig()
+        
         self.storage_path = storage_path or Path.home() / ".rpa" / "memory"
         self.storage_path.mkdir(parents=True, exist_ok=True)
         
