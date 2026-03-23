@@ -1,0 +1,34 @@
+{
+  "curriculum_id": "finance_terminology_basics",
+  "name": "Financial Terminology Fundamentals",
+  "description": "Foundation level financial terminology and concepts",
+  "level": 1,
+  "domain": "finance",
+  "lessons": [
+    {
+      "lesson_id": "fin_term_001",
+      "title": "Basic Financial Terms",
+      "type": "terminology",
+      "items": [
+        {"term": "Asset", "definition": "A resource with economic value", "difficulty": 1},
+        {"term": "Liability", "definition": "A financial obligation or debt", "difficulty": 1},
+        {"term": "Equity", "definition": "Ownership value after deducting liabilities", "difficulty": 1},
+        {"term": "Revenue", "definition": "Income from business operations", "difficulty": 1},
+        {"term": "Expense", "definition": "Costs incurred in generating revenue", "difficulty": 1}
+      ]
+    },
+    {
+      "lesson_id": "fin_term_002",
+      "title": "Investment Terms",
+      "type": "terminology",
+      "items": [
+        {"term": "Dividend", "definition": "Distribution of earnings to shareholders", "difficulty": 1},
+        {"term": "Capital Gain", "definition": "Profit from selling above purchase price", "difficulty": 1},
+        {"term": "Portfolio", "definition": "Collection of investments", "difficulty": 1}
+      ]
+    }
+  ],
+  "total_items": 8,
+  "estimated_time_minutes": 20,
+  "prerequisites": []
+}

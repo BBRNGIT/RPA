@@ -6,6 +6,7 @@ This package contains specialized learning modules for different domains:
 - coding: Programming language learning (Python, JavaScript, etc.)
 - medicine: Medical knowledge (terminology, anatomy, conditions, pharmacology)
 - health: Health and wellness (nutrition, exercise, mental health, preventive care)
+- finance: Finance and economics (terminology, investing, accounting, indicators)
 """
 
 from rpa.domains.english import (
@@ -41,6 +42,19 @@ from rpa.domains.health import (
     HealthProficiency,
 )
 
+from rpa.domains.finance import (
+    FinanceDomain,
+    FinancialTerm,
+    FinancialRatio,
+    InvestmentConcept,
+    EconomicIndicator,
+    FinancialCategory,
+    FinancialRatioType,
+    AssetClass,
+    EconomicIndicatorType,
+    FinanceProficiency,
+)
+
 __all__ = [
     # English Domain
     "EnglishDomain",
@@ -69,4 +83,15 @@ __all__ = [
     "ExerciseType",
     "MentalHealthTopic",
     "HealthProficiency",
+    # Finance Domain
+    "FinanceDomain",
+    "FinancialTerm",
+    "FinancialRatio",
+    "InvestmentConcept",
+    "EconomicIndicator",
+    "FinancialCategory",
+    "FinancialRatioType",
+    "AssetClass",
+    "EconomicIndicatorType",
+    "FinanceProficiency",
 ]
