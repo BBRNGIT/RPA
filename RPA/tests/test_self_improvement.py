@@ -1,5 +1,5 @@
 """
-Tests for Self-Improvement Orchestrator (SI-001)
+Tests for Self-Improvement Orchestrator (SI-001, SI-002)
 
 Tests the unified entry point for closed-loop self-improvement.
 """
@@ -351,3 +351,100 @@ class TestCycleHistory:
         # Check order
         for i, cycle in enumerate(orchestrator.cycle_history):
             assert cycle.cycle_id.endswith(f"_{i}")
+
+
+class TestDailyTimetableIntegration:
+    """Tests for SI-002: Daily Timetable Integration."""
+    
+    def test_self_improvement_task_type_exists(self):
+        """Test that SELF_IMPROVEMENT_CYCLE task type exists."""
+        from rpa.scheduling.daily_timetable import TaskType
+        
+        assert hasattr(TaskType, 'SELF_IMPROVEMENT_CYCLE')
+        assert TaskType.SELF_IMPROVEMENT_CYCLE.value == "self_improvement_cycle"
+    
+    def test_scheduler_creates_si_tasks(self):
+        """Test that scheduler creates self-improvement tasks."""
+        from rpa.scheduling.daily_timetable import TimetableScheduler, TaskType
+        
+        scheduler = TimetableScheduler()
+        timetable = scheduler.generate_daily_timetable()
+        
+        si_tasks = [t for t in timetable.tasks if t.task_type == TaskType.SELF_IMPROVEMENT_CYCLE]
+        
+        # Should have 3 SI cycles per day
+        assert len(si_tasks) == 3
+        
+        # Check cycle IDs
+        cycle_ids = [t.config.get('cycle_id') for t in si_tasks]
+        assert 'morning' in cycle_ids
+        assert 'midday' in cycle_ids
+        assert 'evening' in cycle_ids
+    
+    def test_si_tasks_high_priority(self):
+        """Test that SI tasks are high priority."""
+        from rpa.scheduling.daily_timetable import TimetableScheduler, TaskType, TaskPriority
+        
+        scheduler = TimetableScheduler()
+        timetable = scheduler.generate_daily_timetable()
+        
+        si_tasks = [t for t in timetable.tasks if t.task_type == TaskType.SELF_IMPROVEMENT_CYCLE]
+        
+        for task in si_tasks:
+            assert task.priority == TaskPriority.HIGH
+    
+    def test_executor_has_si_orchestrator(self):
+        """Test that executor has lazy-loaded SI orchestrator."""
+        from rpa.scheduling.daily_timetable import DailyJobExecutor
+        
+        executor = DailyJobExecutor(storage_path='/tmp/test_si_executor')
+        
+        # Initially None
+        assert executor._si_orchestrator is None
+        
+        # Access property to lazy load
+        orchestrator = executor.si_orchestrator
+        
+        assert orchestrator is not None
+        assert executor._si_orchestrator is not None
+    
+    def test_execute_si_task(self):
+        """Test executing a self-improvement task."""
+        from rpa.scheduling.daily_timetable import (
+            DailyJobExecutor, ScheduledTask, TaskType, TaskPriority
+        )
+        from datetime import time
+        
+        executor = DailyJobExecutor(storage_path='/tmp/test_si_execute')
+        
+        task = ScheduledTask(
+            task_id='test_si_task',
+            task_type=TaskType.SELF_IMPROVEMENT_CYCLE,
+            priority=TaskPriority.HIGH,
+            scheduled_time=time(6, 0),
+            duration_minutes=10,
+            config={'cycle_id': 'test', 'patterns': 10}
+        )
+        
+        result = executor.execute_task(task)
+        
+        assert result['success'] is True
+        assert 'metrics' in result
+        assert result['metrics']['success'] is True
+        assert 'cycle_completed' in result['metrics']
+    
+    def test_si_config_customizable(self):
+        """Test that SI config can be customized."""
+        from rpa.scheduling.daily_timetable import TimetableScheduler
+        
+        # Custom config
+        scheduler = TimetableScheduler()
+        scheduler.config['self_improvement']['cycles_per_day'] = 2
+        scheduler.config['self_improvement']['patterns_per_cycle'] = 100
+        
+        timetable = scheduler.generate_daily_timetable()
+        
+        from rpa.scheduling.daily_timetable import TaskType
+        si_tasks = [t for t in timetable.tasks if t.task_type == TaskType.SELF_IMPROVEMENT_CYCLE]
+        
+        assert len(si_tasks) == 2  # Custom: 2 cycles instead of 3

@@ -35,6 +35,7 @@ class TaskType(Enum):
     RETRY_FAILED = "retry_failed"
     CONSOLIDATION = "consolidation"
     HUGGINGFACE_TRAINING = "huggingface_training"
+    SELF_IMPROVEMENT_CYCLE = "self_improvement_cycle"  # SI-002: Closed-loop improvement
 
 
 class TaskPriority(Enum):
@@ -167,6 +168,11 @@ class TimetableScheduler:
                 "evening": {"start": "18:00", "end": "22:00", "types": ["vocabulary_review", "retry_failed"]},
             },
             "datasets": ["wikitext", "ag_news", "mbpp", "yelp"],
+            "self_improvement": {
+                "enabled": True,
+                "cycles_per_day": 3,  # Morning, midday, evening
+                "patterns_per_cycle": 50,
+            },
         }
         
         if path and Path(path).exists():
@@ -304,6 +310,45 @@ class TimetableScheduler:
             )
             timetable.tasks.append(task)
         
+        # 7. Self-Improvement Cycles (SI-002)
+        si_config = self.config.get("self_improvement", {})
+        if si_config.get("enabled", True):
+            cycles = si_config.get("cycles_per_day", 3)
+            patterns_per = si_config.get("patterns_per_cycle", 50)
+            
+            # Morning cycle (6 AM - before training)
+            if cycles >= 1:
+                task = self._create_task(
+                    task_type=TaskType.SELF_IMPROVEMENT_CYCLE,
+                    priority=TaskPriority.HIGH,
+                    scheduled_time=time(6, 0),
+                    duration_minutes=10,
+                    config={"cycle_id": "morning", "patterns": patterns_per},
+                )
+                timetable.tasks.append(task)
+            
+            # Midday cycle (12 PM)
+            if cycles >= 2:
+                task = self._create_task(
+                    task_type=TaskType.SELF_IMPROVEMENT_CYCLE,
+                    priority=TaskPriority.HIGH,
+                    scheduled_time=time(12, 0),
+                    duration_minutes=10,
+                    config={"cycle_id": "midday", "patterns": patterns_per},
+                )
+                timetable.tasks.append(task)
+            
+            # Evening cycle (10 PM - after reviews)
+            if cycles >= 3:
+                task = self._create_task(
+                    task_type=TaskType.SELF_IMPROVEMENT_CYCLE,
+                    priority=TaskPriority.HIGH,
+                    scheduled_time=time(22, 0),
+                    duration_minutes=10,
+                    config={"cycle_id": "evening", "patterns": patterns_per},
+                )
+                timetable.tasks.append(task)
+        
         # Sort by scheduled time
         timetable.tasks.sort(key=lambda t: t.scheduled_time)
         
@@ -353,6 +398,7 @@ class DailyJobExecutor:
         # Import heavy dependencies lazily
         self._trainer = None
         self._exam_engine = None
+        self._si_orchestrator = None  # Self-improvement orchestrator
     
     @property
     def trainer(self):
@@ -367,6 +413,22 @@ class DailyJobExecutor:
             from interactive_train import InteractiveTrainer
             self._trainer = InteractiveTrainer()
         return self._trainer
+    
+    @property
+    def si_orchestrator(self):
+        """Lazy load Self-Improvement Orchestrator (SI-002)."""
+        if self._si_orchestrator is None:
+            from rpa.training.self_improvement import SelfImprovementOrchestrator, SelfImprovementConfig
+            config = SelfImprovementConfig(
+                patterns_per_cycle=50,
+                max_mutations_per_cycle=5,
+                enable_auto_mutation=True
+            )
+            self._si_orchestrator = SelfImprovementOrchestrator(
+                storage_path=self.storage_path / "si_memory",
+                config=config
+            )
+        return self._si_orchestrator
     
     def execute_task(self, task: ScheduledTask) -> Dict[str, Any]:
         """
@@ -406,6 +468,9 @@ class DailyJobExecutor:
             
             elif task.task_type == TaskType.RETRY_FAILED:
                 metrics = self._execute_retry(task.config)
+            
+            elif task.task_type == TaskType.SELF_IMPROVEMENT_CYCLE:
+                metrics = self._execute_self_improvement(task.config)
             
             else:
                 metrics = {"error": f"Unknown task type: {task.task_type}"}
@@ -579,6 +644,63 @@ class DailyJobExecutor:
             "success": True,
             "retried": retry_count,
         }
+    
+    def _execute_self_improvement(self, config: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Execute self-improvement cycle (SI-002).
+        
+        Runs the closed-loop improvement:
+        1. Evaluate and reinforce patterns
+        2. Apply time-based decay
+        3. Mutate weak patterns
+        4. Detect knowledge gaps
+        5. Consolidate learning
+        
+        Args:
+            config: Task configuration with:
+                - cycle_id: Identifier for this cycle (morning/midday/evening)
+                - patterns: Number of patterns to process
+        
+        Returns:
+            Metrics from the improvement cycle
+        """
+        cycle_id = config.get("cycle_id", "unknown")
+        patterns_target = config.get("patterns", 50)
+        
+        logger.info(f"Running self-improvement cycle: {cycle_id}")
+        
+        try:
+            # Run the improvement cycle
+            cycle = self.si_orchestrator.run_improvement_cycle()
+            
+            # Get system health after cycle
+            health = self.si_orchestrator.get_system_health()
+            
+            return {
+                "success": True,
+                "cycle_id": cycle_id,
+                "cycle_completed": cycle.cycle_id,
+                "patterns_evaluated": cycle.patterns_evaluated,
+                "patterns_reinforced": cycle.patterns_reinforced,
+                "patterns_decayed": cycle.patterns_decayed,
+                "patterns_mutated": cycle.patterns_mutated,
+                "successful_mutations": cycle.successful_mutations,
+                "gaps_detected": cycle.gaps_detected,
+                "gaps_closed": cycle.gaps_closed,
+                "duration_seconds": cycle.duration_seconds,
+                "total_patterns": health.total_patterns,
+                "strong_patterns": health.strong_patterns,
+                "weak_patterns": health.weak_patterns,
+                "error_count": len(cycle.errors),
+            }
+            
+        except Exception as e:
+            logger.error(f"Self-improvement cycle failed: {e}")
+            return {
+                "success": False,
+                "cycle_id": cycle_id,
+                "error": str(e),
+            }
     
     def execute_timetable(self, timetable: DailyTimetable) -> DailyTimetable:
         """

@@ -106,3 +106,34 @@ Stage Summary:
 - Total tests: 697 + 20 = 717 passing
 - Self-improvement orchestrator fully functional
 - Ready for SI-002: Integration with Daily Timetable
+
+---
+Task ID: 4
+Agent: Super Z
+Task: SI-002 - Integrate self-improvement with daily timetable
+
+Work Log:
+- Added SELF_IMPROVEMENT_CYCLE to TaskType enum
+- Updated TimetableScheduler to generate SI tasks:
+  - 3 cycles per day (morning 6AM, midday 12PM, evening 10PM)
+  - HIGH priority for all SI tasks
+  - Configurable cycles_per_day and patterns_per_cycle
+- Updated DailyJobExecutor:
+  - Added lazy-loaded si_orchestrator property
+  - Created _execute_self_improvement() method
+  - Returns comprehensive metrics: patterns evaluated, reinforced, decayed, mutated, gaps detected/closed
+- Created 6 new tests for SI-002 integration:
+  - test_self_improvement_task_type_exists
+  - test_scheduler_creates_si_tasks
+  - test_si_tasks_high_priority
+  - test_executor_has_si_orchestrator
+  - test_execute_si_task
+  - test_si_config_customizable
+- All 723 tests pass (no regression)
+
+Stage Summary:
+- Modified: rpa/scheduling/daily_timetable.py
+- Modified: tests/test_self_improvement.py (added SI-002 tests)
+- Total tests: 717 → 723 passing
+- Self-improvement cycles now automatically scheduled in daily learning
+- Ready for SI-003: Configuration System
