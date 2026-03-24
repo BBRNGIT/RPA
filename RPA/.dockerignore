@@ -1,61 +1,24 @@
-# RPA Backend Docker Ignore
+# RPA Frontend Docker Ignore (Next.js)
 # Skip unnecessary files to speed up builds
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-*.egg-info/
-.eggs/
-dist/
-build/
-*.egg
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
 
-# Virtual environments
-.venv/
-venv/
-ENV/
-env/
+# Build output
+.next/
+out/
+build/
+
+# Testing
+coverage/
 
 # IDE
 .idea/
 .vscode/
 *.swp
 *.swo
-*~
-
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
-.nox/
-
-# MyPy
-.mypy_cache/
-
-# Git
-.git/
-.gitignore
-
-# Docker
-docker/
-Dockerfile*
-docker-compose*.yml
-
-# Documentation
-docs/
-*.md
-!README.md
-
-# Memory storage (large files)
-memory_storage/
-memory/
-
-# Node.js (if any)
-node_modules/
 
 # OS
 .DS_Store
@@ -65,3 +28,50 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+
+# Git
+.git/
+.gitignore
+
+# RPA Python stuff (keep docker configs)
+RPA/.git/
+RPA/.venv/
+RPA/venv/
+RPA/__pycache__/
+RPA/**/__pycache__/
+RPA/*.pyc
+RPA/**/*.pyc
+RPA/tests/
+RPA/memory/
+RPA/memory_storage/
+RPA/docs/
+RPA/upload/
+RPA/skills/
+RPA/examples/
+RPA/mini-services/
+RPA/.zscripts/
+RPA/*.py
+RPA/rpa/
+RPA/bun.lock
+RPA/package.json
+RPA/tsconfig.json
+RPA/requirements.txt
+
+# Documentation
+*.md
+
+# Misc
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Keep Docker configs (don't exclude RPA/docker/)
+!RPA/docker/

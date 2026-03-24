@@ -1,0 +1,814 @@
+{
+  "skill_name": "ASR",
+  "skill_description": "Implement speech-to-text (ASR/automatic speech recognition) capabilities using the z-ai-web-dev-sdk. Use this skill when the user needs to transcribe audio files, convert speech to text, build voice input features, or process audio recordings. Supports base64 encoded audio files and returns accurate text transcriptions.",
+  "items": [
+    {
+      "item_id": "skill_asr_concept_a63699b9",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding asr (speech to text) skill",
+      "instruction": "This skill guides the implementation of speech-to-text (ASR) functionality using the z-ai-web-dev-sdk package, enabling accurate transcription of spoken audio into text.",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_5b442702",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding skills path",
+      "instruction": "**Skill Location**: `{project_path}/skills/ASR`\n\nthis skill is located at above path in your project.\n\n**Reference Scripts**: Example test scripts are available in the `{Skill Location}/scripts/` directory for quick testing and reference. See `{Skill Location}/scripts/asr.ts` for a working example.",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_3eea4856",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "Speech-to-Text (ASR - Automatic Speech Recognition) allows you to build applications that convert spoken language in audio files into written text, enabling voice-controlled interfaces, transcription services, and audio content analysis.\n\n**IMPORTANT**: z-ai-web-dev-sdk MUST be used in backend code only. Never use it in client-side code.",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_ffbd1bf2",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding prerequisites",
+      "instruction": "The z-ai-web-dev-sdk package is already installed. Import it as shown in the examples below.",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_44f3a42e",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding cli usage (for simple tasks)",
+      "instruction": "For simple audio transcription tasks, you can use the z-ai CLI instead of writing code. This is ideal for quick transcriptions, testing audio files, or batch processing.",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_c4d33314",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding basic transcription from file",
+      "instruction": "```bash",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_2fa4ad5b",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding transcribe an audio file",
+      "instruction": "z-ai asr --file ./audio.wav",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_538086c4",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding save transcription to json file",
+      "instruction": "z-ai asr -f ./recording.mp3 -o transcript.json",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_baad4bd8",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding transcribe and view output",
+      "instruction": "z-ai asr --file ./interview.wav --output result.json\n```",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_4f1ae771",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding transcription from base64",
+      "instruction": "```bash",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_7baedf98",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding transcribe from base64 encoded audio",
+      "instruction": "z-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_c7b9114f",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding using short option",
+      "instruction": "z-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n```",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_2d296532",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding streaming output",
+      "instruction": "```bash",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_381f5866",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding stream transcription results",
+      "instruction": "z-ai asr -f ./audio.wav --stream\n```",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_3af2eb4d",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding cli parameters",
+      "instruction": "- `--file, -f <path>`: **Required** (if not using --base64) - Audio file path\n- `--base64, -b <base64>`: **Required** (if not using --file) - Base64 encoded audio\n- `--output, -o <path>`: Optional - Output file path (JSON format)\n- `--stream`: Optional - Stream the transcription output",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_e55f0827",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding supported audio formats",
+      "instruction": "The ASR service supports various audio formats including:\n- WAV (.wav)\n- MP3 (.mp3)\n- Other common audio formats",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_652a02ee",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding when to use cli vs sdk",
+      "instruction": "**Use CLI for:**\n- Quick audio file transcriptions\n- Testing audio recognition accuracy\n- Simple batch processing scripts\n- One-off transcription tasks\n\n**Use SDK for:**\n- Real-time audio transcription in applications\n- Integration with recording systems\n- Custom audio processing workflows\n- Production applications with streaming audio",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_7f074450",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding basic asr implementation",
+      "instruction": "",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_718824b6",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding simple audio transcription",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function transcribeAudio(audioFilePath) {\n  const zai = await ZAI.create();\n\n  // Read audio file and convert to base64\n  const audioFile = fs.readFileSync(audioFilePath);\n  const base64Audio = audioFile.toString('base64');\n\n  const response = await zai.audio.asr.create({\n    file_base64: base64Audio\n  });\n\n  return response.text;\n}\n\n// Usage\nconst transcription = await transcribeAudio('./audio.wav');\nconsole.log('Tran",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_72a3bcd3",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding transcribe multiple audio files",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function transcribeBatch(audioFilePaths) {\n  const zai = await ZAI.create();\n  const results = [];\n\n  for (const filePath of audioFilePaths) {\n    try {\n      const audioFile = fs.readFileSync(filePath);\n      const base64Audio = audioFile.toString('base64');\n\n      const response = await zai.audio.asr.create({\n        file_base64: base64Audio\n      });\n\n      results.push({\n        file: filePath,\n        success: tru",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_195fba16",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding advanced use cases",
+      "instruction": "",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_a3b3bc02",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding audio file processing with metadata",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\nimport path from 'path';\n\nasync function transcribeWithMetadata(audioFilePath) {\n  const zai = await ZAI.create();\n\n  // Get file metadata\n  const stats = fs.statSync(audioFilePath);\n  const audioFile = fs.readFileSync(audioFilePath);\n  const base64Audio = audioFile.toString('base64');\n\n  const startTime = Date.now();\n\n  const response = await zai.audio.asr.create({\n    file_base64: base64Audio\n  });\n\n  const endTime = Date.n",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_ff26d6ad",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding real-time audio processing service",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nclass ASRService {\n  constructor() {\n    this.zai = null;\n    this.transcriptionCache = new Map();\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  generateCacheKey(audioBuffer) {\n    const crypto = require('crypto');\n    return crypto.createHash('md5').update(audioBuffer).digest('hex');\n  }\n\n  async transcribe(audioFilePath, useCache = true) {\n    const audioBuffer = fs.readFileSync(audioFilePath);\n    ",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_bb5fa2ba",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding directory transcription",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\nimport path from 'path';\n\nasync function transcribeDirectory(directoryPath, outputJsonPath) {\n  const zai = await ZAI.create();\n\n  // Get all audio files\n  const files = fs.readdirSync(directoryPath);\n  const audioFiles = files.filter(file => \n    /\\.(wav|mp3|m4a|flac|ogg)$/i.test(file)\n  );\n\n  const results = {\n    directory: directoryPath,\n    totalFiles: audioFiles.length,\n    processedAt: new Date().toISOString(),\n    tra",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_cf38a8ff",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding best practices",
+      "instruction": "",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_2f41cbaf",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding 1. audio format handling",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function transcribeAnyFormat(audioFilePath) {\n  // Supported formats: WAV, MP3, M4A, FLAC, OGG, etc.\n  const validExtensions = ['.wav', '.mp3', '.m4a', '.flac', '.ogg'];\n  const ext = audioFilePath.toLowerCase().substring(audioFilePath.lastIndexOf('.'));\n\n  if (!validExtensions.includes(ext)) {\n    throw new Error(`Unsupported audio format: ${ext}`);\n  }\n\n  const zai = await ZAI.create();\n  const audioFile = fs.readFil",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_50c27f80",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding 2. error handling",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function safeTranscribe(audioFilePath) {\n  try {\n    // Validate file exists\n    if (!fs.existsSync(audioFilePath)) {\n      throw new Error(`File not found: ${audioFilePath}`);\n    }\n\n    // Check file size (e.g., limit to 100MB)\n    const stats = fs.statSync(audioFilePath);\n    const fileSizeMB = stats.size / (1024 * 1024);\n    \n    if (fileSizeMB > 100) {\n      throw new Error(`File too large: ${fileSizeMB.toFixed(2)",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_2ba24ad5",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding 3. post-processing transcriptions",
+      "instruction": "```javascript\nfunction cleanTranscription(text) {\n  // Remove excessive whitespace\n  text = text.replace(/\\s+/g, ' ').trim();\n\n  // Capitalize first letter of sentences\n  text = text.replace(/(^\\w|[.!?]\\s+\\w)/g, match => match.toUpperCase());\n\n  // Remove filler words (optional)\n  const fillers = ['um', 'uh', 'ah', 'like', 'you know'];\n  const fillerPattern = new RegExp(`\\\\b(${fillers.join('|')})\\\\b`, 'gi');\n  text = text.replace(fillerPattern, '').replace(/\\s+/g, ' ');\n\n  return text;\n}\n\nasync ",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_588733f3",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding common use cases",
+      "instruction": "1. **Meeting Transcription**: Convert recorded meetings into searchable text\n2. **Interview Processing**: Transcribe interviews for analysis and documentation\n3. **Podcast Transcription**: Create text versions of podcast episodes\n4. **Voice Notes**: Convert voice memos to text for easier reference\n5. **Call Center Analytics**: Analyze customer service calls\n6. **Accessibility**: Provide text alternatives for audio content\n7. **Voice Commands**: Enable voice-controlled applications\n8. **Language ",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_10b2d217",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding integration examples",
+      "instruction": "",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_68ed1813",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding express.js api endpoint",
+      "instruction": "```javascript\nimport express from 'express';\nimport multer from 'multer';\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nconst app = express();\nconst upload = multer({ dest: 'uploads/' });\n\nlet zaiInstance;\n\nasync function initZAI() {\n  zaiInstance = await ZAI.create();\n}\n\napp.post('/api/transcribe', upload.single('audio'), async (req, res) => {\n  try {\n    if (!req.file) {\n      return res.status(400).json({ error: 'No audio file provided' });\n    }\n\n    const audioFile = fs.readFile",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_fff02b14",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding troubleshooting",
+      "instruction": "**Issue**: \"SDK must be used in backend\"\n- **Solution**: Ensure z-ai-web-dev-sdk is only imported in server-side code\n\n**Issue**: Empty or incorrect transcription\n- **Solution**: Verify audio quality and format. Check if audio contains clear speech\n\n**Issue**: Large file processing fails\n- **Solution**: Consider splitting large audio files into smaller segments\n\n**Issue**: Slow transcription speed\n- **Solution**: Implement caching for repeated transcriptions, optimize file sizes\n\n**Issue**: Memo",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_23e8b2ff",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding performance tips",
+      "instruction": "1. **Reuse SDK Instance**: Create once, use multiple times\n2. **Implement Caching**: Cache transcriptions for duplicate files\n3. **Batch Processing**: Process multiple files efficiently with proper queuing\n4. **Audio Optimization**: Compress audio files before processing when possible\n5. **Async Operations**: Use Promise.all for parallel processing when appropriate",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_fa0f0a35",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding audio quality guidelines",
+      "instruction": "For best transcription results:\n- **Sample Rate**: 16kHz or higher\n- **Format**: WAV, MP3, or M4A recommended\n- **Noise Level**: Minimize background noise\n- **Speech Clarity**: Clear pronunciation and normal speaking pace\n- **File Size**: Under 100MB recommended for individual files",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_concept_9e0c1a75",
+      "skill_name": "ASR",
+      "category": "concept",
+      "concept": "Understanding remember",
+      "instruction": "- Always use z-ai-web-dev-sdk in backend code only\n- The SDK is already installed - import as shown in examples\n- Audio files must be converted to base64 before processing\n- Implement proper error handling for production applications\n- Consider audio quality for best transcription accuracy\n- Clean up temporary files after processing\n- Cache results for frequently transcribed files",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n",
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n",
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "expert",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_instruction_ee36d372",
+      "skill_name": "ASR",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--file, -f <path>`: **Required** (if not using --...",
+      "instruction": "`--file, -f <path>`: **Required** (if not using --base64) - Audio file path",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_instruction_e8e65e3c",
+      "skill_name": "ASR",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--base64, -b <base64>`: **Required** (if not usin...",
+      "instruction": "`--base64, -b <base64>`: **Required** (if not using --file) - Base64 encoded audio",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_instruction_af5f02d2",
+      "skill_name": "ASR",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--output, -o <path>`: Optional - Output file path...",
+      "instruction": "`--output, -o <path>`: Optional - Output file path (JSON format)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_instruction_57cdbd5c",
+      "skill_name": "ASR",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--stream`: Optional - Stream the transcription ou...",
+      "instruction": "`--stream`: Optional - Stream the transcription output",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_instruction_8a2ffc05",
+      "skill_name": "ASR",
+      "category": "instruction",
+      "concept": "Rule or guideline: WAV (.wav)...",
+      "instruction": "WAV (.wav)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_instruction_c1ce9a66",
+      "skill_name": "ASR",
+      "category": "instruction",
+      "concept": "Rule or guideline: MP3 (.mp3)...",
+      "instruction": "MP3 (.mp3)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_instruction_31f3bf16",
+      "skill_name": "ASR",
+      "category": "instruction",
+      "concept": "Rule or guideline: Other common audio formats...",
+      "instruction": "Other common audio formats",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_instruction_343cb2cb",
+      "skill_name": "ASR",
+      "category": "instruction",
+      "concept": "Rule or guideline: Quick audio file transcriptions...",
+      "instruction": "Quick audio file transcriptions",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_instruction_74c6da85",
+      "skill_name": "ASR",
+      "category": "instruction",
+      "concept": "Rule or guideline: Testing audio recognition accuracy...",
+      "instruction": "Testing audio recognition accuracy",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_instruction_ecb2d5c4",
+      "skill_name": "ASR",
+      "category": "instruction",
+      "concept": "Rule or guideline: Simple batch processing scripts...",
+      "instruction": "Simple batch processing scripts",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_code_pattern_bf9a76e8",
+      "skill_name": "ASR",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from ASR",
+      "examples": [
+        "# Transcribe an audio file\nz-ai asr --file ./audio.wav\n\n# Save transcription to JSON file\nz-ai asr -f ./recording.mp3 -o transcript.json\n\n# Transcribe and view output\nz-ai asr --file ./interview.wav --output result.json\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_code_pattern_492eaf61",
+      "skill_name": "ASR",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from ASR",
+      "examples": [
+        "# Transcribe from base64 encoded audio\nz-ai asr --base64 \"UklGRiQAAABXQVZFZm10...\" -o result.json\n\n# Using short option\nz-ai asr -b \"base64_encoded_audio_data\" -o transcript.json\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_code_pattern_efe3b5b0",
+      "skill_name": "ASR",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from ASR",
+      "examples": [
+        "# Stream transcription results\nz-ai asr -f ./audio.wav --stream\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_code_pattern_0c9fde4d",
+      "skill_name": "ASR",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from ASR",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function transcribeAudio(audioFilePath) {\n  const zai = await ZAI.create();\n\n  // Read audio file and convert to base64\n  const audioFile = fs.readFileSync(audioFilePath);\n  const base64Audio = audioFile.toString('base64');\n\n  const response = await zai.audio.asr.create({\n    file_base64: base64Audio\n  });\n\n  return response.text;\n}\n\n// Usage\nconst transcription = await transcribeAudio('./audio.wav');\nconsole.log('Transcription:', transcription);\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_code_pattern_e4e3798c",
+      "skill_name": "ASR",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from ASR",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function transcribeBatch(audioFilePaths) {\n  const zai = await ZAI.create();\n  const results = [];\n\n  for (const filePath of audioFilePaths) {\n    try {\n      const audioFile = fs.readFileSync(filePath);\n      const base64Audio = audioFile.toString('base64');\n\n      const response = await zai.audio.asr.create({\n        file_base64: base64Audio\n      });\n\n      results.push({\n        file: filePath,\n        success: true,\n        transcription: response.text\n      });\n    } catch (error) {\n      results.push({\n        file: filePath,\n        success: false,\n        error: error.message\n      });\n    }\n  }\n\n  return results;\n}\n\n// Usage\nconst files = ['./interview1.wav', './interview2.wav', './interview3.wav'];\nconst transcriptions = await transcribeBatch(files);\n\ntranscriptions.forEach(result => {\n  if (result.success) {\n    console.log(`${result.file}: ${result.transcription}`);\n  } else {\n    console.error(`${result.file}: Error - ${result.error}`);\n  }\n});\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_assessment_53051c15",
+      "skill_name": "ASR",
+      "category": "assessment",
+      "concept": "Apply ASR in a practical project",
+      "instruction": "Demonstrate mastery of ASR by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using ASR",
+        "Explain when ASR should be used",
+        "Identify the core concepts of ASR",
+        "Apply ASR to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_asr_contextualization_9e8f06fc",
+      "skill_name": "ASR",
+      "category": "contextualization",
+      "concept": "When to use ASR",
+      "instruction": "Learn when to apply ASR in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using ASR",
+        "User needs help with coding -> evaluate if ASR applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate ASR is needed",
+        "Distinguish between ASR and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 52,
+  "generated_at": "2026-03-24T04:43:44.495068",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/ASR/SKILL.md"
+}

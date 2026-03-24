@@ -1,0 +1,622 @@
+{
+  "skill_name": "pptx",
+  "skill_description": "Presentation creation, editing, and analysis. When Claude needs to work with presentations (.pptx files) for: (1) Creating new presentations, (2) Modifying or editing content, (3) Working with layouts, (4) Adding comments or speaker notes, or any other presentation tasks",
+  "items": [
+    {
+      "item_id": "skill_pptx_concept_9f979153",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding pptx creation, editing, and analysis",
+      "instruction": "",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_2af33e0d",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "A user may ask you to create, edit, or analyze the contents of a .pptx file. A .pptx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks.",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_45a5e72e",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding reading and analyzing content",
+      "instruction": "",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_d2ae43d2",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding text extraction",
+      "instruction": "If you just need to read the text contents of a presentation, you should convert the document to markdown:\n\n```bash",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_6d0ca8fe",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding convert document to markdown",
+      "instruction": "python -m markitdown path-to-file.pptx\n```",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_309155c7",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding raw xml access",
+      "instruction": "You need raw XML access for: comments, speaker notes, slide layouts, animations, design elements, and complex formatting. For any of these features, you'll need to unpack a presentation and read its raw XML contents.",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_beca5adf",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding unpacking a file",
+      "instruction": "`python ooxml/scripts/unpack.py <office_file> <output_dir>`\n\n**Note**: The unpack.py script is located at `skills/pptx/ooxml/scripts/unpack.py` relative to the project root. If the script doesn't exist at this path, use `find . -name \"unpack.py\"` to locate it.",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_be07158f",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding key file structures",
+      "instruction": "* `ppt/presentation.xml` - Main presentation metadata and slide references\n* `ppt/slides/slide{N}.xml` - Individual slide contents (slide1.xml, slide2.xml, etc.)\n* `ppt/notesSlides/notesSlide{N}.xml` - Speaker notes for each slide\n* `ppt/comments/modernComment_*.xml` - Comments for specific slides\n* `ppt/slideLayouts/` - Layout templates for slides\n* `ppt/slideMasters/` - Master slide templates\n* `ppt/theme/` - Theme and styling information\n* `ppt/media/` - Images and other media files",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "expert",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_b9270ceb",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding typography and color extraction",
+      "instruction": "**When given an example design to emulate**: Always analyze the presentation's typography and colors first using the methods below:\n1. **Read theme file**: Check `ppt/theme/theme1.xml` for colors (`<a:clrScheme>`) and fonts (`<a:fontScheme>`)\n2. **Sample slide content**: Examine `ppt/slides/slide1.xml` for actual font usage (`<a:rPr>`) and colors\n3. **Search for patterns**: Use grep to find color (`<a:solidFill>`, `<a:srgbClr>`) and font references across all XML files",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_3926e3cf",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding creating a new powerpoint presentation **without a template**",
+      "instruction": "When creating a new PowerPoint presentation from scratch, use the **html2pptx** workflow to convert HTML slides to PowerPoint with accurate positioning.",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_460bbb8a",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding design principles",
+      "instruction": "**CRITICAL**: Before creating any presentation, analyze the content and choose appropriate design elements:\n1. **Consider the subject matter**: What is this presentation about? What tone, industry, or mood does it suggest?\n2. **Check for branding**: If the user mentions a company/organization, consider their brand colors and identity\n3. **Match palette to content**: Select colors that reflect the subject\n4. **State your approach**: Explain your design choices before writing code\n\n**Design Philos",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_f20d5b62",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding color palette selection",
+      "instruction": "**Color System — Background / Primary / Accent**:\n\nEach presentation uses exactly ONE color group with three roles:\n- **Background**: Fixed, used only for the slide background\n- **Primary**: Used for all main elements — titles, headers, frames, and content blocks (≥80% of non-background color)\n- **Accent**: Used rarely (≤5%) for highlights only, never for decoration\n\n**Color Rules**:\n- Same type = same color. All titles share one color; all content blocks share one color\n- Keep one dominant colo",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_c7033c91",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding visual & layout style",
+      "instruction": "**Layout Approach**:\n- **Vertical balance**: When a slide has limited content (e.g., only a title + a few bullet points or a single card), vertically center the content on the slide using flexbox (`justify-content: center` on body or a wrapper) so the slide doesn't look top-heavy with empty space at the bottom. Only top-align content when the slide is full or nearly full\n- Create compact layouts: reduce overall vertical height, decrease internal padding/margins, tighten space between elements\n- ",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_fcfa6793",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding layout tips",
+      "instruction": "**When creating slides with charts or tables:**\n- **Two-column layout (PREFERRED)**: Use a header spanning the full width, then two columns below — text/bullets in one column and the featured content in the other. Use asymmetric column widths (e.g., 40%/60% split) to optimize space for each content type.\n- **Full-slide layout**: Let the featured content (chart/table) take up the entire slide for maximum impact and readability\n- **NEVER vertically stack**: Do not place charts/tables below text in",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_0c0bf4ed",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding workflow",
+      "instruction": "1. **Extract template text AND create visual thumbnail grid**:\n   * Extract text: `python -m markitdown template.pptx > template-content.md`\n   * Read `template-content.md`: Read the entire file to understand the contents of the template presentation. **NEVER set any range limits when reading this file.**\n   * Create thumbnail grids: `python scripts/thumbnail.py template.pptx`\n   * See [Creating Thumbnail Grids](#creating-thumbnail-grids) section for more details\n\n2. **Analyze template and save ",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_03c47058",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding editing an existing powerpoint presentation",
+      "instruction": "When edit slides in an existing PowerPoint presentation, you need to work with the raw Office Open XML (OOXML) format. This involves unpacking the .pptx file, editing the XML content, and repacking it.",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_061aabcf",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding creating a new powerpoint presentation **using a template**",
+      "instruction": "When you need to create a presentation that follows an existing template's design, you'll need to duplicate and re-arrange template slides before then replacing placeholder context.",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_73a1ed81",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding creating thumbnail grids",
+      "instruction": "To create visual thumbnail grids of PowerPoint slides for quick analysis and reference:\n\n```bash\npython scripts/thumbnail.py template.pptx [output_prefix]\n```\n\n**Features**:\n- Creates: `thumbnails.jpg` (or `thumbnails-1.jpg`, `thumbnails-2.jpg`, etc. for large decks)\n- Default: 5 columns, max 30 slides per grid (5×6)\n- Custom prefix: `python scripts/thumbnail.py template.pptx my-grid`\n  - Note: The output prefix should include the path if you want output in a specific directory (e.g., `workspace",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_2c1c6650",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding basic usage",
+      "instruction": "python scripts/thumbnail.py presentation.pptx",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_82dd2184",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding combine options: custom name, columns",
+      "instruction": "python scripts/thumbnail.py template.pptx analysis --cols 4\n```",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_0edfc3a5",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding converting slides to images",
+      "instruction": "To visually analyze PowerPoint slides, convert them to images using a two-step process:\n\n1. **Convert PPTX to PDF**:\n   ```bash\n   soffice --headless --convert-to pdf template.pptx\n   ```\n\n2. **Convert PDF pages to JPEG images**:\n   ```bash\n   pdftoppm -jpeg -r 150 template.pdf slide\n   ```\n   This creates files like `slide-1.jpg`, `slide-2.jpg`, etc.\n\nOptions:\n- `-r 150`: Sets resolution to 150 DPI (adjust for quality/size balance)\n- `-jpeg`: Output JPEG format (use `-png` for PNG if preferred)",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_5b5a9a3d",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding code style guidelines",
+      "instruction": "**IMPORTANT**: When generating code for PPTX operations:\n- Write concise code\n- Avoid verbose variable names and redundant operations\n- Avoid unnecessary print statements",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_concept_5d5f36f6",
+      "skill_name": "pptx",
+      "category": "concept",
+      "concept": "Understanding dependencies",
+      "instruction": "Required dependencies (should already be installed):\n\n- **markitdown**: `pip install \"markitdown[pptx]\"` (for text extraction from presentations)\n- **pptxgenjs**: `npm install -g pptxgenjs` (for creating presentations via html2pptx)\n- **playwright**: `npm install -g playwright` (for HTML rendering in html2pptx)\n- **react-icons**: `npm install -g react-icons react react-dom` (for icons)\n- **sharp**: `npm install -g sharp` (for SVG rasterization and image processing)\n- **LibreOffice**: `sudo apt-g",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n",
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     ",
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_instruction_689ba0ce",
+      "skill_name": "pptx",
+      "category": "instruction",
+      "concept": "Rule or guideline: `ppt/presentation.xml` - Main presentation metadat...",
+      "instruction": "`ppt/presentation.xml` - Main presentation metadata and slide references",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_instruction_31e6e53e",
+      "skill_name": "pptx",
+      "category": "instruction",
+      "concept": "Rule or guideline: `ppt/slides/slide{N}.xml` - Individual slide conte...",
+      "instruction": "`ppt/slides/slide{N}.xml` - Individual slide contents (slide1.xml, slide2.xml, etc.)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_instruction_32443209",
+      "skill_name": "pptx",
+      "category": "instruction",
+      "concept": "Rule or guideline: `ppt/notesSlides/notesSlide{N}.xml` - Speaker note...",
+      "instruction": "`ppt/notesSlides/notesSlide{N}.xml` - Speaker notes for each slide",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_instruction_2dbb41c1",
+      "skill_name": "pptx",
+      "category": "instruction",
+      "concept": "Rule or guideline: `ppt/comments/modernComment_*.xml` - Comments for ...",
+      "instruction": "`ppt/comments/modernComment_*.xml` - Comments for specific slides",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_instruction_d3cc4ec7",
+      "skill_name": "pptx",
+      "category": "instruction",
+      "concept": "Rule or guideline: `ppt/slideLayouts/` - Layout templates for slides...",
+      "instruction": "`ppt/slideLayouts/` - Layout templates for slides",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_instruction_f0e1dbb8",
+      "skill_name": "pptx",
+      "category": "instruction",
+      "concept": "Rule or guideline: `ppt/slideMasters/` - Master slide templates...",
+      "instruction": "`ppt/slideMasters/` - Master slide templates",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_instruction_b1cf3e51",
+      "skill_name": "pptx",
+      "category": "instruction",
+      "concept": "Rule or guideline: `ppt/theme/` - Theme and styling information...",
+      "instruction": "`ppt/theme/` - Theme and styling information",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_instruction_19fd2a95",
+      "skill_name": "pptx",
+      "category": "instruction",
+      "concept": "Rule or guideline: `ppt/media/` - Images and other media files...",
+      "instruction": "`ppt/media/` - Images and other media files",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_instruction_233793c7",
+      "skill_name": "pptx",
+      "category": "instruction",
+      "concept": "Rule or guideline: Treat each slide as a single, cohesive canvas with...",
+      "instruction": "Treat each slide as a single, cohesive canvas with unity",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_instruction_07f4cca9",
+      "skill_name": "pptx",
+      "category": "instruction",
+      "concept": "Rule or guideline: Use **negative space / whitespace** as the primary...",
+      "instruction": "Use **negative space / whitespace** as the primary active element to separate content",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_code_pattern_49c721b8",
+      "skill_name": "pptx",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from pptx",
+      "examples": [
+        "# Convert document to markdown\npython -m markitdown path-to-file.pptx\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_code_pattern_2a47eccf",
+      "skill_name": "pptx",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from pptx",
+      "examples": [
+        "     # Template Inventory Analysis\n     **Total Slides: [count]**\n     **IMPORTANT: Slides are 0-indexed (first slide = 0, last slide = count-1)**\n\n     ## [Category Name]\n     - Slide 0: [Layout code if available] - Description/purpose\n     - Slide 1: [Layout code] - Description/purpose\n     - Slide 2: [Layout code] - Description/purpose\n     [... EVERY slide must be listed individually with its index ...]\n     "
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_code_pattern_714a420b",
+      "skill_name": "pptx",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from pptx",
+      "examples": [
+        "      # Template slides to use (0-based indexing)\n      # WARNING: Verify indices are within range! Template with 73 slides has indices 0-72\n      # Mapping: slide numbers from outline -> template slide indices\n      template_mapping = [\n          0,   # Use slide 0 (Title/Cover)\n          34,  # Use slide 34 (B1: Title and body)\n          34,  # Use slide 34 again (duplicate for second B1)\n          50,  # Use slide 50 (E1: Quote)\n          54,  # Use slide 54 (F2: Closing + Text)\n      ]\n      "
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_code_pattern_991dd73f",
+      "skill_name": "pptx",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from pptx",
+      "examples": [
+        "     python scripts/rearrange.py template.pptx working.pptx 0,34,34,50,52\n     "
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_code_pattern_7acc2133",
+      "skill_name": "pptx",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from pptx",
+      "examples": [
+        "     python scripts/inventory.py working.pptx text-inventory.json\n     "
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_assessment_03888155",
+      "skill_name": "pptx",
+      "category": "assessment",
+      "concept": "Apply pptx in a practical project",
+      "instruction": "Demonstrate mastery of pptx by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using pptx",
+        "Explain when pptx should be used",
+        "Identify the core concepts of pptx",
+        "Apply pptx to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_pptx_contextualization_b140d90c",
+      "skill_name": "pptx",
+      "category": "contextualization",
+      "concept": "When to use pptx",
+      "instruction": "Learn when to apply pptx in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using pptx",
+        "User needs help with coding -> evaluate if pptx applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate pptx is needed",
+        "Distinguish between pptx and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 40,
+  "generated_at": "2026-03-24T04:43:44.496966",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/pptx/SKILL.md"
+}

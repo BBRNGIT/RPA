@@ -1,0 +1,1006 @@
+{
+  "skill_name": "video-understand",
+  "skill_description": "Implement specialized video understanding capabilities using the z-ai-web-dev-sdk. Use this skill when the user needs to analyze video content, understand motion and temporal sequences, extract information from video frames, describe video scenes, or perform video-based AI analysis. Optimized for MP4, AVI, MOV, and other common video formats.",
+  "items": [
+    {
+      "item_id": "skill_video_understand_concept_1afb4adc",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding video understanding skill",
+      "instruction": "This skill provides specialized video understanding functionality using the z-ai-web-dev-sdk package, enabling AI models to analyze, describe, and extract information from video content including motion, temporal sequences, and scene changes.",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_e46b5011",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding skills path",
+      "instruction": "**Skill Location**: `{project_path}/skills/video-understand`\n\nthis skill is located at above path in your project.\n\n**Reference Scripts**: Example test scripts are available in the `{Skill Location}/scripts/` directory for quick testing and reference. See `{Skill Location}/scripts/video-understand.ts` for a working example.",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_5b40e072",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "Video Understanding focuses specifically on video content analysis, providing capabilities for:\n- Video scene understanding and description\n- Action and motion detection\n- Temporal sequence analysis\n- Event detection in videos\n- Video content summarization\n- Scene change detection\n- People and object tracking across frames\n- Audio-visual content analysis (when applicable)\n\n**IMPORTANT**: z-ai-web-dev-sdk MUST be used in backend code only. Never use it in client-side code.",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_468ff34c",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding prerequisites",
+      "instruction": "The z-ai-web-dev-sdk package is already installed. Import it as shown in the examples below.",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_fe75e377",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding cli usage (for simple tasks)",
+      "instruction": "For quick video analysis tasks, you can use the z-ai CLI instead of writing code. This is ideal for simple video descriptions, testing, or automation.",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_4f2e1e7a",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding basic video analysis",
+      "instruction": "```bash",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_0d994874",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding analyze a video from url",
+      "instruction": "z-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_68e945f7",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding note: use --image flag for video urls as well",
+      "instruction": "z-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n```",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_7f324d65",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding analyze local videos",
+      "instruction": "```bash",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_86dc0bbf",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding analyze a local video file",
+      "instruction": "z-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_41305460",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding save response to file",
+      "instruction": "z-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n```",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_1ab0f7dc",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding advanced video analysis",
+      "instruction": "```bash",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_e8b9aa68",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding complex scene understanding with thinking",
+      "instruction": "z-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_6fe1fafd",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding action detection",
+      "instruction": "z-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n```",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_c06cb1c0",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding streaming output",
+      "instruction": "```bash",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_c712e492",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding stream the video analysis",
+      "instruction": "z-ai vision -p \"Describe this video content\" -i \"./video.mp4\" --stream\n```",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_ceefeca1",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding cli parameters",
+      "instruction": "- `--prompt, -p <text>`: **Required** - Question or instruction about the video\n- `--image, -i <URL or path>`: Optional - Video URL or local file path (despite the name, it works for videos too)\n- `--thinking, -t`: Optional - Enable chain-of-thought reasoning for complex analysis (default: disabled)\n- `--output, -o <path>`: Optional - Output file path (JSON format)\n- `--stream`: Optional - Stream the response in real-time",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_67bad19c",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding supported video formats",
+      "instruction": "- MP4 (.mp4) - Most widely supported format\n- AVI (.avi) - Audio Video Interleave\n- MOV (.mov) - QuickTime format\n- WebM (.webm) - Web-optimized format\n- MKV (.mkv) - Matroska format\n- FLV (.flv) - Flash Video format",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_c08d8e65",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding when to use cli vs sdk",
+      "instruction": "**Use CLI for:**\n- Quick video summaries\n- One-off video analysis\n- Testing video understanding capabilities\n- Simple automation scripts\n- Generating video descriptions\n\n**Use SDK for:**\n- Multi-turn conversations about videos\n- Complex video processing pipelines\n- Production applications with error handling\n- Custom integration with video processing logic\n- Batch video processing with custom workflows",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_fafb9045",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding recommended approach",
+      "instruction": "For better performance and reliability with local videos, consider:\n1. Uploading videos to a CDN and using URLs\n2. For shorter videos, convert key frames to images for faster analysis\n3. For long videos, consider chunking or sampling at intervals",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_e8dfed36",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding basic video understanding implementation",
+      "instruction": "",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_c1d79465",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding single video analysis",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function analyzeVideo(videoUrl, prompt) {\n  const zai = await ZAI.create();\n\n  const response = await zai.chat.completions.createVision({\n    messages: [\n      {\n        role: 'user',\n        content: [\n          {\n            type: 'text',\n            text: prompt\n          },\n          {\n            type: 'video_url',\n            video_url: {\n              url: videoUrl\n            }\n          }\n        ]\n      }\n    ],\n    thinking: { t",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_ca7e642e",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding video scene understanding",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function understandVideoScenes(videoUrl) {\n  const zai = await ZAI.create();\n\n  const prompt = `Analyze this video and provide:\n1. Overall summary of the video content\n2. Main scenes or segments (with approximate timestamps if possible)\n3. Key people or characters and their roles\n4. Important actions or events in chronological order\n5. Setting and environment description\n6. Overall mood or tone`;\n\n  const response = await zai.chat.completi",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_3cf513cf",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding motion and action detection",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function detectActions(videoUrl, specificAction = null) {\n  const zai = await ZAI.create();\n\n  const prompt = specificAction\n    ? `Identify all instances of \"${specificAction}\" in this video. For each instance, describe when it occurs and provide details about how it's performed.`\n    : 'Identify and describe all significant actions and movements in this video. Include who is performing them and when they occur.';\n\n  const response = awai",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_47fe8645",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding event timeline extraction",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function extractTimeline(videoUrl) {\n  const zai = await ZAI.create();\n\n  const prompt = `Create a detailed timeline of events in this video:\n- Identify key moments and transitions\n- Note approximate timing (beginning, middle, end or specific timestamps if visible)\n- Describe what happens at each key point\n- Identify any cause-and-effect relationships between events\n\nFormat as a chronological list.`;\n\n  const response = await zai.chat.comp",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_672be005",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding video content classification",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function classifyVideo(videoUrl) {\n  const zai = await ZAI.create();\n\n  const prompt = `Classify this video content:\n1. Primary category (e.g., educational, entertainment, sports, news, tutorial)\n2. Sub-category or genre\n3. Target audience\n4. Content style (professional, casual, documentary, etc.)\n5. Key themes or topics\n6. Suggested tags (10-15 keywords)\n\nFormat your response as structured JSON.`;\n\n  const response = await zai.chat.comple",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_fbec73dc",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding advanced use cases",
+      "instruction": "",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_c962fa22",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding multi-turn video conversation",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass VideoConversation {\n  constructor() {\n    this.messages = [];\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async loadVideo(videoUrl, initialQuestion) {\n    this.messages.push({\n      role: 'user',\n      content: [\n        { type: 'text', text: initialQuestion },\n        { type: 'video_url', video_url: { url: videoUrl } }\n      ]\n    });\n\n    return this.getResponse();\n  }\n\n  async askFollowUp(question) {\n    this.m",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_56e7075a",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding video quality assessment",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function assessVideoQuality(videoUrl) {\n  const zai = await ZAI.create();\n\n  const prompt = `Assess the quality of this video:\n1. Visual quality (resolution, clarity, lighting) - Rate 1-10\n2. Audio quality (if audio is present) - Rate 1-10\n3. Camera work (stability, framing, composition) - Rate 1-10\n4. Production value (editing, transitions, effects) - Rate 1-10\n5. Content clarity (is the message clear?) - Rate 1-10\n6. Pacing (too fast, to",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "expert",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_53d38cf2",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding video content moderation",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function moderateVideo(videoUrl) {\n  const zai = await ZAI.create();\n\n  const prompt = `Review this video for content moderation:\n1. Check for any inappropriate or sensitive content\n2. Identify any potential safety concerns\n3. Note any content that might violate common community guidelines\n4. Assess age-appropriateness\n5. Identify any copyrighted material visible (logos, brands, music)\n6. Overall safety rating: Safe / Caution / Review Requ",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_85d4d413",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding video transcript generation (visual description)",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function generateVisualTranscript(videoUrl) {\n  const zai = await ZAI.create();\n\n  const prompt = `Generate a detailed visual transcript of this video:\n- Describe what's happening in each scene\n- Note any text that appears on screen\n- Describe important visual elements\n- Mention any scene changes or transitions\n- Include descriptions of people's actions and expressions\n\nFormat as a time-based narrative (e.g., \"At the beginning...\", \"Then..",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_d4a01e82",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding sports video analysis",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function analyzeSportsVideo(videoUrl, sport = null) {\n  const zai = await ZAI.create();\n\n  const prompt = sport\n    ? `Analyze this ${sport} video in detail:\n1. Identify players and their positions\n2. Describe key plays and strategies\n3. Note scoring events or important moments\n4. Assess player performance\n5. Identify any rule violations or fouls\n6. Describe the pace and flow of the game`\n    : `Analyze this sports video:\n1. Identify the s",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_a37c5979",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding educational video summarization",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function summarizeEducationalVideo(videoUrl) {\n  const zai = await ZAI.create();\n\n  const prompt = `Summarize this educational video for students:\n1. Main topic or learning objective\n2. Key concepts explained (in order)\n3. Important definitions or terminology\n4. Examples used to illustrate concepts\n5. Visual aids or demonstrations shown\n6. Key takeaways or conclusions\n7. Suggested review points\n\nFormat as a study guide.`;\n\n  const response",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_482e00a7",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding batch video processing",
+      "instruction": "",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_7d56fd59",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding process multiple videos",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass VideoBatchProcessor {\n  constructor() {\n    this.zai = null;\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async processVideo(videoUrl, prompt) {\n    const response = await this.zai.chat.completions.createVision({\n      messages: [\n        {\n          role: 'user',\n          content: [\n            { type: 'text', text: prompt },\n            { type: 'video_url', video_url: { url: videoUrl } }\n          ]\n        }\n  ",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_e7dcb01a",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding best practices",
+      "instruction": "",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_aec1d9f5",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding 1. video preparation",
+      "instruction": "- Use standard video formats (MP4, MOV, AVI)\n- Ensure videos are accessible via public URLs or properly encoded\n- For long videos, consider creating shorter clips for specific analysis\n- Optimize video size for faster processing\n- Ensure good lighting and audio quality in source videos",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_077e8552",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding 2. prompt engineering for videos",
+      "instruction": "- Be specific about temporal aspects (\"beginning\", \"throughout\", \"at the end\")\n- Mention what type of analysis you need (actions, events, scenes, etc.)\n- For long videos, ask for summaries or key moments\n- Use thinking mode for complex temporal reasoning\n- Specify if you need chronological or thematic organization",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_212ee248",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding 3. error handling",
+      "instruction": "```javascript\nasync function safeVideoAnalysis(videoUrl, prompt) {\n  try {\n    const zai = await ZAI.create();\n    \n    const response = await zai.chat.completions.createVision({\n      messages: [\n        {\n          role: 'user',\n          content: [\n            { type: 'text', text: prompt },\n            { type: 'video_url', video_url: { url: videoUrl } }\n          ]\n        }\n      ],\n      thinking: { type: 'disabled' }\n    });\n\n    return {\n      success: true,\n      content: response.choic",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_48233e04",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding 4. performance optimization",
+      "instruction": "- Cache SDK instance for batch processing\n- Implement request throttling (add delays between requests)\n- Process videos asynchronously when possible\n- For very long videos, consider analyzing at specific intervals\n- Use appropriate thinking mode (disabled for simple descriptions, enabled for complex analysis)",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_e7dc5586",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding 5. security considerations",
+      "instruction": "- Validate video URLs before processing\n- Implement rate limiting for public APIs\n- Sanitize user-provided video URLs\n- Never expose SDK credentials in client-side code\n- Implement content moderation for user-uploaded videos\n- Consider video file size limits",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_e7fd3ad8",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding common use cases",
+      "instruction": "1. **Content Moderation**: Automatically review video uploads for policy compliance\n2. **Video Cataloging**: Generate descriptions and tags for video libraries\n3. **Sports Analysis**: Analyze games, identify plays, assess performance\n4. **Educational Content**: Summarize lectures, create study guides\n5. **Security & Surveillance**: Detect events, track activities (with appropriate authorization)\n6. **Quality Control**: Assess video production quality\n7. **Social Media**: Generate video captions ",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "expert",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_5cd9719c",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding integration examples",
+      "instruction": "",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_c7a68f23",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding express.js api endpoint",
+      "instruction": "```javascript\nimport express from 'express';\nimport ZAI from 'z-ai-web-dev-sdk';\n\nconst app = express();\napp.use(express.json());\n\nlet zaiInstance;\n\nasync function initZAI() {\n  zaiInstance = await ZAI.create();\n}\n\n// Analyze video from URL\napp.post('/api/analyze-video', async (req, res) => {\n  try {\n    const { videoUrl, prompt } = req.body;\n\n    if (!videoUrl || !prompt) {\n      return res.status(400).json({ \n        error: 'videoUrl and prompt are required' \n      });\n    }\n\n    const respons",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_4507991f",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding next.js api route",
+      "instruction": "```javascript\n// pages/api/video-understand.js\nimport ZAI from 'z-ai-web-dev-sdk';\n\nlet zaiInstance = null;\n\nasync function getZAI() {\n  if (!zaiInstance) {\n    zaiInstance = await ZAI.create();\n  }\n  return zaiInstance;\n}\n\nexport default async function handler(req, res) {\n  if (req.method !== 'POST') {\n    return res.status(405).json({ error: 'Method not allowed' });\n  }\n\n  try {\n    const { videoUrl, prompt, enableThinking = false } = req.body;\n\n    if (!videoUrl || !prompt) {\n      return res",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_0535304b",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding troubleshooting",
+      "instruction": "**Issue**: \"SDK must be used in backend\"\n- **Solution**: Ensure z-ai-web-dev-sdk is only imported and used in server-side code, never in client/browser code\n\n**Issue**: Video not loading or being analyzed\n- **Solution**: Verify the video URL is accessible, returns correct MIME type, and is in a supported format\n\n**Issue**: Inaccurate temporal analysis\n- **Solution**: Enable thinking mode for complex temporal reasoning, provide more specific prompts about time/sequence\n\n**Issue**: Slow response t",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_concept_f2e06cfe",
+      "skill_name": "video-understand",
+      "category": "concept",
+      "concept": "Understanding remember",
+      "instruction": "- Always use z-ai-web-dev-sdk in backend code only\n- The SDK is already installed - import as shown in examples\n- Use `video_url` content type for video files\n- Video analysis takes longer than image analysis - be patient\n- Enable thinking mode for complex temporal reasoning and event detection\n- Structure prompts to include temporal information (beginning, middle, end)\n- Handle errors gracefully in production\n- Implement rate limiting and delays for batch processing\n- Validate and sanitize user",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n",
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n",
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_instruction_0bb84c09",
+      "skill_name": "video-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: Video scene understanding and description...",
+      "instruction": "Video scene understanding and description",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_instruction_f4da4c6a",
+      "skill_name": "video-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: Action and motion detection...",
+      "instruction": "Action and motion detection",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_instruction_1bdaef98",
+      "skill_name": "video-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: Temporal sequence analysis...",
+      "instruction": "Temporal sequence analysis",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_instruction_026952ca",
+      "skill_name": "video-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: Event detection in videos...",
+      "instruction": "Event detection in videos",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_instruction_78cf30b4",
+      "skill_name": "video-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: Video content summarization...",
+      "instruction": "Video content summarization",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_instruction_0ca36618",
+      "skill_name": "video-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: Scene change detection...",
+      "instruction": "Scene change detection",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_instruction_d64a7569",
+      "skill_name": "video-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: People and object tracking across frames...",
+      "instruction": "People and object tracking across frames",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_instruction_68a4ef7e",
+      "skill_name": "video-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: Audio-visual content analysis (when applicable)...",
+      "instruction": "Audio-visual content analysis (when applicable)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_instruction_af68a069",
+      "skill_name": "video-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--prompt, -p <text>`: **Required** - Question or ...",
+      "instruction": "`--prompt, -p <text>`: **Required** - Question or instruction about the video",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_instruction_dfc4efd6",
+      "skill_name": "video-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--image, -i <URL or path>`: Optional - Video URL ...",
+      "instruction": "`--image, -i <URL or path>`: Optional - Video URL or local file path (despite the name, it works for videos too)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_code_pattern_f6165395",
+      "skill_name": "video-understand",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from video-understand",
+      "examples": [
+        "# Analyze a video from URL\nz-ai vision --prompt \"Summarize what happens in this video\" --image \"https://example.com/video.mp4\"\n\n# Note: Use --image flag for video URLs as well\nz-ai vision -p \"Describe the key events\" -i \"https://example.com/presentation.mp4\"\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_code_pattern_5c1bb113",
+      "skill_name": "video-understand",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from video-understand",
+      "examples": [
+        "# Analyze a local video file\nz-ai vision -p \"What activities are shown in this video?\" -i \"./recording.mp4\"\n\n# Save response to file\nz-ai vision -p \"Provide a detailed summary\" -i \"./meeting.mp4\" -o summary.json\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_code_pattern_6bfc7747",
+      "skill_name": "video-understand",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from video-understand",
+      "examples": [
+        "# Complex scene understanding with thinking\nz-ai vision \\\n  -p \"Analyze this video and identify: 1) Main events, 2) People and their actions, 3) Timeline of key moments\" \\\n  -i \"./event.mp4\" \\\n  --thinking \\\n  -o analysis.json\n\n# Action detection\nz-ai vision \\\n  -p \"Identify all actions performed by people in this video\" \\\n  -i \"./sports.mp4\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_code_pattern_da007a9a",
+      "skill_name": "video-understand",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from video-understand",
+      "examples": [
+        "# Stream the video analysis\nz-ai vision -p \"Describe this video content\" -i \"./video.mp4\" --stream\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_code_pattern_ff8b0920",
+      "skill_name": "video-understand",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from video-understand",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\n\nasync function analyzeVideo(videoUrl, prompt) {\n  const zai = await ZAI.create();\n\n  const response = await zai.chat.completions.createVision({\n    messages: [\n      {\n        role: 'user',\n        content: [\n          {\n            type: 'text',\n            text: prompt\n          },\n          {\n            type: 'video_url',\n            video_url: {\n              url: videoUrl\n            }\n          }\n        ]\n      }\n    ],\n    thinking: { type: 'disabled' }\n  });\n\n  return response.choices[0]?.message?.content;\n}\n\n// Usage examples\nconst summary = await analyzeVideo(\n  'https://example.com/presentation.mp4',\n  'Summarize the key points presented in this video'\n);\n\nconst actionDetection = await analyzeVideo(\n  'https://example.com/sports.mp4',\n  'Identify and describe all athletic actions performed in this video'\n);\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_assessment_7c28fefc",
+      "skill_name": "video-understand",
+      "category": "assessment",
+      "concept": "Apply video-understand in a practical project",
+      "instruction": "Demonstrate mastery of video-understand by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using video-understand",
+        "Explain when video-understand should be used",
+        "Identify the core concepts of video-understand",
+        "Apply video-understand to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video_understand_contextualization_a37c8b0f",
+      "skill_name": "video-understand",
+      "category": "contextualization",
+      "concept": "When to use video-understand",
+      "instruction": "Learn when to apply video-understand in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using video-understand",
+        "User needs help with coding -> evaluate if video-understand applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate video-understand is needed",
+        "Distinguish between video-understand and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 64,
+  "generated_at": "2026-03-24T04:43:44.506251",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/video-understand/SKILL.md"
+}

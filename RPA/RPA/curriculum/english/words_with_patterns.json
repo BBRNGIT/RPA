@@ -1,0 +1,49 @@
+{
+  "module": "english_words_with_patterns",
+  "description": "English vocabulary organized by spelling patterns",
+  "hierarchy_level": 1,
+  "patterns": [
+    {
+      "pattern": "words_containing_as",
+      "description": "Common English words containing the substring 'as'",
+      "words": [
+        {"word": "ask", "type": "verb", "definition": "to put a question to someone"},
+        {"word": "has", "type": "verb", "definition": "possesses or owns"},
+        {"word": "was", "type": "verb", "definition": "past tense of is"},
+        {"word": "fast", "type": "adjective", "definition": "moving quickly"},
+        {"word": "last", "type": "adjective", "definition": "coming after all others"},
+        {"word": "past", "type": "noun", "definition": "time before the present"},
+        {"word": "class", "type": "noun", "definition": "a group of students or category"},
+        {"word": "grass", "type": "noun", "definition": "green plant covering ground"},
+        {"word": "glass", "type": "noun", "definition": "hard transparent material"},
+        {"word": "pass", "type": "verb", "definition": "to move past or give to someone"},
+        {"word": "mass", "type": "noun", "definition": "large amount or body of matter"},
+        {"word": "task", "type": "noun", "definition": "a piece of work to be done"},
+        {"word": "mask", "type": "noun", "definition": "covering for the face"},
+        {"word": "base", "type": "noun", "definition": "the lowest part or foundation"},
+        {"word": "case", "type": "noun", "definition": "an instance or container"},
+        {"word": "ease", "type": "noun", "definition": "absence of difficulty"},
+        {"word": "east", "type": "noun", "definition": "direction toward sunrise"},
+        {"word": "vast", "type": "adjective", "definition": "very large in size"},
+        {"word": "cast", "type": "verb", "definition": "to throw or project"},
+        {"word": "master", "type": "noun", "definition": "someone with control or skill"}
+      ]
+    },
+    {
+      "pattern": "words_starting_with_as",
+      "description": "English words starting with 'as'",
+      "words": [
+        {"word": "ask", "type": "verb", "definition": "to put a question to someone"},
+        {"word": "as", "type": "adverb", "definition": "used in comparisons"},
+        {"word": "ash", "type": "noun", "definition": "residue from burning"},
+        {"word": "aspect", "type": "noun", "definition": "a particular part or feature"},
+        {"word": "aspire", "type": "verb", "definition": "to direct one's hopes toward"},
+        {"word": "assess", "type": "verb", "definition": "to evaluate or estimate"},
+        {"word": "assist", "type": "verb", "definition": "to help or support"},
+        {"word": "assert", "type": "verb", "definition": "to state confidently"},
+        {"word": "assign", "type": "verb", "definition": "to allocate or appoint"},
+        {"word": "assemble", "type": "verb", "definition": "to gather together"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1326 @@
+{
+  "skill_name": "Video Generation",
+  "skill_description": "Implement AI-powered video generation capabilities using the z-ai-web-dev-sdk. Use this skill when the user needs to generate videos from text prompts or images, create video content programmatically, or build applications that produce video outputs. Supports asynchronous task management with status polling and result retrieval.",
+  "items": [
+    {
+      "item_id": "skill_video generation_concept_13e54014",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding video generation skill",
+      "instruction": "This skill guides the implementation of video generation functionality using the z-ai-web-dev-sdk package, enabling AI models to create videos from text descriptions or images through asynchronous task processing.",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_a8c47479",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding skills path",
+      "instruction": "**Skill Location**: `{project_path}/skills/video-generation`\n\nThis skill is located at the above path in your project.\n\n**Reference Scripts**: Example test scripts are available in the `{Skill Location}/scripts/` directory for quick testing and reference. See `{Skill Location}/scripts/video.ts` for a working example.",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_1d2ec88a",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "Video Generation allows you to build applications that can create video content from text prompts or images, with customizable parameters like resolution, frame rate, duration, and quality settings. The API uses an asynchronous task model where you create a task and poll for results.\n\n**IMPORTANT**: z-ai-web-dev-sdk MUST be used in backend code only. Never use it in client-side code.",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_cb6b7ab6",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding prerequisites",
+      "instruction": "The z-ai-web-dev-sdk package is already installed. Import it as shown in the examples below.",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_6068e717",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding cli usage (for simple tasks)",
+      "instruction": "For simple video generation tasks, you can use the z-ai CLI instead of writing code. The CLI handles task creation and polling automatically, making it ideal for quick tests and simple automation.",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_7a3aeb79",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding basic text-to-video",
+      "instruction": "```bash",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_000aa42e",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding generate video with automatic polling",
+      "instruction": "z-ai video --prompt \"A cat playing with a ball\" --poll",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_9e9e273d",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding using short options",
+      "instruction": "z-ai video -p \"Beautiful landscape with mountains\" --poll\n```",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_e838aeeb",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding custom quality and settings",
+      "instruction": "```bash",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_761e513c",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding quality mode (speed or quality)",
+      "instruction": "z-ai video -p \"Ocean waves at sunset\" --quality quality --poll",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_fde0347f",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding custom resolution and fps",
+      "instruction": "z-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_844fa64c",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding custom duration (5 or 10 seconds)",
+      "instruction": "z-ai video -p \"Fireworks display\" --duration 10 --poll\n```",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_b9df791a",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding image-to-video",
+      "instruction": "**IMPORTANT**: For `image_url` parameter, it is **strongly recommended to use base64-encoded image data** instead of URLs. This approach is more reliable and avoids potential network issues or access restrictions.\n\n**Note**: Match the MIME type in the data URI to your actual image format (image/jpeg, image/png, image/webp, etc.) to avoid decoding issues.\n\n```bash",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_f19c060e",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding convert your image to base64 with correct mime type",
+      "instruction": "",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_5c498da8",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding for png images",
+      "instruction": "IMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_ef83b519",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding for jpeg images",
+      "instruction": "IMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_a3358baa",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding for webp images",
+      "instruction": "IMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_7010cf13",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding using url (less recommended, may have reliability issues)",
+      "instruction": "z-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n```",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_bd4bd8f7",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding first-last frame mode",
+      "instruction": "**IMPORTANT**: For best reliability, use base64-encoded images instead of URLs. Ensure the MIME type matches your actual image format.\n\n```bash",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_2be2228c",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding make sure to use the correct mime type for each image",
+      "instruction": "",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_d4c121da",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding example with png images",
+      "instruction": "START_BASE64=$(base64 -i start.png)\nEND_BASE64=$(base64 -i end.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${START_BASE64},data:image/png;base64,${END_BASE64}\" \\\n  --prompt \"Smooth transition between frames\" \\\n  --poll",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_ec027b6b",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding example with jpeg images",
+      "instruction": "START_BASE64=$(base64 -i start.jpg)\nEND_BASE64=$(base64 -i end.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${START_BASE64},data:image/jpeg;base64,${END_BASE64}\" \\\n  --prompt \"Smooth transition between frames\" \\\n  --poll",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_613b5c40",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding using urls (less recommended)",
+      "instruction": "z-ai video \\\n  --image-url \"https://example.com/start.png,https://example.com/end.png\" \\\n  --prompt \"Smooth transition between frames\" \\\n  --poll\n```",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_2c6e5bc3",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding with audio generation",
+      "instruction": "```bash",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_f6ca5bdb",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding generate video with ai-generated audio effects",
+      "instruction": "z-ai video \\\n  -p \"Thunder storm approaching\" \\\n  --with-audio \\\n  --poll\n```",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_68a20e7e",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding save output",
+      "instruction": "```bash",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_efa2f901",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding save task result to json file",
+      "instruction": "z-ai video \\\n  -p \"Sunrise over mountains\" \\\n  --poll \\\n  -o video_result.json\n```",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_ace8fc2d",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding custom polling parameters",
+      "instruction": "```bash",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_481561a2",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding customize polling behavior",
+      "instruction": "z-ai video \\\n  -p \"Dancing robot\" \\\n  --poll \\\n  --poll-interval 10 \\\n  --max-polls 30",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_e727dc36",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding create task without polling (get task id)",
+      "instruction": "z-ai video -p \"Abstract art animation\" -o task.json\n```",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_a452c890",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding cli parameters",
+      "instruction": "- `--prompt, -p <text>`: Optional - Text description of the video\n- `--image-url, -i <data>`: Optional - **Preferably base64-encoded image data** (e.g., \"data:image/png;base64,iVBORw...\"). URLs are also supported but less recommended. For two images, use comma-separated values.\n- `--quality, -q <mode>`: Optional - Output mode: `speed` or `quality` (default: speed)\n- `--with-audio`: Optional - Generate AI audio effects (default: false)\n- `--size, -s <resolution>`: Optional - Video resolution (e.g",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_29e14857",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding supported resolutions",
+      "instruction": "- `1024x1024`\n- `768x1344`\n- `864x1152`\n- `1344x768`\n- `1152x864`\n- `1440x720`\n- `720x1440`\n- `1920x1080` (and other standard resolutions)",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_05d78441",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding checking task status later",
+      "instruction": "If you create a task without `--poll`, you can check its status later:\n\n```bash",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_0d722e75",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding get the task id from the initial response",
+      "instruction": "z-ai async-result --id \"task-id-here\" --poll\n```",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_4b0a0b1b",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding when to use cli vs sdk",
+      "instruction": "**Use CLI for:**\n- Quick video generation tests\n- Simple one-off video creation\n- Command-line automation scripts\n- Testing different prompts and settings\n\n**Use SDK for:**\n- Batch video generation with custom logic\n- Integration with web applications\n- Custom task queue management\n- Production applications with complex workflows",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_f356f162",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding video generation workflow",
+      "instruction": "Video generation follows a two-step asynchronous pattern:\n\n1. **Create Task**: Submit video generation request and receive a task ID\n2. **Poll Results**: Query the task status until completion and retrieve the video URL",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_ae3024b9",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding basic video generation implementation",
+      "instruction": "",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_beb821dc",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding simple text-to-video generation",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function generateVideo(prompt) {\n  try {\n    const zai = await ZAI.create();\n\n    // Create video generation task\n    const task = await zai.video.generations.create({\n      prompt: prompt,\n      quality: 'speed', // 'speed' or 'quality'\n      with_audio: false,\n      size: '1920x1080',\n      fps: 30,\n      duration: 5\n    });\n\n    console.log('Task ID:', task.id);\n    console.log('Task Status:', task.task_status);\n\n    // Poll for results",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_c3220cd5",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding image-to-video generation",
+      "instruction": "**IMPORTANT**: The `image_url` parameter accepts both base64-encoded image data and URLs, but **base64 encoding is strongly recommended** for better reliability and to avoid network-related issues.\n\n**Critical**: Always match the MIME type in your base64 data URI to the actual image format to prevent decoding errors.\n\n```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\nimport path from 'path';\n\n// Helper function to detect MIME type from file extension\nfunction getMimeType(fil",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_556980c5",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding image-to-video with start and end frames",
+      "instruction": "**IMPORTANT**: For keyframe mode, base64-encoded images are **highly recommended** over URLs to ensure consistent and reliable video generation. Always use the correct MIME type for each image.\n\n```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\nimport path from 'path';\n\n// Helper function to detect MIME type from file extension\nfunction getMimeType(filePath) {\n  const ext = path.extname(filePath).toLowerCase();\n  const mimeTypes = {\n    '.jpg': 'image/jpeg',\n    '.jpeg': 'im",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_3a4b0bd1",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding asynchronous result management",
+      "instruction": "",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_ce6a7977",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding query task status",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function checkTaskStatus(taskId) {\n  try {\n    const zai = await ZAI.create();\n    const result = await zai.async.result.query(taskId);\n\n    console.log('Task Status:', result.task_status);\n\n    if (result.task_status === 'SUCCESS') {\n      // Extract video URL from result\n      const videoUrl = result.video_result?.[0]?.url ||\n                      result.video_url ||\n                      result.url ||\n                      result.video;",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_067f0545",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding polling with exponential backoff",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function pollWithBackoff(taskId) {\n  const zai = await ZAI.create();\n  \n  let pollInterval = 5000; // Start with 5 seconds\n  const maxInterval = 30000; // Max 30 seconds\n  const maxPolls = 40;\n  let pollCount = 0;\n\n  while (pollCount < maxPolls) {\n    const result = await zai.async.result.query(taskId);\n    pollCount++;\n\n    if (result.task_status === 'SUCCESS') {\n      const videoUrl = result.video_result?.[0]?.url ||\n                    ",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_90520b2f",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding advanced use cases",
+      "instruction": "",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_40725d9f",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding video generation queue manager",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass VideoGenerationQueue {\n  constructor() {\n    this.tasks = new Map();\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async createVideo(params) {\n    const task = await this.zai.video.generations.create(params);\n    \n    this.tasks.set(task.id, {\n      taskId: task.id,\n      status: task.task_status,\n      params: params,\n      createdAt: new Date()\n    });\n\n    return task.id;\n  }\n\n  async checkTask(taskId) {\n    cons",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_f89357e1",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding batch video generation",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function generateMultipleVideos(prompts) {\n  const zai = await ZAI.create();\n  const tasks = [];\n\n  // Create all tasks\n  for (const prompt of prompts) {\n    const task = await zai.video.generations.create({\n      prompt: prompt,\n      quality: 'speed',\n      duration: 5\n    });\n    tasks.push({ taskId: task.id, prompt: prompt });\n  }\n\n  console.log(`Created ${tasks.length} video generation tasks`);\n\n  // Poll all tasks\n  const results = [",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_8c214724",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding configuration parameters",
+      "instruction": "",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_470afb01",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding video generation parameters",
+      "instruction": "| Parameter | Type | Required | Description | Default |\n|-----------|------|----------|-------------|---------|\n| `prompt` | string | Optional* | Text description of the video | - |\n| `image_url` | string \\| string[] | Optional* | Image URL(s) for generation | - |\n| `quality` | string | Optional | Output mode: `'speed'` or `'quality'` | `'speed'` |\n| `with_audio` | boolean | Optional | Generate AI audio effects | `false` |\n| `size` | string | Optional | Video resolution (e.g., `'1920x1080'`) | -",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_99310261",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding image url formats",
+      "instruction": "```javascript\n// Single image (starting frame)\nimage_url: 'https://example.com/image.jpg'\n\n// Multiple images (start and end frames)\nimage_url: [\n  'https://example.com/start.jpg',\n  'https://example.com/end.jpg'\n]\n```",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_c3fa86bd",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding task status values",
+      "instruction": "- `PROCESSING`: Task is being processed\n- `SUCCESS`: Task completed successfully\n- `FAIL`: Task failed",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_f3aa3534",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding response formats",
+      "instruction": "",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_618fa686",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding task creation response",
+      "instruction": "```json\n{\n  \"id\": \"task-12345\",\n  \"task_status\": \"PROCESSING\",\n  \"model\": \"video-model-v1\"\n}\n```",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_74a0dec5",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding task query response (success)",
+      "instruction": "```json\n{\n  \"task_status\": \"SUCCESS\",\n  \"model\": \"video-model-v1\",\n  \"request_id\": \"req-67890\",\n  \"video_result\": [\n    {\n      \"url\": \"https://cdn.example.com/generated-video.mp4\"\n    }\n  ]\n}\n```",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_df23a3be",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding task query response (processing)",
+      "instruction": "```json\n{\n  \"task_status\": \"PROCESSING\",\n  \"id\": \"task-12345\",\n  \"model\": \"video-model-v1\"\n}\n```",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_7cb01147",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding best practices",
+      "instruction": "",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_46daee7a",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding 1. polling strategy",
+      "instruction": "```javascript\n// Recommended polling implementation\nasync function smartPoll(zai, taskId) {\n  // Check immediately (some tasks complete fast)\n  let result = await zai.async.result.query(taskId);\n  \n  if (result.task_status !== 'PROCESSING') {\n    return result;\n  }\n\n  // Start polling with reasonable intervals\n  let interval = 5000; // 5 seconds\n  let maxPolls = 60; // 5 minutes total\n  \n  for (let i = 0; i < maxPolls; i++) {\n    await new Promise(resolve => setTimeout(resolve, interval));\n    r",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_54fb7ebe",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding 2. error handling",
+      "instruction": "```javascript\nasync function safeVideoGeneration(params) {\n  try {\n    const zai = await ZAI.create();\n    \n    // Validate parameters\n    if (!params.prompt && !params.image_url) {\n      throw new Error('Either prompt or image_url is required');\n    }\n    \n    const task = await zai.video.generations.create(params);\n    const result = await smartPoll(zai, task.id);\n    \n    if (result.task_status === 'SUCCESS') {\n      const videoUrl = result.video_result?.[0]?.url ||\n                      resu",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_38cb1ab0",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding 3. resource management",
+      "instruction": "- Cache the ZAI instance for multiple video generations\n- Implement task ID storage for long-running operations\n- Clean up completed tasks from your tracking system\n- Implement timeout mechanisms to prevent infinite polling",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_72612fbc",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding 4. quality vs speed trade-offs",
+      "instruction": "```javascript\n// Fast generation for previews or high volume\nconst quickVideo = await zai.video.generations.create({\n  prompt: 'A cat playing',\n  quality: 'speed',\n  duration: 5,\n  fps: 30\n});\n\n// High quality for final production\nconst qualityVideo = await zai.video.generations.create({\n  prompt: 'A cat playing',\n  quality: 'quality',\n  duration: 10,\n  fps: 60,\n  size: '1920x1080'\n});\n```",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_5a50a317",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding 5. security considerations",
+      "instruction": "- Validate all user inputs before creating tasks\n- Implement rate limiting for video generation endpoints\n- Store and validate task IDs securely\n- Never expose SDK credentials in client-side code\n- Set reasonable timeouts for polling operations",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_7fccf59e",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding common use cases",
+      "instruction": "1. **Social Media Content**: Generate short video clips for posts and stories\n2. **Marketing Materials**: Create product demonstration videos\n3. **Education**: Generate visual explanations and tutorials\n4. **Entertainment**: Create animated content from descriptions\n5. **Prototyping**: Quick video mockups for presentations\n6. **Game Development**: Generate cutscene or background videos\n7. **Content Automation**: Bulk video generation for various purposes",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_8416e3d4",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding integration examples",
+      "instruction": "",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_5c482c8b",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding express.js api endpoint",
+      "instruction": "```javascript\nimport express from 'express';\nimport ZAI from 'z-ai-web-dev-sdk';\n\nconst app = express();\napp.use(express.json());\n\nlet zaiInstance;\n\nasync function initZAI() {\n  zaiInstance = await ZAI.create();\n}\n\n// Create video generation task\napp.post('/api/video/create', async (req, res) => {\n  try {\n    const { prompt, image_url, quality, duration } = req.body;\n\n    if (!prompt && !image_url) {\n      return res.status(400).json({ \n        error: 'Either prompt or image_url is required' \n  ",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_41ddd0ff",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding websocket real-time updates",
+      "instruction": "```javascript\nimport WebSocket from 'ws';\nimport ZAI from 'z-ai-web-dev-sdk';\n\nconst wss = new WebSocket.Server({ port: 8080 });\nlet zaiInstance;\n\nasync function initZAI() {\n  zaiInstance = await ZAI.create();\n}\n\nwss.on('connection', (ws) => {\n  ws.on('message', async (message) => {\n    try {\n      const data = JSON.parse(message);\n\n      if (data.action === 'generate') {\n        // Create task\n        const task = await zaiInstance.video.generations.create(data.params);\n        \n        ws.send",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_ed75f014",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding troubleshooting",
+      "instruction": "**Issue**: \"SDK must be used in backend\"\n- **Solution**: Ensure z-ai-web-dev-sdk is only imported and used in server-side code\n\n**Issue**: Task stays in PROCESSING status indefinitely\n- **Solution**: Implement proper timeout mechanisms and consider the video complexity and duration\n\n**Issue**: Video URL not found in response\n- **Solution**: Check multiple possible response fields (video_result, video_url, url, video) as shown in examples\n\n**Issue**: Task fails immediately\n- **Solution**: Verify ",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_e2a72c5d",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding performance tips",
+      "instruction": "1. **Use appropriate quality settings**: Choose 'speed' for quick results, 'quality' for final production\n2. **Start with shorter durations**: Test with 5-second videos before generating longer content\n3. **Implement intelligent polling**: Use exponential backoff to reduce API calls\n4. **Cache ZAI instance**: Reuse the same instance for multiple video generations\n5. **Parallel processing**: Create multiple tasks simultaneously and poll them independently\n6. **Monitor and log**: Track task comple",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_concept_de1161d5",
+      "skill_name": "Video Generation",
+      "category": "concept",
+      "concept": "Understanding remember",
+      "instruction": "- Always use z-ai-web-dev-sdk in backend code only\n- Video generation is asynchronous - always implement proper polling\n- Check multiple response fields for video URL to ensure compatibility\n- Implement timeouts to prevent infinite polling loops\n- Handle all three task statuses: PROCESSING, SUCCESS, and FAIL\n- Consider rate limits and implement appropriate delays between requests\n- The SDK is already installed - import as shown in examples",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n",
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n",
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_instruction_0ad79b48",
+      "skill_name": "Video Generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--prompt, -p <text>`: Optional - Text description...",
+      "instruction": "`--prompt, -p <text>`: Optional - Text description of the video",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_instruction_69081b2b",
+      "skill_name": "Video Generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--image-url, -i <data>`: Optional - **Preferably ...",
+      "instruction": "`--image-url, -i <data>`: Optional - **Preferably base64-encoded image data** (e.g., \"data:image/png;base64,iVBORw...\"). URLs are also supported but less recommended. For two images, use comma-separated values.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_instruction_85e43586",
+      "skill_name": "Video Generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--quality, -q <mode>`: Optional - Output mode: `s...",
+      "instruction": "`--quality, -q <mode>`: Optional - Output mode: `speed` or `quality` (default: speed)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_instruction_be79b715",
+      "skill_name": "Video Generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--with-audio`: Optional - Generate AI audio effec...",
+      "instruction": "`--with-audio`: Optional - Generate AI audio effects (default: false)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_instruction_d75da3bb",
+      "skill_name": "Video Generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--size, -s <resolution>`: Optional - Video resolu...",
+      "instruction": "`--size, -s <resolution>`: Optional - Video resolution (e.g., \"1920x1080\")",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_instruction_5dc7be1a",
+      "skill_name": "Video Generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--fps <rate>`: Optional - Frame rate: 30 or 60 (d...",
+      "instruction": "`--fps <rate>`: Optional - Frame rate: 30 or 60 (default: 30)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_instruction_45302b0d",
+      "skill_name": "Video Generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--duration, -d <seconds>`: Optional - Duration: 5...",
+      "instruction": "`--duration, -d <seconds>`: Optional - Duration: 5 or 10 seconds (default: 5)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_instruction_f29f36fe",
+      "skill_name": "Video Generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--model, -m <model>`: Optional - Model name to us...",
+      "instruction": "`--model, -m <model>`: Optional - Model name to use",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_instruction_a3f64e5b",
+      "skill_name": "Video Generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--poll`: Optional - Auto-poll until task complete...",
+      "instruction": "`--poll`: Optional - Auto-poll until task completes",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_instruction_f01bfc50",
+      "skill_name": "Video Generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--poll-interval <seconds>`: Optional - Polling in...",
+      "instruction": "`--poll-interval <seconds>`: Optional - Polling interval (default: 5)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_code_pattern_e825ac39",
+      "skill_name": "Video Generation",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from Video Generation",
+      "examples": [
+        "# Generate video with automatic polling\nz-ai video --prompt \"A cat playing with a ball\" --poll\n\n# Using short options\nz-ai video -p \"Beautiful landscape with mountains\" --poll\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_code_pattern_61788053",
+      "skill_name": "Video Generation",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from Video Generation",
+      "examples": [
+        "# Quality mode (speed or quality)\nz-ai video -p \"Ocean waves at sunset\" --quality quality --poll\n\n# Custom resolution and FPS\nz-ai video \\\n  -p \"City timelapse\" \\\n  --size \"1920x1080\" \\\n  --fps 60 \\\n  --poll\n\n# Custom duration (5 or 10 seconds)\nz-ai video -p \"Fireworks display\" --duration 10 --poll\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_code_pattern_5b39514d",
+      "skill_name": "Video Generation",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from Video Generation",
+      "examples": [
+        "# Generate video from single image using base64 (RECOMMENDED)\n# Convert your image to base64 with correct MIME type\n\n# For PNG images\nIMAGE_BASE64=$(base64 -i image.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For JPEG images\nIMAGE_BASE64=$(base64 -i photo.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# For WebP images\nIMAGE_BASE64=$(base64 -i image.webp)\nz-ai video \\\n  --image-url \"data:image/webp;base64,${IMAGE_BASE64}\" \\\n  --prompt \"Make the scene come alive\" \\\n  --poll\n\n# Using URL (less recommended, may have reliability issues)\nz-ai video \\\n  -i \"https://example.com/photo.jpg\" \\\n  -p \"Add motion to this scene\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_code_pattern_4ff35311",
+      "skill_name": "Video Generation",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from Video Generation",
+      "examples": [
+        "# Generate video between two frames using base64 (RECOMMENDED)\n# Make sure to use the correct MIME type for each image\n\n# Example with PNG images\nSTART_BASE64=$(base64 -i start.png)\nEND_BASE64=$(base64 -i end.png)\nz-ai video \\\n  --image-url \"data:image/png;base64,${START_BASE64},data:image/png;base64,${END_BASE64}\" \\\n  --prompt \"Smooth transition between frames\" \\\n  --poll\n\n# Example with JPEG images\nSTART_BASE64=$(base64 -i start.jpg)\nEND_BASE64=$(base64 -i end.jpg)\nz-ai video \\\n  --image-url \"data:image/jpeg;base64,${START_BASE64},data:image/jpeg;base64,${END_BASE64}\" \\\n  --prompt \"Smooth transition between frames\" \\\n  --poll\n\n# Using URLs (less recommended)\nz-ai video \\\n  --image-url \"https://example.com/start.png,https://example.com/end.png\" \\\n  --prompt \"Smooth transition between frames\" \\\n  --poll\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_code_pattern_674661ee",
+      "skill_name": "Video Generation",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from Video Generation",
+      "examples": [
+        "# Generate video with AI-generated audio effects\nz-ai video \\\n  -p \"Thunder storm approaching\" \\\n  --with-audio \\\n  --poll\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_assessment_39aeba3f",
+      "skill_name": "Video Generation",
+      "category": "assessment",
+      "concept": "Apply Video Generation in a practical project",
+      "instruction": "Demonstrate mastery of Video Generation by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using Video Generation",
+        "Explain when Video Generation should be used",
+        "Identify the core concepts of Video Generation",
+        "Apply Video Generation to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_video generation_contextualization_d810301f",
+      "skill_name": "Video Generation",
+      "category": "contextualization",
+      "concept": "When to use Video Generation",
+      "instruction": "Learn when to apply Video Generation in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using Video Generation",
+        "User needs help with coding -> evaluate if Video Generation applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate Video Generation is needed",
+        "Distinguish between Video Generation and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 84,
+  "generated_at": "2026-03-24T04:43:44.502171",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/video-generation/SKILL.md"
+}

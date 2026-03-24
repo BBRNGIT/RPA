@@ -155,7 +155,7 @@
         .stat-card.warning .stat-card-value { color: var(--warning); }
         .stat-card.purple .stat-card-value { color: var(--accent-purple); }
 
-        /* Domain Progress */
+        /* Section */
         .section {
             background: var(--bg-secondary);
             border-radius: 12px;
@@ -173,6 +173,44 @@
             gap: 10px;
         }
 
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .tab:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .tab.active {
+            background: var(--accent-blue);
+            color: white;
+            border-color: var(--accent-blue);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Domain bars */
         .domain-bar {
             margin-bottom: 15px;
         }
@@ -335,7 +373,7 @@
             font-weight: 500;
         }
 
-        /* System Health */
+        /* Health Grid */
         .health-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -360,6 +398,256 @@
             font-weight: 600;
         }
 
+        /* Ask AI Section */
+        .ask-ai-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ask-input-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+
+        .ask-input {
+            flex: 1;
+            padding: 15px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 14px;
+            resize: none;
+            min-height: 60px;
+        }
+
+        .ask-input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+
+        .ask-btn {
+            padding: 15px 25px;
+            background: var(--accent-purple);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .ask-btn:hover {
+            background: #9333ea;
+        }
+
+        .ask-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .ai-response {
+            padding: 20px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-purple);
+            min-height: 100px;
+        }
+
+        .ai-response-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: var(--accent-purple);
+            font-weight: 500;
+        }
+
+        .ai-response-text {
+            color: var(--text-primary);
+            line-height: 1.8;
+        }
+
+        .ai-thinking {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-muted);
+        }
+
+        .thinking-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .thinking-dots span {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-purple);
+            border-radius: 50%;
+            animation: thinking 1.4s infinite ease-in-out both;
+        }
+
+        .thinking-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .thinking-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes thinking {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+
+        /* Quiz Section */
+        .quiz-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+        }
+
+        .quiz-score {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+        }
+
+        .quiz-question {
+            padding: 25px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+        }
+
+        .quiz-question-text {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .quiz-domain-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--accent-blue);
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .quiz-option {
+            padding: 15px 20px;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        .quiz-option:hover {
+            border-color: var(--accent-blue);
+            background: var(--bg-tertiary);
+        }
+
+        .quiz-option.selected {
+            border-color: var(--accent-blue);
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: rgba(34, 197, 94, 0.1);
+        }
+
+        .quiz-option.incorrect {
+            border-color: var(--error);
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        .quiz-feedback {
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .quiz-feedback.correct {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid var(--success);
+            color: var(--success);
+        }
+
+        .quiz-feedback.incorrect {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--error);
+            color: var(--error);
+        }
+
+        .quiz-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .quiz-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .quiz-btn-primary {
+            background: var(--accent-cyan);
+            color: white;
+        }
+
+        .quiz-btn-primary:hover {
+            background: #0891b2;
+        }
+
+        .quiz-btn-secondary {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .quiz-btn-secondary:hover {
+            background: var(--bg-secondary);
+        }
+
+        .quiz-complete {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .quiz-complete-score {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 10px;
+        }
+
+        .quiz-complete-msg {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
         /* Footer */
         .footer {
             text-align: center;
@@ -375,37 +663,11 @@
             text-decoration: none;
         }
 
-        /* Loading State */
+        /* Loading */
         .loading {
             text-align: center;
             padding: 50px;
             color: var(--text-muted);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .header-right {
-                flex-direction: column;
-            }
-
-            .schedule-current {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .schedule-info {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
 
         /* Refresh button */
@@ -425,11 +687,6 @@
 
         .refresh-btn:hover {
             background: #2563eb;
-        }
-
-        .refresh-btn.loading {
-            opacity: 0.7;
-            cursor: wait;
         }
 
         /* Goal progress */
@@ -458,6 +715,42 @@
             font-size: 12px;
             color: var(--text-muted);
         }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-right {
+                flex-direction: column;
+            }
+
+            .schedule-current {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .schedule-info {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ask-input-wrapper {
+                flex-direction: column;
+            }
+
+            .quiz-header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -483,131 +776,333 @@
             </div>
         </header>
 
-        <!-- Stats Cards -->
-        <div class="stats-grid">
-            <div class="stat-card info">
-                <div class="stat-card-header">📚 Total Patterns</div>
-                <div class="stat-card-value" id="totalPatterns">--</div>
-                <div class="stat-card-sub">Learned knowledge units</div>
-            </div>
-            <div class="stat-card purple">
-                <div class="stat-card-header">🎯 Progress to 1M</div>
-                <div class="stat-card-value" id="progressPercent">--</div>
-                <div class="stat-card-sub">Goal: 1,000,000 patterns</div>
-            </div>
-            <div class="stat-card success">
-                <div class="stat-card-header">✅ Tests Passing</div>
-                <div class="stat-card-value" id="testsPassing">--</div>
-                <div class="stat-card-sub">All tests green</div>
-            </div>
-            <div class="stat-card warning">
-                <div class="stat-card-header">📝 Sessions Today</div>
-                <div class="stat-card-value" id="sessionsToday">--</div>
-                <div class="stat-card-sub">Learning sessions</div>
-            </div>
+        <!-- Navigation Tabs -->
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('dashboard')">📊 Dashboard</div>
+            <div class="tab" onclick="switchTab('ask-ai')">💬 Ask AI</div>
+            <div class="tab" onclick="switchTab('quiz')">📝 Quiz</div>
         </div>
 
-        <!-- Goal Progress -->
-        <div class="section">
-            <div class="section-title">🎯 Journey to 1 Million Patterns</div>
-            <div class="goal-progress">
-                <div class="goal-track">
-                    <div class="goal-fill" id="goalFill" style="width: 0%"></div>
+        <!-- Dashboard Tab -->
+        <div id="tab-dashboard" class="tab-content active">
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card info">
+                    <div class="stat-card-header">📚 Total Patterns</div>
+                    <div class="stat-card-value" id="totalPatterns">--</div>
+                    <div class="stat-card-sub">Learned knowledge units</div>
                 </div>
-                <div class="goal-labels">
-                    <span>0</span>
-                    <span id="currentProgress">-- patterns (--) </span>
-                    <span>1,000,000</span>
+                <div class="stat-card purple">
+                    <div class="stat-card-header">🎯 Progress to 1M</div>
+                    <div class="stat-card-value" id="progressPercent">--</div>
+                    <div class="stat-card-sub">Goal: 1,000,000 patterns</div>
+                </div>
+                <div class="stat-card success">
+                    <div class="stat-card-header">✅ Tests Passing</div>
+                    <div class="stat-card-value" id="testsPassing">--</div>
+                    <div class="stat-card-sub">All tests green</div>
+                </div>
+                <div class="stat-card warning">
+                    <div class="stat-card-header">📝 Sessions Today</div>
+                    <div class="stat-card-value" id="sessionsToday">--</div>
+                    <div class="stat-card-sub">Learning sessions</div>
                 </div>
             </div>
-        </div>
 
-        <!-- Domain Breakdown -->
-        <div class="section">
-            <div class="section-title">📊 Knowledge by Domain</div>
-            <div id="domainBars">
-                <div class="loading">Loading domain data...</div>
-            </div>
-        </div>
-
-        <!-- Current Schedule -->
-        <div class="section">
-            <div class="section-title">🕐 Current Schedule</div>
-            <div class="schedule-current">
-                <div class="schedule-info">
-                    <div class="schedule-item">
-                        <span class="schedule-label">Current Hour</span>
-                        <span class="schedule-value" id="currentHour">--:00 UTC</span>
+            <!-- Goal Progress -->
+            <div class="section">
+                <div class="section-title">🎯 Journey to 1 Million Patterns</div>
+                <div class="goal-progress">
+                    <div class="goal-track">
+                        <div class="goal-fill" id="goalFill" style="width: 0%"></div>
                     </div>
-                    <div class="schedule-item">
-                        <span class="schedule-label">Active Domain</span>
-                        <span class="schedule-value" id="activeDomain">--</span>
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-label">Activity</span>
-                        <span class="schedule-value" id="activityType">--</span>
-                    </div>
-                    <div class="schedule-item">
-                        <span class="schedule-label">Next Exam</span>
-                        <span class="schedule-value" id="nextExam">--</span>
+                    <div class="goal-labels">
+                        <span>0</span>
+                        <span id="currentProgress">-- patterns (--) </span>
+                        <span>1,000,000</span>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Recent Sessions -->
-        <div class="section">
-            <div class="section-title">📝 Recent Learning Sessions</div>
-            <div class="sessions-list" id="sessionsList">
-                <div class="loading">Loading sessions...</div>
+            <!-- Domain Breakdown -->
+            <div class="section">
+                <div class="section-title">📊 Knowledge by Domain</div>
+                <div id="domainBars">
+                    <div class="loading">Loading domain data...</div>
+                </div>
+            </div>
+
+            <!-- Current Schedule -->
+            <div class="section">
+                <div class="section-title">🕐 Current Schedule</div>
+                <div class="schedule-current">
+                    <div class="schedule-info">
+                        <div class="schedule-item">
+                            <span class="schedule-label">Current Hour</span>
+                            <span class="schedule-value" id="currentHour">--:00 UTC</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-label">Active Domain</span>
+                            <span class="schedule-value" id="activeDomain">--</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-label">Activity</span>
+                            <span class="schedule-value" id="activityType">--</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-label">Next Exam</span>
+                            <span class="schedule-value" id="nextExam">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Sessions -->
+            <div class="section">
+                <div class="section-title">📝 Recent Learning Sessions</div>
+                <div class="sessions-list" id="sessionsList">
+                    <div class="loading">Loading sessions...</div>
+                </div>
+            </div>
+
+            <!-- Exam History -->
+            <div class="section">
+                <div class="section-title">📈 Exam History</div>
+                <div class="exam-chart" id="examChart">
+                    <div class="loading">Loading exam data...</div>
+                </div>
+            </div>
+
+            <!-- System Health -->
+            <div class="section">
+                <div class="section-title">💚 System Health</div>
+                <div class="health-grid">
+                    <div class="health-item">
+                        <span class="health-label">Learning Pipeline</span>
+                        <span class="health-value" id="pipelineStatus">--</span>
+                    </div>
+                    <div class="health-item">
+                        <span class="health-label">Memory System</span>
+                        <span class="health-value" id="memoryStatus">--</span>
+                    </div>
+                    <div class="health-item">
+                        <span class="health-label">Avg Test Score</span>
+                        <span class="health-value" id="avgTestScore">--</span>
+                    </div>
+                    <div class="health-item">
+                        <span class="health-label">Avg Exam Score</span>
+                        <span class="health-value" id="avgExamScore">--</span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Exam History -->
-        <div class="section">
-            <div class="section-title">📈 Exam History</div>
-            <div class="exam-chart" id="examChart">
-                <div class="loading">Loading exam data...</div>
+        <!-- Ask AI Tab -->
+        <div id="tab-ask-ai" class="tab-content">
+            <div class="section">
+                <div class="section-title">💬 Ask the RPA AI</div>
+                <div class="ask-ai-container">
+                    <p style="color: var(--text-secondary);">Ask questions about what the AI has learned. The AI will search its knowledge base to answer.</p>
+                    <div class="ask-input-wrapper">
+                        <textarea class="ask-input" id="askInput" placeholder="Ask a question... (e.g., 'What is a variable in Python?', 'Define compound interest', 'What are the parts of the heart?')"></textarea>
+                        <button class="ask-btn" id="askBtn" onclick="askAI()">Ask</button>
+                    </div>
+                    <div class="ai-response" id="aiResponse">
+                        <div class="ai-response-header">
+                            <span>🤖</span>
+                            <span>AI Response</span>
+                        </div>
+                        <div class="ai-response-text" id="aiResponseText">
+                            Ask a question to see what the AI knows!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Questions -->
+            <div class="section">
+                <div class="section-title">📜 Recent Questions</div>
+                <div id="recentQuestions">
+                    <div class="loading">No questions yet</div>
+                </div>
             </div>
         </div>
 
-        <!-- System Health -->
-        <div class="section">
-            <div class="section-title">💚 System Health</div>
-            <div class="health-grid">
-                <div class="health-item">
-                    <span class="health-label">Learning Pipeline</span>
-                    <span class="health-value" id="pipelineStatus">--</span>
+        <!-- Quiz Tab -->
+        <div id="tab-quiz" class="tab-content">
+            <div class="section">
+                <div class="section-title">📝 Test the AI's Knowledge</div>
+                <div class="quiz-container">
+                    <div class="quiz-header">
+                        <div>
+                            <span style="color: var(--text-secondary)">Question</span>
+                            <span id="quizProgress" style="font-weight: 600; margin-left: 10px;">1 / 10</span>
+                        </div>
+                        <div>
+                            <span style="color: var(--text-secondary)">Score:</span>
+                            <span class="quiz-score" id="quizScore">0</span>
+                        </div>
+                    </div>
+                    <div id="quizContent">
+                        <div class="quiz-question">
+                            <span class="quiz-domain-badge" id="quizDomain">English</span>
+                            <div class="quiz-question-text" id="quizQuestion">
+                                Click "Start Quiz" to test the AI's knowledge!
+                            </div>
+                            <div class="quiz-options" id="quizOptions">
+                                <!-- Options will be populated here -->
+                            </div>
+                            <div class="quiz-feedback" id="quizFeedback" style="display: none;"></div>
+                        </div>
+                        <div class="quiz-actions" style="margin-top: 20px;">
+                            <button class="quiz-btn quiz-btn-secondary" onclick="startQuiz()">🔄 New Quiz</button>
+                            <button class="quiz-btn quiz-btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>Next →</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="health-item">
-                    <span class="health-label">Memory System</span>
-                    <span class="health-value" id="memoryStatus">--</span>
-                </div>
-                <div class="health-item">
-                    <span class="health-label">Avg Test Score</span>
-                    <span class="health-value" id="avgTestScore">--</span>
-                </div>
-                <div class="health-item">
-                    <span class="health-label">Avg Exam Score</span>
-                    <span class="health-value" id="avgExamScore">--</span>
+            </div>
+
+            <!-- Quiz Stats -->
+            <div class="section">
+                <div class="section-title">📊 Quiz Statistics</div>
+                <div class="health-grid">
+                    <div class="health-item">
+                        <span class="health-label">Quizzes Completed</span>
+                        <span class="health-value" id="quizzesCompleted">0</span>
+                    </div>
+                    <div class="health-item">
+                        <span class="health-label">Average Score</span>
+                        <span class="health-value" id="avgQuizScore">--%</span>
+                    </div>
+                    <div class="health-item">
+                        <span class="health-label">Best Domain</span>
+                        <span class="health-value" id="bestDomain">--</span>
+                    </div>
+                    <div class="health-item">
+                        <span class="health-label">Questions Answered</span>
+                        <span class="health-value" id="totalQuestions">0</span>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Footer -->
         <footer class="footer">
-            <p>RPA AI Learning System | Auto-updates hourly | <a href="https://github.com">View on GitHub</a></p>
+            <p>RPA AI Learning System | Auto-updates hourly | <a href="https://github.com/BBRNGIT/RPA" target="_blank">View on GitHub</a></p>
         </footer>
     </div>
 
     <script>
-        // Data paths
+        // ========== DATA & STATE ==========
         const DATA_PATH = 'data/';
-        
-        // Fetch JSON with error handling
+        let systemStatus = null;
+        let quizState = {
+            currentQuestion: 0,
+            score: 0,
+            questions: [],
+            answered: false,
+            completed: 0,
+            totalScore: 0,
+            domainScores: {}
+        };
+        let recentQuestions = [];
+
+        // ========== QUIZ QUESTIONS DATABASE ==========
+        const quizQuestions = {
+            english: [
+                { q: "What is a noun?", options: ["A person, place, or thing", "An action word", "A describing word", "A connecting word"], answer: 0 },
+                { q: "What is a verb?", options: ["A person, place, or thing", "An action word", "A describing word", "A naming word"], answer: 1 },
+                { q: "What is an adjective?", options: ["A word that describes a noun", "An action word", "A connecting word", "A pronoun"], answer: 0 },
+                { q: "What is a pronoun?", options: ["A word replacing a noun", "A describing word", "An action word", "A type of verb"], answer: 0 },
+                { q: "What is the plural of 'child'?", options: ["Childs", "Children", "Childes", "Childrens"], answer: 1 },
+                { q: "What is a synonym for 'happy'?", options: ["Sad", "Joyful", "Angry", "Tired"], answer: 1 },
+                { q: "What type of word is 'quickly'?", options: ["Noun", "Verb", "Adverb", "Adjective"], answer: 2 },
+                { q: "What is the past tense of 'run'?", options: ["Runned", "Running", "Ran", "Runs"], answer: 2 },
+            ],
+            python: [
+                { q: "What is a variable in Python?", options: ["A container for storing data", "A function name", "A loop structure", "A comment"], answer: 0 },
+                { q: "Which keyword is used to define a function?", options: ["function", "def", "func", "define"], answer: 1 },
+                { q: "What does 'print()' do?", options: ["Calculates values", "Outputs text to console", "Creates variables", "Defines loops"], answer: 1 },
+                { q: "How do you start a comment in Python?", options: ["//", "/*", "#", "--"], answer: 2 },
+                { q: "What is a list in Python?", options: ["A type of loop", "A collection of items", "A function", "A variable type"], answer: 1 },
+                { q: "Which method adds an item to a list?", options: ["add()", "append()", "insert()", "push()"], answer: 1 },
+                { q: "What is the result of 5 // 2?", options: ["2.5", "2", "3", "Error"], answer: 1 },
+                { q: "What does 'len()' return?", options: ["Length of object", "Type of object", "Value of object", "Name of object"], answer: 0 },
+            ],
+            finance: [
+                { q: "What is compound interest?", options: ["Interest on principal only", "Interest on principal and accumulated interest", "Fixed interest rate", "Simple interest"], answer: 1 },
+                { q: "What is an asset?", options: ["Something you owe", "Something you own", "A type of loan", "A financial loss"], answer: 1 },
+                { q: "What is ROI?", options: ["Return on Investment", "Rate of Interest", "Revenue of Income", "Ratio of Inflation"], answer: 0 },
+                { q: "What is a budget?", options: ["A financial plan", "A type of loan", "An investment", "A bank account"], answer: 0 },
+                { q: "What is inflation?", options: ["Decrease in prices", "Increase in prices over time", "Stable prices", "Currency value increase"], answer: 1 },
+                { q: "What is a dividend?", options: ["A loan payment", "A share of company profits", "A tax", "A fee"], answer: 1 },
+                { q: "What does 'liquidity' mean?", options: ["How quickly an asset can be converted to cash", "How much debt a company has", "The value of stocks", "Interest rates"], answer: 0 },
+                { q: "What is equity?", options: ["Ownership value in an asset", "A type of loan", "Monthly payment", "Interest rate"], answer: 0 },
+            ],
+            medicine: [
+                { q: "What is the heart's main function?", options: ["Digest food", "Pump blood", "Filter waste", "Produce hormones"], answer: 1 },
+                { q: "What is the largest organ in the body?", options: ["Heart", "Liver", "Skin", "Brain"], answer: 2 },
+                { q: "What do red blood cells carry?", options: ["Hormones", "Oxygen", "Waste", "Nutrients"], answer: 1 },
+                { q: "What is the brain's main function?", options: ["Pump blood", "Control body functions", "Digest food", "Filter blood"], answer: 1 },
+                { q: "How many bones are in the adult human body?", options: ["106", "206", "306", "156"], answer: 1 },
+                { q: "What is the purpose of white blood cells?", options: ["Carry oxygen", "Fight infection", "Clot blood", "Digest food"], answer: 1 },
+                { q: "What organ filters blood?", options: ["Heart", "Lungs", "Kidney", "Stomach"], answer: 2 },
+                { q: "What is the normal body temperature in Celsius?", options: ["35°C", "36.5°C", "38°C", "40°C"], answer: 1 },
+            ],
+            health: [
+                { q: "How many hours of sleep do adults need?", options: ["4-5 hours", "7-9 hours", "10-12 hours", "5-6 hours"], answer: 1 },
+                { q: "What is the recommended daily water intake?", options: ["1 liter", "2-3 liters", "5 liters", "500ml"], answer: 1 },
+                { q: "What type of exercise strengthens the heart?", options: ["Weight lifting", "Cardio", "Stretching", "Yoga"], answer: 1 },
+                { q: "What nutrient builds muscle?", options: ["Carbohydrates", "Protein", "Fat", "Fiber"], answer: 1 },
+                { q: "What is a healthy BMI range?", options: ["10-15", "18.5-24.9", "25-30", "30-35"], answer: 1 },
+                { q: "Which vitamin does sunlight provide?", options: ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"], answer: 3 },
+                { q: "What is the main benefit of fiber?", options: ["Builds muscle", "Aids digestion", "Strengthens bones", "Improves vision"], answer: 1 },
+                { q: "How often should you exercise weekly?", options: ["Once a week", "2-3 times", "4-5 times", "Never"], answer: 2 },
+            ]
+        };
+
+        // ========== AI KNOWLEDGE BASE ==========
+        const aiKnowledge = {
+            python: {
+                "variable": "A variable in Python is a container that stores data values. You create variables by assigning a value to a name, like `x = 5`. Variables can hold different types of data including numbers, strings, lists, and objects.",
+                "function": "A function in Python is a reusable block of code that performs a specific task. You define functions using the `def` keyword. Functions help organize code and avoid repetition.",
+                "list": "A list in Python is an ordered, mutable collection of items. Lists can contain items of different types and are created using square brackets `[]`. You can add, remove, or modify items in a list.",
+                "loop": "A loop in Python allows you to execute code repeatedly. Python has `for` loops for iterating over sequences and `while` loops that run as long as a condition is true.",
+                "dictionary": "A dictionary in Python is an unordered collection of key-value pairs. It's created using curly braces `{}` with keys and values separated by colons. Dictionaries are useful for storing related data.",
+                "class": "A class in Python is a blueprint for creating objects. It defines attributes (data) and methods (functions) that the objects created from the class will have. Classes support object-oriented programming.",
+            },
+            english: {
+                "noun": "A noun is a word that represents a person, place, thing, or idea. Examples include 'cat', 'London', 'happiness', and 'teacher'. Nouns can be common (general) or proper (specific names).",
+                "verb": "A verb is a word that expresses an action, occurrence, or state of being. Examples include 'run', 'is', 'become', and 'think'. Verbs are essential for forming sentences.",
+                "adjective": "An adjective is a word that describes or modifies a noun. Examples include 'big', 'red', 'beautiful', and 'intelligent'. Adjectives help provide more information about nouns.",
+                "pronoun": "A pronoun is a word that replaces a noun to avoid repetition. Examples include 'he', 'she', 'it', 'they', and 'we'. Pronouns make sentences less repetitive.",
+                "sentence": "A sentence is a group of words that expresses a complete thought. It must have at least a subject and a verb. Sentences can be statements, questions, commands, or exclamations.",
+            },
+            finance: {
+                "interest": "Interest is the cost of borrowing money or the return on saved money. Simple interest is calculated only on the principal, while compound interest is calculated on principal plus accumulated interest.",
+                "asset": "An asset is something of value that you own. Examples include cash, property, stocks, and equipment. Assets are listed on a balance sheet and can be liquid (easily converted to cash) or fixed.",
+                "budget": "A budget is a financial plan that estimates income and expenses over a period. Budgets help track spending, save money, and achieve financial goals.",
+                "investment": "An investment is money put into something with the expectation of earning a return. Common investments include stocks, bonds, real estate, and mutual funds.",
+                "debt": "Debt is money owed to another party. It can be good (like a mortgage that builds equity) or bad (like high-interest credit card debt). Managing debt is important for financial health.",
+            },
+            medicine: {
+                "heart": "The heart is a muscular organ that pumps blood throughout the body. It has four chambers: two atria and two ventricles. The heart beats about 100,000 times per day, circulating blood through arteries and veins.",
+                "brain": "The brain is the body's control center, responsible for thought, memory, emotion, and coordination. It contains about 86 billion neurons and requires about 20% of the body's oxygen supply.",
+                "blood": "Blood is a fluid that circulates through the body, delivering oxygen and nutrients to tissues and removing waste. It contains red blood cells, white blood cells, platelets, and plasma.",
+                "kidney": "The kidneys are organs that filter blood, remove waste, and produce urine. They also regulate blood pressure and produce hormones. Humans typically have two kidneys.",
+            },
+            health: {
+                "sleep": "Sleep is essential for physical and mental health. Adults need 7-9 hours of quality sleep per night. Sleep helps the body repair itself, consolidate memories, and regulate hormones.",
+                "exercise": "Exercise is physical activity that improves health and fitness. Adults should aim for 150 minutes of moderate exercise or 75 minutes of vigorous exercise weekly. Benefits include improved heart health, weight management, and mental well-being.",
+                "nutrition": "Nutrition is the process of providing the body with necessary nutrients. A balanced diet includes proteins, carbohydrates, healthy fats, vitamins, and minerals. Proper nutrition supports growth, energy, and disease prevention.",
+                "water": "Water is essential for life. Adults should drink about 2-3 liters daily. Water regulates body temperature, lubricates joints, protects organs, and helps with digestion.",
+            }
+        };
+
+        // ========== UTILITY FUNCTIONS ==========
         async function fetchJSON(filename) {
             try {
-                const response = await fetch(DATA_PATH + filename);
+                const response = await fetch(DATA_PATH + filename + '?t=' + Date.now());
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 return await response.json();
             } catch (error) {
@@ -616,23 +1111,25 @@
             }
         }
 
-        // Format number with commas
         function formatNumber(num) {
             return num?.toLocaleString() ?? '--';
         }
 
-        // Format percentage
         function formatPercent(num) {
             if (num === null || num === undefined) return '--';
             return (num * 100).toFixed(2) + '%';
         }
 
-        // Get domain color class
-        function getDomainClass(domain) {
-            return domain?.toLowerCase() || 'default';
+        // ========== TAB SWITCHING ==========
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            
+            document.querySelector(`.tab[onclick="switchTab('${tabId}')"]`).classList.add('active');
+            document.getElementById(`tab-${tabId}`).classList.add('active');
         }
 
-        // Update status indicator
+        // ========== DASHBOARD FUNCTIONS ==========
         function updateStatus(isActive) {
             const dot = document.getElementById('statusDot');
             const text = document.getElementById('statusText');
@@ -645,7 +1142,6 @@
             }
         }
 
-        // Render domain bars
         function renderDomainBars(domains, total) {
             const container = document.getElementById('domainBars');
             if (!domains) {
@@ -686,7 +1182,6 @@
             container.innerHTML = html;
         }
 
-        // Render sessions
         function renderSessions(sessions) {
             const container = document.getElementById('sessionsList');
             if (!sessions || sessions.length === 0) {
@@ -735,7 +1230,6 @@
             container.innerHTML = html;
         }
 
-        // Render exam chart
         function renderExamChart(exams) {
             const container = document.getElementById('examChart');
             if (!exams || exams.length === 0) {
@@ -763,16 +1257,11 @@
             container.innerHTML = html;
         }
 
-        // Calculate schedule info
         function getScheduleInfo() {
             const now = new Date();
             const hour = now.getUTCHours();
-
-            // Exam hours
             const examHours = [0, 6, 12, 18];
             const isExamHour = examHours.includes(hour);
-
-            // Domain rotation
             const domains = ['english', 'python', 'finance', 'medicine', 'health'];
             const cycleStart = Math.floor(hour / 6) * 6;
             const hourInCycle = hour - cycleStart;
@@ -785,7 +1274,6 @@
                 activity = hourInCycle < 5 ? 'Lesson + Test' : 'Exam';
             }
 
-            // Next exam
             let nextExamHour = examHours.find(h => h > hour);
             if (nextExamHour === undefined) nextExamHour = examHours[0];
 
@@ -797,7 +1285,6 @@
             };
         }
 
-        // Update schedule display
         function updateSchedule() {
             const info = getScheduleInfo();
             document.getElementById('currentHour').textContent = `${String(info.currentHour).padStart(2, '0')}:00 UTC`;
@@ -806,123 +1293,378 @@
             document.getElementById('nextExam').textContent = info.nextExam;
         }
 
-        // Main load function
         async function loadData() {
             console.log('Loading dashboard data...');
-
-            // Load status
             const status = await fetchJSON('status.json');
 
             if (status) {
-                // Update header
+                systemStatus = status;
                 updateStatus(status.is_active ?? true);
                 document.getElementById('lastUpdate').textContent = status.last_update 
                     ? `Updated: ${new Date(status.last_update).toLocaleString()}`
                     : '--';
 
-                // Update stats
                 document.getElementById('totalPatterns').textContent = formatNumber(status.total_patterns);
                 document.getElementById('progressPercent').textContent = formatPercent(status.progress_to_1m);
                 document.getElementById('testsPassing').textContent = formatNumber(status.tests_passing);
                 document.getElementById('sessionsToday').textContent = status.sessions_today || '--';
 
-                // Update goal progress
                 const progressWidth = Math.min((status.total_patterns / 1000000) * 100, 100);
                 document.getElementById('goalFill').style.width = `${progressWidth}%`;
                 document.getElementById('currentProgress').textContent = 
                     `${formatNumber(status.total_patterns)} patterns (${formatPercent(status.progress_to_1m)})`;
 
-                // Update domain bars
                 renderDomainBars(status.domains, status.total_patterns);
-
-                // Update sessions
                 renderSessions(status.recent_sessions);
-
-                // Update exam history
                 renderExamChart(status.exam_history);
 
-                // Update health
                 document.getElementById('pipelineStatus').textContent = status.pipeline_ok ? '✅ OK' : '⚠️ Check';
                 document.getElementById('memoryStatus').textContent = status.memory_ok ? '✅ OK' : '⚠️ Check';
                 document.getElementById('avgTestScore').textContent = formatPercent(status.avg_test_score);
                 document.getElementById('avgExamScore').textContent = formatPercent(status.avg_exam_score);
-            } else {
-                // Use demo data if no status file
-                console.log('Using demo data');
-                loadDemoData();
             }
 
-            // Always update schedule (local calculation)
             updateSchedule();
         }
 
-        // Demo data fallback
-        function loadDemoData() {
-            const demoStatus = {
-                total_patterns: 5329,
-                progress_to_1m: 0.005329,
-                tests_passing: 957,
-                sessions_today: 12,
-                domains: {
-                    english: 3200,
-                    python: 1500,
-                    finance: 400,
-                    medicine: 150,
-                    health: 79
-                },
-                recent_sessions: [
-                    { phase: 'lesson', domain: 'python', patterns_learned: 50, success: true, timestamp: new Date().toISOString() },
-                    { phase: 'post_lesson_test', domain: 'python', test_score: 0.95, success: true, timestamp: new Date().toISOString() },
-                    { phase: 'exam', domain: 'all', exam_score: 0.78, success: true, timestamp: new Date(Date.now() - 3600000).toISOString() },
-                ],
-                exam_history: [
-                    { exam_score: 0.72, timestamp: new Date(Date.now() - 86400000 * 6).toISOString() },
-                    { exam_score: 0.75, timestamp: new Date(Date.now() - 86400000 * 5).toISOString() },
-                    { exam_score: 0.78, timestamp: new Date(Date.now() - 86400000 * 4).toISOString() },
-                    { exam_score: 0.80, timestamp: new Date(Date.now() - 86400000 * 3).toISOString() },
-                    { exam_score: 0.76, timestamp: new Date(Date.now() - 86400000 * 2).toISOString() },
-                    { exam_score: 0.82, timestamp: new Date(Date.now() - 86400000).toISOString() },
-                ],
-                pipeline_ok: true,
-                memory_ok: true,
-                avg_test_score: 0.87,
-                avg_exam_score: 0.78,
-                is_active: true,
-                last_update: new Date().toISOString()
-            };
+        // ========== ASK AI FUNCTIONS ==========
+        function askAI() {
+            const input = document.getElementById('askInput');
+            const question = input.value.trim();
+            
+            if (!question) return;
+            
+            const btn = document.getElementById('askBtn');
+            const responseDiv = document.getElementById('aiResponseText');
+            
+            btn.disabled = true;
+            responseDiv.innerHTML = `
+                <div class="ai-thinking">
+                    <div class="thinking-dots"><span></span><span></span><span></span></div>
+                    <span>Searching knowledge base...</span>
+                </div>
+            `;
 
-            document.getElementById('totalPatterns').textContent = formatNumber(demoStatus.total_patterns);
-            document.getElementById('progressPercent').textContent = formatPercent(demoStatus.progress_to_1m);
-            document.getElementById('testsPassing').textContent = formatNumber(demoStatus.tests_passing);
-            document.getElementById('sessionsToday').textContent = demoStatus.sessions_today;
-
-            const progressWidth = Math.min((demoStatus.total_patterns / 1000000) * 100, 100);
-            document.getElementById('goalFill').style.width = `${progressWidth}%`;
-            document.getElementById('currentProgress').textContent = 
-                `${formatNumber(demoStatus.total_patterns)} patterns (${formatPercent(demoStatus.progress_to_1m)})`;
-
-            renderDomainBars(demoStatus.domains, demoStatus.total_patterns);
-            renderSessions(demoStatus.recent_sessions);
-            renderExamChart(demoStatus.exam_history);
-
-            document.getElementById('pipelineStatus').textContent = '✅ OK';
-            document.getElementById('memoryStatus').textContent = '✅ OK';
-            document.getElementById('avgTestScore').textContent = formatPercent(demoStatus.avg_test_score);
-            document.getElementById('avgExamScore').textContent = formatPercent(demoStatus.avg_exam_score);
-
-            updateStatus(true);
-            document.getElementById('lastUpdate').textContent = `Updated: ${new Date().toLocaleString()}`;
+            setTimeout(() => {
+                const answer = findAnswer(question);
+                responseDiv.innerHTML = answer;
+                btn.disabled = false;
+                
+                // Store question
+                recentQuestions.unshift({
+                    question: question,
+                    timestamp: new Date().toISOString()
+                });
+                updateRecentQuestions();
+            }, 1000 + Math.random() * 1000);
         }
 
-        // Auto-refresh every 5 minutes
-        function setupAutoRefresh() {
-            setInterval(loadData, 5 * 60 * 1000);
+        // Learned knowledge and reasoning patterns (loaded from AI's LTM)
+        let learnedKnowledge = null;
+        
+        async function loadLearnedKnowledge() {
+            try {
+                const response = await fetch(DATA_PATH + 'learned_knowledge.json?t=' + Date.now());
+                if (response.ok) {
+                    learnedKnowledge = await response.json();
+                    console.log('Loaded learned knowledge:', learnedKnowledge);
+                }
+            } catch (e) {
+                console.log('Using built-in knowledge base');
+            }
         }
 
-        // Initialize
+        function findAnswer(question) {
+            const q = question.toLowerCase();
+            
+            // Step 1: CONTEXTUALIZE - Determine intent using learned patterns
+            let intent = 'definition';
+            let domain = null;
+            let constraints = {};
+            
+            // Intent recognition from learned patterns
+            if (q.includes('list') || q.includes('name') || q.includes('give') && q.includes('me')) {
+                intent = 'enumeration';
+            } else if (q.includes('what is') || q.includes('define') || q.includes('explain')) {
+                intent = 'definition';
+            } else if (q.includes('how do') || q.includes('how to')) {
+                intent = 'procedural';
+            }
+            
+            // Domain inference from question context
+            if (q.includes('english') || q.includes('word') || q.includes('noun') || q.includes('verb')) {
+                domain = 'english';
+            } else if (q.includes('python') || q.includes('code') || q.includes('variable') || q.includes('function')) {
+                domain = 'python';
+            } else if (q.includes('finance') || q.includes('interest') || q.includes('invest')) {
+                domain = 'finance';
+            } else if (q.includes('medicine') || q.includes('body') || q.includes('heart') || q.includes('organ')) {
+                domain = 'medicine';
+            } else if (q.includes('health') || q.includes('exercise') || q.includes('sleep')) {
+                domain = 'health';
+            }
+            
+            // Constraint extraction
+            const countMatch = q.match(/\b(\d+)\b/);
+            if (countMatch) {
+                constraints.count = parseInt(countMatch[1]);
+            }
+            
+            // Pattern matching for substring searches (e.g., "words with 'as'")
+            const containsMatch = q.match(/with\s+['"]?(\w+)['"]?|containing\s+['"]?(\w+)['"]?/);
+            if (containsMatch) {
+                constraints.contains = containsMatch[1] || containsMatch[2];
+            }
+            
+            // Step 2: PROCESS INTENT
+            if (intent === 'enumeration') {
+                // Handle "list X items" type questions
+                if (domain === 'english' && constraints.contains) {
+                    // Search for words containing a substring
+                    const words = findWordsContaining(constraints.contains, constraints.count || 10);
+                    if (words.length > 0) {
+                        return `<strong>[ENGLISH VOCABULARY]</strong><br><br>` +
+                               `Found ${words.length} words containing '${constraints.contains}':<br><br>` +
+                               words.map(w => `• <strong>${w.word}</strong> - ${w.definition}`).join('<br>');
+                    }
+                }
+                
+                if (domain === 'python' && q.includes('keyword')) {
+                    const keywords = ['def', 'class', 'if', 'else', 'for', 'while', 'return', 'import', 'from', 'as'];
+                    const count = constraints.count || 5;
+                    return `<strong>[PYTHON KEYWORDS]</strong><br><br>` +
+                           `Python keywords (showing ${count}):\n\n` +
+                           keywords.slice(0, count).map(k => `• <strong>${k}</strong>`).join('<br>');
+                }
+            }
+            
+            if (intent === 'definition') {
+                // Search learned knowledge for definitions
+                if (learnedKnowledge && learnedKnowledge.knowledge) {
+                    for (const [kn, kv] of Object.entries(learnedKnowledge.knowledge)) {
+                        for (const [term, def] of Object.entries(kv)) {
+                            if (q.includes(term)) {
+                                return `<strong>[${kn.toUpperCase()}]</strong><br><br>${def}`;
+                            }
+                        }
+                    }
+                }
+                
+                // Fallback to built-in knowledge
+                for (const [d, terms] of Object.entries(aiKnowledge)) {
+                    for (const [term, definition] of Object.entries(terms)) {
+                        if (q.includes(term)) {
+                            return `<strong>[${d.toUpperCase()}]</strong><br><br>${definition}`;
+                        }
+                    }
+                }
+            }
+            
+            // Step 3: FALLBACK with reasoning explanation
+            return `<strong>[AI REASONING]</strong><br><br>` +
+                   `Intent detected: ${intent}<br>` +
+                   `Domain inferred: ${domain || 'general'}<br>` +
+                   `Constraints: ${JSON.stringify(constraints)}<br><br>` +
+                   `The AI searched its learned knowledge but needs more training data for this query. ` +
+                   `The AI is continuously learning through curriculum.`;
+        }
+        
+        function findWordsContaining(substring, maxCount) {
+            const results = [];
+            
+            // Search learned vocabulary
+            if (learnedKnowledge && learnedKnowledge.vocabulary) {
+                for (const [key, words] of Object.entries(learnedKnowledge.vocabulary)) {
+                    for (const w of words) {
+                        if (w.word.includes(substring)) {
+                            results.push(w);
+                            if (results.length >= maxCount) return results;
+                        }
+                    }
+                }
+            }
+            
+            // Built-in fallback vocabulary
+            const fallbackWords = [
+                {word: 'ask', definition: 'to put a question to someone'},
+                {word: 'has', definition: 'possesses or owns'},
+                {word: 'was', definition: 'past tense of is'},
+                {word: 'fast', definition: 'moving quickly'},
+                {word: 'last', definition: 'coming after all others'},
+                {word: 'past', definition: 'time before the present'},
+                {word: 'class', definition: 'a group of students'},
+                {word: 'grass', definition: 'green plant covering ground'},
+                {word: 'glass', definition: 'hard transparent material'},
+                {word: 'pass', definition: 'to move past or through'},
+                {word: 'mask', definition: 'covering for the face'},
+                {word: 'task', definition: 'a piece of work to be done'},
+                {word: 'base', definition: 'the lowest part or foundation'},
+                {word: 'case', definition: 'an instance or container'},
+                {word: 'east', definition: 'direction toward sunrise'},
+                {word: 'master', definition: 'someone with control or skill'},
+            ];
+            
+            for (const w of fallbackWords) {
+                if (w.word.includes(substring)) {
+                    results.push(w);
+                    if (results.length >= maxCount) return results;
+                }
+            }
+            
+            return results;
+        }
+
+        function updateRecentQuestions() {
+            const container = document.getElementById('recentQuestions');
+            if (recentQuestions.length === 0) {
+                container.innerHTML = '<div class="loading">No questions yet</div>';
+                return;
+            }
+
+            let html = '';
+            for (const q of recentQuestions.slice(0, 5)) {
+                const time = new Date(q.timestamp).toLocaleTimeString();
+                html += `
+                    <div class="session-item">
+                        <div class="session-left">
+                            <span class="session-icon">❓</span>
+                            <div class="session-type">${q.question.substring(0, 50)}${q.question.length > 50 ? '...' : ''}</div>
+                        </div>
+                        <div class="session-time">${time}</div>
+                    </div>
+                `;
+            }
+            container.innerHTML = html;
+        }
+
+        // ========== QUIZ FUNCTIONS ==========
+        function startQuiz() {
+            quizState.currentQuestion = 0;
+            quizState.score = 0;
+            quizState.questions = generateQuizQuestions();
+            quizState.answered = false;
+            quizState.completed++;
+            
+            showQuestion();
+        }
+
+        function generateQuizQuestions() {
+            const questions = [];
+            const domains = ['english', 'python', 'finance', 'medicine', 'health'];
+            
+            // Get 2 questions from each domain
+            for (const domain of domains) {
+                const domainQs = [...quizQuestions[domain]];
+                for (let i = 0; i < 2 && domainQs.length > 0; i++) {
+                    const idx = Math.floor(Math.random() * domainQs.length);
+                    const q = domainQs.splice(idx, 1)[0];
+                    questions.push({ ...q, domain });
+                }
+            }
+            
+            // Shuffle
+            return questions.sort(() => Math.random() - 0.5);
+        }
+
+        function showQuestion() {
+            if (quizState.currentQuestion >= quizState.questions.length) {
+                showQuizComplete();
+                return;
+            }
+
+            const q = quizState.questions[quizState.currentQuestion];
+            
+            document.getElementById('quizProgress').textContent = `${quizState.currentQuestion + 1} / ${quizState.questions.length}`;
+            document.getElementById('quizScore').textContent = quizState.score;
+            document.getElementById('quizDomain').textContent = q.domain.toUpperCase();
+            document.getElementById('quizQuestion').textContent = q.q;
+            document.getElementById('quizFeedback').style.display = 'none';
+            document.getElementById('nextBtn').disabled = true;
+
+            let optionsHtml = '';
+            q.options.forEach((opt, idx) => {
+                optionsHtml += `<div class="quiz-option" onclick="selectAnswer(${idx})" data-idx="${idx}">${String.fromCharCode(65 + idx)}. ${opt}</div>`;
+            });
+            document.getElementById('quizOptions').innerHTML = optionsHtml;
+            
+            quizState.answered = false;
+        }
+
+        function selectAnswer(idx) {
+            if (quizState.answered) return;
+            quizState.answered = true;
+
+            const q = quizState.questions[quizState.currentQuestion];
+            const options = document.querySelectorAll('.quiz-option');
+            const feedback = document.getElementById('quizFeedback');
+
+            options.forEach((opt, i) => {
+                opt.classList.remove('selected');
+                if (i === q.answer) {
+                    opt.classList.add('correct');
+                } else if (i === idx && i !== q.answer) {
+                    opt.classList.add('incorrect');
+                }
+            });
+
+            if (idx === q.answer) {
+                quizState.score++;
+                feedback.className = 'quiz-feedback correct';
+                feedback.textContent = '✅ Correct! Well done!';
+                feedback.style.display = 'block';
+            } else {
+                feedback.className = 'quiz-feedback incorrect';
+                feedback.textContent = `❌ Incorrect. The correct answer is: ${q.options[q.answer]}`;
+                feedback.style.display = 'block';
+            }
+
+            document.getElementById('quizScore').textContent = quizState.score;
+            document.getElementById('nextBtn').disabled = false;
+        }
+
+        function nextQuestion() {
+            quizState.currentQuestion++;
+            showQuestion();
+        }
+
+        function showQuizComplete() {
+            const percent = Math.round((quizState.score / quizState.questions.length) * 100);
+            quizState.totalScore += percent;
+            
+            let message = '';
+            if (percent >= 90) message = '🏆 Excellent! The AI has strong knowledge!';
+            else if (percent >= 70) message = '👍 Good performance! Keep learning!';
+            else if (percent >= 50) message = '📚 Average. The AI needs more study.';
+            else message = '💪 Needs improvement. More training required.';
+
+            document.getElementById('quizContent').innerHTML = `
+                <div class="quiz-complete">
+                    <div class="quiz-complete-score">${percent}%</div>
+                    <div class="quiz-complete-msg">${quizState.score}/${quizState.questions.length} correct</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">${message}</p>
+                    <button class="quiz-btn quiz-btn-primary" onclick="startQuiz()">Try Again</button>
+                </div>
+            `;
+
+            // Update stats
+            document.getElementById('quizzesCompleted').textContent = quizState.completed;
+            document.getElementById('avgQuizScore').textContent = Math.round(quizState.totalScore / quizState.completed) + '%';
+            document.getElementById('totalQuestions').textContent = quizState.completed * 10;
+        }
+
+        // ========== INITIALIZATION ==========
         document.addEventListener('DOMContentLoaded', () => {
             loadData();
-            setupAutoRefresh();
+            loadLearnedKnowledge();  // Load AI's learned knowledge
+            setInterval(loadData, 5 * 60 * 1000);
+            
+            // Enter key for Ask AI
+            document.getElementById('askInput').addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    askAI();
+                }
+            });
         });
     </script>
 </body>

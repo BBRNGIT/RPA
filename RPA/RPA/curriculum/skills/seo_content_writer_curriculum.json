@@ -1,0 +1,846 @@
+{
+  "skill_name": "seo-content-writer",
+  "skill_description": "Use when the user asks to \"write SEO content\", \"create a blog post\", \"write an article\", \"content writing\", \"draft optimized content\", \"write me an article\", \"create a blog post about\", \"help me write SEO content\", or \"draft content for\". Creates high-quality, SEO-optimized content that ranks in search engines. Applies on-page SEO best practices, keyword optimization, and content structure for maximum visibility and engagement. For AI citation optimization, see geo-content-optimizer. For updating existing content, see content-refresher.",
+  "items": [
+    {
+      "item_id": "skill_seo_content_writer_concept_8f153773",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding seo content writer",
+      "instruction": "> **[SEO & GEO Skills Library](https://skills.sh/aaron-he-zhu/seo-geo-claude-skills)** · 20 skills for SEO + GEO · Install all: `npx skills add aaron-he-zhu/seo-geo-claude-skills`\n\n<details>\n<summary>Browse all 20 skills</summary>\n\n**Research** · [keyword-research](../../research/keyword-research/) · [competitor-analysis](../../research/competitor-analysis/) · [serp-analysis](../../research/serp-analysis/) · [content-gap-analysis](../../research/content-gap-analysis/)\n\n**Build** · **seo-content-",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_a8fb8d22",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding when to use this skill",
+      "instruction": "- Writing blog posts targeting specific keywords\n- Creating landing pages optimized for search\n- Developing pillar content for topic clusters\n- Writing product descriptions for e-commerce\n- Creating service pages for local SEO\n- Producing how-to guides and tutorials\n- Writing comparison and review articles",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_4639bedd",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding what this skill does",
+      "instruction": "1. **Keyword Integration**: Naturally incorporates target and related keywords\n2. **Structure Optimization**: Creates scannable, well-organized content\n3. **Title & Meta Creation**: Writes compelling, click-worthy titles\n4. **Header Optimization**: Uses strategic H1-H6 hierarchy\n5. **Internal Linking**: Suggests relevant internal link opportunities\n6. **Readability Enhancement**: Ensures content is accessible and engaging\n7. **Featured Snippet Optimization**: Formats for SERP feature opportuniti",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_2d202f98",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding how to use",
+      "instruction": "",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_72e087dd",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding basic content creation",
+      "instruction": "```\nWrite an SEO-optimized article about [topic] targeting the keyword [keyword]\n```\n\n```\nCreate a blog post for [topic] with these keywords: [keyword list]\n```",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_6e30f03d",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding with specific requirements",
+      "instruction": "```\nWrite a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n```",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_38a4ad6c",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding content briefs",
+      "instruction": "```\nHere's my content brief: [brief]. Write SEO-optimized content following this outline.\n```",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_4da9d6fd",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding data sources",
+      "instruction": "> See [CONNECTORS.md](../../CONNECTORS.md) for tool category placeholders.\n\n**With ~~SEO tool + ~~search console connected:**\nAutomatically pull keyword metrics (search volume, difficulty, CPC), competitor content analysis (top-ranking pages, content length, common topics), SERP features (featured snippets, PAA questions), and keyword opportunities (related keywords, question-based queries).\n\n**With manual data only:**\nAsk the user to provide:\n1. Target primary keyword and 3-5 secondary keywords",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_9fd24edb",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding instructions",
+      "instruction": "When a user requests SEO content:\n\n1. **Gather Requirements**\n\n   Confirm or ask for:\n   \n   ```markdown\n   ### Content Requirements\n   \n   **Primary Keyword**: [main keyword]\n   **Secondary Keywords**: [2-5 related keywords]\n   **Target Word Count**: [length]\n   **Content Type**: [blog/guide/landing page/etc.]\n   **Target Audience**: [who is this for]\n   **Search Intent**: [informational/commercial/transactional]\n   **Tone**: [professional/casual/technical/friendly]\n   **CTA Goal**: [what actio",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_391fb8f9",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding validation checkpoints",
+      "instruction": "",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_904b2754",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding input validation",
+      "instruction": "- [ ] Primary keyword confirmed and matches search intent\n- [ ] Target word count specified (minimum 800 words for substantive content)\n- [ ] Content type and audience clearly defined\n- [ ] Competitor URLs reviewed or target SERP features identified",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_e85dbf47",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding output validation",
+      "instruction": "- [ ] Keyword density within 1-2% for primary keyword (Note: Keyword density is a guideline, not a hard rule. Modern search engines prioritize semantic relevance and natural language over exact density targets. Focus on covering the topic comprehensively with semantic variants rather than hitting a specific percentage.)\n- [ ] All sections from outline covered completely\n- [ ] Internal links included (2-5 relevant links)\n- [ ] FAQ section present with at least 3 questions\n- [ ] Readability score ",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_cea29bf7",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding example",
+      "instruction": "**User**: \"Write an SEO-optimized article about 'email marketing best practices' targeting small businesses\"\n\n**Output**:\n\n```markdown",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_b190557a",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding email marketing best practices: a complete guide for small businesses",
+      "instruction": "**Meta Description**: Discover proven email marketing best practices that help small businesses increase open rates, boost engagement, and drive sales. Start improving your campaigns today. (158 chars)\n\n---\n\nWant to know the secret behind small businesses that consistently turn subscribers into loyal customers? It's not luck—it's strategic email marketing.\n\nEmail marketing remains one of the most effective channels for small businesses, delivering an average ROI of $42 for every $1 spent. But wi",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_30632d76",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding why email marketing matters for small businesses",
+      "instruction": "Before we explore the best practices, let's understand why email deserves your attention.\n\nUnlike social media where algorithms control who sees your content, email gives you direct access to your audience. You own your email list—no platform can take it away.\n\n**Key email marketing statistics for small businesses**:\n- 81% of SMBs rely on email as their primary customer acquisition channel\n- Email subscribers are 3x more likely to share content on social media\n- Personalized emails generate 6x h",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_22f1667c",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding building a high-quality email list",
+      "instruction": "",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_70ee9b1d",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding use strategic opt-in incentives",
+      "instruction": "The foundation of effective email marketing is a quality list. Here's how to grow yours:\n\n**Lead magnets that convert**:\n- Industry-specific templates\n- Exclusive discounts or early access\n- Free tools or calculators\n- Educational email courses\n\n> **Pro Tip**: The best lead magnets solve a specific, immediate problem for your target audience.",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_fcff370e",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding implement double opt-in",
+      "instruction": "Double opt-in confirms subscriber intent and improves deliverability. Yes, you'll have fewer subscribers, but they'll be more engaged.\n\n| Single Opt-in | Double Opt-in |\n|---------------|---------------|\n| More subscribers | Fewer subscribers |\n| Higher bounce rates | Lower bounce rates |\n| Lower engagement | Higher engagement |\n| Spam risk | Better deliverability |",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_2e9b0864",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding crafting emails that get opened",
+      "instruction": "",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_018b823e",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding write compelling subject lines",
+      "instruction": "Your subject line determines whether emails get opened or ignored.\n\n**Subject line best practices**:\n1. Keep it under 50 characters\n2. Create urgency without being spammy\n3. Use numbers and specifics\n4. Personalize when possible\n5. A/B test consistently",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_e539e6bb",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding optimize preview text",
+      "instruction": "The preview text (preheader) is your second chance to convince someone to open. Use it to expand on your subject line, not repeat it.",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_fea476c0",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding personalization strategies that work",
+      "instruction": "Generic emails perform poorly. Here's how to personalize effectively:",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_17d994ce",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding segment your email list",
+      "instruction": "Divide your list based on:\n- Purchase history\n- Engagement level\n- Demographics\n- Interests or preferences\n- Customer lifecycle stage",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_9e3f1d7e",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding use dynamic content",
+      "instruction": "Send the same email but show different content blocks based on subscriber data.",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_6b41f40c",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding frequently asked questions",
+      "instruction": "",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_360788a7",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding how often should small businesses send marketing emails?",
+      "instruction": "For most small businesses, sending 1-2 emails per week strikes the right balance. This keeps you top-of-mind without overwhelming subscribers. Monitor your unsubscribe rates—if they spike after increasing frequency, scale back.",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_faaa7699",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding what is a good email open rate for small businesses?",
+      "instruction": "A good email open rate for small businesses is 20-25%. However, this varies by industry. E-commerce averages 15-20%, while B2B services often see 25-30%. Focus on improving your own benchmarks rather than industry averages.",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_80931376",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding should i buy email lists to grow faster?",
+      "instruction": "Never buy email lists. Purchased lists violate GDPR and CAN-SPAM regulations, damage your sender reputation, and result in poor engagement. Organic list growth, while slower, produces much better results.",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_77f6aadb",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding conclusion",
+      "instruction": "Implementing these email marketing best practices will help your small business build stronger customer relationships and drive consistent revenue. Remember: quality always beats quantity in email marketing.\n\nStart with one improvement today. Whether it's segmenting your list, testing subject lines, or cleaning inactive subscribers, small changes compound into significant results.\n\n**Ready to level up your email marketing?** Download our free Email Marketing Checklist to ensure every campaign yo",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_ff84f9b1",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding content type templates",
+      "instruction": "",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_cb375491",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding how-to guide",
+      "instruction": "```\nWrite a how-to guide for [task] targeting [keyword]\n```",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_3069c21b",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding comparison article",
+      "instruction": "```\nWrite a comparison article: [Option A] vs [Option B] for [keyword]\n```",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_2b477bfd",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding listicle",
+      "instruction": "```\nWrite a list post: \"X Best [Items] for [Audience/Purpose]\" targeting [keyword]\n```",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_bbf272e7",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding ultimate guide",
+      "instruction": "```\nWrite an ultimate guide about [topic] (3,000+ words) targeting [keyword]\n```",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_18c60659",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding tips for success",
+      "instruction": "1. **Match search intent** - Informational queries need guides, not sales pages\n2. **Front-load value** - Put key information early for readers and snippets\n3. **Use data and examples** - Specific beats generic every time\n4. **Write for humans first** - SEO optimization should feel natural\n5. **Include visual elements** - Break up text with images, tables, lists\n6. **Update regularly** - Fresh content signals to search engines",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_b17dd34d",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding reference materials",
+      "instruction": "- [Title Formulas](./references/title-formulas.md) - Proven headline formulas, power words, CTR patterns\n- [Content Structure Templates](./references/content-structure-templates.md) - Templates for blog posts, comparisons, listicles, how-tos, pillar pages",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_concept_baaa1c5b",
+      "skill_name": "seo-content-writer",
+      "category": "concept",
+      "concept": "Understanding related skills",
+      "instruction": "- [keyword-research](../../research/keyword-research/) — Find keywords to target\n- [geo-content-optimizer](../geo-content-optimizer/) — Optimize for AI citations\n- [meta-tags-optimizer](../meta-tags-optimizer/) — Create compelling meta tags\n- [on-page-seo-auditor](../../optimize/on-page-seo-auditor/) — Audit SEO elements\n- [internal-linking-optimizer](../../optimize/internal-linking-optimizer/) — Place internal links during content writing\n- [content-refresher](../../optimize/content-refresher/)",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n",
+        "Create a blog post for [topic] with these keywords: [keyword list]\n",
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_instruction_45d3f6b9",
+      "skill_name": "seo-content-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: seo...",
+      "instruction": "seo",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_instruction_1e908a4d",
+      "skill_name": "seo-content-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: content writing...",
+      "instruction": "content writing",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_instruction_c20d747a",
+      "skill_name": "seo-content-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: blog post...",
+      "instruction": "blog post",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_instruction_790e31eb",
+      "skill_name": "seo-content-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: article...",
+      "instruction": "article",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_instruction_92ad072d",
+      "skill_name": "seo-content-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: copywriting...",
+      "instruction": "copywriting",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_instruction_d67a25cf",
+      "skill_name": "seo-content-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: content creation...",
+      "instruction": "content creation",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_instruction_99b0871d",
+      "skill_name": "seo-content-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: on-page seo...",
+      "instruction": "on-page seo",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_instruction_d314609d",
+      "skill_name": "seo-content-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"write SEO content\"...",
+      "instruction": "\"write SEO content\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_instruction_559bfe4e",
+      "skill_name": "seo-content-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"create blog post\"...",
+      "instruction": "\"create blog post\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_instruction_2f515618",
+      "skill_name": "seo-content-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"write an article\"...",
+      "instruction": "\"write an article\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_code_pattern_53ee2d48",
+      "skill_name": "seo-content-writer",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from seo-content-writer",
+      "examples": [
+        "Write an SEO-optimized article about [topic] targeting the keyword [keyword]\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_code_pattern_31680506",
+      "skill_name": "seo-content-writer",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from seo-content-writer",
+      "examples": [
+        "Create a blog post for [topic] with these keywords: [keyword list]\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_code_pattern_3ff1b152",
+      "skill_name": "seo-content-writer",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from seo-content-writer",
+      "examples": [
+        "Write a 2,000-word guide about [topic] targeting [keyword],\ninclude FAQ section for featured snippets\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_code_pattern_d7f278e9",
+      "skill_name": "seo-content-writer",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from seo-content-writer",
+      "examples": [
+        "Here's my content brief: [brief]. Write SEO-optimized content following this outline.\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_code_pattern_092317f0",
+      "skill_name": "seo-content-writer",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from seo-content-writer",
+      "examples": [
+        "   ### Content Requirements\n   \n   **Primary Keyword**: [main keyword]\n   **Secondary Keywords**: [2-5 related keywords]\n   **Target Word Count**: [length]\n   **Content Type**: [blog/guide/landing page/etc.]\n   **Target Audience**: [who is this for]\n   **Search Intent**: [informational/commercial/transactional]\n   **Tone**: [professional/casual/technical/friendly]\n   **CTA Goal**: [what action should readers take]\n   **Competitor URLs**: [top ranking content to beat]\n   "
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_assessment_07c6ff46",
+      "skill_name": "seo-content-writer",
+      "category": "assessment",
+      "concept": "Apply seo-content-writer in a practical project",
+      "instruction": "Demonstrate mastery of seo-content-writer by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using seo-content-writer",
+        "Explain when seo-content-writer should be used",
+        "Identify the core concepts of seo-content-writer",
+        "Apply seo-content-writer to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_seo_content_writer_contextualization_39cb87e2",
+      "skill_name": "seo-content-writer",
+      "category": "contextualization",
+      "concept": "When to use seo-content-writer",
+      "instruction": "Learn when to apply seo-content-writer in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using seo-content-writer",
+        "User needs help with coding -> evaluate if seo-content-writer applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate seo-content-writer is needed",
+        "Distinguish between seo-content-writer and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 54,
+  "generated_at": "2026-03-24T04:43:44.491530",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/seo-content-writer/SKILL.md"
+}

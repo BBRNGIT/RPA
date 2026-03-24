@@ -1,0 +1,68 @@
+{
+  "skill_name": "ContentAnalysis",
+  "skill_description": "Content extraction and analysis — wisdom extraction from videos, podcasts, articles, and YouTube. USE WHEN extract wisdom, content analysis, analyze content, insight report, analyze video, analyze podcast, extract insights, key takeaways, what did I miss, extract from YouTube.",
+  "items": [
+    {
+      "item_id": "skill_contentanalysis_concept_26e5ab57",
+      "skill_name": "ContentAnalysis",
+      "category": "concept",
+      "concept": "Understanding contentanalysis",
+      "instruction": "Unified skill for content extraction and analysis workflows.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_contentanalysis_concept_e431f8b0",
+      "skill_name": "ContentAnalysis",
+      "category": "concept",
+      "concept": "Understanding workflow routing",
+      "instruction": "| Request Pattern | Route To |\n|---|---|\n| Extract wisdom, content analysis, insight report, analyze content | `ExtractWisdom/SKILL.md` |",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_contentanalysis_assessment_247b160e",
+      "skill_name": "ContentAnalysis",
+      "category": "assessment",
+      "concept": "Apply ContentAnalysis in a practical project",
+      "instruction": "Demonstrate mastery of ContentAnalysis by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using ContentAnalysis",
+        "Explain when ContentAnalysis should be used",
+        "Identify the core concepts of ContentAnalysis",
+        "Apply ContentAnalysis to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_contentanalysis_contextualization_3498f040",
+      "skill_name": "ContentAnalysis",
+      "category": "contextualization",
+      "concept": "When to use ContentAnalysis",
+      "instruction": "Learn when to apply ContentAnalysis in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using ContentAnalysis",
+        "User needs help with coding -> evaluate if ContentAnalysis applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate ContentAnalysis is needed",
+        "Distinguish between ContentAnalysis and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 4,
+  "generated_at": "2026-03-24T04:43:44.493158",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/contentanalysis/SKILL.md"
+}

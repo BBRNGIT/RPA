@@ -1,0 +1,260 @@
+{
+  "skill_name": "finance",
+  "skill_description": "Comprehensive Finance API integration skill for real-time and historical financial data analysis, market research, and investment decision-making. Priority use cases: stock price queries, market data analysis, company financial information, portfolio tracking, market news retrieval, stock screening, technical analysis, and any financial market-related requests. This skill should be the primary choice for all  Finance API interactions and financial data needs.",
+  "items": [
+    {
+      "item_id": "skill_finance_concept_4041c2f0",
+      "skill_name": "finance",
+      "category": "concept",
+      "concept": "Understanding finance skill",
+      "instruction": "",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_concept_84a46433",
+      "skill_name": "finance",
+      "category": "concept",
+      "concept": "Understanding core capabilities",
+      "instruction": "",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_concept_186fddc3",
+      "skill_name": "finance",
+      "category": "concept",
+      "concept": "Understanding market data retrieval",
+      "instruction": "- Real-time quotes: current prices, market snapshots, trading volumes\n- Historical data: price history, dividends, splits, corporate actions\n- Market indices: major indices performance and constituents\n- Currency data: forex rates and cryptocurrency information",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_concept_5be8dfbe",
+      "skill_name": "finance",
+      "category": "concept",
+      "concept": "Understanding analysis tools",
+      "instruction": "- Stock screening: filters by metrics, ratios, and technical indicators\n- Financial ratios: P/E, EPS, ROE, debt-to-equity, and other key metrics\n- Technical indicators: moving averages, RSI, MACD, chart patterns\n- Comparative analysis: sector and peer group comparisons",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_concept_8e48f204",
+      "skill_name": "finance",
+      "category": "concept",
+      "concept": "Understanding market intelligence",
+      "instruction": "- Company information: business profiles, management teams, statements\n- Market news: earnings reports and market analysis\n- Insider trading: buy/sell activities and ownership changes\n- Options data: chain data, implied volatility, and statistics",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_concept_47459a51",
+      "skill_name": "finance",
+      "category": "concept",
+      "concept": "Understanding api overview",
+      "instruction": "Finance API provides comprehensive financial data access interfaces, including real-time market data, historical stock prices, options data, insider trading, and the latest financial news.\n\nSkills Path\nSkill Location: {project_path}/skills/finance\n\nthis skill is located at above path in your project.\n\nReference Docs: See {Skill Location}/Finance_API_Doc.md for a working example.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_concept_b2a4ca5c",
+      "skill_name": "finance",
+      "category": "concept",
+      "concept": "Understanding zhipu ai - hong kong ipo information",
+      "instruction": "- **Stock Code**: 2513.HK \n- **Company Name (Chinese)**: 北京智谱华章科技股份有限公司\n- **Company Name (English)**: Knowledge Atlas Technology Joint Stock Company Limited\nZhipu AI is a leading Chinese large language model company specializing in AI foundational model research and development.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_concept_1f20f997",
+      "skill_name": "finance",
+      "category": "concept",
+      "concept": "Understanding best practices for zhipu ai stock research (one-shot success guide)",
+      "instruction": "**Search Strategy:**\n- ✅ Use full English company name: `search=Knowledge+Atlas`\n- ❌ Avoid: `search=Zhipu`, `search=02513.HK` (returns empty results)\n\n** Important **\nalways read `Finance_API_Doc.md` before use the API",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_instruction_2473ba72",
+      "skill_name": "finance",
+      "category": "instruction",
+      "concept": "Rule or guideline: Real-time quotes: current prices, market snapshots...",
+      "instruction": "Real-time quotes: current prices, market snapshots, trading volumes",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_instruction_5b9a7cde",
+      "skill_name": "finance",
+      "category": "instruction",
+      "concept": "Rule or guideline: Historical data: price history, dividends, splits,...",
+      "instruction": "Historical data: price history, dividends, splits, corporate actions",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_instruction_f52590b7",
+      "skill_name": "finance",
+      "category": "instruction",
+      "concept": "Rule or guideline: Market indices: major indices performance and cons...",
+      "instruction": "Market indices: major indices performance and constituents",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_instruction_91c48475",
+      "skill_name": "finance",
+      "category": "instruction",
+      "concept": "Rule or guideline: Currency data: forex rates and cryptocurrency info...",
+      "instruction": "Currency data: forex rates and cryptocurrency information",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_instruction_43152200",
+      "skill_name": "finance",
+      "category": "instruction",
+      "concept": "Rule or guideline: Stock screening: filters by metrics, ratios, and t...",
+      "instruction": "Stock screening: filters by metrics, ratios, and technical indicators",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_instruction_8441a27a",
+      "skill_name": "finance",
+      "category": "instruction",
+      "concept": "Rule or guideline: Financial ratios: P/E, EPS, ROE, debt-to-equity, a...",
+      "instruction": "Financial ratios: P/E, EPS, ROE, debt-to-equity, and other key metrics",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_instruction_6d59fef9",
+      "skill_name": "finance",
+      "category": "instruction",
+      "concept": "Rule or guideline: Technical indicators: moving averages, RSI, MACD, ...",
+      "instruction": "Technical indicators: moving averages, RSI, MACD, chart patterns",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_instruction_bf810084",
+      "skill_name": "finance",
+      "category": "instruction",
+      "concept": "Rule or guideline: Comparative analysis: sector and peer group compar...",
+      "instruction": "Comparative analysis: sector and peer group comparisons",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_instruction_56b6fc8c",
+      "skill_name": "finance",
+      "category": "instruction",
+      "concept": "Rule or guideline: Company information: business profiles, management...",
+      "instruction": "Company information: business profiles, management teams, statements",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_instruction_a06ab6be",
+      "skill_name": "finance",
+      "category": "instruction",
+      "concept": "Rule or guideline: Market news: earnings reports and market analysis...",
+      "instruction": "Market news: earnings reports and market analysis",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_assessment_dd21b3d3",
+      "skill_name": "finance",
+      "category": "assessment",
+      "concept": "Apply finance in a practical project",
+      "instruction": "Demonstrate mastery of finance by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using finance",
+        "Explain when finance should be used",
+        "Identify the core concepts of finance",
+        "Apply finance to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_finance_contextualization_956f3c95",
+      "skill_name": "finance",
+      "category": "contextualization",
+      "concept": "When to use finance",
+      "instruction": "Learn when to apply finance in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using finance",
+        "User needs help with coding -> evaluate if finance applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate finance is needed",
+        "Distinguish between finance and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 20,
+  "generated_at": "2026-03-24T04:43:44.497049",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/finance/SKILL.md"
+}

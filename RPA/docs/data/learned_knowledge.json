@@ -1,0 +1,66 @@
+{
+  "reasoning_patterns": [
+    {
+      "pattern_type": "intent_recognition",
+      "pattern": "When asked to 'list' items, the intent is enumeration, not definition",
+      "keywords": ["list", "name", "give me", "enumerate"],
+      "action": "search_and_list",
+      "examples": [
+        "list 10 english words with 'as' -> search english vocabulary for words containing 'as'",
+        "list 5 python keywords -> search python knowledge for keywords"
+      ]
+    },
+    {
+      "pattern_type": "intent_recognition",
+      "pattern": "When asked 'what is', the intent is definition",
+      "keywords": ["what is", "define", "what are", "explain"],
+      "action": "define_concept",
+      "examples": [
+        "what is a noun -> define concept 'noun'",
+        "what is a variable -> define concept 'variable'"
+      ]
+    },
+    {
+      "pattern_type": "domain_context",
+      "pattern": "Domain is specified explicitly in the question",
+      "indicators": ["english", "python", "finance", "medicine", "health"],
+      "action": "search_specific_domain"
+    },
+    {
+      "pattern_type": "constraint_parsing",
+      "pattern": "Extract count, filter, and category constraints",
+      "examples": [
+        "list 10 words -> constraint: count=10",
+        "words with 'as' -> constraint: contains='as'",
+        "python keywords -> constraint: category='keywords', domain='python'"
+      ]
+    }
+  ],
+  "vocabulary": {
+    "words_containing_as": [
+      {"word": "ask", "type": "verb", "definition": "to put a question to someone"},
+      {"word": "has", "type": "verb", "definition": "possesses or owns"},
+      {"word": "was", "type": "verb", "definition": "past tense of is"},
+      {"word": "fast", "type": "adjective", "definition": "moving quickly"},
+      {"word": "last", "type": "adjective", "definition": "coming after all others"},
+      {"word": "past", "type": "noun", "definition": "time before the present"},
+      {"word": "class", "type": "noun", "definition": "a group of students"},
+      {"word": "grass", "type": "noun", "definition": "green plant covering ground"},
+      {"word": "glass", "type": "noun", "definition": "hard transparent material"},
+      {"word": "pass", "type": "verb", "definition": "to move past or give to someone"}
+    ]
+  },
+  "knowledge": {
+    "python": {
+      "variable": "A variable in Python is a container that stores data values. Created by assigning a value to a name.",
+      "function": "A function in Python is a reusable block of code. Defined using the `def` keyword.",
+      "list": "A list in Python is an ordered, mutable collection. Created using square brackets [].",
+      "keywords": ["def", "class", "if", "else", "for", "while", "return", "import", "from", "as", "with", "try", "except", "finally", "raise", "assert", "break", "continue", "pass", "lambda", "yield", "global", "nonlocal", "True", "False", "None", "and", "or", "not", "in", "is"]
+    },
+    "english": {
+      "noun": "A noun is a word that represents a person, place, thing, or idea. Examples: cat, London, happiness.",
+      "verb": "A verb is a word that expresses an action or state of being. Examples: run, is, think.",
+      "adjective": "An adjective is a word that describes a noun. Examples: big, red, beautiful."
+    }
+  }
+}

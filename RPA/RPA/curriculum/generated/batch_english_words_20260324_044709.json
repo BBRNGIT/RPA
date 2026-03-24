@@ -1,0 +1,290 @@
+{
+  "batch_id": "batch_english_words_20260324_044709",
+  "source": "english_words",
+  "domain": "english",
+  "items": [
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "adequate",
+      "definition": "satisfactory or acceptable in quality",
+      "word_type": "adjective",
+      "examples": [
+        "The solution was adequate."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'adequate' in a sentence",
+        "Find synonyms for 'adequate'",
+        "Explain the meaning of 'adequate'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "adequate",
+      "definition": "satisfactory or acceptable in quality",
+      "word_type": "adjective",
+      "examples": [
+        "The solution was adequate."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'adequate' in a sentence",
+        "Find synonyms for 'adequate'",
+        "Explain the meaning of 'adequate'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "hit the nail on the head",
+      "meaning": "to describe exactly what is causing a situation",
+      "usage": "Used when someone is exactly right",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'hit the nail on the head' in context",
+        "Explain when to use 'hit the nail on the head'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "concept",
+      "definition": "an abstract idea or general notion",
+      "word_type": "noun",
+      "examples": [
+        "The concept is simple."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'concept' in a sentence",
+        "Find synonyms for 'concept'",
+        "Explain the meaning of 'concept'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "acquire",
+      "definition": "to gain possession of something",
+      "word_type": "verb",
+      "examples": [
+        "He acquired new skills."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'acquire' in a sentence",
+        "Find synonyms for 'acquire'",
+        "Explain the meaning of 'acquire'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "grammar",
+      "concept": "tense_consistency",
+      "description": "Maintain consistent tense within sentences",
+      "examples": [
+        "She walked to the store and bought milk."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply the 'tense_consistency' rule in writing"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "available",
+      "definition": "able to be used or obtained",
+      "word_type": "adjective",
+      "examples": [
+        "The resources are available."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'available' in a sentence",
+        "Find synonyms for 'available'",
+        "Explain the meaning of 'available'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "assess",
+      "definition": "to evaluate or estimate the nature of",
+      "word_type": "verb",
+      "examples": [
+        "We need to assess the risks."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'assess' in a sentence",
+        "Find synonyms for 'assess'",
+        "Explain the meaning of 'assess'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "break the ice",
+      "meaning": "to initiate conversation in a social setting",
+      "usage": "Used when starting a conversation with strangers",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'break the ice' in context",
+        "Explain when to use 'break the ice'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "break the ice",
+      "meaning": "to initiate conversation in a social setting",
+      "usage": "Used when starting a conversation with strangers",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'break the ice' in context",
+        "Explain when to use 'break the ice'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "assess",
+      "definition": "to evaluate or estimate the nature of",
+      "word_type": "verb",
+      "examples": [
+        "We need to assess the risks."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'assess' in a sentence",
+        "Find synonyms for 'assess'",
+        "Explain the meaning of 'assess'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "grammar",
+      "concept": "tense_consistency",
+      "description": "Maintain consistent tense within sentences",
+      "examples": [
+        "She walked to the store and bought milk."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply the 'tense_consistency' rule in writing"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "benefit",
+      "definition": "an advantage or profit",
+      "word_type": "noun",
+      "examples": [
+        "There are many benefits."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'benefit' in a sentence",
+        "Find synonyms for 'benefit'",
+        "Explain the meaning of 'benefit'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "assume",
+      "definition": "to suppose to be the case without proof",
+      "word_type": "verb",
+      "examples": [
+        "I assume you're ready."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'assume' in a sentence",
+        "Find synonyms for 'assume'",
+        "Explain the meaning of 'assume'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "under the weather",
+      "meaning": "feeling slightly ill",
+      "usage": "Used when not feeling well",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'under the weather' in context",
+        "Explain when to use 'under the weather'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "grammar",
+      "concept": "subject_verb_agreement",
+      "description": "Subjects and verbs must agree in number",
+      "examples": [
+        "She runs. They run."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply the 'subject_verb_agreement' rule in writing"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "break the ice",
+      "meaning": "to initiate conversation in a social setting",
+      "usage": "Used when starting a conversation with strangers",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'break the ice' in context",
+        "Explain when to use 'break the ice'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "break the ice",
+      "meaning": "to initiate conversation in a social setting",
+      "usage": "Used when starting a conversation with strangers",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'break the ice' in context",
+        "Explain when to use 'break the ice'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "grammar",
+      "concept": "tense_consistency",
+      "description": "Maintain consistent tense within sentences",
+      "examples": [
+        "She walked to the store and bought milk."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply the 'tense_consistency' rule in writing"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "grammar",
+      "concept": "tense_consistency",
+      "description": "Maintain consistent tense within sentences",
+      "examples": [
+        "She walked to the store and bought milk."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply the 'tense_consistency' rule in writing"
+      ]
+    }
+  ],
+  "generated_at": "2026-03-24T04:47:09.426794",
+  "item_count": 20
+}

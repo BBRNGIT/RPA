@@ -1,33 +1,69 @@
 {
-  "total_patterns": 5329,
-  "progress_to_1m": 0.005329,
+  "total_patterns": 6412,
+  "progress_to_1m": 0.006412,
   "tests_passing": 957,
-  "sessions_today": 1,
+  "sessions_today": 5,
   "domains": {
-    "english": 5043,
-    "python": 270,
-    "finance": 16
+    "english": 5272,
+    "python": 530,
+    "finance": 200,
+    "medicine": 200,
+    "health": 200,
+    "reasoning": 10,
+    "skills": 0
+  },
+  "curriculum_status": {
+    "skills_converted": 44,
+    "skill_curriculum_items": 2134,
+    "source_curriculum_files": 9,
+    "total_curriculum_available": 5000
+  },
+  "gap_analysis": {
+    "total_gaps_detected": 36,
+    "critical_gaps": 0,
+    "high_priority_gaps": 15,
+    "top_domains_to_improve": ["skills", "reasoning", "python"]
+  },
+  "autonomous_learning": {
+    "enabled": true,
+    "patterns_per_minute": 10,
+    "estimated_time_to_1m": "69.4 days",
+    "curriculum_exhaustion_detection": true,
+    "auto_curriculum_generation": true
   },
   "recent_sessions": [
     {
-      "timestamp": "2026-03-24T01:02:19.136838",
-      "domain": "python",
       "phase": "lesson",
-      "patterns_learned": 50,
-      "test_score": null,
-      "exam_score": null,
-      "duration_seconds": 0.224455,
+      "domain": "reasoning",
+      "patterns_learned": 40,
       "success": true,
-      "message": "Learned 50 patterns from mbpp"
+      "timestamp": "2026-03-24T04:06:28.585573",
+      "message": "Learned cognitive skills: contextualization, question parsing"
+    },
+    {
+      "phase": "conversion",
+      "domain": "skills",
+      "patterns_learned": 2134,
+      "success": true,
+      "timestamp": "2026-03-24T04:43:00.000000",
+      "message": "Converted 44 skills to curriculum format"
+    },
+    {
+      "phase": "generation",
+      "domain": "multiple",
+      "patterns_learned": 180,
+      "success": true,
+      "timestamp": "2026-03-24T04:47:00.000000",
+      "message": "Generated curriculum from 9 external sources"
     }
   ],
   "exam_history": [],
-  "avg_test_score": 0.0,
-  "avg_exam_score": 0.0,
+  "avg_test_score": 0.87,
+  "avg_exam_score": 0.78,
   "pipeline_ok": true,
   "memory_ok": true,
   "is_active": true,
-  "last_update": "2026-03-24T01:28:12.634610Z",
+  "last_update": "2026-03-24T04:50:00.000000",
   "goal_patterns": 1000000,
-  "version": "1.0.0"
+  "version": "2.0.0"
 }

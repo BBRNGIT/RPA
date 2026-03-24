@@ -1,0 +1,253 @@
+{
+  "batch_id": "batch_medicine_basics_20260324_044709",
+  "source": "medicine_basics",
+  "domain": "medicine",
+  "items": [
+    {
+      "domain": "medicine",
+      "category": "terminology",
+      "concept": "etiology",
+      "definition": "The cause or origin of a disease",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'etiology' correctly in context"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "body_system",
+      "concept": "cardiovascular",
+      "organs": [
+        "heart",
+        "blood vessels"
+      ],
+      "function": "Circulates blood throughout the body",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Explain the cardiovascular system"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "terminology",
+      "concept": "treatment",
+      "definition": "Medical care given to a patient",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'treatment' correctly in context"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "body_system",
+      "concept": "nervous",
+      "organs": [
+        "brain",
+        "spinal cord",
+        "nerves"
+      ],
+      "function": "Controls body functions",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Explain the nervous system"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "terminology",
+      "concept": "diagnosis",
+      "definition": "The identification of a disease by examination",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'diagnosis' correctly in context"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "body_system",
+      "concept": "nervous",
+      "organs": [
+        "brain",
+        "spinal cord",
+        "nerves"
+      ],
+      "function": "Controls body functions",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Explain the nervous system"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "terminology",
+      "concept": "prognosis",
+      "definition": "The likely course of a disease",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'prognosis' correctly in context"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "body_system",
+      "concept": "respiratory",
+      "organs": [
+        "lungs",
+        "trachea"
+      ],
+      "function": "Facilitates gas exchange",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Explain the respiratory system"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "terminology",
+      "concept": "diagnosis",
+      "definition": "The identification of a disease by examination",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'diagnosis' correctly in context"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "body_system",
+      "concept": "cardiovascular",
+      "organs": [
+        "heart",
+        "blood vessels"
+      ],
+      "function": "Circulates blood throughout the body",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Explain the cardiovascular system"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "terminology",
+      "concept": "etiology",
+      "definition": "The cause or origin of a disease",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'etiology' correctly in context"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "body_system",
+      "concept": "nervous",
+      "organs": [
+        "brain",
+        "spinal cord",
+        "nerves"
+      ],
+      "function": "Controls body functions",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Explain the nervous system"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "terminology",
+      "concept": "etiology",
+      "definition": "The cause or origin of a disease",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'etiology' correctly in context"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "body_system",
+      "concept": "nervous",
+      "organs": [
+        "brain",
+        "spinal cord",
+        "nerves"
+      ],
+      "function": "Controls body functions",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Explain the nervous system"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "terminology",
+      "concept": "etiology",
+      "definition": "The cause or origin of a disease",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'etiology' correctly in context"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "body_system",
+      "concept": "respiratory",
+      "organs": [
+        "lungs",
+        "trachea"
+      ],
+      "function": "Facilitates gas exchange",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Explain the respiratory system"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "terminology",
+      "concept": "prognosis",
+      "definition": "The likely course of a disease",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'prognosis' correctly in context"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "body_system",
+      "concept": "respiratory",
+      "organs": [
+        "lungs",
+        "trachea"
+      ],
+      "function": "Facilitates gas exchange",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Explain the respiratory system"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "terminology",
+      "concept": "treatment",
+      "definition": "Medical care given to a patient",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'treatment' correctly in context"
+      ]
+    },
+    {
+      "domain": "medicine",
+      "category": "body_system",
+      "concept": "cardiovascular",
+      "organs": [
+        "heart",
+        "blood vessels"
+      ],
+      "function": "Circulates blood throughout the body",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Explain the cardiovascular system"
+      ]
+    }
+  ],
+  "generated_at": "2026-03-24T04:47:09.428489",
+  "item_count": 20
+}

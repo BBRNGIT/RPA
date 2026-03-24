@@ -1,0 +1,977 @@
+{
+  "skill_name": "docx",
+  "skill_description": "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. When GLM needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks",
+  "items": [
+    {
+      "item_id": "skill_docx_concept_5a78731a",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding docx creation, editing, and analysis",
+      "instruction": "",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_87678d85",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "A user may ask you to create, edit, or analyze the contents of a .docx file. A .docx file is essentially a ZIP archive containing XML files and other resources that you can read or edit. You have different tools and workflows available for different tasks.",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_e16c327b",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding design requiremnet",
+      "instruction": "Deliver studio-quality Word documents with deep thought on content, functionality, and styling. Users often don't explicitly request advanced features (covers, TOC, backgrounds, back covers, footnotes, charts)—deeply understand needs and proactively extend. The document must have  1.3x line spacing and have charts centered horizontally.",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_08c74eaa",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding available color（choose one）",
+      "instruction": "- \"Ink & Zen\" Color Palette (Wabi-Sabi Style)\nThe design uses a grayscale \"Ink\" palette to differentiate from standard business blue/morandi styles.\nPrimary (Titles)：#0B1220  \nBody Text：#0F172A   \nSecondary (Subtitles)：#2B2B2B   \nAccent (UI / Decor)：#9AA6B2  \nTable Header / Subtle Background：#F1F5F9 \n\n- Wilderness Oasis\": Sage & Deep Forest   \nPrimary (Titles): #1A1F16 (Deep Forest Ink)  \nBody Text: #2D3329 (Dark Moss Gray)  \nSecondary (Subtitles): #4A5548 (Neutral Olive)  \nAccent (UI/Decor): #9",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_033f3213",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding chinese plot png method**",
+      "instruction": "If using Python to generate PNGs containing Chinese characters, note that Matplotlib defaults to the DejaVu Sans font which lacks Chinese support; since the environment already has the SimHei font installed, you should set it as the default by configuring:\n\nmatplotlib.font_manager.fontManager.addfont('/usr/share/fonts/truetype/chinese/SimHei.ttf')  \nplt.rcParams['font.sans-serif'] = ['SimHei']\nplt.rcParams['axes.unicode_minus'] = False",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_809086ce",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding specialized element styling",
+      "instruction": "- Table Borders: Use a \"Single\" line style with a size of 12 and the Primary Ink color. Internal vertical borders should be set to Nil (invisible) to create a clean, modern horizontal-only look.\n- **CRITICAL: Table Cell Margins** - ALL tables MUST set `margins` property at the Table level to prevent text from touching borders. This is mandatory for professional document quality.",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_4aed78c0",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding alignment and typography",
+      "instruction": "CJK body: justify + 2-char indent. English: left. Table numbers: right. Headings: no indent.\nFor both languages, Must use a line spacing of 1.3x (250 twips). Do not use single line spacing !!!",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_75fe9b9b",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding critical: chinese quotes in javascript/typescript code",
+      "instruction": "**MANDATORY**: When writing JavaScript/TypeScript code for docx-js, ALL Chinese quotation marks (\"\"\", ''') inside strings MUST be escaped as Unicode escape sequences:\n- Left double quote \"\\u201c\" (\")\n- Right double quote \"\\u201d\" (\")\n- Left single quote \"\\u2018\" (')\n- Right single quote \"\\u2019\" (')\n\n**Example - INCORRECT (will cause syntax error):**\n```javascript\nnew TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n```\n\n**Example - CORRECT:**\n```javascript\nnew TextRun({\n ",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_a8aff67b",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding workflow decision tree",
+      "instruction": "",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_f8320064",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding reading/analyzing content",
+      "instruction": "Use \"Text extraction\" or \"Raw XML access\" sections below.",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_0ef7cd1a",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding creating new document",
+      "instruction": "Use \"Creating a new Word document\" workflow.",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_fcd9c7d2",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding editing existing document",
+      "instruction": "- **Your own document + simple changes**\n  Use \"Basic OOXML editing\" workflow\n\n- **Someone else's document**\n  Use **\"Redlining workflow\"** (recommended default)\n\n- **Legal, academic, business, or government docs**\n  Use **\"Redlining workflow\"** (required)",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_eca6d01f",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding reading and analyzing content",
+      "instruction": "**Note**: For .doc (legacy format), first convert with `libreoffice --convert-to docx file.doc`.",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_55fec1ca",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding text extraction",
+      "instruction": "If you just need to read the text contents of a document, you should convert the document to markdown using pandoc. Pandoc provides excellent support for preserving document structure and can show tracked changes:\n\n```bash",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_f187f1b9",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding convert document to markdown with tracked changes",
+      "instruction": "pandoc --track-changes=all path-to-file.docx -o output.md",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_d8f70273",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding options: --track-changes=accept/reject/all",
+      "instruction": "```",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_e180f46b",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding raw xml access",
+      "instruction": "You need raw XML access for: comments, complex formatting, document structure, embedded media, and metadata. For any of these features, you'll need to unpack a document and read its raw XML contents.",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_6f9484a5",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding unpacking a file",
+      "instruction": "`python ooxml/scripts/unpack.py <office_file> <output_directory>`",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_e610d824",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding key file structures",
+      "instruction": "* `word/document.xml` - Main document contents\n* `word/comments.xml` - Comments referenced in document.xml\n* `word/media/` - Embedded images and media files\n* Tracked changes use `<w:ins>` (insertions) and `<w:del>` (deletions) tags",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_070ad390",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding creating a new word document",
+      "instruction": "When creating a new Word document from scratch, use **docx-js**, but use bun instead of node to implement it. which allows you to create Word documents using JavaScript/TypeScript.",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_42751156",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding workflow",
+      "instruction": "1. **MANDATORY - READ ENTIRE FILE**: Read [`ooxml.md`](ooxml.md) (~600 lines) completely from start to finish. **NEVER set any range limits when reading this file.** Read the full file content for the Document library API and XML patterns for directly editing document files.\n2. Unpack the document: `python ooxml/scripts/unpack.py <office_file> <output_directory>`\n3. Create and run a Python script using the Document library (see \"Document Library\" section in ooxml.md)\n4. Pack the final document: ",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_a5ca49fa",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding toc (table of contents)",
+      "instruction": "**If the document has more than three sections, generate a table of contents.**\n\n**Implementation**: Use docx-js `TableOfContents` component to create a live TOC that auto-populates from document headings.\n\n**CRITICAL**: For TOC to work correctly:\n- All document headings MUST use `HeadingLevel` (e.g., `HeadingLevel.HEADING_1`)\n- Do NOT add custom styles to heading paragraphs\n- Place TOC before the actual heading content so it can scan them\n\n**Hint requirement**: A hint paragraph MUST be added im",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_36da830c",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding toc placeholders (required post-processing)",
+      "instruction": "**REQUIRED**: After generating the DOCX file, you MUST add placeholder TOC entries that appear on first open (before the user updates the TOC). This prevents showing an empty TOC initially.\n\n**Implementation**: Always run the `add_toc_placeholders.py` script after generating the DOCX file:\n\n```bash\npython skills/docx/scripts/add_toc_placeholders.py document.docx \\\n  --entries '[{\"level\":1,\"text\":\"Chapter 1 Overview\",\"page\":\"1\"},{\"level\":2,\"text\":\"Section 1.1 Details\",\"page\":\"1\"}]'\n```\n\n**Note**:",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_49c5a180",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding document formatting rules",
+      "instruction": "**Page Break Restrictions**\nPage breaks are ONLY allowed in these specific locations:\n- Between cover page and table of contents (if TOC exists)\n- Between cover page and main content (if NO TOC exists)\n- Between table of contents and main content (if TOC exists)\n\n**All content after the table of contents must flow continuously WITHOUT page breaks.**\n\n**Text and Paragraph Rules**\n- Complete sentences before starting a new line — do not break sentences across lines\n- Use single, consistent style f",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_9f8f5908",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding editing an existing word document",
+      "instruction": "**Note**: For .doc (legacy format), first convert with `libreoffice --convert-to docx file.doc`.\n\nWhen editing an existing Word document, use the **Document library** (a Python library for OOXML manipulation). The library automatically handles infrastructure setup and provides methods for document manipulation. For complex scenarios, you can access the underlying DOM directly through the library.",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_f06dadd1",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding adding comments (批注)",
+      "instruction": "Comments (批注) allow you to add annotations to documents without modifying the actual content. This is useful for review feedback, explanations, or questions about specific parts of a document.",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_c1e65ae1",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding recommended method: using python-docx (简单推荐)",
+      "instruction": "The simplest and most reliable way to add comments is using the `python-docx` library:\n\n```python\nfrom docx import Document",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_f1d04caf",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding open the document",
+      "instruction": "doc = Document('input.docx')",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_2efa4ac3",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding find paragraphs and add comments",
+      "instruction": "for para in doc.paragraphs:\n    if \"关键词\" in para.text:  # Find paragraphs containing specific text\n        doc.add_comment(\n            runs=[para.runs[0]],  # Specify the text to comment on\n            text=\"批注内容\",\n            author=\"Z.ai\"          # Set comment author as Z.ai\n        )",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_50109fc4",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding save the document",
+      "instruction": "doc.save('output.docx')\n```\n\n**Key points:**\n- Install: `pip install python-docx` or `bun add python-docx`\n- Works directly on .docx files (no need to unpack/pack)\n- Simple API, reliable results\n- Comments appear in Word's comment pane with Z.ai as author\n\n**Common patterns:**\n\n```python\nfrom docx import Document\n\ndoc = Document('document.docx')",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_0b05ee51",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding add comment to first paragraph",
+      "instruction": "if doc.paragraphs:\n    first_para = doc.paragraphs[0]\n    doc.add_comment(\n        runs=[first_para.runs[0]] if first_para.runs else [],\n        text=\"Review this introduction\",\n        author=\"Z.ai\"\n    )",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_47f1601c",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding add comment to specific paragraph by index",
+      "instruction": "target_para = doc.paragraphs[5]  # 6th paragraph\ndoc.add_comment(\n    runs=[target_para.runs[0]],\n    text=\"This section needs clarification\",\n    author=\"Z.ai\"\n)",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_5983901f",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding add comments based on text search",
+      "instruction": "for para in doc.paragraphs:\n    if \"important\" in para.text.lower():\n        doc.add_comment(\n            runs=[para.runs[0]],\n            text=\"Flagged for review\",\n            author=\"Z.ai\"\n        )\n\ndoc.save('output.docx')\n```",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_e4382aab",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding alternative method: using ooxml (advanced)",
+      "instruction": "For complex scenarios requiring low-level XML manipulation, you can use the OOXML workflow. This method is more complex but provides finer control.\n\n**Note:** This method requires unpacking/packing documents and may encounter validation issues. Use python-docx unless you specifically need low-level XML control.",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_b6c06387",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding ooxml workflow",
+      "instruction": "1. **Unpack the document**: `python ooxml/scripts/unpack.py <file.docx> <output_dir>`\n\n2. **Create and run a Python script**:\n\n```python\nfrom scripts.document import Document",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_b062ca8b",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding initialize with z.ai as the author",
+      "instruction": "doc = Document('unpacked', author=\"Z.ai\", initials=\"Z\")",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_55b4a28a",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding add comment on a paragraph",
+      "instruction": "para = doc[\"word/document.xml\"].get_node(tag=\"w:p\", contains=\"paragraph text\")\ndoc.add_comment(start=para, end=para, text=\"This needs clarification\")",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_a1723ca1",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding save changes",
+      "instruction": "doc.save()\n```\n\n3. **Pack the document**: `python ooxml/scripts/pack.py <unpacked_dir> <output.docx>`\n\n**When to use OOXML method:**\n- You need to work with tracked changes simultaneously\n- You need fine-grained control over XML structure\n- You're already working with unpacked documents\n- You need to manipulate comments in complex ways\n\n**When to use python-docx method (recommended):**\n- Adding comments is your primary task\n- You want simple, reliable code\n- You're working with complete .docx fi",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_8421854c",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding redlining workflow for document review",
+      "instruction": "This workflow allows you to plan comprehensive tracked changes using markdown before implementing them in OOXML. **CRITICAL**: For complete tracked changes, you must implement ALL changes systematically.\n\n**Batching Strategy**: Group related changes into batches of 3-10 changes. This makes debugging manageable while maintaining efficiency. Test each batch before moving to the next.\n\n**Principle: Minimal, Precise Edits**\nWhen implementing tracked changes, only mark text that actually changes. Rep",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_05a3597c",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding bad - replaces entire sentence",
+      "instruction": "'<w:del><w:r><w:delText>The term is 30 days.</w:delText></w:r></w:del><w:ins><w:r><w:t>The term is 60 days.</w:t></w:r></w:ins>'",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_7282320a",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding good - only marks what changed, preserves original <w:r> for unchanged text",
+      "instruction": "'<w:r w:rsidR=\"00AB12CD\"><w:t>The term is </w:t></w:r><w:del><w:r><w:delText>30</w:delText></w:r></w:del><w:ins><w:r><w:t>60</w:t></w:r></w:ins><w:r w:rsidR=\"00AB12CD\"><w:t> days.</w:t></w:r>'\n```",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_60e6209f",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding tracked changes workflow",
+      "instruction": "1. **Get markdown representation**: Convert document to markdown with tracked changes preserved:\n   ```bash\n   pandoc --track-changes=all path-to-file.docx -o current.md\n   ```\n\n2. **Identify and group changes**: Review the document and identify ALL changes needed, organizing them into logical batches:\n\n   **Location methods** (for finding changes in XML):\n   - Section/heading numbers (e.g., \"Section 3.2\", \"Article IV\")\n   - Paragraph identifiers if numbered\n   - Grep patterns with unique surrou",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_869eb416",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding converting documents to images",
+      "instruction": "To visually analyze Word documents, convert them to images using a two-step process:\n\n1. **Convert DOCX to PDF**:\n   ```bash\n   soffice --headless --convert-to pdf document.docx\n   ```\n\n2. **Convert PDF pages to JPEG images**:\n   ```bash\n   pdftoppm -jpeg -r 150 document.pdf page\n   ```\n   This creates files like `page-1.jpg`, `page-2.jpg`, etc.\n\nOptions:\n- `-r 150`: Sets resolution to 150 DPI (adjust for quality/size balance)\n- `-jpeg`: Output JPEG format (use `-png` for PNG if preferred)\n- `-f",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_c5059beb",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding code style guidelines",
+      "instruction": "**IMPORTANT**: When generating code for DOCX operations:\n- Write concise code\n- Avoid verbose variable names and redundant operations\n- Avoid unnecessary print statements",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_concept_95e59643",
+      "skill_name": "docx",
+      "category": "concept",
+      "concept": "Understanding dependencies",
+      "instruction": "Required dependencies (install if not available):\n\n- **pandoc**: `sudo apt-get install pandoc` (for text extraction)\n- **docx**: `bun add docx` (for creating new documents)\n- **LibreOffice**: `sudo apt-get install libreoffice` (for PDF conversion)\n- **Poppler**: `sudo apt-get install poppler-utils` (for pdftoppm to convert PDF to images)\n- **defusedxml**: `pip install defusedxml` (for secure XML parsing)",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n",
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n",
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_instruction_bbf64d4d",
+      "skill_name": "docx",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"Ink & Zen\" Color Palette (Wabi-Sabi Style)...",
+      "instruction": "\"Ink & Zen\" Color Palette (Wabi-Sabi Style)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_instruction_5bd6bf14",
+      "skill_name": "docx",
+      "category": "instruction",
+      "concept": "Rule or guideline: Wilderness Oasis\": Sage & Deep Forest   ...",
+      "instruction": "Wilderness Oasis\": Sage & Deep Forest   ",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_instruction_5b9e0d65",
+      "skill_name": "docx",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"Terra Cotta Afterglow\": Warm Clay & Greige...",
+      "instruction": "\"Terra Cotta Afterglow\": Warm Clay & Greige",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_instruction_a6669fc3",
+      "skill_name": "docx",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"Midnight Code\": High-Contrast Slate & Silver...",
+      "instruction": "\"Midnight Code\": High-Contrast Slate & Silver",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_instruction_2f33c533",
+      "skill_name": "docx",
+      "category": "instruction",
+      "concept": "Rule or guideline: Table Borders: Use a \"Single\" line style with a si...",
+      "instruction": "Table Borders: Use a \"Single\" line style with a size of 12 and the Primary Ink color. Internal vertical borders should be set to Nil (invisible) to create a clean, modern horizontal-only look.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_instruction_d8d768ac",
+      "skill_name": "docx",
+      "category": "instruction",
+      "concept": "Rule or guideline: **CRITICAL: Table Cell Margins** - ALL tables MUST...",
+      "instruction": "**CRITICAL: Table Cell Margins** - ALL tables MUST set `margins` property at the Table level to prevent text from touching borders. This is mandatory for professional document quality.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_instruction_56df5610",
+      "skill_name": "docx",
+      "category": "instruction",
+      "concept": "Rule or guideline: Left double quote \"\\u201c\" (\")...",
+      "instruction": "Left double quote \"\\u201c\" (\")",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_instruction_fcf58323",
+      "skill_name": "docx",
+      "category": "instruction",
+      "concept": "Rule or guideline: Right double quote \"\\u201d\" (\")...",
+      "instruction": "Right double quote \"\\u201d\" (\")",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_instruction_89e5d767",
+      "skill_name": "docx",
+      "category": "instruction",
+      "concept": "Rule or guideline: Left single quote \"\\u2018\" (')...",
+      "instruction": "Left single quote \"\\u2018\" (')",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_instruction_f878bf1d",
+      "skill_name": "docx",
+      "category": "instruction",
+      "concept": "Rule or guideline: Right single quote \"\\u2019\" (')...",
+      "instruction": "Right single quote \"\\u2019\" (')",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_code_pattern_9252f161",
+      "skill_name": "docx",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from docx",
+      "examples": [
+        "new TextRun({\n  text: \"他说\"你好\"\"  // ERROR: Chinese quotes break JS syntax\n})\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_code_pattern_0701e7a5",
+      "skill_name": "docx",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from docx",
+      "examples": [
+        "new TextRun({\n  text: \"他说\\u201c你好\\u201d\"  // Correct: escaped Unicode\n})\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_code_pattern_172a9e86",
+      "skill_name": "docx",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from docx",
+      "examples": [
+        "new TextRun({\n  text: `他说\"你好\"`  // Also works: template literals allow Chinese quotes\n})\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_code_pattern_aa77d157",
+      "skill_name": "docx",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from docx",
+      "examples": [
+        "# Convert document to markdown with tracked changes\npandoc --track-changes=all path-to-file.docx -o output.md\n# Options: --track-changes=accept/reject/all\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_code_pattern_41f1990a",
+      "skill_name": "docx",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from docx",
+      "examples": [
+        "python skills/docx/scripts/add_toc_placeholders.py document.docx \\\n  --entries '[{\"level\":1,\"text\":\"Chapter 1 Overview\",\"page\":\"1\"},{\"level\":2,\"text\":\"Section 1.1 Details\",\"page\":\"1\"}]'\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_assessment_50ade5d8",
+      "skill_name": "docx",
+      "category": "assessment",
+      "concept": "Apply docx in a practical project",
+      "instruction": "Demonstrate mastery of docx by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using docx",
+        "Explain when docx should be used",
+        "Identify the core concepts of docx",
+        "Apply docx to solve a real-world problem",
+        "Create a document with proper formatting",
+        "Extract content from a document",
+        "Generate a report from data"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_docx_contextualization_25feeafc",
+      "skill_name": "docx",
+      "category": "contextualization",
+      "concept": "When to use docx",
+      "instruction": "Learn when to apply docx in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using docx",
+        "User needs help with coding -> evaluate if docx applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate docx is needed",
+        "Distinguish between docx and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 62,
+  "generated_at": "2026-03-24T04:43:44.489930",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/docx/SKILL.md"
+}

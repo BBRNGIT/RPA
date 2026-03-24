@@ -1,0 +1,1054 @@
+{
+  "skill_name": "TTS",
+  "skill_description": "Implement text-to-speech (TTS) capabilities using the z-ai-web-dev-sdk. Use this skill when the user needs to convert text into natural-sounding speech, create audio content, build voice-enabled applications, or generate spoken audio files. Supports multiple voices, adjustable speed, and various audio formats.",
+  "items": [
+    {
+      "item_id": "skill_tts_concept_f3b58d2c",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding tts (text to speech) skill",
+      "instruction": "This skill guides the implementation of text-to-speech (TTS) functionality using the z-ai-web-dev-sdk package, enabling conversion of text into natural-sounding speech audio.",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_74af6c22",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding skills path",
+      "instruction": "**Skill Location**: `{project_path}/skills/TTS`\n\nThis skill is located at the above path in your project.\n\n**Reference Scripts**: Example test scripts are available in the `{Skill Location}/scripts/` directory for quick testing and reference. See `{Skill Location}/scripts/tts.ts` for a working example.",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_80cf92d6",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "Text-to-Speech allows you to build applications that generate spoken audio from text input, supporting various voices, speeds, and output formats for diverse use cases.\n\n**IMPORTANT**: z-ai-web-dev-sdk MUST be used in backend code only. Never use it in client-side code.",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_74d221f0",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding api limitations and constraints",
+      "instruction": "Before implementing TTS functionality, be aware of these important limitations:",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_42cc587c",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding input text constraints",
+      "instruction": "- **Maximum length**: 1024 characters per request\n- Text exceeding this limit must be split into smaller chunks",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_c76f3d31",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding audio parameters",
+      "instruction": "- **Speed range**: 0.5 to 2.0\n  - 0.5 = half speed (slower)\n  - 1.0 = normal speed (default)\n  - 2.0 = double speed (faster)\n- **Volume range**: Greater than 0, up to 10\n  - Default: 1.0\n  - Values must be greater than 0 (exclusive) and up to 10 (inclusive)",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_8181c2c4",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding format and streaming",
+      "instruction": "- **Streaming limitation**: When `stream: true` is enabled, only `pcm` format is supported\n- **Non-streaming**: Supports `wav`, `pcm`, and `mp3` formats\n- **Sample rate**: 24000 Hz (recommended)",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_794bbe91",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding best practice for long text",
+      "instruction": "```javascript\nfunction splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n```",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_32fcbc0e",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding prerequisites",
+      "instruction": "The z-ai-web-dev-sdk package is already installed. Import it as shown in the examples below.",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_7b0babd7",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding cli usage (for simple tasks)",
+      "instruction": "For simple text-to-speech conversions, you can use the z-ai CLI instead of writing code. This is ideal for quick audio generation, testing voices, or simple automation.",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_55bf9888",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding basic tts",
+      "instruction": "```bash",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_a43cad18",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding convert text to speech (default wav format)",
+      "instruction": "z-ai tts --input \"Hello, world\" --output ./hello.wav",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_806c4c3b",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding using short options",
+      "instruction": "z-ai tts -i \"Hello, world\" -o ./hello.wav\n```",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_87815e7b",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding different voices and speed",
+      "instruction": "```bash",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_3918f38a",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding use specific voice",
+      "instruction": "z-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_44c7063c",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding adjust speech speed (0.5-2.0)",
+      "instruction": "z-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_5bda5693",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding slower speech",
+      "instruction": "z-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n```",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_11d0f8c0",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding different output formats",
+      "instruction": "```bash",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_59bae7a0",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding mp3 format",
+      "instruction": "z-ai tts -i \"Hello World\" -o ./hello.mp3 --format mp3",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_dab65681",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding wav format (default)",
+      "instruction": "z-ai tts -i \"Hello World\" -o ./hello.wav --format wav",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_689873ff",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding pcm format",
+      "instruction": "z-ai tts -i \"Hello World\" -o ./hello.pcm --format pcm\n```",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_54f7d6ca",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding streaming output",
+      "instruction": "```bash",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_31863ae2",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding stream audio generation",
+      "instruction": "z-ai tts -i \"This is a longer text that will be streamed\" -o ./stream.wav --stream\n```",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_69b2c5c5",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding cli parameters",
+      "instruction": "- `--input, -i <text>`: **Required** - Text to convert to speech (max 1024 characters)\n- `--output, -o <path>`: **Required** - Output audio file path\n- `--voice, -v <voice>`: Optional - Voice type (default: tongtong)\n- `--speed, -s <number>`: Optional - Speech speed, 0.5-2.0 (default: 1.0)\n- `--format, -f <format>`: Optional - Output format: wav, mp3, pcm (default: wav)\n- `--stream`: Optional - Enable streaming output (only supports pcm format)",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_3a22d5bc",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding when to use cli vs sdk",
+      "instruction": "**Use CLI for:**\n- Quick text-to-speech conversions\n- Testing different voices and speeds\n- Simple batch audio generation\n- Command-line automation scripts\n\n**Use SDK for:**\n- Dynamic audio generation in applications\n- Integration with web services\n- Custom audio processing pipelines\n- Production applications with complex requirements",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_aeecd87c",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding basic tts implementation",
+      "instruction": "",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_019decf5",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding simple text to speech",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function textToSpeech(text, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.audio.tts.create({\n    input: text,\n    voice: 'tongtong',\n    speed: 1.0,\n    response_format: 'wav',\n    stream: false\n  });\n\n  // Get array buffer from Response object\n  const arrayBuffer = await response.arrayBuffer();\n  const buffer = Buffer.from(new Uint8Array(arrayBuffer));\n\n  fs.writeFileSync(outputPath, bu",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_874a14b6",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding multiple voice options",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateWithVoice(text, voice, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.audio.tts.create({\n    input: text,\n    voice: voice, // Available voices: tongtong, chuichui, xiaochen, jam, kazi, douji, luodo\n    speed: 1.0,\n    response_format: 'wav',\n    stream: false\n  });\n\n  // Get array buffer from Response object\n  const arrayBuffer = await response.arrayBuffer();\n  const buf",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_95e00402",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding adjustable speed",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateWithSpeed(text, speed, outputPath) {\n  const zai = await ZAI.create();\n\n  // Speed range: 0.5 to 2.0 (API constraint)\n  // 0.5 = half speed (slower)\n  // 1.0 = normal speed (default)\n  // 2.0 = double speed (faster)\n  // Values outside this range will cause API errors\n\n  const response = await zai.audio.tts.create({\n    input: text,\n    voice: 'tongtong',\n    speed: speed,\n    response_format: 'wav',\n ",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_dadac0af",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding adjustable volume",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateWithVolume(text, volume, outputPath) {\n  const zai = await ZAI.create();\n\n  // Volume range: greater than 0, up to 10 (API constraint)\n  // Values must be > 0 (exclusive) and <= 10 (inclusive)\n  // Default: 1.0 (normal volume)\n\n  const response = await zai.audio.tts.create({\n    input: text,\n    voice: 'tongtong',\n    speed: 1.0,\n    volume: volume, // Optional parameter\n    response_format: 'wav',\n   ",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_04990630",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding advanced use cases",
+      "instruction": "",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_3097b5d8",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding batch processing",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\nimport path from 'path';\n\nasync function batchTextToSpeech(textArray, outputDir) {\n  const zai = await ZAI.create();\n  const results = [];\n\n  // Ensure output directory exists\n  if (!fs.existsSync(outputDir)) {\n    fs.mkdirSync(outputDir, { recursive: true });\n  }\n\n  for (let i = 0; i < textArray.length; i++) {\n    try {\n      const text = textArray[i];\n      const outputPath = path.join(outputDir, `audio_${i + 1}.wav`);\n\n   ",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_a99aba73",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding dynamic content generation",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nclass TTSGenerator {\n  constructor() {\n    this.zai = null;\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async generateAudio(text, options = {}) {\n    const {\n      voice = 'tongtong',\n      speed = 1.0,\n      format = 'wav'\n    } = options;\n\n    const response = await this.zai.audio.tts.create({\n      input: text,\n      voice: voice,\n      speed: speed,\n      response_format: format,\n      stream: f",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_e2e9b257",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding next.js api route example",
+      "instruction": "```javascript\nimport { NextRequest, NextResponse } from 'next/server';\n\nexport async function POST(req: NextRequest) {\n  try {\n    const { text, voice = 'tongtong', speed = 1.0 } = await req.json();\n\n    // Import ZAI SDK\n    const ZAI = (await import('z-ai-web-dev-sdk')).default;\n\n    // Create SDK instance\n    const zai = await ZAI.create();\n\n    // Generate TTS audio\n    const response = await zai.audio.tts.create({\n      input: text.trim(),\n      voice: voice,\n      speed: speed,\n      respo",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_1b83c437",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding best practices",
+      "instruction": "",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_8555df65",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding 1. text preparation",
+      "instruction": "```javascript\nfunction prepareTextForTTS(text) {\n  // Remove excessive whitespace\n  text = text.replace(/\\s+/g, ' ').trim();\n\n  // Expand common abbreviations for better pronunciation\n  const abbreviations = {\n    'Dr.': 'Doctor',\n    'Mr.': 'Mister',\n    'Mrs.': 'Misses',\n    'etc.': 'et cetera'\n  };\n\n  for (const [abbr, full] of Object.entries(abbreviations)) {\n    text = text.replace(new RegExp(abbr, 'g'), full);\n  }\n\n  return text;\n}\n```",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_6b46718c",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding 2. error handling",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function safeTTS(text, outputPath) {\n  try {\n    // Validate input\n    if (!text || text.trim().length === 0) {\n      throw new Error('Text input cannot be empty');\n    }\n\n    if (text.length > 1024) {\n      throw new Error('Text input exceeds maximum length of 1024 characters');\n    }\n\n    const zai = await ZAI.create();\n\n    const response = await zai.audio.tts.create({\n      input: text,\n      voice: 'tongtong',\n   ",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_3a72a733",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding 3. sdk instance reuse",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\n// Create a singleton instance\nlet zaiInstance = null;\n\nasync function getZAIInstance() {\n  if (!zaiInstance) {\n    zaiInstance = await ZAI.create();\n  }\n  return zaiInstance;\n}\n\n// Usage\nconst zai = await getZAIInstance();\nconst response = await zai.audio.tts.create({ ... });\n```",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_df5d2eda",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding common use cases",
+      "instruction": "1. **Audiobooks & Podcasts**: Convert written content to audio format\n2. **E-learning**: Create narration for educational content\n3. **Accessibility**: Provide audio versions of text content\n4. **Voice Assistants**: Generate dynamic responses\n5. **Announcements**: Create automated audio notifications\n6. **IVR Systems**: Generate phone system prompts\n7. **Content Localization**: Create audio in different languages",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_afbef670",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding integration examples",
+      "instruction": "",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_ab166612",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding express.js api endpoint",
+      "instruction": "```javascript\nimport express from 'express';\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\nimport path from 'path';\n\nconst app = express();\napp.use(express.json());\n\nlet zaiInstance;\nconst outputDir = './audio-output';\n\nasync function initZAI() {\n  zaiInstance = await ZAI.create();\n  if (!fs.existsSync(outputDir)) {\n    fs.mkdirSync(outputDir, { recursive: true });\n  }\n}\n\napp.post('/api/tts', async (req, res) => {\n  try {\n    const { text, voice = 'tongtong', speed = 1.0 } = req.body;",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_d227ea7b",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding troubleshooting",
+      "instruction": "**Issue**: \"Input text exceeds maximum length\"\n- **Solution**: Text input is limited to 1024 characters. Split longer text into chunks using the `splitTextIntoChunks` function shown in the API Limitations section\n\n**Issue**: \"Invalid speed parameter\" or unexpected speed behavior\n- **Solution**: Speed must be between 0.5 and 2.0. Check your speed value is within this range\n\n**Issue**: \"Invalid volume parameter\"\n- **Solution**: Volume must be greater than 0 and up to 10. Ensure volume value is in ",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_10ffa0de",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding performance tips",
+      "instruction": "1. **Reuse SDK Instance**: Create ZAI instance once and reuse\n2. **Implement Caching**: Cache generated audio for repeated text\n3. **Batch Processing**: Process multiple texts efficiently\n4. **Optimize Text**: Remove unnecessary content before generation\n5. **Async Processing**: Use queues for handling multiple requests",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_a656b388",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding important notes",
+      "instruction": "",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_8580b175",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding api constraints",
+      "instruction": "**Input Text Length**: Maximum 1024 characters per request. For longer text:\n```javascript\n// Split long text into chunks\nconst longText = \"...\"; // Your long text here\nconst chunks = splitTextIntoChunks(longText, 1000);\n\nfor (const chunk of chunks) {\n  const response = await zai.audio.tts.create({\n    input: chunk,\n    voice: 'tongtong',\n    speed: 1.0,\n    response_format: 'wav',\n    stream: false\n  });\n  // Process each chunk...\n}\n```\n\n**Streaming Format Limitation**: When using `stream: true",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_4d167594",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding response object format",
+      "instruction": "The `zai.audio.tts.create()` method returns a standard **Response** object (not a custom object with an `audio` property). Always use:\n\n```javascript\n// ✅ CORRECT\nconst response = await zai.audio.tts.create({ ... });\nconst arrayBuffer = await response.arrayBuffer();\nconst buffer = Buffer.from(new Uint8Array(arrayBuffer));\n\n// ❌ WRONG - This will not work\nconst response = await zai.audio.tts.create({ ... });\nconst buffer = Buffer.from(response.audio); // response.audio is undefined\n```",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_ca9b7730",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding available voices",
+      "instruction": "- `tongtong` - 温暖亲切\n- `chuichui` - 活泼可爱\n- `xiaochen` - 沉稳专业\n- `jam` - 英音绅士\n- `kazi` - 清晰标准\n- `douji` - 自然流畅\n- `luodo` - 富有感染力",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_8020daa3",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding speed range",
+      "instruction": "- Minimum: `0.5` (half speed)\n- Default: `1.0` (normal speed)\n- Maximum: `2.0` (double speed)\n\n**Important**: Speed values outside the range [0.5, 2.0] will result in API errors.",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_572302be",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding volume range",
+      "instruction": "- Minimum: Greater than `0` (exclusive)\n- Default: `1.0` (normal volume)\n- Maximum: `10` (inclusive)\n\n**Note**: Volume parameter is optional. When not specified, defaults to 1.0.",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_concept_f3b390e3",
+      "skill_name": "TTS",
+      "category": "concept",
+      "concept": "Understanding remember",
+      "instruction": "- Always use z-ai-web-dev-sdk in backend code only\n- **Input text is limited to 1024 characters maximum** - split longer text into chunks\n- **Speed must be between 0.5 and 2.0** - values outside this range will cause errors\n- **Volume must be greater than 0 and up to 10** - optional parameter with default 1.0\n- **Streaming only supports PCM format** - use non-streaming for WAV or MP3 output\n- The SDK returns a standard Response object - use `await response.arrayBuffer()`\n- Convert ArrayBuffer to",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n",
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n",
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_instruction_1f6a8daf",
+      "skill_name": "TTS",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Maximum length**: 1024 characters per request...",
+      "instruction": "**Maximum length**: 1024 characters per request",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_instruction_80543f64",
+      "skill_name": "TTS",
+      "category": "instruction",
+      "concept": "Rule or guideline: Text exceeding this limit must be split into small...",
+      "instruction": "Text exceeding this limit must be split into smaller chunks",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_instruction_547d4588",
+      "skill_name": "TTS",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Speed range**: 0.5 to 2.0...",
+      "instruction": "**Speed range**: 0.5 to 2.0",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_instruction_a3211545",
+      "skill_name": "TTS",
+      "category": "instruction",
+      "concept": "Rule or guideline: 0.5 = half speed (slower)...",
+      "instruction": "0.5 = half speed (slower)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_instruction_3170253d",
+      "skill_name": "TTS",
+      "category": "instruction",
+      "concept": "Rule or guideline: 1.0 = normal speed (default)...",
+      "instruction": "1.0 = normal speed (default)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_instruction_2ebaeafd",
+      "skill_name": "TTS",
+      "category": "instruction",
+      "concept": "Rule or guideline: 2.0 = double speed (faster)...",
+      "instruction": "2.0 = double speed (faster)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_instruction_b8c82d39",
+      "skill_name": "TTS",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Volume range**: Greater than 0, up to 10...",
+      "instruction": "**Volume range**: Greater than 0, up to 10",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_instruction_965e7626",
+      "skill_name": "TTS",
+      "category": "instruction",
+      "concept": "Rule or guideline: Default: 1.0...",
+      "instruction": "Default: 1.0",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_instruction_fe462039",
+      "skill_name": "TTS",
+      "category": "instruction",
+      "concept": "Rule or guideline: Values must be greater than 0 (exclusive) and up t...",
+      "instruction": "Values must be greater than 0 (exclusive) and up to 10 (inclusive)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_instruction_19b3b7de",
+      "skill_name": "TTS",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Streaming limitation**: When `stream: true` is e...",
+      "instruction": "**Streaming limitation**: When `stream: true` is enabled, only `pcm` format is supported",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_code_pattern_51e5a494",
+      "skill_name": "TTS",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from TTS",
+      "examples": [
+        "function splitTextIntoChunks(text, maxLength = 1000) {\n  const chunks = [];\n  const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];\n  \n  let currentChunk = '';\n  for (const sentence of sentences) {\n    if ((currentChunk + sentence).length <= maxLength) {\n      currentChunk += sentence;\n    } else {\n      if (currentChunk) chunks.push(currentChunk.trim());\n      currentChunk = sentence;\n    }\n  }\n  if (currentChunk) chunks.push(currentChunk.trim());\n  \n  return chunks;\n}\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_code_pattern_f5acd0d1",
+      "skill_name": "TTS",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from TTS",
+      "examples": [
+        "# Convert text to speech (default WAV format)\nz-ai tts --input \"Hello, world\" --output ./hello.wav\n\n# Using short options\nz-ai tts -i \"Hello, world\" -o ./hello.wav\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_code_pattern_ce519b17",
+      "skill_name": "TTS",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from TTS",
+      "examples": [
+        "# Use specific voice\nz-ai tts -i \"Welcome to our service\" -o ./welcome.wav --voice tongtong\n\n# Adjust speech speed (0.5-2.0)\nz-ai tts -i \"This is faster speech\" -o ./fast.wav --speed 1.5\n\n# Slower speech\nz-ai tts -i \"This is slower speech\" -o ./slow.wav --speed 0.8\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_code_pattern_c70600cd",
+      "skill_name": "TTS",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from TTS",
+      "examples": [
+        "# MP3 format\nz-ai tts -i \"Hello World\" -o ./hello.mp3 --format mp3\n\n# WAV format (default)\nz-ai tts -i \"Hello World\" -o ./hello.wav --format wav\n\n# PCM format\nz-ai tts -i \"Hello World\" -o ./hello.pcm --format pcm\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_code_pattern_efa0e49c",
+      "skill_name": "TTS",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from TTS",
+      "examples": [
+        "# Stream audio generation\nz-ai tts -i \"This is a longer text that will be streamed\" -o ./stream.wav --stream\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_assessment_8bca98a3",
+      "skill_name": "TTS",
+      "category": "assessment",
+      "concept": "Apply TTS in a practical project",
+      "instruction": "Demonstrate mastery of TTS by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using TTS",
+        "Explain when TTS should be used",
+        "Identify the core concepts of TTS",
+        "Apply TTS to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_tts_contextualization_af5b75da",
+      "skill_name": "TTS",
+      "category": "contextualization",
+      "concept": "When to use TTS",
+      "instruction": "Learn when to apply TTS in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using TTS",
+        "User needs help with coding -> evaluate if TTS applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate TTS is needed",
+        "Distinguish between TTS and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 67,
+  "generated_at": "2026-03-24T04:43:44.504919",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/TTS/SKILL.md"
+}

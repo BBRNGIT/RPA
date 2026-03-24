@@ -1,0 +1,260 @@
+{
+  "skill_name": "interview-designer",
+  "skill_description": "Analyze resumes and design interview strategies using evidence-based methodology. Transforms interview prep from \"read resume → ask questions\" into \"define standard → forensic evidence → future simulation\". Combines Geoff Smart's Topgrading, Lou Adler's performance-based hiring, and Daniel Kahneman's bias control. Use when preparing for interviews, creating structured interview guides, or designing questions to validate candidate competencies.",
+  "items": [
+    {
+      "item_id": "skill_interview_designer_concept_2406b3df",
+      "skill_name": "interview-designer",
+      "category": "concept",
+      "concept": "Understanding interview designer skill",
+      "instruction": "> **Core Mission**: Elevate interview planning from \"glancing at resume and asking questions\" to \"evidence-based investigation and projection.\"\n> **Operating Mechanism**: Define Scorecard (set standards) → Forensic Scan (evidence gathering) → Future Simulation (performance prediction).\n> **Prompt Strategy**: This skill uses \\<Chain of Thought\\>. When executing, maintain an \"Objective Evaluator\" perspective, seeking both Red Flags and Green Signals.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_concept_84f139af",
+      "skill_name": "interview-designer",
+      "category": "concept",
+      "concept": "Understanding 1. dynamic war room (expert panel)",
+      "instruction": "Dynamically summon the most matching **best minds** into the war room based on **candidate's role attributes**:\n\n*   **Geoff Smart (Who)**: Responsible for **Define & Verify**.\n    *   *Principle*: Scorecard First. Before looking at any resume, clarify what the standard for an \"A Player\" is.\n*   **Lou Adler (Performance-based)**: Responsible for **Predict**.\n    *   *Principle*: Past performance predicts future performance *only if* the context is similar. Must design simulations for future scen",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_concept_4e310798",
+      "skill_name": "interview-designer",
+      "category": "concept",
+      "concept": "Understanding 2. core execution workflow",
+      "instruction": "",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_concept_393ceaf5",
+      "skill_name": "interview-designer",
+      "category": "concept",
+      "concept": "Understanding step 1: scorecard definition - *smart's priority*",
+      "instruction": "**Don't look at the resume first!** Based on JD or role requirements, define A Player standards for this position:\n*   **Mission**: One sentence - why does this role exist?\n*   **Outcomes**: 3-5 specific, measurable results that must be achieved within 12 months.\n*   **Competencies**: Hard/soft skills required to achieve the above outcomes.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_concept_733fb567",
+      "skill_name": "interview-designer",
+      "category": "concept",
+      "concept": "Understanding step 2: forensic resume scan - *smart's forensic*",
+      "instruction": "Use Step 1 standards to scan the resume, looking for **Gaps (discrepancies)** and **High Points (highlights)**:\n*   **The \"Too Good To Be True\" Heuristic**: Logical gaps behind perfect data.\n*   **The \"Passenger vs Driver\" Heuristic**: Individual's true contributions under big company halo.\n*   **The \"First Principles\" Heuristic**: Principle understanding behind technical jargon.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_concept_d7327fd5",
+      "skill_name": "interview-designer",
+      "category": "concept",
+      "concept": "Understanding step 3: pressure test & future simulation - *adler's prediction*",
+      "instruction": "Design two types of questions:\n1.  **Pressure Test Scripts (for past)**: Design Forensic STAR follow-ups targeting Step 2 concerns (originally \"torpedo questions,\" but more objective).\n2.  **Future Simulation (for future)**: Design a specific Performance Problem.\n    *   *Example*: \"We're entering this new market next year, and the biggest obstacle is X. If you join, how would you analyze this problem in your first week?\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_concept_2c121085",
+      "skill_name": "interview-designer",
+      "category": "concept",
+      "concept": "Understanding 3. question design principles",
+      "instruction": "1.  **Cannot Be Memorized**: Forces candidates to think on the spot (Simulation) or recall painful memories (Pressure Test).\n2.  **Forced Trade-offs**: Choose between two \"correct\" options to test values.\n3.  **Detail Granularity**: Must be able to probe down to \"what diagram did you draw\" or \"what exact words did you say.\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_concept_ac37d0cb",
+      "skill_name": "interview-designer",
+      "category": "concept",
+      "concept": "Understanding 4. output format",
+      "instruction": "Directly call `templates/interview_guide_template.md` to generate the report.\n**Note**: When generating the guide, include both **[Red Flags] (concerns)** and **[Green Signals] (highlight verification)** to maintain objectivity in assessment.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_instruction_01301eec",
+      "skill_name": "interview-designer",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Geoff Smart (Who)**: Responsible for **Define & ...",
+      "instruction": "**Geoff Smart (Who)**: Responsible for **Define & Verify**.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_instruction_32856cf5",
+      "skill_name": "interview-designer",
+      "category": "instruction",
+      "concept": "Rule or guideline: *Principle*: Scorecard First. Before looking at an...",
+      "instruction": "*Principle*: Scorecard First. Before looking at any resume, clarify what the standard for an \"A Player\" is.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_instruction_bbf4681f",
+      "skill_name": "interview-designer",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Lou Adler (Performance-based)**: Responsible for...",
+      "instruction": "**Lou Adler (Performance-based)**: Responsible for **Predict**.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_instruction_04bd833e",
+      "skill_name": "interview-designer",
+      "category": "instruction",
+      "concept": "Rule or guideline: *Principle*: Past performance predicts future perf...",
+      "instruction": "*Principle*: Past performance predicts future performance *only if* the context is similar. Must design simulations for future scenarios.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_instruction_31563dd2",
+      "skill_name": "interview-designer",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Daniel Kahneman (Bias Control)**: Responsible fo...",
+      "instruction": "**Daniel Kahneman (Bias Control)**: Responsible for **De-bias**.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_instruction_ab90afbc",
+      "skill_name": "interview-designer",
+      "category": "instruction",
+      "concept": "Rule or guideline: *Principle*: Beware of \"confirmation bias.\" If con...",
+      "instruction": "*Principle*: Beware of \"confirmation bias.\" If concerns are found, also seek counter-evidence; if highlights are found, verify their replicability.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_instruction_58a29d50",
+      "skill_name": "interview-designer",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Domain Expert**: Responsible for **Depth**....",
+      "instruction": "**Domain Expert**: Responsible for **Depth**.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_instruction_a6ff71da",
+      "skill_name": "interview-designer",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Mission**: One sentence - why does this role exi...",
+      "instruction": "**Mission**: One sentence - why does this role exist?",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_instruction_4ce889b4",
+      "skill_name": "interview-designer",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Outcomes**: 3-5 specific, measurable results tha...",
+      "instruction": "**Outcomes**: 3-5 specific, measurable results that must be achieved within 12 months.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_instruction_aedab01c",
+      "skill_name": "interview-designer",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Competencies**: Hard/soft skills required to ach...",
+      "instruction": "**Competencies**: Hard/soft skills required to achieve the above outcomes.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_assessment_c6421d3b",
+      "skill_name": "interview-designer",
+      "category": "assessment",
+      "concept": "Apply interview-designer in a practical project",
+      "instruction": "Demonstrate mastery of interview-designer by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using interview-designer",
+        "Explain when interview-designer should be used",
+        "Identify the core concepts of interview-designer",
+        "Apply interview-designer to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_interview_designer_contextualization_0fed03cd",
+      "skill_name": "interview-designer",
+      "category": "contextualization",
+      "concept": "When to use interview-designer",
+      "instruction": "Learn when to apply interview-designer in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using interview-designer",
+        "User needs help with coding -> evaluate if interview-designer applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate interview-designer is needed",
+        "Distinguish between interview-designer and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 20,
+  "generated_at": "2026-03-24T04:43:44.493139",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/interview-designer/SKILL.md"
+}

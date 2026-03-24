@@ -1,0 +1,265 @@
+{
+  "datasets": {
+    "mbpp": {
+      "name": "MBPP - Mostly Basic Python Problems",
+      "source": "huggingface",
+      "dataset_name": "mbpp",
+      "split": "train",
+      "domain": "python",
+      "priority": 1,
+      "estimated_size_mb": 1,
+      "fields": {
+        "text": "text",
+        "code": "code",
+        "task_id": "task_id",
+        "test_cases": "test_list"
+      },
+      "curriculum_type": "coding_problems",
+      "hierarchy_levels": [1, 2],
+      "description": "Basic Python programming problems with solutions",
+      "sample_rate": 1.0,
+      "filter": {
+        "min_code_length": 10,
+        "max_code_length": 500
+      }
+    },
+    "humaneval": {
+      "name": "HumanEval - OpenAI Code Generation Benchmark",
+      "source": "huggingface",
+      "dataset_name": "openai_humaneval",
+      "split": "test",
+      "domain": "python",
+      "priority": 1,
+      "estimated_size_mb": 0.3,
+      "fields": {
+        "function_name": "entry_point",
+        "description": "prompt",
+        "code": "canonical_solution",
+        "tests": "test"
+      },
+      "curriculum_type": "coding_functions",
+      "hierarchy_levels": [2, 3],
+      "description": "Hand-written Python function problems",
+      "sample_rate": 1.0
+    },
+    "code_alpaca": {
+      "name": "Code Alpaca - Instruction Following Code",
+      "source": "huggingface",
+      "dataset_name": "sahil2801/CodeAlpaca",
+      "split": "train",
+      "domain": "python",
+      "priority": 2,
+      "estimated_size_mb": 20,
+      "fields": {
+        "instruction": "instruction",
+        "input": "input",
+        "output": "output"
+      },
+      "curriculum_type": "instruction_code",
+      "hierarchy_levels": [1, 2, 3],
+      "description": "Instruction-following code examples",
+      "sample_rate": 0.5
+    },
+    "wikitext": {
+      "name": "WikiText-2 - Wikipedia Articles",
+      "source": "huggingface",
+      "dataset_name": "wikitext",
+      "config_name": "wikitext-2-raw-v1",
+      "split": "train",
+      "domain": "english",
+      "priority": 1,
+      "estimated_size_mb": 4,
+      "fields": {
+        "text": "text"
+      },
+      "curriculum_type": "natural_language",
+      "hierarchy_levels": [0, 1, 2],
+      "description": "Wikipedia text for language learning",
+      "sample_rate": 0.3,
+      "filter": {
+        "min_text_length": 50,
+        "max_text_length": 5000
+      }
+    },
+    "squad": {
+      "name": "SQuAD 2.0 - Question Answering",
+      "source": "huggingface",
+      "dataset_name": "squad_v2",
+      "split": "train",
+      "domain": "english",
+      "priority": 2,
+      "estimated_size_mb": 35,
+      "fields": {
+        "context": "context",
+        "question": "question",
+        "answers": "answers"
+      },
+      "curriculum_type": "qa_pairs",
+      "hierarchy_levels": [2, 3],
+      "description": "Question answering from context",
+      "sample_rate": 0.1
+    },
+    "simple_wikipedia": {
+      "name": "Simple Wikipedia",
+      "source": "huggingface",
+      "dataset_name": "wikipedia",
+      "config_name": "20220301.simple",
+      "split": "train",
+      "domain": "english",
+      "priority": 2,
+      "estimated_size_mb": 200,
+      "fields": {
+        "text": "text",
+        "title": "title"
+      },
+      "curriculum_type": "natural_language",
+      "hierarchy_levels": [0, 1, 2, 3],
+      "description": "Simple English Wikipedia articles",
+      "sample_rate": 0.05,
+      "filter": {
+        "min_text_length": 100,
+        "max_text_length": 2000
+      }
+    },
+    "python_docs": {
+      "name": "Python Documentation Examples",
+      "source": "huggingface",
+      "dataset_name": "Nan-Do/python-documentation-dataset",
+      "split": "train",
+      "domain": "python",
+      "priority": 2,
+      "estimated_size_mb": 10,
+      "fields": {
+        "code": "code",
+        "explanation": "text"
+      },
+      "curriculum_type": "code_with_explanation",
+      "hierarchy_levels": [1, 2, 3],
+      "description": "Python documentation code examples",
+      "sample_rate": 0.5
+    },
+    "leetcode": {
+      "name": "LeetCode Problems",
+      "source": "huggingface",
+      "dataset_name": "greengerong/leetcode",
+      "split": "train",
+      "domain": "python",
+      "priority": 3,
+      "estimated_size_mb": 50,
+      "fields": {
+        "title": "title",
+        "description": "description",
+        "solution": "solution"
+      },
+      "curriculum_type": "coding_problems",
+      "hierarchy_levels": [2, 3, 4],
+      "description": "LeetCode algorithm problems",
+      "sample_rate": 0.3
+    },
+    "wordnet": {
+      "name": "WordNet Definitions",
+      "source": "huggingface",
+      "dataset_name": "wordnet",
+      "split": "train",
+      "domain": "english",
+      "priority": 2,
+      "estimated_size_mb": 15,
+      "fields": {
+        "word": "word",
+        "definition": "definition",
+        "examples": "examples"
+      },
+      "curriculum_type": "word_definitions",
+      "hierarchy_levels": [1],
+      "description": "Word definitions and relationships",
+      "sample_rate": 1.0
+    },
+    "code_search_net": {
+      "name": "CodeSearchNet - Multi-Language Code",
+      "source": "huggingface",
+      "dataset_name": "code_search_net",
+      "config_name": "python",
+      "split": "train",
+      "domain": "python",
+      "priority": 3,
+      "estimated_size_mb": 12000,
+      "fields": {
+        "code": "func_code_string",
+        "docstring": "func_documentation_string",
+        "function_name": "func_name"
+      },
+      "curriculum_type": "code_with_docstring",
+      "hierarchy_levels": [2, 3, 4],
+      "description": "Large-scale code search dataset",
+      "sample_rate": 0.01,
+      "streaming": true
+    },
+    "reasoning_contextualization": {
+      "name": "Contextualization Skills",
+      "source": "local",
+      "path": "curriculum/reasoning/contextualization_basics.json",
+      "domain": "reasoning",
+      "priority": 1,
+      "curriculum_type": "cognitive_skills",
+      "hierarchy_levels": [1, 2],
+      "description": "Teaches AI to understand context and intent in questions"
+    },
+    "reasoning_question_parsing": {
+      "name": "Question Parsing Skills",
+      "source": "local",
+      "path": "curriculum/reasoning/question_parsing.json",
+      "domain": "reasoning",
+      "priority": 1,
+      "curriculum_type": "cognitive_skills",
+      "hierarchy_levels": [1, 2],
+      "description": "Teaches AI to parse and understand question structure"
+    },
+    "english_word_patterns": {
+      "name": "English Words with Patterns",
+      "source": "local",
+      "path": "curriculum/english/words_with_patterns.json",
+      "domain": "english",
+      "priority": 1,
+      "curriculum_type": "vocabulary",
+      "hierarchy_levels": [1],
+      "description": "English vocabulary organized by spelling patterns"
+    }
+  },
+  
+  "curriculum_output": {
+    "base_path": "curriculum/trained",
+    "batch_size": 100,
+    "naming_convention": "{domain}/batch_{source}_{level}_{index}.json"
+  },
+  
+  "processing": {
+    "max_workers": 4,
+    "cache_enabled": true,
+    "cache_path": ".dataset_cache",
+    "progress_reporting": true
+  },
+  
+  "training_phases": [
+    {
+      "phase": 1,
+      "name": "Foundations",
+      "datasets": ["mbpp", "wikitext"],
+      "curriculum_per_dataset": 1000,
+      "hierarchy_levels": [0, 1]
+    },
+    {
+      "phase": 2,
+      "name": "Intermediate",
+      "datasets": ["humaneval", "code_alpaca", "squad"],
+      "curriculum_per_dataset": 2000,
+      "hierarchy_levels": [1, 2, 3]
+    },
+    {
+      "phase": 3,
+      "name": "Advanced",
+      "datasets": ["leetcode", "code_search_net", "simple_wikipedia"],
+      "curriculum_per_dataset": 5000,
+      "hierarchy_levels": [2, 3, 4]
+    }
+  ]
+}

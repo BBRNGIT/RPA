@@ -1,0 +1,252 @@
+{
+  "skill_name": "ui-ux-pro-max",
+  "skill_description": "UI/UX design intelligence and implementation guidance for building polished interfaces. Use when the user asks for UI design, UX flows, information architecture, visual style direction, design systems/tokens, component specs, copy/microcopy, accessibility, or to generate/critique/refine frontend UI (HTML/CSS/JS, React, Next.js, Vue, Svelte, Tailwind). Includes workflows for (1) generating new UI layouts and styling, (2) improving existing UI/UX, (3) producing design-system tokens and component guidelines, and (4) turning UX recommendations into concrete code changes.",
+  "items": [
+    {
+      "item_id": "skill_ui_ux_pro_max_concept_bb7d700f",
+      "skill_name": "ui-ux-pro-max",
+      "category": "concept",
+      "concept": "Understanding 1) triage",
+      "instruction": "Ask only what you must to avoid wrong work:\n- Target platform: web / iOS / Android / desktop\n- Stack (if code changes): React/Next/Vue/Svelte, CSS/Tailwind, component library\n- Goal and constraints: conversion, speed, brand vibe, accessibility level (WCAG AA?)\n- What you have: screenshot, Figma, repo, URL, user journey\n\nIf the user says \"全部都要\" (design + UX + code + design system), treat it as four deliverables and ship in that order.",
+      "examples": [
+        "python3 skills/ui-ux-pro-max/scripts/design_system.py --help\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_concept_396dc24c",
+      "skill_name": "ui-ux-pro-max",
+      "category": "concept",
+      "concept": "Understanding 2) produce deliverables (pick what fits)",
+      "instruction": "Always be concrete: name components, states, spacing, typography, and interactions.\n\n- **UI concept + layout**: Provide a clear visual direction, grid, typography, color system, key screens/sections.\n- **UX flow**: Map the user journey, critical paths, error/empty/loading states, edge cases.\n- **Design system**: Tokens (color/typography/spacing/radius/shadow), component rules, accessibility notes.\n- **Implementation plan**: Exact file-level edits, component breakdown, and acceptance criteria.",
+      "examples": [
+        "python3 skills/ui-ux-pro-max/scripts/design_system.py --help\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_concept_22dc2eb9",
+      "skill_name": "ui-ux-pro-max",
+      "category": "concept",
+      "concept": "Understanding 3) use bundled assets",
+      "instruction": "This skill bundles data you can cite for inspiration/standards.\n\n- **Design intelligence data**: Read from `skills/ui-ux-pro-max/assets/data/` when you need palettes, patterns, or UI/UX heuristics.\n- **Upstream reference**: If you need more phrasing/examples, consult `skills/ui-ux-pro-max/references/upstream-skill-content.md`.",
+      "examples": [
+        "python3 skills/ui-ux-pro-max/scripts/design_system.py --help\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_concept_ea3ac1c2",
+      "skill_name": "ui-ux-pro-max",
+      "category": "concept",
+      "concept": "Understanding 4) optional script (design system generator)",
+      "instruction": "If you need to quickly generate tokens and page-specific overrides, use the bundled script:\n\n```bash\npython3 skills/ui-ux-pro-max/scripts/design_system.py --help\n```\n\nPrefer running it when the user wants a structured token output (ASCII-friendly).",
+      "examples": [
+        "python3 skills/ui-ux-pro-max/scripts/design_system.py --help\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_concept_15d16866",
+      "skill_name": "ui-ux-pro-max",
+      "category": "concept",
+      "concept": "Understanding output standards",
+      "instruction": "- Default to ASCII-only tokens/variables unless the project already uses Unicode.\n- Include: spacing scale, type scale, 2-3 font pair options, color tokens, component states.\n- Always cover: empty/loading/error, keyboard navigation, focus states, contrast.",
+      "examples": [
+        "python3 skills/ui-ux-pro-max/scripts/design_system.py --help\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_instruction_25b9eae8",
+      "skill_name": "ui-ux-pro-max",
+      "category": "instruction",
+      "concept": "Rule or guideline: Target platform: web / iOS / Android / desktop...",
+      "instruction": "Target platform: web / iOS / Android / desktop",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_instruction_e3de4e34",
+      "skill_name": "ui-ux-pro-max",
+      "category": "instruction",
+      "concept": "Rule or guideline: Stack (if code changes): React/Next/Vue/Svelte, CS...",
+      "instruction": "Stack (if code changes): React/Next/Vue/Svelte, CSS/Tailwind, component library",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_instruction_2b45b728",
+      "skill_name": "ui-ux-pro-max",
+      "category": "instruction",
+      "concept": "Rule or guideline: Goal and constraints: conversion, speed, brand vib...",
+      "instruction": "Goal and constraints: conversion, speed, brand vibe, accessibility level (WCAG AA?)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_instruction_978b142e",
+      "skill_name": "ui-ux-pro-max",
+      "category": "instruction",
+      "concept": "Rule or guideline: What you have: screenshot, Figma, repo, URL, user ...",
+      "instruction": "What you have: screenshot, Figma, repo, URL, user journey",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_instruction_af677217",
+      "skill_name": "ui-ux-pro-max",
+      "category": "instruction",
+      "concept": "Rule or guideline: **UI concept + layout**: Provide a clear visual di...",
+      "instruction": "**UI concept + layout**: Provide a clear visual direction, grid, typography, color system, key screens/sections.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_instruction_17e5517b",
+      "skill_name": "ui-ux-pro-max",
+      "category": "instruction",
+      "concept": "Rule or guideline: **UX flow**: Map the user journey, critical paths,...",
+      "instruction": "**UX flow**: Map the user journey, critical paths, error/empty/loading states, edge cases.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_instruction_bff9a0fe",
+      "skill_name": "ui-ux-pro-max",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Design system**: Tokens (color/typography/spacin...",
+      "instruction": "**Design system**: Tokens (color/typography/spacing/radius/shadow), component rules, accessibility notes.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_instruction_2487171a",
+      "skill_name": "ui-ux-pro-max",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Implementation plan**: Exact file-level edits, c...",
+      "instruction": "**Implementation plan**: Exact file-level edits, component breakdown, and acceptance criteria.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_instruction_70b9ab54",
+      "skill_name": "ui-ux-pro-max",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Design intelligence data**: Read from `skills/ui...",
+      "instruction": "**Design intelligence data**: Read from `skills/ui-ux-pro-max/assets/data/` when you need palettes, patterns, or UI/UX heuristics.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_instruction_56c47d68",
+      "skill_name": "ui-ux-pro-max",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Upstream reference**: If you need more phrasing/...",
+      "instruction": "**Upstream reference**: If you need more phrasing/examples, consult `skills/ui-ux-pro-max/references/upstream-skill-content.md`.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_code_pattern_9df5a6ba",
+      "skill_name": "ui-ux-pro-max",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from ui-ux-pro-max",
+      "examples": [
+        "python3 skills/ui-ux-pro-max/scripts/design_system.py --help\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_assessment_948638a9",
+      "skill_name": "ui-ux-pro-max",
+      "category": "assessment",
+      "concept": "Apply ui-ux-pro-max in a practical project",
+      "instruction": "Demonstrate mastery of ui-ux-pro-max by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using ui-ux-pro-max",
+        "Explain when ui-ux-pro-max should be used",
+        "Identify the core concepts of ui-ux-pro-max",
+        "Apply ui-ux-pro-max to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ui_ux_pro_max_contextualization_c5d12988",
+      "skill_name": "ui-ux-pro-max",
+      "category": "contextualization",
+      "concept": "When to use ui-ux-pro-max",
+      "instruction": "Learn when to apply ui-ux-pro-max in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using ui-ux-pro-max",
+        "User needs help with coding -> evaluate if ui-ux-pro-max applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate ui-ux-pro-max is needed",
+        "Distinguish between ui-ux-pro-max and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 18,
+  "generated_at": "2026-03-24T04:43:44.500979",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/ui-ux-pro-max/SKILL.md"
+}

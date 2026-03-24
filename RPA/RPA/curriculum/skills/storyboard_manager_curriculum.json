@@ -1,0 +1,1230 @@
+{
+  "skill_name": "storyboard-manager",
+  "skill_description": "Assist writers with story planning, character development, plot structuring, chapter writing, timeline tracking, and consistency checking. Use this skill when working with creative writing projects organized in folders containing characters, chapters, story planning documents, and summaries. Trigger this skill for tasks like \"Help me develop this character,\" \"Write the next chapter,\" \"Check consistency across my story,\" or \"Track the timeline of events.",
+  "items": [
+    {
+      "item_id": "skill_storyboard_manager_concept_4caaa699",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding storyboard manager",
+      "instruction": "",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_4580033d",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "The Storyboard Manager skill equips Claude with specialized knowledge and tools for creative writing workflows. It provides frameworks for character development, story structure patterns, automated timeline tracking, and consistency checking across narrative projects. This skill automatically adapts to various storyboard folder structures while maintaining best practices for novel, screenplay, and serialized fiction writing.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_9a62a618",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding core capabilities",
+      "instruction": "The skill provides four main capabilities:",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_b22edc60",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding 1. character development & management",
+      "instruction": "Support creating deep, consistent character profiles with backstories, arcs, and relationships.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_cf0dc97e",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding 2. story planning & structure",
+      "instruction": "Guide plot development using established frameworks (Three-Act, Hero's Journey, Save the Cat, etc.) and help organize narrative elements.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_f1e380a9",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding 3. chapter & scene writing",
+      "instruction": "Generate chapter content, scene breakdowns, and dialogue that maintains consistency with established characters and plot.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_2f54a8d7",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding 4. timeline tracking & consistency checking",
+      "instruction": "Use automated tools to verify chronological consistency, character continuity, and world-building coherence.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_2e6bad0c",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding detecting project structure",
+      "instruction": "The Storyboard Manager automatically detects and adapts to various folder organizations. Look for these common directory patterns:\n\n**Character folders:** `characters/`, `Characters/`, `cast/`, `Cast/`\n**Chapter folders:** `chapters/`, `Chapters/`, `scenes/`, `Scenes/`, `story/`\n**Planning folders:** `story-planning/`, `planning/`, `outline/`, `notes/`\n**Summary files:** `summary.md`, `README.md`, `overview.md`\n\nWhen triggered, scan the project root to identify the structure and adjust workflows",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_e7af0cd5",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding workflow decision tree",
+      "instruction": "Use this decision tree to determine the appropriate workflow:\n\n```\nUser Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradiction",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_8b847530",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding character development workflow",
+      "instruction": "",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_4ca26d21",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 1: gather context",
+      "instruction": "Before developing a character, read existing character files to understand:\n- Established naming conventions and profile format\n- Existing characters and relationships\n- Story genre and tone\n- Character archetypes already in use\n\nUse the Read tool to examine existing character files in the characters directory.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_6323fec3",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 2: access character development framework",
+      "instruction": "When detailed character guidance is needed, read `references/character_development.md` which contains:\n- Core character elements (personality, motivation, goals)\n- Backstory framework (ghost/wound, formative relationships)\n- Character arc types (positive change, flat, negative)\n- Relationship dynamics\n- Voice development techniques\n- Consistency guidelines\n\nTo efficiently find specific guidance, use Grep to search for relevant sections:\n```bash",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_fb5fcedc",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding example: find guidance on character arcs",
+      "instruction": "grep -i \"character arc\" references/character_development.md\n```",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_c33cace8",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 3: develop character profile",
+      "instruction": "Create or enhance character profiles with these essential elements:\n\n**Basic Information**\n- Name, age, role, physical appearance\n- Key personality traits (both positive and negative)\n\n**Background**\n- Origin and formative experiences\n- Ghost/wound that shapes their behavior\n- Key relationships and family dynamics\n\n**Character Arc**\n- Starting belief or flaw\n- Want vs. Need (external goal vs. internal growth)\n- Transformation journey\n- End state\n\n**Relationships**\n- Connections to other characte",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_4cd3cb8e",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 4: ensure consistency",
+      "instruction": "Cross-reference with:\n- Existing character profiles (avoid redundancy in roles/traits)\n- Story planning documents (ensure alignment with plot needs)\n- Summary/overview (match genre and tone)",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_d80e8368",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 5: create or update file",
+      "instruction": "Write the character profile to `characters/[character-name].md` using markdown format. Match the existing style and structure found in other character files.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_9c157edc",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding story planning workflow",
+      "instruction": "",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_d8ae549e",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 1: assess current planning state",
+      "instruction": "Read existing planning documents to understand:\n- Story concept and premise\n- Established plot points or outline\n- Target audience and genre\n- Themes and central questions\n- Planned structure (if any)\n\nLook in folders like `story-planning/`, `outline/`, or files like `summary.md`.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_7eac4757",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 2: access story structure reference",
+      "instruction": "For detailed structural guidance, read `references/story_structures.md` which includes:\n- Three-Act Structure\n- Hero's Journey (Campbell's Monomyth)\n- Save the Cat Beat Sheet\n- Character arc templates\n- Scene structure components\n- Pacing guidelines by genre\n- Subplot integration techniques\n- Genre-specific structures\n\nUse Grep to find specific frameworks:\n```bash",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_39874e33",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding example: find three-act structure details",
+      "instruction": "grep -A 20 \"Three-Act Structure\" references/story_structures.md\n```",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_18c73c66",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 3: determine structure needs",
+      "instruction": "Based on the user's request and story genre, recommend appropriate frameworks:\n\n- **Thriller/Mystery**: Three-Act with strong midpoint reversal\n- **Fantasy/Adventure**: Hero's Journey for quest narratives\n- **YA/Contemporary**: Save the Cat for tight emotional beats\n- **Literary Fiction**: Focus on character arc structure\n- **Romance**: Genre-specific structure with relationship beats",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_25d34748",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 4: develop planning document",
+      "instruction": "Create or enhance planning documents with:\n\n**Story Overview**\n- Premise in 2-3 sentences\n- Genre, target audience, tone\n- Central themes and questions\n\n**Plot Structure**\n- Act/chapter breakdown with key events\n- Inciting incident and plot points\n- Midpoint twist or revelation\n- Climax and resolution\n\n**Character Arcs**\n- How each main character transforms\n- Arc integration with plot beats\n\n**World-Building Elements** (if applicable)\n- Setting and locations\n- Magic systems or technology\n- Socia",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_3dbdb168",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 5: create planning file",
+      "instruction": "Write planning documents to `story-planning/[document-name].md`. Use clear hierarchical structure with markdown headers for easy navigation.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_9ed13c99",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding chapter & scene writing workflow",
+      "instruction": "",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_40882c20",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 1: gather story context",
+      "instruction": "Before writing any content, comprehensively read:\n\n**Character Files**: All relevant character profiles to understand voices, motivations, arcs\n**Planning Documents**: Story structure, plot points, current story position\n**Previous Chapters**: Recent chapters to maintain continuity (read at least 1-2 prior chapters)\n**Summary**: Overall story premise and themes\n\nThis ensures the new content aligns with established elements.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_1fd7483c",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 2: identify chapter requirements",
+      "instruction": "Determine:\n- **Story Position**: Where does this fit in the overall structure?\n- **POV Character**: Whose perspective?\n- **Scene Goal**: What does the POV character want in this scene?\n- **Conflict**: What opposes their goal?\n- **Outcome**: How does the scene end? (typically with a complication)\n- **Character Development**: What arc beats occur here?\n- **Plot Advancement**: What story questions are raised or answered?",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_ca5e4d42",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 3: structure the chapter",
+      "instruction": "Apply scene structure components:\n\n**Scene (Action)**\n1. Goal - What the POV character pursues\n2. Conflict - Opposition encountered\n3. Disaster - Negative outcome that propels forward\n\n**Sequel (Reaction)**\n1. Reaction - Emotional response to disaster\n2. Dilemma - Processing options\n3. Decision - Choice leading to next goal\n\nAlternate between high-tension (action, conflict) and low-tension (reflection, world-building) beats for pacing.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_5dbac7a4",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 4: write with character consistency",
+      "instruction": "Maintain character voice by referencing:\n- Established personality traits\n- Speech patterns and vocabulary\n- Behavioral patterns (under stress, when happy, decision-making style)\n- Current position in character arc\n- Relationships with other characters present",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_4a59529d",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 5: integrate timeline markers",
+      "instruction": "Include timeline references to maintain chronological clarity:\n- Explicit markers: \"Day 3,\" \"Two weeks later\"\n- Implicit markers: Time of day, seasonal cues, event references\n- Format: `**Timeline:** Day 5, Evening` in chapter header or as section break",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_6c8d32ba",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 6: create chapter file",
+      "instruction": "Write chapter content to `chapters/chapter-[number].md` or `chapters/[chapter-name].md`. Include:\n\n**Chapter Header**\n```markdown",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_7ab735da",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding chapter [number]: [optional title]",
+      "instruction": "**Timeline:** [When this occurs]\n**POV:** [Character name]\n**Location:** [Where this takes place]\n```\n\n**Chapter Content**\n- Scene-by-scene breakdown\n- Dialogue and action\n- Character thoughts (for POV character)\n- Descriptive elements",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_14ba0500",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding step 7: note continuity elements",
+      "instruction": "After writing, document any new information introduced:\n- Character revelations or development\n- Plot points or clues\n- World-building details\n- Timeline events\n\nThis helps maintain consistency in future chapters.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_6e3a2cf5",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding timeline tracking",
+      "instruction": "",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_887461fd",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding when to use timeline tracking",
+      "instruction": "Invoke the timeline tracker when:\n- User requests timeline analysis or event sequencing\n- Checking chronological consistency\n- Planning event order across chapters\n- Identifying unmarked time periods",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_ec10cf27",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding running the timeline tracker",
+      "instruction": "Execute the script from the project root:\n\n```bash\npython3 .claude/skills/storyboard-manager/scripts/timeline_tracker.py . --output markdown\n```\n\n**Output format options:**\n- `markdown` - Human-readable report (default)\n- `json` - Structured data for further processing",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_2f238f42",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding understanding timeline output",
+      "instruction": "The script provides:\n\n**Statistics**\n- Total events tracked\n- Total characters appearing\n- Events per character\n\n**Timeline View**\n- Chronological sequence of events\n- Chapter/scene locations\n- Characters present in each event\n- Preview of event content\n\n**Warnings**\n- Events without timeline markers\n- Characters mentioned but not defined in character files",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_7fc05ffc",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding acting on timeline results",
+      "instruction": "After running the tracker:\n\n1. **Review warnings** - Address missing timeline markers by adding them to chapters\n2. **Check sequence** - Verify events occur in logical order\n3. **Identify gaps** - Look for time periods without events\n4. **Character tracking** - Ensure characters appear consistently with their arc\n\nAdd timeline markers to chapters where missing:\n```markdown\n**Timeline:** Day 7, Morning\n```\n\nOr use inline markers:\n```markdown\nThree days had passed since the incident...\n```",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_8bb23919",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding consistency checking",
+      "instruction": "",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_5a181141",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding when to use consistency checking",
+      "instruction": "Invoke the consistency checker when:\n- User requests consistency analysis\n- Before finalizing chapters or acts\n- After making significant character or plot changes\n- When tracking contradictions or errors",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_390d05cd",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding running the consistency checker",
+      "instruction": "Execute the script from the project root:\n\n```bash\npython3 .claude/skills/storyboard-manager/scripts/consistency_checker.py . --output markdown\n```\n\n**Output format options:**\n- `markdown` - Human-readable report with issue details (default)\n- `json` - Structured data for programmatic analysis",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_28a5688f",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding understanding consistency output",
+      "instruction": "The script identifies issues in three severity levels:\n\n**Critical (🔴)**\n- Major contradictions requiring immediate attention\n- Character appearing after death\n- Fundamental plot contradictions\n\n**Warning (⚠️)**\n- Potential inconsistencies to review\n- Age discrepancies\n- Physical description contradictions\n- Relationship conflicts\n\n**Info (ℹ️)**\n- Minor issues or variations\n- Name capitalization inconsistencies\n- Stylistic variations",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_f7d0901d",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding acting on consistency results",
+      "instruction": "For each issue reported:\n\n1. **Read flagged locations** - Review the specific files mentioned\n2. **Determine truth** - Decide which version is correct (usually character profile is authoritative)\n3. **Update files** - Fix contradictions using the Edit tool\n4. **Re-run checker** - Verify fixes resolved the issues\n\n**Example workflow for character age inconsistency:**\n```markdown\nIssue: Age inconsistency for Maya\n- Profile: 18 years old\n- Chapter 3: mentions \"21-year-old Maya\"\n\nFix: Edit chapter-3",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_528fabb2",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding consistency checking limitations",
+      "instruction": "The automated checker catches:\n- Physical attribute contradictions\n- Age discrepancies\n- Name variations\n- Basic world-building facts\n\nThe checker cannot catch:\n- Subtle personality inconsistencies\n- Complex plot logic errors\n- Thematic contradictions\n- Nuanced relationship changes\n\nManual review is still essential for deep consistency.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_3cca76fc",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding best practices",
+      "instruction": "",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_e49b3f38",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding progressive context loading",
+      "instruction": "Don't load all reference files at once. Instead:\n1. Scan project structure first\n2. Read only relevant character files for the current task\n3. Access reference documentation only when specific guidance is needed\n4. Use Grep to find specific sections in large reference files",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_6a67397c",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding maintaining genre voice",
+      "instruction": "Match the story's established tone:\n- **YA**: Present tense, immediate emotional connection, contemporary language\n- **Fantasy**: Rich descriptive language, world-building integration\n- **Thriller**: Short sentences, high tension, sensory details\n- **Literary**: Complex prose, internal reflection, symbolic elements\n\nReference the summary.md to identify target audience and adjust accordingly.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_de060788",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding character arc integration",
+      "instruction": "Every chapter should serve character arcs:\n- Track where each character is in their arc\n- Show incremental change, not sudden transformation\n- Use plot events to test character beliefs\n- Demonstrate growth through choices and behavior",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_59adf0a7",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding balancing show vs. tell",
+      "instruction": "For narrative writing:\n- **Show** emotions through actions, dialogue, physical reactions\n- **Tell** to compress time, provide necessary information efficiently\n- Use character-filtered description (what would this POV character notice?)",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_7b09fe4e",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding handling multiple pov",
+      "instruction": "When stories have multiple perspectives:\n- Create distinct voices for each POV character\n- Ensure each POV section advances both that character's arc and the plot\n- Vary sentence structure and vocabulary by character\n- Track what each character knows vs. doesn't know",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_26bb89b7",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding common user requests & responses",
+      "instruction": "",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_012caf24",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding \"help me develop a character backstory\"",
+      "instruction": "1. Read existing character files for context\n2. Read the character profile (if exists) to enhance\n3. Access character_development.md reference for backstory framework\n4. Create detailed backstory covering: ghost/wound, formative relationships, key history\n5. Integrate with their character arc and story role",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_f115ccc9",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding \"write the next chapter\"",
+      "instruction": "1. Read summary.md and story planning documents\n2. Read all character profiles for characters appearing in chapter\n3. Read previous 2 chapters for continuity\n4. Identify chapter position in story structure\n5. Write chapter with scene/sequel structure\n6. Include timeline markers and POV/location headers",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_86f867ce",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding \"outline act 2\"",
+      "instruction": "1. Read summary and any existing planning documents\n2. Access story_structures.md for structural guidance\n3. Identify act 2 requirements (complications, midpoint, rising tension)\n4. Create beat-by-beat outline aligned with character arcs\n5. Note how plot and character arcs intersect",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_df1f99e9",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding \"check my story for consistency\"",
+      "instruction": "1. Run consistency_checker.py script\n2. Review output identifying issues\n3. Read flagged files to understand contradictions\n4. Recommend specific fixes for each issue\n5. Offer to make edits if user confirms",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_6ebf3e74",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding \"track the timeline of my story\"",
+      "instruction": "1. Run timeline_tracker.py script\n2. Review output showing event sequence\n3. Identify gaps or inconsistencies in chronology\n4. Recommend adding timeline markers where missing\n5. Provide timeline summary organized by character or chapter",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_3f2c8c89",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding \"what structure should i use for my thriller?\"",
+      "instruction": "1. Access story_structures.md reference\n2. Recommend Three-Act Structure or Save the Cat\n3. Explain thriller-specific requirements (escalating tension, ticking clock)\n4. Provide beat sheet adapted to their story concept\n5. Offer to create detailed planning document",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_a1b49fc9",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding resources",
+      "instruction": "",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_52ecb9b6",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding scripts/timeline tracker.py",
+      "instruction": "Python script that analyzes markdown files to extract and organize timeline events. Tracks character appearances, identifies time markers, groups events chronologically, and flags consistency issues.\n\n**Usage:** Run from project root with `python3 .claude/skills/storyboard-manager/scripts/timeline_tracker.py .`",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_88d02809",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding scripts/consistency checker.py",
+      "instruction": "Python script that detects inconsistencies in character details, physical descriptions, ages, names, and world-building facts across all story files. Outputs severity-ranked issues with file locations.\n\n**Usage:** Run from project root with `python3 .claude/skills/storyboard-manager/scripts/consistency_checker.py .`",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_491f6873",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding references/character development.md",
+      "instruction": "Comprehensive framework for creating multi-dimensional characters including core elements, backstory structure, arc types, relationship dynamics, voice development, and consistency guidelines.\n\n**Load when:** Developing new characters, enhancing existing profiles, resolving character consistency issues, or planning character arcs.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_concept_46eae11a",
+      "skill_name": "storyboard-manager",
+      "category": "concept",
+      "concept": "Understanding references/story structures.md",
+      "instruction": "Detailed reference covering major story structures (Three-Act, Hero's Journey, Save the Cat), character arc templates, scene structure, pacing guidelines, plot development techniques, and genre-specific structures.\n\n**Load when:** Planning story outline, structuring acts, organizing plot beats, determining pacing, or applying specific narrative frameworks.",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n",
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n",
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_instruction_4f28ea93",
+      "skill_name": "storyboard-manager",
+      "category": "instruction",
+      "concept": "Rule or guideline: Established naming conventions and profile format...",
+      "instruction": "Established naming conventions and profile format",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_instruction_9192213c",
+      "skill_name": "storyboard-manager",
+      "category": "instruction",
+      "concept": "Rule or guideline: Existing characters and relationships...",
+      "instruction": "Existing characters and relationships",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_instruction_bc22b5aa",
+      "skill_name": "storyboard-manager",
+      "category": "instruction",
+      "concept": "Rule or guideline: Story genre and tone...",
+      "instruction": "Story genre and tone",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_instruction_8b0e72d6",
+      "skill_name": "storyboard-manager",
+      "category": "instruction",
+      "concept": "Rule or guideline: Character archetypes already in use...",
+      "instruction": "Character archetypes already in use",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_instruction_72d8d151",
+      "skill_name": "storyboard-manager",
+      "category": "instruction",
+      "concept": "Rule or guideline: Core character elements (personality, motivation, ...",
+      "instruction": "Core character elements (personality, motivation, goals)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_instruction_a63dc0a6",
+      "skill_name": "storyboard-manager",
+      "category": "instruction",
+      "concept": "Rule or guideline: Backstory framework (ghost/wound, formative relati...",
+      "instruction": "Backstory framework (ghost/wound, formative relationships)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_instruction_9cbb21d4",
+      "skill_name": "storyboard-manager",
+      "category": "instruction",
+      "concept": "Rule or guideline: Character arc types (positive change, flat, negati...",
+      "instruction": "Character arc types (positive change, flat, negative)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_instruction_83ce9838",
+      "skill_name": "storyboard-manager",
+      "category": "instruction",
+      "concept": "Rule or guideline: Relationship dynamics...",
+      "instruction": "Relationship dynamics",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_instruction_72e42103",
+      "skill_name": "storyboard-manager",
+      "category": "instruction",
+      "concept": "Rule or guideline: Voice development techniques...",
+      "instruction": "Voice development techniques",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_instruction_36b6ae87",
+      "skill_name": "storyboard-manager",
+      "category": "instruction",
+      "concept": "Rule or guideline: Consistency guidelines...",
+      "instruction": "Consistency guidelines",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_code_pattern_8765f3a8",
+      "skill_name": "storyboard-manager",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from storyboard-manager",
+      "examples": [
+        "User Request\n├─ Character-related? (\"develop character,\" \"create backstory,\" \"character arc\")\n│  └─ → Character Development Workflow\n│\n├─ Planning/Plot? (\"outline story,\" \"plan act 2,\" \"plot structure\")\n│  └─ → Story Planning Workflow\n│\n├─ Writing content? (\"write chapter,\" \"generate scene,\" \"continue story\")\n│  └─ → Chapter/Scene Writing Workflow\n│\n└─ Checking/Analysis? (\"check consistency,\" \"track timeline,\" \"find contradictions\")\n   ├─ Timeline? → Use timeline_tracker.py script\n   └─ Consistency? → Use consistency_checker.py script\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_code_pattern_8c62fbf3",
+      "skill_name": "storyboard-manager",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from storyboard-manager",
+      "examples": [
+        "# Example: Find guidance on character arcs\ngrep -i \"character arc\" references/character_development.md\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_code_pattern_45dcb634",
+      "skill_name": "storyboard-manager",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from storyboard-manager",
+      "examples": [
+        "# Example: Find Three-Act Structure details\ngrep -A 20 \"Three-Act Structure\" references/story_structures.md\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_code_pattern_2b59dd46",
+      "skill_name": "storyboard-manager",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from storyboard-manager",
+      "examples": [
+        "# Chapter [Number]: [Optional Title]\n\n**Timeline:** [When this occurs]\n**POV:** [Character name]\n**Location:** [Where this takes place]\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_code_pattern_c2e07211",
+      "skill_name": "storyboard-manager",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from storyboard-manager",
+      "examples": [
+        "python3 .claude/skills/storyboard-manager/scripts/timeline_tracker.py . --output markdown\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_assessment_fadc1473",
+      "skill_name": "storyboard-manager",
+      "category": "assessment",
+      "concept": "Apply storyboard-manager in a practical project",
+      "instruction": "Demonstrate mastery of storyboard-manager by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using storyboard-manager",
+        "Explain when storyboard-manager should be used",
+        "Identify the core concepts of storyboard-manager",
+        "Apply storyboard-manager to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_storyboard_manager_contextualization_03bc1307",
+      "skill_name": "storyboard-manager",
+      "category": "contextualization",
+      "concept": "When to use storyboard-manager",
+      "instruction": "Learn when to apply storyboard-manager in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using storyboard-manager",
+        "User needs help with coding -> evaluate if storyboard-manager applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate storyboard-manager is needed",
+        "Distinguish between storyboard-manager and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 78,
+  "generated_at": "2026-03-24T04:43:44.495673",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/storyboard-manager/SKILL.md"
+}

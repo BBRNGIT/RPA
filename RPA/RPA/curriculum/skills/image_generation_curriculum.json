@@ -1,0 +1,929 @@
+{
+  "skill_name": "image-generation",
+  "skill_description": "Implement AI image generation capabilities using the z-ai-web-dev-sdk. Use this skill when the user needs to create images from text descriptions, generate visual content, create artwork, design assets, or build applications with AI-powered image creation. Supports multiple image sizes and returns base64 encoded images. Also includes CLI tool for quick image generation.",
+  "items": [
+    {
+      "item_id": "skill_image_generation_concept_4c03ae34",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding image generation skill",
+      "instruction": "This skill guides the implementation of image generation functionality using the z-ai-web-dev-sdk package and CLI tool, enabling creation of high-quality images from text descriptions.",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_d792f2c9",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding skills path",
+      "instruction": "**Skill Location**: `{project_path}/skills/image-generation`\n\nthis skill is located at above path in your project.\n\n**Reference Scripts**: Example test scripts are available in the `{Skill Location}/scripts/` directory for quick testing and reference. See `{Skill Location}/scripts/image-generation.ts` for a working example.",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_b829facb",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "Image Generation allows you to build applications that create visual content from text prompts using AI models, enabling creative workflows, design automation, and visual content production.\n\n**IMPORTANT**: z-ai-web-dev-sdk MUST be used in backend code only. Never use it in client-side code.",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "expert",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_90666d6b",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding prerequisites",
+      "instruction": "The z-ai-web-dev-sdk package is already installed. Import it as shown in the examples below.",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_767298d9",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding basic image generation",
+      "instruction": "",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_7600833c",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding simple image creation",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// ",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_21ac8b78",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding multiple image sizes",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPP",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_67d51356",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding cli tool usage",
+      "instruction": "The z-ai CLI tool provides a convenient way to generate images directly from the command line.",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_fbb0db88",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding basic cli usage",
+      "instruction": "```bash",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_5f9fb0a0",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding generate image with full options",
+      "instruction": "z-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_cf2b8124",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding short form",
+      "instruction": "z-ai image -p \"A cute cat\" -o \"./cat.png\"",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_99510730",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding specify size",
+      "instruction": "z-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_90a2e608",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding portrait orientation",
+      "instruction": "z-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n```",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_0de2e026",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding cli use cases",
+      "instruction": "```bash",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_53e07da8",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding website hero image",
+      "instruction": "z-ai image -p \"Modern tech office with diverse team collaborating\" -o \"./hero.png\" -s 1440x720",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_10966705",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding product image",
+      "instruction": "z-ai image -p \"Sleek smartphone on minimalist desk, professional product photography\" -o \"./product.png\" -s 1024x1024",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_84699316",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding blog post illustration",
+      "instruction": "z-ai image -p \"Abstract visualization of data flowing through networks\" -o \"./blog_header.png\" -s 1344x768",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_10d50185",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding social media content",
+      "instruction": "z-ai image -p \"Vibrant illustration of community connection\" -o \"./social.png\" -s 1024x1024",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_2da31833",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding website favicon/logo",
+      "instruction": "z-ai image -p \"Simple geometric logo with blue gradient, minimal design\" -o \"./logo.png\" -s 1024x1024",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_e45d758c",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding background pattern",
+      "instruction": "z-ai image -p \"Subtle geometric pattern, pastel colors, website background\" -o \"./bg_pattern.png\" -s 1440x720\n```",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_7bdc254e",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding advanced use cases",
+      "instruction": "",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_a87ba0cb",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding batch image generation",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\nimport path from 'path';\n\nasync function generateImageBatch(prompts, outputDir, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Ensure output directory exists\n  if (!fs.existsSync(outputDir)) {\n    fs.mkdirSync(outputDir, { recursive: true });\n  }\n\n  const results = [];\n\n  for (let i = 0; i < prompts.length; i++) {\n    try {\n      const prompt = prompts[i];\n      const filename = `image_${i + 1}.png`;\n      cons",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_32353ec7",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding image generation service",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\nimport path from 'path';\nimport crypto from 'crypto';\n\nclass ImageGenerationService {\n  constructor(outputDir = './generated-images') {\n    this.outputDir = outputDir;\n    this.zai = null;\n    this.cache = new Map();\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n    \n    if (!fs.existsSync(this.outputDir)) {\n      fs.mkdirSync(this.outputDir, { recursive: true });\n    }\n  }\n\n  generateCacheKey(prompt, size) {",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_09120a03",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding website asset generator",
+      "instruction": "```bash",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_5b599c93",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding using cli for quick website asset generation",
+      "instruction": "z-ai image -p \"Modern tech hero banner, blue gradient\" -o \"./assets/hero.png\" -s 1440x720\nz-ai image -p \"Team collaboration illustration\" -o \"./assets/team.png\" -s 1344x768\nz-ai image -p \"Simple geometric logo\" -o \"./assets/logo.png\" -s 1024x1024\n```",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_a1e20e4d",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding best practices",
+      "instruction": "",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_20816498",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding 1. effective prompt engineering",
+      "instruction": "```javascript\nfunction buildEffectivePrompt(subject, style, details = []) {\n  const components = [\n    subject,\n    style,\n    ...details,\n    'high quality',\n    'detailed'\n  ];\n\n  return components.filter(Boolean).join(', ');\n}\n\n// Usage\nconst prompt = buildEffectivePrompt(\n  'mountain landscape',\n  'oil painting style',\n  ['sunset lighting', 'dramatic clouds', 'reflection in lake']\n);\n\n// Result: \"mountain landscape, oil painting style, sunset lighting, dramatic clouds, reflection in lake, hi",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_db811353",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding 2. size selection helper",
+      "instruction": "```javascript\nfunction selectOptimalSize(purpose) {\n  const sizeMap = {\n    'hero-banner': '1440x720',\n    'blog-header': '1344x768',\n    'social-square': '1024x1024',\n    'portrait': '768x1344',\n    'product': '1024x1024',\n    'landscape': '1344x768',\n    'mobile-banner': '720x1440',\n    'thumbnail': '1024x1024'\n  };\n\n  return sizeMap[purpose] || '1024x1024';\n}\n\n// Usage\nconst size = selectOptimalSize('hero-banner');\nawait generateImage('website hero image', size, './hero.png');\n```",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_b4ce115a",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding 3. error handling",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function safeGenerateImage(prompt, size, outputPath, retries = 3) {\n  let lastError;\n\n  for (let attempt = 1; attempt <= retries; attempt++) {\n    try {\n      const zai = await ZAI.create();\n\n      const response = await zai.images.generations.create({\n        prompt: prompt,\n        size: size\n      });\n\n      if (!response.data || !response.data[0] || !response.data[0].base64) {\n        throw new Error('Invalid respo",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_7a905fba",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding common use cases",
+      "instruction": "1. **Website Design**: Generate hero images, backgrounds, and visual assets\n2. **Marketing Materials**: Create social media graphics and promotional images\n3. **Product Visualization**: Generate product mockups and variations\n4. **Content Creation**: Produce blog post illustrations and thumbnails\n5. **Brand Assets**: Create logos, icons, and brand imagery\n6. **UI/UX Design**: Generate interface elements and illustrations\n7. **Game Development**: Create concept art and game assets\n8. **E-commerce",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_4b155e01",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding integration examples",
+      "instruction": "",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_09b00dc6",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding express.js api endpoint",
+      "instruction": "```javascript\nimport express from 'express';\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\nimport path from 'path';\n\nconst app = express();\napp.use(express.json());\napp.use('/images', express.static('generated-images'));\n\nlet zaiInstance;\nconst outputDir = './generated-images';\n\nasync function initZAI() {\n  zaiInstance = await ZAI.create();\n  if (!fs.existsSync(outputDir)) {\n    fs.mkdirSync(outputDir, { recursive: true });\n  }\n}\n\napp.post('/api/generate-image', async (req, res) => {\n",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_002d8d3a",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding cli integration in scripts",
+      "instruction": "",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_e5923fe6",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding shell script example",
+      "instruction": "```bash\n#!/bin/bash",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_baae6e79",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding generate website assets using cli",
+      "instruction": "echo \"Generating website assets...\"\n\nz-ai image -p \"Modern tech hero banner, blue gradient\" -o \"./assets/hero.png\" -s 1440x720\nz-ai image -p \"Team collaboration illustration\" -o \"./assets/team.png\" -s 1344x768\nz-ai image -p \"Simple geometric logo\" -o \"./assets/logo.png\" -s 1024x1024\n\necho \"Assets generated successfully!\"\n```",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_feb4ff31",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding troubleshooting",
+      "instruction": "**Issue**: \"SDK must be used in backend\"\n- **Solution**: Ensure z-ai-web-dev-sdk is only used in server-side code\n\n**Issue**: Invalid size parameter\n- **Solution**: Use only supported sizes: 1024x1024, 768x1344, 864x1152, 1344x768, 1152x864, 1440x720, 720x1440\n\n**Issue**: Generated image doesn't match prompt\n- **Solution**: Make prompts more specific and descriptive. Include style, details, and quality terms\n\n**Issue**: CLI command not found\n- **Solution**: Ensure z-ai CLI is properly installed ",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_af914c8a",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding prompt engineering tips",
+      "instruction": "",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_f64262c7",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding good prompts",
+      "instruction": "- ✓ \"Professional product photography of wireless headphones, white background, studio lighting, high quality\"\n- ✓ \"Mountain landscape at golden hour, oil painting style, dramatic clouds, detailed\"\n- ✓ \"Modern minimalist logo for tech company, blue and white, geometric shapes\"",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_fa017dd1",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding poor prompts",
+      "instruction": "- ✗ \"headphones\"\n- ✗ \"picture of mountains\"\n- ✗ \"logo\"",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_ec44a1ae",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding prompt components",
+      "instruction": "1. **Subject**: What you want to see\n2. **Style**: Art style, photography style, etc.\n3. **Details**: Specific elements, colors, mood\n4. **Quality**: \"high quality\", \"detailed\", \"professional\"",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_a9e6b7bd",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding supported image sizes",
+      "instruction": "- `1024x1024` - Square\n- `768x1344` - Portrait\n- `864x1152` - Portrait\n- `1344x768` - Landscape\n- `1152x864` - Landscape\n- `1440x720` - Wide landscape\n- `720x1440` - Tall portrait",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_concept_b3d4d4cc",
+      "skill_name": "image-generation",
+      "category": "concept",
+      "concept": "Understanding remember",
+      "instruction": "- Always use z-ai-web-dev-sdk in backend code only\n- The SDK is already installed - import as shown\n- CLI tool is available for quick image generation\n- Supported sizes are specific - use the provided list\n- Base64 images need to be decoded before saving\n- Consider caching for repeated prompts\n- Implement retry logic for production applications\n- Use descriptive prompts for better results",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n",
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_instruction_d3b0ec50",
+      "skill_name": "image-generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Solution**: Ensure z-ai-web-dev-sdk is only used...",
+      "instruction": "**Solution**: Ensure z-ai-web-dev-sdk is only used in server-side code",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_instruction_399b32a4",
+      "skill_name": "image-generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Solution**: Use only supported sizes: 1024x1024,...",
+      "instruction": "**Solution**: Use only supported sizes: 1024x1024, 768x1344, 864x1152, 1344x768, 1152x864, 1440x720, 720x1440",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_instruction_ac22ab47",
+      "skill_name": "image-generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Solution**: Make prompts more specific and descr...",
+      "instruction": "**Solution**: Make prompts more specific and descriptive. Include style, details, and quality terms",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_instruction_2f09d6bf",
+      "skill_name": "image-generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Solution**: Ensure z-ai CLI is properly installe...",
+      "instruction": "**Solution**: Ensure z-ai CLI is properly installed and in PATH",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_instruction_f7a70173",
+      "skill_name": "image-generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Solution**: Verify base64 decoding and file writ...",
+      "instruction": "**Solution**: Verify base64 decoding and file writing are correct",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_instruction_418506c4",
+      "skill_name": "image-generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: ✓ \"Professional product photography of wireless he...",
+      "instruction": "✓ \"Professional product photography of wireless headphones, white background, studio lighting, high quality\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_instruction_8f59fc69",
+      "skill_name": "image-generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: ✓ \"Mountain landscape at golden hour, oil painting...",
+      "instruction": "✓ \"Mountain landscape at golden hour, oil painting style, dramatic clouds, detailed\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_instruction_9fc558a7",
+      "skill_name": "image-generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: ✓ \"Modern minimalist logo for tech company, blue a...",
+      "instruction": "✓ \"Modern minimalist logo for tech company, blue and white, geometric shapes\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_instruction_fae04932",
+      "skill_name": "image-generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: ✗ \"headphones\"...",
+      "instruction": "✗ \"headphones\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_instruction_2d579c30",
+      "skill_name": "image-generation",
+      "category": "instruction",
+      "concept": "Rule or guideline: ✗ \"picture of mountains\"...",
+      "instruction": "✗ \"picture of mountains\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_code_pattern_7338aac5",
+      "skill_name": "image-generation",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from image-generation",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function generateImage(prompt, outputPath) {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: '1024x1024'\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage\nawait generateImage(\n  'A cute cat playing in the garden',\n  './cat_image.png'\n);\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_code_pattern_9e4dfcff",
+      "skill_name": "image-generation",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from image-generation",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function generateImageWithSize(prompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.create({\n    prompt: prompt,\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Different sizes\nawait generateImageWithSize(\n  'A beautiful landscape',\n  '1344x768',\n  './landscape.png'\n);\n\nawait generateImageWithSize(\n  'A portrait of a person',\n  '768x1344',\n  './portrait.png'\n);\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_code_pattern_6af136b7",
+      "skill_name": "image-generation",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from image-generation",
+      "examples": [
+        "# Generate image with full options\nz-ai image --prompt \"A beautiful landscape\" --output \"./image.png\"\n\n# Short form\nz-ai image -p \"A cute cat\" -o \"./cat.png\"\n\n# Specify size\nz-ai image -p \"A sunset\" -o \"./sunset.png\" -s 1344x768\n\n# Portrait orientation\nz-ai image -p \"A portrait\" -o \"./portrait.png\" -s 768x1344\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_code_pattern_88796ac1",
+      "skill_name": "image-generation",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from image-generation",
+      "examples": [
+        "# Website hero image\nz-ai image -p \"Modern tech office with diverse team collaborating\" -o \"./hero.png\" -s 1440x720\n\n# Product image\nz-ai image -p \"Sleek smartphone on minimalist desk, professional product photography\" -o \"./product.png\" -s 1024x1024\n\n# Blog post illustration\nz-ai image -p \"Abstract visualization of data flowing through networks\" -o \"./blog_header.png\" -s 1344x768\n\n# Social media content\nz-ai image -p \"Vibrant illustration of community connection\" -o \"./social.png\" -s 1024x1024\n\n# Website favicon/logo\nz-ai image -p \"Simple geometric logo with blue gradient, minimal design\" -o \"./logo.png\" -s 1024x1024\n\n# Background pattern\nz-ai image -p \"Subtle geometric pattern, pastel colors, website background\" -o \"./bg_pattern.png\" -s 1440x720\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_code_pattern_312c28a0",
+      "skill_name": "image-generation",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from image-generation",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\nimport path from 'path';\n\nasync function generateImageBatch(prompts, outputDir, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Ensure output directory exists\n  if (!fs.existsSync(outputDir)) {\n    fs.mkdirSync(outputDir, { recursive: true });\n  }\n\n  const results = [];\n\n  for (let i = 0; i < prompts.length; i++) {\n    try {\n      const prompt = prompts[i];\n      const filename = `image_${i + 1}.png`;\n      const outputPath = path.join(outputDir, filename);\n\n      const response = await zai.images.generations.create({\n        prompt: prompt,\n        size: size\n      });\n\n      const imageBase64 = response.data[0].base64;\n      const buffer = Buffer.from(imageBase64, 'base64');\n      fs.writeFileSync(outputPath, buffer);\n\n      results.push({\n        success: true,\n        prompt: prompt,\n        path: outputPath,\n        size: buffer.length\n      });\n\n      console.log(`✓ Generated: ${filename}`);\n    } catch (error) {\n      results.push({\n        success: false,\n        prompt: prompts[i],\n        error: error.message\n      });\n\n      console.error(`✗ Failed: ${prompts[i]} - ${error.message}`);\n    }\n  }\n\n  return results;\n}\n\n// Usage\nconst prompts = [\n  'A serene mountain landscape at sunset',\n  'A futuristic city with flying cars',\n  'An underwater coral reef teeming with life'\n];\n\nconst results = await generateImageBatch(prompts, './generated-images');\nconsole.log(`Generated ${results.filter(r => r.success).length} images`);\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_assessment_c21872ea",
+      "skill_name": "image-generation",
+      "category": "assessment",
+      "concept": "Apply image-generation in a practical project",
+      "instruction": "Demonstrate mastery of image-generation by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using image-generation",
+        "Explain when image-generation should be used",
+        "Identify the core concepts of image-generation",
+        "Apply image-generation to solve a real-world problem",
+        "Generate an image from a description",
+        "Edit an existing image",
+        "Analyze image content"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_generation_contextualization_d7235ace",
+      "skill_name": "image-generation",
+      "category": "contextualization",
+      "concept": "When to use image-generation",
+      "instruction": "Learn when to apply image-generation in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using image-generation",
+        "User needs help with coding -> evaluate if image-generation applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate image-generation is needed",
+        "Distinguish between image-generation and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 59,
+  "generated_at": "2026-03-24T04:43:44.503153",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/image-generation/SKILL.md"
+}

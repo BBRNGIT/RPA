@@ -1,0 +1,478 @@
+{
+  "skill_name": "skill-vetter",
+  "skill_description": "Security-first skill vetting for AI agents. Use before installing any skill from ClawdHub, GitHub, or other sources. Checks for red flags, permission scope, and suspicious patterns.",
+  "items": [
+    {
+      "item_id": "skill_skill_vetter_concept_34c5d63c",
+      "skill_name": "skill-vetter",
+      "category": "concept",
+      "concept": "Understanding skill vetter 🔒",
+      "instruction": "Security-first vetting protocol for AI agent skills. **Never install a skill without vetting it first.**",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n",
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n",
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_concept_cbd36012",
+      "skill_name": "skill-vetter",
+      "category": "concept",
+      "concept": "Understanding when to use",
+      "instruction": "- Before installing any skill from ClawdHub\n- Before running skills from GitHub repos\n- When evaluating skills shared by other agents\n- Anytime you're asked to install unknown code",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n",
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n",
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_concept_a06e6855",
+      "skill_name": "skill-vetter",
+      "category": "concept",
+      "concept": "Understanding vetting protocol",
+      "instruction": "",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n",
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n",
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_concept_f32e481e",
+      "skill_name": "skill-vetter",
+      "category": "concept",
+      "concept": "Understanding step 1: source check",
+      "instruction": "```\nQuestions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n```",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n",
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n",
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_concept_a676f148",
+      "skill_name": "skill-vetter",
+      "category": "concept",
+      "concept": "Understanding step 2: code review (mandatory)",
+      "instruction": "Read ALL files in the skill. Check for these **RED FLAGS**:\n\n```\n🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listin",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n",
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n",
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_concept_055385b3",
+      "skill_name": "skill-vetter",
+      "category": "concept",
+      "concept": "Understanding step 3: permission scope",
+      "instruction": "```\nEvaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n```",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n",
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n",
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_concept_d574af39",
+      "skill_name": "skill-vetter",
+      "category": "concept",
+      "concept": "Understanding step 4: risk classification",
+      "instruction": "| Risk Level | Examples | Action |\n|------------|----------|--------|\n| 🟢 LOW | Notes, weather, formatting | Basic review, install OK |\n| 🟡 MEDIUM | File ops, browser, APIs | Full code review required |\n| 🔴 HIGH | Credentials, trading, system | Human approval required |\n| ⛔ EXTREME | Security configs, root access | Do NOT install |",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n",
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n",
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_concept_1b273a34",
+      "skill_name": "skill-vetter",
+      "category": "concept",
+      "concept": "Understanding output format",
+      "instruction": "After vetting, produce this report:\n\n```\nSKILL VETTING REPORT\n═══════════════════════════════════════\nSkill: [name]\nSource: [ClawdHub / GitHub / other]\nAuthor: [username]\nVersion: [version]\n───────────────────────────────────────\nMETRICS:\n• Downloads/Stars: [count]\n• Last Updated: [date]\n• Files Reviewed: [count]\n───────────────────────────────────────\nRED FLAGS: [None / List them]\n\nPERMISSIONS NEEDED:\n• Files: [list or \"None\"]\n• Network: [list or \"None\"]  \n• Commands: [list or \"None\"]\n─────────",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n",
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n",
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_concept_fdf53316",
+      "skill_name": "skill-vetter",
+      "category": "concept",
+      "concept": "Understanding quick vet commands",
+      "instruction": "For GitHub-hosted skills:\n```bash",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n",
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n",
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_concept_5e9907e1",
+      "skill_name": "skill-vetter",
+      "category": "concept",
+      "concept": "Understanding check repo stats",
+      "instruction": "curl -s \"https://api.github.com/repos/OWNER/REPO\" | jq '{stars: .stargazers_count, forks: .forks_count, updated: .updated_at}'",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n",
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n",
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_concept_05c4062c",
+      "skill_name": "skill-vetter",
+      "category": "concept",
+      "concept": "Understanding list skill files",
+      "instruction": "curl -s \"https://api.github.com/repos/OWNER/REPO/contents/skills/SKILL_NAME\" | jq '.[].name'",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n",
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n",
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_concept_557702ad",
+      "skill_name": "skill-vetter",
+      "category": "concept",
+      "concept": "Understanding fetch and review skill.md",
+      "instruction": "curl -s \"https://raw.githubusercontent.com/OWNER/REPO/main/skills/SKILL_NAME/SKILL.md\"\n```",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n",
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n",
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_concept_868d0f0b",
+      "skill_name": "skill-vetter",
+      "category": "concept",
+      "concept": "Understanding trust hierarchy",
+      "instruction": "1. **Official OpenClaw skills** → Lower scrutiny (still review)\n2. **High-star repos (1000+)** → Moderate scrutiny\n3. **Known authors** → Moderate scrutiny\n4. **New/unknown sources** → Maximum scrutiny\n5. **Skills requesting credentials** → Human approval always",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n",
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n",
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_concept_017fed40",
+      "skill_name": "skill-vetter",
+      "category": "concept",
+      "concept": "Understanding remember",
+      "instruction": "- No skill is worth compromising security\n- When in doubt, don't install\n- Ask your human for high-risk decisions\n- Document what you vet for future reference\n\n---\n\n*Paranoia is a feature.* 🔒🦀",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n",
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n",
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_instruction_f9684258",
+      "skill_name": "skill-vetter",
+      "category": "instruction",
+      "concept": "Rule or guideline: Before installing any skill from ClawdHub...",
+      "instruction": "Before installing any skill from ClawdHub",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_instruction_71439e29",
+      "skill_name": "skill-vetter",
+      "category": "instruction",
+      "concept": "Rule or guideline: Before running skills from GitHub repos...",
+      "instruction": "Before running skills from GitHub repos",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_instruction_769f0baa",
+      "skill_name": "skill-vetter",
+      "category": "instruction",
+      "concept": "Rule or guideline: When evaluating skills shared by other agents...",
+      "instruction": "When evaluating skills shared by other agents",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_instruction_31ef705b",
+      "skill_name": "skill-vetter",
+      "category": "instruction",
+      "concept": "Rule or guideline: Anytime you're asked to install unknown code...",
+      "instruction": "Anytime you're asked to install unknown code",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_instruction_9d4b083b",
+      "skill_name": "skill-vetter",
+      "category": "instruction",
+      "concept": "Rule or guideline: [ ] Where did this skill come from?...",
+      "instruction": "[ ] Where did this skill come from?",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_instruction_d11bb5df",
+      "skill_name": "skill-vetter",
+      "category": "instruction",
+      "concept": "Rule or guideline: [ ] Is the author known/reputable?...",
+      "instruction": "[ ] Is the author known/reputable?",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_instruction_f317b9d6",
+      "skill_name": "skill-vetter",
+      "category": "instruction",
+      "concept": "Rule or guideline: [ ] How many downloads/stars does it have?...",
+      "instruction": "[ ] How many downloads/stars does it have?",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_instruction_74cdac92",
+      "skill_name": "skill-vetter",
+      "category": "instruction",
+      "concept": "Rule or guideline: [ ] When was it last updated?...",
+      "instruction": "[ ] When was it last updated?",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_instruction_ba49dcf3",
+      "skill_name": "skill-vetter",
+      "category": "instruction",
+      "concept": "Rule or guideline: [ ] Are there reviews from other agents?...",
+      "instruction": "[ ] Are there reviews from other agents?",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_instruction_0eddbda1",
+      "skill_name": "skill-vetter",
+      "category": "instruction",
+      "concept": "Rule or guideline: [ ] What files does it need to read?...",
+      "instruction": "[ ] What files does it need to read?",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_code_pattern_fc5bc36e",
+      "skill_name": "skill-vetter",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from skill-vetter",
+      "examples": [
+        "Questions to answer:\n- [ ] Where did this skill come from?\n- [ ] Is the author known/reputable?\n- [ ] How many downloads/stars does it have?\n- [ ] When was it last updated?\n- [ ] Are there reviews from other agents?\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_code_pattern_34d8a55d",
+      "skill_name": "skill-vetter",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from skill-vetter",
+      "examples": [
+        "🚨 REJECT IMMEDIATELY IF YOU SEE:\n─────────────────────────────────────────\n• curl/wget to unknown URLs\n• Sends data to external servers\n• Requests credentials/tokens/API keys\n• Reads ~/.ssh, ~/.aws, ~/.config without clear reason\n• Accesses MEMORY.md, USER.md, SOUL.md, IDENTITY.md\n• Uses base64 decode on anything\n• Uses eval() or exec() with external input\n• Modifies system files outside workspace\n• Installs packages without listing them\n• Network calls to IPs instead of domains\n• Obfuscated code (compressed, encoded, minified)\n• Requests elevated/sudo permissions\n• Accesses browser cookies/sessions\n• Touches credential files\n─────────────────────────────────────────\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_code_pattern_2691d155",
+      "skill_name": "skill-vetter",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from skill-vetter",
+      "examples": [
+        "Evaluate:\n- [ ] What files does it need to read?\n- [ ] What files does it need to write?\n- [ ] What commands does it run?\n- [ ] Does it need network access? To where?\n- [ ] Is the scope minimal for its stated purpose?\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_code_pattern_b11bff0b",
+      "skill_name": "skill-vetter",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from skill-vetter",
+      "examples": [
+        "SKILL VETTING REPORT\n═══════════════════════════════════════\nSkill: [name]\nSource: [ClawdHub / GitHub / other]\nAuthor: [username]\nVersion: [version]\n───────────────────────────────────────\nMETRICS:\n• Downloads/Stars: [count]\n• Last Updated: [date]\n• Files Reviewed: [count]\n───────────────────────────────────────\nRED FLAGS: [None / List them]\n\nPERMISSIONS NEEDED:\n• Files: [list or \"None\"]\n• Network: [list or \"None\"]  \n• Commands: [list or \"None\"]\n───────────────────────────────────────\nRISK LEVEL: [🟢 LOW / 🟡 MEDIUM / 🔴 HIGH / ⛔ EXTREME]\n\nVERDICT: [✅ SAFE TO INSTALL / ⚠️ INSTALL WITH CAUTION / ❌ DO NOT INSTALL]\n\nNOTES: [Any observations]\n═══════════════════════════════════════\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_code_pattern_d06a1618",
+      "skill_name": "skill-vetter",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from skill-vetter",
+      "examples": [
+        "# Check repo stats\ncurl -s \"https://api.github.com/repos/OWNER/REPO\" | jq '{stars: .stargazers_count, forks: .forks_count, updated: .updated_at}'\n\n# List skill files\ncurl -s \"https://api.github.com/repos/OWNER/REPO/contents/skills/SKILL_NAME\" | jq '.[].name'\n\n# Fetch and review SKILL.md\ncurl -s \"https://raw.githubusercontent.com/OWNER/REPO/main/skills/SKILL_NAME/SKILL.md\"\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_assessment_2398ca9c",
+      "skill_name": "skill-vetter",
+      "category": "assessment",
+      "concept": "Apply skill-vetter in a practical project",
+      "instruction": "Demonstrate mastery of skill-vetter by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using skill-vetter",
+        "Explain when skill-vetter should be used",
+        "Identify the core concepts of skill-vetter",
+        "Apply skill-vetter to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_vetter_contextualization_a883be67",
+      "skill_name": "skill-vetter",
+      "category": "contextualization",
+      "concept": "When to use skill-vetter",
+      "instruction": "Learn when to apply skill-vetter in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using skill-vetter",
+        "User needs help with coding -> evaluate if skill-vetter applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate skill-vetter is needed",
+        "Distinguish between skill-vetter and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 31,
+  "generated_at": "2026-03-24T04:43:44.500910",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/skill-vetter/SKILL.md"
+}

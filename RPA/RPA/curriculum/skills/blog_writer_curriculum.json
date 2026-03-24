@@ -1,0 +1,554 @@
+{
+  "skill_name": "blog-writer",
+  "skill_description": "This skill should be used when writing blog posts, articles, or long-form content in the writer's distinctive writing style. It produces authentic, opinionated content that matches the writer's voice—direct, conversational, and grounded in personal experience. The skill handles the complete workflow from research review through Notion publication. Use this skill for drafting blog posts, thought leadership pieces, or any writing meant to reflect the writer's perspective on AI, productivity, sales, marketing, or technology topics.",
+  "items": [
+    {
+      "item_id": "skill_blog_writer_concept_f92c448b",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding blog writer",
+      "instruction": "",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_b8f964ff",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "This skill enables writing blog posts and articles that authentically capture the writer's distinctive voice and style. It draws on examples of the writer's published work to produce content that is direct, opinionated, conversational, and grounded in practical experience. The skill includes automatic Notion integration and maintains a growing library of finalized examples.",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_d8abb640",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding when to use this skill",
+      "instruction": "Trigger this skill when:\n- The user requests blog post or article writing in \"my style\" or \"like my other posts\"\n- Drafting thought leadership content on AI, productivity, marketing, or technology\n- Creating articles that need the writer's authentic voice and perspective\n- The user provides research materials, links, or notes to incorporate into writing",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_bb0a1958",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding core responsibilities",
+      "instruction": "1. **Follow the writer's Writing Style**: Match voice, word choice, structure, and length of example posts in `references/blog-examples/`\n2. **Incorporate Research**: Review and integrate any information, research material, or links provided by the user\n3. **Follow User Instructions**: Adhere closely to the user's specific requests for topic, angle, and emphasis\n4. **Produce Authentic Writing**: Create content that reads as genuinely the writer's voice, not generic AI-generated content",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_238dd9b6",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding workflow",
+      "instruction": "",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_8fd5a33e",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding phase 1: gather information",
+      "instruction": "Request from the user:\n- Topic or subject matter\n- Any specific angle or thesis to explore\n- Research materials, links, or notes (if available)\n- Target length preference (default: 800-1500 words)\n\nReview all provided materials thoroughly before beginning to write.",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_26c79385",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding phase 2: draft the content",
+      "instruction": "Reference the style guide at `references/style-guide.md` and examples in `references/blog-examples/` for calibration.\n\nWhen writing:\n1. Start with a strong opening statement establishing the thesis\n2. Use personal voice and first-person perspective where natural\n3. Include relevant personal anecdotes or professional experience if applicable\n4. Structure with clear subheadings (###) every 2-3 paragraphs\n5. Keep paragraphs short (2-4 sentences)\n6. Weave in research materials naturally, not as bloc",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_45de4e92",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding phase 3: review and iterate",
+      "instruction": "Present the draft and gather feedback. Iterate until the user confirms satisfaction.",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_8605709a",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding phase 4: publish to notion (required)",
+      "instruction": "When the draft is complete (even if not yet finalized), publish to the TS Notes database.\n\n**Notion Publication Details:**\n- Database: \"TS Notes\" (data source ID: `04a872be-8bed-4f43-a448-3dfeebc0df21`)\n- **Type property**: `Writing`\n- **Project(s) property**: Link to \"My Writing\" project (page URL: `https://www.notion.so/2a5b4629bb3780189199f3c496980c0c`)\n- **Note property**: The title of the blog post\n- **Content**: The full blog post content in Notion-flavored Markdown\n\n**Example Notion API c",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_0e84f980",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding phase 5: finalize to examples library (post-outcome)",
+      "instruction": "When the user confirms the draft is **final**:\n\n1. Save the finalized post to `references/blog-examples/` with filename format:\n   ```\n   YYYY-MM-DD-slug-title.md\n   ```\n   Example: `2025-11-25-why-ai-art-is-useless.md`\n\n2. Check the examples library count:\n   - If exceeding 20 examples, ask user permission to remove the 5 oldest\n   - Sort by filename date prefix to identify oldest files\n\nThe post-outcome is considered **successful** when the final draft is saved to the skill folder.",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_af27306a",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding success criteria",
+      "instruction": "| Outcome | Success | Failure |\n|---------|---------|---------|\n| Primary | User receives requested content AND it is added to TS Notes with Type=Writing and Project=My Writing | Content delivered but NOT added to Notion |\n| Post-outcome | Final draft saved to `references/blog-examples/` | Final draft not saved when user confirms it's final |",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_6ffbc44a",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding the writer's writing style profile",
+      "instruction": "",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_ea05090a",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding voice & tone",
+      "instruction": "- **Direct and opinionated**: State positions clearly, even contrarian ones\n- **Conversational**: Write like speaking to a colleague—accessible without being simplistic\n- **First-person when sharing experience**: Use \"I\" naturally for personal insights\n- **Authentic skepticism**: Willing to criticize trends when warranted",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_37f5d0a1",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding structure patterns",
+      "instruction": "- **Strong opening thesis**: Open with a clear, often bold statement\n- **Subheadings throughout**: Use `###` format liberally to break up content\n- **Short paragraphs**: Rarely more than 3-4 sentences\n- **Personal anecdotes woven in**: Illustrate points with real examples\n- **Practical takeaways**: Provide actionable insights, not just theory\n- **Reflective conclusion**: End with call-to-action or forward-looking hope",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_afe15639",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding length & format",
+      "instruction": "- Target: 800-1500 words\n- Markdown format with headers and emphasis\n- Minimal bullet points in prose—prefer flowing sentences",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_88b98273",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding vocabulary markers",
+      "instruction": "- Uses \"leverage\" for tools/technology\n- Says \"that said\" for transitions\n- Comfortable with direct statements like \"this is useless\" or \"boy was I wrong\"\n- Uses contractions naturally (I've, doesn't, won't)\n- Avoids corporate jargon while maintaining professionalism",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_d2a983c8",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding thematic elements",
+      "instruction": "- AI as tool, not replacement\n- Practical over theoretical\n- Human-centered technology\n- Honest assessment of what works and what doesn't",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_819429ae",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding resources",
+      "instruction": "",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_ca6ae821",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding references/style-guide.md",
+      "instruction": "Quick reference for the writer's writing patterns, vocabulary preferences, and structural conventions.",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_9bf184c4",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding references/blog-examples/",
+      "instruction": "Contains example blog posts demonstrating the writer's writing style. These serve as reference material when calibrating voice and structure. New finalized posts expand this library over time.",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_concept_619af182",
+      "skill_name": "blog-writer",
+      "category": "concept",
+      "concept": "Understanding notion api reference",
+      "instruction": "To create a page in TS Notes:\n\n```\nDatabase data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n```\n\nThe \"My Writing\" project page ID is: `2a5b4629-bb37-8018-9199-f3c496980c0c`",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n",
+        "   YYYY-MM-DD-slug-title.md\n   ",
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_instruction_51b2fe46",
+      "skill_name": "blog-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: The user requests blog post or article writing in ...",
+      "instruction": "The user requests blog post or article writing in \"my style\" or \"like my other posts\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_instruction_3d7c8c33",
+      "skill_name": "blog-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: Drafting thought leadership content on AI, product...",
+      "instruction": "Drafting thought leadership content on AI, productivity, marketing, or technology",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_instruction_8c440dd0",
+      "skill_name": "blog-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: Creating articles that need the writer's authentic...",
+      "instruction": "Creating articles that need the writer's authentic voice and perspective",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_instruction_0f247477",
+      "skill_name": "blog-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: The user provides research materials, links, or no...",
+      "instruction": "The user provides research materials, links, or notes to incorporate into writing",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_instruction_1aeed088",
+      "skill_name": "blog-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: Topic or subject matter...",
+      "instruction": "Topic or subject matter",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_instruction_70dd0591",
+      "skill_name": "blog-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: Any specific angle or thesis to explore...",
+      "instruction": "Any specific angle or thesis to explore",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_instruction_0050e891",
+      "skill_name": "blog-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: Research materials, links, or notes (if available)...",
+      "instruction": "Research materials, links, or notes (if available)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_instruction_e4cc793c",
+      "skill_name": "blog-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: Target length preference (default: 800-1500 words)...",
+      "instruction": "Target length preference (default: 800-1500 words)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_instruction_7fb4c310",
+      "skill_name": "blog-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: Database: \"TS Notes\" (data source ID: `04a872be-8b...",
+      "instruction": "Database: \"TS Notes\" (data source ID: `04a872be-8bed-4f43-a448-3dfeebc0df21`)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_instruction_80dd7801",
+      "skill_name": "blog-writer",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Type property**: `Writing`...",
+      "instruction": "**Type property**: `Writing`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_code_pattern_eca03e52",
+      "skill_name": "blog-writer",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from blog-writer",
+      "examples": [
+        "{\n  \"Note\": \"Blog Post Title Here\",\n  \"Type\": \"Writing\",\n  \"Project(s)\": \"[\\\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\\\"]\"\n}\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_code_pattern_97ab23bf",
+      "skill_name": "blog-writer",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from blog-writer",
+      "examples": [
+        "   YYYY-MM-DD-slug-title.md\n   "
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_code_pattern_0603da5a",
+      "skill_name": "blog-writer",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from blog-writer",
+      "examples": [
+        "Database data source ID: 04a872be-8bed-4f43-a448-3dfeebc0df21\n\nProperties:\n- \"Note\": (title) - The blog post title\n- \"Type\": \"Writing\"\n- \"Project(s)\": [\"https://www.notion.so/2a5b4629bb3780189199f3c496980c0c\"]\n\nContent: Full blog post in Notion-flavored Markdown\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_assessment_53163a71",
+      "skill_name": "blog-writer",
+      "category": "assessment",
+      "concept": "Apply blog-writer in a practical project",
+      "instruction": "Demonstrate mastery of blog-writer by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using blog-writer",
+        "Explain when blog-writer should be used",
+        "Identify the core concepts of blog-writer",
+        "Apply blog-writer to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_blog_writer_contextualization_099ce349",
+      "skill_name": "blog-writer",
+      "category": "contextualization",
+      "concept": "When to use blog-writer",
+      "instruction": "Learn when to apply blog-writer in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using blog-writer",
+        "User needs help with coding -> evaluate if blog-writer applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate blog-writer is needed",
+        "Distinguish between blog-writer and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 36,
+  "generated_at": "2026-03-24T04:43:44.503389",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/blog-writer/SKILL.md"
+}

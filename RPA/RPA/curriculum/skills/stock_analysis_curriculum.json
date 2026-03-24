@@ -1,0 +1,526 @@
+{
+  "skill_name": "stock_analysis",
+  "skill_description": "Comprehensive stock market analysis skill covering A-share (China), Hong Kong, and US equities. Priority use cases: stock analysis and buy/sell/hold recommendations by ticker code, generating decision dashboards and research reports with technical/fundamental/sentiment analysis, position-aware investment strategies based on user's cost price, dividend income scoring and safety analysis, rumor and early market signal scanning (M&A, insider activity, analyst actions), watchlist management with price target and stop-loss alerts, and K-line chart pattern recognition from images. This skill should be the primary choice whenever users mention a stock ticker, ask whether to buy or sell a stock, reference their holding cost or position, request dividend analysis, ask about market rumors or early signals, want to add/check/manage a watchlist, or upload a chart image for technical analysis.",
+  "items": [
+    {
+      "item_id": "skill_stock_analysis_concept_3c3198c9",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding stock analysis skill",
+      "instruction": "",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_05dc913d",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding 依赖平台 skills",
+      "instruction": "- `finance skill` — 所有市场数据（A股/港股/美股统一）\n- `pdf skill` — PDF 研报生成\n- `docx skill` — Word 文档生成\n- `vlm skill`（内置）— K线图形态识别\n\n---",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_f034c0ff",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding commands & triggers",
+      "instruction": "| 命令 | 触发词示例 |\n|------|-----------|\n| 个股分析 | 分析600519 / AAPL值不值得买 / 帮我看看腾讯 |\n| 带持仓分析 | 我持仓成本1450分析茅台 / AAPL我170买的现在怎样 |\n| 股息分析 | JNJ股息怎么样 / 帮我分析这几只股的股息 KO PG JNJ |\n| 传闻扫描 | 今日有什么并购传闻 / 扫描一下市场早期信号 |\n| 添加自选股 | 关注AAPL / 把600519加入自选，目标价1600止损1350 |\n| 查看自选股 | 我的自选股列表 / 看一下我关注的股票 |\n| 检查提醒 | 检查自选股提醒 / 有没有触发止损 |\n| 删除自选股 | 从自选股删除TSLA |\n| K线图分析 | （上传图片）帮我分析这个K线图 |\n| 大盘复盘 | 附带大盘复盘分析600519 |\n\n---",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_97c16545",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding input schemas",
+      "instruction": "",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_3d475fa0",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding 个股分析",
+      "instruction": "```typescript\n{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n```",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_f736e172",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding 股息分析",
+      "instruction": "```typescript\nrunDividend(tickers: string | string[])\n```",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_711e31df",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding 传闻扫描",
+      "instruction": "```typescript\nrunRumorScan()  // 无需参数，自动扫描今日信号\n```",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_7226d7e3",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding 自选股管理",
+      "instruction": "```typescript\nrunWatchlistAdd(ticker, { targetPrice?, stopPrice?, alertOnSignal?, notes? })\nrunWatchlistRemove(ticker)\nrunWatchlistList()\nrunWatchlistCheck()  // 检查是否触发价格/信号提醒\n```\n\n---",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_2973e3f4",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding report structure",
+      "instruction": "```",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_b3a18062",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding 股票智能分析报告",
+      "instruction": "",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_fe63ca5c",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding 📊 个股决策仪表盘（每只）",
+      "instruction": "### 📰 重要信息速览（舆情/业绩预期/🚨风险/✨利好/最新动态）\n   ### 📌 核心结论（结论/一句话/空仓者建议/持仓者建议+盈亏）\n   ### 📈 当日行情\n   ### 📊 数据透视（技术面/基本面/资金面）\n   ### 🎯 作战计划（狙击点位表/仓位/风控）\n   ### ✅ 检查清单（综合结论）\n   ### 💰 股息分析（美股，需开启 includeDividend）\n```\n\n---",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_c10c3059",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding dividend analysis metrics",
+      "instruction": "| 指标 | 说明 |\n|------|------|\n| 安全评分 | 0-100，综合派息率/增长/连续年数 |\n| 收入评级 | excellent/good/moderate/poor |\n| 派息率状态 | safe(<40%)/moderate/high/unsustainable |\n| 5年CAGR | 股息复合增长率 |\n| 连续增长年数 | 25年以上为股息贵族 |\n\n---",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_524e72b7",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding rumor scanner signal types",
+      "instruction": "| 类型 | 冲击分 | 说明 |\n|------|--------|------|\n| 并购传闻 (ma) | +5 | M&A/收购/要约 |\n| 内部人动态 (insider) | +4 | CEO/董事买卖 |\n| 分析师调整 (analyst) | +3 | 评级上调/下调/目标价变动 |\n| 监管动态 (regulatory) | +3 | SEC调查/合规风险 |\n| 业绩预期 (earnings) | +2 | 盈利预警/上调 |\n\n---",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_80f9b084",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding watchlist alert types",
+      "instruction": "| 提醒类型 | 触发条件 |\n|---------|---------|\n| 🎯 目标价 | 当前价 ≥ targetPrice |\n| 🛑 止损价 | 当前价 ≤ stopPrice |\n| 📊 信号变化 | 本次结论 ≠ 上次结论 |\n\n---",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_fcba4117",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding behavior rules",
+      "instruction": "- 乖离率 > 5% → 结论不得为买入/强烈买入\n- 数据缺失 → 标\"暂缺\"，严禁捏造\n- 有持仓成本 → 必须给出盈亏分析\n- 未提供持仓 → 同时给出空仓/持仓两套建议\n- 每次分析后自动静默更新自选股信号\n\n---",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_0406d0ae",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding file structure",
+      "instruction": "```\nstock-analysis-skill/\n├── SKILL.md\n├── package.json\n├── tsconfig.json\n└── src/\n    ├── index.ts          # 主入口（所有命令路由）\n    ├── types.ts          # 类型定义\n    ├── dataFetcher.ts    # 数据层（finance skill）\n    ├── analyzer.ts       # 个股分析（LLM/VLM）\n    ├── dividend.ts       # 股息分析\n    ├── rumorScanner.ts   # 传闻扫描\n    └── watchlist.ts      # 自选股管理（storage 持久化）\n```\n\n---",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_concept_9e545b16",
+      "skill_name": "stock_analysis",
+      "category": "concept",
+      "concept": "Understanding limitations",
+      "instruction": "- 传闻扫描依赖 finance skill 新闻数据质量\n- 自选股数据持久化依赖平台 storage API\n- 港股基本面数据较少\n- 不支持期货、ETF、可转债\n- 仅供参考，不构成投资建议",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n",
+        "runDividend(tickers: string | string[])\n",
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_instruction_0bc64142",
+      "skill_name": "stock_analysis",
+      "category": "instruction",
+      "concept": "Rule or guideline: `finance skill` — 所有市场数据（A股/港股/美股统一）...",
+      "instruction": "`finance skill` — 所有市场数据（A股/港股/美股统一）",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_instruction_67337df0",
+      "skill_name": "stock_analysis",
+      "category": "instruction",
+      "concept": "Rule or guideline: `pdf skill` — PDF 研报生成...",
+      "instruction": "`pdf skill` — PDF 研报生成",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_instruction_06178f1a",
+      "skill_name": "stock_analysis",
+      "category": "instruction",
+      "concept": "Rule or guideline: `docx skill` — Word 文档生成...",
+      "instruction": "`docx skill` — Word 文档生成",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_instruction_508e66d9",
+      "skill_name": "stock_analysis",
+      "category": "instruction",
+      "concept": "Rule or guideline: `vlm skill`（内置）— K线图形态识别...",
+      "instruction": "`vlm skill`（内置）— K线图形态识别",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_instruction_e6053c43",
+      "skill_name": "stock_analysis",
+      "category": "instruction",
+      "concept": "Rule or guideline: 乖离率 > 5% → 结论不得为买入/强烈买入...",
+      "instruction": "乖离率 > 5% → 结论不得为买入/强烈买入",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_instruction_2a61a819",
+      "skill_name": "stock_analysis",
+      "category": "instruction",
+      "concept": "Rule or guideline: 数据缺失 → 标\"暂缺\"，严禁捏造...",
+      "instruction": "数据缺失 → 标\"暂缺\"，严禁捏造",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_instruction_4acec4fa",
+      "skill_name": "stock_analysis",
+      "category": "instruction",
+      "concept": "Rule or guideline: 有持仓成本 → 必须给出盈亏分析...",
+      "instruction": "有持仓成本 → 必须给出盈亏分析",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_instruction_b7d59e6a",
+      "skill_name": "stock_analysis",
+      "category": "instruction",
+      "concept": "Rule or guideline: 未提供持仓 → 同时给出空仓/持仓两套建议...",
+      "instruction": "未提供持仓 → 同时给出空仓/持仓两套建议",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_instruction_7d9c8580",
+      "skill_name": "stock_analysis",
+      "category": "instruction",
+      "concept": "Rule or guideline: 每次分析后自动静默更新自选股信号...",
+      "instruction": "每次分析后自动静默更新自选股信号",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_instruction_96575788",
+      "skill_name": "stock_analysis",
+      "category": "instruction",
+      "concept": "Rule or guideline: 传闻扫描依赖 finance skill 新闻数据质量...",
+      "instruction": "传闻扫描依赖 finance skill 新闻数据质量",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_code_pattern_13cd196e",
+      "skill_name": "stock_analysis",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from stock_analysis",
+      "examples": [
+        "{\n  stocks: (string | { code: string; position?: { status: \"empty\"|\"holding\"; cost?: number; shares?: number } })[],\n  outputFormat?: \"markdown\" | \"pdf\" | \"word\",  // 默认 markdown\n  mode?: \"full\" | \"quote\",                      // 默认 full\n  includeMarketReview?: boolean,                // 默认 false\n  includeGlobalMacro?: boolean,                 // 默认 true\n  includeDividend?: boolean,                    // 美股附加股息分析，默认 false\n}\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_code_pattern_ca1edb39",
+      "skill_name": "stock_analysis",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from stock_analysis",
+      "examples": [
+        "runDividend(tickers: string | string[])\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_code_pattern_8cf61efc",
+      "skill_name": "stock_analysis",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from stock_analysis",
+      "examples": [
+        "runRumorScan()  // 无需参数，自动扫描今日信号\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_code_pattern_51ec367f",
+      "skill_name": "stock_analysis",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from stock_analysis",
+      "examples": [
+        "runWatchlistAdd(ticker, { targetPrice?, stopPrice?, alertOnSignal?, notes? })\nrunWatchlistRemove(ticker)\nrunWatchlistList()\nrunWatchlistCheck()  // 检查是否触发价格/信号提醒\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_code_pattern_be67c492",
+      "skill_name": "stock_analysis",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from stock_analysis",
+      "examples": [
+        "# 股票智能分析报告\n\n## 🌍 全球宏观速览（默认开启）\n## 🎯 大盘复盘（需开启）\n## 📊 个股决策仪表盘（每只）\n   ### 📰 重要信息速览（舆情/业绩预期/🚨风险/✨利好/最新动态）\n   ### 📌 核心结论（结论/一句话/空仓者建议/持仓者建议+盈亏）\n   ### 📈 当日行情\n   ### 📊 数据透视（技术面/基本面/资金面）\n   ### 🎯 作战计划（狙击点位表/仓位/风控）\n   ### ✅ 检查清单（综合结论）\n   ### 💰 股息分析（美股，需开启 includeDividend）\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_assessment_b1dd17cc",
+      "skill_name": "stock_analysis",
+      "category": "assessment",
+      "concept": "Apply stock_analysis in a practical project",
+      "instruction": "Demonstrate mastery of stock_analysis by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using stock_analysis",
+        "Explain when stock_analysis should be used",
+        "Identify the core concepts of stock_analysis",
+        "Apply stock_analysis to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_stock_analysis_contextualization_939fe661",
+      "skill_name": "stock_analysis",
+      "category": "contextualization",
+      "concept": "When to use stock_analysis",
+      "instruction": "Learn when to apply stock_analysis in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using stock_analysis",
+        "User needs help with coding -> evaluate if stock_analysis applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate stock_analysis is needed",
+        "Distinguish between stock_analysis and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 34,
+  "generated_at": "2026-03-24T04:43:44.506486",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/stock-analysis-skill/SKILL.md"
+}

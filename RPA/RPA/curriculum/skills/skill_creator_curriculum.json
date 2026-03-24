@@ -1,0 +1,846 @@
+{
+  "skill_name": "skill-creator",
+  "skill_description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+  "items": [
+    {
+      "item_id": "skill_skill_creator_concept_7a533770",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding skill creator",
+      "instruction": "A skill for creating new skills and iteratively improving them.\n\nAt a high level, the process of creating a skill goes like this:\n\n- Decide what you want the skill to do and roughly how it should do it\n- Write a draft of the skill\n- Create a few test prompts and run glm-with-access-to-the-skill on them\n- Help the user evaluate the results both qualitatively and quantitatively\n  - While the runs happen in the background, draft some quantitative evals if there aren't any (if there are some, you ca",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_44304af1",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding communicating with the user",
+      "instruction": "The skill creator is liable to be used by people across a wide range of familiarity with coding jargon. If you haven't heard (and how could you, it's only very recently that it started), there's a trend now where the power of GLM is inspiring plumbers to open up their terminals, parents and grandparents to google \"how to install npm\". On the other hand, the bulk of users are probably fairly computer-literate.\n\nSo please pay attention to context cues to understand how to phrase your communication",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_8df873a4",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding creating a skill",
+      "instruction": "",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_3a9ab316",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding capture intent",
+      "instruction": "Start by understanding the user's intent. The current conversation might already contain a workflow the user wants to capture (e.g., they say \"turn this into a skill\"). If so, extract answers from the conversation history first — the tools used, the sequence of steps, corrections the user made, input/output formats observed. The user may need to fill the gaps, and should confirm before proceeding to the next step.\n\n1. What should this skill enable GLM to do?\n2. When should this skill trigger? (w",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_29de85f2",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding interview and research",
+      "instruction": "Proactively ask questions about edge cases, input/output formats, example files, success criteria, and dependencies. Wait to write test prompts until you've got this part ironed out.\n\nCheck available MCPs - if useful for research (searching docs, finding similar skills, looking up best practices), research in parallel via subagents if available, otherwise inline. Come prepared with context to reduce burden on the user.",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_ead969b9",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding write the skill.md",
+      "instruction": "Based on the user interview, fill in these components:\n\n- **name**: Skill identifier\n- **description**: When to trigger, what it does. This is the primary triggering mechanism - include both what the skill does AND specific contexts for when to use it. All \"when to use\" info goes here, not in the body. Note: currently GLM has a tendency to \"undertrigger\" skills -- to not use them when they'd be useful. To combat this, please make the skill descriptions a little bit \"pushy\". So for instance, inst",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_64ee75a6",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding skill writing guide",
+      "instruction": "",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_ac7f2a07",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding anatomy of a skill",
+      "instruction": "```\nskill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n```",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_add0afa0",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding progressive disclosure",
+      "instruction": "Skills use a three-level loading system:\n1. **Metadata** (name + description) - Always in context (~100 words)\n2. **SKILL.md body** - In context whenever skill triggers (<500 lines ideal)\n3. **Bundled resources** - As needed (unlimited, scripts can execute without loading)\n\nThese word counts are approximate and you can feel free to go longer if needed.\n\n**Key patterns:**\n- Keep SKILL.md under 500 lines; if you're approaching this limit, add an additional layer of hierarchy along with clear point",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_ca1bdb41",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding principle of lack of surprise",
+      "instruction": "This goes without saying, but skills must not contain malware, exploit code, or any content that could compromise system security. A skill's contents should not surprise the user in their intent if described. Don't go along with requests to create misleading skills or skills designed to facilitate unauthorized access, data exfiltration, or other malicious activities. Things like a \"roleplay as an XYZ\" are OK though.",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_f62ae0b1",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding writing patterns",
+      "instruction": "Prefer using the imperative form in instructions.\n\n**Defining output formats** - You can do it like this:\n```markdown",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_a8dc1397",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding report structure",
+      "instruction": "ALWAYS use this exact template:",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_35845daf",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding recommendations",
+      "instruction": "```\n\n**Examples pattern** - It's useful to include examples. You can format them like this (but if \"Input\" and \"Output\" are in the examples you might want to deviate a little):\n```markdown",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_290ef497",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding commit message format",
+      "instruction": "**Example 1:**\nInput: Added user authentication with JWT tokens\nOutput: feat(auth): implement JWT-based authentication\n```",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_0ff9e954",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding writing style",
+      "instruction": "Try to explain to the model why things are important in lieu of heavy-handed musty MUSTs. Use theory of mind and try to make the skill general and not super-narrow to specific examples. Start by writing a draft and then look at it with fresh eyes and improve it.",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_6c62d786",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding test cases",
+      "instruction": "After writing the skill draft, come up with 2-3 realistic test prompts — the kind of thing a real user would actually say. Share them with the user: [you don't have to use this exact language] \"Here are a few test cases I'd like to try. Do these look right, or do you want to add more?\" Then run them.\n\nSave test cases to `evals/evals.json`. Don't write assertions yet — just the prompts. You'll draft assertions in the next step while the runs are in progress.\n\n```json\n{\n  \"skill_name\": \"example-sk",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_fefc29df",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding running and evaluating test cases",
+      "instruction": "This section is one continuous sequence — don't stop partway through. Do NOT use `/skill-test` or any other testing skill.\n\nPut results in `<skill-name>-workspace/` as a sibling to the skill directory. Within the workspace, organize results by iteration (`iteration-1/`, `iteration-2/`, etc.) and within that, each test case gets a directory (`eval-0/`, `eval-1/`, etc.). Don't create all of this upfront — just create directories as you go.",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_20277768",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding step 1: spawn all runs (with-skill and baseline) in the same turn",
+      "instruction": "For each test case, spawn two subagents in the same turn — one with the skill, one without. This is important: don't spawn the with-skill runs first and then come back for baselines later. Launch everything at once so it all finishes around the same time.\n\n**With-skill run:**\n\n```\nExecute this task:\n- Skill path: <path-to-skill>\n- Task: <eval prompt>\n- Input files: <eval files if any, or \"none\">\n- Save outputs to: <workspace>/iteration-<N>/eval-<ID>/with_skill/outputs/\n- Outputs to save: <what t",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_5f7de056",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding step 2: while runs are in progress, draft assertions",
+      "instruction": "Don't just wait for the runs to finish — you can use this time productively. Draft quantitative assertions for each test case and explain them to the user. If assertions already exist in `evals/evals.json`, review them and explain what they check.\n\nGood assertions are objectively verifiable and have descriptive names — they should read clearly in the benchmark viewer so someone glancing at the results immediately understands what each one checks. Subjective skills (writing style, design quality)",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_9ade72d3",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding step 3: as runs complete, capture timing data",
+      "instruction": "When each subagent task completes, you receive a notification containing `total_tokens` and `duration_ms`. Save this data immediately to `timing.json` in the run directory:\n\n```json\n{\n  \"total_tokens\": 84852,\n  \"duration_ms\": 23332,\n  \"total_duration_seconds\": 23.3\n}\n```\n\nThis is the only opportunity to capture this data — it comes through the task notification and isn't persisted elsewhere. Process each notification as it arrives rather than trying to batch them.",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_6fa34276",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding step 4: grade, aggregate, and launch the viewer",
+      "instruction": "Once all runs are done:\n\n1. **Grade each run** — spawn a grader subagent (or grade inline) that reads `agents/grader.md` and evaluates each assertion against the outputs. Save results to `grading.json` in each run directory. The grading.json expectations array must use the fields `text`, `passed`, and `evidence` (not `name`/`met`/`details` or other variants) — the viewer depends on these exact field names. For assertions that can be checked programmatically, write and run a script rather than ey",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_3459f14d",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding what the user sees in the viewer",
+      "instruction": "The \"Outputs\" tab shows one test case at a time:\n- **Prompt**: the task that was given\n- **Output**: the files the skill produced, rendered inline where possible\n- **Previous Output** (iteration 2+): collapsed section showing last iteration's output\n- **Formal Grades** (if grading was run): collapsed section showing assertion pass/fail\n- **Feedback**: a textbox that auto-saves as they type\n- **Previous Feedback** (iteration 2+): their comments from last time, shown below the textbox\n\nThe \"Benchm",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_dc320392",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding step 5: read the feedback",
+      "instruction": "When the user tells you they're done, read `feedback.json`:\n\n```json\n{\n  \"reviews\": [\n    {\"run_id\": \"eval-0-with_skill\", \"feedback\": \"the chart is missing axis labels\", \"timestamp\": \"...\"},\n    {\"run_id\": \"eval-1-with_skill\", \"feedback\": \"\", \"timestamp\": \"...\"},\n    {\"run_id\": \"eval-2-with_skill\", \"feedback\": \"perfect, love this\", \"timestamp\": \"...\"}\n  ],\n  \"status\": \"complete\"\n}\n```\n\nEmpty feedback means the user thought it was fine. Focus your improvements on the test cases where the user had",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_a381d2b9",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding improving the skill",
+      "instruction": "This is the heart of the loop. You've run the test cases, the user has reviewed the results, and now you need to make the skill better based on their feedback.",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_38deb0b8",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding how to think about improvements",
+      "instruction": "1. **Generalize from the feedback.** The big picture thing that's happening here is that we're trying to create skills that can be used a million times (maybe literally, maybe even more who knows) across many different prompts. Here you and the user are iterating on only a few examples over and over again because it helps move faster. The user knows these examples in and out and it's quick for them to assess new outputs. But if the skill you and the user are codeveloping works only for those exa",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_04f2b82c",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding the iteration loop",
+      "instruction": "After improving the skill:\n\n1. Apply your improvements to the skill\n2. Rerun all test cases into a new `iteration-<N+1>/` directory, including baseline runs. If you're creating a new skill, the baseline is always `without_skill` (no skill) — that stays the same across iterations. If you're improving an existing skill, use your judgment on what makes sense as the baseline: the original version the user came in with, or the previous iteration.\n3. Launch the reviewer with `--previous-workspace` poi",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_a3718fe7",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding advanced: blind comparison",
+      "instruction": "For situations where you want a more rigorous comparison between two versions of a skill (e.g., the user asks \"is the new version actually better?\"), there's a blind comparison system. Read `agents/comparator.md` and `agents/analyzer.md` for the details. The basic idea is: give two outputs to an independent agent without telling it which is which, and let it judge quality. Then analyze why the winner won.\n\nThis is optional, requires subagents, and most users won't need it. The human review loop ",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_8e17077f",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding description optimization",
+      "instruction": "The description field in SKILL.md frontmatter is the primary mechanism that determines whether GLM invokes a skill. After creating or improving a skill, offer to optimize the description for better triggering accuracy.",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_dc487c43",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding step 1: generate trigger eval queries",
+      "instruction": "Create 20 eval queries — a mix of should-trigger and should-not-trigger. Save as JSON:\n\n```json\n[\n  {\"query\": \"the user prompt\", \"should_trigger\": true},\n  {\"query\": \"another prompt\", \"should_trigger\": false}\n]\n```\n\nThe queries must be realistic and something a GLM Code or GLM.ai user would actually type. Not abstract requests, but requests that are concrete and specific and have a good amount of detail. For instance, file paths, personal context about the user's job or situation, column names a",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_c4912020",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding step 2: review with user",
+      "instruction": "Present the eval set to the user for review using the HTML template:\n\n1. Read the template from `assets/eval_review.html`\n2. Replace the placeholders:\n   - `__EVAL_DATA_PLACEHOLDER__` → the JSON array of eval items (no quotes around it — it's a JS variable assignment)\n   - `__SKILL_NAME_PLACEHOLDER__` → the skill's name\n   - `__SKILL_DESCRIPTION_PLACEHOLDER__` → the skill's current description\n3. Write to a temp file (e.g., `/tmp/eval_review_<skill-name>.html`) and open it: `open /tmp/eval_revie",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_187c28d9",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding step 3: run the optimization loop",
+      "instruction": "Tell the user: \"This will take some time — I'll run the optimization loop in the background and check on it periodically.\"\n\nSave the eval set to the workspace, then run in the background:\n\n```bash\npython -m scripts.run_loop \\\n  --eval-set <path-to-trigger-eval.json> \\\n  --skill-path <path-to-skill> \\\n  --model <model-id-powering-this-session> \\\n  --max-iterations 5 \\\n  --verbose\n```\n\nUse the model ID from your system prompt (the one powering the current session) so the triggering test matches wh",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_034c1824",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding how skill triggering works",
+      "instruction": "Understanding the triggering mechanism helps design better eval queries. Skills appear in GLM's `available_skills` list with their name + description, and GLM decides whether to consult a skill based on that description. The important thing to know is that GLM only consults skills for tasks it can't easily handle on its own — simple, one-step queries like \"read this PDF\" may not trigger a skill even if the description matches perfectly, because GLM can handle them directly with basic tools. Comp",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_5e2565c0",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding step 4: apply the result",
+      "instruction": "Take `best_description` from the JSON output and update the skill's SKILL.md frontmatter. Show the user before/after and report the scores.\n\n---",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_e31c69de",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding package and present (only if `present files` tool is available)",
+      "instruction": "Check whether you have access to the `present_files` tool. If you don't, skip this step. If you do, package the skill and present the .skill file to the user:\n\n```bash\npython -m scripts.package_skill <path/to/skill-folder>\n```\n\nAfter packaging, direct the user to the resulting `.skill` file path so they can install it.\n\n---",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_a05f4224",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding glm.ai-specific instructions",
+      "instruction": "In GLM.ai, the core workflow is the same (draft → test → review → improve → repeat), but because GLM.ai doesn't have subagents, some mechanics change. Here's what to adapt:\n\n**Running test cases**: No subagents means no parallel execution. For each test case, read the skill's SKILL.md, then follow its instructions to accomplish the test prompt yourself. Do them one at a time. This is less rigorous than independent subagents (you wrote the skill and you're also running it, so you have full contex",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_fbd5c714",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding cowork-specific instructions",
+      "instruction": "If you're in Cowork, the main things to know are:\n\n- You have subagents, so the main workflow (spawn test cases in parallel, run baselines, grade, etc.) all works. (However, if you run into severe problems with timeouts, it's OK to run the test prompts in series rather than parallel.)\n- You don't have a browser or display, so when generating the eval viewer, use `--static <output_path>` to write a standalone HTML file instead of starting a server. Then proffer a link that the user can click to o",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_concept_a5adfe7b",
+      "skill_name": "skill-creator",
+      "category": "concept",
+      "concept": "Understanding reference files",
+      "instruction": "The agents/ directory contains instructions for specialized subagents. Read them when you need to spawn the relevant subagent.\n\n- `agents/grader.md` — How to evaluate assertions against outputs\n- `agents/comparator.md` — How to do blind A/B comparison between two outputs\n- `agents/analyzer.md` — How to analyze why one version beat another\n\nThe references/ directory has additional documentation:\n- `references/schemas.md` — JSON structures for evals.json, grading.json, etc.\n\n---\n\nRepeating one mor",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n",
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n",
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_instruction_39d72598",
+      "skill_name": "skill-creator",
+      "category": "instruction",
+      "concept": "Rule or guideline: Decide what you want the skill to do and roughly h...",
+      "instruction": "Decide what you want the skill to do and roughly how it should do it",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_instruction_93a51f56",
+      "skill_name": "skill-creator",
+      "category": "instruction",
+      "concept": "Rule or guideline: Write a draft of the skill...",
+      "instruction": "Write a draft of the skill",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_instruction_8dfd6d50",
+      "skill_name": "skill-creator",
+      "category": "instruction",
+      "concept": "Rule or guideline: Create a few test prompts and run glm-with-access-...",
+      "instruction": "Create a few test prompts and run glm-with-access-to-the-skill on them",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_instruction_58c226a1",
+      "skill_name": "skill-creator",
+      "category": "instruction",
+      "concept": "Rule or guideline: Help the user evaluate the results both qualitativ...",
+      "instruction": "Help the user evaluate the results both qualitatively and quantitatively",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_instruction_10dad420",
+      "skill_name": "skill-creator",
+      "category": "instruction",
+      "concept": "Rule or guideline: While the runs happen in the background, draft som...",
+      "instruction": "While the runs happen in the background, draft some quantitative evals if there aren't any (if there are some, you can either use as is or modify if you feel something needs to change about them). Then explain them to the user (or if they already existed, explain the ones that already exist)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_instruction_0044bb51",
+      "skill_name": "skill-creator",
+      "category": "instruction",
+      "concept": "Rule or guideline: Use the `eval-viewer/generate_review.py` script to...",
+      "instruction": "Use the `eval-viewer/generate_review.py` script to show the user the results for them to look at, and also let them look at the quantitative metrics",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_instruction_cbed9d1c",
+      "skill_name": "skill-creator",
+      "category": "instruction",
+      "concept": "Rule or guideline: Rewrite the skill based on feedback from the user'...",
+      "instruction": "Rewrite the skill based on feedback from the user's evaluation of the results (and also if there are any glaring flaws that become apparent from the quantitative benchmarks)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_instruction_5d64508e",
+      "skill_name": "skill-creator",
+      "category": "instruction",
+      "concept": "Rule or guideline: Repeat until you're satisfied...",
+      "instruction": "Repeat until you're satisfied",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_instruction_2eec6985",
+      "skill_name": "skill-creator",
+      "category": "instruction",
+      "concept": "Rule or guideline: Expand the test set and try again at larger scale...",
+      "instruction": "Expand the test set and try again at larger scale",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_instruction_21bc4199",
+      "skill_name": "skill-creator",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"evaluation\" and \"benchmark\" are borderline, but O...",
+      "instruction": "\"evaluation\" and \"benchmark\" are borderline, but OK",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_code_pattern_c7faeb6e",
+      "skill_name": "skill-creator",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from skill-creator",
+      "examples": [
+        "skill-name/\n├── SKILL.md (required)\n│   ├── YAML frontmatter (name, description required)\n│   └── Markdown instructions\n└── Bundled Resources (optional)\n    ├── scripts/    - Executable code for deterministic/repetitive tasks\n    ├── references/ - Docs loaded into context as needed\n    └── assets/     - Files used in output (templates, icons, fonts)\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_code_pattern_d1e6b417",
+      "skill_name": "skill-creator",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from skill-creator",
+      "examples": [
+        "cloud-deploy/\n├── SKILL.md (workflow + selection)\n└── references/\n    ├── aws.md\n    ├── gcp.md\n    └── azure.md\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_code_pattern_8dbfee1d",
+      "skill_name": "skill-creator",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from skill-creator",
+      "examples": [
+        "## Report structure\nALWAYS use this exact template:\n# [Title]\n## Executive summary\n## Key findings\n## Recommendations\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_code_pattern_4f1fc7c7",
+      "skill_name": "skill-creator",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from skill-creator",
+      "examples": [
+        "## Commit message format\n**Example 1:**\nInput: Added user authentication with JWT tokens\nOutput: feat(auth): implement JWT-based authentication\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_code_pattern_4bcdfb36",
+      "skill_name": "skill-creator",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from skill-creator",
+      "examples": [
+        "{\n  \"skill_name\": \"example-skill\",\n  \"evals\": [\n    {\n      \"id\": 1,\n      \"prompt\": \"User's task prompt\",\n      \"expected_output\": \"Description of expected result\",\n      \"files\": []\n    }\n  ]\n}\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_assessment_d3a89955",
+      "skill_name": "skill-creator",
+      "category": "assessment",
+      "concept": "Apply skill-creator in a practical project",
+      "instruction": "Demonstrate mastery of skill-creator by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using skill-creator",
+        "Explain when skill-creator should be used",
+        "Identify the core concepts of skill-creator",
+        "Apply skill-creator to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_creator_contextualization_9089a1df",
+      "skill_name": "skill-creator",
+      "category": "contextualization",
+      "concept": "When to use skill-creator",
+      "instruction": "Learn when to apply skill-creator in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using skill-creator",
+        "User needs help with coding -> evaluate if skill-creator applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate skill-creator is needed",
+        "Distinguish between skill-creator and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 54,
+  "generated_at": "2026-03-24T04:43:44.494673",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/skill-creator/SKILL.md"
+}

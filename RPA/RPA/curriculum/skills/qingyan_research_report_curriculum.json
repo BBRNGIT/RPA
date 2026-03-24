@@ -1,0 +1,305 @@
+{
+  "skill_name": "qingyan_research_report",
+  "skill_description": "Deep web research and HTML report generation. When GLM needs to conduct systematic information gathering and analysis for: (1) Exploring open-ended questions through multi-step search, deep reading, and logical reasoning, (2) Applying critical thinking and dynamic reflection to optimize search strategies and ensure information coverage, (3) Generating publication-quality HTML research reports with specific UI/UX standards (typography, colors, layout), (4) Creating interactive data visualizations (Chart.js) based on extracted statistical data, (5) Producing structured documents with automatic Table of Contents and responsive design.",
+  "items": [
+    {
+      "item_id": "skill_qingyan_research_report_concept_5a963b47",
+      "skill_name": "qingyan_research_report",
+      "category": "concept",
+      "concept": "Understanding 一、思考准则",
+      "instruction": "",
+      "examples": [
+        "         <nav class=\"toc\">\n           <ul class=\"toc-level-2\">\n             <li><a href=\"#section-1\">H2 标题文本</a>\n                 <ul class=\"toc-level-3\">\n                     <li><a href=\"#section-1-1\">H3 标题文本</a></li>\n                     ...\n                 </ul>\n             </li>\n             ...\n           </ul>\n         </nav>\n         ",
+        "       function createChart(ctx, config) {\n           if (ctx) {\n               new Chart(ctx, config);\n           }\n       }\n\n\n       createChart(growthCtx, {\n           type: 'bar',\n           data: {\n               labels: growthData.years,\n               datasets: [\n                   {\n                       label: '',\n                       data: ,\n                       yAxisID: 'y',\n                       backgroundColor: 'rgba(59, 130, 246, 0.5)',\n                       borderColor: 'rgba(59, 130, 246, 1)',\n                       borderWidth: 1\n                   }\n                   // ...\n               ]\n           },\n           options: {\n               responsive: true,\n               maintainAspectRatio: false,\n               scales: {\n                   y: {\n                       type: 'logarithmic',\n                       position: 'left',\n                       title: {\n                           display: true,\n                           text: '...'\n                       }\n                   }\n               },\n               plugins: {\n                   tooltip: {\n                       mode: 'index',\n                       intersect: false\n                   },\n                   title: {\n                       display: false\n                   }\n               }\n           }\n       });\n       "
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_concept_71855e70",
+      "skill_name": "qingyan_research_report",
+      "category": "concept",
+      "concept": "Understanding 1. 思考驱动的信息探索",
+      "instruction": "在执行每一轮信息收集行动（如发起搜索、访问网页等）之前，你必须首先进行深入的任务分析与策略制定。你的思考内容需包括：\n\n\n* 对当前信息状态的完整性、权威性与时效性评估\n* 将用户问题拆解为多层次子问题，并识别缺失的关键信息\n* 明确接下来应聚焦的关键主题与相应关键词，并给出搜索与访问策略\n* 制定探索路径，说明哪些页面需要优先访问、哪些部分需重点提取\n* 在此基础上，结合反思机制动态调整任务推进方向",
+      "examples": [
+        "         <nav class=\"toc\">\n           <ul class=\"toc-level-2\">\n             <li><a href=\"#section-1\">H2 标题文本</a>\n                 <ul class=\"toc-level-3\">\n                     <li><a href=\"#section-1-1\">H3 标题文本</a></li>\n                     ...\n                 </ul>\n             </li>\n             ...\n           </ul>\n         </nav>\n         ",
+        "       function createChart(ctx, config) {\n           if (ctx) {\n               new Chart(ctx, config);\n           }\n       }\n\n\n       createChart(growthCtx, {\n           type: 'bar',\n           data: {\n               labels: growthData.years,\n               datasets: [\n                   {\n                       label: '',\n                       data: ,\n                       yAxisID: 'y',\n                       backgroundColor: 'rgba(59, 130, 246, 0.5)',\n                       borderColor: 'rgba(59, 130, 246, 1)',\n                       borderWidth: 1\n                   }\n                   // ...\n               ]\n           },\n           options: {\n               responsive: true,\n               maintainAspectRatio: false,\n               scales: {\n                   y: {\n                       type: 'logarithmic',\n                       position: 'left',\n                       title: {\n                           display: true,\n                           text: '...'\n                       }\n                   }\n               },\n               plugins: {\n                   tooltip: {\n                       mode: 'index',\n                       intersect: false\n                   },\n                   title: {\n                       display: false\n                   }\n               }\n           }\n       });\n       "
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_concept_4fde1932",
+      "skill_name": "qingyan_research_report",
+      "category": "concept",
+      "concept": "Understanding 2. 动态反思与策略修正",
+      "instruction": "在任务推进过程中，应适时在思考中进行反思与策略调整，以确保信息探索的深度与方向持续优化。反思内容可聚焦以下任一方面：\n\n\n* **问题覆盖检查（Question Coverage）**：当前是否已全面回应用户关切的核心问题？是否仍有未触及的关键角度或遗漏的子问题？\n* **内容深度评估（Content Depth Reflection）**：现有信息是否具备足够的逻辑深度、数据支持与推理展开？是否存在内容空洞或片面性？\n* **信息拓展建议（Information Supplementation）**：是否存在虽未被显式提出，但对理解问题具有价值的潜在方向、边界扩展或补充数据？\n\n\n---",
+      "examples": [
+        "         <nav class=\"toc\">\n           <ul class=\"toc-level-2\">\n             <li><a href=\"#section-1\">H2 标题文本</a>\n                 <ul class=\"toc-level-3\">\n                     <li><a href=\"#section-1-1\">H3 标题文本</a></li>\n                     ...\n                 </ul>\n             </li>\n             ...\n           </ul>\n         </nav>\n         ",
+        "       function createChart(ctx, config) {\n           if (ctx) {\n               new Chart(ctx, config);\n           }\n       }\n\n\n       createChart(growthCtx, {\n           type: 'bar',\n           data: {\n               labels: growthData.years,\n               datasets: [\n                   {\n                       label: '',\n                       data: ,\n                       yAxisID: 'y',\n                       backgroundColor: 'rgba(59, 130, 246, 0.5)',\n                       borderColor: 'rgba(59, 130, 246, 1)',\n                       borderWidth: 1\n                   }\n                   // ...\n               ]\n           },\n           options: {\n               responsive: true,\n               maintainAspectRatio: false,\n               scales: {\n                   y: {\n                       type: 'logarithmic',\n                       position: 'left',\n                       title: {\n                           display: true,\n                           text: '...'\n                       }\n                   }\n               },\n               plugins: {\n                   tooltip: {\n                       mode: 'index',\n                       intersect: false\n                   },\n                   title: {\n                       display: false\n                   }\n               }\n           }\n       });\n       "
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_concept_05f1192e",
+      "skill_name": "qingyan_research_report",
+      "category": "concept",
+      "concept": "Understanding 二、搜索工具",
+      "instruction": "你可以使用加载外部skills中的搜索工具来系统性地获取信息，支持研究任务的深入推进：\n\n\n- search：用于发起单轮全面精准的网页检索，以获取覆盖核心问题的权威来源。\n\n\n- visit：访问指定网页，提取首页的主要内容以供后续分析。\n\n---",
+      "examples": [
+        "         <nav class=\"toc\">\n           <ul class=\"toc-level-2\">\n             <li><a href=\"#section-1\">H2 标题文本</a>\n                 <ul class=\"toc-level-3\">\n                     <li><a href=\"#section-1-1\">H3 标题文本</a></li>\n                     ...\n                 </ul>\n             </li>\n             ...\n           </ul>\n         </nav>\n         ",
+        "       function createChart(ctx, config) {\n           if (ctx) {\n               new Chart(ctx, config);\n           }\n       }\n\n\n       createChart(growthCtx, {\n           type: 'bar',\n           data: {\n               labels: growthData.years,\n               datasets: [\n                   {\n                       label: '',\n                       data: ,\n                       yAxisID: 'y',\n                       backgroundColor: 'rgba(59, 130, 246, 0.5)',\n                       borderColor: 'rgba(59, 130, 246, 1)',\n                       borderWidth: 1\n                   }\n                   // ...\n               ]\n           },\n           options: {\n               responsive: true,\n               maintainAspectRatio: false,\n               scales: {\n                   y: {\n                       type: 'logarithmic',\n                       position: 'left',\n                       title: {\n                           display: true,\n                           text: '...'\n                       }\n                   }\n               },\n               plugins: {\n                   tooltip: {\n                       mode: 'index',\n                       intersect: false\n                   },\n                   title: {\n                       display: false\n                   }\n               }\n           }\n       });\n       "
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_concept_e2c5d220",
+      "skill_name": "qingyan_research_report",
+      "category": "concept",
+      "concept": "Understanding 三、html 报告生成规范",
+      "instruction": "最终，当收集到足够充分的信息后，调用`generate_html`工具，输出一份具备出版级品质的 HTML 研究报告。\n\ngenerate_html工具使用说明：\npython3 generate_html.py --title \"Report Title\" <<'EOF'\n<!DOCTYPE html>\n<html>\n...[Full HTML Content]...\n</html>\nEOF\n\nParameters Description:\nReport Title: The level-1 heading of the report, also used as the filename.\nFull HTML Content: The complete, self-contained HTML source code (including embedded CSS).\n\n\nHTML格式需满足以下要求：",
+      "examples": [
+        "         <nav class=\"toc\">\n           <ul class=\"toc-level-2\">\n             <li><a href=\"#section-1\">H2 标题文本</a>\n                 <ul class=\"toc-level-3\">\n                     <li><a href=\"#section-1-1\">H3 标题文本</a></li>\n                     ...\n                 </ul>\n             </li>\n             ...\n           </ul>\n         </nav>\n         ",
+        "       function createChart(ctx, config) {\n           if (ctx) {\n               new Chart(ctx, config);\n           }\n       }\n\n\n       createChart(growthCtx, {\n           type: 'bar',\n           data: {\n               labels: growthData.years,\n               datasets: [\n                   {\n                       label: '',\n                       data: ,\n                       yAxisID: 'y',\n                       backgroundColor: 'rgba(59, 130, 246, 0.5)',\n                       borderColor: 'rgba(59, 130, 246, 1)',\n                       borderWidth: 1\n                   }\n                   // ...\n               ]\n           },\n           options: {\n               responsive: true,\n               maintainAspectRatio: false,\n               scales: {\n                   y: {\n                       type: 'logarithmic',\n                       position: 'left',\n                       title: {\n                           display: true,\n                           text: '...'\n                       }\n                   }\n               },\n               plugins: {\n                   tooltip: {\n                       mode: 'index',\n                       intersect: false\n                   },\n                   title: {\n                       display: false\n                   }\n               }\n           }\n       });\n       "
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_concept_3a609786",
+      "skill_name": "qingyan_research_report",
+      "category": "concept",
+      "concept": "Understanding 1. 主题化设计与风格要求",
+      "instruction": "**1. 总体布局与氛围:**    \n  * **页面背景:** 纯白 (`#FFFFFF`)， 页面背景必须覆盖整个页面。   \n  * **内容区域:** 纯白 (`#FFFFFF`)，确保与文本的最大对比度。  \n  * **主文字色:** 近黑色 (`#212529`)。 \n  * **文本强调色A:** 用于目录、链接、使用蓝色 (`#0D6EFD`)。  \n  * **文本强调色B:** 用于关键高亮以及文本中加粗字体、使用黑色(`#212529`)\n  * **文本强调色C:** 用于标题装饰、使用黑色(`#212529`)\n  * **body设置:** 不要用display: flex设定。\n\n\n**2. 字体与排版:**    \n  标题 (Headings):  \"Alibaba PuHuiTi 3.0\", \"Noto Sans SC\", \"Noto Serif SC\", sans-serif \n  正文 (Body): \"Alibaba PuHuiTi 3.0\", \"Noto Serif SC\", serif \n  代码 (Code): \"Source Cod",
+      "examples": [
+        "         <nav class=\"toc\">\n           <ul class=\"toc-level-2\">\n             <li><a href=\"#section-1\">H2 标题文本</a>\n                 <ul class=\"toc-level-3\">\n                     <li><a href=\"#section-1-1\">H3 标题文本</a></li>\n                     ...\n                 </ul>\n             </li>\n             ...\n           </ul>\n         </nav>\n         ",
+        "       function createChart(ctx, config) {\n           if (ctx) {\n               new Chart(ctx, config);\n           }\n       }\n\n\n       createChart(growthCtx, {\n           type: 'bar',\n           data: {\n               labels: growthData.years,\n               datasets: [\n                   {\n                       label: '',\n                       data: ,\n                       yAxisID: 'y',\n                       backgroundColor: 'rgba(59, 130, 246, 0.5)',\n                       borderColor: 'rgba(59, 130, 246, 1)',\n                       borderWidth: 1\n                   }\n                   // ...\n               ]\n           },\n           options: {\n               responsive: true,\n               maintainAspectRatio: false,\n               scales: {\n                   y: {\n                       type: 'logarithmic',\n                       position: 'left',\n                       title: {\n                           display: true,\n                           text: '...'\n                       }\n                   }\n               },\n               plugins: {\n                   tooltip: {\n                       mode: 'index',\n                       intersect: false\n                   },\n                   title: {\n                       display: false\n                   }\n               }\n           }\n       });\n       "
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_concept_85d540e9",
+      "skill_name": "qingyan_research_report",
+      "category": "concept",
+      "concept": "Understanding 四、禁止行为",
+      "instruction": "* 禁止跳过反思机制或忽略信息分析\n* 禁止直接复制网页内容或堆砌式摘要\n* 禁止在信息不足或逻辑结构不完整时提前输出报告\n* 禁止生成不完整 HTML（如缺少 `<html>` 或 `<style>`）",
+      "examples": [
+        "         <nav class=\"toc\">\n           <ul class=\"toc-level-2\">\n             <li><a href=\"#section-1\">H2 标题文本</a>\n                 <ul class=\"toc-level-3\">\n                     <li><a href=\"#section-1-1\">H3 标题文本</a></li>\n                     ...\n                 </ul>\n             </li>\n             ...\n           </ul>\n         </nav>\n         ",
+        "       function createChart(ctx, config) {\n           if (ctx) {\n               new Chart(ctx, config);\n           }\n       }\n\n\n       createChart(growthCtx, {\n           type: 'bar',\n           data: {\n               labels: growthData.years,\n               datasets: [\n                   {\n                       label: '',\n                       data: ,\n                       yAxisID: 'y',\n                       backgroundColor: 'rgba(59, 130, 246, 0.5)',\n                       borderColor: 'rgba(59, 130, 246, 1)',\n                       borderWidth: 1\n                   }\n                   // ...\n               ]\n           },\n           options: {\n               responsive: true,\n               maintainAspectRatio: false,\n               scales: {\n                   y: {\n                       type: 'logarithmic',\n                       position: 'left',\n                       title: {\n                           display: true,\n                           text: '...'\n                       }\n                   }\n               },\n               plugins: {\n                   tooltip: {\n                       mode: 'index',\n                       intersect: false\n                   },\n                   title: {\n                       display: false\n                   }\n               }\n           }\n       });\n       "
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_instruction_68230c21",
+      "skill_name": "qingyan_research_report",
+      "category": "instruction",
+      "concept": "Rule or guideline: 对当前信息状态的完整性、权威性与时效性评估...",
+      "instruction": "对当前信息状态的完整性、权威性与时效性评估",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_instruction_46205f0f",
+      "skill_name": "qingyan_research_report",
+      "category": "instruction",
+      "concept": "Rule or guideline: 将用户问题拆解为多层次子问题，并识别缺失的关键信息...",
+      "instruction": "将用户问题拆解为多层次子问题，并识别缺失的关键信息",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_instruction_fd144b2c",
+      "skill_name": "qingyan_research_report",
+      "category": "instruction",
+      "concept": "Rule or guideline: 明确接下来应聚焦的关键主题与相应关键词，并给出搜索与访问策略...",
+      "instruction": "明确接下来应聚焦的关键主题与相应关键词，并给出搜索与访问策略",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_instruction_e2bb66fc",
+      "skill_name": "qingyan_research_report",
+      "category": "instruction",
+      "concept": "Rule or guideline: 制定探索路径，说明哪些页面需要优先访问、哪些部分需重点提取...",
+      "instruction": "制定探索路径，说明哪些页面需要优先访问、哪些部分需重点提取",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_instruction_04721668",
+      "skill_name": "qingyan_research_report",
+      "category": "instruction",
+      "concept": "Rule or guideline: 在此基础上，结合反思机制动态调整任务推进方向...",
+      "instruction": "在此基础上，结合反思机制动态调整任务推进方向",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_instruction_e833c44c",
+      "skill_name": "qingyan_research_report",
+      "category": "instruction",
+      "concept": "Rule or guideline: **问题覆盖检查（Question Coverage）**：当前是否已全面回应用户关切的核心问题？是...",
+      "instruction": "**问题覆盖检查（Question Coverage）**：当前是否已全面回应用户关切的核心问题？是否仍有未触及的关键角度或遗漏的子问题？",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_instruction_2d998830",
+      "skill_name": "qingyan_research_report",
+      "category": "instruction",
+      "concept": "Rule or guideline: **内容深度评估（Content Depth Reflection）**：现有信息是否具备足够的逻辑...",
+      "instruction": "**内容深度评估（Content Depth Reflection）**：现有信息是否具备足够的逻辑深度、数据支持与推理展开？是否存在内容空洞或片面性？",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_instruction_76a57abc",
+      "skill_name": "qingyan_research_report",
+      "category": "instruction",
+      "concept": "Rule or guideline: **信息拓展建议（Information Supplementation）**：是否存在虽未被显式提...",
+      "instruction": "**信息拓展建议（Information Supplementation）**：是否存在虽未被显式提出，但对理解问题具有价值的潜在方向、边界扩展或补充数据？",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_instruction_a32d4320",
+      "skill_name": "qingyan_research_report",
+      "category": "instruction",
+      "concept": "Rule or guideline: search：用于发起单轮全面精准的网页检索，以获取覆盖核心问题的权威来源。...",
+      "instruction": "search：用于发起单轮全面精准的网页检索，以获取覆盖核心问题的权威来源。",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_instruction_43d2cc3f",
+      "skill_name": "qingyan_research_report",
+      "category": "instruction",
+      "concept": "Rule or guideline: visit：访问指定网页，提取首页的主要内容以供后续分析。...",
+      "instruction": "visit：访问指定网页，提取首页的主要内容以供后续分析。",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_code_pattern_61a1b0f2",
+      "skill_name": "qingyan_research_report",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from qingyan_research_report",
+      "examples": [
+        "         <nav class=\"toc\">\n           <ul class=\"toc-level-2\">\n             <li><a href=\"#section-1\">H2 标题文本</a>\n                 <ul class=\"toc-level-3\">\n                     <li><a href=\"#section-1-1\">H3 标题文本</a></li>\n                     ...\n                 </ul>\n             </li>\n             ...\n           </ul>\n         </nav>\n         "
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_code_pattern_6b4c9bd5",
+      "skill_name": "qingyan_research_report",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from qingyan_research_report",
+      "examples": [
+        "       function createChart(ctx, config) {\n           if (ctx) {\n               new Chart(ctx, config);\n           }\n       }\n\n\n       createChart(growthCtx, {\n           type: 'bar',\n           data: {\n               labels: growthData.years,\n               datasets: [\n                   {\n                       label: '',\n                       data: ,\n                       yAxisID: 'y',\n                       backgroundColor: 'rgba(59, 130, 246, 0.5)',\n                       borderColor: 'rgba(59, 130, 246, 1)',\n                       borderWidth: 1\n                   }\n                   // ...\n               ]\n           },\n           options: {\n               responsive: true,\n               maintainAspectRatio: false,\n               scales: {\n                   y: {\n                       type: 'logarithmic',\n                       position: 'left',\n                       title: {\n                           display: true,\n                           text: '...'\n                       }\n                   }\n               },\n               plugins: {\n                   tooltip: {\n                       mode: 'index',\n                       intersect: false\n                   },\n                   title: {\n                       display: false\n                   }\n               }\n           }\n       });\n       "
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_assessment_bb64d5cd",
+      "skill_name": "qingyan_research_report",
+      "category": "assessment",
+      "concept": "Apply qingyan_research_report in a practical project",
+      "instruction": "Demonstrate mastery of qingyan_research_report by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using qingyan_research_report",
+        "Explain when qingyan_research_report should be used",
+        "Identify the core concepts of qingyan_research_report",
+        "Apply qingyan_research_report to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_qingyan_research_report_contextualization_429c4575",
+      "skill_name": "qingyan_research_report",
+      "category": "contextualization",
+      "concept": "When to use qingyan_research_report",
+      "instruction": "Learn when to apply qingyan_research_report in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using qingyan_research_report",
+        "User needs help with coding -> evaluate if qingyan_research_report applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate qingyan_research_report is needed",
+        "Distinguish between qingyan_research_report and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 21,
+  "generated_at": "2026-03-24T04:43:44.491692",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/qingyan-research/SKILL.md"
+}
