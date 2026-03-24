@@ -1,0 +1,229 @@
+{
+  "batch_id": "batch_finance_concepts_20260324_044709",
+  "source": "finance_concepts",
+  "domain": "finance",
+  "items": [
+    {
+      "domain": "finance",
+      "category": "financial_concept",
+      "concept": "net_present_value",
+      "formula": "NPV = sum(CF_t / (1+r)^t)",
+      "description": "Sum of discounted cash flows",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate net_present_value for a given scenario"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_ratio",
+      "concept": "debt_to_equity",
+      "formula": "Total Debt / Shareholders' Equity",
+      "description": "Measure of financial leverage",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate debt_to_equity from financial statements"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_concept",
+      "concept": "net_present_value",
+      "formula": "NPV = sum(CF_t / (1+r)^t)",
+      "description": "Sum of discounted cash flows",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate net_present_value for a given scenario"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_ratio",
+      "concept": "current_ratio",
+      "formula": "Current Assets / Current Liabilities",
+      "description": "Measure of short-term liquidity",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate current_ratio from financial statements"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_concept",
+      "concept": "present_value",
+      "formula": "PV = FV / (1 + r)^n",
+      "description": "Current value of a future sum of money",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate present_value for a given scenario"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_ratio",
+      "concept": "return_on_equity",
+      "formula": "Net Income / Shareholders' Equity",
+      "description": "Measure of profitability",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate return_on_equity from financial statements"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_concept",
+      "concept": "net_present_value",
+      "formula": "NPV = sum(CF_t / (1+r)^t)",
+      "description": "Sum of discounted cash flows",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate net_present_value for a given scenario"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_ratio",
+      "concept": "current_ratio",
+      "formula": "Current Assets / Current Liabilities",
+      "description": "Measure of short-term liquidity",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate current_ratio from financial statements"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_concept",
+      "concept": "compound_interest",
+      "formula": "A = P(1 + r/n)^(nt)",
+      "description": "Interest calculated on initial principal and accumulated interest",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate compound_interest for a given scenario"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_ratio",
+      "concept": "debt_to_equity",
+      "formula": "Total Debt / Shareholders' Equity",
+      "description": "Measure of financial leverage",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate debt_to_equity from financial statements"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_concept",
+      "concept": "compound_interest",
+      "formula": "A = P(1 + r/n)^(nt)",
+      "description": "Interest calculated on initial principal and accumulated interest",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate compound_interest for a given scenario"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_ratio",
+      "concept": "debt_to_equity",
+      "formula": "Total Debt / Shareholders' Equity",
+      "description": "Measure of financial leverage",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate debt_to_equity from financial statements"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_concept",
+      "concept": "present_value",
+      "formula": "PV = FV / (1 + r)^n",
+      "description": "Current value of a future sum of money",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate present_value for a given scenario"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_ratio",
+      "concept": "current_ratio",
+      "formula": "Current Assets / Current Liabilities",
+      "description": "Measure of short-term liquidity",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate current_ratio from financial statements"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_concept",
+      "concept": "compound_interest",
+      "formula": "A = P(1 + r/n)^(nt)",
+      "description": "Interest calculated on initial principal and accumulated interest",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate compound_interest for a given scenario"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_ratio",
+      "concept": "return_on_equity",
+      "formula": "Net Income / Shareholders' Equity",
+      "description": "Measure of profitability",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate return_on_equity from financial statements"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_concept",
+      "concept": "net_present_value",
+      "formula": "NPV = sum(CF_t / (1+r)^t)",
+      "description": "Sum of discounted cash flows",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate net_present_value for a given scenario"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_ratio",
+      "concept": "debt_to_equity",
+      "formula": "Total Debt / Shareholders' Equity",
+      "description": "Measure of financial leverage",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate debt_to_equity from financial statements"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_concept",
+      "concept": "present_value",
+      "formula": "PV = FV / (1 + r)^n",
+      "description": "Current value of a future sum of money",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate present_value for a given scenario"
+      ]
+    },
+    {
+      "domain": "finance",
+      "category": "financial_ratio",
+      "concept": "current_ratio",
+      "formula": "Current Assets / Current Liabilities",
+      "description": "Measure of short-term liquidity",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Calculate current_ratio from financial statements"
+      ]
+    }
+  ],
+  "generated_at": "2026-03-24T04:47:09.428274",
+  "item_count": 20
+}

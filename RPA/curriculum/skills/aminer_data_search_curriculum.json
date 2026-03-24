@@ -1,0 +1,654 @@
+{
+  "skill_name": "aminer-data-search",
+  "skill_description": ">",
+  "items": [
+    {
+      "item_id": "skill_aminer_data_search_concept_40eb895d",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding aminer 开放平台学术数据查询",
+      "instruction": "AMiner 是全球领先的学术数据平台，提供学者、论文、机构、期刊、专利等全维度学术数据。\n本 skill 涵盖全部 28 个开放 API，并将它们组合成 6 大实用工作流。\n\n- **API 文档**：https://open.aminer.cn/open/doc\n- **控制台（生成 Token）**：https://open.aminer.cn/open/board?tab=control\n\n---",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_a8a42f46",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 第一步：获取 token",
+      "instruction": "所有 API 调用需要在请求头中携带 `Authorization: <your_token>`。\n\n**获取方式：**\n1. 前往 [AMiner 控制台](https://open.aminer.cn/open/board?tab=control) 登录并生成 API Token\n2. 若不了解如何操作，请参阅 [开放平台文档](https://open.aminer.cn/open/doc)\n\n> Token 请前往 [控制台](https://open.aminer.cn/open/board?tab=control) 登录后生成，有效期内可重复使用。\n\n---",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_7016a2dc",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 快速使用（python 脚本）",
+      "instruction": "所有工作流均可通过 `scripts/aminer_client.py` 驱动：\n\n```bash",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_f28b6ac3",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 学者全景分析",
+      "instruction": "python scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_99ee4dd6",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 论文深度挖掘（含引用链）",
+      "instruction": "python scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_e2ec1496",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 机构研究力分析",
+      "instruction": "python scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_169a1d52",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 期刊论文监控（指定年份）",
+      "instruction": "python scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_18b3388e",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 学术智能问答（自然语言提问）",
+      "instruction": "python scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_dbc7d2d7",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 专利搜索与详情",
+      "instruction": "python scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n```\n\n也可以直接调用单个 API：\n```bash\npython scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n```\n\n---",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_0041b83e",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 稳定性与失败处理策略（必读）",
+      "instruction": "客户端 `scripts/aminer_client.py` 内置了请求重试与降级策略，用于减少网络抖动和短暂服务异常对结果的影响。\n\n- **超时与重试**\n  - 默认请求超时：`30s`\n  - 最大重试次数：`3`\n  - 退避策略：指数退避（`1s -> 2s -> 4s`）+ 随机抖动\n- **可重试状态码**\n  - `408 / 429 / 500 / 502 / 503 / 504`\n- **不可重试场景**\n  - 常见 `4xx`（如参数错误、鉴权问题）默认不重试，直接返回错误结构\n- **工作流降级**\n  - `paper_deep_dive`：`paper_search` 无结果时自动降级到 `paper_search_pro`\n  - `paper_qa`：`query` 模式无结果时，自动降级到 `paper_search_pro`\n- **可追踪调用链**\n  - 组合工作流输出中包含 `source_api_chain`，用于标记结果由哪些 API 组合得到\n\n---",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_a9a58caf",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 论文搜索接口选型指南",
+      "instruction": "当用户说“查论文”时，先判断目标是“找 ID”、“做筛选”、“做问答”还是“做分析报表”，再选 API：\n\n| API | 侧重点 | 适用场景 | 成本 |\n|---|---|---|---|\n| `paper_search` | 标题检索、快速拿 `paper_id` | 已知论文标题，先定位目标论文 | 免费 |\n| `paper_search_pro` | 多条件检索与排序（作者/机构/期刊/关键词） | 主题检索、按引用量或年份排序 | ¥0.01/次 |\n| `paper_qa_search` | 自然语言问答/主题词检索 | 用户用自然语言描述需求，先走语义检索 | ¥0.05/次 |\n| `paper_list_by_search_venue` | 返回更完整论文信息（适合分析） | 需要更丰富字段做分析/报告 | ¥0.30/次 |\n| `paper_list_by_keywords` | 多关键词批量检索 | 批量专题拉取（如 AlphaFold + protein folding） | ¥0.10/次 |\n| `paper_detail_by_condition`",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_0481a9b9",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 6 大组合工作流",
+      "instruction": "",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_ebd0fb03",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 工作流 1：学者全景分析（scholar profile）",
+      "instruction": "**适用场景**：了解某位学者的完整学术画像，包括简介、研究方向、发表论文、专利、科研项目。\n\n**调用链：**\n```\n学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n```\n\n**命令：**\n```bash\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Yann LeCun\"\n```\n\n**输出示例字段：**\n- 基本信息：姓名、机构、职称、性别\n- 个人简介（中英文）\n- 研究兴趣与领域\n- 教育背景（结构化）\n- 工作经历（结构化）\n- 论文列表（ID + 标题）\n- 专利列表（ID + 标题）\n- 科研项目（标题/资助金额/时间）\n\n---",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_b03638f6",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 工作流 2：论文深度挖掘（paper deep dive）",
+      "instruction": "**适用场景**：根据论文标题或关键词，获取论文完整信息及引用关系。\n\n**调用链：**\n```\n论文搜索 / 论文搜索pro（title/keyword → paper_id）\n    ↓\n论文详情（摘要/作者/DOI/期刊/年份/关键词）\n    ↓\n论文引用（该论文引用了哪些论文 → cited_ids）\n    ↓\n（可选）对被引论文批量获取论文信息\n```\n\n**命令：**\n```bash",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_d3118048",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 按标题搜索",
+      "instruction": "python scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"BERT\"",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_a4a95b00",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 按关键词搜索（使用 pro 接口）",
+      "instruction": "python scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive \\\n  --keyword \"large language model\" --author \"Hinton\" --order n_citation\n```\n\n---",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_5bd184c8",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 工作流 3：机构研究力分析（org analysis）",
+      "instruction": "**适用场景**：分析某机构的学者规模、论文产出、专利数量，适合竞品研究或合作评估。\n\n**调用链：**\n```\n机构消歧pro（原始字符串 → org_id，处理别名/全称差异）\n    ↓\n并行调用：\n  ├── 机构详情（简介/类型/成立时间）\n  ├── 机构学者（学者列表）\n  ├── 机构论文（论文列表）\n  └── 机构专利（专利ID列表，支持分页，最多10000条）\n```\n\n> 若有多个同名机构，机构搜索会返回候选列表，可结合机构消歧 pro 精确匹配。\n\n**命令：**\n```bash\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"MIT\"",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_2a38977f",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 指定原始字符串（含缩写/别名）",
+      "instruction": "python scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"Massachusetts Institute of Technology, CSAIL\"\n```\n\n---",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_5045ca89",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 工作流 4：期刊论文监控（venue papers）",
+      "instruction": "**适用场景**：追踪某期刊特定年份的论文，用于投稿调研或研究热点分析。\n\n**调用链：**\n```\n期刊搜索（name → venue_id）\n    ↓\n期刊详情（ISSN/类型/简称）\n    ↓\n期刊论文（venue_id + year → paper_id 列表）\n    ↓\n（可选）论文详情批量查询\n```\n\n**命令：**\n```bash\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"NeurIPS\" --year 2023\n```\n\n---",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_bbe57885",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 工作流 5：学术智能问答（paper qa search）",
+      "instruction": "**适用场景**：用自然语言或结构化关键词智能搜索论文，支持 SCI 过滤、引用量排序、作者/机构限定。\n\n**核心 API**：`论文问答搜索`（¥0.05/次），支持：\n- `query`：自然语言提问，系统自动拆解为关键词\n- `topic_high/middle/low`：精细控制关键词权重（嵌套数组 OR/AND 逻辑）\n- `sci_flag`：只看 SCI 论文\n- `force_citation_sort`：按引用量排序\n- `author_terms / org_terms`：限定作者或机构\n\n**命令：**\n```bash",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_e03972a7",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 自然语言问答",
+      "instruction": "python scripts/aminer_client.py --token <TOKEN> --action paper_qa \\\n  --query \"用于蛋白质结构预测的深度学习方法\"",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_e35e60c4",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 精细关键词搜索（必须同时含 a 和 b，加分含 c）",
+      "instruction": "python scripts/aminer_client.py --token <TOKEN> --action paper_qa \\\n  --topic_high '[[\"transformer\",\"self-attention\"],[\"protein folding\"]]' \\\n  --topic_middle '[[\"AlphaFold\"]]' \\\n  --sci_flag --sort_citation\n```\n\n---",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_09b2589d",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 工作流 6：专利链分析（patent analysis）",
+      "instruction": "**适用场景**：搜索特定技术领域的专利，或获取某学者/机构的专利组合。\n\n**调用链（独立搜索）：**\n```\n专利搜索（query → patent_id）\n    ↓\n专利详情（摘要/申请日/申请号/受让人/发明人）\n```\n\n**调用链（经由学者/机构）：**\n```\n学者搜索 → 学者专利（patent_id 列表）\n机构消歧 → 机构专利（patent_id 列表）\n    ↓\n专利信息 / 专利详情\n```\n\n**命令：**\n```bash\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算芯片\"\npython scripts/aminer_client.py --token <TOKEN> --action scholar_patents --name \"张首晟\"\n```\n\n---",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_c3b6cd12",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 单独 api 速查表",
+      "instruction": "> 完整参数说明请阅读 `references/api-catalog.md`\n\n| # | 标题 | 方法 | 价格 | 接口路径（基础域名：datacenter.aminer.cn/gateway/open_platform） |\n|---|------|------|------|------|\n| 1 | 论文问答搜索 | POST | ¥0.05 | `/api/paper/qa/search` |\n| 2 | 学者搜索 | POST | 免费 | `/api/person/search` |\n| 3 | 论文搜索 | GET | 免费 | `/api/paper/search` |\n| 4 | 论文搜索pro | GET | ¥0.01 | `/api/paper/search/pro` |\n| 5 | 专利搜索 | POST | 免费 | `/api/patent/search` |\n| 6 | 机构搜索 | POST | 免费 | `/api/organization/search` |\n| 7 | 期刊搜索 | POST | 免费 | `/api/venue/sear",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_concept_0e8a016c",
+      "skill_name": "aminer-data-search",
+      "category": "concept",
+      "concept": "Understanding 参考资料",
+      "instruction": "- 完整 API 参数文档：读取 `references/api-catalog.md`\n- Python 客户端源码：`scripts/aminer_client.py`\n- 测试用例：`evals/evals.json`\n- 官方文档：https://open.aminer.cn/open/doc\n- 控制台：https://open.aminer.cn/open/board?tab=control",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n",
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n",
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_instruction_7b1b9f17",
+      "skill_name": "aminer-data-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: **API 文档**：https://open.aminer.cn/open/doc...",
+      "instruction": "**API 文档**：https://open.aminer.cn/open/doc",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_instruction_3de9f389",
+      "skill_name": "aminer-data-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: **控制台（生成 Token）**：https://open.aminer.cn/open/boar...",
+      "instruction": "**控制台（生成 Token）**：https://open.aminer.cn/open/board?tab=control",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_instruction_9d5953ef",
+      "skill_name": "aminer-data-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: **超时与重试**...",
+      "instruction": "**超时与重试**",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_instruction_7cad4ca1",
+      "skill_name": "aminer-data-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: 默认请求超时：`30s`...",
+      "instruction": "默认请求超时：`30s`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_instruction_3a126a6d",
+      "skill_name": "aminer-data-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: 最大重试次数：`3`...",
+      "instruction": "最大重试次数：`3`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_instruction_b7670f0b",
+      "skill_name": "aminer-data-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: 退避策略：指数退避（`1s -> 2s -> 4s`）+ 随机抖动...",
+      "instruction": "退避策略：指数退避（`1s -> 2s -> 4s`）+ 随机抖动",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_instruction_443809df",
+      "skill_name": "aminer-data-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: **可重试状态码**...",
+      "instruction": "**可重试状态码**",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_instruction_5878d234",
+      "skill_name": "aminer-data-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: `408 / 429 / 500 / 502 / 503 / 504`...",
+      "instruction": "`408 / 429 / 500 / 502 / 503 / 504`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_instruction_7c700d4b",
+      "skill_name": "aminer-data-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: **不可重试场景**...",
+      "instruction": "**不可重试场景**",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_instruction_6dd7a100",
+      "skill_name": "aminer-data-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: 常见 `4xx`（如参数错误、鉴权问题）默认不重试，直接返回错误结构...",
+      "instruction": "常见 `4xx`（如参数错误、鉴权问题）默认不重试，直接返回错误结构",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_code_pattern_e875e76c",
+      "skill_name": "aminer-data-search",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from aminer-data-search",
+      "examples": [
+        "# 学者全景分析\npython scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Andrew Ng\"\n\n# 论文深度挖掘（含引用链）\npython scripts/aminer_client.py --token <TOKEN> --action paper_deep_dive --title \"Attention is all you need\"\n\n# 机构研究力分析\npython scripts/aminer_client.py --token <TOKEN> --action org_analysis --org \"清华大学\"\n\n# 期刊论文监控（指定年份）\npython scripts/aminer_client.py --token <TOKEN> --action venue_papers --venue \"Nature\" --year 2024\n\n# 学术智能问答（自然语言提问）\npython scripts/aminer_client.py --token <TOKEN> --action paper_qa --query \"transformer架构最新进展\"\n\n# 专利搜索与详情\npython scripts/aminer_client.py --token <TOKEN> --action patent_search --query \"量子计算\"\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_code_pattern_e7d2d1b7",
+      "skill_name": "aminer-data-search",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from aminer-data-search",
+      "examples": [
+        "python scripts/aminer_client.py --token <TOKEN> --action raw \\\n  --api paper_search --params '{\"title\": \"BERT\", \"page\": 0, \"size\": 5}'\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_code_pattern_e91b6374",
+      "skill_name": "aminer-data-search",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from aminer-data-search",
+      "examples": [
+        "学者搜索（name → person_id）\n    ↓\n并行调用：\n  ├── 学者详情（bio/教育背景/荣誉）\n  ├── 学者画像（研究方向/兴趣/工作经历）\n  ├── 学者论文（论文列表）\n  ├── 学者专利（专利列表）\n  └── 学者项目（科研项目/资助信息）\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_code_pattern_f1c16e86",
+      "skill_name": "aminer-data-search",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from aminer-data-search",
+      "examples": [
+        "python scripts/aminer_client.py --token <TOKEN> --action scholar_profile --name \"Yann LeCun\"\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_code_pattern_71f68761",
+      "skill_name": "aminer-data-search",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from aminer-data-search",
+      "examples": [
+        "论文搜索 / 论文搜索pro（title/keyword → paper_id）\n    ↓\n论文详情（摘要/作者/DOI/期刊/年份/关键词）\n    ↓\n论文引用（该论文引用了哪些论文 → cited_ids）\n    ↓\n（可选）对被引论文批量获取论文信息\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_assessment_25f946d5",
+      "skill_name": "aminer-data-search",
+      "category": "assessment",
+      "concept": "Apply aminer-data-search in a practical project",
+      "instruction": "Demonstrate mastery of aminer-data-search by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using aminer-data-search",
+        "Explain when aminer-data-search should be used",
+        "Identify the core concepts of aminer-data-search",
+        "Apply aminer-data-search to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_aminer_data_search_contextualization_88b03a49",
+      "skill_name": "aminer-data-search",
+      "category": "contextualization",
+      "concept": "When to use aminer-data-search",
+      "instruction": "Learn when to apply aminer-data-search in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using aminer-data-search",
+        "User needs help with coding -> evaluate if aminer-data-search applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate aminer-data-search is needed",
+        "Distinguish between aminer-data-search and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 42,
+  "generated_at": "2026-03-24T04:43:44.493876",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/aminer-open-academic/SKILL.md"
+}

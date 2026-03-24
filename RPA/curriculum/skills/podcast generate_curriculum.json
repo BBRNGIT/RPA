@@ -1,0 +1,652 @@
+{
+  "skill_name": "Podcast Generate",
+  "skill_description": "Generate podcast episodes from user-provided content or by searching the web for specified topics. If user uploads a text file/article, creates a dual-host dialogue podcast (or single-host upon request). If no content is provided, searches the web for information about the user-specified topic and generates a podcast. Duration scales with content size (3-20 minutes, ~240 chars/min). Uses z-ai-web-dev-sdk for LLM script generation and TTS audio synthesis. Outputs both a podcast script (Markdown) and a complete audio file (WAV).",
+  "items": [
+    {
+      "item_id": "skill_podcast generate_concept_7a894ffb",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding podcast generate skill（typescript 版本）",
+      "instruction": "根据用户提供的资料或联网搜索结果，自动生成播客脚本与音频。\n\n该 Skill 适用于：\n- 长文内容的快速理解和播客化\n- 知识型内容的音频化呈现\n- 热点话题的深度解读和讨论\n- 实时信息的搜索和播客制作\n\n---",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_9698840f",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 能力说明",
+      "instruction": "",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_b573e75f",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 本 skill 可以做什么",
+      "instruction": "- **从文件生成**：接收一篇资料（txt/md/docx/pdf等文本格式），生成对谈播客脚本和音频\n- **联网搜索生成**：根据用户指定的主题，联网搜索最新信息，生成播客脚本和音频\n- 自动控制时长，根据内容长度自动调整（3-20 分钟）\n- 生成 Markdown 格式的播客脚本（可人工编辑）\n- 使用 z-ai TTS 合成高质量音频并拼接为最终播客",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_a4a39a28",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 本 skill 当前不做什么",
+      "instruction": "- 不生成 mp3 / 字幕 / 时间戳\n- 不支持三人及以上播客角色\n- 不加入背景音乐或音效\n\n---",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_1000d579",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 文件与职责说明",
+      "instruction": "本 Skill 由以下文件组成：\n\n- `generate.ts`\n  统一入口（支持文件模式和搜索模式）\n  - **文件模式**：读取用户上传的文本文件 → 生成播客\n  - **搜索模式**：调用 web-search skill 获取资料 → 生成播客\n  - 使用 z-ai-web-dev-sdk 进行 LLM 脚本生成\n  - 使用 z-ai-web-dev-sdk 进行 TTS 音频生成\n  - 自动拼接音频片段\n  - 只输出最终文件\n\n- `readme.md`\n  使用说明文档\n\n- `SKILL.md`\n  当前文件，描述 Skill 能力、边界与使用约定\n\n- `package.json`\n  Node.js 项目配置与依赖\n\n- `tsconfig.json`\n  TypeScript 编译配置\n\n---",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_0c9e4217",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 输入与输出约定",
+      "instruction": "",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_56500668",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 输入（二选一）",
+      "instruction": "**方式 1：文件上传**\n- 一篇资料文件（txt / md / docx / pdf 等文本格式）\n- 资料长度不限，Skill 会自动压缩为合适长度\n\n**方式 2：联网搜索**\n- 用户指定一个搜索主题\n- 自动调用 web-search skill 获取相关内容\n- 整合多个搜索结果作为资料来源",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_624e7295",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 输出（只输出 2 个文件）",
+      "instruction": "- `podcast_script.md`\n  播客脚本（Markdown 格式，可人工编辑）\n\n- `podcast.wav`\n  最终拼接完成的播客音频\n\n**不输出中间文件**（如 segments.jsonl、meta.json 等）\n\n---",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_bef28ced",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 运行方式",
+      "instruction": "",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_dfea8b32",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 依赖环境",
+      "instruction": "- Node.js 18+\n- z-ai-web-dev-sdk（已安装）\n- web-search skill（用于联网搜索模式）\n\n**不需要** z-ai CLI",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_fa630e76",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 安装依赖",
+      "instruction": "```bash\nnpm install\n```\n\n---",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_522553fb",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 使用示例",
+      "instruction": "",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_d12b441c",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 从文件生成播客",
+      "instruction": "```bash\nnpm run generate -- --input=test_data/material.txt --out_dir=out\n```",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_1c5b0fff",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 联网搜索生成播客",
+      "instruction": "```bash",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_b6eb0e63",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 根据主题搜索并生成播客",
+      "instruction": "npm run generate -- --topic=\"最新AI技术突破\" --out_dir=out",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_bde06206",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 指定搜索主题和时长",
+      "instruction": "npm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_7dcdba15",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 搜索并生成单人播客",
+      "instruction": "npm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n```\n\n---",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_db52be0a",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 参数说明",
+      "instruction": "| 参数 | 说明 | 默认值 |\n|------|------|--------|\n| `--input` | 输入资料文件路径（与 --topic 二选一） | - |\n| `--topic` | 搜索主题关键词（与 --input 二选一） | - |\n| `--out_dir` | 输出目录（必需） | - |\n| `--mode` | 播客模式：dual / single-male / single-female | dual |\n| `--duration` | 手动指定分钟数（3-20）；0 表示自动 | 0 |\n| `--host_name` | 主持人/主播名称 | 小谱 |\n| `--guest_name` | 嘉宾名称 | 锤锤 |\n| `--voice_host` | 主持音色 | xiaochen |\n| `--voice_guest` | 嘉宾音色 | chuichui |\n| `--speed` | 语速（0.5-2.0） | 1.0 |\n| `--pause_ms` | 段间停顿毫秒数 | 200 |\n\n---",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_75c59ad5",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 可用音色",
+      "instruction": "| 音色 | 特点 |\n|------|------|\n| xiaochen | 沉稳专业 |\n| chuichui | 活泼可爱 |\n| tongtong | 温暖亲切 |\n| jam | 英音绅士 |\n| kazi | 清晰标准 |\n| douji | 自然流畅 |\n| luodo | 富有感染力 |\n\n---",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_c6b85c50",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 技术架构",
+      "instruction": "",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_adffbeaa",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding generate.ts（统一入口）",
+      "instruction": "- **文件模式**：读取用户上传文件 → 生成播客\n- **搜索模式**：调用 web-search skill → 获取资料 → 生成播客\n- **LLM**：使用 `z-ai-web-dev-sdk` (`chat.completions.create`)\n- **TTS**：使用 `z-ai-web-dev-sdk` (`audio.tts.create`)\n- **不需要** z-ai CLI\n- 自动拼接音频片段\n- 只输出最终文件，中间文件自动清理",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_d8e3fc1a",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding llm 调用",
+      "instruction": "- System prompt：播客脚本编剧角色\n- User prompt：包含资料 + 硬性约束 + 呼吸感要求\n- 输出校验：字数、结构、角色标签\n- 自动重试：最多 3 次",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_df60b98c",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding tts 调用",
+      "instruction": "- 使用 `zai.audio.tts.create()`\n- 支持自定义音色、语速\n- 自动拼接多个 wav 片段\n- 临时文件自动清理\n\n---",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_6e9e1999",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding 输出示例",
+      "instruction": "",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_443944bd",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding podcast script.md（片段）",
+      "instruction": "```markdown\n**小谱**：大家好，欢迎收听今天的播客。今天我们来聊一个有趣的话题……\n\n**锤锤**：是啊，这个话题真的很有意思。我最近也在关注……\n\n**小谱**：说到这里，我想给大家举个例子……\n```\n\n---",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_concept_05fe6ad4",
+      "skill_name": "Podcast Generate",
+      "category": "concept",
+      "concept": "Understanding license",
+      "instruction": "MIT",
+      "examples": [
+        "npm install\n",
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n",
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_instruction_9eabd6c7",
+      "skill_name": "Podcast Generate",
+      "category": "instruction",
+      "concept": "Rule or guideline: 长文内容的快速理解和播客化...",
+      "instruction": "长文内容的快速理解和播客化",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_instruction_955b2126",
+      "skill_name": "Podcast Generate",
+      "category": "instruction",
+      "concept": "Rule or guideline: 知识型内容的音频化呈现...",
+      "instruction": "知识型内容的音频化呈现",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_instruction_49bfdd6a",
+      "skill_name": "Podcast Generate",
+      "category": "instruction",
+      "concept": "Rule or guideline: 热点话题的深度解读和讨论...",
+      "instruction": "热点话题的深度解读和讨论",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_instruction_57748169",
+      "skill_name": "Podcast Generate",
+      "category": "instruction",
+      "concept": "Rule or guideline: 实时信息的搜索和播客制作...",
+      "instruction": "实时信息的搜索和播客制作",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_instruction_20bb6b32",
+      "skill_name": "Podcast Generate",
+      "category": "instruction",
+      "concept": "Rule or guideline: **从文件生成**：接收一篇资料（txt/md/docx/pdf等文本格式），生成对谈播客脚本和音频...",
+      "instruction": "**从文件生成**：接收一篇资料（txt/md/docx/pdf等文本格式），生成对谈播客脚本和音频",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_instruction_e22c6637",
+      "skill_name": "Podcast Generate",
+      "category": "instruction",
+      "concept": "Rule or guideline: **联网搜索生成**：根据用户指定的主题，联网搜索最新信息，生成播客脚本和音频...",
+      "instruction": "**联网搜索生成**：根据用户指定的主题，联网搜索最新信息，生成播客脚本和音频",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_instruction_23488c51",
+      "skill_name": "Podcast Generate",
+      "category": "instruction",
+      "concept": "Rule or guideline: 自动控制时长，根据内容长度自动调整（3-20 分钟）...",
+      "instruction": "自动控制时长，根据内容长度自动调整（3-20 分钟）",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_instruction_4d87df0b",
+      "skill_name": "Podcast Generate",
+      "category": "instruction",
+      "concept": "Rule or guideline: 生成 Markdown 格式的播客脚本（可人工编辑）...",
+      "instruction": "生成 Markdown 格式的播客脚本（可人工编辑）",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_instruction_6644a100",
+      "skill_name": "Podcast Generate",
+      "category": "instruction",
+      "concept": "Rule or guideline: 使用 z-ai TTS 合成高质量音频并拼接为最终播客...",
+      "instruction": "使用 z-ai TTS 合成高质量音频并拼接为最终播客",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_instruction_16c3d47f",
+      "skill_name": "Podcast Generate",
+      "category": "instruction",
+      "concept": "Rule or guideline: 不生成 mp3 / 字幕 / 时间戳...",
+      "instruction": "不生成 mp3 / 字幕 / 时间戳",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_code_pattern_1bc1138a",
+      "skill_name": "Podcast Generate",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from Podcast Generate",
+      "examples": [
+        "npm install\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_code_pattern_7d4faa50",
+      "skill_name": "Podcast Generate",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from Podcast Generate",
+      "examples": [
+        "npm run generate -- --input=test_data/material.txt --out_dir=out\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_code_pattern_a4457788",
+      "skill_name": "Podcast Generate",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from Podcast Generate",
+      "examples": [
+        "# 根据主题搜索并生成播客\nnpm run generate -- --topic=\"最新AI技术突破\" --out_dir=out\n\n# 指定搜索主题和时长\nnpm run generate -- --topic=\"量子计算应用场景\" --out_dir=out --duration=8\n\n# 搜索并生成单人播客\nnpm run generate -- --topic=\"气候变化影响\" --out_dir=out --mode=single-male\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_code_pattern_bc19ee05",
+      "skill_name": "Podcast Generate",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from Podcast Generate",
+      "examples": [
+        "**小谱**：大家好，欢迎收听今天的播客。今天我们来聊一个有趣的话题……\n\n**锤锤**：是啊，这个话题真的很有意思。我最近也在关注……\n\n**小谱**：说到这里，我想给大家举个例子……\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_assessment_e04302ff",
+      "skill_name": "Podcast Generate",
+      "category": "assessment",
+      "concept": "Apply Podcast Generate in a practical project",
+      "instruction": "Demonstrate mastery of Podcast Generate by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using Podcast Generate",
+        "Explain when Podcast Generate should be used",
+        "Identify the core concepts of Podcast Generate",
+        "Apply Podcast Generate to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_podcast generate_contextualization_6ccacb29",
+      "skill_name": "Podcast Generate",
+      "category": "contextualization",
+      "concept": "When to use Podcast Generate",
+      "instruction": "Learn when to apply Podcast Generate in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using Podcast Generate",
+        "User needs help with coding -> evaluate if Podcast Generate applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate Podcast Generate is needed",
+        "Distinguish between Podcast Generate and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 42,
+  "generated_at": "2026-03-24T04:43:44.493050",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/podcast-generate/SKILL.md"
+}

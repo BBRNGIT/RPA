@@ -1,0 +1,846 @@
+{
+  "skill_name": "Agent Browser",
+  "skill_description": "A fast Rust-based headless browser automation CLI with Node.js fallback that enables AI agents to navigate, click, type, and snapshot pages via structured commands.",
+  "items": [
+    {
+      "item_id": "skill_agent browser_concept_2c72b725",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding browser automation with agent-browser",
+      "instruction": "",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_6f3fdd4b",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding installation",
+      "instruction": "",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_663d177a",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding npm recommended",
+      "instruction": "```bash\nnpm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_4766e302",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding from source",
+      "instruction": "```bash\ngit clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_878237ee",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding quick start",
+      "instruction": "```bash\nagent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_8fb8bb56",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding core workflow",
+      "instruction": "1. Navigate: `agent-browser open <url>`\n2. Snapshot: `agent-browser snapshot -i` (returns elements with refs like `@e1`, `@e2`)\n3. Interact using refs from the snapshot\n4. Re-snapshot after navigation or significant DOM changes",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_6f492798",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding commands",
+      "instruction": "",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_6574d00e",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding navigation",
+      "instruction": "```bash\nagent-browser open <url>      # Navigate to URL\nagent-browser back            # Go back\nagent-browser forward         # Go forward\nagent-browser reload          # Reload page\nagent-browser close           # Close browser\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_fd1b88ee",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding snapshot (page analysis)",
+      "instruction": "```bash\nagent-browser snapshot            # Full accessibility tree\nagent-browser snapshot -i         # Interactive elements only (recommended)\nagent-browser snapshot -c         # Compact output\nagent-browser snapshot -d 3       # Limit depth to 3\nagent-browser snapshot -s \"#main\" # Scope to CSS selector\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_de041c98",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding interactions (use @refs from snapshot)",
+      "instruction": "```bash\nagent-browser click @e1           # Click\nagent-browser dblclick @e1        # Double-click\nagent-browser focus @e1           # Focus element\nagent-browser fill @e2 \"text\"     # Clear and type\nagent-browser type @e2 \"text\"     # Type without clearing\nagent-browser press Enter         # Press key\nagent-browser press Control+a     # Key combination\nagent-browser keydown Shift       # Hold key down\nagent-browser keyup Shift         # Release key\nagent-browser hover @e1           # Hover\nagen",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_1c6a8455",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding get information",
+      "instruction": "```bash\nagent-browser get text @e1        # Get element text\nagent-browser get html @e1        # Get innerHTML\nagent-browser get value @e1       # Get input value\nagent-browser get attr @e1 href   # Get attribute\nagent-browser get title           # Get page title\nagent-browser get url             # Get current URL\nagent-browser get count \".item\"   # Count matching elements\nagent-browser get box @e1         # Get bounding box\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_332bd658",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding check state",
+      "instruction": "```bash\nagent-browser is visible @e1      # Check if visible\nagent-browser is enabled @e1      # Check if enabled\nagent-browser is checked @e1      # Check if checked\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_5d996739",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding screenshots & pdf",
+      "instruction": "```bash\nagent-browser screenshot          # Screenshot to stdout\nagent-browser screenshot path.png # Save to file\nagent-browser screenshot --full   # Full page\nagent-browser pdf output.pdf      # Save as PDF\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_fb6004ca",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding video recording",
+      "instruction": "```bash\nagent-browser record start ./demo.webm    # Start recording (uses current URL + state)\nagent-browser click @e1                   # Perform actions\nagent-browser record stop                 # Stop and save video\nagent-browser record restart ./take2.webm # Stop current + start new recording\n```\n\nRecording creates a fresh context but preserves cookies/storage from your session. If no URL is provided, it automatically returns to your current page. For smooth demos, explore first, then start ",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_72d924ac",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding wait",
+      "instruction": "```bash\nagent-browser wait @e1                     # Wait for element\nagent-browser wait 2000                    # Wait milliseconds\nagent-browser wait --text \"Success\"        # Wait for text\nagent-browser wait --url \"/dashboard\"    # Wait for URL pattern\nagent-browser wait --load networkidle      # Wait for network idle\nagent-browser wait --fn \"window.ready\"     # Wait for JS condition\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_c86d94ec",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding mouse control",
+      "instruction": "```bash\nagent-browser mouse move 100 200      # Move mouse\nagent-browser mouse down left         # Press button\nagent-browser mouse up left           # Release button\nagent-browser mouse wheel 100         # Scroll wheel\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_0cc2a4f5",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding semantic locators (alternative to refs)",
+      "instruction": "```bash\nagent-browser find role button click --name \"Submit\"\nagent-browser find text \"Sign In\" click\nagent-browser find label \"Email\" fill \"user@test.com\"\nagent-browser find first \".item\" click\nagent-browser find nth 2 \"a\" text\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_1742dabe",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding browser settings",
+      "instruction": "```bash\nagent-browser set viewport 1920 1080      # Set viewport size\nagent-browser set device \"iPhone 14\"      # Emulate device\nagent-browser set geo 37.7749 -122.4194   # Set geolocation\nagent-browser set offline on              # Toggle offline mode\nagent-browser set headers '{\"X-Key\":\"v\"}' # Extra HTTP headers\nagent-browser set credentials user pass   # HTTP basic auth\nagent-browser set media dark              # Emulate color scheme\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_03a8c5ed",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding cookies & storage",
+      "instruction": "```bash\nagent-browser cookies                     # Get all cookies\nagent-browser cookies set name value      # Set cookie\nagent-browser cookies clear               # Clear cookies\nagent-browser storage local               # Get all localStorage\nagent-browser storage local key           # Get specific key\nagent-browser storage local set k v       # Set value\nagent-browser storage local clear         # Clear all\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_2a90ff34",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding network",
+      "instruction": "```bash\nagent-browser network route <url>              # Intercept requests\nagent-browser network route <url> --abort      # Block requests\nagent-browser network route <url> --body '{}'  # Mock response\nagent-browser network unroute [url]            # Remove routes\nagent-browser network requests                 # View tracked requests\nagent-browser network requests --filter api    # Filter requests\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_86273532",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding tabs & windows",
+      "instruction": "```bash\nagent-browser tab                 # List tabs\nagent-browser tab new [url]       # New tab\nagent-browser tab 2               # Switch to tab\nagent-browser tab close           # Close tab\nagent-browser window new          # New window\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_b2d67e25",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding frames",
+      "instruction": "```bash\nagent-browser frame \"#iframe\"     # Switch to iframe\nagent-browser frame main          # Back to main frame\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_851a1122",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding dialogs",
+      "instruction": "```bash\nagent-browser dialog accept [text]  # Accept dialog\nagent-browser dialog dismiss        # Dismiss dialog\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_f58d4161",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding javascript",
+      "instruction": "```bash\nagent-browser eval \"document.title\"   # Run JavaScript\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_61058271",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding state management",
+      "instruction": "```bash\nagent-browser state save auth.json    # Save session state\nagent-browser state load auth.json    # Load saved state\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_6f54c937",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding example: form submission",
+      "instruction": "```bash\nagent-browser open https://example.com/form\nagent-browser snapshot -i",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_ccbaf62f",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding output shows: textbox \"email\" [ref=e1], textbox \"password\" [ref=e2], button \"submit\" [ref=e3]",
+      "instruction": "agent-browser fill @e1 \"user@example.com\"\nagent-browser fill @e2 \"password123\"\nagent-browser click @e3\nagent-browser wait --load networkidle\nagent-browser snapshot -i  # Check result\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_3a271020",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding example: authentication with saved state",
+      "instruction": "```bash",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_e064a62b",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding login once",
+      "instruction": "agent-browser open https://app.example.com/login\nagent-browser snapshot -i\nagent-browser fill @e1 \"username\"\nagent-browser fill @e2 \"password\"\nagent-browser click @e3\nagent-browser wait --url \"/dashboard\"\nagent-browser state save auth.json",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_67a6977a",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding later sessions: load saved state",
+      "instruction": "agent-browser state load auth.json\nagent-browser open https://app.example.com/dashboard\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_3e959e6a",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding sessions (parallel browsers)",
+      "instruction": "```bash\nagent-browser --session test1 open site-a.com\nagent-browser --session test2 open site-b.com\nagent-browser session list\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_38129ed6",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding json output (for parsing)",
+      "instruction": "Add `--json` for machine-readable output:\n\n```bash\nagent-browser snapshot -i --json\nagent-browser get text @e1 --json\n```",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_673dc45a",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding debugging",
+      "instruction": "```bash\nagent-browser open example.com --headed              # Show browser window\nagent-browser console                                # View console messages\nagent-browser console --clear                        # Clear console\nagent-browser errors                                 # View page errors\nagent-browser errors --clear                         # Clear errors\nagent-browser highlight @e1                          # Highlight element\nagent-browser trace start                            # Sta",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_639afca8",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding troubleshooting",
+      "instruction": "- If the command is not found on Linux ARM64, use the full path in the bin folder.\n- If an element is not found, use snapshot to find the correct ref.\n- If the page is not loaded, add a wait command after navigation.\n- Use --headed to see the browser window for debugging.",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_8cc547c5",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding options",
+      "instruction": "- --session <name> uses an isolated session.\n- --json provides JSON output.\n- --full takes a full page screenshot.\n- --headed shows the browser window.\n- --timeout sets the command timeout in milliseconds.\n- --cdp <port> connects via Chrome DevTools Protocol.",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_889277d4",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding notes",
+      "instruction": "- Refs are stable per page load but change on navigation.\n- Always snapshot after navigation to get new refs.\n- Use fill instead of type for input fields to ensure existing text is cleared.",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_concept_13a47c83",
+      "skill_name": "Agent Browser",
+      "category": "concept",
+      "concept": "Understanding reporting issues",
+      "instruction": "- Skill issues: Open an issue at https://github.com/TheSethRose/Agent-Browser-CLI\n- agent-browser CLI issues: Open an issue at https://github.com/vercel-labs/agent-browser",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n",
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n",
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_instruction_4400273d",
+      "skill_name": "Agent Browser",
+      "category": "instruction",
+      "concept": "Rule or guideline: Automating web interactions...",
+      "instruction": "Automating web interactions",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_instruction_b31721cd",
+      "skill_name": "Agent Browser",
+      "category": "instruction",
+      "concept": "Rule or guideline: Extracting structured data from pages...",
+      "instruction": "Extracting structured data from pages",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_instruction_81e566e5",
+      "skill_name": "Agent Browser",
+      "category": "instruction",
+      "concept": "Rule or guideline: Filling forms programmatically...",
+      "instruction": "Filling forms programmatically",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_instruction_65bdb47f",
+      "skill_name": "Agent Browser",
+      "category": "instruction",
+      "concept": "Rule or guideline: Testing web UIs...",
+      "instruction": "Testing web UIs",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_instruction_f3fa436a",
+      "skill_name": "Agent Browser",
+      "category": "instruction",
+      "concept": "Rule or guideline: If the command is not found on Linux ARM64, use th...",
+      "instruction": "If the command is not found on Linux ARM64, use the full path in the bin folder.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_instruction_12b8dc02",
+      "skill_name": "Agent Browser",
+      "category": "instruction",
+      "concept": "Rule or guideline: If an element is not found, use snapshot to find t...",
+      "instruction": "If an element is not found, use snapshot to find the correct ref.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_instruction_36fa1e2d",
+      "skill_name": "Agent Browser",
+      "category": "instruction",
+      "concept": "Rule or guideline: If the page is not loaded, add a wait command afte...",
+      "instruction": "If the page is not loaded, add a wait command after navigation.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_instruction_2fd20a91",
+      "skill_name": "Agent Browser",
+      "category": "instruction",
+      "concept": "Rule or guideline: Use --headed to see the browser window for debuggi...",
+      "instruction": "Use --headed to see the browser window for debugging.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_instruction_a032528e",
+      "skill_name": "Agent Browser",
+      "category": "instruction",
+      "concept": "Rule or guideline: --session <name> uses an isolated session....",
+      "instruction": "--session <name> uses an isolated session.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_instruction_da64c9ad",
+      "skill_name": "Agent Browser",
+      "category": "instruction",
+      "concept": "Rule or guideline: --json provides JSON output....",
+      "instruction": "--json provides JSON output.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_code_pattern_b8d55a08",
+      "skill_name": "Agent Browser",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from Agent Browser",
+      "examples": [
+        "npm install -g agent-browser\nagent-browser install\nagent-browser install --with-deps\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_code_pattern_0aa69a35",
+      "skill_name": "Agent Browser",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from Agent Browser",
+      "examples": [
+        "git clone https://github.com/vercel-labs/agent-browser\ncd agent-browser\npnpm install\npnpm build\nagent-browser install\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_code_pattern_587bf662",
+      "skill_name": "Agent Browser",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from Agent Browser",
+      "examples": [
+        "agent-browser open <url>        # Navigate to page\nagent-browser snapshot -i       # Get interactive elements with refs\nagent-browser click @e1         # Click element by ref\nagent-browser fill @e2 \"text\"   # Fill input by ref\nagent-browser close             # Close browser\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_code_pattern_068cb8e5",
+      "skill_name": "Agent Browser",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from Agent Browser",
+      "examples": [
+        "agent-browser open <url>      # Navigate to URL\nagent-browser back            # Go back\nagent-browser forward         # Go forward\nagent-browser reload          # Reload page\nagent-browser close           # Close browser\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_code_pattern_0fe712e1",
+      "skill_name": "Agent Browser",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from Agent Browser",
+      "examples": [
+        "agent-browser snapshot            # Full accessibility tree\nagent-browser snapshot -i         # Interactive elements only (recommended)\nagent-browser snapshot -c         # Compact output\nagent-browser snapshot -d 3       # Limit depth to 3\nagent-browser snapshot -s \"#main\" # Scope to CSS selector\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_assessment_a1fc20be",
+      "skill_name": "Agent Browser",
+      "category": "assessment",
+      "concept": "Apply Agent Browser in a practical project",
+      "instruction": "Demonstrate mastery of Agent Browser by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using Agent Browser",
+        "Explain when Agent Browser should be used",
+        "Identify the core concepts of Agent Browser",
+        "Apply Agent Browser to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_agent browser_contextualization_917d5f2d",
+      "skill_name": "Agent Browser",
+      "category": "contextualization",
+      "concept": "When to use Agent Browser",
+      "instruction": "Learn when to apply Agent Browser in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using Agent Browser",
+        "User needs help with coding -> evaluate if Agent Browser applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate Agent Browser is needed",
+        "Distinguish between Agent Browser and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 54,
+  "generated_at": "2026-03-24T04:43:44.493479",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/agent-browser/SKILL.md"
+}

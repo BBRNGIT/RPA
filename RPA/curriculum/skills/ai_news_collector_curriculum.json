@@ -1,0 +1,590 @@
+{
+  "skill_name": "ai-news-collector",
+  "skill_description": "AI 新闻聚合与热度排序工具。当用户询问 AI 领域最新动态时触发，如：\"今天有什么 AI 新闻？\"\"总结一下这周的 AI 动态\"\"最近有什么火的 AI 产品？\"\"AI 圈最近在讨论什么？\"。覆盖：新产品发布、研究论文、行业动态、融资新闻、开源项目更新、社区病毒传播现象、AI 工具/Agent 热门项目。输出中文摘要列表，按热度排序，附带原文链接。",
+  "items": [
+    {
+      "item_id": "skill_ai_news_collector_concept_98308a5e",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding ai news collector",
+      "instruction": "收集、聚合并按热度排序 AI 领域新闻。",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_820a171d",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 核心原则",
+      "instruction": "**不要只搜\"AI news today\"。** 泛搜索返回的是 SEO 聚合页和趋势预测文章，会系统性遗漏社区级病毒传播现象（如开源工具爆火、Meme 级事件）。必须用多维度、分层搜索策略。",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_2bd85a51",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 工作流程",
+      "instruction": "",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_ddf1eba6",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 1. 多维度分层搜索（最少 8 次，建议 10-12 次）",
+      "instruction": "按以下 **6 个维度** 依次执行搜索，每个维度至少 1 次：",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_a64e66f1",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 维度 a：周报/newsletter 聚合（最优先 🔑）",
+      "instruction": "这是信息密度最高的来源，一篇文章可覆盖 10+ 条新闻。\n\n```\n搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n```\n\n发现周报后，用 web_fetch 获取全文，从中提取所有新闻线索。",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_04a9c846",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 维度 b：社区热度/病毒传播（关键维度 🔑）",
+      "instruction": "捕捉自下而上的社区爆款，这类信息泛搜索几乎无法触达。\n\n```\n搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n```",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_4aa16629",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 维度 c：产品发布与模型更新",
+      "instruction": "```\n搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n```",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_3b41525b",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 维度 d：融资与商业",
+      "instruction": "```\n搜索词：\n- \"AI startup funding\" [当前月份年份]\n- \"AI acquisition\" OR \"AI IPO\"\n- \"AI 融资\" OR \"人工智能投资\"\n```",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_7be3b1ba",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 维度 e：研究突破",
+      "instruction": "```\n搜索词：\n- \"AI breakthrough\" OR \"AI paper\" [当前月份]\n- \"state of the art\" machine learning\n- \"AI 论文\" OR \"机器学习突破\"\n```",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_4e694346",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 维度 f：监管与政策",
+      "instruction": "```\n搜索词：\n- \"AI regulation\" OR \"AI policy\" [当前月份年份]\n- \"AI law\" OR \"AI governance\" \n- \"AI 监管\" OR \"人工智能法案\"\n```",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_542ed06c",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 2. 交叉验证与补漏",
+      "instruction": "初轮搜索完成后，检查是否有遗漏：\n\n- 如果 Newsletter 中提到了某个项目/事件但初轮搜索未覆盖 → 对该项目专项搜索\n- 如果同一事件被 3+ 个不同来源提及 → 大概率是热点，深入搜索获取更多细节\n- 如果中文媒体和英文媒体的热点完全不同 → 两边都要覆盖",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_ab36e851",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 3. 搜索关键词设计原则（反模式清单）",
+      "instruction": "| ❌ 不要这样搜 | ✅ 应该这样搜 | 原因 |\n|---|---|---|\n| \"AI news today February 2026\" | \"AI weekly roundup February 2026\" | 前者返回聚合页，后者返回策划内容 |\n| \"AI news today\" | \"viral AI tool\" + \"AI model release\" 分开搜 | 泛搜无法覆盖社区现象 |\n| \"artificial intelligence breaking news\" | 按维度分类搜索 | 过于宽泛，返回噪音 |\n| 搜索词中加具体年月日 | 用 \"this week\" \"today\" \"latest\" | 日期反而会偏向预测/展望文章 |\n| 只搜 3 次就开始写 | 至少 8 次，覆盖 6 个维度 | 3 次搜索覆盖率不到 30% |",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_edfba3e4",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 4. 热度综合判断",
+      "instruction": "基于以下信号评估每条新闻热度（1-5 星）：\n\n| 信号 | 权重 | 说明 |\n|------|------|------|\n| 多家媒体报道同一事件 | ⭐⭐⭐ 高 | 3+ 来源 = 确认热点 |\n| 社区病毒传播证据 | ⭐⭐⭐ 高 | GitHub star 暴涨、Twitter 刷屏、HN 首页 |\n| 来自权威来源（顶会、大厂官宣） | ⭐⭐⭐ 高 | 但注意大厂 PR 不等于真热点 |\n| 实际用户体验分享 | ⭐⭐ 中 | 有人真的在用 > 只是发布了 |\n| 技术突破性/影响范围 | ⭐⭐ 中 | |\n| 争议性（安全、伦理讨论） | ⭐⭐ 中 | 争议往往说明影响力大 |\n| 时效性（越新越热） | ⭐ 中低 | 辅助排序 |",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_e34e3281",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 5. 输出格式",
+      "instruction": "按热度降序排列，输出 **15-25 条**新闻：\n\n```",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_0d3b9382",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 🔥 ai 新闻速递（yyyy-mm-dd）",
+      "instruction": "",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_1978f4a1",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding ⭐⭐⭐⭐⭐ 热度最高",
+      "instruction": "1. **[新闻标题]**\n   > 一句话摘要（不超过 50 字）\n   > 🔗 [来源名称](URL)",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_7c46b4e1",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding ⭐⭐⭐⭐ 高热度",
+      "instruction": "2. ...",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_6d0baca4",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding ⭐⭐⭐ 中等热度",
+      "instruction": "...\n\n---\n📊 本次共收集 XX 条新闻 | 搜索 XX 次 | 覆盖维度：A/B/C/D/E/F | 更新时间：HH:MM\n```",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_d47c8932",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 6. 去重与合并",
+      "instruction": "- 同一事件被多家报道时，合并为一条，选择最权威/详细的来源\n- 在摘要中注明\"多家媒体报道\"以体现热度\n- 改名/更名的项目视为同一事件（如 Clawdbot → Moltbot → OpenClaw）",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_b69b0fbb",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 推荐新闻源",
+      "instruction": "详见 [references/sources.md](references/sources.md)。",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_concept_5bea2c6c",
+      "skill_name": "ai-news-collector",
+      "category": "concept",
+      "concept": "Understanding 注意事项",
+      "instruction": "- 优先使用 HTTPS 链接\n- 遇到付费墙/无法访问的内容，标注\"需订阅\"\n- 保持客观，不对新闻内容做主观评价\n- 搜索不足 8 次不要开始输出\n- 如果某个维度搜索结果为空，换关键词再搜一次",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n",
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n",
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_instruction_9f729535",
+      "skill_name": "ai-news-collector",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"last week in AI\" [当前月份年份]...",
+      "instruction": "\"last week in AI\" [当前月份年份]",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_instruction_eff31ff2",
+      "skill_name": "ai-news-collector",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"AI weekly roundup\" [当前月份年份]...",
+      "instruction": "\"AI weekly roundup\" [当前月份年份]",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_instruction_ea9ea165",
+      "skill_name": "ai-news-collector",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"the batch AI newsletter\"...",
+      "instruction": "\"the batch AI newsletter\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_instruction_a09276cb",
+      "skill_name": "ai-news-collector",
+      "category": "instruction",
+      "concept": "Rule or guideline: site:substack.com AI news [当前月份]...",
+      "instruction": "site:substack.com AI news [当前月份]",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_instruction_2c621b58",
+      "skill_name": "ai-news-collector",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"viral AI tool\" OR \"viral AI agent\"...",
+      "instruction": "\"viral AI tool\" OR \"viral AI agent\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_instruction_64658389",
+      "skill_name": "ai-news-collector",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"AI trending\" site:reddit.com OR site:news.ycombin...",
+      "instruction": "\"AI trending\" site:reddit.com OR site:news.ycombinator.com",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_instruction_173c3e39",
+      "skill_name": "ai-news-collector",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"GitHub trending AI\" OR \"AI open source trending\"...",
+      "instruction": "\"GitHub trending AI\" OR \"AI open source trending\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_instruction_7cdeef79",
+      "skill_name": "ai-news-collector",
+      "category": "instruction",
+      "concept": "Rule or guideline: AI buzzing OR \"everyone is talking about\" AI...",
+      "instruction": "AI buzzing OR \"everyone is talking about\" AI",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_instruction_55bbb18f",
+      "skill_name": "ai-news-collector",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"most popular AI\" this week...",
+      "instruction": "\"most popular AI\" this week",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_instruction_1b01f293",
+      "skill_name": "ai-news-collector",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"AI model release\" OR \"LLM launch\" [当前月份]...",
+      "instruction": "\"AI model release\" OR \"LLM launch\" [当前月份]",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_code_pattern_e3ac64c5",
+      "skill_name": "ai-news-collector",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from ai-news-collector",
+      "examples": [
+        "搜索词：\n- \"last week in AI\" [当前月份年份]\n- \"AI weekly roundup\" [当前月份年份]\n- \"the batch AI newsletter\"\n- site:substack.com AI news [当前月份]\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_code_pattern_92b0547a",
+      "skill_name": "ai-news-collector",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from ai-news-collector",
+      "examples": [
+        "搜索词：\n- \"viral AI tool\" OR \"viral AI agent\"\n- \"AI trending\" site:reddit.com OR site:news.ycombinator.com\n- \"GitHub trending AI\" OR \"AI open source trending\"\n- AI buzzing OR \"everyone is talking about\" AI\n- \"most popular AI\" this week\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_code_pattern_20aade02",
+      "skill_name": "ai-news-collector",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from ai-news-collector",
+      "examples": [
+        "搜索词：\n- \"AI model release\" OR \"LLM launch\" [当前月份]\n- \"AI product launch\" [当前月份年份]\n- OpenAI OR Anthropic OR Google OR Meta AI announcement\n- \"大模型 发布\" OR \"AI 新产品\"\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_code_pattern_cd8f73d1",
+      "skill_name": "ai-news-collector",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from ai-news-collector",
+      "examples": [
+        "搜索词：\n- \"AI startup funding\" [当前月份年份]\n- \"AI acquisition\" OR \"AI IPO\"\n- \"AI 融资\" OR \"人工智能投资\"\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_code_pattern_8871190a",
+      "skill_name": "ai-news-collector",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from ai-news-collector",
+      "examples": [
+        "搜索词：\n- \"AI breakthrough\" OR \"AI paper\" [当前月份]\n- \"state of the art\" machine learning\n- \"AI 论文\" OR \"机器学习突破\"\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_assessment_f8d9b554",
+      "skill_name": "ai-news-collector",
+      "category": "assessment",
+      "concept": "Apply ai-news-collector in a practical project",
+      "instruction": "Demonstrate mastery of ai-news-collector by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using ai-news-collector",
+        "Explain when ai-news-collector should be used",
+        "Identify the core concepts of ai-news-collector",
+        "Apply ai-news-collector to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_ai_news_collector_contextualization_a549863f",
+      "skill_name": "ai-news-collector",
+      "category": "contextualization",
+      "concept": "When to use ai-news-collector",
+      "instruction": "Learn when to apply ai-news-collector in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using ai-news-collector",
+        "User needs help with coding -> evaluate if ai-news-collector applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate ai-news-collector is needed",
+        "Distinguish between ai-news-collector and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 38,
+  "generated_at": "2026-03-24T04:43:44.497704",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/ai-news-collectors/SKILL.md"
+}

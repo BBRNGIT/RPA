@@ -1,0 +1,1025 @@
+{
+  "skill_name": "web-reader",
+  "skill_description": "Implement web page content extraction capabilities using the z-ai-web-dev-sdk. Use this skill when the user needs to scrape web pages, extract article content, retrieve page metadata, or build applications that process web content. Supports automatic content extraction with title, HTML, and publication time retrieval.",
+  "items": [
+    {
+      "item_id": "skill_web_reader_concept_4720e4d9",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding web reader skill",
+      "instruction": "This skill guides the implementation of web page reading and content extraction functionality using the z-ai-web-dev-sdk package, enabling applications to fetch and process web page content programmatically.",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_b7bc7921",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding skills path",
+      "instruction": "**Skill Location**: `{project_path}/skills/web-reader`\n\nThis skill is located at the above path in your project.\n\n**Reference Scripts**: Example test scripts are available in the `{Skill Location}/scripts/` directory for quick testing and reference. See `{Skill Location}/scripts/web-reader.ts` for a working example.",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_893552ec",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "Web Reader allows you to build applications that can extract content from web pages, retrieve article metadata, and process HTML content. The API automatically handles content extraction, providing clean, structured data from any web URL.\n\n**IMPORTANT**: z-ai-web-dev-sdk MUST be used in backend code only. Never use it in client-side code.",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_21f4d22f",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding prerequisites",
+      "instruction": "The z-ai-web-dev-sdk package is already installed. Import it as shown in the examples below.",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_655c9294",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding cli usage (for simple tasks)",
+      "instruction": "For simple web page content extraction, you can use the z-ai CLI instead of writing code. This is ideal for quick content scraping, testing URLs, or simple automation tasks.",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_6c097958",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding basic page reading",
+      "instruction": "```bash",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_56063bee",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding extract content from a web page",
+      "instruction": "z-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_ff4784de",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding using short options",
+      "instruction": "z-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n```",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_f8a20cf2",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding save page content",
+      "instruction": "```bash",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_a567b925",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding save extracted content to json file",
+      "instruction": "z-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_4b9902ab",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding extract and save blog post",
+      "instruction": "z-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n```",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_8fdccf0f",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding common use cases",
+      "instruction": "1. **News Aggregation**: Collect and aggregate news articles from multiple sources\n2. **Content Monitoring**: Track changes on specific web pages\n3. **Research Tools**: Extract information from academic or reference websites\n4. **Price Tracking**: Monitor product pages for price changes\n5. **SEO Analysis**: Extract page metadata and content for SEO purposes\n6. **Archive Creation**: Create local copies of web content\n7. **Content Curation**: Collect and organize web content by topic\n8. **Competit",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_8e959944",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding extract news article",
+      "instruction": "z-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_eeaf714f",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding read documentation page",
+      "instruction": "z-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_0664ca6c",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding scrape blog content",
+      "instruction": "z-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_e17fd0f0",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding extract research article",
+      "instruction": "z-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n```",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_310ab970",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding cli parameters",
+      "instruction": "- `--name, -n`: **Required** - Function name (use \"page_reader\")\n- `--args, -a`: **Required** - JSON arguments object with:\n  - `url` (string, required): The URL of the web page to read\n- `--output, -o <path>`: Optional - Output file path (JSON format)",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_4155adab",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding response structure",
+      "instruction": "The CLI returns a JSON object containing:\n- `title`: Page title\n- `html`: Main content HTML\n- `text`: Plain text content\n- `publish_time`: Publication timestamp (if available)\n- `url`: Original URL\n- `metadata`: Additional page metadata",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_4735b203",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding example response",
+      "instruction": "```json\n{\n  \"title\": \"Introduction to Machine Learning\",\n  \"html\": \"<article><h1>Introduction to Machine Learning</h1><p>Machine learning is...</p></article>\",\n  \"text\": \"Introduction to Machine Learning\\n\\nMachine learning is...\",\n  \"publish_time\": \"2024-01-15T10:30:00Z\",\n  \"url\": \"https://example.com/ml-intro\",\n  \"metadata\": {\n    \"author\": \"John Doe\",\n    \"description\": \"A comprehensive guide to ML\"\n  }\n}\n```",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_82d68862",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding processing multiple urls",
+      "instruction": "```bash",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_50026761",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding create a simple script to process multiple urls",
+      "instruction": "for url in \\\n  \"https://site1.com/article1\" \\\n  \"https://site2.com/article2\" \\\n  \"https://site3.com/article3\"\ndo\n  filename=$(echo $url | md5sum | cut -d' ' -f1)\n  z-ai function -n page_reader -a \"{\\\"url\\\": \\\"$url\\\"}\" -o \"${filename}.json\"\ndone\n```",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_b2a32cc1",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding when to use cli vs sdk",
+      "instruction": "**Use CLI for:**\n- Quick content extraction\n- Testing URL accessibility\n- Simple web scraping tasks\n- One-off content retrieval\n\n**Use SDK for:**\n- Batch URL processing with custom logic\n- Integration with web applications\n- Complex content processing pipelines\n- Production applications with error handling",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_8e4a56f0",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding how it works",
+      "instruction": "The Web Reader uses the `page_reader` function to:\n1. Fetch the web page content\n2. Extract main article content and metadata\n3. Parse and clean the HTML\n4. Return structured data including title, content, and publication time",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_e6b6a60f",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding basic web reading implementation",
+      "instruction": "",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_4b09f003",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding simple page reading",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function readWebPage(url) {\n  try {\n    const zai = await ZAI.create();\n\n    const result = await zai.functions.invoke('page_reader', {\n      url: url\n    });\n\n    console.log('Title:', result.data.title);\n    console.log('URL:', result.data.url);\n    console.log('Published:', result.data.publishedTime);\n    console.log('HTML Content:', result.data.html);\n    console.log('Tokens Used:', result.data.usage.tokens);\n\n    return result.data;\n ",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_66636f45",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding extract article text only",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function extractArticleText(url) {\n  const zai = await ZAI.create();\n\n  const result = await zai.functions.invoke('page_reader', {\n    url: url\n  });\n\n  // Convert HTML to plain text (basic approach)\n  const plainText = result.data.html\n    .replace(/<[^>]*>/g, ' ')\n    .replace(/\\s+/g, ' ')\n    .trim();\n\n  return {\n    title: result.data.title,\n    text: plainText,\n    url: result.data.url,\n    publishedTime: result.data.publishedTime\n  }",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_c8042037",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding read multiple pages",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function readMultiplePages(urls) {\n  const zai = await ZAI.create();\n  const results = [];\n\n  for (const url of urls) {\n    try {\n      const result = await zai.functions.invoke('page_reader', {\n        url: url\n      });\n\n      results.push({\n        url: url,\n        success: true,\n        data: result.data\n      });\n    } catch (error) {\n      results.push({\n        url: url,\n        success: false,\n        error: error.message\n      })",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_aca3625b",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding advanced use cases",
+      "instruction": "",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_c4d2f9de",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding web content analyzer",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass WebContentAnalyzer {\n  constructor() {\n    this.cache = new Map();\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async readPage(url, useCache = true) {\n    // Check cache\n    if (useCache && this.cache.has(url)) {\n      console.log('Returning cached result for:', url);\n      return this.cache.get(url);\n    }\n\n    // Fetch fresh content\n    const result = await this.zai.functions.invoke('page_reader', {\n      url: ur",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_4626465f",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding rss feed reader",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass FeedReader {\n  constructor() {\n    this.articles = [];\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async fetchArticlesFromUrls(urls) {\n    const articles = [];\n\n    for (const url of urls) {\n      try {\n        const result = await this.zai.functions.invoke('page_reader', {\n          url: url\n        });\n\n        articles.push({\n          title: result.data.title,\n          url: result.data.url,\n          publishe",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_a31a6083",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding content aggregator",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function aggregateContent(urls, options = {}) {\n  const zai = await ZAI.create();\n  const aggregated = {\n    sources: [],\n    totalWords: 0,\n    aggregatedAt: new Date().toISOString()\n  };\n\n  for (const url of urls) {\n    try {\n      const result = await zai.functions.invoke('page_reader', {\n        url: url\n      });\n\n      const text = result.data.html.replace(/<[^>]*>/g, ' ');\n      const wordCount = text.split(/\\s+/).filter(w => w.leng",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_c267347d",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding web scraping pipeline",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass ScrapingPipeline {\n  constructor() {\n    this.processors = [];\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  addProcessor(name, processorFn) {\n    this.processors.push({ name, fn: processorFn });\n  }\n\n  async scrape(url) {\n    // Fetch the page\n    const result = await this.zai.functions.invoke('page_reader', {\n      url: url\n    });\n\n    let data = {\n      raw: result.data,\n      processed: {}\n    };\n\n    // Run th",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_317daf49",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding response format",
+      "instruction": "",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_5b403afb",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding successful response",
+      "instruction": "```typescript\n{\n  code: 200,\n  status: 200,\n  data: {\n    title: \"Article Title\",\n    url: \"https://example.com/article\",\n    html: \"<div>Article content...</div>\",\n    publishedTime: \"2025-01-15T10:30:00Z\",\n    usage: {\n      tokens: 1500\n    }\n  },\n  meta: {\n    usage: {\n      tokens: 1500\n    }\n  }\n}\n```",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_2b9d04ad",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding response fields",
+      "instruction": "| Field | Type | Description |\n|-------|------|-------------|\n| `code` | number | Response status code |\n| `status` | number | HTTP status code |\n| `data.title` | string | Page title |\n| `data.url` | string | Page URL |\n| `data.html` | string | Extracted HTML content |\n| `data.publishedTime` | string | Publication date (optional) |\n| `data.usage.tokens` | number | Tokens used for processing |\n| `meta.usage.tokens` | number | Total tokens used |",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_028cdd72",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding best practices",
+      "instruction": "",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_0a919f95",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding 1. error handling",
+      "instruction": "```javascript\nasync function safeReadPage(url) {\n  try {\n    const zai = await ZAI.create();\n\n    // Validate URL\n    if (!url || !url.startsWith('http')) {\n      throw new Error('Invalid URL format');\n    }\n\n    const result = await zai.functions.invoke('page_reader', {\n      url: url\n    });\n\n    // Check response status\n    if (result.code !== 200) {\n      throw new Error(`Failed to fetch page: ${result.code}`);\n    }\n\n    // Verify essential data\n    if (!result.data.html || !result.data.tit",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_63fff0c5",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding 2. rate limiting",
+      "instruction": "```javascript\nclass RateLimitedReader {\n  constructor(requestsPerMinute = 10) {\n    this.requestsPerMinute = requestsPerMinute;\n    this.requestTimes = [];\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async readPage(url) {\n    await this.waitForRateLimit();\n\n    const result = await this.zai.functions.invoke('page_reader', {\n      url: url\n    });\n\n    this.requestTimes.push(Date.now());\n    return result.data;\n  }\n\n  async waitForRateLimit() {\n    const now = Date.now()",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_7c474670",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding 3. caching strategy",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass CachedWebReader {\n  constructor(cacheDuration = 3600000) { // 1 hour default\n    this.cache = new Map();\n    this.cacheDuration = cacheDuration;\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async readPage(url, forceRefresh = false) {\n    const cacheKey = url;\n    const cached = this.cache.get(cacheKey);\n\n    // Return cached if valid and not forcing refresh\n    if (cached && !forceRefresh) {\n      const age = Date.",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_55900283",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding 4. parallel processing",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function readPagesInParallel(urls, concurrency = 3) {\n  const zai = await ZAI.create();\n  const results = [];\n  \n  // Process in batches\n  for (let i = 0; i < urls.length; i += concurrency) {\n    const batch = urls.slice(i, i + concurrency);\n    \n    const batchResults = await Promise.allSettled(\n      batch.map(url =>\n        zai.functions.invoke('page_reader', { url })\n          .then(result => ({\n            url: url,\n            succes",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_eb9f7f48",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding 5. content processing",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass ContentProcessor {\n  static extractMainContent(html) {\n    // Remove scripts, styles, and comments\n    let content = html\n      .replace(/<script[^>]*>[\\s\\S]*?<\\/script>/gi, '')\n      .replace(/<style[^>]*>[\\s\\S]*?<\\/style>/gi, '')\n      .replace(/<!--[\\s\\S]*?-->/g, '');\n\n    return content;\n  }\n\n  static htmlToPlainText(html) {\n    return html\n      .replace(/<br\\s*\\/?>/gi, '\\n')\n      .replace(/<\\/p>/gi, '\\n\\n')\n      .replace(/<[^>]*>/g",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_ff7ec4cc",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding integration examples",
+      "instruction": "",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_9b59d3e0",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding express.js api endpoint",
+      "instruction": "```javascript\nimport express from 'express';\nimport ZAI from 'z-ai-web-dev-sdk';\n\nconst app = express();\napp.use(express.json());\n\nlet zaiInstance;\n\nasync function initZAI() {\n  zaiInstance = await ZAI.create();\n}\n\napp.post('/api/read-page', async (req, res) => {\n  try {\n    const { url } = req.body;\n\n    if (!url) {\n      return res.status(400).json({ \n        error: 'URL is required' \n      });\n    }\n\n    const result = await zaiInstance.functions.invoke('page_reader', {\n      url: url\n    });",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_03ca3c97",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding scheduled content fetcher",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport cron from 'node-cron';\n\nclass ScheduledFetcher {\n  constructor() {\n    this.urls = [];\n    this.results = [];\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  addUrl(url, schedule) {\n    this.urls.push({ url, schedule });\n  }\n\n  async fetchContent(url) {\n    try {\n      const result = await this.zai.functions.invoke('page_reader', {\n        url: url\n      });\n\n      return {\n        url: url,\n        success: true,\n   ",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_217fa07a",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding troubleshooting",
+      "instruction": "**Issue**: \"SDK must be used in backend\"\n- **Solution**: Ensure z-ai-web-dev-sdk is only imported and used in server-side code\n\n**Issue**: Failed to fetch page (404, 403, etc.)\n- **Solution**: Verify the URL is accessible and not behind authentication/paywall\n\n**Issue**: Incomplete or missing content\n- **Solution**: Some pages may have dynamic content that requires JavaScript. The reader extracts static HTML content.\n\n**Issue**: High token usage\n- **Solution**: The token usage depends on page si",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_20e20ff3",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding performance tips",
+      "instruction": "1. **Implement caching**: Cache frequently accessed pages to reduce API calls\n2. **Use parallel processing**: Fetch multiple pages concurrently (with rate limiting)\n3. **Process content efficiently**: Extract only needed information from HTML\n4. **Set timeouts**: Implement reasonable timeouts for page fetching\n5. **Monitor token usage**: Track usage to optimize costs\n6. **Batch operations**: Group multiple URL fetches when possible",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_ec978cfb",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding security considerations",
+      "instruction": "- Validate all URLs before processing\n- Sanitize extracted HTML content before displaying\n- Implement rate limiting to prevent abuse\n- Never expose SDK credentials in client-side code\n- Be respectful of robots.txt and website terms of service\n- Handle user data according to privacy regulations\n- Implement proper error handling for failed requests",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_concept_cdf69b41",
+      "skill_name": "web-reader",
+      "category": "concept",
+      "concept": "Understanding remember",
+      "instruction": "- Always use z-ai-web-dev-sdk in backend code only\n- The SDK is already installed - import as shown in examples\n- Implement proper error handling for robust applications\n- Use caching to improve performance and reduce costs\n- Respect website terms of service and rate limits\n- Process HTML content carefully to extract meaningful data\n- Monitor token usage for cost optimization",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n",
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n",
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_instruction_c76ebb55",
+      "skill_name": "web-reader",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--name, -n`: **Required** - Function name (use \"p...",
+      "instruction": "`--name, -n`: **Required** - Function name (use \"page_reader\")",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_instruction_612ca9b2",
+      "skill_name": "web-reader",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--args, -a`: **Required** - JSON arguments object...",
+      "instruction": "`--args, -a`: **Required** - JSON arguments object with:",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_instruction_e2b83155",
+      "skill_name": "web-reader",
+      "category": "instruction",
+      "concept": "Rule or guideline: `url` (string, required): The URL of the web page ...",
+      "instruction": "`url` (string, required): The URL of the web page to read",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_instruction_60bb3d7d",
+      "skill_name": "web-reader",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--output, -o <path>`: Optional - Output file path...",
+      "instruction": "`--output, -o <path>`: Optional - Output file path (JSON format)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_instruction_d275813a",
+      "skill_name": "web-reader",
+      "category": "instruction",
+      "concept": "Rule or guideline: `title`: Page title...",
+      "instruction": "`title`: Page title",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_instruction_82ba9220",
+      "skill_name": "web-reader",
+      "category": "instruction",
+      "concept": "Rule or guideline: `html`: Main content HTML...",
+      "instruction": "`html`: Main content HTML",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_instruction_15f40f89",
+      "skill_name": "web-reader",
+      "category": "instruction",
+      "concept": "Rule or guideline: `text`: Plain text content...",
+      "instruction": "`text`: Plain text content",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_instruction_8a67627b",
+      "skill_name": "web-reader",
+      "category": "instruction",
+      "concept": "Rule or guideline: `publish_time`: Publication timestamp (if availabl...",
+      "instruction": "`publish_time`: Publication timestamp (if available)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_instruction_ea478eea",
+      "skill_name": "web-reader",
+      "category": "instruction",
+      "concept": "Rule or guideline: `url`: Original URL...",
+      "instruction": "`url`: Original URL",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_instruction_a2939166",
+      "skill_name": "web-reader",
+      "category": "instruction",
+      "concept": "Rule or guideline: `metadata`: Additional page metadata...",
+      "instruction": "`metadata`: Additional page metadata",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_code_pattern_2dfa0872",
+      "skill_name": "web-reader",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from web-reader",
+      "examples": [
+        "# Extract content from a web page\nz-ai function --name \"page_reader\" --args '{\"url\": \"https://example.com\"}'\n\n# Using short options\nz-ai function -n page_reader -a '{\"url\": \"https://www.example.com/article\"}'\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_code_pattern_6e78a367",
+      "skill_name": "web-reader",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from web-reader",
+      "examples": [
+        "# Save extracted content to JSON file\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.example.com/article\"}' \\\n  -o page_content.json\n\n# Extract and save blog post\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://blog.example.com/post/123\"}' \\\n  -o blog_post.json\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_code_pattern_c9ac3ae3",
+      "skill_name": "web-reader",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from web-reader",
+      "examples": [
+        "# Extract news article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://news.site.com/breaking-news\"}' \\\n  -o news.json\n\n# Read documentation page\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://docs.example.com/getting-started\"}' \\\n  -o docs.json\n\n# Scrape blog content\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://techblog.com/ai-trends-2024\"}' \\\n  -o blog.json\n\n# Extract research article\nz-ai function \\\n  -n page_reader \\\n  -a '{\"url\": \"https://research.org/papers/quantum-computing\"}' \\\n  -o research.json\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_code_pattern_41510188",
+      "skill_name": "web-reader",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from web-reader",
+      "examples": [
+        "{\n  \"title\": \"Introduction to Machine Learning\",\n  \"html\": \"<article><h1>Introduction to Machine Learning</h1><p>Machine learning is...</p></article>\",\n  \"text\": \"Introduction to Machine Learning\\n\\nMachine learning is...\",\n  \"publish_time\": \"2024-01-15T10:30:00Z\",\n  \"url\": \"https://example.com/ml-intro\",\n  \"metadata\": {\n    \"author\": \"John Doe\",\n    \"description\": \"A comprehensive guide to ML\"\n  }\n}\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_code_pattern_25d023f9",
+      "skill_name": "web-reader",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from web-reader",
+      "examples": [
+        "# Create a simple script to process multiple URLs\nfor url in \\\n  \"https://site1.com/article1\" \\\n  \"https://site2.com/article2\" \\\n  \"https://site3.com/article3\"\ndo\n  filename=$(echo $url | md5sum | cut -d' ' -f1)\n  z-ai function -n page_reader -a \"{\\\"url\\\": \\\"$url\\\"}\" -o \"${filename}.json\"\ndone\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_assessment_ed546b65",
+      "skill_name": "web-reader",
+      "category": "assessment",
+      "concept": "Apply web-reader in a practical project",
+      "instruction": "Demonstrate mastery of web-reader by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using web-reader",
+        "Explain when web-reader should be used",
+        "Identify the core concepts of web-reader",
+        "Apply web-reader to solve a real-world problem",
+        "Build a simple web interface",
+        "Connect frontend to backend",
+        "Implement user authentication"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_reader_contextualization_e9b4fad6",
+      "skill_name": "web-reader",
+      "category": "contextualization",
+      "concept": "When to use web-reader",
+      "instruction": "Learn when to apply web-reader in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using web-reader",
+        "User needs help with coding -> evaluate if web-reader applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate web-reader is needed",
+        "Distinguish between web-reader and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 65,
+  "generated_at": "2026-03-24T04:43:44.499809",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/web-reader/SKILL.md"
+}

@@ -1,0 +1,394 @@
+{
+  "skill_name": "content-strategy",
+  "skill_description": "Build and execute a content marketing strategy for a solopreneur business. Use when planning what content to create, deciding on content formats and channels, building a content calendar, measuring content performance, or systematizing content production. Covers audience research for content, content pillars, distribution strategy, repurposing workflows, and metrics. Trigger on \"content strategy\", \"content marketing\", \"what content should I create\", \"content plan\", \"content calendar\", \"content ideas\", \"content distribution\", \"grow through content\".",
+  "items": [
+    {
+      "item_id": "skill_content_strategy_concept_8aeedd46",
+      "skill_name": "content-strategy",
+      "category": "concept",
+      "concept": "Understanding content strategy",
+      "instruction": "",
+      "examples": [
+        "Pillar 1: Workflow Automation Fundamentals\nPillar 2: No-Code Tool Comparisons\nPillar 3: Business Process Optimization\nPillar 4: Real Client Case Studies\n",
+        "DATE | PILLAR | TOPIC | FORMAT | CHANNEL | CTA | STATUS\n",
+        "Feb 10 | Automation | \"5 n8n workflows every SaaS founder needs\" | Blog | Website + LinkedIn | Email signup | Draft\nFeb 13 | Case Study | \"How we saved Client X 20hrs/week\" | LinkedIn post | LinkedIn | Book a call | Scheduled\nFeb 17 | Tool Comparison | \"Zapier vs n8n: Which is right for you?\" | Blog | Website + Twitter | Free guide download | Outline\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_concept_5222eede",
+      "skill_name": "content-strategy",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "Content marketing is how solopreneurs build authority, attract customers, and grow without paid ads. But random content doesn't work — you need a strategy. This playbook builds a repeatable system for creating content that actually drives business results, not just likes.\n\n---",
+      "examples": [
+        "Pillar 1: Workflow Automation Fundamentals\nPillar 2: No-Code Tool Comparisons\nPillar 3: Business Process Optimization\nPillar 4: Real Client Case Studies\n",
+        "DATE | PILLAR | TOPIC | FORMAT | CHANNEL | CTA | STATUS\n",
+        "Feb 10 | Automation | \"5 n8n workflows every SaaS founder needs\" | Blog | Website + LinkedIn | Email signup | Draft\nFeb 13 | Case Study | \"How we saved Client X 20hrs/week\" | LinkedIn post | LinkedIn | Book a call | Scheduled\nFeb 17 | Tool Comparison | \"Zapier vs n8n: Which is right for you?\" | Blog | Website + Twitter | Free guide download | Outline\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_concept_7ed87b7a",
+      "skill_name": "content-strategy",
+      "category": "concept",
+      "concept": "Understanding step 1: define your content goals",
+      "instruction": "Content without a goal is just noise. Before you create anything, answer: what is this content supposed to DO?\n\n**Common solopreneur content goals:**\n- **Generate awareness** (new people discover you exist)\n- **Build trust** (people see you as credible and knowledgeable)\n- **Drive leads** (people give you their email or book a call)\n- **Enable sales** (content answers objections and shortens sales cycles)\n- **Retain customers** (existing customers stay engaged and see ongoing value)\n\n**Rule:** P",
+      "examples": [
+        "Pillar 1: Workflow Automation Fundamentals\nPillar 2: No-Code Tool Comparisons\nPillar 3: Business Process Optimization\nPillar 4: Real Client Case Studies\n",
+        "DATE | PILLAR | TOPIC | FORMAT | CHANNEL | CTA | STATUS\n",
+        "Feb 10 | Automation | \"5 n8n workflows every SaaS founder needs\" | Blog | Website + LinkedIn | Email signup | Draft\nFeb 13 | Case Study | \"How we saved Client X 20hrs/week\" | LinkedIn post | LinkedIn | Book a call | Scheduled\nFeb 17 | Tool Comparison | \"Zapier vs n8n: Which is right for you?\" | Blog | Website + Twitter | Free guide download | Outline\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_concept_7e2cd0b4",
+      "skill_name": "content-strategy",
+      "category": "concept",
+      "concept": "Understanding step 2: research your audience's content needs",
+      "instruction": "Great content solves a specific problem for a specific person. Bad content talks about what YOU want to talk about.\n\n**Research workflow (spend 2-3 hours on this before creating anything):**\n\n1. **Mine customer conversations.** Go through support tickets, sales calls, discovery calls. What questions do prospects and customers ask repeatedly? Those are your content topics.\n\n2. **Check competitor content.** What are the top 3-5 players in your space publishing? Look for gaps — topics they're NOT c",
+      "examples": [
+        "Pillar 1: Workflow Automation Fundamentals\nPillar 2: No-Code Tool Comparisons\nPillar 3: Business Process Optimization\nPillar 4: Real Client Case Studies\n",
+        "DATE | PILLAR | TOPIC | FORMAT | CHANNEL | CTA | STATUS\n",
+        "Feb 10 | Automation | \"5 n8n workflows every SaaS founder needs\" | Blog | Website + LinkedIn | Email signup | Draft\nFeb 13 | Case Study | \"How we saved Client X 20hrs/week\" | LinkedIn post | LinkedIn | Book a call | Scheduled\nFeb 17 | Tool Comparison | \"Zapier vs n8n: Which is right for you?\" | Blog | Website + Twitter | Free guide download | Outline\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_concept_8e1e24ae",
+      "skill_name": "content-strategy",
+      "category": "concept",
+      "concept": "Understanding step 3: build content pillars",
+      "instruction": "Content pillars are 3-5 broad topic areas that all your content falls under. They keep you focused and prevent random one-off content that doesn't build momentum.\n\n**How to define pillars:**\n- Each pillar should map to a core problem your product/service solves or a key interest area of your ICP.\n- Pillars should be broad enough to generate dozens of pieces of content but specific enough to be relevant.\n- Aim for 3-5 pillars max. More than that dilutes focus.\n\n**Example (for an n8n automation co",
+      "examples": [
+        "Pillar 1: Workflow Automation Fundamentals\nPillar 2: No-Code Tool Comparisons\nPillar 3: Business Process Optimization\nPillar 4: Real Client Case Studies\n",
+        "DATE | PILLAR | TOPIC | FORMAT | CHANNEL | CTA | STATUS\n",
+        "Feb 10 | Automation | \"5 n8n workflows every SaaS founder needs\" | Blog | Website + LinkedIn | Email signup | Draft\nFeb 13 | Case Study | \"How we saved Client X 20hrs/week\" | LinkedIn post | LinkedIn | Book a call | Scheduled\nFeb 17 | Tool Comparison | \"Zapier vs n8n: Which is right for you?\" | Blog | Website + Twitter | Free guide download | Outline\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_concept_931b9116",
+      "skill_name": "content-strategy",
+      "category": "concept",
+      "concept": "Understanding step 4: choose your content formats and channels",
+      "instruction": "Solopreneurs can't do everything. Pick 1-2 primary formats and 1-2 primary channels. Go deep, not wide.\n\n**Content formats:**\n| Format | Best For | Time Investment | Longevity |\n|---|---|---|---|\n| **Blog posts** | SEO, teaching, depth | 2-4 hrs/post | High (evergreen) |\n| **Videos (YouTube)** | Visual topics, personality-driven brands | 3-6 hrs/video | High (evergreen) |\n| **Podcasts** | Thought leadership, interviews | 2-3 hrs/episode | Medium |\n| **Twitter/X threads** | Quick insights, commun",
+      "examples": [
+        "Pillar 1: Workflow Automation Fundamentals\nPillar 2: No-Code Tool Comparisons\nPillar 3: Business Process Optimization\nPillar 4: Real Client Case Studies\n",
+        "DATE | PILLAR | TOPIC | FORMAT | CHANNEL | CTA | STATUS\n",
+        "Feb 10 | Automation | \"5 n8n workflows every SaaS founder needs\" | Blog | Website + LinkedIn | Email signup | Draft\nFeb 13 | Case Study | \"How we saved Client X 20hrs/week\" | LinkedIn post | LinkedIn | Book a call | Scheduled\nFeb 17 | Tool Comparison | \"Zapier vs n8n: Which is right for you?\" | Blog | Website + Twitter | Free guide download | Outline\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_concept_bf8b91b9",
+      "skill_name": "content-strategy",
+      "category": "concept",
+      "concept": "Understanding step 5: build a content calendar",
+      "instruction": "A content calendar prevents the \"what should I post today?\" panic. Plan 2-4 weeks ahead.\n\n**Calendar structure:**\n```\nDATE | PILLAR | TOPIC | FORMAT | CHANNEL | CTA | STATUS\n```\n\n**Example:**\n```\nFeb 10 | Automation | \"5 n8n workflows every SaaS founder needs\" | Blog | Website + LinkedIn | Email signup | Draft\nFeb 13 | Case Study | \"How we saved Client X 20hrs/week\" | LinkedIn post | LinkedIn | Book a call | Scheduled\nFeb 17 | Tool Comparison | \"Zapier vs n8n: Which is right for you?\" | Blog | W",
+      "examples": [
+        "Pillar 1: Workflow Automation Fundamentals\nPillar 2: No-Code Tool Comparisons\nPillar 3: Business Process Optimization\nPillar 4: Real Client Case Studies\n",
+        "DATE | PILLAR | TOPIC | FORMAT | CHANNEL | CTA | STATUS\n",
+        "Feb 10 | Automation | \"5 n8n workflows every SaaS founder needs\" | Blog | Website + LinkedIn | Email signup | Draft\nFeb 13 | Case Study | \"How we saved Client X 20hrs/week\" | LinkedIn post | LinkedIn | Book a call | Scheduled\nFeb 17 | Tool Comparison | \"Zapier vs n8n: Which is right for you?\" | Blog | Website + Twitter | Free guide download | Outline\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_concept_960cb7e7",
+      "skill_name": "content-strategy",
+      "category": "concept",
+      "concept": "Understanding step 6: distribution and amplification",
+      "instruction": "Creating content is 30% of the work. Distribution is the other 70%.\n\n**Distribution checklist for every piece:**\n- [ ] Publish on primary channel (blog, YouTube, etc.)\n- [ ] Share on 2-3 social channels with unique captions per platform (don't just copy-paste the same message)\n- [ ] Send to email list (if it's a high-value piece)\n- [ ] Post in 1-2 relevant communities (but add value to the discussion, don't just drop links)\n- [ ] DM it to 3-5 people who you think would find it genuinely useful\n-",
+      "examples": [
+        "Pillar 1: Workflow Automation Fundamentals\nPillar 2: No-Code Tool Comparisons\nPillar 3: Business Process Optimization\nPillar 4: Real Client Case Studies\n",
+        "DATE | PILLAR | TOPIC | FORMAT | CHANNEL | CTA | STATUS\n",
+        "Feb 10 | Automation | \"5 n8n workflows every SaaS founder needs\" | Blog | Website + LinkedIn | Email signup | Draft\nFeb 13 | Case Study | \"How we saved Client X 20hrs/week\" | LinkedIn post | LinkedIn | Book a call | Scheduled\nFeb 17 | Tool Comparison | \"Zapier vs n8n: Which is right for you?\" | Blog | Website + Twitter | Free guide download | Outline\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_concept_48bb8c8d",
+      "skill_name": "content-strategy",
+      "category": "concept",
+      "concept": "Understanding step 7: repurpose everything",
+      "instruction": "One piece of long-form content can become 5-10 smaller pieces. This is how solopreneurs produce high volume without burning out.\n\n**Repurposing workflow (example: one blog post):**\n1. Original: 1,500-word blog post\n2. Repurpose into: LinkedIn post (first 3 paragraphs + a hook)\n3. Repurpose into: Twitter thread (key points broken into 8-10 tweets)\n4. Repurpose into: Email newsletter (add a personal intro, link to full post)\n5. Repurpose into: Carousel post (main points as slides on LinkedIn or In",
+      "examples": [
+        "Pillar 1: Workflow Automation Fundamentals\nPillar 2: No-Code Tool Comparisons\nPillar 3: Business Process Optimization\nPillar 4: Real Client Case Studies\n",
+        "DATE | PILLAR | TOPIC | FORMAT | CHANNEL | CTA | STATUS\n",
+        "Feb 10 | Automation | \"5 n8n workflows every SaaS founder needs\" | Blog | Website + LinkedIn | Email signup | Draft\nFeb 13 | Case Study | \"How we saved Client X 20hrs/week\" | LinkedIn post | LinkedIn | Book a call | Scheduled\nFeb 17 | Tool Comparison | \"Zapier vs n8n: Which is right for you?\" | Blog | Website + Twitter | Free guide download | Outline\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_concept_edf7967d",
+      "skill_name": "content-strategy",
+      "category": "concept",
+      "concept": "Understanding step 8: measure what matters",
+      "instruction": "Track content performance so you can double down on what works and stop doing what doesn't.\n\n**Metrics by goal:**\n\n| Goal | Metrics to Track |\n|---|---|\n| Awareness | Impressions, reach, new visitors, social followers |\n| Trust | Engagement rate (comments, shares), time on page, repeat visitors |\n| Lead generation | Email signups, CTA clicks, lead magnet downloads |\n| Sales enablement | Content assists (how many deals involved this content?), proposal open rates (if content is attached) |\n\n**Das",
+      "examples": [
+        "Pillar 1: Workflow Automation Fundamentals\nPillar 2: No-Code Tool Comparisons\nPillar 3: Business Process Optimization\nPillar 4: Real Client Case Studies\n",
+        "DATE | PILLAR | TOPIC | FORMAT | CHANNEL | CTA | STATUS\n",
+        "Feb 10 | Automation | \"5 n8n workflows every SaaS founder needs\" | Blog | Website + LinkedIn | Email signup | Draft\nFeb 13 | Case Study | \"How we saved Client X 20hrs/week\" | LinkedIn post | LinkedIn | Book a call | Scheduled\nFeb 17 | Tool Comparison | \"Zapier vs n8n: Which is right for you?\" | Blog | Website + Twitter | Free guide download | Outline\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_concept_a6c84f25",
+      "skill_name": "content-strategy",
+      "category": "concept",
+      "concept": "Understanding content strategy mistakes to avoid",
+      "instruction": "- Creating content without a goal. Every piece should have a purpose tied to a business outcome.\n- Not researching what your audience actually wants. Your assumptions are often wrong — validate with real data.\n- Trying to be on every platform. Pick 1-2 and dominate them before expanding.\n- Publishing inconsistently. One post a month doesn't build momentum. Consistency compounds.\n- Not repurposing. Creating 10 original pieces is 5x harder than creating 2 original pieces and repurposing them into ",
+      "examples": [
+        "Pillar 1: Workflow Automation Fundamentals\nPillar 2: No-Code Tool Comparisons\nPillar 3: Business Process Optimization\nPillar 4: Real Client Case Studies\n",
+        "DATE | PILLAR | TOPIC | FORMAT | CHANNEL | CTA | STATUS\n",
+        "Feb 10 | Automation | \"5 n8n workflows every SaaS founder needs\" | Blog | Website + LinkedIn | Email signup | Draft\nFeb 13 | Case Study | \"How we saved Client X 20hrs/week\" | LinkedIn post | LinkedIn | Book a call | Scheduled\nFeb 17 | Tool Comparison | \"Zapier vs n8n: Which is right for you?\" | Blog | Website + Twitter | Free guide download | Outline\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_instruction_f689dff3",
+      "skill_name": "content-strategy",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Generate awareness** (new people discover you ex...",
+      "instruction": "**Generate awareness** (new people discover you exist)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_instruction_4a5ec563",
+      "skill_name": "content-strategy",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Build trust** (people see you as credible and kn...",
+      "instruction": "**Build trust** (people see you as credible and knowledgeable)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_instruction_114bcc19",
+      "skill_name": "content-strategy",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Drive leads** (people give you their email or bo...",
+      "instruction": "**Drive leads** (people give you their email or book a call)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_instruction_1720d832",
+      "skill_name": "content-strategy",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Enable sales** (content answers objections and s...",
+      "instruction": "**Enable sales** (content answers objections and shortens sales cycles)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_instruction_901fa5be",
+      "skill_name": "content-strategy",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Retain customers** (existing customers stay enga...",
+      "instruction": "**Retain customers** (existing customers stay engaged and see ongoing value)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_instruction_41adea1c",
+      "skill_name": "content-strategy",
+      "category": "instruction",
+      "concept": "Rule or guideline: Each pillar should map to a core problem your prod...",
+      "instruction": "Each pillar should map to a core problem your product/service solves or a key interest area of your ICP.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_instruction_bc2d63f4",
+      "skill_name": "content-strategy",
+      "category": "instruction",
+      "concept": "Rule or guideline: Pillars should be broad enough to generate dozens ...",
+      "instruction": "Pillars should be broad enough to generate dozens of pieces of content but specific enough to be relevant.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_instruction_5d3e635f",
+      "skill_name": "content-strategy",
+      "category": "instruction",
+      "concept": "Rule or guideline: Aim for 3-5 pillars max. More than that dilutes fo...",
+      "instruction": "Aim for 3-5 pillars max. More than that dilutes focus.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_instruction_b5802ab8",
+      "skill_name": "content-strategy",
+      "category": "instruction",
+      "concept": "Rule or guideline: Where does your ICP hang out? (B2B = LinkedIn. Dev...",
+      "instruction": "Where does your ICP hang out? (B2B = LinkedIn. Developers = Twitter. Visual products = Instagram.)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_instruction_689f2814",
+      "skill_name": "content-strategy",
+      "category": "instruction",
+      "concept": "Rule or guideline: What format do you NOT hate creating? (If you hate...",
+      "instruction": "What format do you NOT hate creating? (If you hate being on camera, don't pick YouTube.)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_code_pattern_75f1faaf",
+      "skill_name": "content-strategy",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from content-strategy",
+      "examples": [
+        "Pillar 1: Workflow Automation Fundamentals\nPillar 2: No-Code Tool Comparisons\nPillar 3: Business Process Optimization\nPillar 4: Real Client Case Studies\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_code_pattern_304eaaca",
+      "skill_name": "content-strategy",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from content-strategy",
+      "examples": [
+        "DATE | PILLAR | TOPIC | FORMAT | CHANNEL | CTA | STATUS\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_code_pattern_130ba512",
+      "skill_name": "content-strategy",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from content-strategy",
+      "examples": [
+        "Feb 10 | Automation | \"5 n8n workflows every SaaS founder needs\" | Blog | Website + LinkedIn | Email signup | Draft\nFeb 13 | Case Study | \"How we saved Client X 20hrs/week\" | LinkedIn post | LinkedIn | Book a call | Scheduled\nFeb 17 | Tool Comparison | \"Zapier vs n8n: Which is right for you?\" | Blog | Website + Twitter | Free guide download | Outline\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_assessment_85475767",
+      "skill_name": "content-strategy",
+      "category": "assessment",
+      "concept": "Apply content-strategy in a practical project",
+      "instruction": "Demonstrate mastery of content-strategy by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using content-strategy",
+        "Explain when content-strategy should be used",
+        "Identify the core concepts of content-strategy",
+        "Apply content-strategy to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_content_strategy_contextualization_c896a459",
+      "skill_name": "content-strategy",
+      "category": "contextualization",
+      "concept": "When to use content-strategy",
+      "instruction": "Learn when to apply content-strategy in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using content-strategy",
+        "User needs help with coding -> evaluate if content-strategy applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate content-strategy is needed",
+        "Distinguish between content-strategy and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 26,
+  "generated_at": "2026-03-24T04:43:44.500731",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/content-strategy/SKILL.md"
+}

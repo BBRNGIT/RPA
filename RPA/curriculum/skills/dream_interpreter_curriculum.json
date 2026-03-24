@@ -1,0 +1,320 @@
+{
+  "skill_name": "dream-interpreter",
+  "skill_description": "AI 解梦大师。用户描述梦境，智能追问关键细节后，从三个视角（周公解梦/心理分析/赛博神棍）生成解读，输出结构化 JSON 供前端渲染\"梦境解析卡\"。",
+  "items": [
+    {
+      "item_id": "skill_dream_interpreter_concept_f7c62c76",
+      "skill_name": "dream-interpreter",
+      "category": "concept",
+      "concept": "Understanding dream-interpreter",
+      "instruction": "AI 解梦大师。用户描述梦境，智能追问关键细节后，从三个视角（周公解梦/心理分析/赛博神棍）生成解读，输出结构化 JSON 供前端渲染\"梦境解析卡\"。",
+      "examples": [
+        "嗯...高楼上掉下去...\n问你几个事：\n1. 掉的时候你是害怕还是反而觉得挺爽？\n2. 那个楼你认识吗？公司？家？还是没见过的地方？\n3. 最后落地了吗？还是一直在掉？\n",
+        "{\n  \"dream_summary\": \"从陌生高楼坠落，感到恐惧，没有落地\",\n  \"keywords\": [\"高楼\", \"坠落\", \"恐惧\", \"无尽下落\"],\n  \"mood\": \"anxious\",\n  \"color_scheme\": \"dark\",\n  \"visual_elements\": [\"building\", \"falling_particles\", \"dark_bg\", \"blur_lights\"],\n  \"interpretations\": {\n    \"zhouGong\": { ... },\n    \"freud\": { ... },\n    \"cyber\": { ... }\n  },\n  \"overall_advice\": \"...\",\n  \"shareable_text\": \"...\"\n}\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_concept_a441be37",
+      "skill_name": "dream-interpreter",
+      "category": "concept",
+      "concept": "Understanding when to use",
+      "instruction": "- 用户说\"我梦到...\"、\"昨晚做了个梦\"、\"帮我解个梦\"等\n- NOT for: 清醒梦教学、睡眠质量分析、真正的心理咨询",
+      "examples": [
+        "嗯...高楼上掉下去...\n问你几个事：\n1. 掉的时候你是害怕还是反而觉得挺爽？\n2. 那个楼你认识吗？公司？家？还是没见过的地方？\n3. 最后落地了吗？还是一直在掉？\n",
+        "{\n  \"dream_summary\": \"从陌生高楼坠落，感到恐惧，没有落地\",\n  \"keywords\": [\"高楼\", \"坠落\", \"恐惧\", \"无尽下落\"],\n  \"mood\": \"anxious\",\n  \"color_scheme\": \"dark\",\n  \"visual_elements\": [\"building\", \"falling_particles\", \"dark_bg\", \"blur_lights\"],\n  \"interpretations\": {\n    \"zhouGong\": { ... },\n    \"freud\": { ... },\n    \"cyber\": { ... }\n  },\n  \"overall_advice\": \"...\",\n  \"shareable_text\": \"...\"\n}\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_concept_f7fd8dd0",
+      "skill_name": "dream-interpreter",
+      "category": "concept",
+      "concept": "Understanding session flow",
+      "instruction": "",
+      "examples": [
+        "嗯...高楼上掉下去...\n问你几个事：\n1. 掉的时候你是害怕还是反而觉得挺爽？\n2. 那个楼你认识吗？公司？家？还是没见过的地方？\n3. 最后落地了吗？还是一直在掉？\n",
+        "{\n  \"dream_summary\": \"从陌生高楼坠落，感到恐惧，没有落地\",\n  \"keywords\": [\"高楼\", \"坠落\", \"恐惧\", \"无尽下落\"],\n  \"mood\": \"anxious\",\n  \"color_scheme\": \"dark\",\n  \"visual_elements\": [\"building\", \"falling_particles\", \"dark_bg\", \"blur_lights\"],\n  \"interpretations\": {\n    \"zhouGong\": { ... },\n    \"freud\": { ... },\n    \"cyber\": { ... }\n  },\n  \"overall_advice\": \"...\",\n  \"shareable_text\": \"...\"\n}\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_concept_3e799d80",
+      "skill_name": "dream-interpreter",
+      "category": "concept",
+      "concept": "Understanding phase 1: 梦境收集 + 追问",
+      "instruction": "1. 用户描述梦境\n2. 从描述中提取关键意象，找出最影响解读方向的模糊点\n3. 追问最多 3 个问题（可以更少），每个聚焦一个维度：\n\n追问维度优先级：\n- **情绪**：\"掉下去的时候害怕还是放松？\" → 决定焦虑型/释放型\n- **环境**：\"那个地方你认识吗？\" → 关联生活领域\n- **人物**：\"梦里的那个人你认识吗？\" → 判断投射对象\n- **结局**：\"最后怎么样了？\" → 决定解读走向\n\n追问规则：\n- 用户描述已经很详细 → 少问或不问\n- 用户不想回答 → 跳过，用合理默认值\n- 追问本身要有角色感，不是审问",
+      "examples": [
+        "嗯...高楼上掉下去...\n问你几个事：\n1. 掉的时候你是害怕还是反而觉得挺爽？\n2. 那个楼你认识吗？公司？家？还是没见过的地方？\n3. 最后落地了吗？还是一直在掉？\n",
+        "{\n  \"dream_summary\": \"从陌生高楼坠落，感到恐惧，没有落地\",\n  \"keywords\": [\"高楼\", \"坠落\", \"恐惧\", \"无尽下落\"],\n  \"mood\": \"anxious\",\n  \"color_scheme\": \"dark\",\n  \"visual_elements\": [\"building\", \"falling_particles\", \"dark_bg\", \"blur_lights\"],\n  \"interpretations\": {\n    \"zhouGong\": { ... },\n    \"freud\": { ... },\n    \"cyber\": { ... }\n  },\n  \"overall_advice\": \"...\",\n  \"shareable_text\": \"...\"\n}\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_concept_a9c7ccf5",
+      "skill_name": "dream-interpreter",
+      "category": "concept",
+      "concept": "Understanding phase 2: 生成解读",
+      "instruction": "收集完信息后，生成三个视角的解读。每个视角独立分析，风格差异要大。\n\n读取 `interpretation-guide.md` 获取三个视角的详细指南。",
+      "examples": [
+        "嗯...高楼上掉下去...\n问你几个事：\n1. 掉的时候你是害怕还是反而觉得挺爽？\n2. 那个楼你认识吗？公司？家？还是没见过的地方？\n3. 最后落地了吗？还是一直在掉？\n",
+        "{\n  \"dream_summary\": \"从陌生高楼坠落，感到恐惧，没有落地\",\n  \"keywords\": [\"高楼\", \"坠落\", \"恐惧\", \"无尽下落\"],\n  \"mood\": \"anxious\",\n  \"color_scheme\": \"dark\",\n  \"visual_elements\": [\"building\", \"falling_particles\", \"dark_bg\", \"blur_lights\"],\n  \"interpretations\": {\n    \"zhouGong\": { ... },\n    \"freud\": { ... },\n    \"cyber\": { ... }\n  },\n  \"overall_advice\": \"...\",\n  \"shareable_text\": \"...\"\n}\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_concept_8e2df38c",
+      "skill_name": "dream-interpreter",
+      "category": "concept",
+      "concept": "Understanding phase 3: 输出结构化 json",
+      "instruction": "按 `output-schema.md` 中的格式输出 JSON，供前端渲染。\n\nJSON 包含：梦境摘要、关键词、情绪分类、配色方案、视觉元素列表、三视角解读内容、综合建议、可分享文案。\n\n读取 `visual-mapping.md` 将意象映射为视觉元素和配色。",
+      "examples": [
+        "嗯...高楼上掉下去...\n问你几个事：\n1. 掉的时候你是害怕还是反而觉得挺爽？\n2. 那个楼你认识吗？公司？家？还是没见过的地方？\n3. 最后落地了吗？还是一直在掉？\n",
+        "{\n  \"dream_summary\": \"从陌生高楼坠落，感到恐惧，没有落地\",\n  \"keywords\": [\"高楼\", \"坠落\", \"恐惧\", \"无尽下落\"],\n  \"mood\": \"anxious\",\n  \"color_scheme\": \"dark\",\n  \"visual_elements\": [\"building\", \"falling_particles\", \"dark_bg\", \"blur_lights\"],\n  \"interpretations\": {\n    \"zhouGong\": { ... },\n    \"freud\": { ... },\n    \"cyber\": { ... }\n  },\n  \"overall_advice\": \"...\",\n  \"shareable_text\": \"...\"\n}\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_concept_98bdf03b",
+      "skill_name": "dream-interpreter",
+      "category": "concept",
+      "concept": "Understanding output format",
+      "instruction": "**追问阶段**：纯文本对话，角色感强\n\n**解读阶段**：输出 JSON 代码块，格式遵循 `output-schema.md`\n\n示例：\n\n追问：\n```\n嗯...高楼上掉下去...\n问你几个事：\n1. 掉的时候你是害怕还是反而觉得挺爽？\n2. 那个楼你认识吗？公司？家？还是没见过的地方？\n3. 最后落地了吗？还是一直在掉？\n```\n\n解读输出：\n```json\n{\n  \"dream_summary\": \"从陌生高楼坠落，感到恐惧，没有落地\",\n  \"keywords\": [\"高楼\", \"坠落\", \"恐惧\", \"无尽下落\"],\n  \"mood\": \"anxious\",\n  \"color_scheme\": \"dark\",\n  \"visual_elements\": [\"building\", \"falling_particles\", \"dark_bg\", \"blur_lights\"],\n  \"interpretations\": {\n    \"zhouGong\": { ... },\n    \"freud\": { ... },\n    \"cyber\": { ... }\n  },\n  \"ove",
+      "examples": [
+        "嗯...高楼上掉下去...\n问你几个事：\n1. 掉的时候你是害怕还是反而觉得挺爽？\n2. 那个楼你认识吗？公司？家？还是没见过的地方？\n3. 最后落地了吗？还是一直在掉？\n",
+        "{\n  \"dream_summary\": \"从陌生高楼坠落，感到恐惧，没有落地\",\n  \"keywords\": [\"高楼\", \"坠落\", \"恐惧\", \"无尽下落\"],\n  \"mood\": \"anxious\",\n  \"color_scheme\": \"dark\",\n  \"visual_elements\": [\"building\", \"falling_particles\", \"dark_bg\", \"blur_lights\"],\n  \"interpretations\": {\n    \"zhouGong\": { ... },\n    \"freud\": { ... },\n    \"cyber\": { ... }\n  },\n  \"overall_advice\": \"...\",\n  \"shareable_text\": \"...\"\n}\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_concept_15ecd154",
+      "skill_name": "dream-interpreter",
+      "category": "concept",
+      "concept": "Understanding references",
+      "instruction": "- `interpretation-guide.md` — 三视角解读详细指南和风格要求\n- `visual-mapping.md` — 梦境意象 → 视觉元素/配色的映射表\n- `output-schema.md` — JSON 输出格式完整规范\n- `questioning-strategy.md` — 追问策略和示例库",
+      "examples": [
+        "嗯...高楼上掉下去...\n问你几个事：\n1. 掉的时候你是害怕还是反而觉得挺爽？\n2. 那个楼你认识吗？公司？家？还是没见过的地方？\n3. 最后落地了吗？还是一直在掉？\n",
+        "{\n  \"dream_summary\": \"从陌生高楼坠落，感到恐惧，没有落地\",\n  \"keywords\": [\"高楼\", \"坠落\", \"恐惧\", \"无尽下落\"],\n  \"mood\": \"anxious\",\n  \"color_scheme\": \"dark\",\n  \"visual_elements\": [\"building\", \"falling_particles\", \"dark_bg\", \"blur_lights\"],\n  \"interpretations\": {\n    \"zhouGong\": { ... },\n    \"freud\": { ... },\n    \"cyber\": { ... }\n  },\n  \"overall_advice\": \"...\",\n  \"shareable_text\": \"...\"\n}\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_instruction_683e00ec",
+      "skill_name": "dream-interpreter",
+      "category": "instruction",
+      "concept": "Rule or guideline: 用户说\"我梦到...\"、\"昨晚做了个梦\"、\"帮我解个梦\"等...",
+      "instruction": "用户说\"我梦到...\"、\"昨晚做了个梦\"、\"帮我解个梦\"等",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_instruction_ac6c2327",
+      "skill_name": "dream-interpreter",
+      "category": "instruction",
+      "concept": "Rule or guideline: NOT for: 清醒梦教学、睡眠质量分析、真正的心理咨询...",
+      "instruction": "NOT for: 清醒梦教学、睡眠质量分析、真正的心理咨询",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_instruction_7e5f1e2e",
+      "skill_name": "dream-interpreter",
+      "category": "instruction",
+      "concept": "Rule or guideline: **情绪**：\"掉下去的时候害怕还是放松？\" → 决定焦虑型/释放型...",
+      "instruction": "**情绪**：\"掉下去的时候害怕还是放松？\" → 决定焦虑型/释放型",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_instruction_fbed9961",
+      "skill_name": "dream-interpreter",
+      "category": "instruction",
+      "concept": "Rule or guideline: **环境**：\"那个地方你认识吗？\" → 关联生活领域...",
+      "instruction": "**环境**：\"那个地方你认识吗？\" → 关联生活领域",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_instruction_c3466518",
+      "skill_name": "dream-interpreter",
+      "category": "instruction",
+      "concept": "Rule or guideline: **人物**：\"梦里的那个人你认识吗？\" → 判断投射对象...",
+      "instruction": "**人物**：\"梦里的那个人你认识吗？\" → 判断投射对象",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_instruction_8614109a",
+      "skill_name": "dream-interpreter",
+      "category": "instruction",
+      "concept": "Rule or guideline: **结局**：\"最后怎么样了？\" → 决定解读走向...",
+      "instruction": "**结局**：\"最后怎么样了？\" → 决定解读走向",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_instruction_31a5e7a4",
+      "skill_name": "dream-interpreter",
+      "category": "instruction",
+      "concept": "Rule or guideline: 用户描述已经很详细 → 少问或不问...",
+      "instruction": "用户描述已经很详细 → 少问或不问",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_instruction_b76d93cd",
+      "skill_name": "dream-interpreter",
+      "category": "instruction",
+      "concept": "Rule or guideline: 用户不想回答 → 跳过，用合理默认值...",
+      "instruction": "用户不想回答 → 跳过，用合理默认值",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_instruction_47ad3905",
+      "skill_name": "dream-interpreter",
+      "category": "instruction",
+      "concept": "Rule or guideline: 追问本身要有角色感，不是审问...",
+      "instruction": "追问本身要有角色感，不是审问",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_instruction_76296399",
+      "skill_name": "dream-interpreter",
+      "category": "instruction",
+      "concept": "Rule or guideline: `interpretation-guide.md` — 三视角解读详细指南和风格要求...",
+      "instruction": "`interpretation-guide.md` — 三视角解读详细指南和风格要求",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_code_pattern_5918e4b0",
+      "skill_name": "dream-interpreter",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from dream-interpreter",
+      "examples": [
+        "嗯...高楼上掉下去...\n问你几个事：\n1. 掉的时候你是害怕还是反而觉得挺爽？\n2. 那个楼你认识吗？公司？家？还是没见过的地方？\n3. 最后落地了吗？还是一直在掉？\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_code_pattern_b0cba5ba",
+      "skill_name": "dream-interpreter",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from dream-interpreter",
+      "examples": [
+        "{\n  \"dream_summary\": \"从陌生高楼坠落，感到恐惧，没有落地\",\n  \"keywords\": [\"高楼\", \"坠落\", \"恐惧\", \"无尽下落\"],\n  \"mood\": \"anxious\",\n  \"color_scheme\": \"dark\",\n  \"visual_elements\": [\"building\", \"falling_particles\", \"dark_bg\", \"blur_lights\"],\n  \"interpretations\": {\n    \"zhouGong\": { ... },\n    \"freud\": { ... },\n    \"cyber\": { ... }\n  },\n  \"overall_advice\": \"...\",\n  \"shareable_text\": \"...\"\n}\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_assessment_ea383b6c",
+      "skill_name": "dream-interpreter",
+      "category": "assessment",
+      "concept": "Apply dream-interpreter in a practical project",
+      "instruction": "Demonstrate mastery of dream-interpreter by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using dream-interpreter",
+        "Explain when dream-interpreter should be used",
+        "Identify the core concepts of dream-interpreter",
+        "Apply dream-interpreter to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_dream_interpreter_contextualization_c2791514",
+      "skill_name": "dream-interpreter",
+      "category": "contextualization",
+      "concept": "When to use dream-interpreter",
+      "instruction": "Learn when to apply dream-interpreter in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using dream-interpreter",
+        "User needs help with coding -> evaluate if dream-interpreter applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate dream-interpreter is needed",
+        "Distinguish between dream-interpreter and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 22,
+  "generated_at": "2026-03-24T04:43:44.493573",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/dream-interpreter/SKILL.md"
+}

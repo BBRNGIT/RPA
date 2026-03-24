@@ -1,0 +1,294 @@
+{
+  "skill_name": "multi-search-engine",
+  "skill_description": "Multi search engine integration with 8 domestic (CN) search engines. Supports advanced search operators, time filters, site search, and WeChat article search. No API keys required.",
+  "items": [
+    {
+      "item_id": "skill_multi_search_engine_concept_ad3372c1",
+      "skill_name": "multi-search-engine",
+      "category": "concept",
+      "concept": "Understanding multi search engine v2.0.1",
+      "instruction": "Integration of 8 domestic Chinese search engines for web crawling without API keys.",
+      "examples": [
+        "// Basic search (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=python+tutorial\"})\n\n// Site-specific (Bing CN)\nweb_fetch({\"url\": \"https://cn.bing.com/search?q=site:github.com+react&ensearch=0\"})\n\n// File type (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=machine+learning+filetype:pdf\"})\n\n// WeChat article search\nweb_fetch({\"url\": \"https://wx.sogou.com/weixin?type=2&query=人工智能+最新进展\"})\n\n// Toutiao search\nweb_fetch({\"url\": \"https://so.toutiao.com/search?keyword=新能源+政策\"})\n\n// Jisilu financial data\nweb_fetch({\"url\": \"https://www.jisilu.cn/explore/?keyword=REITs\"})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_concept_4c5b60bb",
+      "skill_name": "multi-search-engine",
+      "category": "concept",
+      "concept": "Understanding search engines (domestic - cn only)",
+      "instruction": "- **Baidu**: `https://www.baidu.com/s?wd={keyword}`\n- **Bing CN**: `https://cn.bing.com/search?q={keyword}&ensearch=0`\n- **Bing INT**: `https://cn.bing.com/search?q={keyword}&ensearch=1`\n- **360**: `https://www.so.com/s?q={keyword}`\n- **Sogou**: `https://sogou.com/web?query={keyword}`\n- **WeChat**: `https://wx.sogou.com/weixin?type=2&query={keyword}`\n- **Toutiao**: `https://so.toutiao.com/search?keyword={keyword}`\n- **Jisilu**: `https://www.jisilu.cn/explore/?keyword={keyword}`",
+      "examples": [
+        "// Basic search (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=python+tutorial\"})\n\n// Site-specific (Bing CN)\nweb_fetch({\"url\": \"https://cn.bing.com/search?q=site:github.com+react&ensearch=0\"})\n\n// File type (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=machine+learning+filetype:pdf\"})\n\n// WeChat article search\nweb_fetch({\"url\": \"https://wx.sogou.com/weixin?type=2&query=人工智能+最新进展\"})\n\n// Toutiao search\nweb_fetch({\"url\": \"https://so.toutiao.com/search?keyword=新能源+政策\"})\n\n// Jisilu financial data\nweb_fetch({\"url\": \"https://www.jisilu.cn/explore/?keyword=REITs\"})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_concept_0889d1ab",
+      "skill_name": "multi-search-engine",
+      "category": "concept",
+      "concept": "Understanding quick examples",
+      "instruction": "```javascript\n// Basic search (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=python+tutorial\"})\n\n// Site-specific (Bing CN)\nweb_fetch({\"url\": \"https://cn.bing.com/search?q=site:github.com+react&ensearch=0\"})\n\n// File type (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=machine+learning+filetype:pdf\"})\n\n// WeChat article search\nweb_fetch({\"url\": \"https://wx.sogou.com/weixin?type=2&query=人工智能+最新进展\"})\n\n// Toutiao search\nweb_fetch({\"url\": \"https://so.toutiao.com/search?keyword=新能源+政策\"})",
+      "examples": [
+        "// Basic search (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=python+tutorial\"})\n\n// Site-specific (Bing CN)\nweb_fetch({\"url\": \"https://cn.bing.com/search?q=site:github.com+react&ensearch=0\"})\n\n// File type (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=machine+learning+filetype:pdf\"})\n\n// WeChat article search\nweb_fetch({\"url\": \"https://wx.sogou.com/weixin?type=2&query=人工智能+最新进展\"})\n\n// Toutiao search\nweb_fetch({\"url\": \"https://so.toutiao.com/search?keyword=新能源+政策\"})\n\n// Jisilu financial data\nweb_fetch({\"url\": \"https://www.jisilu.cn/explore/?keyword=REITs\"})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_concept_d2ebff02",
+      "skill_name": "multi-search-engine",
+      "category": "concept",
+      "concept": "Understanding advanced operators",
+      "instruction": "| Operator | Example | Description |\n|----------|---------|-------------|\n| `site:` | `site:github.com python` | Search within site |\n| `filetype:` | `filetype:pdf report` | Specific file type |\n| `\"\"` | `\"machine learning\"` | Exact match |\n| `-` | `python -snake` | Exclude term |\n| `OR` | `cat OR dog` | Either term |",
+      "examples": [
+        "// Basic search (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=python+tutorial\"})\n\n// Site-specific (Bing CN)\nweb_fetch({\"url\": \"https://cn.bing.com/search?q=site:github.com+react&ensearch=0\"})\n\n// File type (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=machine+learning+filetype:pdf\"})\n\n// WeChat article search\nweb_fetch({\"url\": \"https://wx.sogou.com/weixin?type=2&query=人工智能+最新进展\"})\n\n// Toutiao search\nweb_fetch({\"url\": \"https://so.toutiao.com/search?keyword=新能源+政策\"})\n\n// Jisilu financial data\nweb_fetch({\"url\": \"https://www.jisilu.cn/explore/?keyword=REITs\"})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_concept_38a1bbeb",
+      "skill_name": "multi-search-engine",
+      "category": "concept",
+      "concept": "Understanding time filters",
+      "instruction": "| Parameter | Description |\n|-----------|-------------|\n| `tbs=qdr:h` | Past hour |\n| `tbs=qdr:d` | Past day |\n| `tbs=qdr:w` | Past week |\n| `tbs=qdr:m` | Past month |\n| `tbs=qdr:y` | Past year |",
+      "examples": [
+        "// Basic search (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=python+tutorial\"})\n\n// Site-specific (Bing CN)\nweb_fetch({\"url\": \"https://cn.bing.com/search?q=site:github.com+react&ensearch=0\"})\n\n// File type (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=machine+learning+filetype:pdf\"})\n\n// WeChat article search\nweb_fetch({\"url\": \"https://wx.sogou.com/weixin?type=2&query=人工智能+最新进展\"})\n\n// Toutiao search\nweb_fetch({\"url\": \"https://so.toutiao.com/search?keyword=新能源+政策\"})\n\n// Jisilu financial data\nweb_fetch({\"url\": \"https://www.jisilu.cn/explore/?keyword=REITs\"})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_concept_89745437",
+      "skill_name": "multi-search-engine",
+      "category": "concept",
+      "concept": "Understanding search engine notes",
+      "instruction": "- **WeChat Search**: Best for searching WeChat public articles and content\n- **Toutiao**: Good for trending topics and news aggregation\n- **Jisilu**: Focused on financial and investment data\n- **Bing INT**: International search results via Bing interface\n- **Bing CN**: Localized Chinese search results",
+      "examples": [
+        "// Basic search (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=python+tutorial\"})\n\n// Site-specific (Bing CN)\nweb_fetch({\"url\": \"https://cn.bing.com/search?q=site:github.com+react&ensearch=0\"})\n\n// File type (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=machine+learning+filetype:pdf\"})\n\n// WeChat article search\nweb_fetch({\"url\": \"https://wx.sogou.com/weixin?type=2&query=人工智能+最新进展\"})\n\n// Toutiao search\nweb_fetch({\"url\": \"https://so.toutiao.com/search?keyword=新能源+政策\"})\n\n// Jisilu financial data\nweb_fetch({\"url\": \"https://www.jisilu.cn/explore/?keyword=REITs\"})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_concept_ea83a8f8",
+      "skill_name": "multi-search-engine",
+      "category": "concept",
+      "concept": "Understanding documentation",
+      "instruction": "- `references/international-search.md` - Archived international search guide (for reference)\n- `CHANGELOG.md` - Version history",
+      "examples": [
+        "// Basic search (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=python+tutorial\"})\n\n// Site-specific (Bing CN)\nweb_fetch({\"url\": \"https://cn.bing.com/search?q=site:github.com+react&ensearch=0\"})\n\n// File type (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=machine+learning+filetype:pdf\"})\n\n// WeChat article search\nweb_fetch({\"url\": \"https://wx.sogou.com/weixin?type=2&query=人工智能+最新进展\"})\n\n// Toutiao search\nweb_fetch({\"url\": \"https://so.toutiao.com/search?keyword=新能源+政策\"})\n\n// Jisilu financial data\nweb_fetch({\"url\": \"https://www.jisilu.cn/explore/?keyword=REITs\"})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_concept_6bd99505",
+      "skill_name": "multi-search-engine",
+      "category": "concept",
+      "concept": "Understanding license",
+      "instruction": "MIT",
+      "examples": [
+        "// Basic search (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=python+tutorial\"})\n\n// Site-specific (Bing CN)\nweb_fetch({\"url\": \"https://cn.bing.com/search?q=site:github.com+react&ensearch=0\"})\n\n// File type (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=machine+learning+filetype:pdf\"})\n\n// WeChat article search\nweb_fetch({\"url\": \"https://wx.sogou.com/weixin?type=2&query=人工智能+最新进展\"})\n\n// Toutiao search\nweb_fetch({\"url\": \"https://so.toutiao.com/search?keyword=新能源+政策\"})\n\n// Jisilu financial data\nweb_fetch({\"url\": \"https://www.jisilu.cn/explore/?keyword=REITs\"})\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_instruction_0f570d95",
+      "skill_name": "multi-search-engine",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Baidu**: `https://www.baidu.com/s?wd={keyword}`...",
+      "instruction": "**Baidu**: `https://www.baidu.com/s?wd={keyword}`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_instruction_ca077a88",
+      "skill_name": "multi-search-engine",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Bing CN**: `https://cn.bing.com/search?q={keywor...",
+      "instruction": "**Bing CN**: `https://cn.bing.com/search?q={keyword}&ensearch=0`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_instruction_6ea9283f",
+      "skill_name": "multi-search-engine",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Bing INT**: `https://cn.bing.com/search?q={keywo...",
+      "instruction": "**Bing INT**: `https://cn.bing.com/search?q={keyword}&ensearch=1`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_instruction_f1729f42",
+      "skill_name": "multi-search-engine",
+      "category": "instruction",
+      "concept": "Rule or guideline: **360**: `https://www.so.com/s?q={keyword}`...",
+      "instruction": "**360**: `https://www.so.com/s?q={keyword}`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_instruction_59a5ade8",
+      "skill_name": "multi-search-engine",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Sogou**: `https://sogou.com/web?query={keyword}`...",
+      "instruction": "**Sogou**: `https://sogou.com/web?query={keyword}`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_instruction_0aadaa06",
+      "skill_name": "multi-search-engine",
+      "category": "instruction",
+      "concept": "Rule or guideline: **WeChat**: `https://wx.sogou.com/weixin?type=2&qu...",
+      "instruction": "**WeChat**: `https://wx.sogou.com/weixin?type=2&query={keyword}`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_instruction_1de70ffc",
+      "skill_name": "multi-search-engine",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Toutiao**: `https://so.toutiao.com/search?keywor...",
+      "instruction": "**Toutiao**: `https://so.toutiao.com/search?keyword={keyword}`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_instruction_fde60229",
+      "skill_name": "multi-search-engine",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Jisilu**: `https://www.jisilu.cn/explore/?keywor...",
+      "instruction": "**Jisilu**: `https://www.jisilu.cn/explore/?keyword={keyword}`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_instruction_b6208d56",
+      "skill_name": "multi-search-engine",
+      "category": "instruction",
+      "concept": "Rule or guideline: **WeChat Search**: Best for searching WeChat publi...",
+      "instruction": "**WeChat Search**: Best for searching WeChat public articles and content",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_instruction_3cc87508",
+      "skill_name": "multi-search-engine",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Toutiao**: Good for trending topics and news agg...",
+      "instruction": "**Toutiao**: Good for trending topics and news aggregation",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_code_pattern_e10e1512",
+      "skill_name": "multi-search-engine",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from multi-search-engine",
+      "examples": [
+        "// Basic search (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=python+tutorial\"})\n\n// Site-specific (Bing CN)\nweb_fetch({\"url\": \"https://cn.bing.com/search?q=site:github.com+react&ensearch=0\"})\n\n// File type (Baidu)\nweb_fetch({\"url\": \"https://www.baidu.com/s?wd=machine+learning+filetype:pdf\"})\n\n// WeChat article search\nweb_fetch({\"url\": \"https://wx.sogou.com/weixin?type=2&query=人工智能+最新进展\"})\n\n// Toutiao search\nweb_fetch({\"url\": \"https://so.toutiao.com/search?keyword=新能源+政策\"})\n\n// Jisilu financial data\nweb_fetch({\"url\": \"https://www.jisilu.cn/explore/?keyword=REITs\"})\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_assessment_2a8b0457",
+      "skill_name": "multi-search-engine",
+      "category": "assessment",
+      "concept": "Apply multi-search-engine in a practical project",
+      "instruction": "Demonstrate mastery of multi-search-engine by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using multi-search-engine",
+        "Explain when multi-search-engine should be used",
+        "Identify the core concepts of multi-search-engine",
+        "Apply multi-search-engine to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_multi_search_engine_contextualization_e3e9c1ce",
+      "skill_name": "multi-search-engine",
+      "category": "contextualization",
+      "concept": "When to use multi-search-engine",
+      "instruction": "Learn when to apply multi-search-engine in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using multi-search-engine",
+        "User needs help with coding -> evaluate if multi-search-engine applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate multi-search-engine is needed",
+        "Distinguish between multi-search-engine and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 21,
+  "generated_at": "2026-03-24T04:43:44.490016",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/multi-search-engine/SKILL.md"
+}

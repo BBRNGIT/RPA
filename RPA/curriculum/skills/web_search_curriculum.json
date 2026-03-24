@@ -1,0 +1,929 @@
+{
+  "skill_name": "web-search",
+  "skill_description": "Implement web search capabilities using the z-ai-web-dev-sdk. Use this skill when the user needs to search for real-time information from the web, retrieve up-to-date content beyond the knowledge cutoff, or find the latest news and data. Returns structured search results with URLs, snippets, and metadata.",
+  "items": [
+    {
+      "item_id": "skill_web_search_concept_b7924a50",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding web search skill",
+      "instruction": "This skill guides the implementation of web search functionality using the z-ai-web-dev-sdk package, enabling applications to search the web and retrieve current information.",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_c2f5e6a4",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding installation path",
+      "instruction": "**Recommended Location**: `{project_path}/skills/web-search`\n\nExtract this skill package to the above path in your project.\n\n**Reference Scripts**: Example test scripts are available in the `{project_path}/skills/web-search/scripts/` directory for quick testing and reference. See `{project_path}/skills/web-search/scripts/web_search.ts` for a working example.",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_ebe99b5a",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "The Web Search skill allows you to build applications that can search the internet, retrieve current information, and access real-time data from web sources.\n\n**IMPORTANT**: z-ai-web-dev-sdk MUST be used in backend code only. Never use it in client-side code.",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_b3d2ef46",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding prerequisites",
+      "instruction": "The z-ai-web-dev-sdk package is already installed. Import it as shown in the examples below.",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_a5b70b7e",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding cli usage (for simple tasks)",
+      "instruction": "For simple web search queries, you can use the z-ai CLI instead of writing code. This is ideal for quick information retrieval, testing search functionality, or command-line automation.",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_0f270408",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding basic web search",
+      "instruction": "",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_630ec1d4",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding simple search query",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function searchWeb(query) {\n  const zai = await ZAI.create();\n\n  const results = await zai.functions.invoke('web_search', {\n    query: query,\n    num: 10\n  });\n\n  return results;\n}\n\n// Usage\nconst searchResults = await searchWeb('What is the capital of France?');\nconsole.log('Search Results:', searchResults);\n```",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_dcb6ab99",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding using short options",
+      "instruction": "z-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n```",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_00f9b643",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding search with custom parameters",
+      "instruction": "```bash",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_6c935428",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding limit number of results",
+      "instruction": "z-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_1db293a3",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding search with recency filter (results from last n days)",
+      "instruction": "z-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n```",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_8941899e",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding save search results",
+      "instruction": "```bash",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_fe49475d",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding save results to json file",
+      "instruction": "z-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_d1ae7b55",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding recent news with file output",
+      "instruction": "z-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n```",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_43352e59",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding advanced search examples",
+      "instruction": "```bash",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_51431eba",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding search for specific topics",
+      "instruction": "z-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"quantum computing applications\", \"num\": 8}' \\\n  -o quantum.json",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_610ba4b7",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding find recent scientific papers",
+      "instruction": "z-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"genomics research\", \"num\": 5, \"recency_days\": 30}' \\\n  -o genomics.json",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_2113b4dd",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding technology news from last 24 hours",
+      "instruction": "z-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"tech industry updates\", \"recency_days\": 1}' \\\n  -o today_tech.json\n```",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_670495de",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding cli parameters",
+      "instruction": "- `--name, -n`: **Required** - Function name (use \"web_search\")\n- `--args, -a`: **Required** - JSON arguments object with:\n  - `query` (string, required): Search keywords\n  - `num` (number, optional): Number of results (default: 10)\n  - `recency_days` (number, optional): Filter results from last N days\n- `--output, -o <path>`: Optional - Output file path (JSON format)",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_0ab6c0d7",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding search result structure",
+      "instruction": "Each result contains:\n- `url`: Full URL of the result\n- `name`: Title of the page\n- `snippet`: Preview text/description\n- `host_name`: Domain name\n- `rank`: Result ranking\n- `date`: Publication/update date\n- `favicon`: Favicon URL",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_205f6939",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding when to use cli vs sdk",
+      "instruction": "**Use CLI for:**\n- Quick information lookups\n- Testing search queries\n- Simple automation scripts\n- One-off research tasks\n\n**Use SDK for:**\n- Dynamic search in applications\n- Multi-step search workflows\n- Custom result processing and filtering\n- Production applications with complex logic",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_fb79a2b7",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding search result type",
+      "instruction": "Each search result is a `SearchFunctionResultItem` with the following structure:\n\n```typescript\ninterface SearchFunctionResultItem {\n  url: string;          // Full URL of the result\n  name: string;         // Title of the page\n  snippet: string;      // Preview text/description\n  host_name: string;    // Domain name\n  rank: number;         // Result ranking\n  date: string;         // Publication/update date\n  favicon: string;      // Favicon URL\n}\n```",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_b36d11c7",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding search with custom result count",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function searchWithLimit(query, numberOfResults) {\n  const zai = await ZAI.create();\n\n  const results = await zai.functions.invoke('web_search', {\n    query: query,\n    num: numberOfResults\n  });\n\n  return results;\n}\n\n// Usage - Get top 5 results\nconst topResults = await searchWithLimit('artificial intelligence news', 5);\n\n// Usage - Get top 20 results\nconst moreResults = await searchWithLimit('JavaScript frameworks', 20);\n```",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_a941297a",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding formatted search results",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function getFormattedResults(query) {\n  const zai = await ZAI.create();\n\n  const results = await zai.functions.invoke('web_search', {\n    query: query,\n    num: 10\n  });\n\n  // Format results for display\n  const formatted = results.map((item, index) => ({\n    position: index + 1,\n    title: item.name,\n    url: item.url,\n    description: item.snippet,\n    domain: item.host_name,\n    publishDate: item.date\n  }));\n\n  return formatted;\n}\n\n// Us",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_6126dc77",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding advanced use cases",
+      "instruction": "",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_ff6dd811",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding search with result processing",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass SearchProcessor {\n  constructor() {\n    this.zai = null;\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async search(query, options = {}) {\n    const {\n      num = 10,\n      filterDomain = null,\n      minSnippetLength = 0\n    } = options;\n\n    const results = await this.zai.functions.invoke('web_search', {\n      query: query,\n      num: num\n    });\n\n    // Filter results\n    let filtered = results;\n\n    if (filterDom",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_a0082ba2",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding news search",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function searchNews(topic, timeframe = 'recent') {\n  const zai = await ZAI.create();\n\n  // Add time-based keywords to query\n  const timeKeywords = {\n    recent: 'latest news',\n    today: 'today news',\n    week: 'this week news',\n    month: 'this month news'\n  };\n\n  const query = `${topic} ${timeKeywords[timeframe] || timeKeywords.recent}`;\n\n  const results = await zai.functions.invoke('web_search', {\n    query: query,\n    num: 10\n  });\n\n  ",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_1aee18a6",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding research assistant",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass ResearchAssistant {\n  constructor() {\n    this.zai = null;\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async researchTopic(topic, depth = 'standard') {\n    const numResults = {\n      quick: 5,\n      standard: 10,\n      deep: 20\n    };\n\n    const results = await this.zai.functions.invoke('web_search', {\n      query: topic,\n      num: numResults[depth] || 10\n    });\n\n    // Analyze results\n    const analysis = {\n   ",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_e4bbb899",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding search result validation",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function validateSearchResults(query) {\n  const zai = await ZAI.create();\n\n  const results = await zai.functions.invoke('web_search', {\n    query: query,\n    num: 10\n  });\n\n  // Validate and score results\n  const validated = results.map(item => {\n    let score = 0;\n    let flags = [];\n\n    // Check snippet quality\n    if (item.snippet && item.snippet.length > 50) {\n      score += 20;\n    } else {\n      flags.push('short_snippet');\n    }\n\n ",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_bc4c0e8c",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding best practices",
+      "instruction": "",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_6c1a07ef",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding 1. query optimization",
+      "instruction": "```javascript\n// Bad: Too vague\nconst bad = await searchWeb('information');\n\n// Good: Specific and targeted\nconst good = await searchWeb('JavaScript async/await best practices 2024');\n\n// Good: Include context\nconst goodWithContext = await searchWeb('React hooks tutorial for beginners');\n```",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_72b478c0",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding 2. error handling",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function safeSearch(query, retries = 3) {\n  let lastError;\n\n  for (let attempt = 1; attempt <= retries; attempt++) {\n    try {\n      const zai = await ZAI.create();\n\n      const results = await zai.functions.invoke('web_search', {\n        query: query,\n        num: 10\n      });\n\n      if (!Array.isArray(results) || results.length === 0) {\n        throw new Error('No results found or invalid response');\n      }\n\n      return {\n        succe",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_97b0fd18",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding 3. result caching",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass CachedSearch {\n  constructor(cacheDuration = 3600000) { // 1 hour default\n    this.cache = new Map();\n    this.cacheDuration = cacheDuration;\n    this.zai = null;\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  getCacheKey(query, num) {\n    return `${query}_${num}`;\n  }\n\n  async search(query, num = 10) {\n    const cacheKey = this.getCacheKey(query, num);\n    const cached = this.cache.get(cacheKey);\n\n    // Check if ca",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_f5a0d489",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding 4. rate limiting",
+      "instruction": "```javascript\nclass RateLimitedSearch {\n  constructor(requestsPerMinute = 60) {\n    this.zai = null;\n    this.requestsPerMinute = requestsPerMinute;\n    this.requests = [];\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async search(query, num = 10) {\n    await this.checkRateLimit();\n\n    const results = await this.zai.functions.invoke('web_search', {\n      query: query,\n      num: num\n    });\n\n    this.requests.push(Date.now());\n    return results;\n  }\n\n  async checkRateL",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_456bd4df",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding common use cases",
+      "instruction": "1. **Real-time Information Retrieval**: Get current news, stock prices, weather\n2. **Research & Analysis**: Gather information on specific topics\n3. **Content Discovery**: Find articles, tutorials, documentation\n4. **Competitive Analysis**: Research competitors and market trends\n5. **Fact Checking**: Verify information against web sources\n6. **SEO & Content Research**: Analyze search results for content strategy\n7. **News Aggregation**: Collect news from various sources\n8. **Academic Research**:",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_52e3d97b",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding integration examples",
+      "instruction": "",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_f3e9a616",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding express.js search api",
+      "instruction": "```javascript\nimport express from 'express';\nimport ZAI from 'z-ai-web-dev-sdk';\n\nconst app = express();\napp.use(express.json());\n\nlet zaiInstance;\n\nasync function initZAI() {\n  zaiInstance = await ZAI.create();\n}\n\napp.get('/api/search', async (req, res) => {\n  try {\n    const { q: query, num = 10 } = req.query;\n\n    if (!query) {\n      return res.status(400).json({ error: 'Query parameter \"q\" is required' });\n    }\n\n    const numResults = Math.min(parseInt(num) || 10, 20);\n\n    const results = ",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_f8536146",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding search with ai summary",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function searchAndSummarize(query) {\n  const zai = await ZAI.create();\n\n  // Step 1: Search the web\n  const searchResults = await zai.functions.invoke('web_search', {\n    query: query,\n    num: 10\n  });\n\n  // Step 2: Create summary using chat completions\n  const searchContext = searchResults\n    .slice(0, 5)\n    .map((r, i) => `${i + 1}. ${r.name}\\n${r.snippet}`)\n    .join('\\n\\n');\n\n  const completion = await zai.chat.completions.create({\n",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_7ab0026b",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding troubleshooting",
+      "instruction": "**Issue**: \"SDK must be used in backend\"\n- **Solution**: Ensure z-ai-web-dev-sdk is only imported and used in server-side code\n\n**Issue**: Empty or no results returned\n- **Solution**: Try different query terms, check internet connectivity, verify API status\n\n**Issue**: Unexpected response format\n- **Solution**: Verify the response is an array, check for API changes, add type validation\n\n**Issue**: Rate limiting errors\n- **Solution**: Implement request throttling, add delays between searches, use",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_c17cdbfb",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding performance tips",
+      "instruction": "1. **Reuse SDK Instance**: Create ZAI instance once and reuse across searches\n2. **Implement Caching**: Cache search results to reduce API calls\n3. **Optimize Query Terms**: Use specific, targeted queries for better results\n4. **Limit Result Count**: Request only the number of results you need\n5. **Parallel Searches**: Use Promise.all for multiple independent searches\n6. **Result Filtering**: Filter results on client side when possible",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_3874508e",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding security considerations",
+      "instruction": "1. **Input Validation**: Sanitize and validate user search queries\n2. **Rate Limiting**: Implement rate limits to prevent abuse\n3. **API Key Protection**: Never expose SDK credentials in client-side code\n4. **Result Filtering**: Filter potentially harmful or inappropriate content\n5. **URL Validation**: Validate URLs before redirecting users\n6. **Privacy**: Don't log sensitive user search queries",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_concept_09862932",
+      "skill_name": "web-search",
+      "category": "concept",
+      "concept": "Understanding remember",
+      "instruction": "- Always use z-ai-web-dev-sdk in backend code only\n- The SDK is already installed - import as shown in examples\n- Search results are returned as an array of SearchFunctionResultItem objects\n- Implement proper error handling and retries for production\n- Cache results when appropriate to reduce API calls\n- Use specific query terms for better search results\n- Validate and filter results before displaying to users\n- Check `scripts/web_search.ts` for a quick start example",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n",
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n",
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_instruction_e196d0ef",
+      "skill_name": "web-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--name, -n`: **Required** - Function name (use \"w...",
+      "instruction": "`--name, -n`: **Required** - Function name (use \"web_search\")",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_instruction_cf6560bb",
+      "skill_name": "web-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--args, -a`: **Required** - JSON arguments object...",
+      "instruction": "`--args, -a`: **Required** - JSON arguments object with:",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_instruction_f565b1d3",
+      "skill_name": "web-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: `query` (string, required): Search keywords...",
+      "instruction": "`query` (string, required): Search keywords",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_instruction_0b89fdd5",
+      "skill_name": "web-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: `num` (number, optional): Number of results (defau...",
+      "instruction": "`num` (number, optional): Number of results (default: 10)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_instruction_ffce08f0",
+      "skill_name": "web-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: `recency_days` (number, optional): Filter results ...",
+      "instruction": "`recency_days` (number, optional): Filter results from last N days",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_instruction_0b97bff1",
+      "skill_name": "web-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--output, -o <path>`: Optional - Output file path...",
+      "instruction": "`--output, -o <path>`: Optional - Output file path (JSON format)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_instruction_42027c27",
+      "skill_name": "web-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: `url`: Full URL of the result...",
+      "instruction": "`url`: Full URL of the result",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_instruction_2ef42855",
+      "skill_name": "web-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: `name`: Title of the page...",
+      "instruction": "`name`: Title of the page",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_instruction_39001a72",
+      "skill_name": "web-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: `snippet`: Preview text/description...",
+      "instruction": "`snippet`: Preview text/description",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_instruction_75dd5bd2",
+      "skill_name": "web-search",
+      "category": "instruction",
+      "concept": "Rule or guideline: `host_name`: Domain name...",
+      "instruction": "`host_name`: Domain name",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_code_pattern_9445be16",
+      "skill_name": "web-search",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from web-search",
+      "examples": [
+        "# Simple search query\nz-ai function --name \"web_search\" --args '{\"query\": \"artificial intelligence\"}'\n\n# Using short options\nz-ai function -n web_search -a '{\"query\": \"latest tech news\"}'\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_code_pattern_0b7d13b6",
+      "skill_name": "web-search",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from web-search",
+      "examples": [
+        "# Limit number of results\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"machine learning\", \"num\": 5}'\n\n# Search with recency filter (results from last N days)\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"cryptocurrency news\", \"num\": 10, \"recency_days\": 7}'\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_code_pattern_2575e555",
+      "skill_name": "web-search",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from web-search",
+      "examples": [
+        "# Save results to JSON file\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"climate change research\", \"num\": 5}' \\\n  -o search_results.json\n\n# Recent news with file output\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"AI breakthroughs\", \"num\": 3, \"recency_days\": 1}' \\\n  -o ai_news.json\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_code_pattern_81ddb9d2",
+      "skill_name": "web-search",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from web-search",
+      "examples": [
+        "# Search for specific topics\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"quantum computing applications\", \"num\": 8}' \\\n  -o quantum.json\n\n# Find recent scientific papers\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"genomics research\", \"num\": 5, \"recency_days\": 30}' \\\n  -o genomics.json\n\n# Technology news from last 24 hours\nz-ai function \\\n  -n web_search \\\n  -a '{\"query\": \"tech industry updates\", \"recency_days\": 1}' \\\n  -o today_tech.json\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_code_pattern_a1942c55",
+      "skill_name": "web-search",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from web-search",
+      "examples": [
+        "interface SearchFunctionResultItem {\n  url: string;          // Full URL of the result\n  name: string;         // Title of the page\n  snippet: string;      // Preview text/description\n  host_name: string;    // Domain name\n  rank: number;         // Result ranking\n  date: string;         // Publication/update date\n  favicon: string;      // Favicon URL\n}\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_assessment_66f6f365",
+      "skill_name": "web-search",
+      "category": "assessment",
+      "concept": "Apply web-search in a practical project",
+      "instruction": "Demonstrate mastery of web-search by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using web-search",
+        "Explain when web-search should be used",
+        "Identify the core concepts of web-search",
+        "Apply web-search to solve a real-world problem",
+        "Build a simple web interface",
+        "Connect frontend to backend",
+        "Implement user authentication"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_web_search_contextualization_27794b58",
+      "skill_name": "web-search",
+      "category": "contextualization",
+      "concept": "When to use web-search",
+      "instruction": "Learn when to apply web-search in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using web-search",
+        "User needs help with coding -> evaluate if web-search applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate web-search is needed",
+        "Distinguish between web-search and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 59,
+  "generated_at": "2026-03-24T04:43:44.503759",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/web-search/SKILL.md"
+}

@@ -1,0 +1,1025 @@
+{
+  "skill_name": "image-edit",
+  "skill_description": "Implement AI image editing and modification capabilities using the z-ai-web-dev-sdk. Use this skill when the user needs to edit existing images, create variations, modify visual content, redesign assets, or transform images based on text descriptions. Supports multiple image sizes and returns base64 encoded results. Also includes CLI tool for quick image editing.",
+  "items": [
+    {
+      "item_id": "skill_image_edit_concept_0b8bf06c",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding image edit skill",
+      "instruction": "This skill guides the implementation of image editing and modification functionality using the z-ai-web-dev-sdk package and CLI tool, enabling intelligent transformation and editing of images based on text descriptions.",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_e2e83f77",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding skills path",
+      "instruction": "**Skill Location**: `{project_path}/skills/image-edit`\n\nthis skill is located at above path in your project.\n\n**Reference Scripts**: Example test scripts are available in the `{Skill Location}/scripts/` directory for quick testing and reference. See `{Skill Location}/scripts/image-edit.ts` for a working example.",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_35c6f723",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "Image Edit allows you to build applications that modify, transform, and enhance existing images using AI models. Perfect for redesigning assets, creating variations, improving visual content, and transforming images based on textual descriptions.\n\n**IMPORTANT**: z-ai-web-dev-sdk MUST be used in backend code only. Never use it in client-side code.",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_41e347eb",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding sdk api method",
+      "instruction": "The image editing functionality uses the following API method:\n\n```javascript\nawait zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n```\n\n**Important**: The `images` parameter must be an array of objects with a `url` propert",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_bc40c590",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding prerequisites",
+      "instruction": "The z-ai-web-dev-sdk package is already installed. Import it as shown in the examples below.",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_723ed009",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding basic image editing",
+      "instruction": "",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_ea01a6aa",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding simple image transformation",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.wr",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_bbc1e943",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding create image variations",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_c0d62ffe",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding multiple image sizes for editing",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function editImageWithSize(imageSource, editPrompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use o",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_3a35eb20",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding cli tool usage",
+      "instruction": "The z-ai CLI tool provides a convenient way to edit images directly from the command line.",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_356f7933",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding basic cli usage",
+      "instruction": "```bash",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_7bae9e43",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding edit image with full options",
+      "instruction": "z-ai image-edit --prompt \"Change the background to sunset colors\" --image \"./photo.png\" --output \"./edited.png\"",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_407a7e19",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding short form",
+      "instruction": "z-ai image-edit -p \"Make it darker and moodier\" -i \"./original.jpg\" -o \"./moody.png\"",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_cb1d5c9c",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding specify output size",
+      "instruction": "z-ai image-edit -p \"Redesign in modern style\" -i \"./design.png\" -o \"./modern.png\" -s 1344x768",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_554fb352",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding using remote image url",
+      "instruction": "z-ai image-edit -p \"Add a hat to the person\" -i \"https://example.com/photo.png\" -o \"./result.png\" -s 1024x1024\n```",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_851e9017",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding cli parameters",
+      "instruction": "- `--prompt, -p`: **Required** - Description of the edit to apply\n- `--image, -i`: **Required** - Original image URL or local file path\n- `--output, -o`: **Required** - Output image file path (PNG format)\n- `--size, -s`: Optional - Image size, default is 1024x1024\n- `--help, -h`: Optional - Display help information",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_db3a6eb5",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding supported sizes",
+      "instruction": "- `1024x1024`, `768x1344`, `864x1152`, `1344x768`, `1152x864`, `1440x720`, `720x1440`",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_2ad559ed",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding cli use cases for image editing",
+      "instruction": "```bash",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_c2c41c8f",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding redesign existing asset",
+      "instruction": "z-ai image-edit -p \"Redesign the logo with gradients and modern styling\" -i \"./logo.png\" -o \"./logo_v2.png\" -s 1024x1024",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_e7d8a064",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding change color scheme",
+      "instruction": "z-ai image-edit -p \"Change color scheme to blue and white, professional style\" -i \"./original.png\" -o \"./recolored.png\" -s 1440x720",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_cbfd04fd",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding style transformation",
+      "instruction": "z-ai image-edit -p \"Transform to oil painting style, vibrant colors\" -i \"./photo.jpg\" -o \"./oil_painting.png\" -s 1152x864",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_5729dd5d",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding background replacement",
+      "instruction": "z-ai image-edit -p \"Replace background with modern office setting\" -i \"./portrait.png\" -o \"./new_background.png\" -s 1344x768",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_16ab518f",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding lighting adjustment",
+      "instruction": "z-ai image-edit -p \"Adjust to golden hour lighting, warm tones\" -i \"./landscape.jpg\" -o \"./golden_hour.png\" -s 1024x1024",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_31f92eef",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding element modification",
+      "instruction": "z-ai image-edit -p \"Replace the red car with a blue motorcycle\" -i \"./scene.png\" -o \"./modified.png\" -s 1344x768",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_e3fa10bc",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding mood transformation",
+      "instruction": "z-ai image-edit -p \"Transform to dark moody atmosphere with dramatic lighting\" -i \"./bright.jpg\" -o \"./moody.png\" -s 1440x720",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_3b81b1a6",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding advanced use cases",
+      "instruction": "",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_7a4c90ae",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding batch image editing",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\nimport path from 'path';\n\nasync function batchEditImages(editInstructions, outputDir, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Ensure output directory exists\n  if (!fs.existsSync(outputDir)) {\n    fs.mkdirSync(outputDir, { recursive: true });\n  }\n\n  const results = [];\n\n  for (let i = 0; i < editInstructions.length; i++) {\n    try {\n      const instruction = editInstructions[i];\n      const filename = `ed",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_52c1ff6d",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding image editing service",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\nimport path from 'path';\nimport crypto from 'crypto';\n\nclass ImageEditingService {\n  constructor(outputDir = './edited-images') {\n    this.outputDir = outputDir;\n    this.zai = null;\n    this.editHistory = [];\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n    \n    if (!fs.existsSync(this.outputDir)) {\n      fs.mkdirSync(this.outputDir, { recursive: true });\n    }\n  }\n\n  generateFilename(editPrompt) {\n    cons",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_5d59aa15",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding style transfer and transformation",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function applyStyleTransfer(imageSource, content, style, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const prompt = `${content} transformed into ${style} style, maintain composition and subject`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = B",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_2ce631e1",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding element replacement",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function replaceElement(imageSource, baseScene, replaceWhat, replaceWith, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const prompt = `${baseScene}, replace ${replaceWhat} with ${replaceWith}, keep everything else identical`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_9dd436ab",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding best practices",
+      "instruction": "",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_bbcaf349",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding 1. effective edit prompts",
+      "instruction": "```javascript\nfunction buildEditPrompt(baseDescription, modification, preserveElements = []) {\n  const components = [\n    baseDescription,\n    modification\n  ];\n\n  if (preserveElements.length > 0) {\n    components.push(`keep ${preserveElements.join(', ')} unchanged`);\n  }\n\n  components.push('maintain overall composition');\n\n  return components.filter(Boolean).join(', ');\n}\n\n// Usage\nconst editPrompt = buildEditPrompt(\n  'Professional headshot photo',\n  'change background to modern office',\n  ['l",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_1f45bed3",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding 2. size selection for different edit types",
+      "instruction": "```javascript\nfunction selectSizeForEdit(editType) {\n  const sizeMap = {\n    'background-change': '1440x720',\n    'style-transfer': '1024x1024',\n    'color-adjustment': '1024x1024',\n    'element-replacement': '1344x768',\n    'composition-change': '1152x864',\n    'portrait-edit': '768x1344',\n    'landscape-edit': '1344x768'\n  };\n\n  return sizeMap[editType] || '1024x1024';\n}\n\n// Usage\nconst size = selectSizeForEdit('background-change');\nawait editImage('Replace background with beach scene', './bea",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_da15c77e",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding 3. error handling with retry",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function safeEditImage(imageSource, editPrompt, size, outputPath, retries = 3) {\n  let lastError;\n\n  for (let attempt = 1; attempt <= retries; attempt++) {\n    try {\n      const zai = await ZAI.create();\n\n      const response = await zai.images.generations.edit({\n        prompt: editPrompt,\n        images: [{ url: imageSource }],\n        size: size\n      });\n\n      if (!response.data || !response.data[0] || !response.d",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_2cf1ea75",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding common image editing use cases",
+      "instruction": "1. **Background Replacement**: Change or remove backgrounds in photos\n2. **Style Transformation**: Convert photos to paintings, illustrations, etc.\n3. **Color Adjustment**: Change color schemes, saturation, mood\n4. **Element Modification**: Replace or modify specific elements\n5. **Composition Changes**: Adjust framing, orientation, layout\n6. **Lighting Adjustments**: Modify lighting, shadows, highlights\n7. **Asset Redesign**: Modernize or rebrand existing designs\n8. **Quality Enhancement**: Impr",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_70f7e83a",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding integration examples",
+      "instruction": "",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_7e31535e",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding express.js api endpoint",
+      "instruction": "```javascript\nimport express from 'express';\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\nimport path from 'path';\n\nconst app = express();\napp.use(express.json());\napp.use('/edited-images', express.static('edited-images'));\n\nlet zaiInstance;\nconst outputDir = './edited-images';\n\nasync function initZAI() {\n  zaiInstance = await ZAI.create();\n  if (!fs.existsSync(outputDir)) {\n    fs.mkdirSync(outputDir, { recursive: true });\n  }\n}\n\napp.post('/api/edit-image', async (req, res) => {\n  t",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_b9fb25d8",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding cli integration in scripts",
+      "instruction": "",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_5be54e38",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding shell script for batch editing",
+      "instruction": "```bash\n#!/bin/bash",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_25485375",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding batch edit images with different styles",
+      "instruction": "echo \"Creating style variations...\"\n\nORIGINAL_IMAGE=\"./product.jpg\"\nBASE=\"Professional product photo of laptop\"\n\nz-ai image-edit -p \"$BASE, modern minimalist style, white background\" -i \"$ORIGINAL_IMAGE\" -o \"./variations/minimal.png\" -s 1024x1024\nz-ai image-edit -p \"$BASE, dramatic lighting, dark background\" -i \"$ORIGINAL_IMAGE\" -o \"./variations/dramatic.png\" -s 1024x1024\nz-ai image-edit -p \"$BASE, on wooden desk, natural lighting\" -i \"$ORIGINAL_IMAGE\" -o \"./variations/natural.png\" -s 1024x1024\n",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_3bde84ca",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding troubleshooting",
+      "instruction": "**Issue**: \"SDK must be used in backend\"\n- **Solution**: Ensure z-ai-web-dev-sdk is only used in server-side code\n\n**Issue**: Invalid size parameter\n- **Solution**: Use only supported sizes: 1024x1024, 768x1344, 864x1152, 1344x768, 1152x864, 1440x720, 720x1440\n\n**Issue**: Edited image doesn't match intention\n- **Solution**: Be more specific in edit prompts. Include what to change AND what to preserve\n\n**Issue**: CLI command not found\n- **Solution**: Ensure z-ai CLI is properly installed and in P",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_92bc64c9",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding edit prompt engineering tips",
+      "instruction": "",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_f61f7644",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding good edit prompts",
+      "instruction": "- ✓ \"Change background to modern office, keep subject and lighting identical\"\n- ✓ \"Transform to watercolor style, maintain composition and colors\"\n- ✓ \"Replace red car with blue motorcycle, keep road and scenery unchanged\"\n- ✓ \"Adjust to golden hour lighting, preserve all elements\"",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_5980eaf9",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding poor edit prompts",
+      "instruction": "- ✗ \"make it better\"\n- ✗ \"change something\"\n- ✗ \"different version\"",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_cd59d191",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding edit prompt components",
+      "instruction": "1. **Base Context**: What the image currently represents\n2. **Modification**: What specific changes to make\n3. **Preservation**: What elements to keep unchanged\n4. **Quality**: Desired output quality or style",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_0780ac29",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding effective edit patterns",
+      "instruction": "**Background Changes:**\n```\n\"[Subject description], replace background with [new background], maintain subject lighting and pose\"\n```\n\n**Style Transfers:**\n```\n\"[Current description] transformed into [style name] style, preserve composition and key elements\"\n```\n\n**Element Replacement:**\n```\n\"[Scene description], replace [element A] with [element B], keep everything else identical\"\n```\n\n**Color Adjustments:**\n```\n\"[Image description], change color scheme to [colors], maintain contrast and compos",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_174189eb",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding supported image sizes",
+      "instruction": "- `1024x1024` - Square (Best for general editing)\n- `768x1344` - Portrait\n- `864x1152` - Portrait\n- `1344x768` - Landscape\n- `1152x864` - Landscape\n- `1440x720` - Wide landscape\n- `720x1440` - Tall portrait",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_concept_216cacc5",
+      "skill_name": "image-edit",
+      "category": "concept",
+      "concept": "Understanding remember",
+      "instruction": "- Always use z-ai-web-dev-sdk in backend code only\n- The SDK is already installed - import as shown\n- CLI tool is available for quick image editing\n- Be specific about what to change AND what to preserve\n- Include base description for better context\n- Use appropriate size for the edit type\n- Implement retry logic for production applications\n- Test edit prompts iteratively for best results\n- Consider creating variations to explore options\n- Base64 images need to be decoded before saving",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n",
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_instruction_842b27c3",
+      "skill_name": "image-edit",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--prompt, -p`: **Required** - Description of the ...",
+      "instruction": "`--prompt, -p`: **Required** - Description of the edit to apply",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_instruction_559606a8",
+      "skill_name": "image-edit",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--image, -i`: **Required** - Original image URL o...",
+      "instruction": "`--image, -i`: **Required** - Original image URL or local file path",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_instruction_f35c3cb7",
+      "skill_name": "image-edit",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--output, -o`: **Required** - Output image file p...",
+      "instruction": "`--output, -o`: **Required** - Output image file path (PNG format)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_instruction_c5bcbcc0",
+      "skill_name": "image-edit",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--size, -s`: Optional - Image size, default is 10...",
+      "instruction": "`--size, -s`: Optional - Image size, default is 1024x1024",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_instruction_fe195968",
+      "skill_name": "image-edit",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--help, -h`: Optional - Display help information...",
+      "instruction": "`--help, -h`: Optional - Display help information",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_instruction_c3785ca0",
+      "skill_name": "image-edit",
+      "category": "instruction",
+      "concept": "Rule or guideline: `1024x1024`, `768x1344`, `864x1152`, `1344x768`, `...",
+      "instruction": "`1024x1024`, `768x1344`, `864x1152`, `1344x768`, `1152x864`, `1440x720`, `720x1440`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_instruction_0dcca7ae",
+      "skill_name": "image-edit",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Solution**: Ensure z-ai-web-dev-sdk is only used...",
+      "instruction": "**Solution**: Ensure z-ai-web-dev-sdk is only used in server-side code",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_instruction_c6ccc6fe",
+      "skill_name": "image-edit",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Solution**: Use only supported sizes: 1024x1024,...",
+      "instruction": "**Solution**: Use only supported sizes: 1024x1024, 768x1344, 864x1152, 1344x768, 1152x864, 1440x720, 720x1440",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_instruction_6b335173",
+      "skill_name": "image-edit",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Solution**: Be more specific in edit prompts. In...",
+      "instruction": "**Solution**: Be more specific in edit prompts. Include what to change AND what to preserve",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_instruction_b8f71d99",
+      "skill_name": "image-edit",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Solution**: Ensure z-ai CLI is properly installe...",
+      "instruction": "**Solution**: Ensure z-ai CLI is properly installed and in PATH",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_code_pattern_9beea3d0",
+      "skill_name": "image-edit",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from image-edit",
+      "examples": [
+        "await zai.images.generations.edit({\n  prompt: string,              // Required: Description of the edit to apply\n  images: [{ url: string }],  // Required: Array with image URL or base64 data URL\n  size?: string,              // Optional: Output size (default: '1024x1024')\n  model?: string              // Optional: Model name\n})\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_code_pattern_37a119ad",
+      "skill_name": "image-edit",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from image-edit",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function editImage(imageSource, editPrompt, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],  // Array of objects with url property\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  \n  // Save edited image\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n  \n  console.log(`Edited image saved to ${outputPath}`);\n  return outputPath;\n}\n\n// Usage - Using remote image URL\nawait editImage(\n  'https://example.com/landscape.jpg',\n  'Transform this landscape into a night scene with stars and moon',\n  './landscape_night.png'\n);\n\n// Usage - Using local image converted to base64\nimport { readFileSync } from 'fs';\nconst imageBuffer = readFileSync('./photo.jpg');\nconst base64Image = imageBuffer.toString('base64');\nconst dataUrl = `data:image/jpeg;base64,${base64Image}`;\n\nawait editImage(\n  dataUrl,\n  'Change the cat to a dog, keep everything else the same',\n  './dog_version.png'\n);\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_code_pattern_1516e681",
+      "skill_name": "image-edit",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from image-edit",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function createVariation(imageSource, baseDescription, variation, outputPath, size = '1024x1024') {\n  const zai = await ZAI.create();\n\n  // Combine base description with variation request\n  const prompt = `${baseDescription}, ${variation}`;\n\n  const response = await zai.images.generations.edit({\n    prompt: prompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    prompt: prompt,\n    variation: variation\n  };\n}\n\n// Usage - Create variations from original image\nawait createVariation(\n  'https://example.com/headshot.jpg',\n  'Professional headshot photo',\n  'with blue background instead of gray',\n  './headshot_blue.png'\n);\n\nawait createVariation(\n  './smartphone.png',\n  'Product photo of smartphone',\n  'on wooden table instead of white background',\n  './product_wood.png'\n);\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_code_pattern_f840c0f9",
+      "skill_name": "image-edit",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from image-edit",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\n// Supported sizes\nconst SUPPORTED_SIZES = [\n  '1024x1024',  // Square\n  '768x1344',   // Portrait\n  '864x1152',   // Portrait\n  '1344x768',   // Landscape\n  '1152x864',   // Landscape\n  '1440x720',   // Wide landscape\n  '720x1440'    // Tall portrait\n];\n\nasync function editImageWithSize(imageSource, editPrompt, size, outputPath) {\n  if (!SUPPORTED_SIZES.includes(size)) {\n    throw new Error(`Unsupported size: ${size}. Use one of: ${SUPPORTED_SIZES.join(', ')}`);\n  }\n\n  const zai = await ZAI.create();\n\n  const response = await zai.images.generations.edit({\n    prompt: editPrompt,\n    images: [{ url: imageSource }],\n    size: size\n  });\n\n  const imageBase64 = response.data[0].base64;\n  const buffer = Buffer.from(imageBase64, 'base64');\n  fs.writeFileSync(outputPath, buffer);\n\n  return {\n    path: outputPath,\n    size: size,\n    fileSize: buffer.length\n  };\n}\n\n// Usage - Edit with different aspect ratios\nawait editImageWithSize(\n  './logo.png',\n  'Redesign the logo to be more modern and minimalist',\n  '1024x1024',\n  './logo_redesigned.png'\n);\n\nawait editImageWithSize(\n  'https://example.com/portrait.jpg',\n  'Transform the portrait to landscape orientation, sunset lighting',\n  '1344x768',\n  './portrait_landscape.png'\n);\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_code_pattern_14264af4",
+      "skill_name": "image-edit",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from image-edit",
+      "examples": [
+        "# Edit image with full options\nz-ai image-edit --prompt \"Change the background to sunset colors\" --image \"./photo.png\" --output \"./edited.png\"\n\n# Short form\nz-ai image-edit -p \"Make it darker and moodier\" -i \"./original.jpg\" -o \"./moody.png\"\n\n# Specify output size\nz-ai image-edit -p \"Redesign in modern style\" -i \"./design.png\" -o \"./modern.png\" -s 1344x768\n\n# Using remote image URL\nz-ai image-edit -p \"Convert to landscape orientation\" -i \"https://example.com/photo.png\" -o \"./landscape.png\" -s 1344x768\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_assessment_a2c2ff6e",
+      "skill_name": "image-edit",
+      "category": "assessment",
+      "concept": "Apply image-edit in a practical project",
+      "instruction": "Demonstrate mastery of image-edit by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using image-edit",
+        "Explain when image-edit should be used",
+        "Identify the core concepts of image-edit",
+        "Apply image-edit to solve a real-world problem",
+        "Generate an image from a description",
+        "Edit an existing image",
+        "Analyze image content"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_edit_contextualization_26f539bc",
+      "skill_name": "image-edit",
+      "category": "contextualization",
+      "concept": "When to use image-edit",
+      "instruction": "Learn when to apply image-edit in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using image-edit",
+        "User needs help with coding -> evaluate if image-edit applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate image-edit is needed",
+        "Distinguish between image-edit and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 65,
+  "generated_at": "2026-03-24T04:43:44.490639",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/image-edit/SKILL.md"
+}

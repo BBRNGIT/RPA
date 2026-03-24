@@ -1,0 +1,1009 @@
+{
+  "skill_name": "image-understand",
+  "skill_description": "Implement specialized image understanding capabilities using the z-ai-web-dev-sdk. Use this skill when the user needs to analyze static images, extract visual information, perform OCR, detect objects, classify images, or understand visual content. Optimized for PNG, JPEG, GIF, WebP, and BMP formats.",
+  "items": [
+    {
+      "item_id": "skill_image_understand_concept_05ef5fa8",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding image understanding skill",
+      "instruction": "This skill provides specialized image understanding functionality using the z-ai-web-dev-sdk package, enabling AI models to analyze, describe, and extract information from static images.",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_d5e8e207",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding skills path",
+      "instruction": "**Skill Location**: `{project_path}/skills/image-understand`\n\nthis skill is located at above path in your project.\n\n**Reference Scripts**: Example test scripts are available in the `{Skill Location}/scripts/` directory for quick testing and reference. See `{Skill Location}/scripts/image-understand.ts` for a working example.",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_680ba0a5",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "Image Understanding focuses specifically on static image analysis, providing capabilities for:\n- Image description and scene understanding\n- Object detection and recognition\n- OCR (Optical Character Recognition) and text extraction\n- Image classification and categorization\n- Visual content analysis\n- Quality assessment\n- Accessibility (alt text generation)\n\n**IMPORTANT**: z-ai-web-dev-sdk MUST be used in backend code only. Never use it in client-side code.",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_f4d7abaf",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding prerequisites",
+      "instruction": "The z-ai-web-dev-sdk package is already installed. Import it as shown in the examples below.",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_3f870178",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding cli usage (for simple tasks)",
+      "instruction": "For quick image analysis tasks, you can use the z-ai CLI instead of writing code. This is ideal for simple image descriptions, testing, or automation.",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_c8a484d1",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding basic image analysis",
+      "instruction": "```bash",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_d5fee930",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding describe an image from url",
+      "instruction": "z-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_d52d3eaa",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding using short options",
+      "instruction": "z-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n```",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_cf86768f",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding analyze local images",
+      "instruction": "```bash",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_bf062de7",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding analyze a local image file",
+      "instruction": "z-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_d4cebff9",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding save response to file",
+      "instruction": "z-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n```",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_05e58485",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding multiple images comparison",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function compareImages(imageUrls, question) {\n  const zai = await ZAI.create();\n\n  const content = [\n    {\n      type: 'text',\n      text: question\n    },\n    ...imageUrls.map(url => ({\n      type: 'image_url',\n      image_url: { url }\n    }))\n  ];\n\n  const response = await zai.chat.completions.createVision({\n    messages: [\n      {\n        role: 'user',\n        content: content\n      }\n    ],\n    thinking: { type: 'disabled' }\n  });\n\n  re",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_7a4a6c47",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding compare multiple images",
+      "instruction": "z-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_fda0939c",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding analyze a series of images",
+      "instruction": "z-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n```",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_b533e19f",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding advanced analysis with thinking",
+      "instruction": "```bash",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_82f4784b",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding enable chain-of-thought reasoning for complex tasks",
+      "instruction": "z-ai vision \\\n  -p \"Count all people in this image and describe what each person is doing\" \\\n  -i \"./crowd.jpg\" \\\n  --thinking \\\n  -o analysis.json",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_c74aae34",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding complex object detection with reasoning",
+      "instruction": "z-ai vision \\\n  -p \"Identify all safety hazards in this workplace image\" \\\n  -i \"./workplace.jpg\" \\\n  --thinking\n```",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_1b17ff5c",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding streaming output",
+      "instruction": "```bash",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_bbfbc36d",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding stream the analysis in real-time",
+      "instruction": "z-ai vision -p \"Provide a detailed description\" -i \"./photo.jpg\" --stream\n```",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_18ec84ea",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding cli parameters",
+      "instruction": "- `--prompt, -p <text>`: **Required** - Question or instruction about the image(s)\n- `--image, -i <URL or path>`: Optional - Image URL or local file path (can be used multiple times)\n- `--thinking, -t`: Optional - Enable chain-of-thought reasoning (default: disabled)\n- `--output, -o <path>`: Optional - Output file path (JSON format)\n- `--stream`: Optional - Stream the response in real-time",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_9f66467c",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding supported image formats",
+      "instruction": "- PNG (.png) - Best for diagrams, screenshots, graphics with transparency\n- JPEG (.jpg, .jpeg) - Best for photos and complex images\n- GIF (.gif) - Supports both static and animated images\n- WebP (.webp) - Modern format with good compression\n- BMP (.bmp) - Uncompressed bitmap format",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_e8c5fa5b",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding when to use cli vs sdk",
+      "instruction": "**Use CLI for:**\n- Quick image analysis or descriptions\n- One-off OCR tasks\n- Testing image understanding capabilities\n- Simple batch processing scripts\n- Generating alt text for accessibility\n\n**Use SDK for:**\n- Multi-turn conversations about images\n- Complex image processing pipelines\n- Production applications with error handling\n- Custom integration with your application logic\n- Batch processing with custom business logic",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_9fa125a8",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding recommended approach",
+      "instruction": "For better performance and reliability, use base64 encoding to pass images to the model instead of image URLs.",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_98138680",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding basic image understanding implementation",
+      "instruction": "",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_2d6c5f56",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding single image analysis",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function analyzeImage(imageUrl, prompt) {\n  const zai = await ZAI.create();\n\n  const response = await zai.chat.completions.createVision({\n    messages: [\n      {\n        role: 'user',\n        content: [\n          {\n            type: 'text',\n            text: prompt\n          },\n          {\n            type: 'image_url',\n            image_url: {\n              url: imageUrl\n            }\n          }\n        ]\n      }\n    ],\n    thinking: { t",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_6a2abfeb",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding base64 image support (recommended)",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\nimport path from 'path';\n\nasync function analyzeLocalImage(imagePath, prompt) {\n  const zai = await ZAI.create();\n\n  // Read image file and convert to base64\n  const imageBuffer = fs.readFileSync(imagePath);\n  const base64Image = imageBuffer.toString('base64');\n  \n  // Determine MIME type based on file extension\n  const ext = path.extname(imagePath).toLowerCase();\n  const mimeTypes = {\n    '.png': 'image/png',\n    '.jpg': 'im",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_02ea1bc0",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding advanced use cases",
+      "instruction": "",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_9d1bdd3b",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding ocr and text extraction",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function extractText(imageUrl, options = {}) {\n  const zai = await ZAI.create();\n\n  const prompt = options.preserveLayout \n    ? 'Extract all text from this image. Preserve the exact layout, formatting, and structure.'\n    : 'Extract all visible text from this image.';\n\n  const response = await zai.chat.completions.createVision({\n    messages: [\n      {\n        role: 'user',\n        content: [\n          { type: 'text', text: prompt },\n    ",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_d892aba6",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding object detection and counting",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function detectObjects(imageUrl, objectType) {\n  const zai = await ZAI.create();\n\n  const prompt = objectType \n    ? `Count and locate all ${objectType} in this image. Provide their positions and describe each one.`\n    : 'Detect and list all objects in this image with their approximate locations.';\n\n  const response = await zai.chat.completions.createVision({\n    messages: [\n      {\n        role: 'user',\n        content: [\n          { typ",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_a0851890",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding image classification and tagging",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function classifyAndTag(imageUrl) {\n  const zai = await ZAI.create();\n\n  const prompt = `Analyze this image and provide a comprehensive classification:\n1. Primary category (e.g., nature, urban, portrait, product)\n2. Subject matter (main focus of the image)\n3. Style or mood (e.g., professional, casual, artistic, vintage)\n4. Color palette description\n5. Suggested tags (10-15 keywords, comma-separated)\n\nFormat your response as structured JSON",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_6efb1b98",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding quality assessment",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function assessImageQuality(imageUrl) {\n  const zai = await ZAI.create();\n\n  const prompt = `Assess the technical quality of this image:\n1. Sharpness and focus (1-10)\n2. Exposure and brightness (1-10)\n3. Color balance (1-10)\n4. Composition (1-10)\n5. Any technical issues (blur, noise, artifacts, etc.)\n6. Overall quality rating (1-10)\n7. Suggestions for improvement\n\nProvide specific feedback for each criterion.`;\n\n  const response = await za",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_951e0037",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding accessibility - alt text generation",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function generateAltText(imageUrl, context = '') {\n  const zai = await ZAI.create();\n\n  const prompt = context\n    ? `Generate concise, descriptive alt text for this image. Context: ${context}. Focus on the most important visual elements that convey the image's purpose.`\n    : 'Generate concise, descriptive alt text for this image suitable for screen readers. Focus on key visual elements.';\n\n  const response = await zai.chat.completions.cr",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_2dc5c9e6",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding scene understanding",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function understandScene(imageUrl) {\n  const zai = await ZAI.create();\n\n  const prompt = `Provide a comprehensive scene analysis:\n1. Setting/location type (indoor/outdoor, specific place)\n2. Time of day and lighting conditions\n3. Weather (if applicable)\n4. People present (number, activities, interactions)\n5. Key objects and their arrangement\n6. Overall atmosphere and mood\n7. Notable details or interesting elements`;\n\n  const response = awa",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_fce9597f",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding batch processing",
+      "instruction": "",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_05e35e6a",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding process multiple images",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass ImageBatchProcessor {\n  constructor() {\n    this.zai = null;\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async processImage(imageUrl, prompt) {\n    const response = await this.zai.chat.completions.createVision({\n      messages: [\n        {\n          role: 'user',\n          content: [\n            { type: 'text', text: prompt },\n            { type: 'image_url', image_url: { url: imageUrl } }\n          ]\n        }\n  ",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_702a1106",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding best practices",
+      "instruction": "",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_65fcea07",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding 1. image quality and preparation",
+      "instruction": "- Use high-resolution images for better analysis accuracy\n- Ensure images are well-lit and properly exposed\n- For OCR, ensure text is clear and readable\n- Optimize file size to balance quality and performance\n- Supported formats: PNG (best for text/diagrams), JPEG (best for photos), WebP, GIF, BMP",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_0ba121b6",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding 2. prompt engineering for images",
+      "instruction": "- Be specific about what information you need\n- Mention the type of image (photo, diagram, screenshot, etc.)\n- For complex tasks, break down into specific questions\n- Use structured prompts for JSON output\n- Include context when relevant",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_0f234d28",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding 3. error handling",
+      "instruction": "```javascript\nasync function safeImageAnalysis(imageUrl, prompt) {\n  try {\n    const zai = await ZAI.create();\n    \n    const response = await zai.chat.completions.createVision({\n      messages: [\n        {\n          role: 'user',\n          content: [\n            { type: 'text', text: prompt },\n            { type: 'image_url', image_url: { url: imageUrl } }\n          ]\n        }\n      ],\n      thinking: { type: 'disabled' }\n    });\n\n    return {\n      success: true,\n      content: response.choic",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_5d9fb808",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding 4. performance optimization",
+      "instruction": "- Cache SDK instance for batch processing\n- Use base64 encoding for local images\n- Implement request throttling for large batches\n- Consider image preprocessing (resize, compress) for large files\n- Use appropriate thinking mode (disabled for simple tasks, enabled for complex reasoning)",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_54fcc061",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding 5. security considerations",
+      "instruction": "- Validate image URLs before processing\n- Implement rate limiting for public APIs\n- Sanitize user-provided image data\n- Never expose SDK credentials in client-side code\n- Implement content moderation for user-uploaded images",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_d4b73e8c",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding common use cases",
+      "instruction": "1. **E-commerce Product Analysis**: Analyze product images, extract features, generate descriptions\n2. **Document Processing**: Extract text from receipts, invoices, forms, business cards\n3. **Content Moderation**: Detect inappropriate content, verify image compliance\n4. **Quality Control**: Identify defects, assess product quality in manufacturing\n5. **Accessibility**: Generate alt text for images automatically\n6. **Image Cataloging**: Auto-tag and categorize image libraries\n7. **Visual Search*",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_ef46a009",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding integration examples",
+      "instruction": "",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_cc931e8a",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding express.js api endpoint",
+      "instruction": "```javascript\nimport express from 'express';\nimport ZAI from 'z-ai-web-dev-sdk';\nimport multer from 'multer';\n\nconst app = express();\nconst upload = multer({ storage: multer.memoryStorage() });\n\nlet zaiInstance;\n\nasync function initZAI() {\n  zaiInstance = await ZAI.create();\n}\n\n// Analyze image from URL\napp.post('/api/analyze-image', express.json(), async (req, res) => {\n  try {\n    const { imageUrl, prompt } = req.body;\n\n    if (!imageUrl || !prompt) {\n      return res.status(400).json({ \n     ",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_7fa2a01e",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding next.js api route",
+      "instruction": "```javascript\n// pages/api/image-understand.js\nimport ZAI from 'z-ai-web-dev-sdk';\n\nlet zaiInstance = null;\n\nasync function getZAI() {\n  if (!zaiInstance) {\n    zaiInstance = await ZAI.create();\n  }\n  return zaiInstance;\n}\n\nexport default async function handler(req, res) {\n  if (req.method !== 'POST') {\n    return res.status(405).json({ error: 'Method not allowed' });\n  }\n\n  try {\n    const { imageUrl, prompt } = req.body;\n\n    if (!imageUrl || !prompt) {\n      return res.status(400).json({ \n   ",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_4ee88a32",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding troubleshooting",
+      "instruction": "**Issue**: \"SDK must be used in backend\"\n- **Solution**: Ensure z-ai-web-dev-sdk is only imported and used in server-side code, never in client/browser code\n\n**Issue**: Image not loading or being analyzed\n- **Solution**: Verify the image URL is accessible, returns correct MIME type, and is in a supported format\n\n**Issue**: Poor OCR accuracy\n- **Solution**: Ensure text is clear and readable, increase image resolution, ensure proper lighting and contrast\n\n**Issue**: Inaccurate object detection or ",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_concept_6aa1a0a5",
+      "skill_name": "image-understand",
+      "category": "concept",
+      "concept": "Understanding remember",
+      "instruction": "- Always use z-ai-web-dev-sdk in backend code only\n- The SDK is already installed - import as shown in examples\n- Use `image_url` content type for static images\n- Base64 encoding is recommended for better performance\n- Structure prompts clearly for best results\n- Enable thinking mode for complex reasoning tasks (counting, detailed analysis)\n- Handle errors gracefully in production\n- Validate and sanitize user inputs\n- Consider privacy and security when processing user images",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_instruction_dae1791a",
+      "skill_name": "image-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: Image description and scene understanding...",
+      "instruction": "Image description and scene understanding",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_instruction_657e4c39",
+      "skill_name": "image-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: Object detection and recognition...",
+      "instruction": "Object detection and recognition",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_instruction_cd6191d8",
+      "skill_name": "image-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: OCR (Optical Character Recognition) and text extra...",
+      "instruction": "OCR (Optical Character Recognition) and text extraction",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_instruction_a1eca8f9",
+      "skill_name": "image-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: Image classification and categorization...",
+      "instruction": "Image classification and categorization",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_instruction_e801333b",
+      "skill_name": "image-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: Visual content analysis...",
+      "instruction": "Visual content analysis",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_instruction_e51aaf78",
+      "skill_name": "image-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: Quality assessment...",
+      "instruction": "Quality assessment",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_instruction_6879c2b9",
+      "skill_name": "image-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: Accessibility (alt text generation)...",
+      "instruction": "Accessibility (alt text generation)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_instruction_342417c2",
+      "skill_name": "image-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--prompt, -p <text>`: **Required** - Question or ...",
+      "instruction": "`--prompt, -p <text>`: **Required** - Question or instruction about the image(s)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_instruction_7f438815",
+      "skill_name": "image-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--image, -i <URL or path>`: Optional - Image URL ...",
+      "instruction": "`--image, -i <URL or path>`: Optional - Image URL or local file path (can be used multiple times)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_instruction_4a0cbfb1",
+      "skill_name": "image-understand",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--thinking, -t`: Optional - Enable chain-of-thoug...",
+      "instruction": "`--thinking, -t`: Optional - Enable chain-of-thought reasoning (default: disabled)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_code_pattern_26fa04e9",
+      "skill_name": "image-understand",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from image-understand",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_code_pattern_42af004f",
+      "skill_name": "image-understand",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from image-understand",
+      "examples": [
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_code_pattern_57eb5380",
+      "skill_name": "image-understand",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from image-understand",
+      "examples": [
+        "# Compare multiple images\nz-ai vision \\\n  -p \"Compare these two images and highlight the differences\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Analyze a series of images\nz-ai vision \\\n  --prompt \"What patterns do you see across these images?\" \\\n  --image \"https://example.com/img1.jpg\" \\\n  --image \"https://example.com/img2.jpg\" \\\n  --image \"https://example.com/img3.jpg\"\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_code_pattern_0549a425",
+      "skill_name": "image-understand",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from image-understand",
+      "examples": [
+        "# Enable chain-of-thought reasoning for complex tasks\nz-ai vision \\\n  -p \"Count all people in this image and describe what each person is doing\" \\\n  -i \"./crowd.jpg\" \\\n  --thinking \\\n  -o analysis.json\n\n# Complex object detection with reasoning\nz-ai vision \\\n  -p \"Identify all safety hazards in this workplace image\" \\\n  -i \"./workplace.jpg\" \\\n  --thinking\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_code_pattern_b892de4b",
+      "skill_name": "image-understand",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from image-understand",
+      "examples": [
+        "# Stream the analysis in real-time\nz-ai vision -p \"Provide a detailed description\" -i \"./photo.jpg\" --stream\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_assessment_9c627368",
+      "skill_name": "image-understand",
+      "category": "assessment",
+      "concept": "Apply image-understand in a practical project",
+      "instruction": "Demonstrate mastery of image-understand by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using image-understand",
+        "Explain when image-understand should be used",
+        "Identify the core concepts of image-understand",
+        "Apply image-understand to solve a real-world problem",
+        "Generate an image from a description",
+        "Edit an existing image",
+        "Analyze image content"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_image_understand_contextualization_60ef865b",
+      "skill_name": "image-understand",
+      "category": "contextualization",
+      "concept": "When to use image-understand",
+      "instruction": "Learn when to apply image-understand in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using image-understand",
+        "User needs help with coding -> evaluate if image-understand applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate image-understand is needed",
+        "Distinguish between image-understand and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 64,
+  "generated_at": "2026-03-24T04:43:44.500538",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/image-understand/SKILL.md"
+}

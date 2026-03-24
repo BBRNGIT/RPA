@@ -1,0 +1,229 @@
+{
+  "batch_id": "batch_health_wellness_20260324_044709",
+  "source": "health_wellness",
+  "domain": "health",
+  "items": [
+    {
+      "domain": "health",
+      "category": "health_guideline",
+      "concept": "exercise",
+      "recommendation": "150 minutes moderate or 75 minutes vigorous per week",
+      "importance": "Essential for cardiovascular health",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply exercise recommendations"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "nutrition",
+      "concept": "fats",
+      "recommendation": "20-35% of calories",
+      "function": "Energy storage and cell function",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify foods rich in fats"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "health_guideline",
+      "concept": "hydration",
+      "recommendation": "8 glasses of water daily",
+      "importance": "Necessary for all bodily functions",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply hydration recommendations"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "nutrition",
+      "concept": "protein",
+      "recommendation": "0.8g per kg body weight",
+      "function": "Building blocks for tissues",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify foods rich in protein"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "health_guideline",
+      "concept": "exercise",
+      "recommendation": "150 minutes moderate or 75 minutes vigorous per week",
+      "importance": "Essential for cardiovascular health",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply exercise recommendations"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "nutrition",
+      "concept": "fats",
+      "recommendation": "20-35% of calories",
+      "function": "Energy storage and cell function",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify foods rich in fats"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "health_guideline",
+      "concept": "sleep",
+      "recommendation": "7-9 hours for adults",
+      "importance": "Critical for recovery and cognitive function",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply sleep recommendations"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "nutrition",
+      "concept": "fats",
+      "recommendation": "20-35% of calories",
+      "function": "Energy storage and cell function",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify foods rich in fats"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "health_guideline",
+      "concept": "hydration",
+      "recommendation": "8 glasses of water daily",
+      "importance": "Necessary for all bodily functions",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply hydration recommendations"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "nutrition",
+      "concept": "protein",
+      "recommendation": "0.8g per kg body weight",
+      "function": "Building blocks for tissues",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify foods rich in protein"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "health_guideline",
+      "concept": "exercise",
+      "recommendation": "150 minutes moderate or 75 minutes vigorous per week",
+      "importance": "Essential for cardiovascular health",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply exercise recommendations"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "nutrition",
+      "concept": "protein",
+      "recommendation": "0.8g per kg body weight",
+      "function": "Building blocks for tissues",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify foods rich in protein"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "health_guideline",
+      "concept": "sleep",
+      "recommendation": "7-9 hours for adults",
+      "importance": "Critical for recovery and cognitive function",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply sleep recommendations"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "nutrition",
+      "concept": "carbohydrates",
+      "recommendation": "45-65% of calories",
+      "function": "Primary energy source",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify foods rich in carbohydrates"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "health_guideline",
+      "concept": "exercise",
+      "recommendation": "150 minutes moderate or 75 minutes vigorous per week",
+      "importance": "Essential for cardiovascular health",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply exercise recommendations"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "nutrition",
+      "concept": "fats",
+      "recommendation": "20-35% of calories",
+      "function": "Energy storage and cell function",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify foods rich in fats"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "health_guideline",
+      "concept": "sleep",
+      "recommendation": "7-9 hours for adults",
+      "importance": "Critical for recovery and cognitive function",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply sleep recommendations"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "nutrition",
+      "concept": "carbohydrates",
+      "recommendation": "45-65% of calories",
+      "function": "Primary energy source",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify foods rich in carbohydrates"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "health_guideline",
+      "concept": "sleep",
+      "recommendation": "7-9 hours for adults",
+      "importance": "Critical for recovery and cognitive function",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply sleep recommendations"
+      ]
+    },
+    {
+      "domain": "health",
+      "category": "nutrition",
+      "concept": "protein",
+      "recommendation": "0.8g per kg body weight",
+      "function": "Building blocks for tissues",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify foods rich in protein"
+      ]
+    }
+  ],
+  "generated_at": "2026-03-24T04:47:09.428842",
+  "item_count": 20
+}

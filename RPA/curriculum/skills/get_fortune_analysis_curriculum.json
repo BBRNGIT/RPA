@@ -1,0 +1,184 @@
+{
+  "skill_name": "get-fortune-analysis",
+  "skill_description": "生成视觉华丽、内容详实、具有仪式感的流年运势报告（流金星象风格）。",
+  "items": [
+    {
+      "item_id": "skill_get_fortune_analysis_concept_46087789",
+      "skill_name": "get-fortune-analysis",
+      "category": "concept",
+      "concept": "Understanding description: 生成视觉华丽、内容详实、具有仪式感的流年运势报告（流金星象风格）。",
+      "instruction": "",
+      "examples": [
+        "{\n    \"fortune_report\": {\n        \"score\": 88,\n        \"keyword\": \"灵感迸发 · 贵人引路\",\n        \"user_tag\": \"丁火 (身弱)\",\n        \"stars\": {\n            \"c\": \"★★★★☆\",\n            \"w\": \"★★★☆☆\",\n            \"l\": \"★★★★★\"\n        },\n        \"analysis\": {\n            \"overview\": \"2026 丙午流年，火气旺盛，对你而言是充满灵性与机遇的一年。虽然竞争压力（比劫）增大，但也激活了你命局中的‘印星’能量。这意味着今年你的直觉力、学习力将达到巅峰，是沉淀自我、弯道超车的最佳时机。\",\n            \"career\": \"今年不适合盲目扩张，适合‘深耕’。职场上会遇到强有力的女性贵人或资深导师，给你带来关键性的指点。若从事创意、咨询、教育行业，今年极易出成果。切记：多听少说，以柔克刚。\",\n            \"love\": \"情感方面，桃花星悄然绽放。单身者极易在学习场所、图书馆或艺术展上邂逅精神契合的伴侣；有伴侣者，今年是进行深度沟通、解决历史遗留问题的破冰之年，关系将升华到精神层面。\"\n        }\n    }\n}"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_get_fortune_analysis_concept_2d02cee6",
+      "skill_name": "get-fortune-analysis",
+      "category": "concept",
+      "concept": "Understanding 1. input parameters",
+      "instruction": "| Parameter | Type | Description |\n| :--- | :--- | :--- |\n| `birth_year`, `birth_month`, `birth_day`, `birth_hour` | Integer | 用户出生时间 |\n| `focus_type` | String | (可选) \"事业\", \"财运\", \"情感\" |",
+      "examples": [
+        "{\n    \"fortune_report\": {\n        \"score\": 88,\n        \"keyword\": \"灵感迸发 · 贵人引路\",\n        \"user_tag\": \"丁火 (身弱)\",\n        \"stars\": {\n            \"c\": \"★★★★☆\",\n            \"w\": \"★★★☆☆\",\n            \"l\": \"★★★★★\"\n        },\n        \"analysis\": {\n            \"overview\": \"2026 丙午流年，火气旺盛，对你而言是充满灵性与机遇的一年。虽然竞争压力（比劫）增大，但也激活了你命局中的‘印星’能量。这意味着今年你的直觉力、学习力将达到巅峰，是沉淀自我、弯道超车的最佳时机。\",\n            \"career\": \"今年不适合盲目扩张，适合‘深耕’。职场上会遇到强有力的女性贵人或资深导师，给你带来关键性的指点。若从事创意、咨询、教育行业，今年极易出成果。切记：多听少说，以柔克刚。\",\n            \"love\": \"情感方面，桃花星悄然绽放。单身者极易在学习场所、图书馆或艺术展上邂逅精神契合的伴侣；有伴侣者，今年是进行深度沟通、解决历史遗留问题的破冰之年，关系将升华到精神层面。\"\n        }\n    }\n}"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_get_fortune_analysis_concept_eb40f6a5",
+      "skill_name": "get-fortune-analysis",
+      "category": "concept",
+      "concept": "Understanding 2. workflow",
+      "instruction": "",
+      "examples": [
+        "{\n    \"fortune_report\": {\n        \"score\": 88,\n        \"keyword\": \"灵感迸发 · 贵人引路\",\n        \"user_tag\": \"丁火 (身弱)\",\n        \"stars\": {\n            \"c\": \"★★★★☆\",\n            \"w\": \"★★★☆☆\",\n            \"l\": \"★★★★★\"\n        },\n        \"analysis\": {\n            \"overview\": \"2026 丙午流年，火气旺盛，对你而言是充满灵性与机遇的一年。虽然竞争压力（比劫）增大，但也激活了你命局中的‘印星’能量。这意味着今年你的直觉力、学习力将达到巅峰，是沉淀自我、弯道超车的最佳时机。\",\n            \"career\": \"今年不适合盲目扩张，适合‘深耕’。职场上会遇到强有力的女性贵人或资深导师，给你带来关键性的指点。若从事创意、咨询、教育行业，今年极易出成果。切记：多听少说，以柔克刚。\",\n            \"love\": \"情感方面，桃花星悄然绽放。单身者极易在学习场所、图书馆或艺术展上邂逅精神契合的伴侣；有伴侣者，今年是进行深度沟通、解决历史遗留问题的破冰之年，关系将升华到精神层面。\"\n        }\n    }\n}"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_get_fortune_analysis_concept_883e41d1",
+      "skill_name": "get-fortune-analysis",
+      "category": "concept",
+      "concept": "Understanding step 1: calculation (python)",
+      "instruction": "调用 `get_cyber_divination_data` 获取 `bazi` (八字基础) 和 `fortune` (流年十神) 数据。",
+      "examples": [
+        "{\n    \"fortune_report\": {\n        \"score\": 88,\n        \"keyword\": \"灵感迸发 · 贵人引路\",\n        \"user_tag\": \"丁火 (身弱)\",\n        \"stars\": {\n            \"c\": \"★★★★☆\",\n            \"w\": \"★★★☆☆\",\n            \"l\": \"★★★★★\"\n        },\n        \"analysis\": {\n            \"overview\": \"2026 丙午流年，火气旺盛，对你而言是充满灵性与机遇的一年。虽然竞争压力（比劫）增大，但也激活了你命局中的‘印星’能量。这意味着今年你的直觉力、学习力将达到巅峰，是沉淀自我、弯道超车的最佳时机。\",\n            \"career\": \"今年不适合盲目扩张，适合‘深耕’。职场上会遇到强有力的女性贵人或资深导师，给你带来关键性的指点。若从事创意、咨询、教育行业，今年极易出成果。切记：多听少说，以柔克刚。\",\n            \"love\": \"情感方面，桃花星悄然绽放。单身者极易在学习场所、图书馆或艺术展上邂逅精神契合的伴侣；有伴侣者，今年是进行深度沟通、解决历史遗留问题的破冰之年，关系将升华到精神层面。\"\n        }\n    }\n}"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_get_fortune_analysis_concept_f3a6bd14",
+      "skill_name": "get-fortune-analysis",
+      "category": "concept",
+      "concept": "Understanding step 2: reasoning (深度分析模式)",
+      "instruction": "基于 `bazi` 和 `fortune` 进行多维度推理。\n**文案要求：**\n* **口吻**：温暖、笃定、专业，类似资深命理师或星座专家的语气。\n* **结构**：\n    1.  **年度关键词**：4个字，精准概括全年基调（如“破茧成蝶”）。\n    2.  **核心能量**：解释流年十神对用户命局的深层影响（30-50字）。\n    3.  **事业/财运**：具体的职场发展路径和财富机遇分析（50-80字）。\n    4.  **情感/人际**：人际关系模式与情感走向分析（50-80字）。",
+      "examples": [
+        "{\n    \"fortune_report\": {\n        \"score\": 88,\n        \"keyword\": \"灵感迸发 · 贵人引路\",\n        \"user_tag\": \"丁火 (身弱)\",\n        \"stars\": {\n            \"c\": \"★★★★☆\",\n            \"w\": \"★★★☆☆\",\n            \"l\": \"★★★★★\"\n        },\n        \"analysis\": {\n            \"overview\": \"2026 丙午流年，火气旺盛，对你而言是充满灵性与机遇的一年。虽然竞争压力（比劫）增大，但也激活了你命局中的‘印星’能量。这意味着今年你的直觉力、学习力将达到巅峰，是沉淀自我、弯道超车的最佳时机。\",\n            \"career\": \"今年不适合盲目扩张，适合‘深耕’。职场上会遇到强有力的女性贵人或资深导师，给你带来关键性的指点。若从事创意、咨询、教育行业，今年极易出成果。切记：多听少说，以柔克刚。\",\n            \"love\": \"情感方面，桃花星悄然绽放。单身者极易在学习场所、图书馆或艺术展上邂逅精神契合的伴侣；有伴侣者，今年是进行深度沟通、解决历史遗留问题的破冰之年，关系将升华到精神层面。\"\n        }\n    }\n}"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_get_fortune_analysis_concept_4ee40921",
+      "skill_name": "get-fortune-analysis",
+      "category": "concept",
+      "concept": "Understanding step 3: json output",
+      "instruction": "生成适配前端的 JSON 数据。\n\n```json\n{\n    \"fortune_report\": {\n        \"score\": 88,\n        \"keyword\": \"灵感迸发 · 贵人引路\",\n        \"user_tag\": \"丁火 (身弱)\",\n        \"stars\": {\n            \"c\": \"★★★★☆\",\n            \"w\": \"★★★☆☆\",\n            \"l\": \"★★★★★\"\n        },\n        \"analysis\": {\n            \"overview\": \"2026 丙午流年，火气旺盛，对你而言是充满灵性与机遇的一年。虽然竞争压力（比劫）增大，但也激活了你命局中的‘印星’能量。这意味着今年你的直觉力、学习力将达到巅峰，是沉淀自我、弯道超车的最佳时机。\",\n            \"career\": \"今年不适合盲目扩张，适合‘深耕’。职场上会遇到强有力的女性贵人或资深导师，给你带来关键性的指点。若从事创意、咨询、教育行业，今年极易出成果。切记：多听少说，以柔克刚。\"",
+      "examples": [
+        "{\n    \"fortune_report\": {\n        \"score\": 88,\n        \"keyword\": \"灵感迸发 · 贵人引路\",\n        \"user_tag\": \"丁火 (身弱)\",\n        \"stars\": {\n            \"c\": \"★★★★☆\",\n            \"w\": \"★★★☆☆\",\n            \"l\": \"★★★★★\"\n        },\n        \"analysis\": {\n            \"overview\": \"2026 丙午流年，火气旺盛，对你而言是充满灵性与机遇的一年。虽然竞争压力（比劫）增大，但也激活了你命局中的‘印星’能量。这意味着今年你的直觉力、学习力将达到巅峰，是沉淀自我、弯道超车的最佳时机。\",\n            \"career\": \"今年不适合盲目扩张，适合‘深耕’。职场上会遇到强有力的女性贵人或资深导师，给你带来关键性的指点。若从事创意、咨询、教育行业，今年极易出成果。切记：多听少说，以柔克刚。\",\n            \"love\": \"情感方面，桃花星悄然绽放。单身者极易在学习场所、图书馆或艺术展上邂逅精神契合的伴侣；有伴侣者，今年是进行深度沟通、解决历史遗留问题的破冰之年，关系将升华到精神层面。\"\n        }\n    }\n}"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_get_fortune_analysis_concept_f51efe02",
+      "skill_name": "get-fortune-analysis",
+      "category": "concept",
+      "concept": "Understanding 2. 前端展示代码 (`result card.html`)",
+      "instruction": "*修改点：在首页（`ritual-layer`）增加了动态生成漂浮二进制代码的逻辑。代码粒子是半透明的金色/白色，缓慢上升并消散，营造神秘的数据空间感。*\n\n```html\n<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>2026 流年运势书</title>\n    <link href=\"https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Serif+SC:wght@400;700&display=swap\" rel=\"stylesheet\">\n    <style>\n        :root {\n            --bg-deep: #1a0b2e;\n          ",
+      "examples": [
+        "{\n    \"fortune_report\": {\n        \"score\": 88,\n        \"keyword\": \"灵感迸发 · 贵人引路\",\n        \"user_tag\": \"丁火 (身弱)\",\n        \"stars\": {\n            \"c\": \"★★★★☆\",\n            \"w\": \"★★★☆☆\",\n            \"l\": \"★★★★★\"\n        },\n        \"analysis\": {\n            \"overview\": \"2026 丙午流年，火气旺盛，对你而言是充满灵性与机遇的一年。虽然竞争压力（比劫）增大，但也激活了你命局中的‘印星’能量。这意味着今年你的直觉力、学习力将达到巅峰，是沉淀自我、弯道超车的最佳时机。\",\n            \"career\": \"今年不适合盲目扩张，适合‘深耕’。职场上会遇到强有力的女性贵人或资深导师，给你带来关键性的指点。若从事创意、咨询、教育行业，今年极易出成果。切记：多听少说，以柔克刚。\",\n            \"love\": \"情感方面，桃花星悄然绽放。单身者极易在学习场所、图书馆或艺术展上邂逅精神契合的伴侣；有伴侣者，今年是进行深度沟通、解决历史遗留问题的破冰之年，关系将升华到精神层面。\"\n        }\n    }\n}"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_get_fortune_analysis_instruction_11f6e41d",
+      "skill_name": "get-fortune-analysis",
+      "category": "instruction",
+      "concept": "Rule or guideline: **口吻**：温暖、笃定、专业，类似资深命理师或星座专家的语气。...",
+      "instruction": "**口吻**：温暖、笃定、专业，类似资深命理师或星座专家的语气。",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_get_fortune_analysis_instruction_95cc1907",
+      "skill_name": "get-fortune-analysis",
+      "category": "instruction",
+      "concept": "Rule or guideline: **结构**：...",
+      "instruction": "**结构**：",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_get_fortune_analysis_code_pattern_93efabbe",
+      "skill_name": "get-fortune-analysis",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from get-fortune-analysis",
+      "examples": [
+        "{\n    \"fortune_report\": {\n        \"score\": 88,\n        \"keyword\": \"灵感迸发 · 贵人引路\",\n        \"user_tag\": \"丁火 (身弱)\",\n        \"stars\": {\n            \"c\": \"★★★★☆\",\n            \"w\": \"★★★☆☆\",\n            \"l\": \"★★★★★\"\n        },\n        \"analysis\": {\n            \"overview\": \"2026 丙午流年，火气旺盛，对你而言是充满灵性与机遇的一年。虽然竞争压力（比劫）增大，但也激活了你命局中的‘印星’能量。这意味着今年你的直觉力、学习力将达到巅峰，是沉淀自我、弯道超车的最佳时机。\",\n            \"career\": \"今年不适合盲目扩张，适合‘深耕’。职场上会遇到强有力的女性贵人或资深导师，给你带来关键性的指点。若从事创意、咨询、教育行业，今年极易出成果。切记：多听少说，以柔克刚。\",\n            \"love\": \"情感方面，桃花星悄然绽放。单身者极易在学习场所、图书馆或艺术展上邂逅精神契合的伴侣；有伴侣者，今年是进行深度沟通、解决历史遗留问题的破冰之年，关系将升华到精神层面。\"\n        }\n    }\n}"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_get_fortune_analysis_assessment_df157446",
+      "skill_name": "get-fortune-analysis",
+      "category": "assessment",
+      "concept": "Apply get-fortune-analysis in a practical project",
+      "instruction": "Demonstrate mastery of get-fortune-analysis by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using get-fortune-analysis",
+        "Explain when get-fortune-analysis should be used",
+        "Identify the core concepts of get-fortune-analysis",
+        "Apply get-fortune-analysis to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_get_fortune_analysis_contextualization_09e945be",
+      "skill_name": "get-fortune-analysis",
+      "category": "contextualization",
+      "concept": "When to use get-fortune-analysis",
+      "instruction": "Learn when to apply get-fortune-analysis in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using get-fortune-analysis",
+        "User needs help with coding -> evaluate if get-fortune-analysis applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate get-fortune-analysis is needed",
+        "Distinguish between get-fortune-analysis and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 12,
+  "generated_at": "2026-03-24T04:43:44.504129",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/get-fortune-analysis/SKILL.md"
+}

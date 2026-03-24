@@ -1,0 +1,342 @@
+{
+  "batch_id": "batch_skills_registry_20260324_044709",
+  "source": "skills_registry",
+  "domain": "skills",
+  "items": [
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "fullstack-dev",
+      "when_to_use": "Building web applications, APIs, databases",
+      "keywords": [
+        "website",
+        "web app",
+        "database",
+        "API"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring fullstack-dev",
+        "Explain when to use fullstack-dev"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "docx",
+      "when_to_use": "Creating Word documents",
+      "keywords": [
+        "document",
+        "word",
+        "report",
+        "letter"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring docx",
+        "Explain when to use docx"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "pdf",
+      "when_to_use": "Working with PDF files",
+      "keywords": [
+        "PDF",
+        "form",
+        "extract"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring pdf",
+        "Explain when to use pdf"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "pdf",
+      "when_to_use": "Working with PDF files",
+      "keywords": [
+        "PDF",
+        "form",
+        "extract"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring pdf",
+        "Explain when to use pdf"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "image-generation",
+      "when_to_use": "Creating images from descriptions",
+      "keywords": [
+        "image",
+        "picture",
+        "generate",
+        "create visual"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring image-generation",
+        "Explain when to use image-generation"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "fullstack-dev",
+      "when_to_use": "Building web applications, APIs, databases",
+      "keywords": [
+        "website",
+        "web app",
+        "database",
+        "API"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring fullstack-dev",
+        "Explain when to use fullstack-dev"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "fullstack-dev",
+      "when_to_use": "Building web applications, APIs, databases",
+      "keywords": [
+        "website",
+        "web app",
+        "database",
+        "API"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring fullstack-dev",
+        "Explain when to use fullstack-dev"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "docx",
+      "when_to_use": "Creating Word documents",
+      "keywords": [
+        "document",
+        "word",
+        "report",
+        "letter"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring docx",
+        "Explain when to use docx"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "fullstack-dev",
+      "when_to_use": "Building web applications, APIs, databases",
+      "keywords": [
+        "website",
+        "web app",
+        "database",
+        "API"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring fullstack-dev",
+        "Explain when to use fullstack-dev"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "fullstack-dev",
+      "when_to_use": "Building web applications, APIs, databases",
+      "keywords": [
+        "website",
+        "web app",
+        "database",
+        "API"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring fullstack-dev",
+        "Explain when to use fullstack-dev"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "pptx",
+      "when_to_use": "Creating presentations",
+      "keywords": [
+        "presentation",
+        "slides",
+        "powerpoint"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring pptx",
+        "Explain when to use pptx"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "pdf",
+      "when_to_use": "Working with PDF files",
+      "keywords": [
+        "PDF",
+        "form",
+        "extract"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring pdf",
+        "Explain when to use pdf"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "pdf",
+      "when_to_use": "Working with PDF files",
+      "keywords": [
+        "PDF",
+        "form",
+        "extract"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring pdf",
+        "Explain when to use pdf"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "image-generation",
+      "when_to_use": "Creating images from descriptions",
+      "keywords": [
+        "image",
+        "picture",
+        "generate",
+        "create visual"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring image-generation",
+        "Explain when to use image-generation"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "image-generation",
+      "when_to_use": "Creating images from descriptions",
+      "keywords": [
+        "image",
+        "picture",
+        "generate",
+        "create visual"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring image-generation",
+        "Explain when to use image-generation"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "docx",
+      "when_to_use": "Creating Word documents",
+      "keywords": [
+        "document",
+        "word",
+        "report",
+        "letter"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring docx",
+        "Explain when to use docx"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "pdf",
+      "when_to_use": "Working with PDF files",
+      "keywords": [
+        "PDF",
+        "form",
+        "extract"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring pdf",
+        "Explain when to use pdf"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "docx",
+      "when_to_use": "Creating Word documents",
+      "keywords": [
+        "document",
+        "word",
+        "report",
+        "letter"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring docx",
+        "Explain when to use docx"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "pdf",
+      "when_to_use": "Working with PDF files",
+      "keywords": [
+        "PDF",
+        "form",
+        "extract"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring pdf",
+        "Explain when to use pdf"
+      ]
+    },
+    {
+      "domain": "skills",
+      "category": "skill_application",
+      "concept": "docx",
+      "when_to_use": "Creating Word documents",
+      "keywords": [
+        "document",
+        "word",
+        "report",
+        "letter"
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Identify scenarios requiring docx",
+        "Explain when to use docx"
+      ]
+    }
+  ],
+  "generated_at": "2026-03-24T04:47:09.429084",
+  "item_count": 20
+}

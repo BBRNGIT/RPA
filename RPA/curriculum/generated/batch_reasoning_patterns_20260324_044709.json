@@ -1,0 +1,219 @@
+{
+  "batch_id": "batch_reasoning_patterns_20260324_044709",
+  "source": "reasoning_patterns",
+  "domain": "reasoning",
+  "items": [
+    {
+      "domain": "reasoning",
+      "category": "reasoning_pattern",
+      "concept": "deductive",
+      "description": "Apply general rules to specific cases",
+      "example": "All men are mortal. Socrates is a man. Therefore, Socrates is mortal.",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply deductive reasoning to a problem"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "heuristic",
+      "concept": "occams_razor",
+      "description": "The simplest explanation is usually correct",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use occams_razor in decision-making"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "reasoning_pattern",
+      "concept": "inductive",
+      "description": "Derive general rules from specific cases",
+      "example": "The sun has risen every morning. Therefore, the sun will rise tomorrow.",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply inductive reasoning to a problem"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "heuristic",
+      "concept": "representativeness",
+      "description": "Judge probability by similarity to prototype",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use representativeness in decision-making"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "reasoning_pattern",
+      "concept": "abductive",
+      "description": "Find the best explanation",
+      "example": "The grass is wet. It probably rained.",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply abductive reasoning to a problem"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "heuristic",
+      "concept": "occams_razor",
+      "description": "The simplest explanation is usually correct",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use occams_razor in decision-making"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "reasoning_pattern",
+      "concept": "deductive",
+      "description": "Apply general rules to specific cases",
+      "example": "All men are mortal. Socrates is a man. Therefore, Socrates is mortal.",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply deductive reasoning to a problem"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "heuristic",
+      "concept": "representativeness",
+      "description": "Judge probability by similarity to prototype",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use representativeness in decision-making"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "reasoning_pattern",
+      "concept": "deductive",
+      "description": "Apply general rules to specific cases",
+      "example": "All men are mortal. Socrates is a man. Therefore, Socrates is mortal.",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply deductive reasoning to a problem"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "heuristic",
+      "concept": "occams_razor",
+      "description": "The simplest explanation is usually correct",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use occams_razor in decision-making"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "reasoning_pattern",
+      "concept": "inductive",
+      "description": "Derive general rules from specific cases",
+      "example": "The sun has risen every morning. Therefore, the sun will rise tomorrow.",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply inductive reasoning to a problem"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "heuristic",
+      "concept": "occams_razor",
+      "description": "The simplest explanation is usually correct",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use occams_razor in decision-making"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "reasoning_pattern",
+      "concept": "inductive",
+      "description": "Derive general rules from specific cases",
+      "example": "The sun has risen every morning. Therefore, the sun will rise tomorrow.",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply inductive reasoning to a problem"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "heuristic",
+      "concept": "occams_razor",
+      "description": "The simplest explanation is usually correct",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use occams_razor in decision-making"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "reasoning_pattern",
+      "concept": "deductive",
+      "description": "Apply general rules to specific cases",
+      "example": "All men are mortal. Socrates is a man. Therefore, Socrates is mortal.",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply deductive reasoning to a problem"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "heuristic",
+      "concept": "representativeness",
+      "description": "Judge probability by similarity to prototype",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use representativeness in decision-making"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "reasoning_pattern",
+      "concept": "deductive",
+      "description": "Apply general rules to specific cases",
+      "example": "All men are mortal. Socrates is a man. Therefore, Socrates is mortal.",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply deductive reasoning to a problem"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "heuristic",
+      "concept": "occams_razor",
+      "description": "The simplest explanation is usually correct",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use occams_razor in decision-making"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "reasoning_pattern",
+      "concept": "inductive",
+      "description": "Derive general rules from specific cases",
+      "example": "The sun has risen every morning. Therefore, the sun will rise tomorrow.",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply inductive reasoning to a problem"
+      ]
+    },
+    {
+      "domain": "reasoning",
+      "category": "heuristic",
+      "concept": "occams_razor",
+      "description": "The simplest explanation is usually correct",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use occams_razor in decision-making"
+      ]
+    }
+  ],
+  "generated_at": "2026-03-24T04:47:09.428059",
+  "item_count": 20
+}

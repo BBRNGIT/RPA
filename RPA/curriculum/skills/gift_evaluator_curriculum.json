@@ -1,0 +1,266 @@
+{
+  "skill_name": "gift-evaluator",
+  "skill_description": "The PRIMARY tool for Spring Festival gift analysis and social interaction generation. Use this skill when users upload photos of gifts (alcohol, tea, supplements, etc.) to inquire about their value, authenticity, or how to respond socially. Integrates visual perception, market valuation, and HTML card generation.",
+  "items": [
+    {
+      "item_id": "skill_gift_evaluator_concept_44192c7b",
+      "skill_name": "gift-evaluator",
+      "category": "concept",
+      "concept": "Understanding agent thinking strategy",
+      "instruction": "Before and during the execution of tools, maintain a \"High EQ\" and \"Market-Savvy\" mindset. You are not just identifying objects; you are decoding social relationships.\n\n1.  **Visual Extraction (The Eye)**: \n    * Call the vision tool to get a raw description.\n    * **CRITICAL**: Read the raw description carefully. Extract specific entities: Brand names (e.g., \"Moutai\", \"Dior\"), Vintages, Packaging details (e.g., \"Dusty bottle\" implies old stock, \"Gift box\" implies formality).\n\n2.  **Valuation Lo",
+      "examples": [
+        "    python3 html_tools.py generate_gift_card \\\n        --product_name \"EXTRACTED_NAME\" \\\n        --price \"ESTIMATED_PRICE\" \\\n        --evaluation \"YOUR_LONG_AND_SPICY_CRITIQUE\" \\\n        --thank_you_json '[{\"style\":\"...\",\"content\":\"...\"}]' \\\n        --return_gift_json '[{\"target\":\"...\",\"item\":\"...\",\"reason\":\"...\"}]' \\\n        --vibe_code \"luxury|standard|budget\" \\\n        --image_url \"IMAGE_FILE_PATH\" \\\n        --output_path \"TARGET_FILE_PATH\"\n    "
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_concept_17c91ce8",
+      "skill_name": "gift-evaluator",
+      "category": "concept",
+      "concept": "Understanding 1. the perception phase (visual analysis)",
+      "instruction": "Purpose: Utilizing VLM  skills to conduct a multi-dimensional visual decomposition of the uploaded product image. This process automatically identifies and extracts structured data including Brand Recognition, Product Style, Packaging Design, and Aesthetic Category.\n\n**Output Analysis**:\n\n* The tool returns a raw string content. Read it to extract keywords for the next step.",
+      "examples": [
+        "    python3 html_tools.py generate_gift_card \\\n        --product_name \"EXTRACTED_NAME\" \\\n        --price \"ESTIMATED_PRICE\" \\\n        --evaluation \"YOUR_LONG_AND_SPICY_CRITIQUE\" \\\n        --thank_you_json '[{\"style\":\"...\",\"content\":\"...\"}]' \\\n        --return_gift_json '[{\"target\":\"...\",\"item\":\"...\",\"reason\":\"...\"}]' \\\n        --vibe_code \"luxury|standard|budget\" \\\n        --image_url \"IMAGE_FILE_PATH\" \\\n        --output_path \"TARGET_FILE_PATH\"\n    "
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_concept_56a2e5d4",
+      "skill_name": "gift-evaluator",
+      "category": "concept",
+      "concept": "Understanding 2. the valuation phase (search)",
+      "instruction": "**Purpose**: Validate the product's worth.\n**Command**:search \"EXTRACTED_KEYWORDS + price + review\"",
+      "examples": [
+        "    python3 html_tools.py generate_gift_card \\\n        --product_name \"EXTRACTED_NAME\" \\\n        --price \"ESTIMATED_PRICE\" \\\n        --evaluation \"YOUR_LONG_AND_SPICY_CRITIQUE\" \\\n        --thank_you_json '[{\"style\":\"...\",\"content\":\"...\"}]' \\\n        --return_gift_json '[{\"target\":\"...\",\"item\":\"...\",\"reason\":\"...\"}]' \\\n        --vibe_code \"luxury|standard|budget\" \\\n        --image_url \"IMAGE_FILE_PATH\" \\\n        --output_path \"TARGET_FILE_PATH\"\n    "
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_concept_26456c90",
+      "skill_name": "gift-evaluator",
+      "category": "concept",
+      "concept": "Understanding 3. the content structuring phase (reasoning)",
+      "instruction": "**Purpose**: Prepare the data for the HTML generator. **Do not call a tool here, just think and format strings.**\n\n1. **Construct `thank_you_json**`: Create 3 distinct styles of private messages.\n* *Format*: `[{\"style\": \"Style Name\", \"content\": \"Message...\"}]`\n* *Requirement*:\n* Style 1: \"Decent/Formal\" (for elders/bosses).\n* Style 2: \"Friendly/Warm\" (for peers/relatives).\n* Style 3: \"Humorous/Close\" (for best friends).\n\n\n2. **Construct `return_gift_json**`: Analyze 4 potential giver personas.\n*",
+      "examples": [
+        "    python3 html_tools.py generate_gift_card \\\n        --product_name \"EXTRACTED_NAME\" \\\n        --price \"ESTIMATED_PRICE\" \\\n        --evaluation \"YOUR_LONG_AND_SPICY_CRITIQUE\" \\\n        --thank_you_json '[{\"style\":\"...\",\"content\":\"...\"}]' \\\n        --return_gift_json '[{\"target\":\"...\",\"item\":\"...\",\"reason\":\"...\"}]' \\\n        --vibe_code \"luxury|standard|budget\" \\\n        --image_url \"IMAGE_FILE_PATH\" \\\n        --output_path \"TARGET_FILE_PATH\"\n    "
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_concept_92f0fc60",
+      "skill_name": "gift-evaluator",
+      "category": "concept",
+      "concept": "Understanding 4. the creation phase (render)",
+      "instruction": "**Purpose**: Package the analysis into a modern, interactive HTML card.\n**HTML Generation**:\n    * *Constraint*: The `image_url` parameter in the Python command MUST be the original absolute path.`output_path` must be the full path.\n    * *Command*:\n    ```bash\n    python3 html_tools.py generate_gift_card \\\n        --product_name \"EXTRACTED_NAME\" \\\n        --price \"ESTIMATED_PRICE\" \\\n        --evaluation \"YOUR_LONG_AND_SPICY_CRITIQUE\" \\\n        --thank_you_json '[{\"style\":\"...\",\"content\":\"...\"}]",
+      "examples": [
+        "    python3 html_tools.py generate_gift_card \\\n        --product_name \"EXTRACTED_NAME\" \\\n        --price \"ESTIMATED_PRICE\" \\\n        --evaluation \"YOUR_LONG_AND_SPICY_CRITIQUE\" \\\n        --thank_you_json '[{\"style\":\"...\",\"content\":\"...\"}]' \\\n        --return_gift_json '[{\"target\":\"...\",\"item\":\"...\",\"reason\":\"...\"}]' \\\n        --vibe_code \"luxury|standard|budget\" \\\n        --image_url \"IMAGE_FILE_PATH\" \\\n        --output_path \"TARGET_FILE_PATH\"\n    "
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_concept_1ece1726",
+      "skill_name": "gift-evaluator",
+      "category": "concept",
+      "concept": "Understanding operational rules",
+      "instruction": "1. **JSON Formatting**: The `thank_you_json` and `return_gift_json` arguments MUST be valid JSON strings using double quotes. Do not wrap them in code blocks inside the command.\n2. **Critique Depth**: The `evaluation` text must be rich. Don't just say \"It's expensive.\" Say \"This 2018 vintage shows your uncle raided his personal cellar; the label wear proves it's real.\"\n3. **Vibe Consistency**: Ensure `vibe_code` matches the `price` assessment.\n4. **Final Output**: Always present the path to the ",
+      "examples": [
+        "    python3 html_tools.py generate_gift_card \\\n        --product_name \"EXTRACTED_NAME\" \\\n        --price \"ESTIMATED_PRICE\" \\\n        --evaluation \"YOUR_LONG_AND_SPICY_CRITIQUE\" \\\n        --thank_you_json '[{\"style\":\"...\",\"content\":\"...\"}]' \\\n        --return_gift_json '[{\"target\":\"...\",\"item\":\"...\",\"reason\":\"...\"}]' \\\n        --vibe_code \"luxury|standard|budget\" \\\n        --image_url \"IMAGE_FILE_PATH\" \\\n        --output_path \"TARGET_FILE_PATH\"\n    "
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_instruction_b7677a10",
+      "skill_name": "gift-evaluator",
+      "category": "instruction",
+      "concept": "Rule or guideline: Call the vision tool to get a raw description....",
+      "instruction": "Call the vision tool to get a raw description.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_instruction_f4a61c5f",
+      "skill_name": "gift-evaluator",
+      "category": "instruction",
+      "concept": "Rule or guideline: **CRITICAL**: Read the raw description carefully. ...",
+      "instruction": "**CRITICAL**: Read the raw description carefully. Extract specific entities: Brand names (e.g., \"Moutai\", \"Dior\"), Vintages, Packaging details (e.g., \"Dusty bottle\" implies old stock, \"Gift box\" implies formality).",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_instruction_0e623faf",
+      "skill_name": "gift-evaluator",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Price Anchoring**: Use search tools to find the ...",
+      "instruction": "**Price Anchoring**: Use search tools to find the *current* market price.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_instruction_2469675d",
+      "skill_name": "gift-evaluator",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Social Labeling**: Classify the gift based on pr...",
+      "instruction": "**Social Labeling**: Classify the gift based on price and intent:",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_instruction_cf8b7292",
+      "skill_name": "gift-evaluator",
+      "category": "instruction",
+      "concept": "Rule or guideline: `luxury`: High value (> ¥1000), \"Hard Currency\"....",
+      "instruction": "`luxury`: High value (> ¥1000), \"Hard Currency\".",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_instruction_2b598f67",
+      "skill_name": "gift-evaluator",
+      "category": "instruction",
+      "concept": "Rule or guideline: `standard`: Festive, safe choices (¥200 - ¥1000)....",
+      "instruction": "`standard`: Festive, safe choices (¥200 - ¥1000).",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_instruction_06587bd1",
+      "skill_name": "gift-evaluator",
+      "category": "instruction",
+      "concept": "Rule or guideline: `budget`: Practical, funny, or cheap (< ¥200)....",
+      "instruction": "`budget`: Practical, funny, or cheap (< ¥200).",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_instruction_a23926d9",
+      "skill_name": "gift-evaluator",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Deep Critique**: Generate a \"Roast\" (毒舌点评) of **...",
+      "instruction": "**Deep Critique**: Generate a \"Roast\" (毒舌点评) of **at least 50 words**. It must combine the visual details (e.g., dust, packaging color) with the price reality. Be spicy but insightful.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_instruction_c5725ce9",
+      "skill_name": "gift-evaluator",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Structured Strategy**: You must structure the \"T...",
+      "instruction": "**Structured Strategy**: You must structure the \"Thank You Notes\" and \"Return Gift Ideas\" into JSON format for the UI to render.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_instruction_15d08c43",
+      "skill_name": "gift-evaluator",
+      "category": "instruction",
+      "concept": "Rule or guideline: The tool returns a raw string content. Read it to ...",
+      "instruction": "The tool returns a raw string content. Read it to extract keywords for the next step.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_code_pattern_504a55bb",
+      "skill_name": "gift-evaluator",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from gift-evaluator",
+      "examples": [
+        "    python3 html_tools.py generate_gift_card \\\n        --product_name \"EXTRACTED_NAME\" \\\n        --price \"ESTIMATED_PRICE\" \\\n        --evaluation \"YOUR_LONG_AND_SPICY_CRITIQUE\" \\\n        --thank_you_json '[{\"style\":\"...\",\"content\":\"...\"}]' \\\n        --return_gift_json '[{\"target\":\"...\",\"item\":\"...\",\"reason\":\"...\"}]' \\\n        --vibe_code \"luxury|standard|budget\" \\\n        --image_url \"IMAGE_FILE_PATH\" \\\n        --output_path \"TARGET_FILE_PATH\"\n    "
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_assessment_1f9e071a",
+      "skill_name": "gift-evaluator",
+      "category": "assessment",
+      "concept": "Apply gift-evaluator in a practical project",
+      "instruction": "Demonstrate mastery of gift-evaluator by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using gift-evaluator",
+        "Explain when gift-evaluator should be used",
+        "Identify the core concepts of gift-evaluator",
+        "Apply gift-evaluator to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_gift_evaluator_contextualization_6f583eb6",
+      "skill_name": "gift-evaluator",
+      "category": "contextualization",
+      "concept": "When to use gift-evaluator",
+      "instruction": "Learn when to apply gift-evaluator in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using gift-evaluator",
+        "User needs help with coding -> evaluate if gift-evaluator applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate gift-evaluator is needed",
+        "Distinguish between gift-evaluator and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 19,
+  "generated_at": "2026-03-24T04:43:44.497149",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/gift-evaluator/SKILL.md"
+}

@@ -1,0 +1,846 @@
+{
+  "skill_name": "LLM",
+  "skill_description": "Implement large language model (LLM) chat completions using the z-ai-web-dev-sdk. Use this skill when the user needs to build conversational AI applications, chatbots, AI assistants, or any text generation features. Supports multi-turn conversations, system prompts, and context management.",
+  "items": [
+    {
+      "item_id": "skill_llm_concept_f0bbca94",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding llm (large language model) skill",
+      "instruction": "This skill guides the implementation of chat completions functionality using the z-ai-web-dev-sdk package, enabling powerful conversational AI and text generation capabilities.",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_62b7fc02",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding skills path",
+      "instruction": "**Skill Location**: `{project_path}/skills/llm`\n\nthis skill is located at above path in your project.\n\n**Reference Scripts**: Example test scripts are available in the `{Skill Location}/scripts/` directory for quick testing and reference. See `{Skill Location}/scripts/chat.ts` for a working example.",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_b77e7f0e",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "The LLM skill allows you to build applications that leverage large language models for natural language understanding and generation, including chatbots, AI assistants, content generation, and more.\n\n**IMPORTANT**: z-ai-web-dev-sdk MUST be used in backend code only. Never use it in client-side code.",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_7e9e3792",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding prerequisites",
+      "instruction": "The z-ai-web-dev-sdk package is already installed. Import it as shown in the examples below.",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_d4e780ca",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding cli usage (for simple tasks)",
+      "instruction": "For simple, one-off chat completions, you can use the z-ai CLI instead of writing code. This is ideal for quick tests, simple queries, or automation scripts.",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_c51c4c07",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding basic chat",
+      "instruction": "```bash",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_dae37e54",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding simple question",
+      "instruction": "z-ai chat --prompt \"What is the capital of France?\"",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_1dee2764",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding save response to file",
+      "instruction": "z-ai chat -p \"Explain quantum computing\" -o response.json",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_7d3cc144",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding stream the response",
+      "instruction": "z-ai chat -p \"Write a short poem\" --stream\n```",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_97f6540b",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding with system prompt",
+      "instruction": "```bash",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_c9b71f24",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding custom system prompt for specific behavior",
+      "instruction": "z-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n```",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_09e773ae",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding with thinking (chain of thought)",
+      "instruction": "```bash",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_b93f22e3",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding enable thinking for complex reasoning",
+      "instruction": "z-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n```",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_27e7ffee",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding cli parameters",
+      "instruction": "- `--prompt, -p <text>`: **Required** - User message content\n- `--system, -s <text>`: Optional - System prompt for custom behavior\n- `--thinking, -t`: Optional - Enable chain-of-thought reasoning (default: disabled)\n- `--output, -o <path>`: Optional - Output file path (JSON format)\n- `--stream`: Optional - Stream the response in real-time",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_f390e3b0",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding when to use cli vs sdk",
+      "instruction": "**Use CLI for:**\n- Quick one-off questions\n- Simple automation scripts\n- Testing prompts\n- Single-turn conversations\n\n**Use SDK for:**\n- Multi-turn conversations with context\n- Custom conversation management\n- Integration with web applications\n- Complex chat workflows\n- Production applications",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_ead68373",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding basic chat completions",
+      "instruction": "",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_51320ac1",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding simple question and answer",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function askQuestion(question) {\n  const zai = await ZAI.create();\n\n  const completion = await zai.chat.completions.create({\n    messages: [\n      {\n        role: 'assistant',\n        content: 'You are a helpful assistant.'\n      },\n      {\n        role: 'user',\n        content: question\n      }\n    ],\n    thinking: { type: 'disabled' }\n  });\n\n  const response = completion.choices[0]?.message?.content;\n  return response;\n}\n\n// Usage\nconst ",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_41dee1d9",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding custom system prompt",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function customAssistant(systemPrompt, userMessage) {\n  const zai = await ZAI.create();\n\n  const completion = await zai.chat.completions.create({\n    messages: [\n      {\n        role: 'assistant',\n        content: systemPrompt\n      },\n      {\n        role: 'user',\n        content: userMessage\n      }\n    ],\n    thinking: { type: 'disabled' }\n  });\n\n  return completion.choices[0]?.message?.content;\n}\n\n// Usage - Code reviewer\nconst codeRev",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_8e50f3f4",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding multi-turn conversations",
+      "instruction": "",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_bd3d1482",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding conversation history management",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass ConversationManager {\n  constructor(systemPrompt = 'You are a helpful assistant.') {\n    this.messages = [\n      {\n        role: 'assistant',\n        content: systemPrompt\n      }\n    ];\n    this.zai = null;\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async sendMessage(userMessage) {\n    // Add user message to history\n    this.messages.push({\n      role: 'user',\n      content: userMessage\n    });\n\n    // Get compl",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_857cc03e",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding context-aware conversations",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass ContextualChat {\n  constructor() {\n    this.messages = [];\n    this.zai = null;\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async startConversation(role, context) {\n    // Set up system prompt with context\n    const systemPrompt = `You are ${role}. Context: ${context}`;\n    \n    this.messages = [\n      {\n        role: 'assistant',\n        content: systemPrompt\n      }\n    ];\n  }\n\n  async chat(userMessage) {\n    th",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_17091a12",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding advanced use cases",
+      "instruction": "",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_a1c8410a",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding content generation",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass ContentGenerator {\n  constructor() {\n    this.zai = null;\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async generateBlogPost(topic, tone = 'professional') {\n    const completion = await this.zai.chat.completions.create({\n      messages: [\n        {\n          role: 'assistant',\n          content: `You are a professional content writer. Write in a ${tone} tone.`\n        },\n        {\n          role: 'user',\n         ",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_8033844a",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding data analysis and summarization",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function analyzeData(data, analysisType) {\n  const zai = await ZAI.create();\n\n  const prompts = {\n    summarize: 'You are a data analyst. Summarize the key insights from the data.',\n    trend: 'You are a data analyst. Identify trends and patterns in the data.',\n    recommendation: 'You are a business analyst. Provide actionable recommendations based on the data.'\n  };\n\n  const completion = await zai.chat.completions.create({\n    messages: ",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_c17db760",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding code generation and debugging",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass CodeAssistant {\n  constructor() {\n    this.zai = null;\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async generateCode(description, language) {\n    const completion = await this.zai.chat.completions.create({\n      messages: [\n        {\n          role: 'assistant',\n          content: `You are an expert ${language} programmer. Write clean, efficient, and well-commented code.`\n        },\n        {\n          role: 'use",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_49abad4b",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding best practices",
+      "instruction": "",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_9d3cff43",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding 1. prompt engineering",
+      "instruction": "```javascript\n// Bad: Vague prompt\nconst bad = await askQuestion('Tell me about AI');\n\n// Good: Specific and structured prompt\nasync function askWithContext(topic, format, audience) {\n  const zai = await ZAI.create();\n  \n  const completion = await zai.chat.completions.create({\n    messages: [\n      {\n        role: 'assistant',\n        content: `You are an expert educator. Explain topics clearly for ${audience}.`\n      },\n      {\n        role: 'user',\n        content: `Explain ${topic} in ${forma",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_18bf0523",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding 2. error handling",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function safeCompletion(messages, retries = 3) {\n  let lastError;\n\n  for (let attempt = 1; attempt <= retries; attempt++) {\n    try {\n      const zai = await ZAI.create();\n\n      const completion = await zai.chat.completions.create({\n        messages: messages,\n        thinking: { type: 'disabled' }\n      });\n\n      const response = completion.choices[0]?.message?.content;\n\n      if (!response || response.trim().length === 0) {\n        thr",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_db978df1",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding 3. context management",
+      "instruction": "```javascript\nclass ManagedConversation {\n  constructor(maxMessages = 20) {\n    this.maxMessages = maxMessages;\n    this.systemPrompt = '';\n    this.messages = [];\n    this.zai = null;\n  }\n\n  async initialize(systemPrompt) {\n    this.zai = await ZAI.create();\n    this.systemPrompt = systemPrompt;\n    this.messages = [\n      {\n        role: 'assistant',\n        content: systemPrompt\n      }\n    ];\n  }\n\n  async chat(userMessage) {\n    // Add user message\n    this.messages.push({\n      role: 'user'",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_7ca558e5",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding 4. response processing",
+      "instruction": "```javascript\nasync function getStructuredResponse(query, format = 'json') {\n  const zai = await ZAI.create();\n\n  const formatInstructions = {\n    json: 'Respond with valid JSON only. No additional text.',\n    list: 'Respond with a numbered list.',\n    markdown: 'Respond in Markdown format.'\n  };\n\n  const completion = await zai.chat.completions.create({\n    messages: [\n      {\n        role: 'assistant',\n        content: `You are a helpful assistant. ${formatInstructions[format]}`\n      },\n      ",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_e13f149e",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding common use cases",
+      "instruction": "1. **Chatbots & Virtual Assistants**: Build conversational interfaces for customer support\n2. **Content Generation**: Create articles, product descriptions, marketing copy\n3. **Code Assistance**: Generate, explain, and debug code\n4. **Data Analysis**: Analyze and summarize complex data sets\n5. **Language Translation**: Translate text between languages\n6. **Educational Tools**: Create tutoring and learning applications\n7. **Email Automation**: Generate professional email responses\n8. **Creative W",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_7074fabd",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding integration examples",
+      "instruction": "",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_082a41e9",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding express.js chatbot api",
+      "instruction": "```javascript\nimport express from 'express';\nimport ZAI from 'z-ai-web-dev-sdk';\n\nconst app = express();\napp.use(express.json());\n\n// Store conversations in memory (use database in production)\nconst conversations = new Map();\n\nlet zaiInstance;\n\nasync function initZAI() {\n  zaiInstance = await ZAI.create();\n}\n\napp.post('/api/chat', async (req, res) => {\n  try {\n    const { sessionId, message, systemPrompt } = req.body;\n\n    if (!message) {\n      return res.status(400).json({ error: 'Message is re",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "expert",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_7182fdd4",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding troubleshooting",
+      "instruction": "**Issue**: \"SDK must be used in backend\"\n- **Solution**: Ensure z-ai-web-dev-sdk is only imported and used in server-side code\n\n**Issue**: Empty or incomplete responses\n- **Solution**: Check that completion.choices[0]?.message?.content exists and is not empty\n\n**Issue**: Conversation context getting too long\n- **Solution**: Implement message trimming to keep only recent messages\n\n**Issue**: Inconsistent responses\n- **Solution**: Use more specific system prompts and provide clear instructions\n\n**",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_6f1946ba",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding performance tips",
+      "instruction": "1. **Reuse SDK Instance**: Create ZAI instance once and reuse across requests\n2. **Manage Context Length**: Trim old messages to avoid token limits\n3. **Implement Caching**: Cache responses for common queries\n4. **Use Specific Prompts**: Clear prompts lead to faster, better responses\n5. **Handle Errors Gracefully**: Implement retry logic and fallback responses",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_26307030",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding security considerations",
+      "instruction": "1. **Input Validation**: Always validate and sanitize user input\n2. **Rate Limiting**: Implement rate limits to prevent abuse\n3. **API Key Protection**: Never expose SDK credentials in client-side code\n4. **Content Filtering**: Filter sensitive or inappropriate content\n5. **Session Management**: Implement proper session handling and cleanup",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_concept_bc921d57",
+      "skill_name": "LLM",
+      "category": "concept",
+      "concept": "Understanding remember",
+      "instruction": "- Always use z-ai-web-dev-sdk in backend code only\n- The SDK is already installed - import as shown in examples\n- Use the 'assistant' role for system prompts\n- Set thinking to { type: 'disabled' } for standard completions\n- Implement proper error handling and retries for production\n- Manage conversation history to avoid token limits\n- Clear and specific prompts lead to better results\n- Check `scripts/chat.ts` for a quick start example",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n",
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n",
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_instruction_dd9c1910",
+      "skill_name": "LLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--prompt, -p <text>`: **Required** - User message...",
+      "instruction": "`--prompt, -p <text>`: **Required** - User message content",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_instruction_7f631fbf",
+      "skill_name": "LLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--system, -s <text>`: Optional - System prompt fo...",
+      "instruction": "`--system, -s <text>`: Optional - System prompt for custom behavior",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_instruction_e9805776",
+      "skill_name": "LLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--thinking, -t`: Optional - Enable chain-of-thoug...",
+      "instruction": "`--thinking, -t`: Optional - Enable chain-of-thought reasoning (default: disabled)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_instruction_dbe3f523",
+      "skill_name": "LLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--output, -o <path>`: Optional - Output file path...",
+      "instruction": "`--output, -o <path>`: Optional - Output file path (JSON format)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_instruction_4d05306c",
+      "skill_name": "LLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--stream`: Optional - Stream the response in real...",
+      "instruction": "`--stream`: Optional - Stream the response in real-time",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_instruction_9e67f244",
+      "skill_name": "LLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: Quick one-off questions...",
+      "instruction": "Quick one-off questions",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_instruction_dd3099d8",
+      "skill_name": "LLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: Simple automation scripts...",
+      "instruction": "Simple automation scripts",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_instruction_ebd5e896",
+      "skill_name": "LLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: Testing prompts...",
+      "instruction": "Testing prompts",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_instruction_2e459cc1",
+      "skill_name": "LLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: Single-turn conversations...",
+      "instruction": "Single-turn conversations",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_instruction_95bf154c",
+      "skill_name": "LLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: Multi-turn conversations with context...",
+      "instruction": "Multi-turn conversations with context",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_code_pattern_9fb9cb43",
+      "skill_name": "LLM",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from LLM",
+      "examples": [
+        "# Simple question\nz-ai chat --prompt \"What is the capital of France?\"\n\n# Save response to file\nz-ai chat -p \"Explain quantum computing\" -o response.json\n\n# Stream the response\nz-ai chat -p \"Write a short poem\" --stream\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_code_pattern_fc7a2605",
+      "skill_name": "LLM",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from LLM",
+      "examples": [
+        "# Custom system prompt for specific behavior\nz-ai chat \\\n  --prompt \"Review this code: function add(a,b) { return a+b; }\" \\\n  --system \"You are an expert code reviewer\" \\\n  -o review.json\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_code_pattern_3220a191",
+      "skill_name": "LLM",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from LLM",
+      "examples": [
+        "# Enable thinking for complex reasoning\nz-ai chat \\\n  --prompt \"Solve this math problem: If a train travels 120km in 2 hours, what's its speed?\" \\\n  --thinking \\\n  -o solution.json\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_code_pattern_d6e2f103",
+      "skill_name": "LLM",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from LLM",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\n\nasync function askQuestion(question) {\n  const zai = await ZAI.create();\n\n  const completion = await zai.chat.completions.create({\n    messages: [\n      {\n        role: 'assistant',\n        content: 'You are a helpful assistant.'\n      },\n      {\n        role: 'user',\n        content: question\n      }\n    ],\n    thinking: { type: 'disabled' }\n  });\n\n  const response = completion.choices[0]?.message?.content;\n  return response;\n}\n\n// Usage\nconst answer = await askQuestion('What is the capital of France?');\nconsole.log('Answer:', answer);\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_code_pattern_24c5ae1b",
+      "skill_name": "LLM",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from LLM",
+      "examples": [
+        "import ZAI from 'z-ai-web-dev-sdk';\n\nasync function customAssistant(systemPrompt, userMessage) {\n  const zai = await ZAI.create();\n\n  const completion = await zai.chat.completions.create({\n    messages: [\n      {\n        role: 'assistant',\n        content: systemPrompt\n      },\n      {\n        role: 'user',\n        content: userMessage\n      }\n    ],\n    thinking: { type: 'disabled' }\n  });\n\n  return completion.choices[0]?.message?.content;\n}\n\n// Usage - Code reviewer\nconst codeReview = await customAssistant(\n  'You are an expert code reviewer. Analyze code for bugs, performance issues, and best practices.',\n  'Review this function: function add(a, b) { return a + b; }'\n);\n\n// Usage - Creative writer\nconst story = await customAssistant(\n  'You are a creative fiction writer who writes engaging short stories.',\n  'Write a short story about a robot learning to paint.'\n);\n\nconsole.log(codeReview);\nconsole.log(story);\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_assessment_5ca8d919",
+      "skill_name": "LLM",
+      "category": "assessment",
+      "concept": "Apply LLM in a practical project",
+      "instruction": "Demonstrate mastery of LLM by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using LLM",
+        "Explain when LLM should be used",
+        "Identify the core concepts of LLM",
+        "Apply LLM to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_llm_contextualization_e05e26cd",
+      "skill_name": "LLM",
+      "category": "contextualization",
+      "concept": "When to use LLM",
+      "instruction": "Learn when to apply LLM in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using LLM",
+        "User needs help with coding -> evaluate if LLM applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate LLM is needed",
+        "Distinguish between LLM and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 54,
+  "generated_at": "2026-03-24T04:43:44.491107",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/LLM/SKILL.md"
+}

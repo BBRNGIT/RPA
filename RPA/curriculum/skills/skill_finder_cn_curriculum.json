@@ -1,0 +1,292 @@
+{
+  "skill_name": "skill-finder-cn",
+  "skill_description": "Skill 查找器 | Skill Finder. 帮助发现和安装 ClawHub Skills | Discover and install ClawHub Skills. 回答'有什么技能可以X'、'找一个技能' | Answers 'what skill can X', 'find a skill'. 触发词：找 skill、find skill、搜索 skill.",
+  "items": [
+    {
+      "item_id": "skill_skill_finder_cn_concept_93b737c0",
+      "skill_name": "skill-finder-cn",
+      "category": "concept",
+      "concept": "Understanding skill 查找器",
+      "instruction": "帮助用户发现和安装 ClawHub 上的 Skills。",
+      "examples": [
+        "clawhub search \"<用户需求>\"\n",
+        "clawhub inspect <skill-name>\n",
+        "clawhub install <skill-name>\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_concept_c359c14f",
+      "skill_name": "skill-finder-cn",
+      "category": "concept",
+      "concept": "Understanding 功能",
+      "instruction": "当用户问：\n- \"有什么 skill 可以帮我...？\"\n- \"找一个能做 X 的 skill\"\n- \"有没有 skill 可以...\"\n- \"我需要一个能...的 skill\"\n\n这个 Skill 会帮助搜索 ClawHub 并推荐相关的 Skills。",
+      "examples": [
+        "clawhub search \"<用户需求>\"\n",
+        "clawhub inspect <skill-name>\n",
+        "clawhub install <skill-name>\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_concept_2e19ab65",
+      "skill_name": "skill-finder-cn",
+      "category": "concept",
+      "concept": "Understanding 使用方法",
+      "instruction": "",
+      "examples": [
+        "clawhub search \"<用户需求>\"\n",
+        "clawhub inspect <skill-name>\n",
+        "clawhub install <skill-name>\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_concept_66b6fb59",
+      "skill_name": "skill-finder-cn",
+      "category": "concept",
+      "concept": "Understanding 1. 搜索 skills",
+      "instruction": "```bash\nclawhub search \"<用户需求>\"\n```",
+      "examples": [
+        "clawhub search \"<用户需求>\"\n",
+        "clawhub inspect <skill-name>\n",
+        "clawhub install <skill-name>\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_concept_8cf40af3",
+      "skill_name": "skill-finder-cn",
+      "category": "concept",
+      "concept": "Understanding 2. 查看详情",
+      "instruction": "```bash\nclawhub inspect <skill-name>\n```",
+      "examples": [
+        "clawhub search \"<用户需求>\"\n",
+        "clawhub inspect <skill-name>\n",
+        "clawhub install <skill-name>\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_concept_37bc07ae",
+      "skill_name": "skill-finder-cn",
+      "category": "concept",
+      "concept": "Understanding 3. 安装 skill",
+      "instruction": "```bash\nclawhub install <skill-name>\n```",
+      "examples": [
+        "clawhub search \"<用户需求>\"\n",
+        "clawhub inspect <skill-name>\n",
+        "clawhub install <skill-name>\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_concept_104c2f36",
+      "skill_name": "skill-finder-cn",
+      "category": "concept",
+      "concept": "Understanding 工作流程",
+      "instruction": "```\n1. 理解用户需求\n2. 提取关键词\n3. 搜索 ClawHub\n4. 列出相关 Skills\n5. 提供安装建议\n```",
+      "examples": [
+        "clawhub search \"<用户需求>\"\n",
+        "clawhub inspect <skill-name>\n",
+        "clawhub install <skill-name>\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_concept_c0f462c0",
+      "skill_name": "skill-finder-cn",
+      "category": "concept",
+      "concept": "Understanding 示例",
+      "instruction": "**用户**: \"有什么 skill 可以帮我监控加密货币价格？\"\n\n**搜索**: `clawhub search \"crypto price monitor\"`\n\n**返回**: 相关的 Skills 列表\n\n---\n\n*帮助用户发现需要的 Skills 🔍*",
+      "examples": [
+        "clawhub search \"<用户需求>\"\n",
+        "clawhub inspect <skill-name>\n",
+        "clawhub install <skill-name>\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_instruction_1aa8f902",
+      "skill_name": "skill-finder-cn",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"有什么 skill 可以帮我...？\"...",
+      "instruction": "\"有什么 skill 可以帮我...？\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_instruction_9ba6a7c4",
+      "skill_name": "skill-finder-cn",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"找一个能做 X 的 skill\"...",
+      "instruction": "\"找一个能做 X 的 skill\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_instruction_a45ca2f1",
+      "skill_name": "skill-finder-cn",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"有没有 skill 可以...\"...",
+      "instruction": "\"有没有 skill 可以...\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_instruction_c7954a91",
+      "skill_name": "skill-finder-cn",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"我需要一个能...的 skill\"...",
+      "instruction": "\"我需要一个能...的 skill\"",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_code_pattern_5f952c6b",
+      "skill_name": "skill-finder-cn",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from skill-finder-cn",
+      "examples": [
+        "clawhub search \"<用户需求>\"\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_code_pattern_ef1b7d8f",
+      "skill_name": "skill-finder-cn",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from skill-finder-cn",
+      "examples": [
+        "clawhub inspect <skill-name>\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_code_pattern_3e0b134a",
+      "skill_name": "skill-finder-cn",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from skill-finder-cn",
+      "examples": [
+        "clawhub install <skill-name>\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_code_pattern_f672572f",
+      "skill_name": "skill-finder-cn",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from skill-finder-cn",
+      "examples": [
+        "1. 理解用户需求\n2. 提取关键词\n3. 搜索 ClawHub\n4. 列出相关 Skills\n5. 提供安装建议\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_assessment_e1d17434",
+      "skill_name": "skill-finder-cn",
+      "category": "assessment",
+      "concept": "Apply skill-finder-cn in a practical project",
+      "instruction": "Demonstrate mastery of skill-finder-cn by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using skill-finder-cn",
+        "Explain when skill-finder-cn should be used",
+        "Identify the core concepts of skill-finder-cn",
+        "Apply skill-finder-cn to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_skill_finder_cn_contextualization_f6cfc449",
+      "skill_name": "skill-finder-cn",
+      "category": "contextualization",
+      "concept": "When to use skill-finder-cn",
+      "instruction": "Learn when to apply skill-finder-cn in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using skill-finder-cn",
+        "User needs help with coding -> evaluate if skill-finder-cn applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate skill-finder-cn is needed",
+        "Distinguish between skill-finder-cn and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 18,
+  "generated_at": "2026-03-24T04:43:44.503864",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/skill-finder-cn/SKILL.md"
+}

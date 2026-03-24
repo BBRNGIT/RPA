@@ -1,0 +1,398 @@
+{
+  "skill_name": "writing-plans",
+  "skill_description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+  "items": [
+    {
+      "item_id": "skill_writing_plans_concept_4d409717",
+      "skill_name": "writing-plans",
+      "category": "concept",
+      "concept": "Understanding writing plans",
+      "instruction": "",
+      "examples": [
+        "# [Feature Name] Implementation Plan\n\n> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.\n\n**Goal:** [One sentence describing what this builds]\n\n**Architecture:** [2-3 sentences about approach]\n\n**Tech Stack:** [Key technologies/libraries]\n\n---\n",
+        "### Task N: [Component Name]\n\n**Files:**\n- Create: `exact/path/to/file.py`\n- Modify: `exact/path/to/existing.py:123-145`\n- Test: `tests/exact/path/to/test.py`\n\n**Step 1: Write the failing test**\n\n",
+        "\n**Step 2: Run test to verify it fails**\n\nRun: `pytest tests/path/test.py::test_name -v`\nExpected: FAIL with \"function not defined\"\n\n**Step 3: Write minimal implementation**\n\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_concept_8ee2098b",
+      "skill_name": "writing-plans",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "Write comprehensive implementation plans assuming the engineer has zero context for our codebase and questionable taste. Document everything they need to know: which files to touch for each task, code, testing, docs they might need to check, how to test it. Give them the whole plan as bite-sized tasks. DRY. YAGNI. TDD. Frequent commits.\n\nAssume they are a skilled developer, but know almost nothing about our toolset or problem domain. Assume they don't know good test design very well.\n\n**Announce",
+      "examples": [
+        "# [Feature Name] Implementation Plan\n\n> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.\n\n**Goal:** [One sentence describing what this builds]\n\n**Architecture:** [2-3 sentences about approach]\n\n**Tech Stack:** [Key technologies/libraries]\n\n---\n",
+        "### Task N: [Component Name]\n\n**Files:**\n- Create: `exact/path/to/file.py`\n- Modify: `exact/path/to/existing.py:123-145`\n- Test: `tests/exact/path/to/test.py`\n\n**Step 1: Write the failing test**\n\n",
+        "\n**Step 2: Run test to verify it fails**\n\nRun: `pytest tests/path/test.py::test_name -v`\nExpected: FAIL with \"function not defined\"\n\n**Step 3: Write minimal implementation**\n\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_concept_555d64e8",
+      "skill_name": "writing-plans",
+      "category": "concept",
+      "concept": "Understanding bite-sized task granularity",
+      "instruction": "**Each step is one action (2-5 minutes):**\n- \"Write the failing test\" - step\n- \"Run it to make sure it fails\" - step\n- \"Implement the minimal code to make the test pass\" - step\n- \"Run the tests and make sure they pass\" - step\n- \"Commit\" - step",
+      "examples": [
+        "# [Feature Name] Implementation Plan\n\n> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.\n\n**Goal:** [One sentence describing what this builds]\n\n**Architecture:** [2-3 sentences about approach]\n\n**Tech Stack:** [Key technologies/libraries]\n\n---\n",
+        "### Task N: [Component Name]\n\n**Files:**\n- Create: `exact/path/to/file.py`\n- Modify: `exact/path/to/existing.py:123-145`\n- Test: `tests/exact/path/to/test.py`\n\n**Step 1: Write the failing test**\n\n",
+        "\n**Step 2: Run test to verify it fails**\n\nRun: `pytest tests/path/test.py::test_name -v`\nExpected: FAIL with \"function not defined\"\n\n**Step 3: Write minimal implementation**\n\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_concept_4db57a8d",
+      "skill_name": "writing-plans",
+      "category": "concept",
+      "concept": "Understanding plan document header",
+      "instruction": "**Every plan MUST start with this header:**\n\n```markdown",
+      "examples": [
+        "# [Feature Name] Implementation Plan\n\n> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.\n\n**Goal:** [One sentence describing what this builds]\n\n**Architecture:** [2-3 sentences about approach]\n\n**Tech Stack:** [Key technologies/libraries]\n\n---\n",
+        "### Task N: [Component Name]\n\n**Files:**\n- Create: `exact/path/to/file.py`\n- Modify: `exact/path/to/existing.py:123-145`\n- Test: `tests/exact/path/to/test.py`\n\n**Step 1: Write the failing test**\n\n",
+        "\n**Step 2: Run test to verify it fails**\n\nRun: `pytest tests/path/test.py::test_name -v`\nExpected: FAIL with \"function not defined\"\n\n**Step 3: Write minimal implementation**\n\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_concept_38546f1f",
+      "skill_name": "writing-plans",
+      "category": "concept",
+      "concept": "Understanding [feature name] implementation plan",
+      "instruction": "> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.\n\n**Goal:** [One sentence describing what this builds]\n\n**Architecture:** [2-3 sentences about approach]\n\n**Tech Stack:** [Key technologies/libraries]\n\n---\n```",
+      "examples": [
+        "# [Feature Name] Implementation Plan\n\n> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.\n\n**Goal:** [One sentence describing what this builds]\n\n**Architecture:** [2-3 sentences about approach]\n\n**Tech Stack:** [Key technologies/libraries]\n\n---\n",
+        "### Task N: [Component Name]\n\n**Files:**\n- Create: `exact/path/to/file.py`\n- Modify: `exact/path/to/existing.py:123-145`\n- Test: `tests/exact/path/to/test.py`\n\n**Step 1: Write the failing test**\n\n",
+        "\n**Step 2: Run test to verify it fails**\n\nRun: `pytest tests/path/test.py::test_name -v`\nExpected: FAIL with \"function not defined\"\n\n**Step 3: Write minimal implementation**\n\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "expert",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_concept_958bee1f",
+      "skill_name": "writing-plans",
+      "category": "concept",
+      "concept": "Understanding task structure",
+      "instruction": "```markdown",
+      "examples": [
+        "# [Feature Name] Implementation Plan\n\n> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.\n\n**Goal:** [One sentence describing what this builds]\n\n**Architecture:** [2-3 sentences about approach]\n\n**Tech Stack:** [Key technologies/libraries]\n\n---\n",
+        "### Task N: [Component Name]\n\n**Files:**\n- Create: `exact/path/to/file.py`\n- Modify: `exact/path/to/existing.py:123-145`\n- Test: `tests/exact/path/to/test.py`\n\n**Step 1: Write the failing test**\n\n",
+        "\n**Step 2: Run test to verify it fails**\n\nRun: `pytest tests/path/test.py::test_name -v`\nExpected: FAIL with \"function not defined\"\n\n**Step 3: Write minimal implementation**\n\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_concept_5ebf28c3",
+      "skill_name": "writing-plans",
+      "category": "concept",
+      "concept": "Understanding task n: [component name]",
+      "instruction": "**Files:**\n- Create: `exact/path/to/file.py`\n- Modify: `exact/path/to/existing.py:123-145`\n- Test: `tests/exact/path/to/test.py`\n\n**Step 1: Write the failing test**\n\n```python\ndef test_specific_behavior():\n    result = function(input)\n    assert result == expected\n```\n\n**Step 2: Run test to verify it fails**\n\nRun: `pytest tests/path/test.py::test_name -v`\nExpected: FAIL with \"function not defined\"\n\n**Step 3: Write minimal implementation**\n\n```python\ndef function(input):\n    return expected\n```\n\n",
+      "examples": [
+        "# [Feature Name] Implementation Plan\n\n> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.\n\n**Goal:** [One sentence describing what this builds]\n\n**Architecture:** [2-3 sentences about approach]\n\n**Tech Stack:** [Key technologies/libraries]\n\n---\n",
+        "### Task N: [Component Name]\n\n**Files:**\n- Create: `exact/path/to/file.py`\n- Modify: `exact/path/to/existing.py:123-145`\n- Test: `tests/exact/path/to/test.py`\n\n**Step 1: Write the failing test**\n\n",
+        "\n**Step 2: Run test to verify it fails**\n\nRun: `pytest tests/path/test.py::test_name -v`\nExpected: FAIL with \"function not defined\"\n\n**Step 3: Write minimal implementation**\n\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_concept_eef321f5",
+      "skill_name": "writing-plans",
+      "category": "concept",
+      "concept": "Understanding remember",
+      "instruction": "- Exact file paths always\n- Complete code in plan (not \"add validation\")\n- Exact commands with expected output\n- Reference relevant skills with @ syntax\n- DRY, YAGNI, TDD, frequent commits",
+      "examples": [
+        "# [Feature Name] Implementation Plan\n\n> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.\n\n**Goal:** [One sentence describing what this builds]\n\n**Architecture:** [2-3 sentences about approach]\n\n**Tech Stack:** [Key technologies/libraries]\n\n---\n",
+        "### Task N: [Component Name]\n\n**Files:**\n- Create: `exact/path/to/file.py`\n- Modify: `exact/path/to/existing.py:123-145`\n- Test: `tests/exact/path/to/test.py`\n\n**Step 1: Write the failing test**\n\n",
+        "\n**Step 2: Run test to verify it fails**\n\nRun: `pytest tests/path/test.py::test_name -v`\nExpected: FAIL with \"function not defined\"\n\n**Step 3: Write minimal implementation**\n\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_concept_cb6752e2",
+      "skill_name": "writing-plans",
+      "category": "concept",
+      "concept": "Understanding execution handoff",
+      "instruction": "After saving the plan, offer execution choice:\n\n**\"Plan complete and saved to `docs/plans/<filename>.md`. Two execution options:**\n\n**1. Subagent-Driven (this session)** - I dispatch fresh subagent per task, review between tasks, fast iteration\n\n**2. Parallel Session (separate)** - Open new session with executing-plans, batch execution with checkpoints\n\n**Which approach?\"**\n\n**If Subagent-Driven chosen:**\n- **REQUIRED SUB-SKILL:** Use superpowers:subagent-driven-development\n- Stay in this sessio",
+      "examples": [
+        "# [Feature Name] Implementation Plan\n\n> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.\n\n**Goal:** [One sentence describing what this builds]\n\n**Architecture:** [2-3 sentences about approach]\n\n**Tech Stack:** [Key technologies/libraries]\n\n---\n",
+        "### Task N: [Component Name]\n\n**Files:**\n- Create: `exact/path/to/file.py`\n- Modify: `exact/path/to/existing.py:123-145`\n- Test: `tests/exact/path/to/test.py`\n\n**Step 1: Write the failing test**\n\n",
+        "\n**Step 2: Run test to verify it fails**\n\nRun: `pytest tests/path/test.py::test_name -v`\nExpected: FAIL with \"function not defined\"\n\n**Step 3: Write minimal implementation**\n\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_instruction_edc87f5f",
+      "skill_name": "writing-plans",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"Write the failing test\" - step...",
+      "instruction": "\"Write the failing test\" - step",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_instruction_30beeb40",
+      "skill_name": "writing-plans",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"Run it to make sure it fails\" - step...",
+      "instruction": "\"Run it to make sure it fails\" - step",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_instruction_7a53ff6f",
+      "skill_name": "writing-plans",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"Implement the minimal code to make the test pass\"...",
+      "instruction": "\"Implement the minimal code to make the test pass\" - step",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_instruction_384e05ac",
+      "skill_name": "writing-plans",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"Run the tests and make sure they pass\" - step...",
+      "instruction": "\"Run the tests and make sure they pass\" - step",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_instruction_dfdb0fd6",
+      "skill_name": "writing-plans",
+      "category": "instruction",
+      "concept": "Rule or guideline: \"Commit\" - step...",
+      "instruction": "\"Commit\" - step",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_instruction_fe2db749",
+      "skill_name": "writing-plans",
+      "category": "instruction",
+      "concept": "Rule or guideline: Create: `exact/path/to/file.py`...",
+      "instruction": "Create: `exact/path/to/file.py`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_instruction_702fddc2",
+      "skill_name": "writing-plans",
+      "category": "instruction",
+      "concept": "Rule or guideline: Modify: `exact/path/to/existing.py:123-145`...",
+      "instruction": "Modify: `exact/path/to/existing.py:123-145`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_instruction_410b6ada",
+      "skill_name": "writing-plans",
+      "category": "instruction",
+      "concept": "Rule or guideline: Test: `tests/exact/path/to/test.py`...",
+      "instruction": "Test: `tests/exact/path/to/test.py`",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_instruction_61b4e973",
+      "skill_name": "writing-plans",
+      "category": "instruction",
+      "concept": "Rule or guideline: Exact file paths always...",
+      "instruction": "Exact file paths always",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_instruction_296689aa",
+      "skill_name": "writing-plans",
+      "category": "instruction",
+      "concept": "Rule or guideline: Complete code in plan (not \"add validation\")...",
+      "instruction": "Complete code in plan (not \"add validation\")",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_code_pattern_8b7a42d5",
+      "skill_name": "writing-plans",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from writing-plans",
+      "examples": [
+        "# [Feature Name] Implementation Plan\n\n> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.\n\n**Goal:** [One sentence describing what this builds]\n\n**Architecture:** [2-3 sentences about approach]\n\n**Tech Stack:** [Key technologies/libraries]\n\n---\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "expert",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_code_pattern_368f9f22",
+      "skill_name": "writing-plans",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from writing-plans",
+      "examples": [
+        "### Task N: [Component Name]\n\n**Files:**\n- Create: `exact/path/to/file.py`\n- Modify: `exact/path/to/existing.py:123-145`\n- Test: `tests/exact/path/to/test.py`\n\n**Step 1: Write the failing test**\n\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_code_pattern_e66e13c8",
+      "skill_name": "writing-plans",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from writing-plans",
+      "examples": [
+        "\n**Step 2: Run test to verify it fails**\n\nRun: `pytest tests/path/test.py::test_name -v`\nExpected: FAIL with \"function not defined\"\n\n**Step 3: Write minimal implementation**\n\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_code_pattern_6c936bc6",
+      "skill_name": "writing-plans",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from writing-plans",
+      "examples": [
+        "\n**Step 4: Run test to verify it passes**\n\nRun: `pytest tests/path/test.py::test_name -v`\nExpected: PASS\n\n**Step 5: Commit**\n\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_code_pattern_69498e42",
+      "skill_name": "writing-plans",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from writing-plans",
+      "examples": [
+        ""
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_assessment_2998f3ec",
+      "skill_name": "writing-plans",
+      "category": "assessment",
+      "concept": "Apply writing-plans in a practical project",
+      "instruction": "Demonstrate mastery of writing-plans by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using writing-plans",
+        "Explain when writing-plans should be used",
+        "Identify the core concepts of writing-plans",
+        "Apply writing-plans to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_writing_plans_contextualization_b5a875a6",
+      "skill_name": "writing-plans",
+      "category": "contextualization",
+      "concept": "When to use writing-plans",
+      "instruction": "Learn when to apply writing-plans in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using writing-plans",
+        "User needs help with coding -> evaluate if writing-plans applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate writing-plans is needed",
+        "Distinguish between writing-plans and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 26,
+  "generated_at": "2026-03-24T04:43:44.499944",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/writing-plans/SKILL.md"
+}

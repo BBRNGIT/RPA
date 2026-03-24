@@ -1,0 +1,284 @@
+{
+  "batch_id": "batch_english_idioms_20260324_044709",
+  "source": "english_idioms",
+  "domain": "english",
+  "items": [
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "concept",
+      "definition": "an abstract idea or general notion",
+      "word_type": "noun",
+      "examples": [
+        "The concept is simple."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'concept' in a sentence",
+        "Find synonyms for 'concept'",
+        "Explain the meaning of 'concept'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "hit the nail on the head",
+      "meaning": "to describe exactly what is causing a situation",
+      "usage": "Used when someone is exactly right",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'hit the nail on the head' in context",
+        "Explain when to use 'hit the nail on the head'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "grammar",
+      "concept": "subject_verb_agreement",
+      "description": "Subjects and verbs must agree in number",
+      "examples": [
+        "She runs. They run."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply the 'subject_verb_agreement' rule in writing"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "adequate",
+      "definition": "satisfactory or acceptable in quality",
+      "word_type": "adjective",
+      "examples": [
+        "The solution was adequate."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'adequate' in a sentence",
+        "Find synonyms for 'adequate'",
+        "Explain the meaning of 'adequate'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "hit the nail on the head",
+      "meaning": "to describe exactly what is causing a situation",
+      "usage": "Used when someone is exactly right",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'hit the nail on the head' in context",
+        "Explain when to use 'hit the nail on the head'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "approach",
+      "definition": "a way of dealing with a situation",
+      "word_type": "noun",
+      "examples": [
+        "A new approach was needed."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'approach' in a sentence",
+        "Find synonyms for 'approach'",
+        "Explain the meaning of 'approach'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "hit the nail on the head",
+      "meaning": "to describe exactly what is causing a situation",
+      "usage": "Used when someone is exactly right",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'hit the nail on the head' in context",
+        "Explain when to use 'hit the nail on the head'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "hit the nail on the head",
+      "meaning": "to describe exactly what is causing a situation",
+      "usage": "Used when someone is exactly right",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'hit the nail on the head' in context",
+        "Explain when to use 'hit the nail on the head'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "acquire",
+      "definition": "to gain possession of something",
+      "word_type": "verb",
+      "examples": [
+        "He acquired new skills."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'acquire' in a sentence",
+        "Find synonyms for 'acquire'",
+        "Explain the meaning of 'acquire'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "assume",
+      "definition": "to suppose to be the case without proof",
+      "word_type": "verb",
+      "examples": [
+        "I assume you're ready."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'assume' in a sentence",
+        "Find synonyms for 'assume'",
+        "Explain the meaning of 'assume'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "grammar",
+      "concept": "pronoun_antecedent",
+      "description": "Pronouns must agree with their antecedents",
+      "examples": [
+        "Each student has their own book."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply the 'pronoun_antecedent' rule in writing"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "grammar",
+      "concept": "subject_verb_agreement",
+      "description": "Subjects and verbs must agree in number",
+      "examples": [
+        "She runs. They run."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply the 'subject_verb_agreement' rule in writing"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "hit the nail on the head",
+      "meaning": "to describe exactly what is causing a situation",
+      "usage": "Used when someone is exactly right",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'hit the nail on the head' in context",
+        "Explain when to use 'hit the nail on the head'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "adequate",
+      "definition": "satisfactory or acceptable in quality",
+      "word_type": "adjective",
+      "examples": [
+        "The solution was adequate."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'adequate' in a sentence",
+        "Find synonyms for 'adequate'",
+        "Explain the meaning of 'adequate'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "once in a blue moon",
+      "meaning": "very rarely",
+      "usage": "Used to describe rare events",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'once in a blue moon' in context",
+        "Explain when to use 'once in a blue moon'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "approach",
+      "definition": "a way of dealing with a situation",
+      "word_type": "noun",
+      "examples": [
+        "A new approach was needed."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'approach' in a sentence",
+        "Find synonyms for 'approach'",
+        "Explain the meaning of 'approach'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "vocabulary",
+      "concept": "accomplish",
+      "definition": "to achieve or complete successfully",
+      "word_type": "verb",
+      "examples": [
+        "She accomplished her goals."
+      ],
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'accomplish' in a sentence",
+        "Find synonyms for 'accomplish'",
+        "Explain the meaning of 'accomplish'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "hit the nail on the head",
+      "meaning": "to describe exactly what is causing a situation",
+      "usage": "Used when someone is exactly right",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'hit the nail on the head' in context",
+        "Explain when to use 'hit the nail on the head'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "piece of cake",
+      "meaning": "something very easy to do",
+      "usage": "Used to describe an easy task",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'piece of cake' in context",
+        "Explain when to use 'piece of cake'"
+      ]
+    },
+    {
+      "domain": "english",
+      "category": "idiom",
+      "concept": "hit the nail on the head",
+      "meaning": "to describe exactly what is causing a situation",
+      "usage": "Used when someone is exactly right",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Use 'hit the nail on the head' in context",
+        "Explain when to use 'hit the nail on the head'"
+      ]
+    }
+  ],
+  "generated_at": "2026-03-24T04:47:09.427295",
+  "item_count": 20
+}

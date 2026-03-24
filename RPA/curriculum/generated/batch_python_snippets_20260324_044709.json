@@ -1,0 +1,239 @@
+{
+  "batch_id": "batch_python_snippets_20260324_044709",
+  "source": "python_snippets",
+  "domain": "python",
+  "items": [
+    {
+      "domain": "python",
+      "category": "design_pattern",
+      "concept": "observer",
+      "description": "Define a subscription mechanism",
+      "code": "class Observable:\n    def __init__(self):\n        self._observers = []\n    def notify(self, event):\n        for obs in self._observers:\n            obs.update(event)",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Implement the observer pattern",
+        "Identify when to use observer"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "best_practice",
+      "concept": "use_type_hints",
+      "description": "Add type hints for better code clarity",
+      "example": "def greet(name: str) -> str:\n    return f'Hello, {name}'",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply 'use_type_hints' in code"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "design_pattern",
+      "concept": "singleton",
+      "description": "Ensure a class has only one instance",
+      "code": "class Singleton:\n    _instance = None\n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Implement the singleton pattern",
+        "Identify when to use singleton"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "best_practice",
+      "concept": "prefer_comprehensions",
+      "description": "Use list/dict comprehensions for clarity",
+      "example": "[x*2 for x in range(10)]",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply 'prefer_comprehensions' in code"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "design_pattern",
+      "concept": "factory",
+      "description": "Create objects without specifying exact class",
+      "code": "def factory(type):\n    if type == 'A': return ClassA()\n    elif type == 'B': return ClassB()",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Implement the factory pattern",
+        "Identify when to use factory"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "best_practice",
+      "concept": "prefer_comprehensions",
+      "description": "Use list/dict comprehensions for clarity",
+      "example": "[x*2 for x in range(10)]",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply 'prefer_comprehensions' in code"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "design_pattern",
+      "concept": "observer",
+      "description": "Define a subscription mechanism",
+      "code": "class Observable:\n    def __init__(self):\n        self._observers = []\n    def notify(self, event):\n        for obs in self._observers:\n            obs.update(event)",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Implement the observer pattern",
+        "Identify when to use observer"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "best_practice",
+      "concept": "use_type_hints",
+      "description": "Add type hints for better code clarity",
+      "example": "def greet(name: str) -> str:\n    return f'Hello, {name}'",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply 'use_type_hints' in code"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "design_pattern",
+      "concept": "observer",
+      "description": "Define a subscription mechanism",
+      "code": "class Observable:\n    def __init__(self):\n        self._observers = []\n    def notify(self, event):\n        for obs in self._observers:\n            obs.update(event)",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Implement the observer pattern",
+        "Identify when to use observer"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "best_practice",
+      "concept": "use_type_hints",
+      "description": "Add type hints for better code clarity",
+      "example": "def greet(name: str) -> str:\n    return f'Hello, {name}'",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply 'use_type_hints' in code"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "design_pattern",
+      "concept": "factory",
+      "description": "Create objects without specifying exact class",
+      "code": "def factory(type):\n    if type == 'A': return ClassA()\n    elif type == 'B': return ClassB()",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Implement the factory pattern",
+        "Identify when to use factory"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "best_practice",
+      "concept": "prefer_comprehensions",
+      "description": "Use list/dict comprehensions for clarity",
+      "example": "[x*2 for x in range(10)]",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply 'prefer_comprehensions' in code"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "design_pattern",
+      "concept": "observer",
+      "description": "Define a subscription mechanism",
+      "code": "class Observable:\n    def __init__(self):\n        self._observers = []\n    def notify(self, event):\n        for obs in self._observers:\n            obs.update(event)",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Implement the observer pattern",
+        "Identify when to use observer"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "best_practice",
+      "concept": "use_context_managers",
+      "description": "Use 'with' statement for resource management",
+      "example": "with open('file.txt') as f:\n    content = f.read()",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply 'use_context_managers' in code"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "design_pattern",
+      "concept": "observer",
+      "description": "Define a subscription mechanism",
+      "code": "class Observable:\n    def __init__(self):\n        self._observers = []\n    def notify(self, event):\n        for obs in self._observers:\n            obs.update(event)",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Implement the observer pattern",
+        "Identify when to use observer"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "best_practice",
+      "concept": "prefer_comprehensions",
+      "description": "Use list/dict comprehensions for clarity",
+      "example": "[x*2 for x in range(10)]",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply 'prefer_comprehensions' in code"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "design_pattern",
+      "concept": "singleton",
+      "description": "Ensure a class has only one instance",
+      "code": "class Singleton:\n    _instance = None\n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Implement the singleton pattern",
+        "Identify when to use singleton"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "best_practice",
+      "concept": "prefer_comprehensions",
+      "description": "Use list/dict comprehensions for clarity",
+      "example": "[x*2 for x in range(10)]",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply 'prefer_comprehensions' in code"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "design_pattern",
+      "concept": "singleton",
+      "description": "Ensure a class has only one instance",
+      "code": "class Singleton:\n    _instance = None\n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Implement the singleton pattern",
+        "Identify when to use singleton"
+      ]
+    },
+    {
+      "domain": "python",
+      "category": "best_practice",
+      "concept": "use_context_managers",
+      "description": "Use 'with' statement for resource management",
+      "example": "with open('file.txt') as f:\n    content = f.read()",
+      "difficulty": "beginner",
+      "practice_tasks": [
+        "Apply 'use_context_managers' in code"
+      ]
+    }
+  ],
+  "generated_at": "2026-03-24T04:47:09.427812",
+  "item_count": 20
+}

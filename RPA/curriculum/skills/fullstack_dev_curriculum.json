@@ -1,0 +1,521 @@
+{
+  "skill_name": "fullstack-dev",
+  "skill_description": "Fullstack web development with Next.js 16, TypeScript, Tailwind CSS 4, shadcn/ui, Prisma ORM. Use when: building web apps, creating UI components, setting up database schemas, implementing API routes, adding websocket/socket.io support, fullstack project scaffolding, frontend development, backend development, web dev, Next.js app.",
+  "items": [
+    {
+      "item_id": "skill_fullstack_dev_concept_deaf7813",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding fullstack web development skill",
+      "instruction": "",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_c232caed",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding initialization (must do first)",
+      "instruction": "Before writing any code, you MUST run the following command to initialize the fullstack development environment:\n\n```bash\ncurl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n```\n\nWait for the script to complete successfully before proceeding with any code changes.\n\n---",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_95f8b7fc",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding important ui rules",
+      "instruction": "- Use existing shadcn/ui components instead of building from scratch. All the components in the `src/components/ui` folder already exist.\n- Card alignment and padding — Ensure all cards are properly aligned with consistent padding (use `p-4` or `p-6` for content, `gap-4` or `gap-6` for spacing).\n- Long list handling — Set max height with scroll overflow (`max-h-96 overflow-y-auto`) and implement custom scrollbar styling for better appearance.\n\n---",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_8f8b3ef5",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding project information",
+      "instruction": "There is already a project in the current directory. (Next.js 16 with App Router)",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_b52343df",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding development environment",
+      "instruction": "IMPORTANT: `bun run dev` will be run automatically by the system. Do NOT run it. Use `bun run lint` to check code quality.\n\nIMPORTANT: User can only see the `/` route defined in `src/app/page.tsx`. Do NOT write any other route.\n\nIMPORTANT: The Next.js project can only use port 3000 in auto dev server. Never use `bun run build`.\n\nIMPORTANT: `z-ai-web-dev-sdk` MUST be used in the backend only! Do NOT use it on the client side.",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_61f75e55",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding dev server log",
+      "instruction": "IMPORTANT: Read `/home/z/my-project/dev.log` to see the dev server log. Remember to check the log when developing.\n\nIMPORTANT: Only read the most recent logs from `dev.log` to avoid large log files.\n\nIMPORTANT: Always read dev log when you finish coding.",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_88857e0c",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding bash commands",
+      "instruction": "- `bun run lint` — Run ESLint to check code quality and Next.js rules\n\n---",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_916b58f6",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding technology stack requirements",
+      "instruction": "",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_8b965c99",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding core framework (non-negotiable)",
+      "instruction": "- **Framework**: Next.js 16 with App Router (REQUIRED — cannot be changed)\n- **Language**: TypeScript 5 (REQUIRED — cannot be changed)",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_14270f6d",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding standard technology stack",
+      "instruction": "When users don't specify preferences, use this complete stack:\n\n- **Styling**: Tailwind CSS 4 with shadcn/ui component library\n- **Database**: Prisma ORM (SQLite client only) with Prisma Client\n- **Caching**: Local memory caching, no additional middleware (MySQL, Redis, etc.)\n- **UI Components**: Complete shadcn/ui component set (New York style) with Lucide icons\n- **Authentication**: NextAuth.js v4 available\n- **State Management**: Zustand for client state, TanStack Query for server state\n\nOthe",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_9e5dfeb9",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding library usage policy",
+      "instruction": "- **ALWAYS use Next.js 16 and TypeScript** — these are non-negotiable requirements.\n- **When users request external libraries not in our stack**: Politely redirect them to use our built-in alternatives.\n- **Explain the benefits** of using our predefined stack (consistency, optimization, support).\n- **Provide equivalent solutions** using our available libraries.\n\n---",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_ebb58abf",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding prisma and database",
+      "instruction": "IMPORTANT: `prisma` is already installed and configured. Use it when you need the database.\n\nTo use prisma and database:\n\n1. Edit `prisma/schema.prisma` to define the database schema.\n2. Run `bun run db:push` to push the schema to the database.\n3. Use `import { db } from '@/lib/db'` to get the database client and use it.\n\n---",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_45e8d461",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding mini service",
+      "instruction": "You can create mini services if needed (e.g., websocket service). All mini services should be in the `mini-services` folder. For each mini service:\n\n- Must be a new and independent bun project with its own port and `package.json`.\n- Must define `index.ts` or `index.js` as the entry file, e.g., `mini-services/chat-service/index.ts`.\n- Must define a specific port if needed, instead of using the `PORT` environment variable.\n- Must start each mini service by running `bun run dev` in the background.\n",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_d893149a",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding gateway and api requests",
+      "instruction": "This machine can only expose one port externally, so a built-in gateway (config at `Caddyfile`) is included with the following limitations:\n\n- For API requests involving different ports, the port must be specified in the URL query named `XTransformPort`. Example: `/api/test?XTransformPort=3030`.\n- All API requests must use **relative paths only**. Do NOT write absolute paths in the API request URL (including WebSocket). Examples:\n  - **Prohibited**: `fetch('http://localhost:3030/api/test')`\n  - ",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_1e5b08a5",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding websocket / socket.io support",
+      "instruction": "IMPORTANT: Use websocket/socket.io to support real-time communication. Do NOT use any other method. There is already a websocket demo for reference in the `examples` folder.\n\n- Backend logic (via socket.io) must be a new mini service with another port (e.g., 3003).\n- Frontend request should ALWAYS be `io(\"/?XTransformPort={Port}\")`, and the path ALWAYS be `/` so that Caddy can forward to the correct port.\n- NEVER use `io(\"http://localhost:{Port}\")` or any direct port-based connection.\n\n---",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_6ddb7842",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding code style",
+      "instruction": "- Prefer to use existing components and hooks.\n- TypeScript throughout with strict typing.\n- ES6+ import/export syntax.\n- shadcn/ui components preferred over custom implementations.\n- Use `'use client'` and `'use server'` for client and server side code.\n- The Prisma schema primitive type cannot be a list.\n- Put the Prisma schema in the `prisma` folder.\n- Put the db file in the `db` folder.\n\n---",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_7438ad27",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding styling",
+      "instruction": "1. Use the shadcn/ui library unless the user specifies otherwise.\n2. Avoid using indigo or blue colors unless specified in the user's request.\n3. MUST generate responsive designs.\n4. The Code Project is rendered on top of a white background. If a different background color is needed, use a wrapper element with a background color Tailwind class.\n\n---",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_5d08f92a",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding ui/ux design standards",
+      "instruction": "",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_cac893c3",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding visual design",
+      "instruction": "- **Color System**: Use Tailwind CSS built-in variables (`bg-primary`, `text-primary-foreground`, `bg-background`).\n- **Color Restriction**: NO indigo or blue colors unless explicitly requested.\n- **Theme Support**: Implement light/dark mode with `next-themes`.\n- **Typography**: Consistent hierarchy with proper font weights and sizes.",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_142defaf",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding responsive design (mandatory)",
+      "instruction": "- **Mobile-First**: Design for mobile, then enhance for desktop.\n- **Breakpoints**: Use Tailwind responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`).\n- **Touch-Friendly**: Minimum 44px touch targets for interactive elements.",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_08125c63",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding layout (mandatory)",
+      "instruction": "- **Sticky Footer Required**: If a `footer` exists, it MUST stick to the bottom of the viewport when content is shorter than one screen height (no floating/empty gap below).\n- **Natural Push on Overflow**: When content exceeds the viewport height, the footer MUST be pushed down naturally (never overlay or cover content).\n- **Recommended Implementation (Tailwind)**: Use a root wrapper with `min-h-screen flex flex-col`, and apply `mt-auto` to the `footer`.\n- **Mobile Safe Area**: On devices with s",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_0312693b",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding accessibility (mandatory)",
+      "instruction": "- **Semantic HTML**: Use `main`, `header`, `nav`, `section`, `article`.\n- **ARIA Support**: Proper roles, labels, and descriptions.\n- **Screen Readers**: Use `sr-only` class for screen reader content.\n- **Alt Text**: Descriptive alt text for all images.\n- **Keyboard Navigation**: Ensure all elements are keyboard accessible.",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_6a80eb44",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding interactive elements",
+      "instruction": "- **Loading States**: Show spinners/skeletons during async operations.\n- **Error Handling**: Clear, actionable error messages.\n- **Feedback**: Toast notifications for user actions.\n- **Animations**: Subtle Framer Motion transitions (hover, focus, page transitions).\n- **Hover Effects**: Interactive feedback on all clickable elements.",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_concept_290e2f03",
+      "skill_name": "fullstack-dev",
+      "category": "concept",
+      "concept": "Understanding sandbox preview instructions (critical)",
+      "instruction": "This project runs in a restricted cloud sandbox environment.\n\n- **NEVER** instruct the user to visit `http://localhost:3000`, `127.0.0.1`, or any local ports directly. These addresses are internal and not accessible to the user.\n- **ALWAYS** direct the user to preview the application using the **Preview Panel** located on the right side of the interface.\n- **ALWAYS** inform the user that they can click the **\"Open in New Tab\"** button above the Preview Panel if they wish to view the application ",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_instruction_38dfc898",
+      "skill_name": "fullstack-dev",
+      "category": "instruction",
+      "concept": "Rule or guideline: Use existing shadcn/ui components instead of build...",
+      "instruction": "Use existing shadcn/ui components instead of building from scratch. All the components in the `src/components/ui` folder already exist.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_instruction_086e8ba5",
+      "skill_name": "fullstack-dev",
+      "category": "instruction",
+      "concept": "Rule or guideline: Card alignment and padding — Ensure all cards are ...",
+      "instruction": "Card alignment and padding — Ensure all cards are properly aligned with consistent padding (use `p-4` or `p-6` for content, `gap-4` or `gap-6` for spacing).",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_instruction_e0cf743c",
+      "skill_name": "fullstack-dev",
+      "category": "instruction",
+      "concept": "Rule or guideline: Long list handling — Set max height with scroll ov...",
+      "instruction": "Long list handling — Set max height with scroll overflow (`max-h-96 overflow-y-auto`) and implement custom scrollbar styling for better appearance.",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_instruction_3051a383",
+      "skill_name": "fullstack-dev",
+      "category": "instruction",
+      "concept": "Rule or guideline: `bun run lint` — Run ESLint to check code quality ...",
+      "instruction": "`bun run lint` — Run ESLint to check code quality and Next.js rules",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_instruction_7b4a6d68",
+      "skill_name": "fullstack-dev",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Framework**: Next.js 16 with App Router (REQUIRE...",
+      "instruction": "**Framework**: Next.js 16 with App Router (REQUIRED — cannot be changed)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_instruction_17eef0bb",
+      "skill_name": "fullstack-dev",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Language**: TypeScript 5 (REQUIRED — cannot be c...",
+      "instruction": "**Language**: TypeScript 5 (REQUIRED — cannot be changed)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_instruction_8ee9e30f",
+      "skill_name": "fullstack-dev",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Styling**: Tailwind CSS 4 with shadcn/ui compone...",
+      "instruction": "**Styling**: Tailwind CSS 4 with shadcn/ui component library",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_instruction_8d7f0ac0",
+      "skill_name": "fullstack-dev",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Database**: Prisma ORM (SQLite client only) with...",
+      "instruction": "**Database**: Prisma ORM (SQLite client only) with Prisma Client",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_instruction_a3f44a63",
+      "skill_name": "fullstack-dev",
+      "category": "instruction",
+      "concept": "Rule or guideline: **Caching**: Local memory caching, no additional m...",
+      "instruction": "**Caching**: Local memory caching, no additional middleware (MySQL, Redis, etc.)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_instruction_06a794dd",
+      "skill_name": "fullstack-dev",
+      "category": "instruction",
+      "concept": "Rule or guideline: **UI Components**: Complete shadcn/ui component se...",
+      "instruction": "**UI Components**: Complete shadcn/ui component set (New York style) with Lucide icons",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_code_pattern_1394d5e4",
+      "skill_name": "fullstack-dev",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from fullstack-dev",
+      "examples": [
+        "curl https://z-cdn.chatglm.cn/fullstack/init-fullstack_1773298087387.sh | bash\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_assessment_f8e3cdbd",
+      "skill_name": "fullstack-dev",
+      "category": "assessment",
+      "concept": "Apply fullstack-dev in a practical project",
+      "instruction": "Demonstrate mastery of fullstack-dev by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using fullstack-dev",
+        "Explain when fullstack-dev should be used",
+        "Identify the core concepts of fullstack-dev",
+        "Apply fullstack-dev to solve a real-world problem",
+        "Build a simple web interface",
+        "Connect frontend to backend",
+        "Implement user authentication"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_fullstack_dev_contextualization_332c4598",
+      "skill_name": "fullstack-dev",
+      "category": "contextualization",
+      "concept": "When to use fullstack-dev",
+      "instruction": "Learn when to apply fullstack-dev in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using fullstack-dev",
+        "User needs help with coding -> evaluate if fullstack-dev applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate fullstack-dev is needed",
+        "Distinguish between fullstack-dev and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 37,
+  "generated_at": "2026-03-24T04:43:44.504416",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/fullstack-dev/SKILL.md"
+}

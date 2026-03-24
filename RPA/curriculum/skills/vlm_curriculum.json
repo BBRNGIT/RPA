@@ -1,0 +1,974 @@
+{
+  "skill_name": "VLM",
+  "skill_description": "Implement vision-based AI chat capabilities using the z-ai-web-dev-sdk. Use this skill when the user needs to analyze images, describe visual content, or create applications that combine image understanding with conversational AI. Supports image URLs and base64 encoded images for multimodal interactions.",
+  "items": [
+    {
+      "item_id": "skill_vlm_concept_2d0dea4f",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding vlm(vision chat) skill",
+      "instruction": "This skill guides the implementation of vision chat functionality using the z-ai-web-dev-sdk package, enabling AI models to understand and respond to images combined with text prompts.",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_b6bc95f4",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding skills path",
+      "instruction": "**Skill Location**: `{project_path}/skills/VLM`\n\nthis skill is located at above path in your project.\n\n**Reference Scripts**: Example test scripts are available in the `{Skill Location}/scripts/` directory for quick testing and reference. See `{Skill Location}/scripts/vlm.ts` for a working example.",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_74953452",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding overview",
+      "instruction": "Vision Chat allows you to build applications that can analyze images, extract information from visual content, and answer questions about images through natural language conversation.\n\n**IMPORTANT**: z-ai-web-dev-sdk MUST be used in backend code only. Never use it in client-side code.",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_5ef4c53e",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding prerequisites",
+      "instruction": "The z-ai-web-dev-sdk package is already installed. Import it as shown in the examples below.",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_bdcde168",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding cli usage (for simple tasks)",
+      "instruction": "For simple image analysis tasks, you can use the z-ai CLI instead of writing code. This is ideal for quick image descriptions, testing vision capabilities, or simple automation.",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_e53c3608",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding basic image analysis",
+      "instruction": "```bash",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_216bcfc8",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding describe an image from url",
+      "instruction": "z-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_afa915df",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding using short options",
+      "instruction": "z-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n```",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_14a699d0",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding analyze local images",
+      "instruction": "```bash",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_52da2669",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding analyze a local image file",
+      "instruction": "z-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_d9bf481e",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding save response to file",
+      "instruction": "z-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n```",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_1a9e9c8c",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding multiple images",
+      "instruction": "```bash",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_53955a3c",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding analyze multiple images at once",
+      "instruction": "z-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_a4397c1d",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding multiple images with detailed analysis",
+      "instruction": "z-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n```",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_131985a1",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding with thinking (chain of thought)",
+      "instruction": "```bash",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_84c4e69a",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding enable thinking for complex visual reasoning",
+      "instruction": "z-ai vision \\\n  -p \"Count the number of people in this image and describe their activities\" \\\n  -i \"./crowd.jpg\" \\\n  --thinking \\\n  -o analysis.json\n```",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_505dbfe7",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding streaming output",
+      "instruction": "```bash",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_7cfc0f5d",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding stream the vision analysis",
+      "instruction": "z-ai vision -p \"Describe this image in detail\" -i \"./photo.jpg\" --stream\n```",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_f5c2ad81",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding cli parameters",
+      "instruction": "- `--prompt, -p <text>`: **Required** - Question or instruction about the image(s)\n- `--image, -i <URL or path>`: Optional - Image URL or local file path (can be used multiple times)\n- `--thinking, -t`: Optional - Enable chain-of-thought reasoning (default: disabled)\n- `--output, -o <path>`: Optional - Output file path (JSON format)\n- `--stream`: Optional - Stream the response in real-time",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_e55cfce3",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding supported image formats",
+      "instruction": "- PNG (.png)\n- JPEG (.jpg, .jpeg)\n- GIF (.gif)\n- WebP (.webp)\n- BMP (.bmp)",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_d6034076",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding when to use cli vs sdk",
+      "instruction": "**Use CLI for:**\n- Quick image analysis\n- Testing vision model capabilities\n- One-off image descriptions\n- Simple automation scripts\n\n**Use SDK for:**\n- Multi-turn conversations with images\n- Dynamic image analysis in applications\n- Batch processing with custom logic\n- Production applications with complex workflows",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_0339fb92",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding recommended approach",
+      "instruction": "For better performance and reliability, use base64 encoding to pass images to the model instead of image URLs.",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_d11c6272",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding supported content types",
+      "instruction": "The Vision Chat API supports three types of media content:",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_ea498e0a",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding 1. **image url** - for image files",
+      "instruction": "Use this type for static images (PNG, JPEG, GIF, WebP, etc.)\n```typescript\n{\n    role: 'user',\n    content: [\n        { type: 'text', text: prompt },\n        { type: 'image_url', image_url: { url: imageUrl } }\n    ]\n}\n```",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_08756cd3",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding 2. **video url** - for video files",
+      "instruction": "Use this type for video content (MP4, AVI, MOV, etc.)\n```typescript\n{\n    role: 'user',\n    content: [\n        { type: 'text', text: prompt },\n        { type: 'video_url', video_url: { url: videoUrl } }\n    ]\n}\n```",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_bbcff2ec",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding 3. **file url** - for document files",
+      "instruction": "Use this type for document files (PDF, DOCX, TXT, etc.)\n```typescript\n{\n    role: 'user',\n    content: [\n        { type: 'text', text: prompt },\n        { type: 'file_url', file_url: { url: fileUrl } }\n    ]\n}\n```\n\n**Note**: You can combine multiple content types in a single message. For example, you can include both text and multiple images, or text with both an image and a document.",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_7fc3275b",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding basic vision chat implementation",
+      "instruction": "",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_70f91da9",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding single image analysis",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function analyzeImage(imageUrl, question) {\n  const zai = await ZAI.create();\n\n  const response = await zai.chat.completions.createVision({\n    messages: [\n      {\n        role: 'user',\n        content: [\n          {\n            type: 'text',\n            text: question\n          },\n          {\n            type: 'image_url',\n            image_url: {\n              url: imageUrl\n            }\n          }\n        ]\n      }\n    ],\n    thinking:",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_91370fda",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding multiple images analysis",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function compareImages(imageUrls, question) {\n  const zai = await ZAI.create();\n\n  const content = [\n    {\n      type: 'text',\n      text: question\n    },\n    ...imageUrls.map(url => ({\n      type: 'image_url',\n      image_url: { url }\n    }))\n  ];\n\n  const response = await zai.chat.completions.createVision({\n    messages: [\n      {\n        role: 'user',\n        content: content\n      }\n    ],\n    thinking: { type: 'disabled' }\n  });\n\n  re",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_663ac173",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding base64 image support",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\nimport fs from 'fs';\n\nasync function analyzeLocalImage(imagePath, question) {\n  const zai = await ZAI.create();\n\n  // Read image file and convert to base64\n  const imageBuffer = fs.readFileSync(imagePath);\n  const base64Image = imageBuffer.toString('base64');\n  const mimeType = imagePath.endsWith('.png') ? 'image/png' : 'image/jpeg';\n\n  const response = await zai.chat.completions.createVision({\n    messages: [\n      {\n        role: 'user',\n      ",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_1d9b8ed3",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding advanced use cases",
+      "instruction": "",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_2da03755",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding conversational vision chat",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nclass VisionChatSession {\n  constructor() {\n    this.messages = [];\n  }\n\n  async initialize() {\n    this.zai = await ZAI.create();\n  }\n\n  async addImage(imageUrl, initialQuestion) {\n    this.messages.push({\n      role: 'user',\n      content: [\n        {\n          type: 'text',\n          text: initialQuestion\n        },\n        {\n          type: 'image_url',\n          image_url: { url: imageUrl }\n        }\n      ]\n    });\n\n    return this.getResp",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_be4949b1",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding image classification and tagging",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function classifyImage(imageUrl) {\n  const zai = await ZAI.create();\n\n  const prompt = `Analyze this image and provide:\n1. Main subject/category\n2. Key objects detected\n3. Scene description\n4. Suggested tags (comma-separated)\n\nFormat your response as JSON.`;\n\n  const response = await zai.chat.completions.createVision({\n    messages: [\n      {\n        role: 'user',\n        content: [\n          {\n            type: 'text',\n            text: p",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_faa5efbd",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding ocr and text extraction",
+      "instruction": "```javascript\nimport ZAI from 'z-ai-web-dev-sdk';\n\nasync function extractText(imageUrl) {\n  const zai = await ZAI.create();\n\n  const response = await zai.chat.completions.createVision({\n    messages: [\n      {\n        role: 'user',\n        content: [\n          {\n            type: 'text',\n            text: 'Extract all text from this image. Preserve the layout and formatting as much as possible.'\n          },\n          {\n            type: 'image_url',\n            image_url: { url: imageUrl }\n    ",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_22afaae1",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding best practices",
+      "instruction": "",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_8725dcc0",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding 1. image quality and size",
+      "instruction": "- Use high-quality images for better analysis results\n- Optimize image size to balance quality and processing speed\n- Supported formats: JPEG, PNG, WebP",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_22e8de54",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding 2. prompt engineering",
+      "instruction": "- Be specific about what information you need from the image\n- Structure complex requests with numbered lists or bullet points\n- Provide context about the image type (photo, diagram, chart, etc.)",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_65d39136",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding 3. error handling",
+      "instruction": "```javascript\nasync function safeVisionChat(imageUrl, question) {\n  try {\n    const zai = await ZAI.create();\n    \n    const response = await zai.chat.completions.createVision({\n      messages: [\n        {\n          role: 'user',\n          content: [\n            { type: 'text', text: question },\n            { type: 'image_url', image_url: { url: imageUrl } }\n          ]\n        }\n      ],\n      thinking: { type: 'disabled' }\n    });\n\n    return {\n      success: true,\n      content: response.choi",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_56a7aa5c",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding 4. performance optimization",
+      "instruction": "- Cache SDK instance creation when processing multiple images\n- Use appropriate image formats (JPEG for photos, PNG for diagrams)\n- Consider image preprocessing for large batches",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_1f0bf202",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding 5. security considerations",
+      "instruction": "- Validate image URLs before processing\n- Sanitize user-provided image data\n- Implement rate limiting for public-facing APIs\n- Never expose SDK credentials in client-side code",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_50ea89e3",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding common use cases",
+      "instruction": "1. **Product Analysis**: Analyze product images for e-commerce applications\n2. **Document Understanding**: Extract information from receipts, invoices, forms\n3. **Medical Imaging**: Assist in preliminary analysis (with appropriate disclaimers)\n4. **Quality Control**: Detect defects or anomalies in manufacturing\n5. **Content Moderation**: Analyze images for policy compliance\n6. **Accessibility**: Generate alt text for images automatically\n7. **Visual Search**: Understand and categorize images for",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_512e2fea",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding integration examples",
+      "instruction": "",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_ae637a39",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding express.js api endpoint",
+      "instruction": "```javascript\nimport express from 'express';\nimport ZAI from 'z-ai-web-dev-sdk';\n\nconst app = express();\napp.use(express.json());\n\nlet zaiInstance;\n\n// Initialize SDK once\nasync function initZAI() {\n  zaiInstance = await ZAI.create();\n}\n\napp.post('/api/analyze-image', async (req, res) => {\n  try {\n    const { imageUrl, question } = req.body;\n\n    if (!imageUrl || !question) {\n      return res.status(400).json({ \n        error: 'imageUrl and question are required' \n      });\n    }\n\n    const resp",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_5ad2a130",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding troubleshooting",
+      "instruction": "**Issue**: \"SDK must be used in backend\"\n- **Solution**: Ensure z-ai-web-dev-sdk is only imported and used in server-side code\n\n**Issue**: Image not loading or being analyzed\n- **Solution**: Verify the image URL is accessible and returns a valid image format\n\n**Issue**: Poor analysis quality\n- **Solution**: Provide more specific prompts and ensure image quality is sufficient\n\n**Issue**: Slow response times\n- **Solution**: Optimize image size and consider caching frequently analyzed images",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_concept_f9f0fbb1",
+      "skill_name": "VLM",
+      "category": "concept",
+      "concept": "Understanding remember",
+      "instruction": "- Always use z-ai-web-dev-sdk in backend code only\n- The SDK is already installed - import as shown in examples\n- Structure prompts clearly for best results\n- Handle errors gracefully in production applications\n- Consider user privacy when processing images",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n",
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n",
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [],
+      "difficulty": "expert",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_instruction_b2ea6503",
+      "skill_name": "VLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--prompt, -p <text>`: **Required** - Question or ...",
+      "instruction": "`--prompt, -p <text>`: **Required** - Question or instruction about the image(s)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_instruction_8555f3f8",
+      "skill_name": "VLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--image, -i <URL or path>`: Optional - Image URL ...",
+      "instruction": "`--image, -i <URL or path>`: Optional - Image URL or local file path (can be used multiple times)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_instruction_c235b65f",
+      "skill_name": "VLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--thinking, -t`: Optional - Enable chain-of-thoug...",
+      "instruction": "`--thinking, -t`: Optional - Enable chain-of-thought reasoning (default: disabled)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_instruction_36bc0080",
+      "skill_name": "VLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--output, -o <path>`: Optional - Output file path...",
+      "instruction": "`--output, -o <path>`: Optional - Output file path (JSON format)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_instruction_d721347b",
+      "skill_name": "VLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: `--stream`: Optional - Stream the response in real...",
+      "instruction": "`--stream`: Optional - Stream the response in real-time",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_instruction_d82f195c",
+      "skill_name": "VLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: PNG (.png)...",
+      "instruction": "PNG (.png)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_instruction_af2e2dcc",
+      "skill_name": "VLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: JPEG (.jpg, .jpeg)...",
+      "instruction": "JPEG (.jpg, .jpeg)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_instruction_abe99c2b",
+      "skill_name": "VLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: GIF (.gif)...",
+      "instruction": "GIF (.gif)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_instruction_3401a3cc",
+      "skill_name": "VLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: WebP (.webp)...",
+      "instruction": "WebP (.webp)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_instruction_88498a95",
+      "skill_name": "VLM",
+      "category": "instruction",
+      "concept": "Rule or guideline: BMP (.bmp)...",
+      "instruction": "BMP (.bmp)",
+      "examples": [],
+      "practice_tasks": [],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_code_pattern_60c7717e",
+      "skill_name": "VLM",
+      "category": "code_pattern",
+      "concept": "Code pattern 1",
+      "instruction": "Learn and apply this code pattern from VLM",
+      "examples": [
+        "# Describe an image from URL\nz-ai vision --prompt \"What's in this image?\" --image \"https://example.com/photo.jpg\"\n\n# Using short options\nz-ai vision -p \"Describe this image\" -i \"https://example.com/image.png\"\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_code_pattern_4fc16669",
+      "skill_name": "VLM",
+      "category": "code_pattern",
+      "concept": "Code pattern 2",
+      "instruction": "Learn and apply this code pattern from VLM",
+      "examples": [
+        "# Analyze a local image file\nz-ai vision -p \"What objects are in this photo?\" -i \"./photo.jpg\"\n\n# Save response to file\nz-ai vision -p \"Describe the scene\" -i \"./landscape.png\" -o description.json\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_code_pattern_7b3926cc",
+      "skill_name": "VLM",
+      "category": "code_pattern",
+      "concept": "Code pattern 3",
+      "instruction": "Learn and apply this code pattern from VLM",
+      "examples": [
+        "# Analyze multiple images at once\nz-ai vision \\\n  -p \"Compare these two images\" \\\n  -i \"./photo1.jpg\" \\\n  -i \"./photo2.jpg\" \\\n  -o comparison.json\n\n# Multiple images with detailed analysis\nz-ai vision \\\n  --prompt \"What are the differences between these images?\" \\\n  --image \"https://example.com/before.jpg\" \\\n  --image \"https://example.com/after.jpg\"\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_code_pattern_30ddf8bc",
+      "skill_name": "VLM",
+      "category": "code_pattern",
+      "concept": "Code pattern 4",
+      "instruction": "Learn and apply this code pattern from VLM",
+      "examples": [
+        "# Enable thinking for complex visual reasoning\nz-ai vision \\\n  -p \"Count the number of people in this image and describe their activities\" \\\n  -i \"./crowd.jpg\" \\\n  --thinking \\\n  -o analysis.json\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "advanced",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_code_pattern_686e3744",
+      "skill_name": "VLM",
+      "category": "code_pattern",
+      "concept": "Code pattern 5",
+      "instruction": "Learn and apply this code pattern from VLM",
+      "examples": [
+        "# Stream the vision analysis\nz-ai vision -p \"Describe this image in detail\" -i \"./photo.jpg\" --stream\n"
+      ],
+      "practice_tasks": [
+        "Write similar code using the pattern from the example",
+        "Identify when to use this pattern",
+        "Modify the pattern for a different use case"
+      ],
+      "difficulty": "novice",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_assessment_c8d345b2",
+      "skill_name": "VLM",
+      "category": "assessment",
+      "concept": "Apply VLM in a practical project",
+      "instruction": "Demonstrate mastery of VLM by completing a project",
+      "examples": [],
+      "practice_tasks": [
+        "Complete a mini-project using VLM",
+        "Explain when VLM should be used",
+        "Identify the core concepts of VLM",
+        "Apply VLM to solve a real-world problem"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    },
+    {
+      "item_id": "skill_vlm_contextualization_a66db970",
+      "skill_name": "VLM",
+      "category": "contextualization",
+      "concept": "When to use VLM",
+      "instruction": "Learn when to apply VLM in response to user queries",
+      "examples": [
+        "User asks about web development -> consider using VLM",
+        "User needs help with coding -> evaluate if VLM applies"
+      ],
+      "practice_tasks": [
+        "Identify keywords that indicate VLM is needed",
+        "Distinguish between VLM and related skills"
+      ],
+      "difficulty": "intermediate",
+      "prerequisites": [],
+      "metadata": {}
+    }
+  ],
+  "total_items": 62,
+  "generated_at": "2026-03-24T04:43:44.492044",
+  "source_path": "/home/z/my-project/RPA_GITHUB/skills/VLM/SKILL.md"
+}
