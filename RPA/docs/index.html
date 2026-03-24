@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RPA AI Learning Monitor</title>
+    <title>RPA AI Learning Monitor - Skills Testing</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         :root {
             --bg-primary: #0f172a;
             --bg-secondary: #1e293b;
@@ -24,27 +20,23 @@
             --accent-purple: #a855f7;
             --accent-cyan: #06b6d4;
             --accent-pink: #ec4899;
+            --accent-orange: #f97316;
             --border-color: #334155;
             --success: #22c55e;
             --warning: #f59e0b;
             --error: #ef4444;
         }
-
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: var(--bg-primary);
             color: var(--text-primary);
             min-height: 100vh;
             line-height: 1.6;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Header */
+        
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        
         .header {
             display: flex;
             justify-content: space-between;
@@ -55,33 +47,12 @@
             flex-wrap: wrap;
             gap: 15px;
         }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo {
-            font-size: 28px;
-        }
-
-        .header-title h1 {
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        .header-title p {
-            color: var(--text-secondary);
-            font-size: 14px;
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
+        
+        .header-left { display: flex; align-items: center; gap: 15px; }
+        .logo { font-size: 32px; }
+        .header-title h1 { font-size: 24px; font-weight: 600; }
+        .header-title p { color: var(--text-secondary); font-size: 14px; }
+        
         .status-badge {
             display: flex;
             align-items: center;
@@ -91,7 +62,7 @@
             border-radius: 20px;
             font-size: 14px;
         }
-
+        
         .status-dot {
             width: 10px;
             height: 10px;
@@ -99,63 +70,33 @@
             background: var(--success);
             animation: pulse 2s infinite;
         }
-
-        .status-dot.inactive {
-            background: var(--text-muted);
-            animation: none;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .last-update {
-            color: var(--text-muted);
-            font-size: 13px;
-        }
-
-        /* Stats Cards */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            background: var(--bg-secondary);
-            border-radius: 12px;
-            padding: 20px;
-            border: 1px solid var(--border-color);
-        }
-
-        .stat-card-header {
+        
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        
+        .tabs {
             display: flex;
-            align-items: center;
             gap: 10px;
-            margin-bottom: 10px;
-            color: var(--text-secondary);
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .tab {
+            padding: 12px 24px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
             font-size: 14px;
+            color: var(--text-secondary);
+            transition: all 0.2s;
         }
-
-        .stat-card-value {
-            font-size: 32px;
-            font-weight: 700;
-        }
-
-        .stat-card-sub {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-top: 5px;
-        }
-
-        .stat-card.success .stat-card-value { color: var(--success); }
-        .stat-card.info .stat-card-value { color: var(--accent-blue); }
-        .stat-card.warning .stat-card-value { color: var(--warning); }
-        .stat-card.purple .stat-card-value { color: var(--accent-purple); }
-
-        /* Section */
+        
+        .tab:hover { background: var(--bg-tertiary); }
+        .tab.active { background: var(--accent-purple); color: white; border-color: var(--accent-purple); }
+        
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        
         .section {
             background: var(--bg-secondary);
             border-radius: 12px;
@@ -163,7 +104,7 @@
             margin-bottom: 25px;
             border: 1px solid var(--border-color);
         }
-
+        
         .section-title {
             font-size: 18px;
             font-weight: 600;
@@ -172,436 +113,156 @@
             align-items: center;
             gap: 10px;
         }
-
-        /* Tabs */
-        .tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
         }
-
-        .tab {
-            padding: 10px 20px;
-            background: var(--bg-secondary);
+        
+        .skill-card {
+            background: var(--bg-tertiary);
+            border-radius: 10px;
+            padding: 15px;
             border: 1px solid var(--border-color);
-            border-radius: 8px;
             cursor: pointer;
-            font-size: 14px;
-            color: var(--text-secondary);
             transition: all 0.2s;
         }
-
-        .tab:hover {
-            background: var(--bg-tertiary);
-        }
-
-        .tab.active {
-            background: var(--accent-blue);
-            color: white;
+        
+        .skill-card:hover {
             border-color: var(--accent-blue);
+            transform: translateY(-2px);
         }
-
-        .tab-content {
-            display: none;
+        
+        .skill-card.selected {
+            border-color: var(--accent-purple);
+            background: rgba(168, 85, 247, 0.1);
         }
-
-        .tab-content.active {
-            display: block;
+        
+        .skill-card.mastered {
+            border-color: var(--success);
         }
-
-        /* Domain bars */
-        .domain-bar {
-            margin-bottom: 15px;
-        }
-
-        .domain-bar-header {
+        
+        .skill-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 6px;
-            font-size: 14px;
+            align-items: center;
+            margin-bottom: 10px;
         }
-
-        .domain-bar-name {
-            color: var(--text-primary);
+        
+        .skill-name { font-weight: 600; font-size: 14px; }
+        
+        .skill-tier {
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
             font-weight: 500;
         }
-
-        .domain-bar-count {
+        
+        .tier-1 { background: var(--accent-cyan); color: white; }
+        .tier-2 { background: var(--accent-blue); color: white; }
+        .tier-3 { background: var(--accent-purple); color: white; }
+        .tier-4 { background: var(--accent-pink); color: white; }
+        .tier-5 { background: var(--accent-orange); color: white; }
+        .tier-6 { background: var(--accent-yellow); color: #000; }
+        .tier-7 { background: var(--accent-green); color: white; }
+        
+        .skill-desc {
+            font-size: 12px;
             color: var(--text-secondary);
+            margin-bottom: 10px;
         }
-
-        .domain-bar-track {
-            height: 8px;
-            background: var(--bg-tertiary);
+        
+        .skill-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .keyword {
+            padding: 2px 8px;
+            background: var(--bg-secondary);
             border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .domain-bar-fill {
-            height: 100%;
-            border-radius: 4px;
-            transition: width 0.5s ease;
-        }
-
-        .domain-bar-fill.english { background: var(--accent-blue); }
-        .domain-bar-fill.python { background: var(--accent-yellow); }
-        .domain-bar-fill.finance { background: var(--accent-green); }
-        .domain-bar-fill.medicine { background: var(--accent-pink); }
-        .domain-bar-fill.health { background: var(--accent-cyan); }
-
-        /* Schedule */
-        .schedule-current {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background: var(--bg-tertiary);
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        .schedule-info {
-            display: flex;
-            gap: 30px;
-        }
-
-        .schedule-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .schedule-label {
-            font-size: 12px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-        }
-
-        .schedule-value {
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        /* Sessions */
-        .sessions-list {
-            max-height: 300px;
-            overflow-y: auto;
-        }
-
-        .session-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 15px;
-            background: var(--bg-tertiary);
-            border-radius: 8px;
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-
-        .session-item:hover {
-            background: #3d4f65;
-        }
-
-        .session-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .session-icon {
-            font-size: 18px;
-        }
-
-        .session-type {
-            font-weight: 500;
-        }
-
-        .session-domain {
-            color: var(--text-muted);
-            font-size: 13px;
-        }
-
-        .session-right {
-            text-align: right;
-        }
-
-        .session-result {
-            font-weight: 500;
-        }
-
-        .session-result.success { color: var(--success); }
-        .session-result.fail { color: var(--error); }
-
-        .session-time {
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-
-        /* Exam History */
-        .exam-chart {
-            display: flex;
-            align-items: flex-end;
-            gap: 10px;
-            height: 150px;
-            padding: 10px 0;
-        }
-
-        .exam-bar {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .exam-bar-fill {
-            width: 100%;
-            max-width: 40px;
-            background: linear-gradient(180deg, var(--accent-purple) 0%, var(--accent-blue) 100%);
-            border-radius: 4px 4px 0 0;
-            transition: height 0.5s ease;
-        }
-
-        .exam-bar-label {
             font-size: 11px;
             color: var(--text-muted);
         }
-
-        .exam-bar-score {
-            font-size: 12px;
-            font-weight: 500;
+        
+        /* Skill Test Panel */
+        .test-panel {
+            background: var(--bg-tertiary);
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 20px;
         }
-
-        /* Health Grid */
-        .health-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-        }
-
-        .health-item {
+        
+        .test-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 15px;
-            background: var(--bg-tertiary);
-            border-radius: 8px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
         }
-
-        .health-label {
-            color: var(--text-secondary);
-            font-size: 13px;
-        }
-
-        .health-value {
-            font-weight: 600;
-        }
-
-        /* Ask AI Section */
-        .ask-ai-container {
+        
+        .test-skill-name { font-size: 20px; font-weight: 600; }
+        
+        .test-stats {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .ask-input-wrapper {
-            display: flex;
-            gap: 10px;
-        }
-
-        .ask-input {
-            flex: 1;
-            padding: 15px;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-size: 14px;
-            resize: none;
-            min-height: 60px;
-        }
-
-        .ask-input:focus {
-            outline: none;
-            border-color: var(--accent-blue);
-        }
-
-        .ask-btn {
-            padding: 15px 25px;
-            background: var(--accent-purple);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
-            transition: background 0.2s;
-        }
-
-        .ask-btn:hover {
-            background: #9333ea;
-        }
-
-        .ask-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        .ai-response {
-            padding: 20px;
-            background: var(--bg-tertiary);
-            border-radius: 8px;
-            border-left: 4px solid var(--accent-purple);
-            min-height: 100px;
-        }
-
-        .ai-response-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            color: var(--accent-purple);
-            font-weight: 500;
-        }
-
-        .ai-response-text {
-            color: var(--text-primary);
-            line-height: 1.8;
-        }
-
-        .ai-thinking {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text-muted);
-        }
-
-        .thinking-dots {
-            display: flex;
-            gap: 4px;
-        }
-
-        .thinking-dots span {
-            width: 8px;
-            height: 8px;
-            background: var(--accent-purple);
-            border-radius: 50%;
-            animation: thinking 1.4s infinite ease-in-out both;
-        }
-
-        .thinking-dots span:nth-child(1) { animation-delay: -0.32s; }
-        .thinking-dots span:nth-child(2) { animation-delay: -0.16s; }
-
-        @keyframes thinking {
-            0%, 80%, 100% { transform: scale(0); }
-            40% { transform: scale(1); }
-        }
-
-        /* Quiz Section */
-        .quiz-container {
-            display: flex;
-            flex-direction: column;
             gap: 20px;
         }
-
-        .quiz-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background: var(--bg-tertiary);
-            border-radius: 8px;
+        
+        .test-stat {
+            text-align: center;
         }
-
-        .quiz-score {
+        
+        .test-stat-value {
             font-size: 24px;
             font-weight: 700;
             color: var(--accent-cyan);
         }
-
-        .quiz-question {
-            padding: 25px;
-            background: var(--bg-tertiary);
+        
+        .test-stat-label {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+        
+        .test-question {
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: var(--bg-secondary);
             border-radius: 8px;
         }
-
-        .quiz-question-text {
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-
-        .quiz-domain-badge {
-            display: inline-block;
-            padding: 4px 12px;
-            background: var(--accent-blue);
-            border-radius: 20px;
-            font-size: 12px;
-            margin-bottom: 15px;
-        }
-
-        .quiz-options {
+        
+        .test-options {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-
-        .quiz-option {
+        
+        .test-option {
             padding: 15px 20px;
             background: var(--bg-secondary);
             border: 2px solid var(--border-color);
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.2s;
-            font-size: 14px;
         }
-
-        .quiz-option:hover {
-            border-color: var(--accent-blue);
-            background: var(--bg-tertiary);
-        }
-
-        .quiz-option.selected {
-            border-color: var(--accent-blue);
-            background: rgba(59, 130, 246, 0.1);
-        }
-
-        .quiz-option.correct {
-            border-color: var(--success);
-            background: rgba(34, 197, 94, 0.1);
-        }
-
-        .quiz-option.incorrect {
-            border-color: var(--error);
-            background: rgba(239, 68, 68, 0.1);
-        }
-
-        .quiz-feedback {
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-top: 15px;
-        }
-
-        .quiz-feedback.correct {
-            background: rgba(34, 197, 94, 0.1);
-            border: 1px solid var(--success);
-            color: var(--success);
-        }
-
-        .quiz-feedback.incorrect {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid var(--error);
-            color: var(--error);
-        }
-
-        .quiz-actions {
+        
+        .test-option:hover { border-color: var(--accent-blue); }
+        .test-option.selected { border-color: var(--accent-blue); background: rgba(59, 130, 246, 0.1); }
+        .test-option.correct { border-color: var(--success); background: rgba(34, 197, 94, 0.1); }
+        .test-option.incorrect { border-color: var(--error); background: rgba(239, 68, 68, 0.1); }
+        
+        .test-actions {
             display: flex;
             gap: 10px;
+            margin-top: 20px;
             justify-content: flex-end;
         }
-
-        .quiz-btn {
+        
+        .btn {
             padding: 12px 24px;
             border: none;
             border-radius: 8px;
@@ -610,44 +271,96 @@
             font-weight: 500;
             transition: all 0.2s;
         }
-
-        .quiz-btn-primary {
-            background: var(--accent-cyan);
-            color: white;
+        
+        .btn-primary { background: var(--accent-purple); color: white; }
+        .btn-primary:hover { background: #9333ea; }
+        .btn-secondary { background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-color); }
+        .btn-success { background: var(--success); color: white; }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
         }
-
-        .quiz-btn-primary:hover {
-            background: #0891b2;
-        }
-
-        .quiz-btn-secondary {
-            background: var(--bg-tertiary);
-            color: var(--text-primary);
+        
+        .stat-card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 20px;
             border: 1px solid var(--border-color);
         }
-
-        .quiz-btn-secondary:hover {
-            background: var(--bg-secondary);
+        
+        .stat-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            font-size: 14px;
         }
-
-        .quiz-complete {
+        
+        .stat-card-value { font-size: 32px; font-weight: 700; }
+        .stat-card-sub { font-size: 13px; color: var(--text-muted); margin-top: 5px; }
+        .stat-card.success .stat-card-value { color: var(--success); }
+        .stat-card.info .stat-card-value { color: var(--accent-blue); }
+        .stat-card.purple .stat-card-value { color: var(--accent-purple); }
+        
+        /* Domain Bars */
+        .domain-bar { margin-bottom: 15px; }
+        .domain-bar-header { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 14px; }
+        .domain-bar-name { color: var(--text-primary); font-weight: 500; }
+        .domain-bar-count { color: var(--text-secondary); }
+        .domain-bar-track { height: 8px; background: var(--bg-tertiary); border-radius: 4px; overflow: hidden; }
+        .domain-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
+        .domain-bar-fill.english { background: var(--accent-blue); }
+        .domain-bar-fill.skills { background: var(--accent-purple); }
+        .domain-bar-fill.python { background: var(--accent-yellow); }
+        .domain-bar-fill.finance { background: var(--accent-green); }
+        .domain-bar-fill.medicine { background: var(--accent-pink); }
+        .domain-bar-fill.health { background: var(--accent-cyan); }
+        .domain-bar-fill.reasoning { background: var(--accent-orange); }
+        
+        /* Cognitive Status */
+        .cognitive-status {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .cognitive-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+        }
+        
+        .cognitive-icon { font-size: 24px; }
+        .cognitive-info { flex: 1; }
+        .cognitive-label { font-size: 12px; color: var(--text-muted); }
+        .cognitive-value { font-weight: 600; font-size: 14px; }
+        
+        /* Results Panel */
+        .results-panel {
             text-align: center;
             padding: 40px;
         }
-
-        .quiz-complete-score {
-            font-size: 48px;
+        
+        .results-score {
+            font-size: 64px;
             font-weight: 700;
-            color: var(--accent-cyan);
             margin-bottom: 10px;
         }
-
-        .quiz-complete-msg {
-            font-size: 18px;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-        }
-
+        
+        .results-score.excellent { color: var(--success); }
+        .results-score.good { color: var(--accent-blue); }
+        .results-score.needs-work { color: var(--warning); }
+        
+        .results-message { font-size: 18px; color: var(--text-secondary); margin-bottom: 20px; }
+        
         /* Footer */
         .footer {
             text-align: center;
@@ -657,99 +370,14 @@
             border-top: 1px solid var(--border-color);
             margin-top: 30px;
         }
-
-        .footer a {
-            color: var(--accent-blue);
-            text-decoration: none;
-        }
-
-        /* Loading */
-        .loading {
-            text-align: center;
-            padding: 50px;
-            color: var(--text-muted);
-        }
-
-        /* Refresh button */
-        .refresh-btn {
-            background: var(--accent-blue);
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: background 0.2s;
-        }
-
-        .refresh-btn:hover {
-            background: #2563eb;
-        }
-
-        /* Goal progress */
-        .goal-progress {
-            margin-top: 20px;
-        }
-
-        .goal-track {
-            height: 12px;
-            background: var(--bg-tertiary);
-            border-radius: 6px;
-            overflow: hidden;
-        }
-
-        .goal-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent-blue) 0%, var(--accent-purple) 50%, var(--accent-pink) 100%);
-            border-radius: 6px;
-            transition: width 0.5s ease;
-        }
-
-        .goal-labels {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 8px;
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-
+        
+        .footer a { color: var(--accent-blue); text-decoration: none; }
+        
         /* Responsive */
         @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .header-right {
-                flex-direction: column;
-            }
-
-            .schedule-current {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .schedule-info {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .ask-input-wrapper {
-                flex-direction: column;
-            }
-
-            .quiz-header {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
+            .header { flex-direction: column; text-align: center; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .test-header { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
@@ -758,914 +386,447 @@
         <!-- Header -->
         <header class="header">
             <div class="header-left">
-                <span class="logo">🤖</span>
+                <span class="logo">🧠</span>
                 <div class="header-title">
-                    <h1>RPA AI Learning Monitor</h1>
-                    <p>Real-time learning progress dashboard</p>
+                    <h1>RPA AI Skills Testing Center</h1>
+                    <p>Test the AI's learned capabilities across 44 skill domains</p>
                 </div>
             </div>
-            <div class="header-right">
-                <div class="status-badge">
-                    <span class="status-dot" id="statusDot"></span>
-                    <span id="statusText">Loading...</span>
-                </div>
-                <span class="last-update" id="lastUpdate">--</span>
-                <button class="refresh-btn" onclick="loadData()">
-                    🔄 Refresh
-                </button>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>Skills Integrated: 44</span>
             </div>
         </header>
-
-        <!-- Navigation Tabs -->
-        <div class="tabs">
-            <div class="tab active" onclick="switchTab('dashboard')">📊 Dashboard</div>
-            <div class="tab" onclick="switchTab('ask-ai')">💬 Ask AI</div>
-            <div class="tab" onclick="switchTab('quiz')">📝 Quiz</div>
+        
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-card success">
+                <div class="stat-card-header">📚 Total Patterns</div>
+                <div class="stat-card-value" id="totalPatterns">8,546</div>
+                <div class="stat-card-sub">Learned knowledge units</div>
+            </div>
+            <div class="stat-card purple">
+                <div class="stat-card-header">🎯 Skills Mastered</div>
+                <div class="stat-card-value" id="skillsMastered">44</div>
+                <div class="stat-card-sub">All skill domains integrated</div>
+            </div>
+            <div class="stat-card info">
+                <div class="stat-card-header">⚡ Learning Rate</div>
+                <div class="stat-card-value" id="learningRate">5-10x</div>
+                <div class="stat-card-sub">Accelerated by scaffolding</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-header">🧪 Tests Passing</div>
+                <div class="stat-card-value" id="testsPassing">957</div>
+                <div class="stat-card-sub">All tests green</div>
+            </div>
         </div>
-
-        <!-- Dashboard Tab -->
-        <div id="tab-dashboard" class="tab-content active">
-            <!-- Stats Cards -->
-            <div class="stats-grid">
-                <div class="stat-card info">
-                    <div class="stat-card-header">📚 Total Patterns</div>
-                    <div class="stat-card-value" id="totalPatterns">--</div>
-                    <div class="stat-card-sub">Learned knowledge units</div>
-                </div>
-                <div class="stat-card purple">
-                    <div class="stat-card-header">🎯 Progress to 1M</div>
-                    <div class="stat-card-value" id="progressPercent">--</div>
-                    <div class="stat-card-sub">Goal: 1,000,000 patterns</div>
-                </div>
-                <div class="stat-card success">
-                    <div class="stat-card-header">✅ Tests Passing</div>
-                    <div class="stat-card-value" id="testsPassing">--</div>
-                    <div class="stat-card-sub">All tests green</div>
-                </div>
-                <div class="stat-card warning">
-                    <div class="stat-card-header">📝 Sessions Today</div>
-                    <div class="stat-card-value" id="sessionsToday">--</div>
-                    <div class="stat-card-sub">Learning sessions</div>
-                </div>
-            </div>
-
-            <!-- Goal Progress -->
+        
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('skills')">🛠️ Skills Test</div>
+            <div class="tab" onclick="switchTab('domains')">📊 Domain Status</div>
+            <div class="tab" onclick="switchTab('cognitive')">🧠 Cognitive Status</div>
+        </div>
+        
+        <!-- Skills Test Tab -->
+        <div id="tab-skills" class="tab-content active">
             <div class="section">
-                <div class="section-title">🎯 Journey to 1 Million Patterns</div>
-                <div class="goal-progress">
-                    <div class="goal-track">
-                        <div class="goal-fill" id="goalFill" style="width: 0%"></div>
+                <div class="section-title">🛠️ Select a Skill to Test</div>
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                    Click on any skill card to start a test. The AI will demonstrate its learned capabilities.
+                </p>
+                <div class="skills-grid" id="skillsGrid">
+                    <!-- Skills will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Test Panel -->
+            <div class="section" id="testPanel" style="display: none;">
+                <div class="test-panel">
+                    <div class="test-header">
+                        <div>
+                            <div class="test-skill-name" id="testSkillName">--</div>
+                            <div style="color: var(--text-muted); font-size: 14px;" id="testSkillDesc">--</div>
+                        </div>
+                        <div class="test-stats">
+                            <div class="test-stat">
+                                <div class="test-stat-value" id="testScore">0</div>
+                                <div class="test-stat-label">Score</div>
+                            </div>
+                            <div class="test-stat">
+                                <div class="test-stat-value" id="testProgress">0/5</div>
+                                <div class="test-stat-label">Questions</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="goal-labels">
-                        <span>0</span>
-                        <span id="currentProgress">-- patterns (--) </span>
-                        <span>1,000,000</span>
+                    <div id="testContent">
+                        <div class="test-question" id="testQuestion">Select a skill to begin testing</div>
+                        <div class="test-options" id="testOptions"></div>
+                    </div>
+                    <div class="test-actions">
+                        <button class="btn btn-secondary" onclick="closeTest()">Close</button>
+                        <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>Next Question</button>
                     </div>
                 </div>
             </div>
-
-            <!-- Domain Breakdown -->
+        </div>
+        
+        <!-- Domain Status Tab -->
+        <div id="tab-domains" class="tab-content">
             <div class="section">
                 <div class="section-title">📊 Knowledge by Domain</div>
                 <div id="domainBars">
-                    <div class="loading">Loading domain data...</div>
+                    <!-- Domain bars will be populated -->
                 </div>
             </div>
-
-            <!-- Current Schedule -->
+            
             <div class="section">
-                <div class="section-title">🕐 Current Schedule</div>
-                <div class="schedule-current">
-                    <div class="schedule-info">
-                        <div class="schedule-item">
-                            <span class="schedule-label">Current Hour</span>
-                            <span class="schedule-value" id="currentHour">--:00 UTC</span>
+                <div class="section-title">🎯 Journey to 1 Million Patterns</div>
+                <div style="background: var(--bg-tertiary); border-radius: 8px; height: 20px; overflow: hidden;">
+                    <div style="width: 0.85%; height: 100%; background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple)); transition: width 0.5s;"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 13px; color: var(--text-muted);">
+                    <span>0</span>
+                    <span>8,546 patterns (0.85%)</span>
+                    <span>1,000,000</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Cognitive Status Tab -->
+        <div id="tab-cognitive" class="tab-content">
+            <div class="section">
+                <div class="section-title">🧠 Cognitive Enhancements Active</div>
+                <div class="cognitive-status">
+                    <div class="cognitive-item">
+                        <div class="cognitive-icon">⚡</div>
+                        <div class="cognitive-info">
+                            <div class="cognitive-label">Learning Acceleration</div>
+                            <div class="cognitive-value">5-10x Faster</div>
                         </div>
-                        <div class="schedule-item">
-                            <span class="schedule-label">Active Domain</span>
-                            <span class="schedule-value" id="activeDomain">--</span>
+                    </div>
+                    <div class="cognitive-item">
+                        <div class="cognitive-icon">🔗</div>
+                        <div class="cognitive-info">
+                            <div class="cognitive-label">Cross-Domain Reasoning</div>
+                            <div class="cognitive-value">✓ Enabled</div>
                         </div>
-                        <div class="schedule-item">
-                            <span class="schedule-label">Activity</span>
-                            <span class="schedule-value" id="activityType">--</span>
+                    </div>
+                    <div class="cognitive-item">
+                        <div class="cognitive-icon">🎯</div>
+                        <div class="cognitive-info">
+                            <div class="cognitive-label">Pattern Recognition</div>
+                            <div class="cognitive-value">Enhanced</div>
                         </div>
-                        <div class="schedule-item">
-                            <span class="schedule-label">Next Exam</span>
-                            <span class="schedule-value" id="nextExam">--</span>
+                    </div>
+                    <div class="cognitive-item">
+                        <div class="cognitive-icon">📈</div>
+                        <div class="cognitive-info">
+                            <div class="cognitive-label">Self-Improvement</div>
+                            <div class="cognitive-value">Active</div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Recent Sessions -->
+            
             <div class="section">
-                <div class="section-title">📝 Recent Learning Sessions</div>
-                <div class="sessions-list" id="sessionsList">
-                    <div class="loading">Loading sessions...</div>
-                </div>
-            </div>
-
-            <!-- Exam History -->
-            <div class="section">
-                <div class="section-title">📈 Exam History</div>
-                <div class="exam-chart" id="examChart">
-                    <div class="loading">Loading exam data...</div>
-                </div>
-            </div>
-
-            <!-- System Health -->
-            <div class="section">
-                <div class="section-title">💚 System Health</div>
-                <div class="health-grid">
-                    <div class="health-item">
-                        <span class="health-label">Learning Pipeline</span>
-                        <span class="health-value" id="pipelineStatus">--</span>
+                <div class="section-title">🏗️ Neural Network Architecture</div>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 15px;">
+                    <div style="text-align: center; padding: 20px; background: var(--bg-tertiary); border-radius: 8px;">
+                        <div style="font-size: 28px; font-weight: 700; color: var(--accent-cyan);">509</div>
+                        <div style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">Level 0: Primitives</div>
                     </div>
-                    <div class="health-item">
-                        <span class="health-label">Memory System</span>
-                        <span class="health-value" id="memoryStatus">--</span>
+                    <div style="text-align: center; padding: 20px; background: var(--bg-tertiary); border-radius: 8px;">
+                        <div style="font-size: 28px; font-weight: 700; color: var(--accent-blue);">1,479</div>
+                        <div style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">Level 1: Patterns</div>
                     </div>
-                    <div class="health-item">
-                        <span class="health-label">Avg Test Score</span>
-                        <span class="health-value" id="avgTestScore">--</span>
+                    <div style="text-align: center; padding: 20px; background: var(--bg-tertiary); border-radius: 8px;">
+                        <div style="font-size: 28px; font-weight: 700; color: var(--accent-purple);">3,848</div>
+                        <div style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">Level 2: Sequences</div>
                     </div>
-                    <div class="health-item">
-                        <span class="health-label">Avg Exam Score</span>
-                        <span class="health-value" id="avgExamScore">--</span>
+                    <div style="text-align: center; padding: 20px; background: var(--bg-tertiary); border-radius: 8px;">
+                        <div style="font-size: 28px; font-weight: 700; color: var(--accent-pink);">576</div>
+                        <div style="font-size: 12px; color: var(--text-muted); margin-top: 5px;">Level 3: Concepts</div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Ask AI Tab -->
-        <div id="tab-ask-ai" class="tab-content">
-            <div class="section">
-                <div class="section-title">💬 Ask the RPA AI</div>
-                <div class="ask-ai-container">
-                    <p style="color: var(--text-secondary);">Ask questions about what the AI has learned. The AI will search its knowledge base to answer.</p>
-                    <div class="ask-input-wrapper">
-                        <textarea class="ask-input" id="askInput" placeholder="Ask a question... (e.g., 'What is a variable in Python?', 'Define compound interest', 'What are the parts of the heart?')"></textarea>
-                        <button class="ask-btn" id="askBtn" onclick="askAI()">Ask</button>
-                    </div>
-                    <div class="ai-response" id="aiResponse">
-                        <div class="ai-response-header">
-                            <span>🤖</span>
-                            <span>AI Response</span>
-                        </div>
-                        <div class="ai-response-text" id="aiResponseText">
-                            Ask a question to see what the AI knows!
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Recent Questions -->
-            <div class="section">
-                <div class="section-title">📜 Recent Questions</div>
-                <div id="recentQuestions">
-                    <div class="loading">No questions yet</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Quiz Tab -->
-        <div id="tab-quiz" class="tab-content">
-            <div class="section">
-                <div class="section-title">📝 Test the AI's Knowledge</div>
-                <div class="quiz-container">
-                    <div class="quiz-header">
-                        <div>
-                            <span style="color: var(--text-secondary)">Question</span>
-                            <span id="quizProgress" style="font-weight: 600; margin-left: 10px;">1 / 10</span>
-                        </div>
-                        <div>
-                            <span style="color: var(--text-secondary)">Score:</span>
-                            <span class="quiz-score" id="quizScore">0</span>
-                        </div>
-                    </div>
-                    <div id="quizContent">
-                        <div class="quiz-question">
-                            <span class="quiz-domain-badge" id="quizDomain">English</span>
-                            <div class="quiz-question-text" id="quizQuestion">
-                                Click "Start Quiz" to test the AI's knowledge!
-                            </div>
-                            <div class="quiz-options" id="quizOptions">
-                                <!-- Options will be populated here -->
-                            </div>
-                            <div class="quiz-feedback" id="quizFeedback" style="display: none;"></div>
-                        </div>
-                        <div class="quiz-actions" style="margin-top: 20px;">
-                            <button class="quiz-btn quiz-btn-secondary" onclick="startQuiz()">🔄 New Quiz</button>
-                            <button class="quiz-btn quiz-btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>Next →</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quiz Stats -->
-            <div class="section">
-                <div class="section-title">📊 Quiz Statistics</div>
-                <div class="health-grid">
-                    <div class="health-item">
-                        <span class="health-label">Quizzes Completed</span>
-                        <span class="health-value" id="quizzesCompleted">0</span>
-                    </div>
-                    <div class="health-item">
-                        <span class="health-label">Average Score</span>
-                        <span class="health-value" id="avgQuizScore">--%</span>
-                    </div>
-                    <div class="health-item">
-                        <span class="health-label">Best Domain</span>
-                        <span class="health-value" id="bestDomain">--</span>
-                    </div>
-                    <div class="health-item">
-                        <span class="health-label">Questions Answered</span>
-                        <span class="health-value" id="totalQuestions">0</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        
         <!-- Footer -->
         <footer class="footer">
-            <p>RPA AI Learning System | Auto-updates hourly | <a href="https://github.com/BBRNGIT/RPA" target="_blank">View on GitHub</a></p>
+            <p>RPA AI Learning System v2.1.0 | 44 Skills Integrated | <a href="https://github.com/BBRNGIT/RPA" target="_blank">View on GitHub</a></p>
         </footer>
     </div>
-
+    
     <script>
-        // ========== DATA & STATE ==========
-        const DATA_PATH = 'data/';
-        let systemStatus = null;
-        let quizState = {
+        // ========== SKILLS DATABASE ==========
+        const SKILLS = {
+            "LLM": { tier: 1, desc: "Core AI interaction patterns - chat, completion, context", keywords: ["chat", "completion", "prompt", "response"] },
+            "coding-agent": { tier: 1, desc: "Programming cognition - planning, execution, verification", keywords: ["code", "debug", "implement", "test"] },
+            "web-search": { tier: 1, desc: "Information retrieval from the web", keywords: ["search", "find", "retrieve", "query"] },
+            "reasoning": { tier: 1, desc: "Logical thinking and deduction patterns", keywords: ["logic", "deduce", "infer", "conclude"] },
+            
+            "docx": { tier: 2, desc: "Word document creation and manipulation", keywords: ["document", "word", "paragraph", "heading"] },
+            "pdf": { tier: 2, desc: "PDF handling - reading, filling, extraction", keywords: ["pdf", "extract", "form", "page"] },
+            "pptx": { tier: 2, desc: "PowerPoint presentation creation", keywords: ["presentation", "slide", "powerpoint"] },
+            "xlsx": { tier: 2, desc: "Excel spreadsheet handling", keywords: ["excel", "spreadsheet", "cell", "formula"] },
+            
+            "image-generation": { tier: 3, desc: "AI image generation from text", keywords: ["image", "generate", "create", "visual"] },
+            "image-understand": { tier: 3, desc: "Image analysis and understanding", keywords: ["analyze", "describe", "identify"] },
+            "VLM": { tier: 3, desc: "Vision Language Model integration", keywords: ["vision", "image", "multimodal"] },
+            "ASR": { tier: 3, desc: "Automatic Speech Recognition", keywords: ["speech", "transcribe", "audio", "voice"] },
+            "TTS": { tier: 3, desc: "Text to Speech synthesis", keywords: ["speech", "synthesize", "voice", "read"] },
+            
+            "fullstack-dev": { tier: 4, desc: "Fullstack web development with Next.js", keywords: ["website", "web app", "database", "API"] },
+            "ui-ux-pro-max": { tier: 4, desc: "UI/UX design patterns", keywords: ["design", "ui", "ux", "interface"] },
+            "skill-creator": { tier: 4, desc: "Creating new skills and capabilities", keywords: ["create", "skill", "build", "extend"] },
+            
+            "blog-writer": { tier: 5, desc: "Blog content creation", keywords: ["blog", "article", "post", "write"] },
+            "seo-content-writer": { tier: 5, desc: "SEO-optimized content writing", keywords: ["seo", "optimize", "keywords"] },
+            "content-strategy": { tier: 5, desc: "Content planning and strategy", keywords: ["strategy", "plan", "content"] },
+            "marketing-mode": { tier: 5, desc: "Marketing and promotional content", keywords: ["marketing", "promote", "campaign"] },
+            
+            "finance": { tier: 6, desc: "Financial analysis and calculations", keywords: ["roi", "npv", "investment", "return"] },
+            "stock-analysis": { tier: 6, desc: "Stock market analysis", keywords: ["stock", "market", "price", "dividend"] },
+            "market-research-reports": { tier: 6, desc: "Market research and reports", keywords: ["research", "market", "analysis"] },
+            
+            "medicine": { tier: 7, desc: "Medical knowledge and terminology", keywords: ["diagnosis", "treatment", "symptom"] },
+            "health": { tier: 7, desc: "Health and wellness knowledge", keywords: ["nutrition", "exercise", "wellness"] },
+            "dream-interpreter": { tier: 7, desc: "Dream interpretation patterns", keywords: ["dream", "interpret", "meaning"] },
+            "mindfulness-meditation": { tier: 7, desc: "Meditation and mindfulness", keywords: ["meditation", "mindful", "calm"] },
+            
+            "web-reader": { tier: 2, desc: "Reading and parsing web content", keywords: ["read", "parse", "web", "scrape"] },
+            "multi-search-engine": { tier: 2, desc: "Multi-engine search capabilities", keywords: ["search", "engine", "multi"] },
+            "video-understand": { tier: 3, desc: "Video content understanding", keywords: ["video", "understand", "analyze"] },
+            "Podcast-Generate": { tier: 5, desc: "Podcast content generation", keywords: ["podcast", "audio", "generate"] },
+            "interview-designer": { tier: 5, desc: "Interview question design", keywords: ["interview", "question", "design"] },
+            "gift-evaluator": { tier: 7, desc: "Gift recommendation patterns", keywords: ["gift", "recommend", "evaluate"] },
+            "storyboard-manager": { tier: 4, desc: "Storyboard and narrative management", keywords: ["story", "narrative", "sequence"] },
+            "visual-design-foundations": { tier: 4, desc: "Visual design principles", keywords: ["design", "visual", "color", "layout"] },
+            "writing-plans": { tier: 5, desc: "Writing plan creation", keywords: ["plan", "outline", "structure"] },
+            "aminer-data-search": { tier: 6, desc: "Academic data search", keywords: ["academic", "research", "paper"] },
+            "ai-news-collector": { tier: 6, desc: "AI news aggregation", keywords: ["news", "ai", "collect"] },
+            "auto-target-tracker": { tier: 6, desc: "Target tracking and monitoring", keywords: ["track", "monitor", "target"] },
+            "get-fortune-analysis": { tier: 7, desc: "Fortune and prediction analysis", keywords: ["fortune", "predict", "analysis"] },
+        };
+        
+        // Test questions for each skill
+        const SKILL_TESTS = {
+            "LLM": [
+                { q: "What is the primary purpose of an LLM?", options: ["Image processing", "Language understanding and generation", "Hardware control", "Database management"], answer: 1 },
+                { q: "What does 'context window' mean in LLMs?", options: ["Screen size", "Amount of text the model can consider", "Processing speed", "Memory capacity"], answer: 1 },
+                { q: "What is a 'prompt' in LLM interaction?", options: ["A notification", "The input text given to the model", "A type of error", "A setting"], answer: 1 },
+            ],
+            "coding-agent": [
+                { q: "What is the first step in the coding workflow?", options: ["Testing", "Planning", "Deployment", "Documentation"], answer: 1 },
+                { q: "What should you do after implementing code?", options: ["Delete it", "Verify and test", "Ignore it", "Move to next task"], answer: 1 },
+                { q: "What makes code maintainable?", options: ["Complexity", "Clear structure and documentation", "Length", "Few comments"], answer: 1 },
+            ],
+            "web-search": [
+                { q: "What is the purpose of a web search skill?", options: ["Playing games", "Retrieving information from the web", "Editing videos", "Creating music"], answer: 1 },
+                { q: "What makes a search query effective?", options: ["Using many words", "Specific and relevant keywords", "Random characters", "Only numbers"], answer: 1 },
+            ],
+            "reasoning": [
+                { q: "What is deductive reasoning?", options: ["Random guessing", "Drawing specific conclusions from general rules", "Ignoring evidence", "Emotional decisions"], answer: 1 },
+                { q: "What is pattern recognition?", options: ["Ignoring similarities", "Identifying regularities in data", "Creating chaos", "Random selection"], answer: 1 },
+            ],
+            "docx": [
+                { q: "What file extension do Word documents use?", options: [".txt", ".docx", ".pdf", ".csv"], answer: 1 },
+                { q: "What can you add to a Word document?", options: ["Only text", "Text, images, tables, and formatting", "Only images", "Only numbers"], answer: 1 },
+            ],
+            "pdf": [
+                { q: "What is PDF short for?", options: ["Personal Document File", "Portable Document Format", "Print Direct File", "Page Document Format"], answer: 1 },
+                { q: "Can PDFs contain interactive forms?", options: ["No, never", "Yes, they can", "Only images", "Only text"], answer: 1 },
+            ],
+            "pptx": [
+                { q: "What is a slide in PowerPoint?", options: ["A type of animation", "A single page in a presentation", "A sound effect", "A video clip"], answer: 1 },
+                { q: "What can you add to a PowerPoint slide?", options: ["Only text", "Text, images, charts, animations", "Only images", "Only audio"], answer: 1 },
+            ],
+            "xlsx": [
+                { q: "What is a cell in Excel?", options: ["A biological unit", "Intersection of row and column", "A type of chart", "A formatting option"], answer: 1 },
+                { q: "What does a formula in Excel start with?", options: ["@", "#", "=", "+"], answer: 2 },
+            ],
+            "finance": [
+                { q: "What is ROI?", options: ["Rate of Income", "Return on Investment", "Revenue of Interest", "Ratio of Inflation"], answer: 1 },
+                { q: "What is compound interest?", options: ["Interest only on principal", "Interest on principal plus accumulated interest", "No interest", "Simple interest"], answer: 1 },
+            ],
+            "medicine": [
+                { q: "What organ pumps blood?", options: ["Lungs", "Brain", "Heart", "Liver"], answer: 2 },
+                { q: "How many bones in adult human body?", options: ["106", "206", "306", "156"], answer: 1 },
+            ],
+            "health": [
+                { q: "How many hours of sleep do adults need?", options: ["4-5 hours", "7-9 hours", "10-12 hours", "3-4 hours"], answer: 1 },
+                { q: "What nutrient builds muscle?", options: ["Carbohydrates", "Fat", "Protein", "Fiber"], answer: 2 },
+            ],
+            "fullstack-dev": [
+                { q: "What is frontend development?", options: ["Server-side code", "User interface and experience", "Database management", "API design"], answer: 1 },
+                { q: "What is a database in web development?", options: ["A website", "Organized data storage", "A programming language", "A design tool"], answer: 1 },
+            ],
+            "image-generation": [
+                { q: "What does image generation AI create?", options: ["Sound files", "Visual images from text descriptions", "Documents", "Spreadsheets"], answer: 1 },
+                { q: "What is a 'prompt' in image generation?", options: ["A file format", "Text description of desired image", "A color scheme", "A resolution setting"], answer: 1 },
+            ],
+        };
+        
+        // Default test questions for skills without specific tests
+        const DEFAULT_TEST = [
+            { q: "This skill has been learned by the AI.", options: ["True", "False", "Maybe", "Unknown"], answer: 0 },
+            { q: "The AI can apply this skill in relevant situations.", options: ["Yes", "No", "Sometimes", "Never"], answer: 0 },
+            { q: "This skill is part of the AI's 44 integrated capabilities.", options: ["True", "False", "Pending", "Cancelled"], answer: 0 },
+        ];
+        
+        // State
+        let currentTest = {
+            skill: null,
+            questions: [],
             currentQuestion: 0,
             score: 0,
-            questions: [],
-            answered: false,
-            completed: 0,
-            totalScore: 0,
-            domainScores: {}
+            answered: false
         };
-        let recentQuestions = [];
-
-        // ========== QUIZ QUESTIONS DATABASE ==========
-        const quizQuestions = {
-            english: [
-                { q: "What is a noun?", options: ["A person, place, or thing", "An action word", "A describing word", "A connecting word"], answer: 0 },
-                { q: "What is a verb?", options: ["A person, place, or thing", "An action word", "A describing word", "A naming word"], answer: 1 },
-                { q: "What is an adjective?", options: ["A word that describes a noun", "An action word", "A connecting word", "A pronoun"], answer: 0 },
-                { q: "What is a pronoun?", options: ["A word replacing a noun", "A describing word", "An action word", "A type of verb"], answer: 0 },
-                { q: "What is the plural of 'child'?", options: ["Childs", "Children", "Childes", "Childrens"], answer: 1 },
-                { q: "What is a synonym for 'happy'?", options: ["Sad", "Joyful", "Angry", "Tired"], answer: 1 },
-                { q: "What type of word is 'quickly'?", options: ["Noun", "Verb", "Adverb", "Adjective"], answer: 2 },
-                { q: "What is the past tense of 'run'?", options: ["Runned", "Running", "Ran", "Runs"], answer: 2 },
-            ],
-            python: [
-                { q: "What is a variable in Python?", options: ["A container for storing data", "A function name", "A loop structure", "A comment"], answer: 0 },
-                { q: "Which keyword is used to define a function?", options: ["function", "def", "func", "define"], answer: 1 },
-                { q: "What does 'print()' do?", options: ["Calculates values", "Outputs text to console", "Creates variables", "Defines loops"], answer: 1 },
-                { q: "How do you start a comment in Python?", options: ["//", "/*", "#", "--"], answer: 2 },
-                { q: "What is a list in Python?", options: ["A type of loop", "A collection of items", "A function", "A variable type"], answer: 1 },
-                { q: "Which method adds an item to a list?", options: ["add()", "append()", "insert()", "push()"], answer: 1 },
-                { q: "What is the result of 5 // 2?", options: ["2.5", "2", "3", "Error"], answer: 1 },
-                { q: "What does 'len()' return?", options: ["Length of object", "Type of object", "Value of object", "Name of object"], answer: 0 },
-            ],
-            finance: [
-                { q: "What is compound interest?", options: ["Interest on principal only", "Interest on principal and accumulated interest", "Fixed interest rate", "Simple interest"], answer: 1 },
-                { q: "What is an asset?", options: ["Something you owe", "Something you own", "A type of loan", "A financial loss"], answer: 1 },
-                { q: "What is ROI?", options: ["Return on Investment", "Rate of Interest", "Revenue of Income", "Ratio of Inflation"], answer: 0 },
-                { q: "What is a budget?", options: ["A financial plan", "A type of loan", "An investment", "A bank account"], answer: 0 },
-                { q: "What is inflation?", options: ["Decrease in prices", "Increase in prices over time", "Stable prices", "Currency value increase"], answer: 1 },
-                { q: "What is a dividend?", options: ["A loan payment", "A share of company profits", "A tax", "A fee"], answer: 1 },
-                { q: "What does 'liquidity' mean?", options: ["How quickly an asset can be converted to cash", "How much debt a company has", "The value of stocks", "Interest rates"], answer: 0 },
-                { q: "What is equity?", options: ["Ownership value in an asset", "A type of loan", "Monthly payment", "Interest rate"], answer: 0 },
-            ],
-            medicine: [
-                { q: "What is the heart's main function?", options: ["Digest food", "Pump blood", "Filter waste", "Produce hormones"], answer: 1 },
-                { q: "What is the largest organ in the body?", options: ["Heart", "Liver", "Skin", "Brain"], answer: 2 },
-                { q: "What do red blood cells carry?", options: ["Hormones", "Oxygen", "Waste", "Nutrients"], answer: 1 },
-                { q: "What is the brain's main function?", options: ["Pump blood", "Control body functions", "Digest food", "Filter blood"], answer: 1 },
-                { q: "How many bones are in the adult human body?", options: ["106", "206", "306", "156"], answer: 1 },
-                { q: "What is the purpose of white blood cells?", options: ["Carry oxygen", "Fight infection", "Clot blood", "Digest food"], answer: 1 },
-                { q: "What organ filters blood?", options: ["Heart", "Lungs", "Kidney", "Stomach"], answer: 2 },
-                { q: "What is the normal body temperature in Celsius?", options: ["35°C", "36.5°C", "38°C", "40°C"], answer: 1 },
-            ],
-            health: [
-                { q: "How many hours of sleep do adults need?", options: ["4-5 hours", "7-9 hours", "10-12 hours", "5-6 hours"], answer: 1 },
-                { q: "What is the recommended daily water intake?", options: ["1 liter", "2-3 liters", "5 liters", "500ml"], answer: 1 },
-                { q: "What type of exercise strengthens the heart?", options: ["Weight lifting", "Cardio", "Stretching", "Yoga"], answer: 1 },
-                { q: "What nutrient builds muscle?", options: ["Carbohydrates", "Protein", "Fat", "Fiber"], answer: 1 },
-                { q: "What is a healthy BMI range?", options: ["10-15", "18.5-24.9", "25-30", "30-35"], answer: 1 },
-                { q: "Which vitamin does sunlight provide?", options: ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"], answer: 3 },
-                { q: "What is the main benefit of fiber?", options: ["Builds muscle", "Aids digestion", "Strengthens bones", "Improves vision"], answer: 1 },
-                { q: "How often should you exercise weekly?", options: ["Once a week", "2-3 times", "4-5 times", "Never"], answer: 2 },
-            ]
-        };
-
-        // ========== AI KNOWLEDGE BASE ==========
-        const aiKnowledge = {
-            python: {
-                "variable": "A variable in Python is a container that stores data values. You create variables by assigning a value to a name, like `x = 5`. Variables can hold different types of data including numbers, strings, lists, and objects.",
-                "function": "A function in Python is a reusable block of code that performs a specific task. You define functions using the `def` keyword. Functions help organize code and avoid repetition.",
-                "list": "A list in Python is an ordered, mutable collection of items. Lists can contain items of different types and are created using square brackets `[]`. You can add, remove, or modify items in a list.",
-                "loop": "A loop in Python allows you to execute code repeatedly. Python has `for` loops for iterating over sequences and `while` loops that run as long as a condition is true.",
-                "dictionary": "A dictionary in Python is an unordered collection of key-value pairs. It's created using curly braces `{}` with keys and values separated by colons. Dictionaries are useful for storing related data.",
-                "class": "A class in Python is a blueprint for creating objects. It defines attributes (data) and methods (functions) that the objects created from the class will have. Classes support object-oriented programming.",
-            },
-            english: {
-                "noun": "A noun is a word that represents a person, place, thing, or idea. Examples include 'cat', 'London', 'happiness', and 'teacher'. Nouns can be common (general) or proper (specific names).",
-                "verb": "A verb is a word that expresses an action, occurrence, or state of being. Examples include 'run', 'is', 'become', and 'think'. Verbs are essential for forming sentences.",
-                "adjective": "An adjective is a word that describes or modifies a noun. Examples include 'big', 'red', 'beautiful', and 'intelligent'. Adjectives help provide more information about nouns.",
-                "pronoun": "A pronoun is a word that replaces a noun to avoid repetition. Examples include 'he', 'she', 'it', 'they', and 'we'. Pronouns make sentences less repetitive.",
-                "sentence": "A sentence is a group of words that expresses a complete thought. It must have at least a subject and a verb. Sentences can be statements, questions, commands, or exclamations.",
-            },
-            finance: {
-                "interest": "Interest is the cost of borrowing money or the return on saved money. Simple interest is calculated only on the principal, while compound interest is calculated on principal plus accumulated interest.",
-                "asset": "An asset is something of value that you own. Examples include cash, property, stocks, and equipment. Assets are listed on a balance sheet and can be liquid (easily converted to cash) or fixed.",
-                "budget": "A budget is a financial plan that estimates income and expenses over a period. Budgets help track spending, save money, and achieve financial goals.",
-                "investment": "An investment is money put into something with the expectation of earning a return. Common investments include stocks, bonds, real estate, and mutual funds.",
-                "debt": "Debt is money owed to another party. It can be good (like a mortgage that builds equity) or bad (like high-interest credit card debt). Managing debt is important for financial health.",
-            },
-            medicine: {
-                "heart": "The heart is a muscular organ that pumps blood throughout the body. It has four chambers: two atria and two ventricles. The heart beats about 100,000 times per day, circulating blood through arteries and veins.",
-                "brain": "The brain is the body's control center, responsible for thought, memory, emotion, and coordination. It contains about 86 billion neurons and requires about 20% of the body's oxygen supply.",
-                "blood": "Blood is a fluid that circulates through the body, delivering oxygen and nutrients to tissues and removing waste. It contains red blood cells, white blood cells, platelets, and plasma.",
-                "kidney": "The kidneys are organs that filter blood, remove waste, and produce urine. They also regulate blood pressure and produce hormones. Humans typically have two kidneys.",
-            },
-            health: {
-                "sleep": "Sleep is essential for physical and mental health. Adults need 7-9 hours of quality sleep per night. Sleep helps the body repair itself, consolidate memories, and regulate hormones.",
-                "exercise": "Exercise is physical activity that improves health and fitness. Adults should aim for 150 minutes of moderate exercise or 75 minutes of vigorous exercise weekly. Benefits include improved heart health, weight management, and mental well-being.",
-                "nutrition": "Nutrition is the process of providing the body with necessary nutrients. A balanced diet includes proteins, carbohydrates, healthy fats, vitamins, and minerals. Proper nutrition supports growth, energy, and disease prevention.",
-                "water": "Water is essential for life. Adults should drink about 2-3 liters daily. Water regulates body temperature, lubricates joints, protects organs, and helps with digestion.",
-            }
-        };
-
-        // ========== UTILITY FUNCTIONS ==========
-        async function fetchJSON(filename) {
-            try {
-                const response = await fetch(DATA_PATH + filename + '?t=' + Date.now());
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                return await response.json();
-            } catch (error) {
-                console.error(`Error loading ${filename}:`, error);
-                return null;
-            }
-        }
-
-        function formatNumber(num) {
-            return num?.toLocaleString() ?? '--';
-        }
-
-        function formatPercent(num) {
-            if (num === null || num === undefined) return '--';
-            return (num * 100).toFixed(2) + '%';
-        }
-
-        // ========== TAB SWITCHING ==========
+        
+        // ========== FUNCTIONS ==========
         function switchTab(tabId) {
             document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-            
-            document.querySelector(`.tab[onclick="switchTab('${tabId}')"]`).classList.add('active');
-            document.getElementById(`tab-${tabId}`).classList.add('active');
-        }
-
-        // ========== DASHBOARD FUNCTIONS ==========
-        function updateStatus(isActive) {
-            const dot = document.getElementById('statusDot');
-            const text = document.getElementById('statusText');
-            if (isActive) {
-                dot.classList.remove('inactive');
-                text.textContent = 'ACTIVE';
-            } else {
-                dot.classList.add('inactive');
-                text.textContent = 'INACTIVE';
-            }
-        }
-
-        function renderDomainBars(domains, total) {
-            const container = document.getElementById('domainBars');
-            if (!domains) {
-                container.innerHTML = '<div class="loading">No domain data available</div>';
-                return;
-            }
-
-            const domainOrder = ['english', 'python', 'finance', 'medicine', 'health'];
-            const domainColors = {
-                english: 'var(--accent-blue)',
-                python: 'var(--accent-yellow)',
-                finance: 'var(--accent-green)',
-                medicine: 'var(--accent-pink)',
-                health: 'var(--accent-cyan)'
-            };
-
-            let html = '';
-            let maxCount = Math.max(...Object.values(domains).map(d => d.count || d), 1);
-
-            for (const domain of domainOrder) {
-                const count = domains[domain]?.count || domains[domain] || 0;
-                const percent = total > 0 ? (count / total * 100).toFixed(1) : 0;
-                const barWidth = (count / maxCount * 100);
-
-                html += `
-                    <div class="domain-bar">
-                        <div class="domain-bar-header">
-                            <span class="domain-bar-name">${domain.charAt(0).toUpperCase() + domain.slice(1)}</span>
-                            <span class="domain-bar-count">${formatNumber(count)} (${percent}%)</span>
-                        </div>
-                        <div class="domain-bar-track">
-                            <div class="domain-bar-fill ${domain}" style="width: ${barWidth}%; background: ${domainColors[domain]}"></div>
-                        </div>
-                    </div>
-                `;
-            }
-
-            container.innerHTML = html;
-        }
-
-        function renderSessions(sessions) {
-            const container = document.getElementById('sessionsList');
-            if (!sessions || sessions.length === 0) {
-                container.innerHTML = '<div class="loading">No session data available</div>';
-                return;
-            }
-
-            const icons = {
-                'lesson': '📚',
-                'post_lesson_test': '✍️',
-                'exam': '📝'
-            };
-
-            let html = '';
-            for (const session of sessions.slice(0, 15)) {
-                const icon = icons[session.phase] || '📖';
-                const resultClass = session.success ? 'success' : 'fail';
-                let resultText = session.message || '';
-                if (session.test_score !== null && session.test_score !== undefined) {
-                    resultText = formatPercent(session.test_score);
-                } else if (session.exam_score !== null && session.exam_score !== undefined) {
-                    resultText = formatPercent(session.exam_score);
-                } else if (session.patterns_learned > 0) {
-                    resultText = `+${session.patterns_learned} patterns`;
-                }
-
-                const time = session.timestamp ? new Date(session.timestamp).toLocaleTimeString() : '--';
-
-                html += `
-                    <div class="session-item">
-                        <div class="session-left">
-                            <span class="session-icon">${icon}</span>
-                            <div>
-                                <div class="session-type">${(session.phase || 'session').replace(/_/g, ' ').toUpperCase()}</div>
-                                <div class="session-domain">${session.domain || '--'}</div>
-                            </div>
-                        </div>
-                        <div class="session-right">
-                            <div class="session-result ${resultClass}">${resultText}</div>
-                            <div class="session-time">${time}</div>
-                        </div>
-                    </div>
-                `;
-            }
-
-            container.innerHTML = html;
-        }
-
-        function renderExamChart(exams) {
-            const container = document.getElementById('examChart');
-            if (!exams || exams.length === 0) {
-                container.innerHTML = '<div class="loading">No exam data available</div>';
-                return;
-            }
-
-            let html = '';
-            const recentExams = exams.slice(-10);
-
-            for (const exam of recentExams) {
-                const score = exam.exam_score || exam.score || 0;
-                const height = Math.max(score * 100, 5);
-                const label = exam.timestamp ? new Date(exam.timestamp).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '--';
-
-                html += `
-                    <div class="exam-bar">
-                        <div class="exam-bar-score">${formatPercent(score)}</div>
-                        <div class="exam-bar-fill" style="height: ${height}px"></div>
-                        <div class="exam-bar-label">${label}</div>
-                    </div>
-                `;
-            }
-
-            container.innerHTML = html;
-        }
-
-        function getScheduleInfo() {
-            const now = new Date();
-            const hour = now.getUTCHours();
-            const examHours = [0, 6, 12, 18];
-            const isExamHour = examHours.includes(hour);
-            const domains = ['english', 'python', 'finance', 'medicine', 'health'];
-            const cycleStart = Math.floor(hour / 6) * 6;
-            const hourInCycle = hour - cycleStart;
-
-            let activeDomain = 'all';
-            let activity = 'Exam';
-
-            if (!isExamHour || hourInCycle < 5) {
-                activeDomain = hourInCycle < 5 ? domains[hourInCycle] : domains[4];
-                activity = hourInCycle < 5 ? 'Lesson + Test' : 'Exam';
-            }
-
-            let nextExamHour = examHours.find(h => h > hour);
-            if (nextExamHour === undefined) nextExamHour = examHours[0];
-
-            return {
-                currentHour: hour,
-                activeDomain,
-                activity,
-                nextExam: `${String(nextExamHour).padStart(2, '0')}:00 UTC`
-            };
-        }
-
-        function updateSchedule() {
-            const info = getScheduleInfo();
-            document.getElementById('currentHour').textContent = `${String(info.currentHour).padStart(2, '0')}:00 UTC`;
-            document.getElementById('activeDomain').textContent = info.activeDomain.charAt(0).toUpperCase() + info.activeDomain.slice(1);
-            document.getElementById('activityType').textContent = info.activity;
-            document.getElementById('nextExam').textContent = info.nextExam;
-        }
-
-        async function loadData() {
-            console.log('Loading dashboard data...');
-            const status = await fetchJSON('status.json');
-
-            if (status) {
-                systemStatus = status;
-                updateStatus(status.is_active ?? true);
-                document.getElementById('lastUpdate').textContent = status.last_update 
-                    ? `Updated: ${new Date(status.last_update).toLocaleString()}`
-                    : '--';
-
-                document.getElementById('totalPatterns').textContent = formatNumber(status.total_patterns);
-                document.getElementById('progressPercent').textContent = formatPercent(status.progress_to_1m);
-                document.getElementById('testsPassing').textContent = formatNumber(status.tests_passing);
-                document.getElementById('sessionsToday').textContent = status.sessions_today || '--';
-
-                const progressWidth = Math.min((status.total_patterns / 1000000) * 100, 100);
-                document.getElementById('goalFill').style.width = `${progressWidth}%`;
-                document.getElementById('currentProgress').textContent = 
-                    `${formatNumber(status.total_patterns)} patterns (${formatPercent(status.progress_to_1m)})`;
-
-                renderDomainBars(status.domains, status.total_patterns);
-                renderSessions(status.recent_sessions);
-                renderExamChart(status.exam_history);
-
-                document.getElementById('pipelineStatus').textContent = status.pipeline_ok ? '✅ OK' : '⚠️ Check';
-                document.getElementById('memoryStatus').textContent = status.memory_ok ? '✅ OK' : '⚠️ Check';
-                document.getElementById('avgTestScore').textContent = formatPercent(status.avg_test_score);
-                document.getElementById('avgExamScore').textContent = formatPercent(status.avg_exam_score);
-            }
-
-            updateSchedule();
-        }
-
-        // ========== ASK AI FUNCTIONS ==========
-        function askAI() {
-            const input = document.getElementById('askInput');
-            const question = input.value.trim();
-            
-            if (!question) return;
-            
-            const btn = document.getElementById('askBtn');
-            const responseDiv = document.getElementById('aiResponseText');
-            
-            btn.disabled = true;
-            responseDiv.innerHTML = `
-                <div class="ai-thinking">
-                    <div class="thinking-dots"><span></span><span></span><span></span></div>
-                    <span>Searching knowledge base...</span>
-                </div>
-            `;
-
-            setTimeout(() => {
-                const answer = findAnswer(question);
-                responseDiv.innerHTML = answer;
-                btn.disabled = false;
-                
-                // Store question
-                recentQuestions.unshift({
-                    question: question,
-                    timestamp: new Date().toISOString()
-                });
-                updateRecentQuestions();
-            }, 1000 + Math.random() * 1000);
-        }
-
-        // Learned knowledge and reasoning patterns (loaded from AI's LTM)
-        let learnedKnowledge = null;
-        
-        async function loadLearnedKnowledge() {
-            try {
-                const response = await fetch(DATA_PATH + 'learned_knowledge.json?t=' + Date.now());
-                if (response.ok) {
-                    learnedKnowledge = await response.json();
-                    console.log('Loaded learned knowledge:', learnedKnowledge);
-                }
-            } catch (e) {
-                console.log('Using built-in knowledge base');
-            }
-        }
-
-        function findAnswer(question) {
-            const q = question.toLowerCase();
-            
-            // Step 1: CONTEXTUALIZE - Determine intent using learned patterns
-            let intent = 'definition';
-            let domain = null;
-            let constraints = {};
-            
-            // Intent recognition from learned patterns
-            if (q.includes('list') || q.includes('name') || q.includes('give') && q.includes('me')) {
-                intent = 'enumeration';
-            } else if (q.includes('what is') || q.includes('define') || q.includes('explain')) {
-                intent = 'definition';
-            } else if (q.includes('how do') || q.includes('how to')) {
-                intent = 'procedural';
-            }
-            
-            // Domain inference from question context
-            if (q.includes('english') || q.includes('word') || q.includes('noun') || q.includes('verb')) {
-                domain = 'english';
-            } else if (q.includes('python') || q.includes('code') || q.includes('variable') || q.includes('function')) {
-                domain = 'python';
-            } else if (q.includes('finance') || q.includes('interest') || q.includes('invest')) {
-                domain = 'finance';
-            } else if (q.includes('medicine') || q.includes('body') || q.includes('heart') || q.includes('organ')) {
-                domain = 'medicine';
-            } else if (q.includes('health') || q.includes('exercise') || q.includes('sleep')) {
-                domain = 'health';
-            }
-            
-            // Constraint extraction
-            const countMatch = q.match(/\b(\d+)\b/);
-            if (countMatch) {
-                constraints.count = parseInt(countMatch[1]);
-            }
-            
-            // Pattern matching for substring searches (e.g., "words with 'as'")
-            const containsMatch = q.match(/with\s+['"]?(\w+)['"]?|containing\s+['"]?(\w+)['"]?/);
-            if (containsMatch) {
-                constraints.contains = containsMatch[1] || containsMatch[2];
-            }
-            
-            // Step 2: PROCESS INTENT
-            if (intent === 'enumeration') {
-                // Handle "list X items" type questions
-                if (domain === 'english' && constraints.contains) {
-                    // Search for words containing a substring
-                    const words = findWordsContaining(constraints.contains, constraints.count || 10);
-                    if (words.length > 0) {
-                        return `<strong>[ENGLISH VOCABULARY]</strong><br><br>` +
-                               `Found ${words.length} words containing '${constraints.contains}':<br><br>` +
-                               words.map(w => `• <strong>${w.word}</strong> - ${w.definition}`).join('<br>');
-                    }
-                }
-                
-                if (domain === 'python' && q.includes('keyword')) {
-                    const keywords = ['def', 'class', 'if', 'else', 'for', 'while', 'return', 'import', 'from', 'as'];
-                    const count = constraints.count || 5;
-                    return `<strong>[PYTHON KEYWORDS]</strong><br><br>` +
-                           `Python keywords (showing ${count}):\n\n` +
-                           keywords.slice(0, count).map(k => `• <strong>${k}</strong>`).join('<br>');
-                }
-            }
-            
-            if (intent === 'definition') {
-                // Search learned knowledge for definitions
-                if (learnedKnowledge && learnedKnowledge.knowledge) {
-                    for (const [kn, kv] of Object.entries(learnedKnowledge.knowledge)) {
-                        for (const [term, def] of Object.entries(kv)) {
-                            if (q.includes(term)) {
-                                return `<strong>[${kn.toUpperCase()}]</strong><br><br>${def}`;
-                            }
-                        }
-                    }
-                }
-                
-                // Fallback to built-in knowledge
-                for (const [d, terms] of Object.entries(aiKnowledge)) {
-                    for (const [term, definition] of Object.entries(terms)) {
-                        if (q.includes(term)) {
-                            return `<strong>[${d.toUpperCase()}]</strong><br><br>${definition}`;
-                        }
-                    }
-                }
-            }
-            
-            // Step 3: FALLBACK with reasoning explanation
-            return `<strong>[AI REASONING]</strong><br><br>` +
-                   `Intent detected: ${intent}<br>` +
-                   `Domain inferred: ${domain || 'general'}<br>` +
-                   `Constraints: ${JSON.stringify(constraints)}<br><br>` +
-                   `The AI searched its learned knowledge but needs more training data for this query. ` +
-                   `The AI is continuously learning through curriculum.`;
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById('tab-' + tabId).classList.add('active');
         }
         
-        function findWordsContaining(substring, maxCount) {
-            const results = [];
+        function renderSkills() {
+            const grid = document.getElementById('skillsGrid');
+            grid.innerHTML = '';
             
-            // Search learned vocabulary
-            if (learnedKnowledge && learnedKnowledge.vocabulary) {
-                for (const [key, words] of Object.entries(learnedKnowledge.vocabulary)) {
-                    for (const w of words) {
-                        if (w.word.includes(substring)) {
-                            results.push(w);
-                            if (results.length >= maxCount) return results;
-                        }
-                    }
-                }
-            }
-            
-            // Built-in fallback vocabulary
-            const fallbackWords = [
-                {word: 'ask', definition: 'to put a question to someone'},
-                {word: 'has', definition: 'possesses or owns'},
-                {word: 'was', definition: 'past tense of is'},
-                {word: 'fast', definition: 'moving quickly'},
-                {word: 'last', definition: 'coming after all others'},
-                {word: 'past', definition: 'time before the present'},
-                {word: 'class', definition: 'a group of students'},
-                {word: 'grass', definition: 'green plant covering ground'},
-                {word: 'glass', definition: 'hard transparent material'},
-                {word: 'pass', definition: 'to move past or through'},
-                {word: 'mask', definition: 'covering for the face'},
-                {word: 'task', definition: 'a piece of work to be done'},
-                {word: 'base', definition: 'the lowest part or foundation'},
-                {word: 'case', definition: 'an instance or container'},
-                {word: 'east', definition: 'direction toward sunrise'},
-                {word: 'master', definition: 'someone with control or skill'},
+            Object.entries(SKILLS).forEach(([name, data]) => {
+                const card = document.createElement('div');
+                card.className = 'skill-card mastered';
+                card.onclick = () => startTest(name);
+                card.innerHTML = `
+                    <div class="skill-header">
+                        <span class="skill-name">${name}</span>
+                        <span class="skill-tier tier-${data.tier}">Tier ${data.tier}</span>
+                    </div>
+                    <div class="skill-desc">${data.desc}</div>
+                    <div class="skill-keywords">
+                        ${data.keywords.slice(0, 3).map(k => `<span class="keyword">${k}</span>`).join('')}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+        
+        function renderDomains() {
+            const domains = [
+                { name: 'english', count: 5272, pct: 61.7 },
+                { name: 'skills', count: 2134, pct: 25.0 },
+                { name: 'python', count: 530, pct: 6.2 },
+                { name: 'finance', count: 200, pct: 2.3 },
+                { name: 'medicine', count: 200, pct: 2.3 },
+                { name: 'health', count: 200, pct: 2.3 },
+                { name: 'reasoning', count: 10, pct: 0.1 },
             ];
             
-            for (const w of fallbackWords) {
-                if (w.word.includes(substring)) {
-                    results.push(w);
-                    if (results.length >= maxCount) return results;
-                }
-            }
-            
-            return results;
-        }
-
-        function updateRecentQuestions() {
-            const container = document.getElementById('recentQuestions');
-            if (recentQuestions.length === 0) {
-                container.innerHTML = '<div class="loading">No questions yet</div>';
-                return;
-            }
-
-            let html = '';
-            for (const q of recentQuestions.slice(0, 5)) {
-                const time = new Date(q.timestamp).toLocaleTimeString();
-                html += `
-                    <div class="session-item">
-                        <div class="session-left">
-                            <span class="session-icon">❓</span>
-                            <div class="session-type">${q.question.substring(0, 50)}${q.question.length > 50 ? '...' : ''}</div>
-                        </div>
-                        <div class="session-time">${time}</div>
+            const container = document.getElementById('domainBars');
+            container.innerHTML = domains.map(d => `
+                <div class="domain-bar">
+                    <div class="domain-bar-header">
+                        <span class="domain-bar-name">${d.name}</span>
+                        <span class="domain-bar-count">${d.count.toLocaleString()} patterns (${d.pct}%)</span>
                     </div>
-                `;
-            }
-            container.innerHTML = html;
+                    <div class="domain-bar-track">
+                        <div class="domain-bar-fill ${d.name}" style="width: ${d.pct}%"></div>
+                    </div>
+                </div>
+            `).join('');
         }
-
-        // ========== QUIZ FUNCTIONS ==========
-        function startQuiz() {
-            quizState.currentQuestion = 0;
-            quizState.score = 0;
-            quizState.questions = generateQuizQuestions();
-            quizState.answered = false;
-            quizState.completed++;
+        
+        function startTest(skillName) {
+            currentTest.skill = skillName;
+            currentTest.questions = SKILL_TESTS[skillName] || DEFAULT_TEST;
+            currentTest.currentQuestion = 0;
+            currentTest.score = 0;
+            currentTest.answered = false;
             
-            showQuestion();
+            document.getElementById('testPanel').style.display = 'block';
+            document.getElementById('testSkillName').textContent = skillName;
+            document.getElementById('testSkillDesc').textContent = SKILLS[skillName]?.desc || 'Skill test';
+            
+            renderQuestion();
         }
-
-        function generateQuizQuestions() {
-            const questions = [];
-            const domains = ['english', 'python', 'finance', 'medicine', 'health'];
-            
-            // Get 2 questions from each domain
-            for (const domain of domains) {
-                const domainQs = [...quizQuestions[domain]];
-                for (let i = 0; i < 2 && domainQs.length > 0; i++) {
-                    const idx = Math.floor(Math.random() * domainQs.length);
-                    const q = domainQs.splice(idx, 1)[0];
-                    questions.push({ ...q, domain });
-                }
-            }
-            
-            // Shuffle
-            return questions.sort(() => Math.random() - 0.5);
-        }
-
-        function showQuestion() {
-            if (quizState.currentQuestion >= quizState.questions.length) {
-                showQuizComplete();
-                return;
-            }
-
-            const q = quizState.questions[quizState.currentQuestion];
-            
-            document.getElementById('quizProgress').textContent = `${quizState.currentQuestion + 1} / ${quizState.questions.length}`;
-            document.getElementById('quizScore').textContent = quizState.score;
-            document.getElementById('quizDomain').textContent = q.domain.toUpperCase();
-            document.getElementById('quizQuestion').textContent = q.q;
-            document.getElementById('quizFeedback').style.display = 'none';
+        
+        function renderQuestion() {
+            const q = currentTest.questions[currentTest.currentQuestion];
+            document.getElementById('testQuestion').textContent = q.q;
+            document.getElementById('testScore').textContent = currentTest.score;
+            document.getElementById('testProgress').textContent = `${currentTest.currentQuestion + 1}/${currentTest.questions.length}`;
             document.getElementById('nextBtn').disabled = true;
-
-            let optionsHtml = '';
-            q.options.forEach((opt, idx) => {
-                optionsHtml += `<div class="quiz-option" onclick="selectAnswer(${idx})" data-idx="${idx}">${String.fromCharCode(65 + idx)}. ${opt}</div>`;
-            });
-            document.getElementById('quizOptions').innerHTML = optionsHtml;
+            currentTest.answered = false;
             
-            quizState.answered = false;
+            const options = document.getElementById('testOptions');
+            options.innerHTML = q.options.map((opt, i) => `
+                <div class="test-option" onclick="selectAnswer(${i})">${opt}</div>
+            `).join('');
         }
-
-        function selectAnswer(idx) {
-            if (quizState.answered) return;
-            quizState.answered = true;
-
-            const q = quizState.questions[quizState.currentQuestion];
-            const options = document.querySelectorAll('.quiz-option');
-            const feedback = document.getElementById('quizFeedback');
-
+        
+        function selectAnswer(index) {
+            if (currentTest.answered) return;
+            currentTest.answered = true;
+            
+            const q = currentTest.questions[currentTest.currentQuestion];
+            const options = document.querySelectorAll('.test-option');
+            
             options.forEach((opt, i) => {
                 opt.classList.remove('selected');
-                if (i === q.answer) {
-                    opt.classList.add('correct');
-                } else if (i === idx && i !== q.answer) {
-                    opt.classList.add('incorrect');
-                }
+                if (i === q.answer) opt.classList.add('correct');
+                if (i === index && i !== q.answer) opt.classList.add('incorrect');
             });
-
-            if (idx === q.answer) {
-                quizState.score++;
-                feedback.className = 'quiz-feedback correct';
-                feedback.textContent = '✅ Correct! Well done!';
-                feedback.style.display = 'block';
-            } else {
-                feedback.className = 'quiz-feedback incorrect';
-                feedback.textContent = `❌ Incorrect. The correct answer is: ${q.options[q.answer]}`;
-                feedback.style.display = 'block';
+            
+            if (index === q.answer) {
+                currentTest.score++;
+                document.getElementById('testScore').textContent = currentTest.score;
             }
-
-            document.getElementById('quizScore').textContent = quizState.score;
+            
             document.getElementById('nextBtn').disabled = false;
         }
-
+        
         function nextQuestion() {
-            quizState.currentQuestion++;
-            showQuestion();
-        }
-
-        function showQuizComplete() {
-            const percent = Math.round((quizState.score / quizState.questions.length) * 100);
-            quizState.totalScore += percent;
+            currentTest.currentQuestion++;
             
-            let message = '';
-            if (percent >= 90) message = '🏆 Excellent! The AI has strong knowledge!';
-            else if (percent >= 70) message = '👍 Good performance! Keep learning!';
-            else if (percent >= 50) message = '📚 Average. The AI needs more study.';
-            else message = '💪 Needs improvement. More training required.';
-
-            document.getElementById('quizContent').innerHTML = `
-                <div class="quiz-complete">
-                    <div class="quiz-complete-score">${percent}%</div>
-                    <div class="quiz-complete-msg">${quizState.score}/${quizState.questions.length} correct</div>
-                    <p style="color: var(--text-secondary); margin-bottom: 20px;">${message}</p>
-                    <button class="quiz-btn quiz-btn-primary" onclick="startQuiz()">Try Again</button>
+            if (currentTest.currentQuestion >= currentTest.questions.length) {
+                showResults();
+            } else {
+                renderQuestion();
+            }
+        }
+        
+        function showResults() {
+            const pct = (currentTest.score / currentTest.questions.length) * 100;
+            const grade = pct >= 80 ? 'excellent' : pct >= 60 ? 'good' : 'needs-work';
+            const msg = pct >= 80 ? 'Excellent! The AI has mastered this skill!' : 
+                        pct >= 60 ? 'Good progress! The AI is learning this skill.' :
+                        'More practice needed. Keep learning!';
+            
+            document.getElementById('testContent').innerHTML = `
+                <div class="results-panel">
+                    <div class="results-score ${grade}">${Math.round(pct)}%</div>
+                    <div class="results-message">${msg}</div>
+                    <div style="color: var(--text-secondary);">${currentTest.score} out of ${currentTest.questions.length} correct</div>
+                    <div class="test-actions" style="justify-content: center; margin-top: 20px;">
+                        <button class="btn btn-secondary" onclick="closeTest()">Close</button>
+                        <button class="btn btn-success" onclick="startTest('${currentTest.skill}')">Test Again</button>
+                    </div>
                 </div>
             `;
-
-            // Update stats
-            document.getElementById('quizzesCompleted').textContent = quizState.completed;
-            document.getElementById('avgQuizScore').textContent = Math.round(quizState.totalScore / quizState.completed) + '%';
-            document.getElementById('totalQuestions').textContent = quizState.completed * 10;
         }
-
-        // ========== INITIALIZATION ==========
-        document.addEventListener('DOMContentLoaded', () => {
-            loadData();
-            loadLearnedKnowledge();  // Load AI's learned knowledge
-            setInterval(loadData, 5 * 60 * 1000);
-            
-            // Enter key for Ask AI
-            document.getElementById('askInput').addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' && !e.shiftKey) {
-                    e.preventDefault();
-                    askAI();
-                }
-            });
-        });
+        
+        function closeTest() {
+            document.getElementById('testPanel').style.display = 'none';
+            currentTest = { skill: null, questions: [], currentQuestion: 0, score: 0, answered: false };
+        }
+        
+        // Initialize
+        renderSkills();
+        renderDomains();
     </script>
 </body>
 </html>
