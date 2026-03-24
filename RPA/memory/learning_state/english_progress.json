@@ -1,8 +1,8 @@
 {
   "vocabulary": {
     "vocabulary": {
-      "vocab_99f92a90": {
-        "word_id": "vocab_99f92a90",
+      "vocab_a6538de9": {
+        "word_id": "vocab_a6538de9",
         "word": "the",
         "definition": "Used to refer to a specific person or thing",
         "part_of_speech": "determiner",
@@ -25,8 +25,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_315e69fe": {
-        "word_id": "vocab_315e69fe",
+      "vocab_e378e476": {
+        "word_id": "vocab_e378e476",
         "word": "be",
         "definition": "Exist; occur; used as an auxiliary verb",
         "part_of_speech": "verb",
@@ -49,8 +49,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_1852bd01": {
-        "word_id": "vocab_1852bd01",
+      "vocab_bf2a67f6": {
+        "word_id": "vocab_bf2a67f6",
         "word": "to",
         "definition": "Expressing direction or motion",
         "part_of_speech": "preposition",
@@ -73,8 +73,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_23767287": {
-        "word_id": "vocab_23767287",
+      "vocab_823872d4": {
+        "word_id": "vocab_823872d4",
         "word": "of",
         "definition": "Expressing relationship or origin",
         "part_of_speech": "preposition",
@@ -97,8 +97,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_90f12dbc": {
-        "word_id": "vocab_90f12dbc",
+      "vocab_025bff86": {
+        "word_id": "vocab_025bff86",
         "word": "and",
         "definition": "Used to connect words",
         "part_of_speech": "conjunction",
@@ -121,8 +121,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_2eaf88d8": {
-        "word_id": "vocab_2eaf88d8",
+      "vocab_1fa80432": {
+        "word_id": "vocab_1fa80432",
         "word": "accomplish",
         "definition": "To achieve or complete successfully",
         "part_of_speech": "verb",
@@ -145,8 +145,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_31353574": {
-        "word_id": "vocab_31353574",
+      "vocab_1a2ce82d": {
+        "word_id": "vocab_1a2ce82d",
         "word": "adequate",
         "definition": "Sufficient or acceptable",
         "part_of_speech": "adjective",
@@ -169,8 +169,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_36579a9d": {
-        "word_id": "vocab_36579a9d",
+      "vocab_8181bfe9": {
+        "word_id": "vocab_8181bfe9",
         "word": "benefit",
         "definition": "An advantage or profit",
         "part_of_speech": "noun",
@@ -193,8 +193,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_7dabae15": {
-        "word_id": "vocab_7dabae15",
+      "vocab_306b2e70": {
+        "word_id": "vocab_306b2e70",
         "word": "capacity",
         "definition": "The maximum amount something can hold",
         "part_of_speech": "noun",
@@ -217,8 +217,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_38a7c173": {
-        "word_id": "vocab_38a7c173",
+      "vocab_7ad684ad": {
+        "word_id": "vocab_7ad684ad",
         "word": "demonstrate",
         "definition": "To show clearly",
         "part_of_speech": "verb",
@@ -241,8 +241,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_1fc24565": {
-        "word_id": "vocab_1fc24565",
+      "vocab_acb036ec": {
+        "word_id": "vocab_acb036ec",
         "word": "ambiguous",
         "definition": "Open to more than one interpretation",
         "part_of_speech": "adjective",
@@ -265,8 +265,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_e36caac7": {
-        "word_id": "vocab_e36caac7",
+      "vocab_75c4be81": {
+        "word_id": "vocab_75c4be81",
         "word": "comprehensive",
         "definition": "Complete and including everything",
         "part_of_speech": "adjective",
@@ -289,8 +289,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_3cbc7757": {
-        "word_id": "vocab_3cbc7757",
+      "vocab_82ce040f": {
+        "word_id": "vocab_82ce040f",
         "word": "elaborate",
         "definition": "Involving many details",
         "part_of_speech": "adjective",
@@ -313,8 +313,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_7ba2ce72": {
-        "word_id": "vocab_7ba2ce72",
+      "vocab_d6691dc7": {
+        "word_id": "vocab_d6691dc7",
         "word": "fundamental",
         "definition": "Forming a necessary base",
         "part_of_speech": "adjective",
@@ -337,8 +337,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_ddadf2e4": {
-        "word_id": "vocab_ddadf2e4",
+      "vocab_79e2d8df": {
+        "word_id": "vocab_79e2d8df",
         "word": "hypothetical",
         "definition": "Based on a suggested idea",
         "part_of_speech": "adjective",
@@ -361,8 +361,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_f92175fa": {
-        "word_id": "vocab_f92175fa",
+      "vocab_45d560b5": {
+        "word_id": "vocab_45d560b5",
         "word": "ubiquitous",
         "definition": "Present everywhere",
         "part_of_speech": "adjective",
@@ -385,8 +385,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_c1352c3b": {
-        "word_id": "vocab_c1352c3b",
+      "vocab_6cce33e7": {
+        "word_id": "vocab_6cce33e7",
         "word": "ephemeral",
         "definition": "Lasting for a very short time",
         "part_of_speech": "adjective",
@@ -409,8 +409,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_af10d111": {
-        "word_id": "vocab_af10d111",
+      "vocab_4c8ebe2d": {
+        "word_id": "vocab_4c8ebe2d",
         "word": "paradigm",
         "definition": "A typical example or pattern",
         "part_of_speech": "noun",
@@ -433,8 +433,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_fc359d93": {
-        "word_id": "vocab_fc359d93",
+      "vocab_f2765762": {
+        "word_id": "vocab_f2765762",
         "word": "pragmatic",
         "definition": "Dealing with things sensibly",
         "part_of_speech": "adjective",
@@ -457,8 +457,8 @@
         "correct_reviews": 0,
         "incorrect_reviews": 0
       },
-      "vocab_bee1581a": {
-        "word_id": "vocab_bee1581a",
+      "vocab_0da19226": {
+        "word_id": "vocab_0da19226",
         "word": "esoteric",
         "definition": "Intended for a small group",
         "part_of_speech": "adjective",
