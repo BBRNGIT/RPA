@@ -1,0 +1,132 @@
+{
+  "module": "contextualization_basics",
+  "description": "Teaching AI to understand context and intent in questions",
+  "hierarchy_level": 1,
+  "patterns": [
+    {
+      "type": "intent_recognition",
+      "pattern": "When asked to 'list' items, the intent is enumeration, not definition",
+      "examples": [
+        {"question": "list 10 english words with 'as'", "intent": "enumeration", "domain": "english", "action": "search_and_list"},
+        {"question": "list all prime numbers under 20", "intent": "enumeration", "domain": "math", "action": "search_and_list"},
+        {"question": "list the parts of a cell", "intent": "enumeration", "domain": "biology", "action": "search_and_list"}
+      ],
+      "reasoning": "The word 'list' signals enumeration task - must search knowledge for items matching criteria, not define terms"
+    },
+    {
+      "type": "intent_recognition", 
+      "pattern": "When asked 'what is', the intent is definition, not enumeration",
+      "examples": [
+        {"question": "what is a noun", "intent": "definition", "domain": "english", "action": "define_concept"},
+        {"question": "what is inflation", "intent": "definition", "domain": "finance", "action": "define_concept"},
+        {"question": "what is the heart", "intent": "definition", "domain": "medicine", "action": "define_concept"}
+      ],
+      "reasoning": "The phrase 'what is' signals definition task - must provide explanation of concept"
+    },
+    {
+      "type": "domain_context",
+      "pattern": "Domain is specified explicitly in the question",
+      "examples": [
+        {"question": "list 10 english words with 'as'", "explicit_domain": "english", "inferred_domain": "english"},
+        {"question": "in python, how do you sort a list", "explicit_domain": "python", "inferred_domain": "python"},
+        {"question": "what does the medical term 'hypertension' mean", "explicit_domain": "medicine", "inferred_domain": "medicine"}
+      ],
+      "reasoning": "When domain is explicitly stated, search only that domain's knowledge"
+    },
+    {
+      "type": "domain_context",
+      "pattern": "Domain must be inferred from content words",
+      "examples": [
+        {"question": "how do variables work", "content_words": ["variables"], "inferred_domain": "python"},
+        {"question": "what is a verb", "content_words": ["verb"], "inferred_domain": "english"},
+        {"question": "how does interest compound", "content_words": ["interest", "compound"], "inferred_domain": "finance"},
+        {"question": "what organs filter blood", "content_words": ["organs", "blood"], "inferred_domain": "medicine"}
+      ],
+      "reasoning": "When domain is not explicit, use content words to identify relevant knowledge domain"
+    },
+    {
+      "type": "constraint_parsing",
+      "pattern": "Questions may have constraints that filter results",
+      "examples": [
+        {"question": "list 10 english words with 'as'", "constraint": {"count": 10, "contains": "as", "category": "words"}, "action": "find_matching_items"},
+        {"question": "what are 5 python data types", "constraint": {"count": 5, "category": "data types"}, "action": "find_matching_items"},
+        {"question": "name 3 body systems", "constraint": {"count": 3, "category": "body systems"}, "action": "find_matching_items"}
+      ],
+      "reasoning": "Extract constraints (count, filter criteria, category) from question to guide search"
+    },
+    {
+      "type": "reasoning_chain",
+      "pattern": "Multi-step reasoning required for complex questions",
+      "examples": [
+        {
+          "question": "list 10 english words with 'as'",
+          "steps": [
+            "1. Identify intent: enumeration (list)",
+            "2. Identify domain: english (explicit)",
+            "3. Identify constraint: words containing 'as'",
+            "4. Search english vocabulary knowledge",
+            "5. Filter for words containing substring 'as'",
+            "6. Return first 10 matches"
+          ]
+        },
+        {
+          "question": "what is the difference between a noun and a verb",
+          "steps": [
+            "1. Identify intent: comparison",
+            "2. Identify domain: english (implicit from terms)",
+            "3. Retrieve definition of 'noun'",
+            "4. Retrieve definition of 'verb'",
+            "5. Compare and contrast",
+            "6. Return differences"
+          ]
+        }
+      ],
+      "reasoning": "Break complex questions into reasoning steps"
+    },
+    {
+      "type": "contextual_disambiguation",
+      "pattern": "Same word may have different meanings in different domains",
+      "examples": [
+        {
+          "term": "list",
+          "contexts": {
+            "english": "A series of items written together",
+            "python": "An ordered, mutable collection data structure",
+            "general": "To write items in sequence"
+          },
+          "disambiguation_rule": "Check domain context first, then use surrounding words to determine meaning"
+        },
+        {
+          "term": "interest",
+          "contexts": {
+            "finance": "Cost of borrowing money or return on savings",
+            "general": "A feeling of wanting to know more",
+            "psychology": "Engagement with a topic"
+          },
+          "disambiguation_rule": "Domain context determines which meaning applies"
+        }
+      ],
+      "reasoning": "Words have domain-specific meanings - must use context to select correct interpretation"
+    }
+  ],
+  "exercises": [
+    {
+      "question": "list 5 python keywords",
+      "expected_intent": "enumeration",
+      "expected_domain": "python",
+      "expected_constraints": {"count": 5, "category": "keywords"}
+    },
+    {
+      "question": "what is a variable",
+      "expected_intent": "definition",
+      "expected_domain": "python",
+      "expected_constraints": {}
+    },
+    {
+      "question": "name 3 types of nouns",
+      "expected_intent": "enumeration",
+      "expected_domain": "english",
+      "expected_constraints": {"count": 3, "category": "types of nouns"}
+    }
+  ]
+}

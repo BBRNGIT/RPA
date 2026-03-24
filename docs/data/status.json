@@ -1,23 +1,24 @@
 {
-  "total_patterns": 6373,
-  "progress_to_1m": 0.006373,
+  "total_patterns": 6412,
+  "progress_to_1m": 0.006412,
   "tests_passing": 957,
-  "sessions_today": 4,
+  "sessions_today": 5,
   "domains": {
-    "english": 5243,
+    "english": 5272,
     "python": 530,
     "finance": 200,
     "medicine": 200,
-    "health": 200
+    "health": 200,
+    "reasoning": 10
   },
   "recent_sessions": [
     {
       "phase": "lesson",
-      "domain": "multi",
-      "patterns_learned": 500,
+      "domain": "reasoning",
+      "patterns_learned": 40,
       "success": true,
-      "timestamp": "2026-03-24T03:35:43.020676",
-      "message": "Added 500 patterns across all domains"
+      "timestamp": "2026-03-24T04:06:28.585573",
+      "message": "Learned cognitive skills: contextualization, question parsing"
     }
   ],
   "exam_history": [],
@@ -26,7 +27,7 @@
   "pipeline_ok": true,
   "memory_ok": true,
   "is_active": true,
-  "last_update": "2026-03-24T03:35:43.020685",
+  "last_update": "2026-03-24T04:06:28.585582",
   "goal_patterns": 1000000,
   "version": "1.0.0"
 }

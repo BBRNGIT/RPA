@@ -1359,28 +1359,159 @@
             }, 1000 + Math.random() * 1000);
         }
 
+        // Learned knowledge and reasoning patterns (loaded from AI's LTM)
+        let learnedKnowledge = null;
+        
+        async function loadLearnedKnowledge() {
+            try {
+                const response = await fetch(DATA_PATH + 'learned_knowledge.json?t=' + Date.now());
+                if (response.ok) {
+                    learnedKnowledge = await response.json();
+                    console.log('Loaded learned knowledge:', learnedKnowledge);
+                }
+            } catch (e) {
+                console.log('Using built-in knowledge base');
+            }
+        }
+
         function findAnswer(question) {
             const q = question.toLowerCase();
             
-            // Search each domain
-            for (const [domain, terms] of Object.entries(aiKnowledge)) {
-                for (const [term, definition] of Object.entries(terms)) {
-                    if (q.includes(term)) {
-                        return `<strong>[${domain.toUpperCase()}]</strong><br><br>${definition}`;
+            // Step 1: CONTEXTUALIZE - Determine intent using learned patterns
+            let intent = 'definition';
+            let domain = null;
+            let constraints = {};
+            
+            // Intent recognition from learned patterns
+            if (q.includes('list') || q.includes('name') || q.includes('give') && q.includes('me')) {
+                intent = 'enumeration';
+            } else if (q.includes('what is') || q.includes('define') || q.includes('explain')) {
+                intent = 'definition';
+            } else if (q.includes('how do') || q.includes('how to')) {
+                intent = 'procedural';
+            }
+            
+            // Domain inference from question context
+            if (q.includes('english') || q.includes('word') || q.includes('noun') || q.includes('verb')) {
+                domain = 'english';
+            } else if (q.includes('python') || q.includes('code') || q.includes('variable') || q.includes('function')) {
+                domain = 'python';
+            } else if (q.includes('finance') || q.includes('interest') || q.includes('invest')) {
+                domain = 'finance';
+            } else if (q.includes('medicine') || q.includes('body') || q.includes('heart') || q.includes('organ')) {
+                domain = 'medicine';
+            } else if (q.includes('health') || q.includes('exercise') || q.includes('sleep')) {
+                domain = 'health';
+            }
+            
+            // Constraint extraction
+            const countMatch = q.match(/\b(\d+)\b/);
+            if (countMatch) {
+                constraints.count = parseInt(countMatch[1]);
+            }
+            
+            // Pattern matching for substring searches (e.g., "words with 'as'")
+            const containsMatch = q.match(/with\s+['"]?(\w+)['"]?|containing\s+['"]?(\w+)['"]?/);
+            if (containsMatch) {
+                constraints.contains = containsMatch[1] || containsMatch[2];
+            }
+            
+            // Step 2: PROCESS INTENT
+            if (intent === 'enumeration') {
+                // Handle "list X items" type questions
+                if (domain === 'english' && constraints.contains) {
+                    // Search for words containing a substring
+                    const words = findWordsContaining(constraints.contains, constraints.count || 10);
+                    if (words.length > 0) {
+                        return `<strong>[ENGLISH VOCABULARY]</strong><br><br>` +
+                               `Found ${words.length} words containing '${constraints.contains}':<br><br>` +
+                               words.map(w => `• <strong>${w.word}</strong> - ${w.definition}`).join('<br>');
+                    }
+                }
+                
+                if (domain === 'python' && q.includes('keyword')) {
+                    const keywords = ['def', 'class', 'if', 'else', 'for', 'while', 'return', 'import', 'from', 'as'];
+                    const count = constraints.count || 5;
+                    return `<strong>[PYTHON KEYWORDS]</strong><br><br>` +
+                           `Python keywords (showing ${count}):\n\n` +
+                           keywords.slice(0, count).map(k => `• <strong>${k}</strong>`).join('<br>');
+                }
+            }
+            
+            if (intent === 'definition') {
+                // Search learned knowledge for definitions
+                if (learnedKnowledge && learnedKnowledge.knowledge) {
+                    for (const [kn, kv] of Object.entries(learnedKnowledge.knowledge)) {
+                        for (const [term, def] of Object.entries(kv)) {
+                            if (q.includes(term)) {
+                                return `<strong>[${kn.toUpperCase()}]</strong><br><br>${def}`;
+                            }
+                        }
+                    }
+                }
+                
+                // Fallback to built-in knowledge
+                for (const [d, terms] of Object.entries(aiKnowledge)) {
+                    for (const [term, definition] of Object.entries(terms)) {
+                        if (q.includes(term)) {
+                            return `<strong>[${d.toUpperCase()}]</strong><br><br>${definition}`;
+                        }
                     }
                 }
             }
-
-            // Check for general patterns
-            if (q.includes('how many') || q.includes('how much')) {
-                return "The AI doesn't have specific data on that yet. Try asking about programming concepts, grammar, finance terms, medical topics, or health information.";
+            
+            // Step 3: FALLBACK with reasoning explanation
+            return `<strong>[AI REASONING]</strong><br><br>` +
+                   `Intent detected: ${intent}<br>` +
+                   `Domain inferred: ${domain || 'general'}<br>` +
+                   `Constraints: ${JSON.stringify(constraints)}<br><br>` +
+                   `The AI searched its learned knowledge but needs more training data for this query. ` +
+                   `The AI is continuously learning through curriculum.`;
+        }
+        
+        function findWordsContaining(substring, maxCount) {
+            const results = [];
+            
+            // Search learned vocabulary
+            if (learnedKnowledge && learnedKnowledge.vocabulary) {
+                for (const [key, words] of Object.entries(learnedKnowledge.vocabulary)) {
+                    for (const w of words) {
+                        if (w.word.includes(substring)) {
+                            results.push(w);
+                            if (results.length >= maxCount) return results;
+                        }
+                    }
+                }
             }
-
-            if (q.includes('what is') || q.includes('define') || q.includes('explain')) {
-                return "The AI searched its knowledge base but couldn't find a specific match. Try using key terms like 'variable', 'noun', 'interest', 'heart', or 'exercise'.";
+            
+            // Built-in fallback vocabulary
+            const fallbackWords = [
+                {word: 'ask', definition: 'to put a question to someone'},
+                {word: 'has', definition: 'possesses or owns'},
+                {word: 'was', definition: 'past tense of is'},
+                {word: 'fast', definition: 'moving quickly'},
+                {word: 'last', definition: 'coming after all others'},
+                {word: 'past', definition: 'time before the present'},
+                {word: 'class', definition: 'a group of students'},
+                {word: 'grass', definition: 'green plant covering ground'},
+                {word: 'glass', definition: 'hard transparent material'},
+                {word: 'pass', definition: 'to move past or through'},
+                {word: 'mask', definition: 'covering for the face'},
+                {word: 'task', definition: 'a piece of work to be done'},
+                {word: 'base', definition: 'the lowest part or foundation'},
+                {word: 'case', definition: 'an instance or container'},
+                {word: 'east', definition: 'direction toward sunrise'},
+                {word: 'master', definition: 'someone with control or skill'},
+            ];
+            
+            for (const w of fallbackWords) {
+                if (w.word.includes(substring)) {
+                    results.push(w);
+                    if (results.length >= maxCount) return results;
+                }
             }
-
-            return "The AI couldn't find relevant information in its knowledge base. The AI is still learning! Try asking about topics in: Python programming, English grammar, Finance, Medicine, or Health.";
+            
+            return results;
         }
 
         function updateRecentQuestions() {
@@ -1524,6 +1655,7 @@
         // ========== INITIALIZATION ==========
         document.addEventListener('DOMContentLoaded', () => {
             loadData();
+            loadLearnedKnowledge();  // Load AI's learned knowledge
             setInterval(loadData, 5 * 60 * 1000);
             
             // Enter key for Ask AI

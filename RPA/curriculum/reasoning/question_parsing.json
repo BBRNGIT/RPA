@@ -1,0 +1,78 @@
+{
+  "module": "question_parsing",
+  "description": "Teaching AI to parse and understand question structure",
+  "hierarchy_level": 1,
+  "patterns": [
+    {
+      "type": "question_words",
+      "pattern": "Question words signal expected response type",
+      "mappings": {
+        "what": {"expected": "definition or thing", "response_type": "explanatory"},
+        "how": {"expected": "process or method", "response_type": "procedural"},
+        "why": {"expected": "reason or cause", "response_type": "causal"},
+        "when": {"expected": "time or condition", "response_type": "temporal"},
+        "where": {"expected": "location or context", "response_type": "spatial"},
+        "which": {"expected": "selection from options", "response_type": "comparative"},
+        "who": {"expected": "person or entity", "response_type": "identificational"},
+        "list": {"expected": "enumeration", "response_type": "enumerative"},
+        "name": {"expected": "enumeration", "response_type": "enumerative"},
+        "give": {"expected": "provision of examples", "response_type": "exemplifying"},
+        "explain": {"expected": "detailed description", "response_type": "explanatory"},
+        "describe": {"expected": "characteristics", "response_type": "descriptive"}
+      }
+    },
+    {
+      "type": "constraint_extraction",
+      "pattern": "Numeric and filter constraints modify search scope",
+      "examples": [
+        {
+          "phrase": "list 10 words",
+          "constraint": {"count": 10},
+          "meaning": "Return exactly 10 items"
+        },
+        {
+          "phrase": "words starting with 'a'",
+          "constraint": {"starts_with": "a"},
+          "meaning": "Filter items beginning with letter 'a'"
+        },
+        {
+          "phrase": "words containing 'as'",
+          "constraint": {"contains": "as"},
+          "meaning": "Filter items containing substring 'as'"
+        },
+        {
+          "phrase": "numbers greater than 5",
+          "constraint": {"greater_than": 5},
+          "meaning": "Filter for values > 5"
+        },
+        {
+          "phrase": "python data types",
+          "constraint": {"category": "data types", "domain": "python"},
+          "meaning": "Search within specific category and domain"
+        }
+      ]
+    },
+    {
+      "type": "compound_questions",
+      "pattern": "Questions with multiple parts require multi-step processing",
+      "examples": [
+        {
+          "question": "What is a variable and how do you use it?",
+          "parts": [
+            {"intent": "definition", "target": "variable"},
+            {"intent": "process", "target": "how to use variable"}
+          ],
+          "response_strategy": "Address both parts sequentially"
+        },
+        {
+          "question": "List 5 nouns and give examples of each",
+          "parts": [
+            {"intent": "enumeration", "target": "5 nouns"},
+            {"intent": "exemplification", "target": "examples for each"}
+          ],
+          "response_strategy": "First enumerate, then provide examples"
+        }
+      ]
+    }
+  ]
+}

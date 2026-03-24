@@ -193,6 +193,36 @@
       "description": "Large-scale code search dataset",
       "sample_rate": 0.01,
       "streaming": true
+    },
+    "reasoning_contextualization": {
+      "name": "Contextualization Skills",
+      "source": "local",
+      "path": "curriculum/reasoning/contextualization_basics.json",
+      "domain": "reasoning",
+      "priority": 1,
+      "curriculum_type": "cognitive_skills",
+      "hierarchy_levels": [1, 2],
+      "description": "Teaches AI to understand context and intent in questions"
+    },
+    "reasoning_question_parsing": {
+      "name": "Question Parsing Skills",
+      "source": "local",
+      "path": "curriculum/reasoning/question_parsing.json",
+      "domain": "reasoning",
+      "priority": 1,
+      "curriculum_type": "cognitive_skills",
+      "hierarchy_levels": [1, 2],
+      "description": "Teaches AI to parse and understand question structure"
+    },
+    "english_word_patterns": {
+      "name": "English Words with Patterns",
+      "source": "local",
+      "path": "curriculum/english/words_with_patterns.json",
+      "domain": "english",
+      "priority": 1,
+      "curriculum_type": "vocabulary",
+      "hierarchy_levels": [1],
+      "description": "English vocabulary organized by spelling patterns"
     }
   },
   
