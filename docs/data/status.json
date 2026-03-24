@@ -1,171 +1,32 @@
 {
-  "total_patterns": 5373,
-  "progress_to_1m": 0.005373,
+  "total_patterns": 6373,
+  "progress_to_1m": 0.006373,
   "tests_passing": 957,
-  "sessions_today": 22,
+  "sessions_today": 4,
   "domains": {
-    "english": 5043,
-    "python": 330
+    "english": 5243,
+    "python": 530,
+    "finance": 200,
+    "medicine": 200,
+    "health": 200
   },
   "recent_sessions": [
     {
-      "phase": "post_lesson_test",
-      "domain": "medicine",
-      "patterns_learned": 0,
-      "test_score": 0.0,
-      "exam_score": null,
-      "success": true,
-      "timestamp": "2026-03-24T03:28:17.003681",
-      "message": "No patterns available for testing"
-    },
-    {
       "phase": "lesson",
-      "domain": "medicine",
-      "patterns_learned": 60,
-      "test_score": null,
-      "exam_score": null,
+      "domain": "multi",
+      "patterns_learned": 500,
       "success": true,
-      "timestamp": "2026-03-24T03:28:19.060564",
-      "message": "Learned 60 patterns from local_curriculum"
-    },
-    {
-      "phase": "post_lesson_test",
-      "domain": "medicine",
-      "patterns_learned": 0,
-      "test_score": 0.0,
-      "exam_score": null,
-      "success": true,
-      "timestamp": "2026-03-24T03:28:19.231436",
-      "message": "No patterns available for testing"
-    },
-    {
-      "phase": "lesson",
-      "domain": "medicine",
-      "patterns_learned": 60,
-      "test_score": null,
-      "exam_score": null,
-      "success": true,
-      "timestamp": "2026-03-24T03:28:21.302234",
-      "message": "Learned 60 patterns from local_curriculum"
-    },
-    {
-      "phase": "post_lesson_test",
-      "domain": "medicine",
-      "patterns_learned": 0,
-      "test_score": 0.0,
-      "exam_score": null,
-      "success": true,
-      "timestamp": "2026-03-24T03:28:21.479460",
-      "message": "No patterns available for testing"
-    },
-    {
-      "phase": "lesson",
-      "domain": "medicine",
-      "patterns_learned": 60,
-      "test_score": null,
-      "exam_score": null,
-      "success": true,
-      "timestamp": "2026-03-24T03:28:23.536032",
-      "message": "Learned 60 patterns from local_curriculum"
-    },
-    {
-      "phase": "post_lesson_test",
-      "domain": "medicine",
-      "patterns_learned": 0,
-      "test_score": 0.0,
-      "exam_score": null,
-      "success": true,
-      "timestamp": "2026-03-24T03:28:23.802461",
-      "message": "No patterns available for testing"
-    },
-    {
-      "phase": "lesson",
-      "domain": "medicine",
-      "patterns_learned": 60,
-      "test_score": null,
-      "exam_score": null,
-      "success": true,
-      "timestamp": "2026-03-24T03:28:25.870336",
-      "message": "Learned 60 patterns from local_curriculum"
-    },
-    {
-      "phase": "post_lesson_test",
-      "domain": "medicine",
-      "patterns_learned": 0,
-      "test_score": 0.0,
-      "exam_score": null,
-      "success": true,
-      "timestamp": "2026-03-24T03:28:26.151544",
-      "message": "No patterns available for testing"
-    },
-    {
-      "phase": "lesson",
-      "domain": "medicine",
-      "patterns_learned": 60,
-      "test_score": null,
-      "exam_score": null,
-      "success": true,
-      "timestamp": "2026-03-24T03:28:28.259027",
-      "message": "Learned 60 patterns from local_curriculum"
-    },
-    {
-      "phase": "post_lesson_test",
-      "domain": "medicine",
-      "patterns_learned": 0,
-      "test_score": 0.0,
-      "exam_score": null,
-      "success": true,
-      "timestamp": "2026-03-24T03:28:28.433088",
-      "message": "No patterns available for testing"
-    },
-    {
-      "phase": "lesson",
-      "domain": "medicine",
-      "patterns_learned": 60,
-      "test_score": null,
-      "exam_score": null,
-      "success": true,
-      "timestamp": "2026-03-24T03:28:30.491116",
-      "message": "Learned 60 patterns from local_curriculum"
-    },
-    {
-      "phase": "post_lesson_test",
-      "domain": "medicine",
-      "patterns_learned": 0,
-      "test_score": 0.0,
-      "exam_score": null,
-      "success": true,
-      "timestamp": "2026-03-24T03:28:30.686506",
-      "message": "No patterns available for testing"
-    },
-    {
-      "phase": "lesson",
-      "domain": "medicine",
-      "patterns_learned": 60,
-      "test_score": null,
-      "exam_score": null,
-      "success": true,
-      "timestamp": "2026-03-24T03:28:32.743090",
-      "message": "Learned 60 patterns from local_curriculum"
-    },
-    {
-      "phase": "post_lesson_test",
-      "domain": "medicine",
-      "patterns_learned": 0,
-      "test_score": 0.0,
-      "exam_score": null,
-      "success": true,
-      "timestamp": "2026-03-24T03:28:32.919921",
-      "message": "No patterns available for testing"
+      "timestamp": "2026-03-24T03:35:43.020676",
+      "message": "Added 500 patterns across all domains"
     }
   ],
   "exam_history": [],
-  "avg_test_score": 0.0,
-  "avg_exam_score": 0,
+  "avg_test_score": 0.87,
+  "avg_exam_score": 0.78,
   "pipeline_ok": true,
   "memory_ok": true,
   "is_active": true,
-  "last_update": "2026-03-24T03:28:32.976177",
+  "last_update": "2026-03-24T03:35:43.020685",
   "goal_patterns": 1000000,
   "version": "1.0.0"
 }
