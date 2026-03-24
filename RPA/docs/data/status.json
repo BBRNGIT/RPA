@@ -1,0 +1,33 @@
+{
+  "total_patterns": 5329,
+  "progress_to_1m": 0.005329,
+  "tests_passing": 957,
+  "sessions_today": 1,
+  "domains": {
+    "english": 5043,
+    "python": 270,
+    "finance": 16
+  },
+  "recent_sessions": [
+    {
+      "timestamp": "2026-03-24T01:02:19.136838",
+      "domain": "python",
+      "phase": "lesson",
+      "patterns_learned": 50,
+      "test_score": null,
+      "exam_score": null,
+      "duration_seconds": 0.224455,
+      "success": true,
+      "message": "Learned 50 patterns from mbpp"
+    }
+  ],
+  "exam_history": [],
+  "avg_test_score": 0.0,
+  "avg_exam_score": 0.0,
+  "pipeline_ok": true,
+  "memory_ok": true,
+  "is_active": true,
+  "last_update": "2026-03-24T01:28:12.634610Z",
+  "goal_patterns": 1000000,
+  "version": "1.0.0"
+}

@@ -183,33 +183,15 @@ jobs:
         print(f'- Patterns Learned: {stats[\"total_patterns_learned\"]}')
         "
 
-    - name: Show Learning Statistics
+    - name: Generate Dashboard Status
       run: |
-        echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 📈 Updated Statistics" >> $GITHUB_STEP_SUMMARY
-        python -c "
-        import sys
-        sys.path.insert(0, '.')
-        from rpa.memory import LongTermMemory
-        ltm = LongTermMemory(storage_path='memory/learning_state')
-        ltm.load()
-        
-        print(f'- **Total Patterns:** {len(ltm):,}')
-        print(f'- **Progress to 1M:** {len(ltm) / 1_000_000 * 100:.3f}%')
-        
-        domains = {}
-        for node in ltm._graph.nodes.values():
-            d = getattr(node, 'domain', 'unknown') or 'unknown'
-            domains[d] = domains.get(d, 0) + 1
-        
-        print('- **By Domain:**')
-        for d, c in sorted(domains.items()):
-            print(f'  - {d}: {c:,}')
-        "
+        python scripts/generate_status.py \
+          --persistence memory/learning_state \
+          --output docs/data/status.json
 
-    - name: Commit learning progress
+    - name: Commit learning progress and dashboard
       run: |
-        git add memory/learning_state/
+        git add memory/learning_state/ docs/data/
         git diff --cached --quiet || git commit -m "Learning: ${{ steps.learning.outputs.mode }} - ${{ steps.learning.outputs.domain }} [skip ci]"
         git push origin main || echo "No changes to push"
 
