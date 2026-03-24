@@ -51622,5 +51622,545 @@
     "validation_score": 0.8,
     "source": "local_curriculum",
     "notes": ""
+  },
+  "cons_255c0775": {
+    "record_id": "cons_255c0775",
+    "node_id": "pattern:The cat sat.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144262",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_66036ca2": {
+    "record_id": "cons_66036ca2",
+    "node_id": "pattern:The dog ran.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144280",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_e7927519": {
+    "record_id": "cons_e7927519",
+    "node_id": "pattern:I see you.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144293",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_9bb1946d": {
+    "record_id": "cons_9bb1946d",
+    "node_id": "pattern:You are good.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144302",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_ac5f200d": {
+    "record_id": "cons_ac5f200d",
+    "node_id": "pattern:He is here.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144311",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_4f4d88d3": {
+    "record_id": "cons_4f4d88d3",
+    "node_id": "pattern:She is there.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144319",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_e1c9f34f": {
+    "record_id": "cons_e1c9f34f",
+    "node_id": "pattern:It is a cat.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144327",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_afd05757": {
+    "record_id": "cons_afd05757",
+    "node_id": "pattern:We have food.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144338",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_daa8386e": {
+    "record_id": "cons_daa8386e",
+    "node_id": "pattern:They are happy.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144345",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_862ab180": {
+    "record_id": "cons_862ab180",
+    "node_id": "pattern:The sun is hot.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144351",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_b85a0491": {
+    "record_id": "cons_b85a0491",
+    "node_id": "pattern:I like apples.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144358",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_a2e2e4ba": {
+    "record_id": "cons_a2e2e4ba",
+    "node_id": "pattern:She has a book.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144365",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_9f1bca2f": {
+    "record_id": "cons_9f1bca2f",
+    "node_id": "pattern:He can swim.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144372",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_3a537da4": {
+    "record_id": "cons_3a537da4",
+    "node_id": "pattern:We go home.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144379",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_757dd510": {
+    "record_id": "cons_757dd510",
+    "node_id": "pattern:The bird can fly.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144387",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_5f83db0a": {
+    "record_id": "cons_5f83db0a",
+    "node_id": "pattern:I want water.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144394",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_42cb36de": {
+    "record_id": "cons_42cb36de",
+    "node_id": "pattern:The sky is blue.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144402",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_13a63f3f": {
+    "record_id": "cons_13a63f3f",
+    "node_id": "pattern:This is my house.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144409",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_80dea915": {
+    "record_id": "cons_80dea915",
+    "node_id": "pattern:That is your car.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144416",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_eecc2e3c": {
+    "record_id": "cons_eecc2e3c",
+    "node_id": "pattern:Do you know?",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144423",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_03d02745": {
+    "record_id": "cons_03d02745",
+    "node_id": "pattern:I do not know.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144431",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_006b91cd": {
+    "record_id": "cons_006b91cd",
+    "node_id": "pattern:The cat is black.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144438",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_654ec2ab": {
+    "record_id": "cons_654ec2ab",
+    "node_id": "pattern:The dog is big.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144445",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_065d4c2f": {
+    "record_id": "cons_065d4c2f",
+    "node_id": "pattern:She is my friend.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144452",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_0c60afb8": {
+    "record_id": "cons_0c60afb8",
+    "node_id": "pattern:He is a teacher.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144458",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_3c65f0f9": {
+    "record_id": "cons_3c65f0f9",
+    "node_id": "pattern:I am a student.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144466",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_527afab8": {
+    "record_id": "cons_527afab8",
+    "node_id": "pattern:We are at home.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144473",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_a5931f5c": {
+    "record_id": "cons_a5931f5c",
+    "node_id": "pattern:They are at work.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144479",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_2609fde4": {
+    "record_id": "cons_2609fde4",
+    "node_id": "pattern:The book is on the table.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144485",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_887baf6d": {
+    "record_id": "cons_887baf6d",
+    "node_id": "pattern:The pen is in the box.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144492",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_f7d6a415": {
+    "record_id": "cons_f7d6a415",
+    "node_id": "pattern:I go to school.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144498",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_d2e5d9b4": {
+    "record_id": "cons_d2e5d9b4",
+    "node_id": "pattern:She goes to work.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144505",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_696cbcc1": {
+    "record_id": "cons_696cbcc1",
+    "node_id": "pattern:The man is tall.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144511",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_0fbacd70": {
+    "record_id": "cons_0fbacd70",
+    "node_id": "pattern:The woman is kind.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144519",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_3012d4a5": {
+    "record_id": "cons_3012d4a5",
+    "node_id": "pattern:The child is young.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144525",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_3e2df398": {
+    "record_id": "cons_3e2df398",
+    "node_id": "pattern:The tree is green.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144532",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_780d686b": {
+    "record_id": "cons_780d686b",
+    "node_id": "pattern:I have two hands.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144538",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_b62cfe35": {
+    "record_id": "cons_b62cfe35",
+    "node_id": "pattern:She has one eye.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144545",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_022ef908": {
+    "record_id": "cons_022ef908",
+    "node_id": "pattern:The house is new.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144551",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_4a8637bc": {
+    "record_id": "cons_4a8637bc",
+    "node_id": "pattern:The car is fast.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144557",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_d5ec2fa4": {
+    "record_id": "cons_d5ec2fa4",
+    "node_id": "pattern:What is this?",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144564",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_a4430a9f": {
+    "record_id": "cons_a4430a9f",
+    "node_id": "pattern:What is that?",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144570",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_a5efa7e3": {
+    "record_id": "cons_a5efa7e3",
+    "node_id": "pattern:Who is he?",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144577",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_a93382c5": {
+    "record_id": "cons_a93382c5",
+    "node_id": "pattern:Who is she?",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144585",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_02ee8592": {
+    "record_id": "cons_02ee8592",
+    "node_id": "pattern:Where is the cat?",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144592",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_fa87c97a": {
+    "record_id": "cons_fa87c97a",
+    "node_id": "pattern:Where is the dog?",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144598",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_25646a75": {
+    "record_id": "cons_25646a75",
+    "node_id": "pattern:When do we go?",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144604",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_fcf34055": {
+    "record_id": "cons_fcf34055",
+    "node_id": "pattern:How are you?",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144610",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_9704abc3": {
+    "record_id": "cons_9704abc3",
+    "node_id": "pattern:Why is the sky blue?",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144617",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_b5823df9": {
+    "record_id": "cons_b5823df9",
+    "node_id": "pattern:I can see the moon.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144623",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_9d5e4623": {
+    "record_id": "cons_9d5e4623",
+    "node_id": "pattern:The stars are bright.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144630",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_dc18ae81": {
+    "record_id": "cons_dc18ae81",
+    "node_id": "pattern:The rain is falling.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144636",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_bfda659b": {
+    "record_id": "cons_bfda659b",
+    "node_id": "pattern:The wind is blowing.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144644",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_545b995c": {
+    "record_id": "cons_545b995c",
+    "node_id": "pattern:I like to read.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144650",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_c8842871": {
+    "record_id": "cons_c8842871",
+    "node_id": "pattern:She likes to sing.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144657",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_ae686a6c": {
+    "record_id": "cons_ae686a6c",
+    "node_id": "pattern:He wants to play.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144663",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_229b96e7": {
+    "record_id": "cons_229b96e7",
+    "node_id": "pattern:They want to help.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144669",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_eff485be": {
+    "record_id": "cons_eff485be",
+    "node_id": "pattern:We need to go.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144675",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_e1958e59": {
+    "record_id": "cons_e1958e59",
+    "node_id": "pattern:The fish can swim.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144681",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_f2b6e3a8": {
+    "record_id": "cons_f2b6e3a8",
+    "node_id": "pattern:The horse can run.",
+    "session_id": "pipeline_english",
+    "consolidated_at": "2026-03-24T03:24:55.144687",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
   }
 }

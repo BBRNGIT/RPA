@@ -1,0 +1,30 @@
+{
+  "total_patterns": 5489,
+  "progress_to_1m": 0.005489,
+  "tests_passing": 957,
+  "sessions_today": 2,
+  "domains": {
+    "english": 5103,
+    "python": 370,
+    "finance": 16
+  },
+  "recent_sessions": [
+    {
+      "phase": "lesson",
+      "domain": "python",
+      "patterns_learned": 100,
+      "success": true,
+      "timestamp": "2026-03-24T03:31:38.698364",
+      "message": "Added 100 Python patterns"
+    }
+  ],
+  "exam_history": [],
+  "avg_test_score": 0.87,
+  "avg_exam_score": 0.78,
+  "pipeline_ok": true,
+  "memory_ok": true,
+  "is_active": true,
+  "last_update": "2026-03-24T03:31:38.698373",
+  "goal_patterns": 1000000,
+  "version": "1.0.0"
+}
