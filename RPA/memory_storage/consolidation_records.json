@@ -19339,5 +19339,4685 @@
     "validation_score": 1.0,
     "source": "skills_curriculum",
     "notes": ""
+  },
+  "cons_bc5bc408": {
+    "record_id": "cons_bc5bc408",
+    "node_id": "node_779b457e",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.141241",
+    "validation_score": 1.0,
+    "source": "curriculum/english/words_with_patterns.json",
+    "notes": ""
+  },
+  "cons_9d0855e0": {
+    "record_id": "cons_9d0855e0",
+    "node_id": "node_d4fe234a",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.141330",
+    "validation_score": 1.0,
+    "source": "curriculum/english/words_with_patterns.json",
+    "notes": ""
+  },
+  "cons_8befd1fe": {
+    "record_id": "cons_8befd1fe",
+    "node_id": "en_3_001",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.141766",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_4fb92654": {
+    "record_id": "cons_4fb92654",
+    "node_id": "en_3_002",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.141846",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_41b30caa": {
+    "record_id": "cons_41b30caa",
+    "node_id": "en_3_003",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.141940",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_53e2a667": {
+    "record_id": "cons_53e2a667",
+    "node_id": "en_3_004",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.142014",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_fe8e5548": {
+    "record_id": "cons_fe8e5548",
+    "node_id": "en_3_005",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.142086",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_b36816e2": {
+    "record_id": "cons_b36816e2",
+    "node_id": "en_3_006",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.142157",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_6cc6a667": {
+    "record_id": "cons_6cc6a667",
+    "node_id": "en_3_007",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.142244",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_95bfcae2": {
+    "record_id": "cons_95bfcae2",
+    "node_id": "en_3_008",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.142318",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_b917ee1d": {
+    "record_id": "cons_b917ee1d",
+    "node_id": "en_3_009",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.142406",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_fcadd6d9": {
+    "record_id": "cons_fcadd6d9",
+    "node_id": "en_3_010",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.142478",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_376d535d": {
+    "record_id": "cons_376d535d",
+    "node_id": "en_3_011",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.142549",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_071893a4": {
+    "record_id": "cons_071893a4",
+    "node_id": "en_3_012",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.142621",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_ca51f891": {
+    "record_id": "cons_ca51f891",
+    "node_id": "en_3_013",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.142693",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_1a561bfa": {
+    "record_id": "cons_1a561bfa",
+    "node_id": "en_3_014",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.142760",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_b9d17061": {
+    "record_id": "cons_b9d17061",
+    "node_id": "en_3_015",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.142828",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_889cbe2b": {
+    "record_id": "cons_889cbe2b",
+    "node_id": "en_3_016",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.142912",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_eb81004f": {
+    "record_id": "cons_eb81004f",
+    "node_id": "en_3_017",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.142985",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_ca4e7261": {
+    "record_id": "cons_ca4e7261",
+    "node_id": "en_3_018",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.143058",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_1a5af839": {
+    "record_id": "cons_1a5af839",
+    "node_id": "en_3_019",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.143129",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_bcb40049": {
+    "record_id": "cons_bcb40049",
+    "node_id": "en_3_020",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.143206",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_3294a90b": {
+    "record_id": "cons_3294a90b",
+    "node_id": "en_3_021",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.143280",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_1638be7c": {
+    "record_id": "cons_1638be7c",
+    "node_id": "en_3_022",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.143352",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_c7c2b78e": {
+    "record_id": "cons_c7c2b78e",
+    "node_id": "en_3_023",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.143423",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_bf678845": {
+    "record_id": "cons_bf678845",
+    "node_id": "en_3_024",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.143493",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_907da76e": {
+    "record_id": "cons_907da76e",
+    "node_id": "en_3_025",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.143564",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_2c1f7d57": {
+    "record_id": "cons_2c1f7d57",
+    "node_id": "en_3_026",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.143641",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_a44a4231": {
+    "record_id": "cons_a44a4231",
+    "node_id": "en_3_027",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.143711",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_9d5f4067": {
+    "record_id": "cons_9d5f4067",
+    "node_id": "en_3_028",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.143781",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_ee2589f1": {
+    "record_id": "cons_ee2589f1",
+    "node_id": "en_3_029",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.143857",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_07affecc": {
+    "record_id": "cons_07affecc",
+    "node_id": "en_3_030",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.143931",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_00c261dd": {
+    "record_id": "cons_00c261dd",
+    "node_id": "en_3_031",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.144001",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_f4cf7139": {
+    "record_id": "cons_f4cf7139",
+    "node_id": "en_3_032",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.144071",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_44e12a7b": {
+    "record_id": "cons_44e12a7b",
+    "node_id": "en_3_033",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.144140",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_ac1545e6": {
+    "record_id": "cons_ac1545e6",
+    "node_id": "en_3_034",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.144220",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_11308f73": {
+    "record_id": "cons_11308f73",
+    "node_id": "en_3_035",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.144292",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_a9008686": {
+    "record_id": "cons_a9008686",
+    "node_id": "en_3_036",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.144365",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_c15725a8": {
+    "record_id": "cons_c15725a8",
+    "node_id": "en_3_037",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.144436",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_936b3d29": {
+    "record_id": "cons_936b3d29",
+    "node_id": "en_3_038",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.144504",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_328bfae7": {
+    "record_id": "cons_328bfae7",
+    "node_id": "en_3_039",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.144571",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_7392ea49": {
+    "record_id": "cons_7392ea49",
+    "node_id": "en_3_040",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.144644",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_51ed47d0": {
+    "record_id": "cons_51ed47d0",
+    "node_id": "en_3_041",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.144713",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_76b67531": {
+    "record_id": "cons_76b67531",
+    "node_id": "en_3_042",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.144785",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_adceb4ea": {
+    "record_id": "cons_adceb4ea",
+    "node_id": "en_3_043",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.144863",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_af4a6ea0": {
+    "record_id": "cons_af4a6ea0",
+    "node_id": "en_3_044",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.144947",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_f2b7f684": {
+    "record_id": "cons_f2b7f684",
+    "node_id": "en_3_045",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.145017",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_9112f964": {
+    "record_id": "cons_9112f964",
+    "node_id": "en_3_046",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.145086",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_1cd9ab40": {
+    "record_id": "cons_1cd9ab40",
+    "node_id": "en_3_047",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.145154",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_14e79981": {
+    "record_id": "cons_14e79981",
+    "node_id": "en_3_048",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.145233",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_56532e6c": {
+    "record_id": "cons_56532e6c",
+    "node_id": "en_3_049",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.145305",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_a52a6d9e": {
+    "record_id": "cons_a52a6d9e",
+    "node_id": "en_3_050",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.145398",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_56542d01": {
+    "record_id": "cons_56542d01",
+    "node_id": "en_3_051",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.145475",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_766b0d1e": {
+    "record_id": "cons_766b0d1e",
+    "node_id": "en_3_052",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.145557",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_355e2e69": {
+    "record_id": "cons_355e2e69",
+    "node_id": "en_3_053",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.145635",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_f73cc47c": {
+    "record_id": "cons_f73cc47c",
+    "node_id": "en_3_054",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.145706",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_f78f97f5": {
+    "record_id": "cons_f78f97f5",
+    "node_id": "en_3_055",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.145776",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_6cdd89b7": {
+    "record_id": "cons_6cdd89b7",
+    "node_id": "en_3_056",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.145847",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_deffa3bb": {
+    "record_id": "cons_deffa3bb",
+    "node_id": "en_3_057",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.145931",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_86dae26c": {
+    "record_id": "cons_86dae26c",
+    "node_id": "en_3_058",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.146003",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_0617548b": {
+    "record_id": "cons_0617548b",
+    "node_id": "en_3_059",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.146073",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_2b381307": {
+    "record_id": "cons_2b381307",
+    "node_id": "en_3_060",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.146144",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_5e9379d3": {
+    "record_id": "cons_5e9379d3",
+    "node_id": "en_3_061",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.146225",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_8ce859f4": {
+    "record_id": "cons_8ce859f4",
+    "node_id": "en_3_062",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.146301",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_f24a97b0": {
+    "record_id": "cons_f24a97b0",
+    "node_id": "en_3_063",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.146371",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_58094c47": {
+    "record_id": "cons_58094c47",
+    "node_id": "en_3_064",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.146442",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_bc8aa2d6": {
+    "record_id": "cons_bc8aa2d6",
+    "node_id": "en_3_065",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.146515",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_967f9028": {
+    "record_id": "cons_967f9028",
+    "node_id": "en_3_066",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.146585",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_6983cf9c": {
+    "record_id": "cons_6983cf9c",
+    "node_id": "en_3_067",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.146658",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_12d51172": {
+    "record_id": "cons_12d51172",
+    "node_id": "en_3_068",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.146730",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_59f3633d": {
+    "record_id": "cons_59f3633d",
+    "node_id": "en_3_069",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.146800",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_d5c1f8e8": {
+    "record_id": "cons_d5c1f8e8",
+    "node_id": "en_3_070",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.146880",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_914a972b": {
+    "record_id": "cons_914a972b",
+    "node_id": "en_3_071",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.146953",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_e3dc1627": {
+    "record_id": "cons_e3dc1627",
+    "node_id": "en_3_072",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.147025",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_d37e357d": {
+    "record_id": "cons_d37e357d",
+    "node_id": "en_3_073",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.147096",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_d0baff37": {
+    "record_id": "cons_d0baff37",
+    "node_id": "en_3_074",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.147167",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_526a27f1": {
+    "record_id": "cons_526a27f1",
+    "node_id": "en_3_075",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.147250",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_b8672170": {
+    "record_id": "cons_b8672170",
+    "node_id": "en_3_076",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.147322",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_e0105f02": {
+    "record_id": "cons_e0105f02",
+    "node_id": "en_3_077",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.147392",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_e51e4ae2": {
+    "record_id": "cons_e51e4ae2",
+    "node_id": "en_3_078",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.147461",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_cd187ab9": {
+    "record_id": "cons_cd187ab9",
+    "node_id": "en_3_079",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.147531",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_e083c8e9": {
+    "record_id": "cons_e083c8e9",
+    "node_id": "en_3_080",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.147602",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_057cdd7c": {
+    "record_id": "cons_057cdd7c",
+    "node_id": "en_3_081",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.147672",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_cc262dc1": {
+    "record_id": "cons_cc262dc1",
+    "node_id": "en_3_082",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.147743",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_08db8639": {
+    "record_id": "cons_08db8639",
+    "node_id": "en_3_083",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.147817",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_bdce73c1": {
+    "record_id": "cons_bdce73c1",
+    "node_id": "en_3_084",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.147900",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_cbd62252": {
+    "record_id": "cons_cbd62252",
+    "node_id": "en_3_085",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.147977",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_f8e964c8": {
+    "record_id": "cons_f8e964c8",
+    "node_id": "en_3_086",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.148048",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_e767b714": {
+    "record_id": "cons_e767b714",
+    "node_id": "en_3_087",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.148117",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_b566427c": {
+    "record_id": "cons_b566427c",
+    "node_id": "en_3_088",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.148194",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_c2e3035e": {
+    "record_id": "cons_c2e3035e",
+    "node_id": "en_3_089",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.148314",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_6a840492": {
+    "record_id": "cons_6a840492",
+    "node_id": "en_3_090",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.148425",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_6973809b": {
+    "record_id": "cons_6973809b",
+    "node_id": "en_3_091",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.148502",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_bf860796": {
+    "record_id": "cons_bf860796",
+    "node_id": "en_3_092",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.148577",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_5dbe1973": {
+    "record_id": "cons_5dbe1973",
+    "node_id": "en_3_093",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.148669",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_8ca35b9e": {
+    "record_id": "cons_8ca35b9e",
+    "node_id": "en_3_094",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.148754",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_19d87058": {
+    "record_id": "cons_19d87058",
+    "node_id": "en_3_095",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.148829",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_e05d3340": {
+    "record_id": "cons_e05d3340",
+    "node_id": "en_3_096",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.148910",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_94acd270": {
+    "record_id": "cons_94acd270",
+    "node_id": "en_3_097",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.148981",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_3c17cd16": {
+    "record_id": "cons_3c17cd16",
+    "node_id": "en_3_098",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.149050",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_3da56780": {
+    "record_id": "cons_3da56780",
+    "node_id": "en_3_099",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.149119",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_acd44302": {
+    "record_id": "cons_acd44302",
+    "node_id": "en_3_100",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.149189",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_3_sentences.json",
+    "notes": ""
+  },
+  "cons_73b661ef": {
+    "record_id": "cons_73b661ef",
+    "node_id": "node_365b254b",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.149392",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_910f5c2c": {
+    "record_id": "cons_910f5c2c",
+    "node_id": "node_a4f922cb",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.149467",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_2e8b79ed": {
+    "record_id": "cons_2e8b79ed",
+    "node_id": "node_018c8883",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.149542",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_36a3caba": {
+    "record_id": "cons_36a3caba",
+    "node_id": "node_dc3647e7",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.149617",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_4bf10fac": {
+    "record_id": "cons_4bf10fac",
+    "node_id": "node_4a3abdb5",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.149686",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_24cf0b8d": {
+    "record_id": "cons_24cf0b8d",
+    "node_id": "node_c8393b7c",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.149757",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_7d26e8a3": {
+    "record_id": "cons_7d26e8a3",
+    "node_id": "node_5b421c7d",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.149833",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_1c08d48c": {
+    "record_id": "cons_1c08d48c",
+    "node_id": "node_1b353cd6",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.149919",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_53dcf191": {
+    "record_id": "cons_53dcf191",
+    "node_id": "node_1357d114",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.149992",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_64eb036c": {
+    "record_id": "cons_64eb036c",
+    "node_id": "node_8cbaf4f9",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.150079",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_cb63eee8": {
+    "record_id": "cons_cb63eee8",
+    "node_id": "node_cb078f1d",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.150150",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_93e30640": {
+    "record_id": "cons_93e30640",
+    "node_id": "node_18c6493d",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.150231",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_f57c90d0": {
+    "record_id": "cons_f57c90d0",
+    "node_id": "node_3c99b297",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.150304",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_73a1c478": {
+    "record_id": "cons_73a1c478",
+    "node_id": "node_adf9d7a2",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.150375",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_515a4a45": {
+    "record_id": "cons_515a4a45",
+    "node_id": "node_661d7e7a",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.150445",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_02_business.json",
+    "notes": ""
+  },
+  "cons_aae42438": {
+    "record_id": "cons_aae42438",
+    "node_id": "node_33ba6afb",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.150598",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_c762ffb0": {
+    "record_id": "cons_c762ffb0",
+    "node_id": "node_ae49419a",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.150668",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_6a361039": {
+    "record_id": "cons_6a361039",
+    "node_id": "node_32a7fefc",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.150738",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_5d197255": {
+    "record_id": "cons_5d197255",
+    "node_id": "node_2d1d25e9",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.150812",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_e3190d70": {
+    "record_id": "cons_e3190d70",
+    "node_id": "node_084c25d5",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.150893",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_4f1f92e5": {
+    "record_id": "cons_4f1f92e5",
+    "node_id": "node_64ded48f",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.150966",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_fad1944e": {
+    "record_id": "cons_fad1944e",
+    "node_id": "node_06142217",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.151036",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_4c941036": {
+    "record_id": "cons_4c941036",
+    "node_id": "node_71f57d1b",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.151111",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_322ee3e0": {
+    "record_id": "cons_322ee3e0",
+    "node_id": "node_5d0a2f8d",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.151182",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_243f75e9": {
+    "record_id": "cons_243f75e9",
+    "node_id": "node_4711460a",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.151265",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_5bc8700f": {
+    "record_id": "cons_5bc8700f",
+    "node_id": "node_24746521",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.151341",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_3c13776c": {
+    "record_id": "cons_3c13776c",
+    "node_id": "node_b5e5f7a1",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.151415",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_8db33b5d": {
+    "record_id": "cons_8db33b5d",
+    "node_id": "node_08989a59",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.151508",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_c912b75b": {
+    "record_id": "cons_c912b75b",
+    "node_id": "node_18a82330",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.151590",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_7036fbb5": {
+    "record_id": "cons_7036fbb5",
+    "node_id": "node_d6fead06",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.151660",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_6216140a": {
+    "record_id": "cons_6216140a",
+    "node_id": "node_563b4d21",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.151729",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_8849fe50": {
+    "record_id": "cons_8849fe50",
+    "node_id": "node_df2e2f4c",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.151802",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_28521e6d": {
+    "record_id": "cons_28521e6d",
+    "node_id": "node_39a780c8",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.151884",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_245e6769": {
+    "record_id": "cons_245e6769",
+    "node_id": "node_cf128d13",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.151958",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_8057ac07": {
+    "record_id": "cons_8057ac07",
+    "node_id": "node_a576eea1",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.152032",
+    "validation_score": 1.0,
+    "source": "curriculum/english/vocab_01_basics.json",
+    "notes": ""
+  },
+  "cons_fdd366a7": {
+    "record_id": "cons_fdd366a7",
+    "node_id": "en_2_001",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.153233",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_dcffa739": {
+    "record_id": "cons_dcffa739",
+    "node_id": "en_2_002",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.153317",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_add10b57": {
+    "record_id": "cons_add10b57",
+    "node_id": "en_2_003",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.153399",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_efab716b": {
+    "record_id": "cons_efab716b",
+    "node_id": "en_2_004",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.153474",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_eea3959d": {
+    "record_id": "cons_eea3959d",
+    "node_id": "en_2_005",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.153549",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_13d8e164": {
+    "record_id": "cons_13d8e164",
+    "node_id": "en_2_007",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.153700",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_64024a54": {
+    "record_id": "cons_64024a54",
+    "node_id": "en_2_008",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.153792",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f556498f": {
+    "record_id": "cons_f556498f",
+    "node_id": "en_2_009",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.153878",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_5ba33d64": {
+    "record_id": "cons_5ba33d64",
+    "node_id": "en_2_011",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.154023",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_68426684": {
+    "record_id": "cons_68426684",
+    "node_id": "en_2_012",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.154094",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_08f5577e": {
+    "record_id": "cons_08f5577e",
+    "node_id": "en_2_013",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.154166",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_c7087c61": {
+    "record_id": "cons_c7087c61",
+    "node_id": "en_2_014",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.154251",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_49a32d70": {
+    "record_id": "cons_49a32d70",
+    "node_id": "en_2_015",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.154325",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_375027f9": {
+    "record_id": "cons_375027f9",
+    "node_id": "en_2_016",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.154395",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_e3fb57d5": {
+    "record_id": "cons_e3fb57d5",
+    "node_id": "en_2_017",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.154466",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_edaa58bb": {
+    "record_id": "cons_edaa58bb",
+    "node_id": "en_2_018",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.154538",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_78939109": {
+    "record_id": "cons_78939109",
+    "node_id": "en_2_019",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.154614",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_95b90b14": {
+    "record_id": "cons_95b90b14",
+    "node_id": "en_2_020",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.154685",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_72806777": {
+    "record_id": "cons_72806777",
+    "node_id": "en_2_021",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.154760",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_aa4beff6": {
+    "record_id": "cons_aa4beff6",
+    "node_id": "en_2_022",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.154830",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f41efe38": {
+    "record_id": "cons_f41efe38",
+    "node_id": "en_2_023",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.154922",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_ca6a62fe": {
+    "record_id": "cons_ca6a62fe",
+    "node_id": "en_2_024",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.154996",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_46eadc49": {
+    "record_id": "cons_46eadc49",
+    "node_id": "en_2_025",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.155070",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_39e26a3c": {
+    "record_id": "cons_39e26a3c",
+    "node_id": "en_2_026",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.155144",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_2a9e952d": {
+    "record_id": "cons_2a9e952d",
+    "node_id": "en_2_027",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.155225",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_d7107af2": {
+    "record_id": "cons_d7107af2",
+    "node_id": "en_2_028",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.155301",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_57b51d08": {
+    "record_id": "cons_57b51d08",
+    "node_id": "en_2_029",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.155378",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_71015fbe": {
+    "record_id": "cons_71015fbe",
+    "node_id": "en_2_030",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.155456",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_3a87e7a4": {
+    "record_id": "cons_3a87e7a4",
+    "node_id": "en_2_031",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.155531",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_bbb8b1d9": {
+    "record_id": "cons_bbb8b1d9",
+    "node_id": "en_2_032",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.155609",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_c33d5991": {
+    "record_id": "cons_c33d5991",
+    "node_id": "en_2_033",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.155680",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_ed38addb": {
+    "record_id": "cons_ed38addb",
+    "node_id": "en_2_034",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.155752",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_755085fd": {
+    "record_id": "cons_755085fd",
+    "node_id": "en_2_035",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.155824",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_aa62c050": {
+    "record_id": "cons_aa62c050",
+    "node_id": "en_2_036",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.155903",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_d2657c66": {
+    "record_id": "cons_d2657c66",
+    "node_id": "en_2_037",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.155981",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_0fc9f670": {
+    "record_id": "cons_0fc9f670",
+    "node_id": "en_2_038",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.156054",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_1cef913b": {
+    "record_id": "cons_1cef913b",
+    "node_id": "en_2_039",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.156128",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_5b35905f": {
+    "record_id": "cons_5b35905f",
+    "node_id": "en_2_040",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.156214",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_608ed826": {
+    "record_id": "cons_608ed826",
+    "node_id": "en_2_041",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.156289",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_6705dd18": {
+    "record_id": "cons_6705dd18",
+    "node_id": "en_2_042",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.156367",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_9d760394": {
+    "record_id": "cons_9d760394",
+    "node_id": "en_2_043",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.156443",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_49592fa6": {
+    "record_id": "cons_49592fa6",
+    "node_id": "en_2_044",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.156516",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_ad7ab75e": {
+    "record_id": "cons_ad7ab75e",
+    "node_id": "en_2_045",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.156588",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_504be4f4": {
+    "record_id": "cons_504be4f4",
+    "node_id": "en_2_046",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.156660",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_81e61c49": {
+    "record_id": "cons_81e61c49",
+    "node_id": "en_2_047",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.156733",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_7d1e64d6": {
+    "record_id": "cons_7d1e64d6",
+    "node_id": "en_2_048",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.156805",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_60db0903": {
+    "record_id": "cons_60db0903",
+    "node_id": "en_2_049",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.156883",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_98517371": {
+    "record_id": "cons_98517371",
+    "node_id": "en_2_050",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.156963",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_fcf1a3a8": {
+    "record_id": "cons_fcf1a3a8",
+    "node_id": "en_2_051",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.157035",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_61d44e9f": {
+    "record_id": "cons_61d44e9f",
+    "node_id": "en_2_052",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.157105",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_90620014": {
+    "record_id": "cons_90620014",
+    "node_id": "en_2_053",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.157178",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_1bd35e12": {
+    "record_id": "cons_1bd35e12",
+    "node_id": "en_2_054",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.157258",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_1e3a68d4": {
+    "record_id": "cons_1e3a68d4",
+    "node_id": "en_2_055",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.157335",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_dfc0d9e7": {
+    "record_id": "cons_dfc0d9e7",
+    "node_id": "en_2_056",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.157409",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_a9670ee8": {
+    "record_id": "cons_a9670ee8",
+    "node_id": "en_2_057",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.157486",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_40744017": {
+    "record_id": "cons_40744017",
+    "node_id": "en_2_058",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.157560",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_aca7ed9b": {
+    "record_id": "cons_aca7ed9b",
+    "node_id": "en_2_059",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.157633",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_8fb03daa": {
+    "record_id": "cons_8fb03daa",
+    "node_id": "en_2_060",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.157704",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_d6c153fc": {
+    "record_id": "cons_d6c153fc",
+    "node_id": "en_2_061",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.157776",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_6b664181": {
+    "record_id": "cons_6b664181",
+    "node_id": "en_2_062",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.157854",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_ea3a8f5e": {
+    "record_id": "cons_ea3a8f5e",
+    "node_id": "en_2_063",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.157930",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_1f69be08": {
+    "record_id": "cons_1f69be08",
+    "node_id": "en_2_064",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.158001",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_9e1cf242": {
+    "record_id": "cons_9e1cf242",
+    "node_id": "en_2_065",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.158075",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_6c59d741": {
+    "record_id": "cons_6c59d741",
+    "node_id": "en_2_066",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.158150",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f6a45593": {
+    "record_id": "cons_f6a45593",
+    "node_id": "en_2_067",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.158241",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_5b63549b": {
+    "record_id": "cons_5b63549b",
+    "node_id": "en_2_068",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.158320",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_87e56fd3": {
+    "record_id": "cons_87e56fd3",
+    "node_id": "en_2_069",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.158399",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_13b820bf": {
+    "record_id": "cons_13b820bf",
+    "node_id": "en_2_070",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.158521",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_7ac0134f": {
+    "record_id": "cons_7ac0134f",
+    "node_id": "en_2_071",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.158602",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_c6418f34": {
+    "record_id": "cons_c6418f34",
+    "node_id": "en_2_072",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.158677",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_4334892a": {
+    "record_id": "cons_4334892a",
+    "node_id": "en_2_073",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.158757",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_416b9099": {
+    "record_id": "cons_416b9099",
+    "node_id": "en_2_074",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.158839",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_94c1eeba": {
+    "record_id": "cons_94c1eeba",
+    "node_id": "en_2_075",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.158925",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_5641fad6": {
+    "record_id": "cons_5641fad6",
+    "node_id": "en_2_076",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.159001",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_42031ec4": {
+    "record_id": "cons_42031ec4",
+    "node_id": "en_2_077",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.159074",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_0bc05a4a": {
+    "record_id": "cons_0bc05a4a",
+    "node_id": "en_2_078",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.159146",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f4ed17e0": {
+    "record_id": "cons_f4ed17e0",
+    "node_id": "en_2_079",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.159230",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_e1ae91d3": {
+    "record_id": "cons_e1ae91d3",
+    "node_id": "en_2_080",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.159305",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_84763265": {
+    "record_id": "cons_84763265",
+    "node_id": "en_2_081",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.159380",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f7d77be2": {
+    "record_id": "cons_f7d77be2",
+    "node_id": "en_2_082",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.159451",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_dbc75f62": {
+    "record_id": "cons_dbc75f62",
+    "node_id": "en_2_083",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.159528",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_940c51a9": {
+    "record_id": "cons_940c51a9",
+    "node_id": "en_2_084",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.159602",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_265cced5": {
+    "record_id": "cons_265cced5",
+    "node_id": "en_2_085",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.159676",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_2ded7ac8": {
+    "record_id": "cons_2ded7ac8",
+    "node_id": "en_2_086",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.159749",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_1855e58b": {
+    "record_id": "cons_1855e58b",
+    "node_id": "en_2_087",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.159825",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f6c6fa64": {
+    "record_id": "cons_f6c6fa64",
+    "node_id": "en_2_088",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.159907",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_6e6243b5": {
+    "record_id": "cons_6e6243b5",
+    "node_id": "en_2_089",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.159983",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_96932dc9": {
+    "record_id": "cons_96932dc9",
+    "node_id": "en_2_090",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.160056",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_c5a36ce5": {
+    "record_id": "cons_c5a36ce5",
+    "node_id": "en_2_091",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.160141",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_fea3f685": {
+    "record_id": "cons_fea3f685",
+    "node_id": "en_2_092",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.160225",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_dd82bfae": {
+    "record_id": "cons_dd82bfae",
+    "node_id": "en_2_093",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.160300",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_7832c7a5": {
+    "record_id": "cons_7832c7a5",
+    "node_id": "en_2_094",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.160374",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_2d396615": {
+    "record_id": "cons_2d396615",
+    "node_id": "en_2_095",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.160446",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_c33a534a": {
+    "record_id": "cons_c33a534a",
+    "node_id": "en_2_096",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.160520",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_dd2cb30b": {
+    "record_id": "cons_dd2cb30b",
+    "node_id": "en_2_097",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.160593",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f4d692bb": {
+    "record_id": "cons_f4d692bb",
+    "node_id": "en_2_098",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.160667",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_91214f39": {
+    "record_id": "cons_91214f39",
+    "node_id": "en_2_099",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.160738",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_55ea837e": {
+    "record_id": "cons_55ea837e",
+    "node_id": "en_2_100",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.160810",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_3bd51589": {
+    "record_id": "cons_3bd51589",
+    "node_id": "en_2_101",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.160895",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_60fa1c3c": {
+    "record_id": "cons_60fa1c3c",
+    "node_id": "en_2_102",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.160966",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_053897fd": {
+    "record_id": "cons_053897fd",
+    "node_id": "en_2_103",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.161039",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_b8e87216": {
+    "record_id": "cons_b8e87216",
+    "node_id": "en_2_104",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.161130",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_44f531dc": {
+    "record_id": "cons_44f531dc",
+    "node_id": "en_2_105",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.161210",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f57285af": {
+    "record_id": "cons_f57285af",
+    "node_id": "en_2_106",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.161286",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_8ad2f531": {
+    "record_id": "cons_8ad2f531",
+    "node_id": "en_2_107",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.161359",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_4db78e31": {
+    "record_id": "cons_4db78e31",
+    "node_id": "en_2_108",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.161431",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_1fc7efaf": {
+    "record_id": "cons_1fc7efaf",
+    "node_id": "en_2_109",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.161504",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_e7f2d4ce": {
+    "record_id": "cons_e7f2d4ce",
+    "node_id": "en_2_110",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.161581",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_bf2b8543": {
+    "record_id": "cons_bf2b8543",
+    "node_id": "en_2_111",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.161659",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_13919156": {
+    "record_id": "cons_13919156",
+    "node_id": "en_2_112",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.161732",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f54692cf": {
+    "record_id": "cons_f54692cf",
+    "node_id": "en_2_113",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.161803",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_a0cd09e8": {
+    "record_id": "cons_a0cd09e8",
+    "node_id": "en_2_114",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.161886",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_625a4db4": {
+    "record_id": "cons_625a4db4",
+    "node_id": "en_2_115",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.161959",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_44479023": {
+    "record_id": "cons_44479023",
+    "node_id": "en_2_116",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.162034",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_3c164078": {
+    "record_id": "cons_3c164078",
+    "node_id": "en_2_117",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.162107",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_3050ce7e": {
+    "record_id": "cons_3050ce7e",
+    "node_id": "en_2_118",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.162180",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_b20de0dc": {
+    "record_id": "cons_b20de0dc",
+    "node_id": "en_2_119",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.162263",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_026481b1": {
+    "record_id": "cons_026481b1",
+    "node_id": "en_2_120",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.162340",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_9af31cca": {
+    "record_id": "cons_9af31cca",
+    "node_id": "en_2_121",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.162411",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_760fe3ee": {
+    "record_id": "cons_760fe3ee",
+    "node_id": "en_2_122",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.162489",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_be3ca198": {
+    "record_id": "cons_be3ca198",
+    "node_id": "en_2_123",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.162561",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_41d46e8d": {
+    "record_id": "cons_41d46e8d",
+    "node_id": "en_2_124",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.162633",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_5e9a2bd0": {
+    "record_id": "cons_5e9a2bd0",
+    "node_id": "en_2_125",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.162704",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_85d0da8a": {
+    "record_id": "cons_85d0da8a",
+    "node_id": "en_2_126",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.162776",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_859d3c12": {
+    "record_id": "cons_859d3c12",
+    "node_id": "en_2_127",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.162858",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_53c46b97": {
+    "record_id": "cons_53c46b97",
+    "node_id": "en_2_128",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.162938",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_1fb0c589": {
+    "record_id": "cons_1fb0c589",
+    "node_id": "en_2_129",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.163012",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f575e455": {
+    "record_id": "cons_f575e455",
+    "node_id": "en_2_130",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.163087",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_77c4a43f": {
+    "record_id": "cons_77c4a43f",
+    "node_id": "en_2_131",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.163160",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_c8dde2b6": {
+    "record_id": "cons_c8dde2b6",
+    "node_id": "en_2_132",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.163244",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_113e1555": {
+    "record_id": "cons_113e1555",
+    "node_id": "en_2_133",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.163316",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_1933fcac": {
+    "record_id": "cons_1933fcac",
+    "node_id": "en_2_134",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.163389",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_4c267175": {
+    "record_id": "cons_4c267175",
+    "node_id": "en_2_135",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.163462",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_ae48038d": {
+    "record_id": "cons_ae48038d",
+    "node_id": "en_2_136",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.163533",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f2c7b057": {
+    "record_id": "cons_f2c7b057",
+    "node_id": "en_2_137",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.163604",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_6bfdc224": {
+    "record_id": "cons_6bfdc224",
+    "node_id": "en_2_138",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.163680",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_29bf8dd5": {
+    "record_id": "cons_29bf8dd5",
+    "node_id": "en_2_139",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.163756",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_c2a5f378": {
+    "record_id": "cons_c2a5f378",
+    "node_id": "en_2_140",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.163843",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_5577a6f5": {
+    "record_id": "cons_5577a6f5",
+    "node_id": "en_2_141",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.163926",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_9ade8b3b": {
+    "record_id": "cons_9ade8b3b",
+    "node_id": "en_2_142",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.163997",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_028afbf4": {
+    "record_id": "cons_028afbf4",
+    "node_id": "en_2_143",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.164072",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_6af7a127": {
+    "record_id": "cons_6af7a127",
+    "node_id": "en_2_144",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.164145",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_c970174e": {
+    "record_id": "cons_c970174e",
+    "node_id": "en_2_145",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.164228",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_ee40d8aa": {
+    "record_id": "cons_ee40d8aa",
+    "node_id": "en_2_146",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.164303",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_cb0a07be": {
+    "record_id": "cons_cb0a07be",
+    "node_id": "en_2_147",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.164377",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_53dfb0b2": {
+    "record_id": "cons_53dfb0b2",
+    "node_id": "en_2_148",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.164454",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_15b2b109": {
+    "record_id": "cons_15b2b109",
+    "node_id": "en_2_149",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.164528",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_24069fa4": {
+    "record_id": "cons_24069fa4",
+    "node_id": "en_2_150",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.164603",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_a11741e2": {
+    "record_id": "cons_a11741e2",
+    "node_id": "en_2_151",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.164677",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_922f9623": {
+    "record_id": "cons_922f9623",
+    "node_id": "en_2_152",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.164750",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_efceba56": {
+    "record_id": "cons_efceba56",
+    "node_id": "en_2_153",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.164824",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_27226ecd": {
+    "record_id": "cons_27226ecd",
+    "node_id": "en_2_154",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.164907",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_c243670e": {
+    "record_id": "cons_c243670e",
+    "node_id": "en_2_155",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.164983",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_601f4a58": {
+    "record_id": "cons_601f4a58",
+    "node_id": "en_2_156",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.165062",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_ece5ae23": {
+    "record_id": "cons_ece5ae23",
+    "node_id": "en_2_157",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.165137",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_46ab72fe": {
+    "record_id": "cons_46ab72fe",
+    "node_id": "en_2_158",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.165219",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_7101e489": {
+    "record_id": "cons_7101e489",
+    "node_id": "en_2_159",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.165295",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_7ddfd56e": {
+    "record_id": "cons_7ddfd56e",
+    "node_id": "en_2_160",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.165370",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_b6f726d6": {
+    "record_id": "cons_b6f726d6",
+    "node_id": "en_2_161",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.165442",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_833efbdd": {
+    "record_id": "cons_833efbdd",
+    "node_id": "en_2_162",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.165515",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f4d55e1d": {
+    "record_id": "cons_f4d55e1d",
+    "node_id": "en_2_163",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.165592",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_28d692cc": {
+    "record_id": "cons_28d692cc",
+    "node_id": "en_2_164",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.165679",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_bac78ce7": {
+    "record_id": "cons_bac78ce7",
+    "node_id": "en_2_165",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.165751",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_6115ac08": {
+    "record_id": "cons_6115ac08",
+    "node_id": "en_2_166",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.165824",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f4a7b6dd": {
+    "record_id": "cons_f4a7b6dd",
+    "node_id": "en_2_167",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.165908",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_272d4d88": {
+    "record_id": "cons_272d4d88",
+    "node_id": "en_2_168",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.165982",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_fdcb2aa2": {
+    "record_id": "cons_fdcb2aa2",
+    "node_id": "en_2_169",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.166057",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_054bd141": {
+    "record_id": "cons_054bd141",
+    "node_id": "en_2_170",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.166129",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_d756a1e6": {
+    "record_id": "cons_d756a1e6",
+    "node_id": "en_2_171",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.166207",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_e5a936a8": {
+    "record_id": "cons_e5a936a8",
+    "node_id": "en_2_172",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.166289",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_c5a58ebc": {
+    "record_id": "cons_c5a58ebc",
+    "node_id": "en_2_173",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.166363",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_e26eb4a6": {
+    "record_id": "cons_e26eb4a6",
+    "node_id": "en_2_174",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.166441",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_25a478ed": {
+    "record_id": "cons_25a478ed",
+    "node_id": "en_2_175",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.166513",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_193dfac7": {
+    "record_id": "cons_193dfac7",
+    "node_id": "en_2_176",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.166586",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_59a02eaf": {
+    "record_id": "cons_59a02eaf",
+    "node_id": "en_2_177",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.166660",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_92997a93": {
+    "record_id": "cons_92997a93",
+    "node_id": "en_2_178",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.166732",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_47dcf11e": {
+    "record_id": "cons_47dcf11e",
+    "node_id": "en_2_179",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.166803",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_0f66cf3e": {
+    "record_id": "cons_0f66cf3e",
+    "node_id": "en_2_180",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.166888",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_e250d91b": {
+    "record_id": "cons_e250d91b",
+    "node_id": "en_2_181",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.166965",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_244b1aad": {
+    "record_id": "cons_244b1aad",
+    "node_id": "en_2_182",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.167039",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_156350a7": {
+    "record_id": "cons_156350a7",
+    "node_id": "en_2_183",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.167110",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_0ae6ebbb": {
+    "record_id": "cons_0ae6ebbb",
+    "node_id": "en_2_184",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.167182",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_10756bbb": {
+    "record_id": "cons_10756bbb",
+    "node_id": "en_2_185",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.167263",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_1b468d71": {
+    "record_id": "cons_1b468d71",
+    "node_id": "en_2_186",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.167336",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_1fefdef7": {
+    "record_id": "cons_1fefdef7",
+    "node_id": "en_2_187",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.167408",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_bfd00b1f": {
+    "record_id": "cons_bfd00b1f",
+    "node_id": "en_2_188",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.167481",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_e500bcf4": {
+    "record_id": "cons_e500bcf4",
+    "node_id": "en_2_189",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.167553",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_ac285530": {
+    "record_id": "cons_ac285530",
+    "node_id": "en_2_190",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.167626",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f2217a67": {
+    "record_id": "cons_f2217a67",
+    "node_id": "en_2_191",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.167698",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_eed0206d": {
+    "record_id": "cons_eed0206d",
+    "node_id": "en_2_192",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.167773",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_dca43a3d": {
+    "record_id": "cons_dca43a3d",
+    "node_id": "en_2_193",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.167844",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_2d009fa4": {
+    "record_id": "cons_2d009fa4",
+    "node_id": "en_2_194",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.167929",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_45e6c3ae": {
+    "record_id": "cons_45e6c3ae",
+    "node_id": "en_2_195",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.168007",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_9770fafb": {
+    "record_id": "cons_9770fafb",
+    "node_id": "en_2_196",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.168084",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_3618eca2": {
+    "record_id": "cons_3618eca2",
+    "node_id": "en_2_197",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.168159",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_f6a09ff4": {
+    "record_id": "cons_f6a09ff4",
+    "node_id": "en_2_198",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.168239",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_3a775e9b": {
+    "record_id": "cons_3a775e9b",
+    "node_id": "en_2_199",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.168322",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_fd894799": {
+    "record_id": "cons_fd894799",
+    "node_id": "en_2_200",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.168399",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_0fb94e43": {
+    "record_id": "cons_0fb94e43",
+    "node_id": "en_2_201",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.168473",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_a55aab35": {
+    "record_id": "cons_a55aab35",
+    "node_id": "en_2_202",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.168555",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_1e008cf5": {
+    "record_id": "cons_1e008cf5",
+    "node_id": "en_2_203",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.168665",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_4eef570b": {
+    "record_id": "cons_4eef570b",
+    "node_id": "en_2_204",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.168742",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_abf887eb": {
+    "record_id": "cons_abf887eb",
+    "node_id": "en_2_205",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.168817",
+    "validation_score": 1.0,
+    "source": "curriculum/english/batch_2_words_enhanced.json",
+    "notes": ""
+  },
+  "cons_01eb4f10": {
+    "record_id": "cons_01eb4f10",
+    "node_id": "node_b6a55e19",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.169039",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_6c748e9b": {
+    "record_id": "cons_6c748e9b",
+    "node_id": "node_20db30bc",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.169118",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_54190932": {
+    "record_id": "cons_54190932",
+    "node_id": "node_affc6e9a",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.169213",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_5805c736": {
+    "record_id": "cons_5805c736",
+    "node_id": "node_b27a98b4",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.169288",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_e90f40d5": {
+    "record_id": "cons_e90f40d5",
+    "node_id": "node_dbd43439",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.169367",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_26132687": {
+    "record_id": "cons_26132687",
+    "node_id": "node_cdc9f4c7",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.169446",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_1b173a59": {
+    "record_id": "cons_1b173a59",
+    "node_id": "node_0d8230f8",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.169520",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_3f428bb4": {
+    "record_id": "cons_3f428bb4",
+    "node_id": "node_4de27a80",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.169594",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_7ffed155": {
+    "record_id": "cons_7ffed155",
+    "node_id": "node_4629fa39",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.169668",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_33f92672": {
+    "record_id": "cons_33f92672",
+    "node_id": "node_69535839",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.169741",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_d463705e": {
+    "record_id": "cons_d463705e",
+    "node_id": "node_078b5452",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.169818",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_1b46abb7": {
+    "record_id": "cons_1b46abb7",
+    "node_id": "node_7a522e05",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.169904",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_1d6ac13d": {
+    "record_id": "cons_1d6ac13d",
+    "node_id": "node_b1853b5d",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.169981",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_07665729": {
+    "record_id": "cons_07665729",
+    "node_id": "node_9bfd873c",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.170059",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_d97add79": {
+    "record_id": "cons_d97add79",
+    "node_id": "node_287551f9",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.170142",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_128f48dd": {
+    "record_id": "cons_128f48dd",
+    "node_id": "node_63c8ccf5",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.170227",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_0d4c3617": {
+    "record_id": "cons_0d4c3617",
+    "node_id": "node_dd8a2a59",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.170304",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_b27bf6da": {
+    "record_id": "cons_b27bf6da",
+    "node_id": "node_cf625a10",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.170381",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_a440d943": {
+    "record_id": "cons_a440d943",
+    "node_id": "node_f7ebcb88",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.170459",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_e45c79c9": {
+    "record_id": "cons_e45c79c9",
+    "node_id": "node_8dde9009",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.170533",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/python_01_basics.json",
+    "notes": ""
+  },
+  "cons_b520c084": {
+    "record_id": "cons_b520c084",
+    "node_id": "py_2_001",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.170831",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_08f67a7f": {
+    "record_id": "cons_08f67a7f",
+    "node_id": "py_2_002",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.170925",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_3d27df75": {
+    "record_id": "cons_3d27df75",
+    "node_id": "py_2_003",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.171008",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_fcd0c494": {
+    "record_id": "cons_fcd0c494",
+    "node_id": "py_2_004",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.171082",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_5af9d136": {
+    "record_id": "cons_5af9d136",
+    "node_id": "py_2_005",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.171157",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_1d1616c3": {
+    "record_id": "cons_1d1616c3",
+    "node_id": "py_2_006",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.171247",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_112df561": {
+    "record_id": "cons_112df561",
+    "node_id": "py_2_007",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.171321",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_72b8be5d": {
+    "record_id": "cons_72b8be5d",
+    "node_id": "py_2_008",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.171395",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_aababc19": {
+    "record_id": "cons_aababc19",
+    "node_id": "py_2_009",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.171470",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_e081f1d8": {
+    "record_id": "cons_e081f1d8",
+    "node_id": "py_2_010",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.171544",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_14c0a5c1": {
+    "record_id": "cons_14c0a5c1",
+    "node_id": "py_2_011",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.171620",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_2fc6e4c8": {
+    "record_id": "cons_2fc6e4c8",
+    "node_id": "py_2_012",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.171704",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_7ecdefed": {
+    "record_id": "cons_7ecdefed",
+    "node_id": "py_2_013",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.171780",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_eb8b98b5": {
+    "record_id": "cons_eb8b98b5",
+    "node_id": "py_2_014",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.171864",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_f7a63add": {
+    "record_id": "cons_f7a63add",
+    "node_id": "py_2_015",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.171946",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_ec497251": {
+    "record_id": "cons_ec497251",
+    "node_id": "py_2_016",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.172020",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_ad92ff8b": {
+    "record_id": "cons_ad92ff8b",
+    "node_id": "py_2_017",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.172096",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_c922ed13": {
+    "record_id": "cons_c922ed13",
+    "node_id": "py_2_018",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.172169",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_5a12b32c": {
+    "record_id": "cons_5a12b32c",
+    "node_id": "py_2_019",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.172258",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_3f4bd31b": {
+    "record_id": "cons_3f4bd31b",
+    "node_id": "py_2_020",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.172333",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_417674ae": {
+    "record_id": "cons_417674ae",
+    "node_id": "py_2_021",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.172410",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_1bbd6fe8": {
+    "record_id": "cons_1bbd6fe8",
+    "node_id": "py_2_022",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.172488",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_eaabc695": {
+    "record_id": "cons_eaabc695",
+    "node_id": "py_2_023",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.172581",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_1d9973b5": {
+    "record_id": "cons_1d9973b5",
+    "node_id": "py_2_024",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.172655",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_83e917ac": {
+    "record_id": "cons_83e917ac",
+    "node_id": "py_2_025",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.172729",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_a0bff454": {
+    "record_id": "cons_a0bff454",
+    "node_id": "py_2_026",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.172804",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_a76f6a6f": {
+    "record_id": "cons_a76f6a6f",
+    "node_id": "py_2_027",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.172887",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_65c9b68f": {
+    "record_id": "cons_65c9b68f",
+    "node_id": "py_2_028",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.172963",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_de7623b5": {
+    "record_id": "cons_de7623b5",
+    "node_id": "py_2_029",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.173038",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_93af1903": {
+    "record_id": "cons_93af1903",
+    "node_id": "py_2_030",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.173114",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_5928ceb2": {
+    "record_id": "cons_5928ceb2",
+    "node_id": "py_2_031",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.173190",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_b846043e": {
+    "record_id": "cons_b846043e",
+    "node_id": "py_2_032",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.173277",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_af654395": {
+    "record_id": "cons_af654395",
+    "node_id": "py_2_033",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.173354",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_b5d67578": {
+    "record_id": "cons_b5d67578",
+    "node_id": "py_2_034",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.173429",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_bf54c7a0": {
+    "record_id": "cons_bf54c7a0",
+    "node_id": "py_2_035",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.173505",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_a26b41bc": {
+    "record_id": "cons_a26b41bc",
+    "node_id": "py_2_036",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.173582",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_4f942fd5": {
+    "record_id": "cons_4f942fd5",
+    "node_id": "py_2_037",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.173657",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_8908f031": {
+    "record_id": "cons_8908f031",
+    "node_id": "py_2_038",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.173729",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_b5fc4909": {
+    "record_id": "cons_b5fc4909",
+    "node_id": "py_2_039",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.173807",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_30d471e8": {
+    "record_id": "cons_30d471e8",
+    "node_id": "py_2_040",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.173894",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_27df6ec7": {
+    "record_id": "cons_27df6ec7",
+    "node_id": "py_2_041",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.173974",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_c5f2f1ab": {
+    "record_id": "cons_c5f2f1ab",
+    "node_id": "py_2_042",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.174048",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_550504c5": {
+    "record_id": "cons_550504c5",
+    "node_id": "py_2_043",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.174122",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_ffb94e81": {
+    "record_id": "cons_ffb94e81",
+    "node_id": "py_2_044",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.174196",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_6b1f9e53": {
+    "record_id": "cons_6b1f9e53",
+    "node_id": "py_2_045",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.174283",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_277d1a5f": {
+    "record_id": "cons_277d1a5f",
+    "node_id": "py_2_046",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.174356",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_d382b54d": {
+    "record_id": "cons_d382b54d",
+    "node_id": "py_2_047",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.174431",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_3d87fb74": {
+    "record_id": "cons_3d87fb74",
+    "node_id": "py_2_048",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.174509",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_ed761f28": {
+    "record_id": "cons_ed761f28",
+    "node_id": "py_2_049",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.174583",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_6a98d6de": {
+    "record_id": "cons_6a98d6de",
+    "node_id": "py_2_050",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.174657",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_a448c5a9": {
+    "record_id": "cons_a448c5a9",
+    "node_id": "py_2_051",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.174732",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_202d6d0e": {
+    "record_id": "cons_202d6d0e",
+    "node_id": "py_2_052",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.174806",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_4cfe5b22": {
+    "record_id": "cons_4cfe5b22",
+    "node_id": "py_2_053",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.174891",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_b1705510": {
+    "record_id": "cons_b1705510",
+    "node_id": "py_2_054",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.174967",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_e8983362": {
+    "record_id": "cons_e8983362",
+    "node_id": "py_2_055",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.175042",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_6651f0ba": {
+    "record_id": "cons_6651f0ba",
+    "node_id": "py_2_056",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.175118",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_81f3388a": {
+    "record_id": "cons_81f3388a",
+    "node_id": "py_2_057",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.175203",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_2a908c78": {
+    "record_id": "cons_2a908c78",
+    "node_id": "py_2_058",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.175283",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_6e7d2723": {
+    "record_id": "cons_6e7d2723",
+    "node_id": "py_2_059",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.175359",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_bfccd079": {
+    "record_id": "cons_bfccd079",
+    "node_id": "py_2_060",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.175433",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_a79146dd": {
+    "record_id": "cons_a79146dd",
+    "node_id": "py_2_061",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.175507",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_43f02eb5": {
+    "record_id": "cons_43f02eb5",
+    "node_id": "py_2_062",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.175581",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_c4dab3dc": {
+    "record_id": "cons_c4dab3dc",
+    "node_id": "py_2_063",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.175660",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_954caa92": {
+    "record_id": "cons_954caa92",
+    "node_id": "py_2_064",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.175737",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_dff59f81": {
+    "record_id": "cons_dff59f81",
+    "node_id": "py_2_065",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.175818",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_fe356d36": {
+    "record_id": "cons_fe356d36",
+    "node_id": "py_2_066",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.175903",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_c58b5156": {
+    "record_id": "cons_c58b5156",
+    "node_id": "py_2_067",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.175982",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_79afe7f3": {
+    "record_id": "cons_79afe7f3",
+    "node_id": "py_2_068",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.176059",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_d1f5bb7f": {
+    "record_id": "cons_d1f5bb7f",
+    "node_id": "py_2_069",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.176138",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_5ac6dacf": {
+    "record_id": "cons_5ac6dacf",
+    "node_id": "py_2_070",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.176223",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_74da7e58": {
+    "record_id": "cons_74da7e58",
+    "node_id": "py_2_071",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.176301",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_dfc86190": {
+    "record_id": "cons_dfc86190",
+    "node_id": "py_2_072",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.176375",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_437baf2c": {
+    "record_id": "cons_437baf2c",
+    "node_id": "py_2_073",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.176449",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_7986c30f": {
+    "record_id": "cons_7986c30f",
+    "node_id": "py_2_074",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.176522",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_2c8a1bc6": {
+    "record_id": "cons_2c8a1bc6",
+    "node_id": "py_2_075",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.176596",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_62c931c2": {
+    "record_id": "cons_62c931c2",
+    "node_id": "py_2_076",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.176675",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_7f101cae": {
+    "record_id": "cons_7f101cae",
+    "node_id": "py_2_077",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.176750",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_02def32e": {
+    "record_id": "cons_02def32e",
+    "node_id": "py_2_078",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.176827",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_f8961795": {
+    "record_id": "cons_f8961795",
+    "node_id": "py_2_079",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.176912",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_95157fd9": {
+    "record_id": "cons_95157fd9",
+    "node_id": "py_2_080",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.176988",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_b92dcd65": {
+    "record_id": "cons_b92dcd65",
+    "node_id": "py_2_081",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.177064",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_6541e96c": {
+    "record_id": "cons_6541e96c",
+    "node_id": "py_2_082",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.177139",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_45945cc3": {
+    "record_id": "cons_45945cc3",
+    "node_id": "py_2_083",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.177223",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_6c35dc6f": {
+    "record_id": "cons_6c35dc6f",
+    "node_id": "py_2_084",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.177299",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_b2e0191d": {
+    "record_id": "cons_b2e0191d",
+    "node_id": "py_2_085",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.177378",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_66351a18": {
+    "record_id": "cons_66351a18",
+    "node_id": "py_2_086",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.177452",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_2ac702ad": {
+    "record_id": "cons_2ac702ad",
+    "node_id": "py_2_087",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.177527",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_534268e4": {
+    "record_id": "cons_534268e4",
+    "node_id": "py_2_088",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.177603",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_984c4709": {
+    "record_id": "cons_984c4709",
+    "node_id": "py_2_089",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.177678",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_96b641b4": {
+    "record_id": "cons_96b641b4",
+    "node_id": "py_2_090",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.177752",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_ba8bc2f8": {
+    "record_id": "cons_ba8bc2f8",
+    "node_id": "py_2_091",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.177824",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_c5943436": {
+    "record_id": "cons_c5943436",
+    "node_id": "py_2_092",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.177908",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_10fdbc51": {
+    "record_id": "cons_10fdbc51",
+    "node_id": "py_2_093",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.177986",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_ffd34c7c": {
+    "record_id": "cons_ffd34c7c",
+    "node_id": "py_2_094",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.178063",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_146ac1b4": {
+    "record_id": "cons_146ac1b4",
+    "node_id": "py_2_095",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.178139",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_84166bec": {
+    "record_id": "cons_84166bec",
+    "node_id": "py_2_096",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.178230",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_e17437e4": {
+    "record_id": "cons_e17437e4",
+    "node_id": "py_2_097",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.178307",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_2cf89ef9": {
+    "record_id": "cons_2cf89ef9",
+    "node_id": "py_2_098",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.178420",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_e2d1bfb4": {
+    "record_id": "cons_e2d1bfb4",
+    "node_id": "py_2_099",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.178497",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_3bc09037": {
+    "record_id": "cons_3bc09037",
+    "node_id": "py_2_100",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.178572",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_2_python_patterns.json",
+    "notes": ""
+  },
+  "cons_4980fbe8": {
+    "record_id": "cons_4980fbe8",
+    "node_id": "py_3_001",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.178963",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_b631bffa": {
+    "record_id": "cons_b631bffa",
+    "node_id": "py_3_002",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.179043",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_db891802": {
+    "record_id": "cons_db891802",
+    "node_id": "py_3_003",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.179128",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_fb0fd5e3": {
+    "record_id": "cons_fb0fd5e3",
+    "node_id": "py_3_004",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.179214",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_db782142": {
+    "record_id": "cons_db782142",
+    "node_id": "py_3_005",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.179293",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_15ef311b": {
+    "record_id": "cons_15ef311b",
+    "node_id": "py_3_006",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.179368",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_4fb447ec": {
+    "record_id": "cons_4fb447ec",
+    "node_id": "py_3_007",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.179444",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_ad3c2a04": {
+    "record_id": "cons_ad3c2a04",
+    "node_id": "py_3_008",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.179518",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_bc5a4938": {
+    "record_id": "cons_bc5a4938",
+    "node_id": "py_3_009",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.179598",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_48e62254": {
+    "record_id": "cons_48e62254",
+    "node_id": "py_3_010",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.179672",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_f61abfcb": {
+    "record_id": "cons_f61abfcb",
+    "node_id": "py_3_011",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.179749",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_58c5c300": {
+    "record_id": "cons_58c5c300",
+    "node_id": "py_3_012",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.179826",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_e2a8fe47": {
+    "record_id": "cons_e2a8fe47",
+    "node_id": "py_3_013",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.179912",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_747576a3": {
+    "record_id": "cons_747576a3",
+    "node_id": "py_3_014",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.179992",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_4a981624": {
+    "record_id": "cons_4a981624",
+    "node_id": "py_3_015",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.180069",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_2ec51c0e": {
+    "record_id": "cons_2ec51c0e",
+    "node_id": "py_3_016",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.180144",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_d4ddf2e4": {
+    "record_id": "cons_d4ddf2e4",
+    "node_id": "py_3_017",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.180236",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_722461c6": {
+    "record_id": "cons_722461c6",
+    "node_id": "py_3_018",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.180314",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_61074330": {
+    "record_id": "cons_61074330",
+    "node_id": "py_3_019",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.180387",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_a5b10cb2": {
+    "record_id": "cons_a5b10cb2",
+    "node_id": "py_3_020",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.180463",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_aeae04f7": {
+    "record_id": "cons_aeae04f7",
+    "node_id": "py_3_021",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.180541",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_893c7af7": {
+    "record_id": "cons_893c7af7",
+    "node_id": "py_3_022",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.180616",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_c4516c67": {
+    "record_id": "cons_c4516c67",
+    "node_id": "py_3_023",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.180692",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_d7fe8439": {
+    "record_id": "cons_d7fe8439",
+    "node_id": "py_3_024",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.180764",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_87081a8d": {
+    "record_id": "cons_87081a8d",
+    "node_id": "py_3_025",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.180838",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_07c8801f": {
+    "record_id": "cons_07c8801f",
+    "node_id": "py_3_026",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.180925",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_27535966": {
+    "record_id": "cons_27535966",
+    "node_id": "py_3_027",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.181004",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_36d18c3f": {
+    "record_id": "cons_36d18c3f",
+    "node_id": "py_3_028",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.181078",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_47ee3154": {
+    "record_id": "cons_47ee3154",
+    "node_id": "py_3_029",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.181150",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_8dc52951": {
+    "record_id": "cons_8dc52951",
+    "node_id": "py_3_030",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.181235",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_521d47d7": {
+    "record_id": "cons_521d47d7",
+    "node_id": "py_3_031",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.181315",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_9c6c215e": {
+    "record_id": "cons_9c6c215e",
+    "node_id": "py_3_032",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.181391",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_dc267b97": {
+    "record_id": "cons_dc267b97",
+    "node_id": "py_3_033",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.181467",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_ed7e75a0": {
+    "record_id": "cons_ed7e75a0",
+    "node_id": "py_3_034",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.181549",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_8c3ebc08": {
+    "record_id": "cons_8c3ebc08",
+    "node_id": "py_3_035",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.181625",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_8382628a": {
+    "record_id": "cons_8382628a",
+    "node_id": "py_3_036",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.181703",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_d76bfa01": {
+    "record_id": "cons_d76bfa01",
+    "node_id": "py_3_037",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.181786",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_b17271df": {
+    "record_id": "cons_b17271df",
+    "node_id": "py_3_038",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.181870",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_11669f29": {
+    "record_id": "cons_11669f29",
+    "node_id": "py_3_039",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.181953",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_ca1b2964": {
+    "record_id": "cons_ca1b2964",
+    "node_id": "py_3_040",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.182031",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_60fe2c29": {
+    "record_id": "cons_60fe2c29",
+    "node_id": "py_3_041",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.182106",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_9761861a": {
+    "record_id": "cons_9761861a",
+    "node_id": "py_3_042",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.182186",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_0af9b2c5": {
+    "record_id": "cons_0af9b2c5",
+    "node_id": "py_3_043",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.182275",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_d4ac68a6": {
+    "record_id": "cons_d4ac68a6",
+    "node_id": "py_3_044",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.182356",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_b6014f6e": {
+    "record_id": "cons_b6014f6e",
+    "node_id": "py_3_045",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.182433",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_5e859707": {
+    "record_id": "cons_5e859707",
+    "node_id": "py_3_046",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.182510",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_4a2a2a3d": {
+    "record_id": "cons_4a2a2a3d",
+    "node_id": "py_3_047",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.182842",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_f0790c4f": {
+    "record_id": "cons_f0790c4f",
+    "node_id": "py_3_048",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.182948",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_4f535aac": {
+    "record_id": "cons_4f535aac",
+    "node_id": "py_3_049",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.183025",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_ca9ec0ed": {
+    "record_id": "cons_ca9ec0ed",
+    "node_id": "py_3_050",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.183101",
+    "validation_score": 1.0,
+    "source": "curriculum/coding/batch_3_code_snippets.json",
+    "notes": ""
+  },
+  "cons_4e209e1d": {
+    "record_id": "cons_4e209e1d",
+    "node_id": "node_487cbb05",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.183309",
+    "validation_score": 1.0,
+    "source": "curriculum/reasoning/question_parsing.json",
+    "notes": ""
+  },
+  "cons_885caa53": {
+    "record_id": "cons_885caa53",
+    "node_id": "node_6a8c76d8",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.183388",
+    "validation_score": 1.0,
+    "source": "curriculum/reasoning/question_parsing.json",
+    "notes": ""
+  },
+  "cons_2641e6ad": {
+    "record_id": "cons_2641e6ad",
+    "node_id": "node_7e7d1ee3",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.183499",
+    "validation_score": 1.0,
+    "source": "curriculum/reasoning/question_parsing.json",
+    "notes": ""
+  },
+  "cons_b56a8bcc": {
+    "record_id": "cons_b56a8bcc",
+    "node_id": "node_25f6a538",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.183691",
+    "validation_score": 1.0,
+    "source": "curriculum/reasoning/contextualization_basics.json",
+    "notes": ""
+  },
+  "cons_caa7172a": {
+    "record_id": "cons_caa7172a",
+    "node_id": "node_5159cda7",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.183770",
+    "validation_score": 1.0,
+    "source": "curriculum/reasoning/contextualization_basics.json",
+    "notes": ""
+  },
+  "cons_07399914": {
+    "record_id": "cons_07399914",
+    "node_id": "node_10ff379f",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.183861",
+    "validation_score": 1.0,
+    "source": "curriculum/reasoning/contextualization_basics.json",
+    "notes": ""
+  },
+  "cons_2ed66506": {
+    "record_id": "cons_2ed66506",
+    "node_id": "node_3112323a",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.183949",
+    "validation_score": 1.0,
+    "source": "curriculum/reasoning/contextualization_basics.json",
+    "notes": ""
+  },
+  "cons_15d776ed": {
+    "record_id": "cons_15d776ed",
+    "node_id": "node_97e2b3d5",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.184028",
+    "validation_score": 1.0,
+    "source": "curriculum/reasoning/contextualization_basics.json",
+    "notes": ""
+  },
+  "cons_c738c5da": {
+    "record_id": "cons_c738c5da",
+    "node_id": "node_62174fd6",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.184105",
+    "validation_score": 1.0,
+    "source": "curriculum/reasoning/contextualization_basics.json",
+    "notes": ""
+  },
+  "cons_dcde9f07": {
+    "record_id": "cons_dcde9f07",
+    "node_id": "node_244707dd",
+    "session_id": "session_c2331481",
+    "consolidated_at": "2026-03-24T05:22:25.184208",
+    "validation_score": 1.0,
+    "source": "curriculum/reasoning/contextualization_basics.json",
+    "notes": ""
   }
 }

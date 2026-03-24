@@ -1,0 +1,15 @@
+{
+  "embed_dim": 256,
+  "total_patterns": 2559,
+  "domains": [
+    "skills",
+    "reasoning",
+    "coding",
+    "tracks",
+    "finance",
+    "medicine",
+    "python",
+    "english",
+    "health"
+  ]
+}
