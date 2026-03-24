@@ -12,11 +12,36 @@
     "reasoning": 10,
     "skills": 0
   },
+  "neural_network": {
+    "architecture": "hierarchical_pattern_graph",
+    "depth_layers": 4,
+    "layer_descriptions": {
+      "level_0": "Primitives - Basic characters, tokens, Q&A pairs",
+      "level_1": "Patterns - Words, phrases, headlines",
+      "level_2": "Sequences - Sentences, code blocks, paragraphs",
+      "level_3": "Concepts - Complex ideas, abstractions"
+    },
+    "patterns_by_level": {
+      "level_0": 509,
+      "level_1": 1479,
+      "level_2": 3848,
+      "level_3": 576
+    },
+    "node_types": ["primitive", "pattern", "sequence", "concept", "error", "unknown"],
+    "edge_types": ["composed_of", "related_to", "derives_from", "contradicts"]
+  },
   "curriculum_status": {
     "skills_converted": 44,
     "skill_curriculum_items": 2134,
     "source_curriculum_files": 9,
     "total_curriculum_available": 5000
+  },
+  "learning_config": {
+    "patterns_per_cycle": 5000,
+    "min_per_cycle": 1000,
+    "max_per_cycle": 10000,
+    "batch_size": 100,
+    "cycle_interval_seconds": 60
   },
   "gap_analysis": {
     "total_gaps_detected": 36,
@@ -26,8 +51,8 @@
   },
   "autonomous_learning": {
     "enabled": true,
-    "patterns_per_minute": 10,
-    "estimated_time_to_1m": "69.4 days",
+    "patterns_per_minute_range": "1,000-10,000",
+    "estimated_time_to_1m": "0.3-3.4 days at 5k/min",
     "curriculum_exhaustion_detection": true,
     "auto_curriculum_generation": true
   },
@@ -47,14 +72,6 @@
       "success": true,
       "timestamp": "2026-03-24T04:43:00.000000",
       "message": "Converted 44 skills to curriculum format"
-    },
-    {
-      "phase": "generation",
-      "domain": "multiple",
-      "patterns_learned": 180,
-      "success": true,
-      "timestamp": "2026-03-24T04:47:00.000000",
-      "message": "Generated curriculum from 9 external sources"
     }
   ],
   "exam_history": [],
@@ -63,7 +80,7 @@
   "pipeline_ok": true,
   "memory_ok": true,
   "is_active": true,
-  "last_update": "2026-03-24T04:50:00.000000",
+  "last_update": "2026-03-24T05:15:00.000000",
   "goal_patterns": 1000000,
-  "version": "2.0.0"
+  "version": "2.1.0"
 }

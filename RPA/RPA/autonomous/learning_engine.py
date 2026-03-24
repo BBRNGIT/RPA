@@ -8,6 +8,8 @@ until it reaches 1 million patterns. The engine:
 2. Detects when curriculum is exhausted
 3. Generates new curriculum from verified sources
 4. Tracks progress toward 1M pattern goal
+
+SUPPORTS: 1,000-10,000 patterns per minute (configurable)
 """
 
 import json
@@ -16,18 +18,25 @@ import sys
 import time
 import random
 import threading
+import traceback
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Callable
-import traceback
+import hashlib
+from collections import deque
 
 # Add parent to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from rpa.memory.ltm import LongTermMemory
-from rpa.memory.stm import ShortTermMemory
-from rpa.core.graph import Node, NodeType
+try:
+    from rpa.memory.ltm import LongTermMemory
+    from rpa.memory.stm import ShortTermMemory
+    from rpa.core.graph import Node, NodeType
+    MEMORY_AVAILABLE = True
+except ImportError:
+    MEMORY_AVAILABLE = False
+    print("Warning: Memory modules not available, using mock implementation")
 
 
 @dataclass
@@ -87,16 +96,20 @@ class AutonomousLearningEngine:
     Continuous learning engine that runs per-minute until 1M patterns.
     
     Features:
-    - Per-minute learning cycles
+    - High-speed learning cycles (1,000-10,000 patterns/min)
     - Automatic curriculum exhaustion detection
     - Self-generation of new curriculum
     - Progress tracking to 1M goal
     - Multi-domain learning
+    - Batch processing for efficiency
     """
     
     TARGET_PATTERNS = 1_000_000
-    PATTERNS_PER_SESSION = 10  # Learn 10 patterns per minute
+    PATTERNS_PER_SESSION = 5000  # Learn 5,000 patterns per cycle (default, adjustable 1k-10k)
+    MIN_PATTERNS_PER_SESSION = 1000
+    MAX_PATTERNS_PER_SESSION = 10000
     MINUTE_INTERVAL = 60  # Run every 60 seconds
+    BATCH_SIZE = 100  # Process in batches of 100 for memory efficiency
     
     CURRICULUM_PATH = Path("/home/z/my-project/RPA/RPA/curriculum")
     MEMORY_PATH = Path("/home/z/my-project/RPA/RPA/memory_storage")
@@ -301,36 +314,81 @@ class AutonomousLearningEngine:
             print(f"Error learning pattern: {e}")
             return False
     
-    def run_learning_cycle(self) -> int:
-        """Run a single learning cycle (one minute of learning)."""
+    def run_learning_cycle(self, patterns_per_cycle: int = None) -> int:
+        """
+        Run a single learning cycle with high-throughput batch processing.
+        
+        Args:
+            patterns_per_cycle: Number of patterns to learn (default: PATTERNS_PER_SESSION)
+                               Can be set between MIN_PATTERNS_PER_SESSION and MAX_PATTERNS_PER_SESSION
+        
+        Returns:
+            Number of patterns successfully learned
+        """
+        # Determine patterns to learn this cycle
+        target_patterns = patterns_per_cycle or self.PATTERNS_PER_SESSION
+        target_patterns = max(self.MIN_PATTERNS_PER_SESSION, 
+                             min(self.MAX_PATTERNS_PER_SESSION, target_patterns))
+        
         # Start session
         domain = random.choice(["english", "python", "finance", "medicine", "health", "reasoning", "skills"])
         self.start_session(domain)
         
         patterns_learned = 0
+        start_time = time.time()
         
         try:
-            # Load curriculum
+            # Load curriculum in bulk
             if not self.curriculum_queue:
                 self.curriculum_queue = self._load_curriculum()
             
-            # If curriculum exhausted, generate new patterns
-            if not self.curriculum_queue:
-                patterns = self._generate_patterns(domain, self.PATTERNS_PER_SESSION)
+            # If curriculum exhausted, generate new patterns in batches
+            if len(self.curriculum_queue) < target_patterns:
+                needed = target_patterns - len(self.curriculum_queue)
+                patterns = self._generate_patterns(domain, needed)
                 self.curriculum_queue.extend(patterns)
             
-            # Learn patterns
-            for i in range(min(self.PATTERNS_PER_SESSION, len(self.curriculum_queue))):
+            # Batch learning for efficiency
+            batches_to_process = (target_patterns + self.BATCH_SIZE - 1) // self.BATCH_SIZE
+            
+            for batch_num in range(batches_to_process):
                 if self._stop_event.is_set():
                     break
                 
-                pattern = self.curriculum_queue.pop(0)
-                if self.learn_pattern(pattern):
-                    patterns_learned += 1
-                    if self.current_session:
-                        self.current_session.patterns_learned += 1
+                batch_start = batch_num * self.BATCH_SIZE
+                batch_end = min(batch_start + self.BATCH_SIZE, target_patterns)
+                batch_count = batch_end - batch_start
+                
+                if batch_start >= len(self.curriculum_queue):
+                    # Generate more if needed
+                    more_patterns = self._generate_patterns(domain, batch_count)
+                    self.curriculum_queue.extend(more_patterns)
+                
+                # Process batch
+                for i in range(batch_count):
+                    if batch_start + i >= len(self.curriculum_queue):
+                        break
+                    
+                    pattern = self.curriculum_queue[batch_start + i]
+                    if self.learn_pattern(pattern):
+                        patterns_learned += 1
+                        if self.current_session:
+                            self.current_session.patterns_learned += 1
+                
+                # Clear processed patterns periodically
+                if batch_num % 10 == 0 and batch_num > 0:
+                    self.curriculum_queue = self.curriculum_queue[batch_end:]
             
+            # Clear processed patterns
+            if patterns_learned > 0:
+                self.curriculum_queue = self.curriculum_queue[patterns_learned:]
+            
+            elapsed = time.time() - start_time
             self.end_session(success=True)
+            
+            # Log progress
+            rate = patterns_learned / max(elapsed, 0.001)
+            print(f"  [Cycle] Learned {patterns_learned:,} patterns in {elapsed:.2f}s ({rate:.0f} patterns/sec)")
             
         except Exception as e:
             self.end_session(success=False, error=str(e))
