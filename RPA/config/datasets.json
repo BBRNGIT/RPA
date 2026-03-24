@@ -193,6 +193,71 @@
       "description": "Large-scale code search dataset",
       "sample_rate": 0.01,
       "streaming": true
+    },
+    "financial_phrasebank": {
+      "name": "Financial PhraseBank - Financial News Sentences",
+      "source": "huggingface",
+      "dataset_name": "takala/financial_phrasebank",
+      "config_name": "sentences_allagree",
+      "split": "train",
+      "domain": "finance",
+      "priority": 1,
+      "estimated_size_mb": 2,
+      "fields": {
+        "text": "sentence",
+        "sentiment": "label"
+      },
+      "curriculum_type": "financial_terminology",
+      "hierarchy_levels": [1, 2],
+      "description": "4,840 sentences from financial news for terminology and sentiment learning",
+      "sample_rate": 1.0,
+      "filter": {
+        "min_text_length": 20,
+        "max_text_length": 500
+      }
+    },
+    "business_economics_k12": {
+      "name": "K-12 Business and Economics Education",
+      "source": "huggingface",
+      "dataset_name": "robworks-software/k12-business-economics-comprehensive",
+      "split": "train",
+      "domain": "finance",
+      "priority": 1,
+      "estimated_size_mb": 5,
+      "fields": {
+        "text": "standard_text",
+        "category": "category",
+        "grade_level": "grade_level"
+      },
+      "curriculum_type": "educational_standards",
+      "hierarchy_levels": [0, 1, 2],
+      "description": "1,236 K-12 business and economics learning standards for foundational knowledge",
+      "sample_rate": 1.0,
+      "filter": {
+        "min_text_length": 30,
+        "max_text_length": 2000
+      }
+    },
+    "financial_training": {
+      "name": "Financial Training Dataset",
+      "source": "huggingface",
+      "dataset_name": "tgishor/financial-training-dataset",
+      "split": "train",
+      "domain": "finance",
+      "priority": 2,
+      "estimated_size_mb": 50,
+      "fields": {
+        "text": "content",
+        "source_type": "source"
+      },
+      "curriculum_type": "financial_analysis",
+      "hierarchy_levels": [2, 3],
+      "description": "Financial news articles, company fundamentals, and market analysis reports",
+      "sample_rate": 0.3,
+      "filter": {
+        "min_text_length": 100,
+        "max_text_length": 5000
+      }
     }
   },
   
@@ -213,14 +278,14 @@
     {
       "phase": 1,
       "name": "Foundations",
-      "datasets": ["mbpp", "wikitext"],
+      "datasets": ["mbpp", "wikitext", "financial_phrasebank", "business_economics_k12"],
       "curriculum_per_dataset": 1000,
       "hierarchy_levels": [0, 1]
     },
     {
       "phase": 2,
       "name": "Intermediate",
-      "datasets": ["humaneval", "code_alpaca", "squad"],
+      "datasets": ["humaneval", "code_alpaca", "squad", "financial_training"],
       "curriculum_per_dataset": 2000,
       "hierarchy_levels": [1, 2, 3]
     },

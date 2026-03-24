@@ -1,0 +1,224 @@
+name: RPA Accelerated Learning
+
+# Hourly learning with tests and exams
+# Schedule:
+# - Every hour: 1 subject lesson + post-lesson test
+# - Every 6 hours (0, 6, 12, 18 UTC): Comprehensive exam
+
+on:
+  schedule:
+    # Run every hour at minute 0
+    - cron: '0 * * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Learning mode'
+        required: false
+        default: 'auto'
+        type: choice
+        options:
+          - auto
+          - lesson
+          - exam
+      domain:
+        description: 'Domain override (for lesson mode)'
+        required: false
+        default: ''
+        type: choice
+        options:
+          - ''
+          - english
+          - python
+          - finance
+          - medicine
+          - health
+
+env:
+  HUGGINGFACE_TOKEN: ${{ secrets.HUGGINGFACE_TOKEN }}
+
+jobs:
+  learn:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install datasets huggingface_hub
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Configure Git
+      run: |
+        git config user.name "RPA Learning Bot"
+        git config user.email "rpa-learning@bot.local"
+
+    - name: Get current hour and determine activity
+      id: schedule
+      run: |
+        HOUR=$(date -u +%H)
+        echo "hour=$HOUR" >> $GITHUB_OUTPUT
+        
+        # Determine if exam hour (0, 6, 12, 18 UTC)
+        if [[ "$HOUR" == "00" || "$HOUR" == "06" || "$HOUR" == "12" || "$HOUR" == "18" ]]; then
+          echo "activity=exam" >> $GITHUB_OUTPUT
+          echo "📊 Hour $HOUR: EXAM TIME"
+        else
+          echo "activity=lesson" >> $GITHUB_OUTPUT
+          echo "📚 Hour $HOUR: LESSON TIME"
+        fi
+        
+        # Map hour to domain (5-hour cycles starting at 0, 6, 12, 18)
+        CYCLE_START=$(( (HOUR / 6) * 6 ))
+        HOUR_IN_CYCLE=$(( HOUR - CYCLE_START ))
+        
+        case $HOUR_IN_CYCLE in
+          0) DOMAIN="english" ;;
+          1) DOMAIN="python" ;;
+          2) DOMAIN="finance" ;;
+          3) DOMAIN="medicine" ;;
+          4) DOMAIN="health" ;;
+          *) DOMAIN="english" ;;
+        esac
+        
+        echo "domain=$DOMAIN" >> $GITHUB_OUTPUT
+        echo "🎯 Domain: $DOMAIN"
+
+    - name: Load current memory state
+      run: |
+        echo "### Current Knowledge State" >> $GITHUB_STEP_SUMMARY
+        python -c "
+        import sys
+        sys.path.insert(0, '.')
+        from rpa.memory import LongTermMemory
+        ltm = LongTermMemory(storage_path='memory/learning_state')
+        ltm.load()
+        print(f'- **Total Patterns:** {len(ltm):,}')
+        
+        domains = {}
+        for node in ltm._graph.nodes.values():
+            d = getattr(node, 'domain', 'unknown') or 'unknown'
+            domains[d] = domains.get(d, 0) + 1
+        
+        print('- **By Domain:**')
+        for d, c in sorted(domains.items()):
+            print(f'  - {d}: {c:,}')
+        " || echo "- No existing memory state"
+
+    - name: Run Learning Session
+      id: learning
+      run: |
+        MODE="${{ inputs.mode || 'auto' }}"
+        ACTIVITY="${{ steps.schedule.outputs.activity }}"
+        DOMAIN="${{ inputs.domain || steps.schedule.outputs.domain }}"
+        
+        if [[ "$MODE" == "exam" ]]; then
+          ACTIVITY="exam"
+        elif [[ "$MODE" == "lesson" && -n "${{ inputs.domain }}" ]]; then
+          ACTIVITY="lesson"
+          DOMAIN="${{ inputs.domain }}"
+        fi
+        
+        echo "mode=$ACTIVITY" >> $GITHUB_OUTPUT
+        echo "domain=$DOMAIN" >> $GITHUB_OUTPUT
+        
+        python -c "
+        import sys
+        import os
+        import json
+        sys.path.insert(0, '.')
+        
+        from rpa.scheduling.accelerated_learning import (
+            AcceleratedLearningScheduler, 
+            ScheduledLesson,
+            LearningPhase
+        )
+        
+        scheduler = AcceleratedLearningScheduler(
+            persistence_path='memory/learning_state'
+        )
+        
+        activity = '$ACTIVITY'
+        domain = '$DOMAIN'
+        
+        print(f'### 🎓 Learning Session: {activity.upper()}')
+        print(f'Domain: {domain if domain != \"all\" else \"All Domains\"}')
+        print()
+        
+        if activity == 'exam':
+            result = scheduler.run_exam()
+            print(f'- **Result:** {result.message}')
+            if result.exam_score:
+                print(f'- **Score:** {result.exam_score:.1%}')
+        else:
+            # Run lesson for the hour
+            results = scheduler.run_current_hour()
+            for r in results:
+                phase_name = r.phase.value.replace('_', ' ').title()
+                print(f'- **{phase_name}:** {r.message}')
+                if r.test_score:
+                    print(f'  - Test Score: {r.test_score:.1%}')
+                if r.patterns_learned:
+                    print(f'  - Patterns Learned: {r.patterns_learned}')
+        
+        # Save state
+        scheduler.ltm.save()
+        
+        # Output stats for GitHub
+        stats = scheduler.get_stats()
+        print()
+        print(f'### 📊 Session Stats')
+        print(f'- Total Sessions: {stats[\"total_sessions\"]}')
+        print(f'- Patterns Learned: {stats[\"total_patterns_learned\"]}')
+        "
+
+    - name: Show Learning Statistics
+      run: |
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📈 Updated Statistics" >> $GITHUB_STEP_SUMMARY
+        python -c "
+        import sys
+        sys.path.insert(0, '.')
+        from rpa.memory import LongTermMemory
+        ltm = LongTermMemory(storage_path='memory/learning_state')
+        ltm.load()
+        
+        print(f'- **Total Patterns:** {len(ltm):,}')
+        print(f'- **Progress to 1M:** {len(ltm) / 1_000_000 * 100:.3f}%')
+        
+        domains = {}
+        for node in ltm._graph.nodes.values():
+            d = getattr(node, 'domain', 'unknown') or 'unknown'
+            domains[d] = domains.get(d, 0) + 1
+        
+        print('- **By Domain:**')
+        for d, c in sorted(domains.items()):
+            print(f'  - {d}: {c:,}')
+        "
+
+    - name: Commit learning progress
+      run: |
+        git add memory/learning_state/
+        git diff --cached --quiet || git commit -m "Learning: ${{ steps.learning.outputs.mode }} - ${{ steps.learning.outputs.domain }} [skip ci]"
+        git push origin main || echo "No changes to push"
+
+    - name: Learning Summary
+      run: |
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "---" >> $GITHUB_STEP_SUMMARY
+        echo "⏰ **Hour:** ${{ steps.schedule.outputs.hour }}:00 UTC" >> $GITHUB_STEP_SUMMARY
+        echo "🎯 **Activity:** ${{ steps.learning.outputs.mode }}" >> $GITHUB_STEP_SUMMARY
+        echo "📚 **Domain:** ${{ steps.learning.outputs.domain }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "_Next session in 1 hour | Exam every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)_" >> $GITHUB_STEP_SUMMARY

@@ -51028,5 +51028,599 @@
     "validation_score": 0.8,
     "source": "wikitext",
     "notes": ""
+  },
+  "cons_eb72a734": {
+    "record_id": "cons_eb72a734",
+    "node_id": "pattern:finance_term:Asset",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157256",
+    "validation_score": 0.9,
+    "source": "financial_curriculum",
+    "notes": ""
+  },
+  "cons_327fd374": {
+    "record_id": "cons_327fd374",
+    "node_id": "pattern:finance_term:Liability",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157274",
+    "validation_score": 0.9,
+    "source": "financial_curriculum",
+    "notes": ""
+  },
+  "cons_b1a4479d": {
+    "record_id": "cons_b1a4479d",
+    "node_id": "pattern:finance_term:Equity",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157286",
+    "validation_score": 0.9,
+    "source": "financial_curriculum",
+    "notes": ""
+  },
+  "cons_c6220160": {
+    "record_id": "cons_c6220160",
+    "node_id": "pattern:finance_term:Revenue",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157296",
+    "validation_score": 0.9,
+    "source": "financial_curriculum",
+    "notes": ""
+  },
+  "cons_9cffcb01": {
+    "record_id": "cons_9cffcb01",
+    "node_id": "pattern:finance_term:Expense",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157305",
+    "validation_score": 0.9,
+    "source": "financial_curriculum",
+    "notes": ""
+  },
+  "cons_5146db8d": {
+    "record_id": "cons_5146db8d",
+    "node_id": "pattern:finance_term:Dividend",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157312",
+    "validation_score": 0.9,
+    "source": "financial_curriculum",
+    "notes": ""
+  },
+  "cons_2c2fbe4c": {
+    "record_id": "cons_2c2fbe4c",
+    "node_id": "pattern:finance_term:Capital Gain",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157320",
+    "validation_score": 0.9,
+    "source": "financial_curriculum",
+    "notes": ""
+  },
+  "cons_729225f2": {
+    "record_id": "cons_729225f2",
+    "node_id": "pattern:finance_term:Portfolio",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157328",
+    "validation_score": 0.9,
+    "source": "financial_curriculum",
+    "notes": ""
+  },
+  "cons_372fc3ea": {
+    "record_id": "cons_372fc3ea",
+    "node_id": "pattern:Asset: A resource with economi",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157361",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_68c8e46c": {
+    "record_id": "cons_68c8e46c",
+    "node_id": "pattern:Liability: A financial obligat",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157372",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_f8d33cf4": {
+    "record_id": "cons_f8d33cf4",
+    "node_id": "pattern:Equity: Ownership value after ",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157379",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_3a810f8e": {
+    "record_id": "cons_3a810f8e",
+    "node_id": "pattern:Revenue: Income from business ",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157387",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_b17187e9": {
+    "record_id": "cons_b17187e9",
+    "node_id": "pattern:Expense: Costs incurred in gen",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157394",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_ef33483c": {
+    "record_id": "cons_ef33483c",
+    "node_id": "pattern:Dividend: Distribution of earn",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157400",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_e60f60f9": {
+    "record_id": "cons_e60f60f9",
+    "node_id": "pattern:Capital Gain: Profit from sell",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157407",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_735210de": {
+    "record_id": "cons_735210de",
+    "node_id": "pattern:Portfolio: Collection of inves",
+    "session_id": "pipeline_finance",
+    "consolidated_at": "2026-03-24T00:51:26.157414",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_e7231dda": {
+    "record_id": "cons_e7231dda",
+    "node_id": "pattern:def greet(name):\n    return f'",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258343",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_edfb142e": {
+    "record_id": "cons_edfb142e",
+    "node_id": "pattern:def add(a, b):\n    return a + ",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258361",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_c04796f9": {
+    "record_id": "cons_c04796f9",
+    "node_id": "pattern:numbers = [1, 2, 3, 4, 5]\nfor ",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258373",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_60e329c7": {
+    "record_id": "cons_60e329c7",
+    "node_id": "pattern:squares = [x**2 for x in range",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258381",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_84ea1206": {
+    "record_id": "cons_84ea1206",
+    "node_id": "pattern:def is_even(n):\n    return n %",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258389",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_90e5fd4a": {
+    "record_id": "cons_90e5fd4a",
+    "node_id": "pattern:even_numbers = [x for x in ran",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258397",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_ee774ef1": {
+    "record_id": "cons_ee774ef1",
+    "node_id": "pattern:person = {'name': 'Alice', 'ag",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258405",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_0f35d64d": {
+    "record_id": "cons_0f35d64d",
+    "node_id": "pattern:try:\n    result = 10 / 0\nexcep",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258413",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_7425a96c": {
+    "record_id": "cons_7425a96c",
+    "node_id": "pattern:with open('file.txt', 'r') as ",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258420",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_46459589": {
+    "record_id": "cons_46459589",
+    "node_id": "pattern:def factorial(n):\n    if n <= ",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258427",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_04d9d93e": {
+    "record_id": "cons_04d9d93e",
+    "node_id": "pattern:numbers = [3, 1, 4, 1, 5, 9, 2",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258439",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_059006e7": {
+    "record_id": "cons_059006e7",
+    "node_id": "pattern:unique = set([1, 2, 2, 3, 3, 3",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258447",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_799ffba3": {
+    "record_id": "cons_799ffba3",
+    "node_id": "pattern:def greet(name, greeting='Hell",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258454",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_d6bac6b4": {
+    "record_id": "cons_d6bac6b4",
+    "node_id": "pattern:coords = (10, 20)\nx, y = coord",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258461",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_07870601": {
+    "record_id": "cons_07870601",
+    "node_id": "pattern:def calculate(*args):\n    retu",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258468",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_24232580": {
+    "record_id": "cons_24232580",
+    "node_id": "pattern:data = {'a': 1, 'b': 2, 'c': 3",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258474",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_3d6a4aa4": {
+    "record_id": "cons_3d6a4aa4",
+    "node_id": "pattern:text = 'Hello World'\nwords = t",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258481",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_21e16c5a": {
+    "record_id": "cons_21e16c5a",
+    "node_id": "pattern:numbers = [1, 2, 3, 4, 5]\ndoub",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258488",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_aee43dcf": {
+    "record_id": "cons_aee43dcf",
+    "node_id": "pattern:numbers = [1, 2, 3, 4, 5, 6, 7",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258495",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_a3b072b6": {
+    "record_id": "cons_a3b072b6",
+    "node_id": "pattern:import json\ndata = {'name': 'A",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258504",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_ceea427d": {
+    "record_id": "cons_ceea427d",
+    "node_id": "pattern:x = 5",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258511",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_6c4399a1": {
+    "record_id": "cons_6c4399a1",
+    "node_id": "pattern:name = 'Alice'",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258518",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_6eeff3e3": {
+    "record_id": "cons_6eeff3e3",
+    "node_id": "pattern:x + y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258525",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_a4dc1fa2": {
+    "record_id": "cons_a4dc1fa2",
+    "node_id": "pattern:x - y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258532",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_f2fd8329": {
+    "record_id": "cons_f2fd8329",
+    "node_id": "pattern:x * y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258538",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_93ea63d3": {
+    "record_id": "cons_93ea63d3",
+    "node_id": "pattern:x / y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258545",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_aa5b8615": {
+    "record_id": "cons_aa5b8615",
+    "node_id": "pattern:x == y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258551",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_614b50d5": {
+    "record_id": "cons_614b50d5",
+    "node_id": "pattern:x != y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258557",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_6fdcc88f": {
+    "record_id": "cons_6fdcc88f",
+    "node_id": "pattern:x > y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258563",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_286aa22b": {
+    "record_id": "cons_286aa22b",
+    "node_id": "pattern:x < y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258569",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_06b523cf": {
+    "record_id": "cons_06b523cf",
+    "node_id": "pattern:x >= y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258576",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_b046a6ca": {
+    "record_id": "cons_b046a6ca",
+    "node_id": "pattern:x <= y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258583",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_ba16e75f": {
+    "record_id": "cons_ba16e75f",
+    "node_id": "pattern:True",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258589",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_7cc69154": {
+    "record_id": "cons_7cc69154",
+    "node_id": "pattern:False",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258596",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_f721eab3": {
+    "record_id": "cons_f721eab3",
+    "node_id": "pattern:None",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258603",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_79bef514": {
+    "record_id": "cons_79bef514",
+    "node_id": "pattern:x and y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258610",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_a2460cc6": {
+    "record_id": "cons_a2460cc6",
+    "node_id": "pattern:x or y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258616",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_ccb9da92": {
+    "record_id": "cons_ccb9da92",
+    "node_id": "pattern:not x",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258623",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_961c8322": {
+    "record_id": "cons_961c8322",
+    "node_id": "pattern:[1, 2, 3]",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258629",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_1ed89bf9": {
+    "record_id": "cons_1ed89bf9",
+    "node_id": "pattern:{'key': 'value'}",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258636",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_0702e949": {
+    "record_id": "cons_0702e949",
+    "node_id": "pattern:(1, 2)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258643",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_a35dfdc4": {
+    "record_id": "cons_a35dfdc4",
+    "node_id": "pattern:{1, 2, 3}",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258649",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_75b65e69": {
+    "record_id": "cons_75b65e69",
+    "node_id": "pattern:len(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258656",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_0f71cf36": {
+    "record_id": "cons_0f71cf36",
+    "node_id": "pattern:print(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258664",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_14fcf973": {
+    "record_id": "cons_14fcf973",
+    "node_id": "pattern:type(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258671",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_76af9e6e": {
+    "record_id": "cons_76af9e6e",
+    "node_id": "pattern:str(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258677",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_6c4315eb": {
+    "record_id": "cons_6c4315eb",
+    "node_id": "pattern:int(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258684",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_409ac292": {
+    "record_id": "cons_409ac292",
+    "node_id": "pattern:float(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258691",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_e676eb46": {
+    "record_id": "cons_e676eb46",
+    "node_id": "pattern:list(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258697",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_878489e6": {
+    "record_id": "cons_878489e6",
+    "node_id": "pattern:dict(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:02:19.258703",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
   }
 }

@@ -68,6 +68,7 @@ CONFIG_PATH = Path(__file__).parent / "config" / "datasets.json"
 
 ENGLISH_DATASETS = ["wikitext", "squad", "wordnet", "simple_wikipedia"]
 PYTHON_DATASETS = ["mbpp", "humaneval", "code_alpaca", "python_docs"]
+FINANCE_DATASETS = ["financial_phrasebank", "business_economics_k12", "financial_training"]
 
 DEFAULT_CONFIG = {
     "batch_size": 50,
@@ -76,6 +77,7 @@ DEFAULT_CONFIG = {
     "max_grammar_per_session": 30,
     "max_reading_per_session": 10,
     "max_writing_per_session": 5,
+    "max_finance_per_session": 100,
     "persistence_path": "memory/learning_state",
 }
 
@@ -116,8 +118,18 @@ class ExtractionStage(PipelineStage):
 
     def run(self, dataset_name: str, sample_size: int, config: Dict) -> Tuple[List[Dict], Dict]:
         """Load dataset from Hugging Face or local curriculum files."""
+        # Determine domain from dataset name
+        if dataset_name in ENGLISH_DATASETS:
+            default_domain = "english"
+        elif dataset_name in PYTHON_DATASETS:
+            default_domain = "python"
+        elif dataset_name in FINANCE_DATASETS:
+            default_domain = "finance"
+        else:
+            default_domain = "english"
+            
         dataset_config = config["datasets"].get(dataset_name, {
-            "domain": "english" if dataset_name in ENGLISH_DATASETS else "python",
+            "domain": default_domain,
             "dataset_name": dataset_name,
         })
 
@@ -209,11 +221,34 @@ class ExtractionStage(PipelineStage):
                 except Exception as e:
                     logger.warning(f"Failed to load {json_file}: {e}")
 
+        # Load Finance curriculum
+        finance_dir = curriculum_dir / "finance"
+        if finance_dir.exists():
+            for json_file in finance_dir.glob("*.json"):
+                try:
+                    with open(json_file) as f:
+                        data = json.load(f)
+                        lessons = data.get("lessons", [])
+                        for lesson in lessons:
+                            items = lesson.get("items", [])
+                            for item in items:
+                                samples.append({
+                                    "text": f"{item.get('term', '')}: {item.get('definition', '')}",
+                                    "content": f"{item.get('term', '')}: {item.get('definition', '')}",
+                                    "hierarchy_level": 1,
+                                    "domain": "finance",
+                                    "metadata": {"term": item.get("term"), "definition": item.get("definition")},
+                                })
+                except Exception as e:
+                    logger.warning(f"Failed to load {json_file}: {e}")
+
         # Filter by domain if specified
         if domain in ENGLISH_DATASETS or domain == "english":
             samples = [s for s in samples if s.get("domain") == "english"]
         elif domain in PYTHON_DATASETS or domain == "python":
             samples = [s for s in samples if s.get("domain") == "python"]
+        elif domain in FINANCE_DATASETS or domain == "finance":
+            samples = [s for s in samples if s.get("domain") == "finance"]
 
         # Limit samples
         return samples[:sample_size]
@@ -331,12 +366,15 @@ class CurriculumStage(PipelineStage):
             "grammar": [],
             "reading": [],
             "patterns": [],
+            "finance_terms": [],
         }
 
         if domain == "english":
             curriculum = self._build_english_curriculum(processed_data)
         elif domain == "python":
             curriculum = self._build_python_curriculum(processed_data)
+        elif domain == "finance":
+            curriculum = self._build_finance_curriculum(processed_data)
         else:
             curriculum["patterns"] = processed_data
 
@@ -345,6 +383,7 @@ class CurriculumStage(PipelineStage):
             "grammar_rules": len(curriculum["grammar"]),
             "reading_passages": len(curriculum["reading"]),
             "patterns": len(curriculum["patterns"]),
+            "finance_terms": len(curriculum.get("finance_terms", [])),
         }
 
         return curriculum
@@ -460,6 +499,63 @@ class CurriculumStage(PipelineStage):
 
         return curriculum
 
+    def _build_finance_curriculum(self, data: List[Dict]) -> Dict[str, List[Dict]]:
+        """Build Finance-specific curriculum."""
+        curriculum = {
+            "vocabulary": [],  # Reserved for financial terms
+            "grammar": [],     # Financial formulas/rules
+            "reading": [],     # Financial articles/reports
+            "patterns": [],    # All finance patterns
+            "finance_terms": [],  # Term-definition pairs
+        }
+
+        for item in data:
+            content = item.get("content", "")
+            level = item.get("hierarchy_level", 1)
+            metadata = item.get("metadata", {})
+
+            if not content:
+                continue
+
+            # Extract term-definition pairs if available
+            if metadata.get("term") and metadata.get("definition"):
+                curriculum["finance_terms"].append({
+                    "term": metadata["term"],
+                    "definition": metadata["definition"],
+                    "content": content,
+                    "difficulty": 1,
+                })
+                curriculum["vocabulary"].append({
+                    "word": metadata["term"],
+                    "definition": metadata["definition"],
+                    "context": content,
+                })
+
+            # Longer content for reading
+            if len(content) > 100:
+                curriculum["reading"].append({
+                    "text": content,
+                    "content": content,
+                    "level": level,
+                })
+
+            # All as patterns
+            curriculum["patterns"].append(item)
+
+        # Deduplicate finance terms
+        seen_terms = set()
+        unique_terms = []
+        for item in curriculum["finance_terms"]:
+            if item["term"] not in seen_terms:
+                seen_terms.add(item["term"])
+                unique_terms.append(item)
+        curriculum["finance_terms"] = unique_terms
+
+        logger.info(f"Built Finance curriculum: {len(curriculum['finance_terms'])} terms, "
+                   f"{len(curriculum['reading'])} reading items")
+
+        return curriculum
+
 
 class LearnStage(PipelineStage):
     """Stage 4: Train domain learning systems."""
@@ -485,18 +581,22 @@ class LearnStage(PipelineStage):
             "grammar": {},
             "reading": {},
             "patterns": {},
+            "finance": {},
         }
 
         if domain == "english":
             results = self._learn_english(curriculum, pipeline_config)
         elif domain == "python":
             results = self._learn_python(curriculum, pipeline_config)
+        elif domain == "finance":
+            results = self._learn_finance(curriculum, pipeline_config)
 
         self.stats = {
             "vocabulary_learned": results["vocabulary"].get("learned", 0),
             "grammar_practiced": results["grammar"].get("practiced", 0),
             "reading_completed": results["reading"].get("completed", 0),
             "patterns_stored": results["patterns"].get("stored", 0),
+            "finance_terms_learned": results.get("finance", {}).get("terms_learned", 0),
         }
 
         return results
@@ -634,6 +734,70 @@ class LearnStage(PipelineStage):
         results["patterns"]["stored"] = stored
         return results
 
+    def _learn_finance(self, curriculum: Dict, config: Dict) -> Dict:
+        """Learn Finance domain content."""
+        results = {"vocabulary": {}, "grammar": {}, "reading": {}, "patterns": {}, "finance": {}}
+
+        # Store finance terms
+        finance_terms = curriculum.get("finance_terms", [])[:config.get("max_finance_per_session", 100)]
+        terms_learned = 0
+
+        for item in finance_terms:
+            term = item.get("term", "")
+            definition = item.get("definition", "")
+            content = item.get("content", "")
+
+            if not term or not definition:
+                continue
+
+            # Store as pattern in LTM
+            if self.ltm:
+                try:
+                    node = Node.create_pattern(
+                        label=f"finance_term:{term[:30]}",
+                        content=f"{term}: {definition}",
+                        hierarchy_level=1,
+                        domain="finance",
+                    )
+                    self.ltm.consolidate(
+                        node=node,
+                        session_id="pipeline_finance",
+                        validation_score=0.9,
+                        source="financial_curriculum",
+                    )
+                    terms_learned += 1
+                except Exception as e:
+                    logger.warning(f"Failed to store finance term '{term}': {e}")
+
+        results["finance"]["terms_learned"] = terms_learned
+
+        # Store patterns in LTM
+        patterns = curriculum.get("patterns", [])
+        stored = 0
+        logger.info(f"Storing {len(patterns)} Finance patterns to LTM (limit: 500)")
+
+        for item in patterns[:500]:
+            if self.ltm and item.get("content"):
+                try:
+                    node = Node.create_pattern(
+                        label=item.get("content", "")[:30],
+                        content=item.get("content", ""),
+                        hierarchy_level=item.get("hierarchy_level", 1),
+                        domain="finance",
+                    )
+                    self.ltm.consolidate(
+                        node=node,
+                        session_id="pipeline_finance",
+                        validation_score=item.get("quality", 0.8),
+                        source=item.get("source", "huggingface"),
+                    )
+                    stored += 1
+                except Exception as e:
+                    logger.warning(f"Failed to store Finance pattern: {e}")
+
+        results["patterns"]["stored"] = stored
+        return results
+
 
 class EvolveStage(PipelineStage):
     """Stage 5: Store patterns with evolution tracking."""
@@ -762,8 +926,10 @@ class UnifiedLearningPipeline:
                     dataset = random.choice(ENGLISH_DATASETS)
                 elif domain == "python":
                     dataset = random.choice(PYTHON_DATASETS)
+                elif domain == "finance":
+                    dataset = random.choice(FINANCE_DATASETS)
                 else:
-                    dataset = random.choice(ENGLISH_DATASETS + PYTHON_DATASETS)
+                    dataset = random.choice(ENGLISH_DATASETS + PYTHON_DATASETS + FINANCE_DATASETS)
 
             logger.info(f"\nSelected dataset: {dataset}")
 
@@ -836,7 +1002,7 @@ class UnifiedLearningPipeline:
         """Run pipeline for all domains."""
         results = {}
 
-        for domain in ["english", "python"]:
+        for domain in ["english", "python", "finance"]:
             logger.info(f"\n{'='*60}")
             logger.info(f"Running domain: {domain}")
             logger.info(f"{'='*60}")
@@ -892,6 +1058,9 @@ def auto_run():
         elif hour < 12:  # Morning - Python
             logger.info("Scheduled: Python coding session")
             return pipeline.run(domain="python", dataset="mbpp", samples=50)
+        elif hour < 15:  # Early afternoon - Finance
+            logger.info("Scheduled: Finance learning session")
+            return pipeline.run(domain="finance", dataset="financial_phrasebank", samples=80)
         elif hour < 18:  # Afternoon - Reading comprehension
             logger.info("Scheduled: Reading comprehension session")
             return pipeline.run(domain="english", dataset="squad", samples=80)
@@ -911,7 +1080,7 @@ def main():
     parser = argparse.ArgumentParser(description="RPA Unified Learning Pipeline")
 
     parser.add_argument("--domain", type=str, default="english",
-                       choices=["english", "python", "all"],
+                       choices=["english", "python", "finance", "all"],
                        help="Learning domain")
 
     parser.add_argument("--dataset", type=str, default=None,
