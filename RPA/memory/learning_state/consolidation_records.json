@@ -51028,5 +51028,455 @@
     "validation_score": 0.8,
     "source": "wikitext",
     "notes": ""
+  },
+  "cons_84a49325": {
+    "record_id": "cons_84a49325",
+    "node_id": "pattern:def greet(name):\n    return f'",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372727",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_2bf280f6": {
+    "record_id": "cons_2bf280f6",
+    "node_id": "pattern:def add(a, b):\n    return a + ",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372745",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_ec69a37e": {
+    "record_id": "cons_ec69a37e",
+    "node_id": "pattern:numbers = [1, 2, 3, 4, 5]\nfor ",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372757",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_c16d39ff": {
+    "record_id": "cons_c16d39ff",
+    "node_id": "pattern:squares = [x**2 for x in range",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372766",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_bfa47fa1": {
+    "record_id": "cons_bfa47fa1",
+    "node_id": "pattern:def is_even(n):\n    return n %",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372773",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_2a8c7237": {
+    "record_id": "cons_2a8c7237",
+    "node_id": "pattern:even_numbers = [x for x in ran",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372782",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_aa066de9": {
+    "record_id": "cons_aa066de9",
+    "node_id": "pattern:person = {'name': 'Alice', 'ag",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372791",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_1710c87e": {
+    "record_id": "cons_1710c87e",
+    "node_id": "pattern:try:\n    result = 10 / 0\nexcep",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372798",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_cd483e0c": {
+    "record_id": "cons_cd483e0c",
+    "node_id": "pattern:with open('file.txt', 'r') as ",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372807",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_5db201e7": {
+    "record_id": "cons_5db201e7",
+    "node_id": "pattern:def factorial(n):\n    if n <= ",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372814",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_4b6262e3": {
+    "record_id": "cons_4b6262e3",
+    "node_id": "pattern:numbers = [3, 1, 4, 1, 5, 9, 2",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372821",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_3ed011e9": {
+    "record_id": "cons_3ed011e9",
+    "node_id": "pattern:unique = set([1, 2, 2, 3, 3, 3",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372828",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_dde24755": {
+    "record_id": "cons_dde24755",
+    "node_id": "pattern:def greet(name, greeting='Hell",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372835",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_ce91e130": {
+    "record_id": "cons_ce91e130",
+    "node_id": "pattern:coords = (10, 20)\nx, y = coord",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372842",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_0d291592": {
+    "record_id": "cons_0d291592",
+    "node_id": "pattern:def calculate(*args):\n    retu",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372848",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_07dfcbee": {
+    "record_id": "cons_07dfcbee",
+    "node_id": "pattern:data = {'a': 1, 'b': 2, 'c': 3",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372867",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_37187e4e": {
+    "record_id": "cons_37187e4e",
+    "node_id": "pattern:text = 'Hello World'\nwords = t",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372874",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_b96bb92c": {
+    "record_id": "cons_b96bb92c",
+    "node_id": "pattern:numbers = [1, 2, 3, 4, 5]\ndoub",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372881",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_91c22d7b": {
+    "record_id": "cons_91c22d7b",
+    "node_id": "pattern:numbers = [1, 2, 3, 4, 5, 6, 7",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372888",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_13936971": {
+    "record_id": "cons_13936971",
+    "node_id": "pattern:import json\ndata = {'name': 'A",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372896",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_6298b63f": {
+    "record_id": "cons_6298b63f",
+    "node_id": "pattern:x = 5",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372903",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_d6a2b829": {
+    "record_id": "cons_d6a2b829",
+    "node_id": "pattern:name = 'Alice'",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372910",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_f98311b5": {
+    "record_id": "cons_f98311b5",
+    "node_id": "pattern:x + y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372918",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_53a2fa0f": {
+    "record_id": "cons_53a2fa0f",
+    "node_id": "pattern:x - y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372925",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_3f0bca7a": {
+    "record_id": "cons_3f0bca7a",
+    "node_id": "pattern:x * y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372932",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_4dc6d504": {
+    "record_id": "cons_4dc6d504",
+    "node_id": "pattern:x / y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372939",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_a1267750": {
+    "record_id": "cons_a1267750",
+    "node_id": "pattern:x == y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372946",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_effbb31a": {
+    "record_id": "cons_effbb31a",
+    "node_id": "pattern:x != y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372953",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_c20d3122": {
+    "record_id": "cons_c20d3122",
+    "node_id": "pattern:x > y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372959",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_cbb53011": {
+    "record_id": "cons_cbb53011",
+    "node_id": "pattern:x < y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372966",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_976ce2d4": {
+    "record_id": "cons_976ce2d4",
+    "node_id": "pattern:x >= y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372972",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_8054c239": {
+    "record_id": "cons_8054c239",
+    "node_id": "pattern:x <= y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372979",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_dedc5c90": {
+    "record_id": "cons_dedc5c90",
+    "node_id": "pattern:True",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372985",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_29cd5652": {
+    "record_id": "cons_29cd5652",
+    "node_id": "pattern:False",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372992",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_2f88e740": {
+    "record_id": "cons_2f88e740",
+    "node_id": "pattern:None",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.372998",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_dfa92a04": {
+    "record_id": "cons_dfa92a04",
+    "node_id": "pattern:x and y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373005",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_ea3a6fc4": {
+    "record_id": "cons_ea3a6fc4",
+    "node_id": "pattern:x or y",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373011",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_d71a5d80": {
+    "record_id": "cons_d71a5d80",
+    "node_id": "pattern:not x",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373017",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_fecdc162": {
+    "record_id": "cons_fecdc162",
+    "node_id": "pattern:[1, 2, 3]",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373023",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_0867102b": {
+    "record_id": "cons_0867102b",
+    "node_id": "pattern:{'key': 'value'}",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373029",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_2fd98dd9": {
+    "record_id": "cons_2fd98dd9",
+    "node_id": "pattern:(1, 2)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373036",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_617a9df2": {
+    "record_id": "cons_617a9df2",
+    "node_id": "pattern:{1, 2, 3}",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373043",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_c27e96f4": {
+    "record_id": "cons_c27e96f4",
+    "node_id": "pattern:len(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373049",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_da356fcc": {
+    "record_id": "cons_da356fcc",
+    "node_id": "pattern:print(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373057",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_0b79fb78": {
+    "record_id": "cons_0b79fb78",
+    "node_id": "pattern:type(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373064",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_12474df0": {
+    "record_id": "cons_12474df0",
+    "node_id": "pattern:str(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373070",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_595620a5": {
+    "record_id": "cons_595620a5",
+    "node_id": "pattern:int(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373076",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_5d630e0c": {
+    "record_id": "cons_5d630e0c",
+    "node_id": "pattern:float(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373083",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_7b3817c6": {
+    "record_id": "cons_7b3817c6",
+    "node_id": "pattern:list(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373089",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
+  },
+  "cons_556f07a4": {
+    "record_id": "cons_556f07a4",
+    "node_id": "pattern:dict(x)",
+    "session_id": "pipeline_python",
+    "consolidated_at": "2026-03-24T01:59:25.373095",
+    "validation_score": 0.8,
+    "source": "local_curriculum",
+    "notes": ""
   }
 }

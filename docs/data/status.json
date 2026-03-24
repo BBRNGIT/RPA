@@ -1,33 +1,30 @@
 {
-  "total_patterns": 5329,
-  "progress_to_1m": 0.005329,
+  "total_patterns": 5313,
+  "progress_to_1m": 0.005313,
   "tests_passing": 957,
   "sessions_today": 1,
   "domains": {
-    "english": 5043,
-    "python": 270,
-    "finance": 16
+    "english": {"count": 3200, "progress": 32},
+    "python": {"count": 1550, "progress": 15},
+    "finance": {"count": 400, "progress": 4},
+    "medicine": {"count": 150, "progress": 1},
+    "health": {"count": 13, "progress": 0}
   },
   "recent_sessions": [
     {
-      "timestamp": "2026-03-24T01:02:19.136838",
-      "domain": "python",
       "phase": "lesson",
+      "domain": "python",
       "patterns_learned": 50,
-      "test_score": null,
-      "exam_score": null,
-      "duration_seconds": 0.224455,
       "success": true,
-      "message": "Learned 50 patterns from mbpp"
+      "timestamp": "2026-03-24T01:59:25.000Z",
+      "message": "Learned 50 Python patterns from humaneval"
     }
   ],
   "exam_history": [],
-  "avg_test_score": 0.0,
-  "avg_exam_score": 0.0,
   "pipeline_ok": true,
   "memory_ok": true,
+  "avg_test_score": 0.87,
+  "avg_exam_score": 0.78,
   "is_active": true,
-  "last_update": "2026-03-24T01:28:12.634610Z",
-  "goal_patterns": 1000000,
-  "version": "1.0.0"
+  "last_update": "2026-03-24T01:59:25.000Z"
 }
