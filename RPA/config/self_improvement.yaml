@@ -1,0 +1,263 @@
+# RPA Self-Improvement Configuration
+# Ticket: SI-003
+#
+# This configuration file controls all aspects of the closed-loop
+# self-improvement system including confidence thresholds, mutation
+# rates, reinforcement decay, and cycle scheduling.
+
+# =============================================================================
+# CONFIDENCE THRESHOLDS
+# =============================================================================
+# Control when patterns are considered confident enough for autonomous use
+confidence:
+  # Default threshold for pattern confidence
+  # Patterns below this trigger additional review or learning
+  default_threshold: 0.7
+  
+  # Low confidence boundary - patterns below this need immediate attention
+  low_confidence_threshold: 0.3
+  
+  # High confidence boundary - patterns above this are considered mastered
+  high_confidence_threshold: 0.8
+  
+  # Minimum confidence to attempt autonomous execution
+  execution_threshold: 0.5
+  
+  # Confidence boost from successful execution
+  success_boost: 0.05
+  
+  # Confidence penalty from failed execution  
+  failure_penalty: 0.1
+
+# =============================================================================
+# MUTATION SETTINGS
+# =============================================================================
+# Control how patterns are mutated when they underperform
+mutation:
+  # Base mutation rate (probability of mutation per improvement cycle)
+  rate: 0.1
+  
+  # Maximum mutations to attempt per cycle
+  max_per_cycle: 10
+  
+  # Enable automatic mutation of failing patterns
+  auto_enabled: true
+  
+  # Minimum failures before mutation is considered
+  min_failures_for_mutation: 2
+  
+  # Mutation strategy weights (higher = more likely)
+  strategy_weights:
+    parameter_tweak: 0.4
+    structure_rearrange: 0.3
+    cross_pattern_merge: 0.2
+    fix: 0.1
+  
+  # Days to keep mutation history
+  history_retention_days: 30
+  
+  # Maximum version history per pattern
+  max_versions: 10
+
+# =============================================================================
+# REINFORCEMENT SETTINGS
+# =============================================================================
+# Control how pattern strength changes over time
+reinforcement:
+  # Daily decay rate for pattern strength
+  decay_rate: 0.05
+  
+  # Minimum strength before pattern is flagged for review
+  min_strength_threshold: 0.2
+  
+  # Strength level for "strong" patterns
+  strong_pattern_threshold: 0.7
+  
+  # Reinforcement amount on successful use
+  reinforce_amount: 0.1
+  
+  # Maximum strength cap
+  max_strength: 1.0
+  
+  # Minimum strength floor (patterns don't go below this)
+  min_strength_floor: 0.1
+  
+  # Uses needed before pattern is considered stable
+  stability_threshold: 5
+
+# =============================================================================
+# RETRY SETTINGS
+# =============================================================================
+# Control automatic retry behavior when execution fails
+retry:
+  # Maximum retry attempts before giving up
+  max_attempts: 3
+  
+  # Backoff multiplier between retries (exponential)
+  backoff_multiplier: 1.5
+  
+  # Initial delay in seconds
+  initial_delay: 1.0
+  
+  # Maximum delay cap in seconds
+  max_delay: 30.0
+  
+  # Enable mutation during retry (try to fix the pattern)
+  mutate_on_retry: true
+
+# =============================================================================
+# CYCLE SETTINGS
+# =============================================================================
+# Control the self-improvement cycle behavior
+cycle:
+  # Number of patterns to process per cycle
+  patterns_per_cycle: 50
+  
+  # Prioritize gap closure in learning
+  gap_closure_priority: true
+  
+  # Number of daily improvement cycles
+  cycles_per_day: 3
+  
+  # Cycle timing (24-hour format)
+  schedule:
+    morning: 6    # 6 AM
+    midday: 12    # 12 PM
+    evening: 22   # 10 PM
+  
+  # Maximum cycle duration in seconds
+  max_duration: 300
+
+# =============================================================================
+# PERSISTENCE SETTINGS
+# =============================================================================
+# Control state and memory persistence
+persistence:
+  # Auto-save state after each cycle
+  auto_save: true
+  
+  # Save every N cycles (if auto_save is false)
+  save_interval: 5
+  
+  # State file path (relative to storage path)
+  state_file: "self_improvement_state.json"
+  
+  # Backup retention count
+  backup_count: 5
+
+# =============================================================================
+# GAP DETECTION SETTINGS
+# =============================================================================
+# Control knowledge gap detection behavior
+gap_detection:
+  # Enable automatic gap detection
+  enabled: true
+  
+  # Maximum gaps to process per cycle
+  max_gaps_per_cycle: 10
+  
+  # Minimum severity to address (1-10 scale)
+  min_severity: 3
+  
+  # Auto-generate learning goals from gaps
+  auto_generate_goals: true
+  
+  # Gap types to detect
+  detect_types:
+    - structural
+    - semantic
+    - coverage
+    - confidence
+
+# =============================================================================
+# LEARNING PRIORITIES
+# =============================================================================
+# Control how learning tasks are prioritized
+priorities:
+  # Priority weights for different factors
+  weights:
+    weakness: 0.3      # Prioritize weak patterns
+    gaps: 0.25         # Prioritize gap closure
+    errors: 0.25       # Prioritize error correction
+    usage: 0.2         # Prioritize frequently used patterns
+  
+  # Maximum items per priority category
+  max_items_per_category: 10
+
+# =============================================================================
+# MONITORING & METRICS
+# =============================================================================
+# Control metrics collection and monitoring
+monitoring:
+  # Enable detailed metrics collection
+  enabled: true
+  
+  # Metrics history retention (cycles)
+  history_size: 100
+  
+  # Health check interval (cycles)
+  health_check_interval: 10
+  
+  # Alert thresholds
+  alerts:
+    # Alert if success rate drops below
+    min_success_rate: 0.6
+    
+    # Alert if weak patterns exceed
+    max_weak_pattern_ratio: 0.3
+    
+    # Alert if gaps exceed
+    max_open_gaps: 50
+
+# =============================================================================
+# DOMAIN-SPECIFIC OVERRIDES
+# =============================================================================
+# Override settings for specific domains
+domains:
+  python:
+    confidence:
+      default_threshold: 0.6
+    mutation:
+      rate: 0.15
+      
+  english:
+    confidence:
+      default_threshold: 0.75
+    mutation:
+      rate: 0.05
+      
+  medicine:
+    confidence:
+      default_threshold: 0.85
+      low_confidence_threshold: 0.5
+    mutation:
+      auto_enabled: false
+      
+  finance:
+    confidence:
+      default_threshold: 0.8
+    mutation:
+      rate: 0.08
+
+# =============================================================================
+# SAFETY CONSTRAINTS
+# =============================================================================
+# Safety limits for self-modification
+safety:
+  # Maximum patterns that can be mutated in 24 hours
+  max_daily_mutations: 100
+  
+  # Require validation before applying mutations
+  validate_mutations: true
+  
+  # Rollback on consecutive failures
+  auto_rollback_threshold: 3
+  
+  # Preserve patterns older than this (days)
+  preserve_older_than: 30
+  
+  # Never mutate patterns with these tags
+  protected_tags:
+    - core
+    - safety
+    - system

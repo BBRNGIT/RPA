@@ -1,0 +1,109 @@
+{
+  "track_id": "python",
+  "level_id": "python_junior",
+  "description": "Junior Python Coder exam - basic syntax, functions, loops, and data structures",
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the output of: print(type([]))?",
+      "options": ["<class 'tuple'>", "<class 'list'>", "<class 'dict'>", "<class 'set'>"],
+      "answer": "<class 'list'>",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which keyword is used to define a function in Python?",
+      "options": ["function", "func", "def", "define"],
+      "answer": "def",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the output of: len([1, 2, 3, 4])?",
+      "options": ["3", "4", "5", "Error"],
+      "answer": "4",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How do you create a dictionary in Python?",
+      "options": ["[]", "{}", "()", "<>"],
+      "answer": "{}",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does 'append()' do?",
+      "options": ["Removes an item", "Adds an item to the end", "Sorts the list", "Reverses the list"],
+      "answer": "Adds an item to the end",
+      "difficulty": 1
+    },
+    {
+      "type": "code_completion",
+      "question": "Write a function that returns the square of a number n:",
+      "answer": "def square(n): return n ** 2",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the output of: 'hello'.upper()?",
+      "options": ["hello", "HELLO", "Hello", "Error"],
+      "answer": "HELLO",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which loop is used to iterate over a sequence?",
+      "options": ["while", "for", "each", "loop"],
+      "answer": "for",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the output of: 10 % 3?",
+      "options": ["3", "1", "0", "3.33"],
+      "answer": "1",
+      "difficulty": 1
+    },
+    {
+      "type": "code_completion",
+      "question": "Write a list comprehension to get squares of numbers 0-4:",
+      "answer": "[x**2 for x in range(5)]",
+      "difficulty": 2
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What keyword is used to handle exceptions?",
+      "options": ["catch", "handle", "except", "error"],
+      "answer": "except",
+      "difficulty": 2
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How do you access the value of a dictionary key 'name'?",
+      "options": ["dict.name", "dict['name']", "dict(name)", "dict.get.name"],
+      "answer": "dict['name']",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the output of: bool(0)?",
+      "options": ["True", "False", "0", "Error"],
+      "answer": "False",
+      "difficulty": 2
+    },
+    {
+      "type": "code_completion",
+      "question": "Write a function to check if a number is even:",
+      "answer": "def is_even(n): return n % 2 == 0",
+      "difficulty": 1
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does 'import' do?",
+      "options": ["Exports a module", "Imports a module", "Deletes a module", "Creates a module"],
+      "answer": "Imports a module",
+      "difficulty": 1
+    }
+  ]
+}

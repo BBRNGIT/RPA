@@ -1,0 +1,80 @@
+name: RPA Exam Assessment
+
+on:
+  schedule:
+    # Run weekly on Sunday at 8:00 AM UTC
+    - cron: '0 8 * * 0'
+  workflow_dispatch:
+
+jobs:
+  assess:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install datasets
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Run English Assessment
+      run: |
+        python -c "
+        import sys
+        sys.path.insert(0, '.')
+        from rpa.assessment.exam_engine import ExamEngine
+        from rpa.memory import LongTermMemory, EpisodicMemory
+        
+        ltm = LongTermMemory(storage_path='memory/learning_state')
+        ltm.load()
+        
+        engine = ExamEngine(
+            manual_questions_dir='curriculum/exams'
+        )
+        
+        session = engine.run_exam_quick('english', 'english_kindergarten', 15)
+        
+        print('## English Assessment Results')
+        print(f'Score: {session.score*100:.0f}%')
+        print(f'Status: {\"PASSED\" if session.passed else \"NEEDS MORE TRAINING\"} ')
+        "
+
+    - name: Run Python Assessment
+      run: |
+        python -c "
+        import sys
+        sys.path.insert(0, '.')
+        from rpa.assessment.exam_engine import ExamEngine
+        
+        engine = ExamEngine(
+            manual_questions_dir='curriculum/exams'
+        )
+        
+        session = engine.run_exam_quick('python', 'python_junior', 10)
+        
+        print('## Python Assessment Results')
+        print(f'Score: {session.score*100:.0f}%')
+        print(f'Status: {\"PASSED\" if session.passed else \"NEEDS MORE TRAINING\"} ')
+        "
+
+    - name: Assessment Summary
+      run: |
+        python -c "
+        import sys
+        sys.path.insert(0, '.')
+        from rpa.memory import LongTermMemory
+        
+        ltm = LongTermMemory(storage_path='memory/learning_state')
+        ltm.load()
+        
+        print('## Current AI Knowledge Base')
+        print(f'Total patterns: {len(ltm):,}')
+        print(f'Progress to 1M: {len(ltm)/10000:.2f}%')
+        "

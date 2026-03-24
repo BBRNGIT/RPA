@@ -1,0 +1,93 @@
+{
+  "exam_id": "health_novice",
+  "name": "Health and Wellness - Novice Level",
+  "description": "Basic health, nutrition, and wellness assessment",
+  "level": 1,
+  "domain": "health",
+  "time_limit_minutes": 25,
+  "passing_score": 0.7,
+  "questions": [
+    {
+      "question_id": "health_nov_q1",
+      "type": "multiple_choice",
+      "question": "What is the primary function of protein in the body?",
+      "options": ["Energy storage", "Building and repairing tissues", "Digestion", "Oxygen transport"],
+      "correct_answer": "Building and repairing tissues",
+      "category": "nutrition"
+    },
+    {
+      "question_id": "health_nov_q2",
+      "type": "multiple_choice",
+      "question": "Which vitamin is primarily obtained from sunlight?",
+      "options": ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin E"],
+      "correct_answer": "Vitamin D",
+      "category": "nutrition"
+    },
+    {
+      "question_id": "health_nov_q3",
+      "type": "multiple_choice",
+      "question": "What is the recommended minimum minutes of moderate exercise per week for adults?",
+      "options": ["30 minutes", "75 minutes", "150 minutes", "300 minutes"],
+      "correct_answer": "150 minutes",
+      "category": "exercise"
+    },
+    {
+      "question_id": "health_nov_q4",
+      "type": "multiple_choice",
+      "question": "Which type of exercise is best for improving flexibility?",
+      "options": ["Running", "Weightlifting", "Yoga", "Sprinting"],
+      "correct_answer": "Yoga",
+      "category": "exercise"
+    },
+    {
+      "question_id": "health_nov_q5",
+      "type": "multiple_choice",
+      "question": "What is the 4-7-8 technique used for?",
+      "options": ["Strength training", "Deep breathing/relaxation", "Running pace", "Meal timing"],
+      "correct_answer": "Deep breathing/relaxation",
+      "category": "mental_health"
+    },
+    {
+      "question_id": "health_nov_q6",
+      "type": "multiple_choice",
+      "question": "Which mineral is essential for oxygen transport in blood?",
+      "options": ["Calcium", "Iron", "Zinc", "Magnesium"],
+      "correct_answer": "Iron",
+      "category": "nutrition"
+    },
+    {
+      "question_id": "health_nov_q7",
+      "type": "multiple_choice",
+      "question": "What is the recommended daily fiber intake for adults?",
+      "options": ["5-10 grams", "15-20 grams", "25-38 grams", "50+ grams"],
+      "correct_answer": "25-38 grams",
+      "category": "nutrition"
+    },
+    {
+      "question_id": "health_nov_q8",
+      "type": "multiple_choice",
+      "question": "Which exercise is considered low-impact and joint-friendly?",
+      "options": ["Running", "Jump rope", "Swimming", "Box jumps"],
+      "correct_answer": "Swimming",
+      "category": "exercise"
+    },
+    {
+      "question_id": "health_nov_q9",
+      "type": "multiple_choice",
+      "question": "What does the 5-4-3-2-1 technique help with?",
+      "options": ["Strength training sets", "Grounding during anxiety", "Meal portion control", "Sleep scheduling"],
+      "correct_answer": "Grounding during anxiety",
+      "category": "mental_health"
+    },
+    {
+      "question_id": "health_nov_q10",
+      "type": "multiple_choice",
+      "question": "What is the recommended range for daily fat intake as percentage of calories?",
+      "options": ["5-10%", "10-15%", "20-35%", "40-50%"],
+      "correct_answer": "20-35%",
+      "category": "nutrition"
+    }
+  ],
+  "total_questions": 10,
+  "badge_id": "badge_health_novice"
+}

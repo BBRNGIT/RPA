@@ -1,0 +1,18 @@
+{
+  "track_id": "finance",
+  "track_type": "finance",
+  "name": "Finance and Economics",
+  "description": "Financial literacy curriculum covering terminology, investing, and economic analysis",
+  "levels": [
+    {
+      "level_id": "finance_terminology",
+      "label": "Financial Terminology",
+      "description": "Basic financial terms and concepts",
+      "curriculum": "finance_terminology_basics",
+      "pass_threshold": 0.7,
+      "badge_id": "badge_finance_term",
+      "prerequisites": [],
+      "order": 1
+    }
+  ]
+}

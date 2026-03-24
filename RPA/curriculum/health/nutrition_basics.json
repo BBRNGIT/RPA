@@ -1,0 +1,90 @@
+{
+  "curriculum_id": "health_nutrition_basics",
+  "name": "Nutrition Fundamentals",
+  "description": "Foundation level nutrition knowledge covering macronutrients, micronutrients, and healthy eating",
+  "level": 1,
+  "domain": "health",
+  "lessons": [
+    {
+      "lesson_id": "health_nut_001",
+      "title": "Macronutrients",
+      "type": "nutrition",
+      "items": [
+        {
+          "nutrient": "Protein",
+          "type": "macronutrient",
+          "function": "Builds and repairs tissues, produces enzymes and hormones",
+          "daily_value": "46g (women), 56g (men)",
+          "food_sources": ["Meat", "Fish", "Eggs", "Legumes", "Nuts", "Dairy"],
+          "difficulty": 1
+        },
+        {
+          "nutrient": "Carbohydrates",
+          "type": "macronutrient",
+          "function": "Primary energy source for body and brain",
+          "daily_value": "130g minimum, 45-65% of calories",
+          "food_sources": ["Grains", "Fruits", "Vegetables", "Legumes"],
+          "difficulty": 1
+        },
+        {
+          "nutrient": "Fats",
+          "type": "macronutrient",
+          "function": "Energy storage, hormone production, nutrient absorption",
+          "daily_value": "20-35% of calories",
+          "food_sources": ["Oils", "Nuts", "Avocado", "Fatty fish"],
+          "difficulty": 1
+        },
+        {
+          "nutrient": "Fiber",
+          "type": "macronutrient",
+          "function": "Digestive health, blood sugar regulation",
+          "daily_value": "25g (women), 38g (men)",
+          "food_sources": ["Whole grains", "Vegetables", "Fruits", "Legumes"],
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "lesson_id": "health_nut_002",
+      "title": "Essential Vitamins",
+      "type": "nutrition",
+      "items": [
+        {
+          "nutrient": "Vitamin A",
+          "type": "vitamin",
+          "function": "Vision, immune function, skin health",
+          "daily_value": "700-900 mcg",
+          "food_sources": ["Carrots", "Sweet potatoes", "Spinach", "Liver"],
+          "difficulty": 1
+        },
+        {
+          "nutrient": "Vitamin B12",
+          "type": "vitamin",
+          "function": "Nerve function, DNA synthesis, red blood cells",
+          "daily_value": "2.4 mcg",
+          "food_sources": ["Meat", "Fish", "Eggs", "Dairy"],
+          "difficulty": 1
+        },
+        {
+          "nutrient": "Vitamin C",
+          "type": "vitamin",
+          "function": "Immune function, collagen synthesis, antioxidant",
+          "daily_value": "75-90 mg",
+          "food_sources": ["Citrus fruits", "Berries", "Peppers", "Broccoli"],
+          "difficulty": 1
+        },
+        {
+          "nutrient": "Vitamin D",
+          "type": "vitamin",
+          "function": "Calcium absorption, bone health, immune function",
+          "daily_value": "600-800 IU",
+          "food_sources": ["Sunlight", "Fatty fish", "Fortified dairy"],
+          "difficulty": 1
+        }
+      ]
+    }
+  ],
+  "total_items": 8,
+  "estimated_time_minutes": 30,
+  "prerequisites": []
+}

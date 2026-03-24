@@ -1,0 +1,147 @@
+name: RPA Daily Training
+
+on:
+  schedule:
+    # Run daily at 6:00 AM UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    # Allow manual trigger
+    inputs:
+      patterns:
+        description: 'Number of patterns to train'
+        required: false
+        default: '500'
+      domain:
+        description: 'Domain to train (english, python, all)'
+        required: false
+        default: 'all'
+
+env:
+  HUGGINGFACE_TOKEN: ${{ secrets.HUGGINGFACE_TOKEN }}
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install datasets huggingface_hub
+        
+        # Install RPA dependencies
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Configure Git
+      run: |
+        git config user.name "RPA Training Bot"
+        git config user.email "rpa-training@bot.local"
+
+    - name: Load current memory state
+      run: |
+        echo "Current LTM patterns:"
+        python -c "
+        import sys
+        sys.path.insert(0, '.')
+        from rpa.memory import LongTermMemory
+        ltm = LongTermMemory(storage_path='memory/learning_state')
+        ltm.load()
+        print(f'Patterns: {len(ltm):,}')
+        " || echo "No existing memory state"
+
+    - name: Run training - English
+      if: inputs.domain == 'english' || inputs.domain == 'all'
+      run: |
+        python learn_pipeline.py \
+          --domain english \
+          --dataset wikitext \
+          --samples ${{ inputs.patterns || '500' }} \
+          --persistence memory/learning_state
+
+    - name: Run training - Python
+      if: inputs.domain == 'python' || inputs.domain == 'all'
+      run: |
+        python learn_pipeline.py \
+          --domain python \
+          --dataset mbpp \
+          --samples ${{ inputs.patterns || '300' }} \
+          --persistence memory/learning_state
+
+    - name: Show training results
+      run: |
+        python -c "
+        import sys
+        sys.path.insert(0, '.')
+        from rpa.memory import LongTermMemory
+        ltm = LongTermMemory(storage_path='memory/learning_state')
+        ltm.load()
+        print(f'Total patterns: {len(ltm):,}')
+        
+        domains = {}
+        for node in ltm._graph.nodes.values():
+            d = node.domain or 'unknown'
+            domains[d] = domains.get(d, 0) + 1
+        print('By domain:', domains)
+        "
+
+    - name: Commit learning progress
+      run: |
+        git add memory/learning_state/
+        git diff --cached --quiet || git commit -m "Daily training: update learning state [skip ci]"
+        git push origin main || echo "No changes to push"
+
+    - name: Create training report
+      run: |
+        python -c "
+        import sys
+        import json
+        from pathlib import Path
+        sys.path.insert(0, '.')
+        
+        from rpa.memory import LongTermMemory
+        ltm = LongTermMemory(storage_path='memory/learning_state')
+        ltm.load()
+        
+        report = {
+            'timestamp': '${{ github.event.head_commit.timestamp }}',
+            'run_id': '${{ github.run_id }}',
+            'patterns_trained': int('${{ inputs.patterns || \"500\" }}'),
+            'total_patterns': len(ltm),
+            'progress_to_1m': len(ltm) / 1_000_000 * 100
+        }
+        
+        print('## RPA Training Report')
+        print(f\"- **Patterns Trained:** {report['patterns_trained']}\")
+        print(f\"- **Total Knowledge:** {report['total_patterns']:,} patterns\")
+        print(f\"- **Progress to 1M:** {report['progress_to_1m']:.3f}%\")
+        "
+
+  # Weekly summary job
+  weekly-summary:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Generate weekly summary
+      run: |
+        echo "## Weekly RPA Learning Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "This automated training keeps the RPA AI learning daily." >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "- Training from HuggingFace datasets (wikitext, mbpp)" >> $GITHUB_STEP_SUMMARY
+        echo "- Goal: 1,000,000 patterns" >> $GITHUB_STEP_SUMMARY
+        echo "- Daily target: 500 patterns" >> $GITHUB_STEP_SUMMARY

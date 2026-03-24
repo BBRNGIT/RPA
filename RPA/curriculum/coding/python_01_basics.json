@@ -1,0 +1,147 @@
+{
+  "title": "Python Fundamentals - Part 1",
+  "description": "Basic Python patterns and concepts",
+  "difficulty": 1,
+  "lessons": [
+    {
+      "content": "def greet(name):\n    return f'Hello, {name}!'",
+      "hierarchy_level": 2,
+      "description": "Function definition with string formatting",
+      "concept": "functions",
+      "difficulty": 1
+    },
+    {
+      "content": "def add(a, b):\n    return a + b",
+      "hierarchy_level": 2,
+      "description": "Simple function with parameters and return",
+      "concept": "functions",
+      "difficulty": 1
+    },
+    {
+      "content": "numbers = [1, 2, 3, 4, 5]\nfor num in numbers:\n    print(num)",
+      "hierarchy_level": 2,
+      "description": "List iteration with for loop",
+      "concept": "loops",
+      "difficulty": 1
+    },
+    {
+      "content": "squares = [x**2 for x in range(10)]",
+      "hierarchy_level": 2,
+      "description": "List comprehension for generating squares",
+      "concept": "list_comprehension",
+      "difficulty": 2
+    },
+    {
+      "content": "def is_even(n):\n    return n % 2 == 0",
+      "hierarchy_level": 2,
+      "description": "Boolean function to check if number is even",
+      "concept": "functions",
+      "difficulty": 1
+    },
+    {
+      "content": "even_numbers = [x for x in range(20) if x % 2 == 0]",
+      "hierarchy_level": 2,
+      "description": "List comprehension with condition",
+      "concept": "list_comprehension",
+      "difficulty": 2
+    },
+    {
+      "content": "person = {'name': 'Alice', 'age': 30}\nprint(person['name'])",
+      "hierarchy_level": 2,
+      "description": "Dictionary creation and access",
+      "concept": "dictionaries",
+      "difficulty": 1
+    },
+    {
+      "content": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')",
+      "hierarchy_level": 2,
+      "description": "Exception handling with try-except",
+      "concept": "error_handling",
+      "difficulty": 2
+    },
+    {
+      "content": "with open('file.txt', 'r') as f:\n    content = f.read()",
+      "hierarchy_level": 2,
+      "description": "File reading with context manager",
+      "concept": "file_operations",
+      "difficulty": 2
+    },
+    {
+      "content": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)",
+      "hierarchy_level": 2,
+      "description": "Recursive function for factorial",
+      "concept": "recursion",
+      "difficulty": 3
+    },
+    {
+      "content": "numbers = [3, 1, 4, 1, 5, 9, 2, 6]\nsorted_numbers = sorted(numbers)",
+      "hierarchy_level": 2,
+      "description": "Sorting a list with sorted() function",
+      "concept": "sorting",
+      "difficulty": 1
+    },
+    {
+      "content": "unique = set([1, 2, 2, 3, 3, 3, 4])",
+      "hierarchy_level": 2,
+      "description": "Creating a set from list for unique values",
+      "concept": "sets",
+      "difficulty": 1
+    },
+    {
+      "content": "def greet(name, greeting='Hello'):\n    return f'{greeting}, {name}!'",
+      "hierarchy_level": 2,
+      "description": "Function with default parameter",
+      "concept": "functions",
+      "difficulty": 2
+    },
+    {
+      "content": "coords = (10, 20)\nx, y = coords",
+      "hierarchy_level": 2,
+      "description": "Tuple creation and unpacking",
+      "concept": "tuples",
+      "difficulty": 1
+    },
+    {
+      "content": "def calculate(*args):\n    return sum(args)",
+      "hierarchy_level": 2,
+      "description": "Function with variable arguments",
+      "concept": "functions",
+      "difficulty": 2
+    },
+    {
+      "content": "data = {'a': 1, 'b': 2, 'c': 3}\nfor key, value in data.items():\n    print(f'{key}: {value}')",
+      "hierarchy_level": 2,
+      "description": "Iterating over dictionary items",
+      "concept": "dictionaries",
+      "difficulty": 2
+    },
+    {
+      "content": "text = 'Hello World'\nwords = text.split()",
+      "hierarchy_level": 2,
+      "description": "String splitting into words",
+      "concept": "strings",
+      "difficulty": 1
+    },
+    {
+      "content": "numbers = [1, 2, 3, 4, 5]\ndoubled = list(map(lambda x: x * 2, numbers))",
+      "hierarchy_level": 2,
+      "description": "Using map with lambda function",
+      "concept": "functional",
+      "difficulty": 3
+    },
+    {
+      "content": "numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nevens = list(filter(lambda x: x % 2 == 0, numbers))",
+      "hierarchy_level": 2,
+      "description": "Using filter with lambda function",
+      "concept": "functional",
+      "difficulty": 3
+    },
+    {
+      "content": "import json\ndata = {'name': 'Alice', 'age': 30}\njson_str = json.dumps(data)",
+      "hierarchy_level": 2,
+      "description": "Converting dictionary to JSON string",
+      "concept": "json",
+      "difficulty": 2
+    }
+  ]
+}

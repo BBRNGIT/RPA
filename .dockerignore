@@ -1,0 +1,77 @@
+# RPA Frontend Docker Ignore (Next.js)
+# Skip unnecessary files to speed up builds
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+.next/
+out/
+build/
+
+# Testing
+coverage/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Git
+.git/
+.gitignore
+
+# RPA Python stuff (keep docker configs)
+RPA/.git/
+RPA/.venv/
+RPA/venv/
+RPA/__pycache__/
+RPA/**/__pycache__/
+RPA/*.pyc
+RPA/**/*.pyc
+RPA/tests/
+RPA/memory/
+RPA/memory_storage/
+RPA/docs/
+RPA/upload/
+RPA/skills/
+RPA/examples/
+RPA/mini-services/
+RPA/.zscripts/
+RPA/*.py
+RPA/rpa/
+RPA/bun.lock
+RPA/package.json
+RPA/tsconfig.json
+RPA/requirements.txt
+
+# Documentation
+*.md
+
+# Misc
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Keep Docker configs (don't exclude RPA/docker/)
+!RPA/docker/

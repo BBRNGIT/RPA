@@ -1,0 +1,53 @@
+{
+  "exam_id": "finance_novice",
+  "name": "Finance - Novice Level",
+  "description": "Basic financial terminology assessment",
+  "level": 1,
+  "domain": "finance",
+  "time_limit_minutes": 20,
+  "passing_score": 0.7,
+  "questions": [
+    {
+      "question_id": "fin_nov_q1",
+      "type": "multiple_choice",
+      "question": "What is an asset?",
+      "options": ["A financial obligation", "A resource with economic value", "A type of debt", "An expense"],
+      "correct_answer": "A resource with economic value",
+      "category": "terminology"
+    },
+    {
+      "question_id": "fin_nov_q2",
+      "type": "multiple_choice",
+      "question": "What does equity represent?",
+      "options": ["Total debt", "Revenue minus expenses", "Ownership value after liabilities", "Annual income"],
+      "correct_answer": "Ownership value after liabilities",
+      "category": "terminology"
+    },
+    {
+      "question_id": "fin_nov_q3",
+      "type": "multiple_choice",
+      "question": "What is a dividend?",
+      "options": ["A type of loan", "Distribution of earnings to shareholders", "Capital gains tax", "Interest payment"],
+      "correct_answer": "Distribution of earnings to shareholders",
+      "category": "terminology"
+    },
+    {
+      "question_id": "fin_nov_q4",
+      "type": "multiple_choice",
+      "question": "What does diversification help with?",
+      "options": ["Increasing taxes", "Reducing investment risk", "Increasing debt", "Reducing revenue"],
+      "correct_answer": "Reducing investment risk",
+      "category": "terminology"
+    },
+    {
+      "question_id": "fin_nov_q5",
+      "type": "multiple_choice",
+      "question": "What is compound interest?",
+      "options": ["Interest on principal only", "Interest on principal and accumulated interest", "Simple interest", "Fixed rate interest"],
+      "correct_answer": "Interest on principal and accumulated interest",
+      "category": "terminology"
+    }
+  ],
+  "total_questions": 5,
+  "badge_id": "badge_finance_novice"
+}

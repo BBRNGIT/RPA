@@ -1,0 +1,194 @@
+{
+  "curriculum_id": "medicine_pharmacology_basics",
+  "name": "Pharmacology Basics",
+  "description": "Introduction to drug classifications, mechanisms, and clinical applications",
+  "level": 2,
+  "domain": "medicine",
+  "lessons": [
+    {
+      "lesson_id": "med_pharm_001",
+      "title": "Analgesics and Anti-inflammatory Drugs",
+      "type": "pharmacology",
+      "items": [
+        {
+          "drug": "Acetaminophen",
+          "generic": "Paracetamol",
+          "drug_class": "analgesic",
+          "mechanism": "Inhibits COX enzymes primarily in CNS; reduces prostaglandin synthesis",
+          "indications": ["Pain", "Fever"],
+          "contraindications": ["Severe liver disease", "Alcoholism"],
+          "side_effects": ["Hepatotoxicity (overdose)", "Nausea", "Rash"],
+          "dosing": "325-650mg q4-6h, max 4g/day",
+          "difficulty": 1
+        },
+        {
+          "drug": "Ibuprofen",
+          "generic": "Ibuprofen",
+          "drug_class": "NSAID",
+          "mechanism": "Non-selective COX inhibition; reduces prostaglandins and inflammation",
+          "indications": ["Pain", "Inflammation", "Fever", "Arthritis", "Dysmenorrhea"],
+          "contraindications": ["Active GI bleeding", "Peptic ulcer disease", "Severe renal disease", "ASA allergy"],
+          "side_effects": ["GI bleeding", "Nausea", "Renal impairment", "Cardiovascular events"],
+          "dosing": "200-800mg q6-8h, max 3.2g/day",
+          "difficulty": 1
+        },
+        {
+          "drug": "Aspirin",
+          "generic": "Acetylsalicylic acid",
+          "drug_class": "NSAID, Antiplatelet",
+          "mechanism": "Irreversible COX inhibition; inhibits platelet aggregation",
+          "indications": ["Pain", "Fever", "Antiplatelet (cardiovascular protection)", "MI treatment"],
+          "contraindications": ["Active bleeding", "Peptic ulcer", "Children (Reye syndrome risk)"],
+          "side_effects": ["GI bleeding", "Tinnitus", "Bronchospasm", "Allergic reactions"],
+          "dosing": "Pain: 325-650mg q4h; Antiplatelet: 81mg daily",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "lesson_id": "med_pharm_002",
+      "title": "Antibiotics",
+      "type": "pharmacology",
+      "items": [
+        {
+          "drug": "Amoxicillin",
+          "generic": "Amoxicillin",
+          "drug_class": "antibiotic (penicillin)",
+          "mechanism": "Inhibits bacterial cell wall synthesis by binding penicillin-binding proteins",
+          "indications": ["Otitis media", "Sinusitis", "Pharyngitis", "UTI", "Skin infections"],
+          "contraindications": ["Penicillin allergy"],
+          "side_effects": ["Rash", "Diarrhea", "Nausea", "Allergic reactions"],
+          "dosing": "250-500mg q8h or 875mg q12h",
+          "difficulty": 1
+        },
+        {
+          "drug": "Azithromycin",
+          "generic": "Azithromycin",
+          "drug_class": "antibiotic (macrolide)",
+          "mechanism": "Binds 50S ribosomal subunit; inhibits bacterial protein synthesis",
+          "indications": ["Respiratory infections", "Skin infections", "STIs (chlamydia)"],
+          "contraindications": ["Macrolide allergy", "QT prolongation"],
+          "side_effects": ["GI upset", "Diarrhea", "QT prolongation", "Hepatotoxicity"],
+          "dosing": "500mg day 1, then 250mg days 2-5 (Z-pak)",
+          "difficulty": 1
+        },
+        {
+          "drug": "Ciprofloxacin",
+          "generic": "Ciprofloxacin",
+          "drug_class": "antibiotic (fluoroquinolone)",
+          "mechanism": "Inhibits DNA gyrase and topoisomerase IV; bactericidal",
+          "indications": ["UTI", "Respiratory infections", "Skin infections", "Bone/joint infections"],
+          "contraindications": ["Fluoroquinolone allergy", "Tendon disorders", "Myasthenia gravis"],
+          "side_effects": ["Tendon rupture", "GI upset", "CNS effects", "QT prolongation", "Photosensitivity"],
+          "dosing": "250-750mg q12h depending on indication",
+          "difficulty": 2
+        },
+        {
+          "drug": "Cephalexin",
+          "generic": "Cephalexin",
+          "drug_class": "antibiotic (cephalosporin)",
+          "mechanism": "Inhibits bacterial cell wall synthesis; similar to penicillins",
+          "indications": ["Skin infections", "Respiratory infections", "UTI", "Bone infections"],
+          "contraindications": ["Severe penicillin allergy (cross-reactivity possible)"],
+          "side_effects": ["Diarrhea", "Nausea", "Rash", "Allergic reactions"],
+          "dosing": "250-500mg q6h",
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "lesson_id": "med_pharm_003",
+      "title": "Cardiovascular Drugs",
+      "type": "pharmacology",
+      "items": [
+        {
+          "drug": "Lisinopril",
+          "generic": "Lisinopril",
+          "drug_class": "ACE inhibitor",
+          "mechanism": "Inhibits angiotensin-converting enzyme; reduces angiotensin II and aldosterone",
+          "indications": ["Hypertension", "Heart failure", "Post-MI", "Diabetic nephropathy"],
+          "contraindications": ["Angioedema history", "Pregnancy", "Bilateral renal artery stenosis"],
+          "side_effects": ["Dry cough", "Hyperkalemia", "Angioedema", "Hypotension", "Renal impairment"],
+          "dosing": "10-40mg daily (start 2.5-5mg in HF)",
+          "difficulty": 2
+        },
+        {
+          "drug": "Metoprolol",
+          "generic": "Metoprolol",
+          "drug_class": "Beta blocker (cardioselective)",
+          "mechanism": "Blocks beta-1 adrenergic receptors; reduces heart rate and contractility",
+          "indications": ["Hypertension", "Angina", "Heart failure", "Post-MI", "Arrhythmias"],
+          "contraindications": ["Severe bradycardia", "Heart block", "Decompensated HF", "Severe asthma"],
+          "side_effects": ["Fatigue", "Bradycardia", "Hypotension", "Bronchospasm", "Depression"],
+          "dosing": "25-200mg daily (tartrate BID, succinate daily)",
+          "difficulty": 2
+        },
+        {
+          "drug": "Amlodipine",
+          "generic": "Amlodipine",
+          "drug_class": "Calcium channel blocker (dihydropyridine)",
+          "mechanism": "Blocks L-type calcium channels in vascular smooth muscle; vasodilation",
+          "indications": ["Hypertension", "Angina"],
+          "contraindications": ["Severe hypotension", "Cardiogenic shock"],
+          "side_effects": ["Peripheral edema", "Headache", "Flushing", "Dizziness"],
+          "dosing": "2.5-10mg daily",
+          "difficulty": 1
+        },
+        {
+          "drug": "Atorvastatin",
+          "generic": "Atorvastatin",
+          "drug_class": "Statin (HMG-CoA reductase inhibitor)",
+          "mechanism": "Inhibits HMG-CoA reductase; reduces cholesterol synthesis; increases LDL receptors",
+          "indications": ["Hyperlipidemia", "Cardiovascular disease prevention"],
+          "contraindications": ["Active liver disease", "Pregnancy", "Breastfeeding"],
+          "side_effects": ["Myalgia", "Elevated LFTs", "Myopathy", "Rhabdomyolysis (rare)"],
+          "dosing": "10-80mg daily",
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "lesson_id": "med_pharm_004",
+      "title": "Respiratory Drugs",
+      "type": "pharmacology",
+      "items": [
+        {
+          "drug": "Albuterol",
+          "generic": "Salbutamol",
+          "drug_class": "Beta-2 agonist (short-acting)",
+          "mechanism": "Stimulates beta-2 receptors in bronchial smooth muscle; bronchodilation",
+          "indications": ["Asthma", "COPD", "Bronchospasm", "Exercise-induced bronchoconstriction"],
+          "contraindications": ["Hypersensitivity"],
+          "side_effects": ["Tremor", "Tachycardia", "Nervousness", "Hypokalemia"],
+          "dosing": "1-2 puffs q4-6h prn; Nebulizer: 2.5mg q6h prn",
+          "difficulty": 1
+        },
+        {
+          "drug": "Fluticasone",
+          "generic": "Fluticasone propionate",
+          "drug_class": "Inhaled corticosteroid",
+          "mechanism": "Anti-inflammatory; reduces airway inflammation and hyperresponsiveness",
+          "indications": ["Asthma (maintenance)", "Allergic rhinitis (nasal spray)"],
+          "contraindications": ["Hypersensitivity", "Active untreated infections"],
+          "side_effects": ["Oral candidiasis", "Dysphonia", "Cough", "Adrenal suppression (high doses)"],
+          "dosing": "Inhaled: 88-440mcg BID; Nasal: 1-2 sprays per nostril daily",
+          "difficulty": 2
+        },
+        {
+          "drug": "Montelukast",
+          "generic": "Montelukast",
+          "drug_class": "Leukotriene receptor antagonist",
+          "mechanism": "Blocks leukotriene receptors; reduces inflammation and bronchoconstriction",
+          "indications": ["Asthma (prophylaxis)", "Allergic rhinitis", "Exercise-induced bronchoconstriction"],
+          "contraindications": ["Hypersensitivity"],
+          "side_effects": ["Headache", "Abdominal pain", "Neuropsychiatric effects (rare)"],
+          "dosing": "10mg daily (adults); 4-5mg daily (children)",
+          "difficulty": 2
+        }
+      ]
+    }
+  ],
+  "total_items": 16,
+  "estimated_time_minutes": 75,
+  "prerequisites": ["medicine_conditions_common"]
+}

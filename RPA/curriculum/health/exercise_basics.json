@@ -1,0 +1,61 @@
+{
+  "curriculum_id": "health_exercise_basics",
+  "name": "Exercise Fundamentals",
+  "description": "Foundation level exercise knowledge covering types and benefits",
+  "level": 1,
+  "domain": "health",
+  "lessons": [
+    {
+      "lesson_id": "health_ex_001",
+      "title": "Cardiovascular Exercise",
+      "type": "exercise",
+      "items": [
+        {
+          "exercise": "Walking",
+          "type": "cardio",
+          "muscle_groups": ["legs", "core"],
+          "benefits": ["Heart health", "Weight management", "Mood improvement"],
+          "difficulty": 1
+        },
+        {
+          "exercise": "Running",
+          "type": "cardio",
+          "muscle_groups": ["legs", "core"],
+          "benefits": ["Cardiovascular fitness", "Weight loss", "Bone strength"],
+          "difficulty": 3
+        },
+        {
+          "exercise": "Swimming",
+          "type": "cardio",
+          "muscle_groups": ["full body"],
+          "benefits": ["Low impact", "Full body workout", "Joint friendly"],
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "lesson_id": "health_ex_002",
+      "title": "Strength Training",
+      "type": "exercise",
+      "items": [
+        {
+          "exercise": "Push-ups",
+          "type": "strength",
+          "muscle_groups": ["chest", "shoulders", "triceps"],
+          "benefits": ["Upper body strength", "Core stability"],
+          "difficulty": 2
+        },
+        {
+          "exercise": "Squats",
+          "type": "strength",
+          "muscle_groups": ["quads", "glutes", "hamstrings"],
+          "benefits": ["Lower body strength", "Functional movement"],
+          "difficulty": 2
+        }
+      ]
+    }
+  ],
+  "total_items": 5,
+  "estimated_time_minutes": 25,
+  "prerequisites": ["health_nutrition_basics"]
+}

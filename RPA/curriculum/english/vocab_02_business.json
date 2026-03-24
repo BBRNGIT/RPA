@@ -1,0 +1,127 @@
+{
+  "title": "Essential Vocabulary - Part 2: Advanced Words",
+  "description": "More sophisticated English vocabulary",
+  "difficulty": 2,
+  "lessons": [
+    {
+      "content": "beneficial",
+      "hierarchy_level": 1,
+      "definition": "Favorable or advantageous; resulting in good",
+      "part_of_speech": "adjective",
+      "examples": ["Exercise is beneficial for health.", "The new policy was beneficial to everyone."],
+      "difficulty": 3
+    },
+    {
+      "content": "capacity",
+      "hierarchy_level": 1,
+      "definition": "The maximum amount something can hold or contain",
+      "part_of_speech": "noun",
+      "examples": ["The stadium has a capacity of 50,000.", "She has a great capacity for learning."],
+      "difficulty": 3
+    },
+    {
+      "content": "challenge",
+      "hierarchy_level": 1,
+      "definition": "A task or situation that tests someone's abilities",
+      "part_of_speech": "noun",
+      "examples": ["This project is a real challenge.", "I accept the challenge."],
+      "difficulty": 2
+    },
+    {
+      "content": "collaborate",
+      "hierarchy_level": 1,
+      "definition": "To work jointly on an activity or project",
+      "part_of_speech": "verb",
+      "examples": ["Scientists collaborate on research.", "Let's collaborate on this project."],
+      "difficulty": 3
+    },
+    {
+      "content": "comprehensive",
+      "hierarchy_level": 1,
+      "definition": "Complete and including all aspects",
+      "part_of_speech": "adjective",
+      "examples": ["A comprehensive study was conducted.", "The report is comprehensive."],
+      "difficulty": 4
+    },
+    {
+      "content": "concentrate",
+      "hierarchy_level": 1,
+      "definition": "To focus all one's attention on a particular object",
+      "part_of_speech": "verb",
+      "examples": ["I need to concentrate on my work.", "He concentrated all his efforts on passing."],
+      "difficulty": 3
+    },
+    {
+      "content": "confident",
+      "hierarchy_level": 1,
+      "definition": "Feeling or showing certainty about something",
+      "part_of_speech": "adjective",
+      "examples": ["She is confident about her abilities.", "I'm confident we will succeed."],
+      "difficulty": 2
+    },
+    {
+      "content": "consequence",
+      "hierarchy_level": 1,
+      "definition": "A result or effect of an action or condition",
+      "part_of_speech": "noun",
+      "examples": ["Every action has a consequence.", "Consider the consequences before acting."],
+      "difficulty": 3
+    },
+    {
+      "content": "considerable",
+      "hierarchy_level": 1,
+      "definition": "Notably large in size, amount, or extent",
+      "part_of_speech": "adjective",
+      "examples": ["A considerable amount of time was needed.", "There was considerable damage."],
+      "difficulty": 3
+    },
+    {
+      "content": "consistent",
+      "hierarchy_level": 1,
+      "definition": "Acting or done in the same way over time",
+      "part_of_speech": "adjective",
+      "examples": ["Be consistent in your practice.", "Her performance has been consistent."],
+      "difficulty": 3
+    },
+    {
+      "content": "contribute",
+      "hierarchy_level": 1,
+      "definition": "To give help or assistance towards achieving something",
+      "part_of_speech": "verb",
+      "examples": ["Everyone can contribute to the solution.", "He contributed greatly to the team."],
+      "difficulty": 3
+    },
+    {
+      "content": "convince",
+      "hierarchy_level": 1,
+      "definition": "To cause someone to believe firmly in something",
+      "part_of_speech": "verb",
+      "examples": ["I'll try to convince him to join us.", "She convinced me to try again."],
+      "difficulty": 3
+    },
+    {
+      "content": "crucial",
+      "hierarchy_level": 1,
+      "definition": "Of great importance, especially in the success or failure",
+      "part_of_speech": "adjective",
+      "examples": ["This is a crucial moment.", "Communication is crucial in relationships."],
+      "difficulty": 3
+    },
+    {
+      "content": "demonstrate",
+      "hierarchy_level": 1,
+      "definition": "To clearly show the existence or truth of something",
+      "part_of_speech": "verb",
+      "examples": ["Let me demonstrate how it works.", "The results demonstrate the effectiveness."],
+      "difficulty": 3
+    },
+    {
+      "content": "determine",
+      "hierarchy_level": 1,
+      "definition": "To cause something to occur in a particular way",
+      "part_of_speech": "verb",
+      "examples": ["We need to determine the cause.", "Several factors determine success."],
+      "difficulty": 3
+    }
+  ]
+}

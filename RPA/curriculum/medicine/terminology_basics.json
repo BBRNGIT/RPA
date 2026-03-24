@@ -1,0 +1,233 @@
+{
+  "curriculum_id": "medicine_terminology_basics",
+  "name": "Medical Terminology Basics",
+  "description": "Foundation level medical terminology including prefixes, suffixes, roots, and common abbreviations",
+  "level": 1,
+  "domain": "medicine",
+  "lessons": [
+    {
+      "lesson_id": "med_term_001",
+      "title": "Cardiovascular Prefixes",
+      "type": "terminology",
+      "items": [
+        {
+          "term": "cardio-",
+          "definition": "heart",
+          "examples": ["cardiology", "cardiovascular", "cardiomyopathy"],
+          "difficulty": 1
+        },
+        {
+          "term": "angio-",
+          "definition": "vessel",
+          "examples": ["angiography", "angiosperm", "angioplasty"],
+          "difficulty": 1
+        },
+        {
+          "term": "vas-",
+          "definition": "vessel, duct",
+          "examples": ["vascular", "vasectomy", "vasodilation"],
+          "difficulty": 1
+        },
+        {
+          "term": "phleb-",
+          "definition": "vein",
+          "examples": ["phlebotomy", "phlebitis", "phlebotomist"],
+          "difficulty": 2
+        },
+        {
+          "term": "arterio-",
+          "definition": "artery",
+          "examples": ["arteriosclerosis", "arteriogram", "arteriole"],
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "lesson_id": "med_term_002",
+      "title": "Neurological Prefixes",
+      "type": "terminology",
+      "items": [
+        {
+          "term": "neuro-",
+          "definition": "nerve, nervous system",
+          "examples": ["neurology", "neuroscience", "neuron"],
+          "difficulty": 1
+        },
+        {
+          "term": "encephalo-",
+          "definition": "brain",
+          "examples": ["encephalitis", "encephalogram", "encephalopathy"],
+          "difficulty": 2
+        },
+        {
+          "term": "cerebro-",
+          "definition": "cerebrum, brain",
+          "examples": ["cerebrovascular", "cerebrospinal", "cerebrum"],
+          "difficulty": 2
+        },
+        {
+          "term": "myelo-",
+          "definition": "spinal cord, bone marrow",
+          "examples": ["myelogram", "myelopathy", "myelitis"],
+          "difficulty": 2
+        },
+        {
+          "term": "ganglio-",
+          "definition": "ganglion, nerve cluster",
+          "examples": ["ganglion", "gangliocyte", "ganglioneuroma"],
+          "difficulty": 3
+        }
+      ]
+    },
+    {
+      "lesson_id": "med_term_003",
+      "title": "Gastrointestinal Prefixes",
+      "type": "terminology",
+      "items": [
+        {
+          "term": "gastro-",
+          "definition": "stomach",
+          "examples": ["gastritis", "gastroscopy", "gastroenterology"],
+          "difficulty": 1
+        },
+        {
+          "term": "entero-",
+          "definition": "intestine",
+          "examples": ["enteritis", "enterocolitis", "enteroscopy"],
+          "difficulty": 2
+        },
+        {
+          "term": "col-",
+          "definition": "colon, large intestine",
+          "examples": ["colitis", "colonoscopy", "colectomy"],
+          "difficulty": 1
+        },
+        {
+          "term": "hepato-",
+          "definition": "liver",
+          "examples": ["hepatitis", "hepatology", "hepatoma"],
+          "difficulty": 1
+        },
+        {
+          "term": "cholecyst-",
+          "definition": "gallbladder",
+          "examples": ["cholecystitis", "cholecystectomy", "cholecystogram"],
+          "difficulty": 2
+        }
+      ]
+    },
+    {
+      "lesson_id": "med_term_004",
+      "title": "Common Suffixes",
+      "type": "terminology",
+      "items": [
+        {
+          "term": "-itis",
+          "definition": "inflammation",
+          "examples": ["appendicitis", "arthritis", "bronchitis", "gastritis"],
+          "difficulty": 1
+        },
+        {
+          "term": "-osis",
+          "definition": "condition, abnormal state",
+          "examples": ["osteoporosis", "thrombosis", "sclerosis"],
+          "difficulty": 1
+        },
+        {
+          "term": "-ectomy",
+          "definition": "surgical removal",
+          "examples": ["appendectomy", "tonsillectomy", "hysterectomy"],
+          "difficulty": 1
+        },
+        {
+          "term": "-otomy",
+          "definition": "surgical incision",
+          "examples": ["tracheotomy", "laparotomy", "craniotomy"],
+          "difficulty": 1
+        },
+        {
+          "term": "-scopy",
+          "definition": "visual examination",
+          "examples": ["endoscopy", "colonoscopy", "arthroscopy"],
+          "difficulty": 1
+        },
+        {
+          "term": "-emia",
+          "definition": "blood condition",
+          "examples": ["anemia", "leukemia", "septicemia"],
+          "difficulty": 1
+        },
+        {
+          "term": "-pathy",
+          "definition": "disease, disorder",
+          "examples": ["neuropathy", "cardiomyopathy", "nephropathy"],
+          "difficulty": 2
+        },
+        {
+          "term": "-algia",
+          "definition": "pain",
+          "examples": ["neuralgia", "myalgia", "arthralgia"],
+          "difficulty": 1
+        }
+      ]
+    },
+    {
+      "lesson_id": "med_term_005",
+      "title": "Directional and Positional Terms",
+      "type": "terminology",
+      "items": [
+        {
+          "term": "superior",
+          "definition": "above, toward the head",
+          "examples": ["The head is superior to the neck."],
+          "difficulty": 1
+        },
+        {
+          "term": "inferior",
+          "definition": "below, toward the feet",
+          "examples": ["The feet are inferior to the legs."],
+          "difficulty": 1
+        },
+        {
+          "term": "anterior",
+          "definition": "front, toward the front",
+          "examples": ["The sternum is anterior to the heart."],
+          "difficulty": 1
+        },
+        {
+          "term": "posterior",
+          "definition": "back, toward the back",
+          "examples": ["The spine is posterior to the heart."],
+          "difficulty": 1
+        },
+        {
+          "term": "medial",
+          "definition": "toward the midline",
+          "examples": ["The heart is medial to the lungs."],
+          "difficulty": 1
+        },
+        {
+          "term": "lateral",
+          "definition": "away from the midline",
+          "examples": ["The arms are lateral to the chest."],
+          "difficulty": 1
+        },
+        {
+          "term": "proximal",
+          "definition": "closer to the point of attachment",
+          "examples": ["The shoulder is proximal to the elbow."],
+          "difficulty": 2
+        },
+        {
+          "term": "distal",
+          "definition": "farther from the point of attachment",
+          "examples": ["The fingers are distal to the wrist."],
+          "difficulty": 2
+        }
+      ]
+    }
+  ],
+  "total_items": 50,
+  "estimated_time_minutes": 45,
+  "prerequisites": []
+}

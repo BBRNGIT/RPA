@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "patterns_consolidated": 15,
+    "patterns_deprecated": 0,
+    "patterns_restored": 0,
+    "queries_total": 0
+  },
+  "node_to_record": {
+    "pattern:Write a function to find the longest chain which c": "cons_c44aeeca",
+    "pattern:Write a python function to find the first repeated": "cons_aa19fde5",
+    "pattern:Write a function to get a lucid number smaller tha": "cons_655d808d",
+    "pattern:Write a function to reverse words in a given strin": "cons_4a5ed35f",
+    "pattern:Write a function to check if the given integer is ": "cons_bcd6662a",
+    "pattern:Write a function to convert degrees to radians.": "cons_9a8e3633",
+    "pattern:Write a function to search a literals string in a ": "cons_f56af8f2",
+    "pattern:Write a python function to find nth bell number.": "cons_1a975a15",
+    "pattern:Write a python function to find minimum possible v": "cons_41ab5b9b",
+    "pattern:Write a python function to remove the k'th element": "cons_9238dc58"
+  }
+}
