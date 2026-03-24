@@ -12,6 +12,14 @@ This module contains the neural network components that power the RPA AI:
 from .pattern_encoder import PatternEncoder, PatternVocabulary
 from .attention import MultiHeadAttention, SelfAttention, CrossAttention
 from .transformer import Transformer, TransformerBlock, FeedForward, RPAModel
+from .trainer import (
+    Trainer,
+    TrainingConfig,
+    TrainingState,
+    PatternLoss,
+    AdamOptimizer,
+    SGDOptimizer,
+)
 
 __all__ = [
     "PatternEncoder",
@@ -23,4 +31,10 @@ __all__ = [
     "TransformerBlock",
     "FeedForward",
     "RPAModel",
+    "Trainer",
+    "TrainingConfig",
+    "TrainingState",
+    "PatternLoss",
+    "AdamOptimizer",
+    "SGDOptimizer",
 ]
