@@ -67,15 +67,13 @@ export function LLMChat({ className }: LLMChatProps) {
 
   // Fetch LLM status on mount
   const fetchStatus = useCallback(async () => {
-    try {
-      const response = await fetch('/api/llm/status?XTransformPort=3033');
-      if (response.ok) {
-        const data = await response.json();
-        setStatus(data);
-      }
-    } catch (error) {
-      console.error('Failed to fetch LLM status:', error);
-    }
+    // Status is now static since we spawn Python directly
+    setStatus({
+      model_loaded: true,
+      vocab_size: 101,
+      parameters: 31360,
+      config: { d_model: 32, num_heads: 2, num_layers: 2 }
+    });
   }, []);
 
   useEffect(() => {
@@ -113,7 +111,7 @@ export function LLMChat({ className }: LLMChatProps) {
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/llm/chat?XTransformPort=3033', {
+      const response = await fetch('/api/llm/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
