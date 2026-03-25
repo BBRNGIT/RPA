@@ -1,0 +1,8 @@
+{
+  "name": "llm-service",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "python3 server.py"
+  },
+  "dependencies": {}
+}

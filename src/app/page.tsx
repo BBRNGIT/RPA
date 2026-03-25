@@ -17,8 +17,9 @@ import { VocabularyDashboard } from '@/components/vocabulary';
 import { GrammarDashboard } from '@/components/grammar';
 import { AdminPanel, Settings } from '@/components/admin';
 import { SIDashboard } from '@/components/si-dashboard';
+import { LLMChat } from '@/components/llm-chat';
 
-type ViewType = 'dashboard' | 'si-dashboard' | 'vocabulary' | 'grammar' | 'reading' | 'writing' | 'admin' | 'settings';
+type ViewType = 'dashboard' | 'llm-chat' | 'si-dashboard' | 'vocabulary' | 'grammar' | 'reading' | 'writing' | 'admin' | 'settings';
 
 // Placeholder for coming soon views
 function ComingSoonView({ title, description }: { title: string; description: string }) {
@@ -69,6 +70,8 @@ function AuthenticatedApp({ currentView }: { currentView: ViewType }) {
   
   const renderView = useMemo(() => {
     switch (currentView) {
+      case 'llm-chat':
+        return <LLMChat className="h-[calc(100vh-8rem)]" />;
       case 'si-dashboard':
         return <SIDashboard />;
       case 'vocabulary':

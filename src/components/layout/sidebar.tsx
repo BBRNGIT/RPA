@@ -24,6 +24,7 @@ import {
   GraduationCap,
   Brain,
   Sparkles,
+  MessageSquare,
 } from 'lucide-react';
 
 interface NavItem {
@@ -40,6 +41,12 @@ const navItems: NavItem[] = [
     label: 'Dashboard',
     icon: LayoutDashboard,
     href: '/?view=dashboard',
+  },
+  {
+    id: 'llm-chat',
+    label: 'LLM Chat',
+    icon: MessageSquare,
+    href: '/?view=llm-chat',
   },
   {
     id: 'si-dashboard',

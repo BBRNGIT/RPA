@@ -1,0 +1,16 @@
+==================================================
+RPA NEURAL LLM SERVICE
+==================================================
+Loading Neural LLM...
+Creating new model...
+Model loaded! Parameters: 31,360
+
+LLM Service running on port 3033
+Endpoints:
+  GET  /health    - Health check
+  GET  /status    - Model status
+  GET  /generate  - Generate text (?prompt=...)
+  POST /chat      - Chat with LLM
+  POST /train     - Train on text
+--------------------------------------------------
+[LLM Service] POST /chat HTTP/1.1
