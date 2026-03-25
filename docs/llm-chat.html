@@ -18,6 +18,8 @@
             --accent-cyan: #06b6d4;
             --border-color: #334155;
             --success: #22c55e;
+            --warning: #f59e0b;
+            --error: #ef4444;
         }
         
         body {
@@ -76,8 +78,17 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: var(--success);
+            background: var(--warning);
             animation: pulse 2s infinite;
+        }
+        
+        .status-dot.ready {
+            background: var(--success);
+        }
+        
+        .status-dot.error {
+            background: var(--error);
+            animation: none;
         }
         
         @keyframes pulse {
@@ -165,6 +176,8 @@
             border-radius: 12px;
             font-size: 14px;
             line-height: 1.5;
+            white-space: pre-wrap;
+            word-break: break-word;
         }
         
         .message.user .message-content {
@@ -212,6 +225,10 @@
             color: var(--text-muted);
         }
         
+        .chat-input:disabled {
+            opacity: 0.5;
+        }
+        
         .send-btn {
             background: var(--accent-purple);
             color: white;
@@ -224,62 +241,13 @@
             transition: background 0.2s;
         }
         
-        .send-btn:hover {
+        .send-btn:hover:not(:disabled) {
             background: #9333ea;
         }
         
         .send-btn:disabled {
             opacity: 0.5;
             cursor: not-allowed;
-        }
-        
-        .settings-panel {
-            background: var(--bg-secondary);
-            border-radius: 8px;
-            padding: 15px;
-            margin-top: 15px;
-            display: none;
-        }
-        
-        .settings-panel.open {
-            display: block;
-        }
-        
-        .settings-row {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 10px;
-        }
-        
-        .settings-label {
-            width: 120px;
-            font-size: 13px;
-            color: var(--text-secondary);
-        }
-        
-        .settings-slider {
-            flex: 1;
-            -webkit-appearance: none;
-            height: 6px;
-            border-radius: 3px;
-            background: var(--bg-tertiary);
-            outline: none;
-        }
-        
-        .settings-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: var(--accent-purple);
-            cursor: pointer;
-        }
-        
-        .settings-value {
-            width: 50px;
-            text-align: right;
-            font-size: 13px;
         }
         
         .footer {
@@ -343,6 +311,16 @@
         .back-link:hover {
             color: var(--text-primary);
         }
+        
+        .error-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: var(--error);
+        }
     </style>
 </head>
 <body>
@@ -354,44 +332,41 @@
                 <span class="logo">🧠</span>
                 <div class="header-title">
                     <h1>RPA Neural LLM Chat</h1>
-                    <p>Character-level transformer with backpropagation</p>
+                    <p>Character-level transformer with real neural inference</p>
                 </div>
             </div>
             <div class="status-badge">
-                <span class="status-dot"></span>
-                <span>Model Ready</span>
+                <span class="status-dot" id="statusDot"></span>
+                <span id="statusText">Loading model...</span>
             </div>
         </header>
         
-        <div class="model-info">
+        <div class="model-info" id="modelInfo" style="display: none;">
             <div class="model-stat">
-                <div class="model-stat-value">31,360</div>
+                <div class="model-stat-value" id="paramCount">-</div>
                 <div class="model-stat-label">Parameters</div>
             </div>
             <div class="model-stat">
-                <div class="model-stat-value">101</div>
+                <div class="model-stat-value" id="vocabSize">-</div>
                 <div class="model-stat-label">Vocab Size</div>
             </div>
             <div class="model-stat">
-                <div class="model-stat-value">2</div>
+                <div class="model-stat-value" id="numLayers">-</div>
                 <div class="model-stat-label">Layers</div>
             </div>
             <div class="model-stat">
-                <div class="model-stat-value">2</div>
+                <div class="model-stat-value" id="numHeads">-</div>
                 <div class="model-stat-label">Heads</div>
             </div>
             <div class="model-stat">
-                <div class="model-stat-value">32</div>
+                <div class="model-stat-value" id="dModel">-</div>
                 <div class="model-stat-label">d_model</div>
             </div>
         </div>
         
-        <div class="info-box">
-            <strong>ℹ️ About this LLM:</strong> This is a real neural network trained from scratch with backpropagation. 
-            It uses <strong>character-level tokenization</strong> (no word-piece). 
-            The model needs training data to produce meaningful outputs - currently outputs random characters.
-            <br><br>
-            <strong>To run locally:</strong> Clone the repo, run <code style="background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px;">bun install && bun run dev</code>
+        <div class="info-box" id="infoBox">
+            <strong>ℹ️ Real Neural Network:</strong> This uses actual transformer inference in JavaScript!
+            Character-level tokenization (NO word-piece). Model weights loaded from training.
         </div>
         
         <div class="chat-container">
@@ -399,55 +374,94 @@
                 <div class="message system">
                     <div class="message-avatar">ℹ️</div>
                     <div class="message-content">
-                        Welcome to RPA Neural LLM! This is a real transformer model built from scratch. 
-                        Type a message to see the neural network generate text character by character.
+                        Loading neural network weights... Please wait.
                     </div>
                 </div>
             </div>
             
             <div class="chat-input-area">
-                <input type="text" class="chat-input" id="chatInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
-                <button class="send-btn" id="sendBtn" onclick="sendMessage()">Send</button>
+                <input type="text" class="chat-input" id="chatInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)" disabled>
+                <button class="send-btn" id="sendBtn" onclick="sendMessage()" disabled>Send</button>
             </div>
         </div>
         
         <div class="footer">
             <a href="https://github.com/BBRNGIT/RPA" target="_blank">View on GitHub</a> | 
-            Neural LLM with Character Tokenization | No Word-Piece
+            Neural LLM with Character Tokenization | Real JS Inference
         </div>
     </div>
     
+    <script src="llm-neural.js"></script>
     <script>
-        // Simple character-level "neural" simulation for demo
-        // Real implementation uses numpy transformer in Python
+        const llm = new NeuralLLM();
+        let modelLoaded = false;
         
-        const vocab = ' !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\n\t';
-        
-        function simulateGeneration(prompt, maxTokens = 20, temperature = 0.8) {
-            // This is a simplified simulation
-            // The real model uses attention and learned weights
-            let output = prompt;
+        async function initModel() {
+            const statusDot = document.getElementById('statusDot');
+            const statusText = document.getElementById('statusText');
+            const infoBox = document.getElementById('infoBox');
             
-            for (let i = 0; i < maxTokens; i++) {
-                // Simulate character prediction with temperature
-                const rand = Math.random();
-                if (rand < temperature) {
-                    // Random character (high temperature = more random)
-                    const idx = Math.floor(Math.random() * vocab.length);
-                    output += vocab[idx];
+            try {
+                // Try to load trained model weights
+                const modelUrl = 'model_weights.json';
+                const loaded = await llm.loadModel(modelUrl);
+                
+                if (loaded && llm.ready) {
+                    modelLoaded = true;
+                    statusDot.classList.add('ready');
+                    statusText.textContent = 'Model Ready';
+                    
+                    // Update model info
+                    document.getElementById('modelInfo').style.display = 'flex';
+                    document.getElementById('paramCount').textContent = llm.countParams().toLocaleString();
+                    document.getElementById('vocabSize').textContent = llm.tokenizer.vocab_size;
+                    document.getElementById('numLayers').textContent = llm.model.config.num_layers;
+                    document.getElementById('numHeads').textContent = llm.model.config.num_heads;
+                    document.getElementById('dModel').textContent = llm.model.config.d_model;
+                    
+                    infoBox.innerHTML = `<strong>✅ Model Loaded!</strong> ${llm.countParams().toLocaleString()} parameters ready for inference.`;
+                    
+                    // Enable input
+                    document.getElementById('chatInput').disabled = false;
+                    document.getElementById('sendBtn').disabled = false;
+                    
+                    // Update welcome message
+                    addMessage('system', 'Model loaded successfully! I am a real neural transformer trained with backpropagation. Ask me about coding or finance!');
                 } else {
-                    // Slightly biased toward common patterns
-                    const common = ' etaoinshrdlcumwfgypbvkjxqz';
-                    const idx = Math.floor(Math.random() * common.length);
-                    output += common[idx];
+                    throw new Error('Model not ready after loading');
                 }
+            } catch (error) {
+                console.error('Model load error:', error);
+                statusDot.classList.add('error');
+                statusText.textContent = 'No trained model';
+                
+                infoBox.className = 'error-box';
+                infoBox.innerHTML = `<strong>⚠️ No trained model found!</strong><br>
+                    The neural network architecture is ready, but no trained weights are available.<br><br>
+                    <strong>To train the model:</strong><br>
+                    1. Clone the repo<br>
+                    2. Run: <code style="background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px;">cd RPA && python train_llm_proper.py</code><br>
+                    3. Push the updated model_weights.json<br><br>
+                    Currently using fallback random generation.`;
+                
+                // Enable input anyway with fallback mode
+                document.getElementById('chatInput').disabled = false;
+                document.getElementById('sendBtn').disabled = false;
+                
+                addMessage('system', 'No trained model weights found. Using fallback mode. Train the model locally for real neural inference!');
             }
             
-            return output;
+            document.getElementById('chatInput').focus();
         }
         
         function getCurrentTime() {
             return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
+        
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
         }
         
         function addMessage(role, content) {
@@ -491,10 +505,17 @@
             if (typingDiv) typingDiv.remove();
         }
         
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
+        function fallbackGenerate(prompt, maxTokens = 20) {
+            // Fallback when no model is loaded
+            const vocab = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\n\t';
+            let output = prompt;
+            
+            for (let i = 0; i < maxTokens; i++) {
+                const idx = Math.floor(Math.random() * vocab.length);
+                output += vocab[idx];
+            }
+            
+            return output;
         }
         
         function sendMessage() {
@@ -508,21 +529,32 @@
             addMessage('user', message);
             input.value = '';
             sendBtn.disabled = true;
+            input.disabled = true;
             
             // Show typing indicator
             addTypingIndicator();
             
-            // Simulate generation delay
+            // Generate response (use setTimeout to allow UI update)
             setTimeout(() => {
                 removeTypingIndicator();
                 
-                // Generate response
-                const response = simulateGeneration(message, 30, 0.8);
+                let response;
+                if (modelLoaded && llm.ready) {
+                    // Real neural inference
+                    const start = performance.now();
+                    response = llm.generate(message, 30, 0.7);
+                    const elapsed = performance.now() - start;
+                    console.log(`Generation took ${elapsed.toFixed(1)}ms`);
+                } else {
+                    // Fallback
+                    response = fallbackGenerate(message, 30);
+                }
                 
                 addMessage('assistant', response);
                 sendBtn.disabled = false;
+                input.disabled = false;
                 input.focus();
-            }, 1000 + Math.random() * 1000);
+            }, 100);
         }
         
         function handleKeyPress(event) {
@@ -531,8 +563,8 @@
             }
         }
         
-        // Focus input on load
-        document.getElementById('chatInput').focus();
+        // Initialize on load
+        initModel();
     </script>
 </body>
 </html>
