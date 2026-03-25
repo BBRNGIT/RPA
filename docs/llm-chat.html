@@ -6,7 +6,7 @@
     <title>RPA Neural LLM Chat</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         :root {
             --bg-primary: #0f172a;
             --bg-secondary: #1e293b;
@@ -21,14 +21,14 @@
             --warning: #f59e0b;
             --error: #ef4444;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: var(--bg-primary);
             color: var(--text-primary);
             min-height: 100vh;
         }
-        
+
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -37,7 +37,7 @@
             flex-direction: column;
             height: 100vh;
         }
-        
+
         .header {
             display: flex;
             justify-content: space-between;
@@ -45,25 +45,18 @@
             padding: 15px 0;
             border-bottom: 1px solid var(--border-color);
         }
-        
+
         .header-left {
             display: flex;
             align-items: center;
             gap: 12px;
         }
-        
+
         .logo { font-size: 28px; }
-        
-        .header-title h1 {
-            font-size: 20px;
-            font-weight: 600;
-        }
-        
-        .header-title p {
-            color: var(--text-secondary);
-            font-size: 12px;
-        }
-        
+
+        .header-title h1 { font-size: 20px; font-weight: 600; }
+        .header-title p { color: var(--text-secondary); font-size: 12px; }
+
         .status-badge {
             display: flex;
             align-items: center;
@@ -73,7 +66,7 @@
             border-radius: 20px;
             font-size: 12px;
         }
-        
+
         .status-dot {
             width: 8px;
             height: 8px;
@@ -81,21 +74,15 @@
             background: var(--warning);
             animation: pulse 2s infinite;
         }
-        
-        .status-dot.ready {
-            background: var(--success);
-        }
-        
-        .status-dot.error {
-            background: var(--error);
-            animation: none;
-        }
-        
+
+        .status-dot.ready { background: var(--success); }
+        .status-dot.error { background: var(--error); animation: none; }
+
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.5; }
         }
-        
+
         .model-info {
             background: var(--bg-secondary);
             border-radius: 8px;
@@ -105,22 +92,75 @@
             gap: 20px;
             flex-wrap: wrap;
         }
-        
-        .model-stat {
-            text-align: center;
+
+        .model-stat { text-align: center; }
+        .model-stat-value { font-size: 18px; font-weight: 700; color: var(--accent-cyan); }
+        .model-stat-label { font-size: 11px; color: var(--text-muted); }
+
+        /* Settings Panel */
+        .settings-toggle {
+            background: var(--bg-tertiary);
+            border: none;
+            color: var(--text-secondary);
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
         }
-        
-        .model-stat-value {
-            font-size: 18px;
-            font-weight: 700;
+
+        .settings-toggle:hover { background: var(--accent-purple); color: white; }
+
+        .settings-panel {
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: none;
+            border: 1px solid var(--border-color);
+        }
+
+        .settings-panel.open { display: block; }
+
+        .settings-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .settings-section h3 {
+            font-size: 14px;
+            margin-bottom: 12px;
             color: var(--accent-cyan);
         }
-        
-        .model-stat-label {
-            font-size: 11px;
-            color: var(--text-muted);
+
+        .setting-row {
+            margin-bottom: 12px;
         }
-        
+
+        .setting-row label {
+            display: block;
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .setting-row input[type="range"] {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--bg-tertiary);
+            -webkit-appearance: none;
+        }
+
+        .setting-row input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent-purple);
+            cursor: pointer;
+        }
+
         .chat-container {
             flex: 1;
             display: flex;
@@ -130,7 +170,7 @@
             overflow: hidden;
             border: 1px solid var(--border-color);
         }
-        
+
         .chat-messages {
             flex: 1;
             overflow-y: auto;
@@ -139,18 +179,15 @@
             flex-direction: column;
             gap: 16px;
         }
-        
+
         .message {
             display: flex;
             gap: 12px;
             max-width: 85%;
         }
-        
-        .message.user {
-            align-self: flex-end;
-            flex-direction: row-reverse;
-        }
-        
+
+        .message.user { align-self: flex-end; flex-direction: row-reverse; }
+
         .message-avatar {
             width: 36px;
             height: 36px;
@@ -161,15 +198,10 @@
             font-size: 16px;
             flex-shrink: 0;
         }
-        
-        .message.assistant .message-avatar {
-            background: rgba(168, 85, 247, 0.2);
-        }
-        
-        .message.user .message-avatar {
-            background: rgba(6, 182, 212, 0.2);
-        }
-        
+
+        .message.assistant .message-avatar { background: rgba(168, 85, 247, 0.2); }
+        .message.user .message-avatar { background: rgba(6, 182, 212, 0.2); }
+
         .message-content {
             background: var(--bg-tertiary);
             padding: 12px 16px;
@@ -179,32 +211,29 @@
             white-space: pre-wrap;
             word-break: break-word;
         }
-        
-        .message.user .message-content {
-            background: var(--accent-purple);
-            color: white;
-        }
-        
+
+        .message.user .message-content { background: var(--accent-purple); color: white; }
+
         .message.system .message-content {
             background: transparent;
             border: 1px dashed var(--border-color);
             color: var(--text-muted);
             font-size: 13px;
         }
-        
+
         .message-time {
             font-size: 10px;
             color: var(--text-muted);
             margin-top: 4px;
         }
-        
+
         .chat-input-area {
             padding: 15px;
             border-top: 1px solid var(--border-color);
             display: flex;
             gap: 10px;
         }
-        
+
         .chat-input {
             flex: 1;
             background: var(--bg-tertiary);
@@ -216,19 +245,11 @@
             outline: none;
             transition: border-color 0.2s;
         }
-        
-        .chat-input:focus {
-            border-color: var(--accent-purple);
-        }
-        
-        .chat-input::placeholder {
-            color: var(--text-muted);
-        }
-        
-        .chat-input:disabled {
-            opacity: 0.5;
-        }
-        
+
+        .chat-input:focus { border-color: var(--accent-purple); }
+        .chat-input::placeholder { color: var(--text-muted); }
+        .chat-input:disabled { opacity: 0.5; }
+
         .send-btn {
             background: var(--accent-purple);
             color: white;
@@ -240,34 +261,25 @@
             font-weight: 500;
             transition: background 0.2s;
         }
-        
-        .send-btn:hover:not(:disabled) {
-            background: #9333ea;
-        }
-        
-        .send-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-        
+
+        .send-btn:hover:not(:disabled) { background: #9333ea; }
+        .send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
         .footer {
             text-align: center;
             padding: 15px;
             color: var(--text-muted);
             font-size: 12px;
         }
-        
-        .footer a {
-            color: var(--accent-cyan);
-            text-decoration: none;
-        }
-        
+
+        .footer a { color: var(--accent-cyan); text-decoration: none; }
+
         .typing-indicator {
             display: flex;
             gap: 4px;
             padding: 8px 0;
         }
-        
+
         .typing-indicator span {
             width: 8px;
             height: 8px;
@@ -275,15 +287,15 @@
             background: var(--accent-purple);
             animation: typing 1.4s infinite ease-in-out;
         }
-        
+
         .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
         .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
-        
+
         @keyframes typing {
             0%, 60%, 100% { transform: translateY(0); }
             30% { transform: translateY(-4px); }
         }
-        
+
         .info-box {
             background: rgba(168, 85, 247, 0.1);
             border: 1px solid rgba(168, 85, 247, 0.3);
@@ -293,25 +305,9 @@
             font-size: 13px;
             color: var(--text-secondary);
         }
-        
-        .info-box strong {
-            color: var(--accent-purple);
-        }
-        
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 13px;
-            margin-bottom: 10px;
-        }
-        
-        .back-link:hover {
-            color: var(--text-primary);
-        }
-        
+
+        .info-box strong { color: var(--accent-purple); }
+
         .error-box {
             background: rgba(239, 68, 68, 0.1);
             border: 1px solid rgba(239, 68, 68, 0.3);
@@ -321,12 +317,42 @@
             font-size: 13px;
             color: var(--error);
         }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .back-link:hover { color: var(--text-primary); }
+
+        .clear-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-left: 8px;
+        }
+
+        .clear-btn:hover { background: var(--error); border-color: var(--error); color: white; }
+
+        @media (max-width: 640px) {
+            .settings-grid { grid-template-columns: 1fr; }
+            .model-info { gap: 12px; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="index.html" class="back-link">← Back to Skills Testing</a>
-        
+
         <header class="header">
             <div class="header-left">
                 <span class="logo">🧠</span>
@@ -338,9 +364,38 @@
             <div class="status-badge">
                 <span class="status-dot" id="statusDot"></span>
                 <span id="statusText">Loading model...</span>
+                <button class="settings-toggle" onclick="toggleSettings()">⚙️</button>
+                <button class="clear-btn" onclick="clearChat()">Clear</button>
             </div>
         </header>
-        
+
+        <!-- Settings Panel -->
+        <div class="settings-panel" id="settingsPanel">
+            <div class="settings-grid">
+                <div class="settings-section">
+                    <h3>🎮 Generation Settings</h3>
+                    <div class="setting-row">
+                        <label>Temperature: <span id="tempValue">0.8</span></label>
+                        <input type="range" id="temperature" min="0.1" max="2" step="0.1" value="0.8" oninput="updateSetting('temp')">
+                    </div>
+                    <div class="setting-row">
+                        <label>Top-K: <span id="topKValue">40</span></label>
+                        <input type="range" id="topK" min="1" max="100" value="40" oninput="updateSetting('topK')">
+                    </div>
+                    <div class="setting-row">
+                        <label>Max Tokens: <span id="maxTokensValue">50</span></label>
+                        <input type="range" id="maxTokens" min="10" max="200" step="10" value="50" oninput="updateSetting('maxTokens')">
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h3>📊 Model Stats</h3>
+                    <div id="statsDisplay" style="font-size: 12px; color: var(--text-secondary);">
+                        Loading...
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="model-info" id="modelInfo" style="display: none;">
             <div class="model-stat">
                 <div class="model-stat-value" id="paramCount">-</div>
@@ -363,12 +418,12 @@
                 <div class="model-stat-label">d_model</div>
             </div>
         </div>
-        
+
         <div class="info-box" id="infoBox">
             <strong>ℹ️ Real Neural Network:</strong> This uses actual transformer inference in JavaScript!
             Character-level tokenization (NO word-piece). Model weights loaded from training.
         </div>
-        
+
         <div class="chat-container">
             <div class="chat-messages" id="chatMessages">
                 <div class="message system">
@@ -378,54 +433,83 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="chat-input-area">
                 <input type="text" class="chat-input" id="chatInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)" disabled>
                 <button class="send-btn" id="sendBtn" onclick="sendMessage()" disabled>Send</button>
             </div>
         </div>
-        
+
         <div class="footer">
-            <a href="https://github.com/BBRNGIT/RPA" target="_blank">View on GitHub</a> | 
+            <a href="https://github.com/BBRNGIT/RPA" target="_blank">View on GitHub</a> |
             Neural LLM with Character Tokenization | Real JS Inference
         </div>
     </div>
-    
+
     <script src="llm-neural.js"></script>
     <script>
         const llm = new NeuralLLM();
         let modelLoaded = false;
-        
+
+        // Settings state
+        let settings = {
+            temperature: 0.8,
+            topK: 40,
+            maxTokens: 50
+        };
+
+        function toggleSettings() {
+            document.getElementById('settingsPanel').classList.toggle('open');
+        }
+
+        function updateSetting(type) {
+            if (type === 'temp') {
+                settings.temperature = parseFloat(document.getElementById('temperature').value);
+                document.getElementById('tempValue').textContent = settings.temperature;
+            } else if (type === 'topK') {
+                settings.topK = parseInt(document.getElementById('topK').value);
+                document.getElementById('topKValue').textContent = settings.topK;
+            } else if (type === 'maxTokens') {
+                settings.maxTokens = parseInt(document.getElementById('maxTokens').value);
+                document.getElementById('maxTokensValue').textContent = settings.maxTokens;
+            }
+        }
+
         async function initModel() {
             const statusDot = document.getElementById('statusDot');
             const statusText = document.getElementById('statusText');
             const infoBox = document.getElementById('infoBox');
-            
+
             try {
-                // Try to load trained model weights
                 const modelUrl = 'model_weights.json';
                 const loaded = await llm.loadModel(modelUrl);
-                
+
                 if (loaded && llm.ready) {
                     modelLoaded = true;
                     statusDot.classList.add('ready');
                     statusText.textContent = 'Model Ready';
-                    
-                    // Update model info
+
                     document.getElementById('modelInfo').style.display = 'flex';
                     document.getElementById('paramCount').textContent = llm.countParams().toLocaleString();
                     document.getElementById('vocabSize').textContent = llm.tokenizer.vocab_size;
                     document.getElementById('numLayers').textContent = llm.model.config.num_layers;
                     document.getElementById('numHeads').textContent = llm.model.config.num_heads;
                     document.getElementById('dModel').textContent = llm.model.config.d_model;
-                    
+
+                    // Stats display
+                    const statsHtml = `
+                        <p><strong>Parameters:</strong> ${llm.countParams().toLocaleString()}</p>
+                        <p><strong>Architecture:</strong> ${llm.model.config.d_model}d, ${llm.model.config.num_heads}h, ${llm.model.config.num_layers}L</p>
+                        <p><strong>Context:</strong> ${llm.model.config.max_seq_len} tokens</p>
+                        <p><strong>Tokenizer:</strong> Character-level</p>
+                    `;
+                    document.getElementById('statsDisplay').innerHTML = statsHtml;
+
                     infoBox.innerHTML = `<strong>✅ Model Loaded!</strong> ${llm.countParams().toLocaleString()} parameters ready for inference.`;
-                    
-                    // Enable input
+
                     document.getElementById('chatInput').disabled = false;
                     document.getElementById('sendBtn').disabled = false;
-                    
-                    // Update welcome message
+
                     addMessage('system', 'Model loaded successfully! I am a real neural transformer trained with backpropagation. Ask me about coding or finance!');
                 } else {
                     throw new Error('Model not ready after loading');
@@ -434,43 +518,42 @@
                 console.error('Model load error:', error);
                 statusDot.classList.add('error');
                 statusText.textContent = 'No trained model';
-                
+
                 infoBox.className = 'error-box';
                 infoBox.innerHTML = `<strong>⚠️ No trained model found!</strong><br>
                     The neural network architecture is ready, but no trained weights are available.<br><br>
                     <strong>To train the model:</strong><br>
                     1. Clone the repo<br>
-                    2. Run: <code style="background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px;">cd RPA && python train_llm_proper.py</code><br>
+                    2. Run: <code style="background: var(--bg-tertiary); padding: 2px 6px; border-radius: 4px;">cd RPA && python quick_train.py</code><br>
                     3. Push the updated model_weights.json<br><br>
                     Currently using fallback random generation.`;
-                
-                // Enable input anyway with fallback mode
+
                 document.getElementById('chatInput').disabled = false;
                 document.getElementById('sendBtn').disabled = false;
-                
+
                 addMessage('system', 'No trained model weights found. Using fallback mode. Train the model locally for real neural inference!');
             }
-            
+
             document.getElementById('chatInput').focus();
         }
-        
+
         function getCurrentTime() {
             return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
         }
-        
+
         function escapeHtml(text) {
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
         }
-        
+
         function addMessage(role, content) {
             const messagesDiv = document.getElementById('chatMessages');
             const messageDiv = document.createElement('div');
             messageDiv.className = `message ${role}`;
-            
+
             const avatar = role === 'user' ? '👤' : '🤖';
-            
+
             messageDiv.innerHTML = `
                 <div class="message-avatar">${avatar}</div>
                 <div>
@@ -478,11 +561,11 @@
                     <div class="message-time">${getCurrentTime()}</div>
                 </div>
             `;
-            
+
             messagesDiv.appendChild(messageDiv);
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
         }
-        
+
         function addTypingIndicator() {
             const messagesDiv = document.getElementById('chatMessages');
             const typingDiv = document.createElement('div');
@@ -499,70 +582,70 @@
             messagesDiv.appendChild(typingDiv);
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
         }
-        
+
         function removeTypingIndicator() {
             const typingDiv = document.getElementById('typingIndicator');
             if (typingDiv) typingDiv.remove();
         }
-        
+
         function fallbackGenerate(prompt, maxTokens = 20) {
-            // Fallback when no model is loaded
             const vocab = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\n\t';
             let output = prompt;
-            
+
             for (let i = 0; i < maxTokens; i++) {
                 const idx = Math.floor(Math.random() * vocab.length);
                 output += vocab[idx];
             }
-            
+
             return output;
         }
-        
+
+        function clearChat() {
+            const messagesDiv = document.getElementById('chatMessages');
+            messagesDiv.innerHTML = '';
+            addMessage('system', 'Chat cleared. Model ready for new conversations.');
+        }
+
         function sendMessage() {
             const input = document.getElementById('chatInput');
             const sendBtn = document.getElementById('sendBtn');
             const message = input.value.trim();
-            
+
             if (!message) return;
-            
-            // Add user message
+
             addMessage('user', message);
             input.value = '';
             sendBtn.disabled = true;
             input.disabled = true;
-            
-            // Show typing indicator
+
             addTypingIndicator();
-            
-            // Generate response (use setTimeout to allow UI update)
+
             setTimeout(() => {
                 removeTypingIndicator();
-                
+
                 let response;
                 if (modelLoaded && llm.ready) {
-                    // Real neural inference
                     const start = performance.now();
-                    response = llm.generate(message, 30, 0.7);
+                    response = llm.generate(message, settings.maxTokens, settings.temperature, settings.topK);
                     const elapsed = performance.now() - start;
                     console.log(`Generation took ${elapsed.toFixed(1)}ms`);
                 } else {
-                    // Fallback
-                    response = fallbackGenerate(message, 30);
+                    response = fallbackGenerate(message, settings.maxTokens);
                 }
-                
+
                 addMessage('assistant', response);
                 sendBtn.disabled = false;
                 input.disabled = false;
                 input.focus();
             }, 100);
         }
-        
+
         function handleKeyPress(event) {
             if (event.key === 'Enter') {
                 sendMessage();
             }
         }
-        
+
         // Initialize on load
         initModel();
     </script>

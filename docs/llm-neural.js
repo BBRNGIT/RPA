@@ -1,8 +1,14 @@
 /**
  * RPA Neural LLM - JavaScript Inference Engine
- * 
+ *
  * Real transformer inference running in the browser!
  * Character-level tokenization (NO word-piece)
+ *
+ * Features:
+ * - Multi-head self-attention
+ * - Layer normalization
+ * - Temperature sampling
+ * - Top-K filtering
  */
 
 class NeuralLLM {
@@ -11,14 +17,14 @@ class NeuralLLM {
         this.tokenizer = null;
         this.ready = false;
     }
-    
+
     async loadModel(url) {
         console.log('Loading model from:', url);
-        
+
         try {
             const response = await fetch(url);
             const data = await response.json();
-            
+
             this.model = {
                 config: data.config,
                 embedding: {
@@ -50,12 +56,12 @@ class NeuralLLM {
                     beta: this.toArray(data.ln_f.beta),
                 }
             };
-            
+
             this.tokenizer = {
                 chars: data.tokenizer.chars,
                 vocab_size: data.tokenizer.vocab_size,
             };
-            
+
             this.ready = true;
             console.log('Model loaded! Parameters:', this.countParams());
             return true;
@@ -64,20 +70,19 @@ class NeuralLLM {
             return false;
         }
     }
-    
+
     toArray(nestedArray) {
-        // Ensure proper typed arrays for computation
         if (typeof nestedArray[0] === 'number') {
             return new Float32Array(nestedArray);
         }
         return nestedArray.map(row => new Float32Array(row));
     }
-    
+
     countParams() {
         let count = 0;
         count += this.model.embedding.weight.length * this.model.embedding.weight[0].length;
         count += this.model.embedding.pos_weight.length * this.model.embedding.pos_weight[0].length;
-        
+
         for (const block of this.model.blocks) {
             count += block.attention.W_q.length * block.attention.W_q[0].length;
             count += block.attention.W_k.length * block.attention.W_k[0].length;
@@ -86,10 +91,10 @@ class NeuralLLM {
             count += block.ffn.W1.length * block.ffn.W1[0].length;
             count += block.ffn.W2.length * block.ffn.W2[0].length;
         }
-        
+
         return count;
     }
-    
+
     encode(text) {
         const ids = [];
         for (const c of text) {
@@ -98,7 +103,7 @@ class NeuralLLM {
         }
         return ids;
     }
-    
+
     decode(ids) {
         const chars = [];
         for (const id of ids) {
@@ -108,14 +113,13 @@ class NeuralLLM {
         }
         return chars.join('');
     }
-    
+
     // Matrix operations
     matmul(a, b) {
-        // a: [m x k], b: [k x n] -> [m x n]
         const m = a.length;
         const k = a[0].length;
         const n = b[0].length;
-        
+
         const result = new Array(m);
         for (let i = 0; i < m; i++) {
             result[i] = new Float32Array(n);
@@ -129,82 +133,74 @@ class NeuralLLM {
         }
         return result;
     }
-    
+
     layerNorm(x, gamma, beta) {
         const eps = 1e-5;
         const seqLen = x.length;
         const dModel = x[0].length;
-        
+
         const result = new Array(seqLen);
-        
+
         for (let i = 0; i < seqLen; i++) {
-            // Compute mean and variance
             let mean = 0;
             for (let j = 0; j < dModel; j++) {
                 mean += x[i][j];
             }
             mean /= dModel;
-            
+
             let variance = 0;
             for (let j = 0; j < dModel; j++) {
                 variance += (x[i][j] - mean) ** 2;
             }
             variance /= dModel;
-            
+
             const std = Math.sqrt(variance + eps);
-            
-            // Normalize
+
             result[i] = new Float32Array(dModel);
             for (let j = 0; j < dModel; j++) {
                 result[i][j] = gamma[j] * (x[i][j] - mean) / std + beta[j];
             }
         }
-        
+
         return result;
     }
-    
+
     softmax(x) {
         const max = Math.max(...x);
         const exp = x.map(v => Math.exp(v - max));
         const sum = exp.reduce((a, b) => a + b, 0);
         return exp.map(v => v / sum);
     }
-    
+
     attention(x, block) {
         const seqLen = x.length;
         const dModel = x[0].length;
         const numHeads = this.model.config.num_heads;
         const headDim = dModel / numHeads;
-        
-        // Compute Q, K, V
+
         const Q = this.matmul(x, block.attention.W_q);
         const K = this.matmul(x, block.attention.W_k);
         const V = this.matmul(x, block.attention.W_v);
-        
-        // Reshape and transpose for multi-head attention
-        // For simplicity, compute attention for each head
+
         const output = new Array(seqLen);
         for (let i = 0; i < seqLen; i++) {
             output[i] = new Float32Array(dModel);
         }
-        
+
         for (let h = 0; h < numHeads; h++) {
             const start = h * headDim;
             const end = start + headDim;
-            
-            // Extract head projections
+
             const headQ = Q.map(row => row.slice(start, end));
             const headK = K.map(row => row.slice(start, end));
             const headV = V.map(row => row.slice(start, end));
-            
-            // Compute attention scores
+
             const scale = 1 / Math.sqrt(headDim);
             const scores = new Array(seqLen);
-            
+
             for (let i = 0; i < seqLen; i++) {
                 scores[i] = new Float32Array(seqLen);
                 for (let j = 0; j < seqLen; j++) {
-                    // Causal mask: only attend to past
                     if (j > i) {
                         scores[i][j] = -1e9;
                     } else {
@@ -216,49 +212,43 @@ class NeuralLLM {
                     }
                 }
             }
-            
-            // Softmax and apply to V
+
             const attnOut = new Array(seqLen);
             for (let i = 0; i < seqLen; i++) {
                 const probs = this.softmax(Array.from(scores[i]));
                 attnOut[i] = new Float32Array(headDim);
-                
+
                 for (let j = 0; j < seqLen; j++) {
                     for (let k = 0; k < headDim; k++) {
                         attnOut[i][k] += probs[j] * headV[j][k];
                     }
                 }
-                
-                // Copy to output
+
                 for (let k = 0; k < headDim; k++) {
                     output[i][start + k] = attnOut[i][k];
                 }
             }
         }
-        
-        // Output projection
+
         return this.matmul(output, block.attention.W_o);
     }
-    
+
     feedForward(x, block) {
-        // Two-layer MLP with ReLU
         const hidden = this.matmul(x, block.ffn.W1);
-        
-        // ReLU
+
         for (let i = 0; i < hidden.length; i++) {
             for (let j = 0; j < hidden[i].length; j++) {
                 hidden[i][j] = Math.max(0, hidden[i][j]);
             }
         }
-        
+
         return this.matmul(hidden, block.ffn.W2);
     }
-    
+
     forward(tokenIds) {
         const seqLen = tokenIds.length;
         const dModel = this.model.config.d_model;
-        
-        // Embedding lookup
+
         const x = new Array(seqLen);
         for (let i = 0; i < seqLen; i++) {
             x[i] = new Float32Array(dModel);
@@ -269,36 +259,29 @@ class NeuralLLM {
                 }
             }
         }
-        
-        // Transformer blocks
+
         for (const block of this.model.blocks) {
-            // Pre-norm attention
             const normed = this.layerNorm(x, block.ln1.gamma, block.ln1.beta);
             const attnOut = this.attention(normed, block);
-            
-            // Residual
+
             for (let i = 0; i < seqLen; i++) {
                 for (let j = 0; j < dModel; j++) {
                     x[i][j] += attnOut[i][j];
                 }
             }
-            
-            // Pre-norm FFN
+
             const normed2 = this.layerNorm(x, block.ln2.gamma, block.ln2.beta);
             const ffnOut = this.feedForward(normed2, block);
-            
-            // Residual
+
             for (let i = 0; i < seqLen; i++) {
                 for (let j = 0; j < dModel; j++) {
                     x[i][j] += ffnOut[i][j];
                 }
             }
         }
-        
-        // Final layer norm
+
         const finalNormed = this.layerNorm(x, this.model.ln_f.gamma, this.model.ln_f.beta);
-        
-        // Output projection (use embedding weights - tied)
+
         const logits = new Array(seqLen);
         for (let i = 0; i < seqLen; i++) {
             logits[i] = new Float32Array(this.tokenizer.vocab_size);
@@ -310,38 +293,44 @@ class NeuralLLM {
                 logits[i][j] = dot;
             }
         }
-        
+
         return logits;
     }
-    
-    generate(prompt, maxNewTokens = 20, temperature = 0.8) {
+
+    generate(prompt, maxNewTokens = 50, temperature = 0.8, topK = 40) {
         if (!this.ready) {
             return prompt + " [Model not loaded]";
         }
-        
+
         let tokens = this.encode(prompt);
-        
+
         for (let i = 0; i < maxNewTokens; i++) {
-            // Truncate if too long
             const context = tokens.slice(-this.model.config.max_seq_len);
-            
-            // Forward pass
+
             const logits = this.forward(context);
-            
-            // Get last position logits
             const lastLogits = logits[logits.length - 1];
-            
-            // Apply temperature
-            const scaled = Array.from(lastLogits).map(l => l / temperature);
-            
-            // Softmax
+
+            let scaled = Array.from(lastLogits).map(l => l / temperature);
+
+            // Top-K filtering
+            if (topK > 0 && topK < scaled.length) {
+                const indexed = scaled.map((v, i) => ({ v, i }));
+                indexed.sort((a, b) => b.v - a.v);
+                const threshold = indexed[topK]?.v ?? -Infinity;
+
+                for (let j = 0; j < scaled.length; j++) {
+                    if (scaled[j] < threshold) {
+                        scaled[j] = -Infinity;
+                    }
+                }
+            }
+
             const probs = this.softmax(scaled);
-            
-            // Sample
+
             const r = Math.random();
             let cumSum = 0;
             let nextToken = 0;
-            
+
             for (let j = 0; j < probs.length; j++) {
                 cumSum += probs[j];
                 if (r < cumSum) {
@@ -349,13 +338,12 @@ class NeuralLLM {
                     break;
                 }
             }
-            
+
             tokens.push(nextToken);
         }
-        
+
         return this.decode(tokens);
     }
 }
 
-// Export for use
 window.NeuralLLM = NeuralLLM;
